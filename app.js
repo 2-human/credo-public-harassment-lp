@@ -45,6 +45,21 @@
   }
   function fmtAmt(v) { return v >= 100000 ? "$100,000+" : "$" + Number(v).toLocaleString(); }
 
+  /* Auto-format a date of birth as MM/DD/YYYY. Inserts "/" after the MM and DD
+     pairs while typing forward; leaves the field alone on backspace/delete. */
+  function formatDob(value, isDelete) {
+    var d = value.replace(/\D/g, "").slice(0, 8);
+    var out;
+    if (d.length > 4) out = d.slice(0, 2) + "/" + d.slice(2, 4) + "/" + d.slice(4);
+    else if (d.length > 2) out = d.slice(0, 2) + "/" + d.slice(2);
+    else out = d;
+    if (!isDelete) {
+      if (d.length === 2) out = d + "/";
+      else if (d.length === 4) out = d.slice(0, 2) + "/" + d.slice(2, 4) + "/";
+    }
+    return out;
+  }
+
   function scrollToForm() {
     var el = document.getElementById("lead-form");
     if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 72, behavior: "smooth" });
@@ -193,7 +208,7 @@
       '<div class="field row2"><div><label>' + L.city + '</label>' + inp("city") + '</div><div><label>' + L.state + ' *</label>' +
         '<select data-field="state">' + stateOpts + '</select></div></div>' +
       '<div class="field row2"><div><label>' + L.zip + '</label>' + inp("zip", 'inputmode="numeric"') + '</div><div><label>' + L.dob + '</label>' +
-        '<input value="' + esc(state.fields.dob) + '" placeholder="MM/DD/YYYY" data-field="dob"/></div></div>' +
+        '<input value="' + esc(state.fields.dob) + '" placeholder="MM/DD/YYYY" data-field="dob" inputmode="numeric" maxlength="10"/></div></div>' +
       '<div class="form-exclusion">' + C.form.stateExclusion + '</div>';
   }
 
@@ -219,7 +234,7 @@
   /* full-screen overlay wizard (steps 1–3). Covers the nav. */
   function overlayMarkup() {
     var heads = ["YOUR DEBT", "YOUR SITUATION", "YOUR DETAILS"];
-    var titles = ["Let's start with the basics.", "Tell us what's been happening.", "One last step — where to reach you."];
+    var titles = ["Let's start with the basics.", "Tell us what's been happening.", "How do we reach you?"];
     var body = state.step === 0 ? StepDebt() : state.step === 1 ? StepSituation() : StepDetails();
     var nav = '<button class="btn-ghost" data-fo-back>' + (state.step > 0 ? "Back" : "Close") + '</button>';
     if (state.step < 2) {
@@ -545,7 +560,11 @@
     });
     root.querySelectorAll("[data-field]").forEach(function (node) {
       var k = node.getAttribute("data-field");
-      node.addEventListener("input", function () {
+      node.addEventListener("input", function (e) {
+        if (k === "dob") {
+          var isDel = e.inputType && e.inputType.indexOf("delete") === 0;
+          node.value = formatDob(node.value, isDel);
+        }
         state.fields[k] = node.value;
         var submit = root.querySelector("[data-fo-submit]");
         if (submit) submit.disabled = !canSubmit();
