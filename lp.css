@@ -575,8 +575,17 @@ html[data-borders="off"] .hero-figure { background: var(--bg-sand); }
   flex: 1; min-width: 0;
   overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
 }
-.multi-dd-placeholder { color: var(--fg-soft); }
-.multi-dd-selected { color: var(--fg); font-weight: var(--fw-medium); }
+/* Placeholder text inside the trigger renders identically to the placeholder
+   <option> in a regular <select>: same family, size, and dark fg color. */
+.multi-dd-placeholder,
+.multi-dd-selected {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body-sm);
+  font-weight: var(--fw-regular);
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--fg);
+}
 
 .multi-dd-caret {
   flex: none; color: var(--fg-muted);
@@ -596,18 +605,34 @@ html[data-borders="off"] .hero-figure { background: var(--bg-sand); }
 }
 .multi-dd-panel[hidden] { display: none; }
 
-/* Each option row inside the panel */
+/* Each option row inside the panel.
+   .multi-opt is a <label>, and our parent wrapper carries .field, so the
+   generic `.field label { display: block; font-family: mono; ... }` rule
+   from above (specificity 0,1,1) would override a plain `.multi-opt`
+   selector (0,1,0). We use `.field .multi-opt` (0,2,0) so the option row
+   layout + typography sit consistently no matter where it's mounted.
+   The bare `.multi-opt` rules remain as a fallback if it's ever used
+   outside a .field wrapper. */
+.field .multi-opt,
 .multi-opt {
   display: flex; align-items: center; gap: 12px;
   padding: 12px 14px;
   background: #fff;
   cursor: pointer;
-  font-size: var(--fs-body-sm); color: var(--fg);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body-sm);
+  font-weight: var(--fw-regular);
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--fg);
+  margin-bottom: 0;
   transition: background var(--t-fast);
   user-select: none;
   border-bottom: 1px solid var(--border-soft);
 }
+.field .multi-opt:last-child,
 .multi-opt:last-child { border-bottom: none; }
+.field .multi-opt:hover,
 .multi-opt:hover { background: var(--bg-soft); }
 .multi-opt input[type="checkbox"] {
   position: absolute; opacity: 0; pointer-events: none;
@@ -630,7 +655,17 @@ html[data-borders="off"] .hero-figure { background: var(--bg-sand); }
 }
 .multi-opt.is-checked .multi-box::after { transform: rotate(-45deg) translate(1px, -1px) scale(1); }
 .multi-opt.is-checked { background: rgba(201, 32, 40, 0.04); }
-.multi-opt .multi-lbl { line-height: 1.35; flex: 1; }
+/* Reset inherited typography so the option label reads as normal body text,
+   not as a mono uppercase form caption. */
+.multi-opt .multi-lbl {
+  line-height: 1.35; flex: 1;
+  font-family: var(--font-sans);
+  font-size: var(--fs-body-sm);
+  font-weight: var(--fw-regular);
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--fg);
+}
 
 /* Keyboard focus ring for the hidden checkbox */
 .multi-opt input[type="checkbox"]:focus-visible + .multi-box {
