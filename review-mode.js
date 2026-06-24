@@ -161,7 +161,27 @@ function buildChrome(){
   PILL.addEventListener('mouseenter',()=>clearTimeout(hideT));
   PILL.addEventListener('mouseleave',hidePillSoon);
   PILL.addEventListener('click',()=>{if(curId&&curEl)openComposer(curId,curEl)});
-  document.addEventListener('mouseover',e=>{if(e.target.closest(CHROME_SEL))return;const a=e.target.closest('[data-comment-id]');if(a){clearTimeout(hideT);placePill(a);}});
+  /* Hover-time fallback (added 2026-06-24): if the hovered element is in a
+   * freshly rendered region (e.g. the form overlay just appeared and the
+   * MutationObserver re-anchor is queued for the next microtask), force an
+   * anchor pass on the spot so the pill appears without the user having to
+   * mouse out and back in. Cheap because anchorPass skips already-anchored
+   * elements via the data-comment-id check. */
+  document.addEventListener('mouseover',e=>{
+    if(e.target.closest(CHROME_SEL))return;
+    let a=e.target.closest('[data-comment-id]');
+    if(!a){
+      const tag=(e.target.tagName||'').toLowerCase();
+      const looksAnchorable = tag && !NEVER_ANCHOR.has(tag) && hasDirectText(e.target) && !isInSiteChrome(e.target);
+      const inUnanchoredImg = !!(e.target.closest && e.target.closest('img,picture,.hero-figure,.body-fig,figure'));
+      if(looksAnchorable || inUnanchoredImg){
+        anchorPass();
+        anchorImagePass();
+        a = e.target.closest('[data-comment-id]');
+      }
+    }
+    if(a){clearTimeout(hideT);placePill(a);}
+  });
   document.addEventListener('mouseout',e=>{const to=e.relatedTarget;if(to&&(to===PILL||(to.closest&&to.closest('[data-comment-id]'))))return;hidePillSoon();});
   window.addEventListener('scroll',()=>{if(curEl&&PILL.style.display==='block')placePill(curEl)},true);
 }
@@ -302,31 +322,45 @@ function spotlight(anchor){
   buildChrome();
   anchorPass();
   anchorImagePass();
-  /* MutationObserver (added 2026-06-24): re-anchor + re-render whenever the
-   * page's non-chrome DOM mutates. Drives 'comment on every step of the form':
-   * each step's labels/buttons get anchors as soon as the step DOM renders.
-   * Also catches any lazy-rendered content the page adds after initial paint.
+  /* MutationObserver (added 2026-06-24): re-anchor + re-render whenever new
+   * non-chrome DOM appears. Drives 'comment on every step of the form': each
+   * step's labels/buttons get anchored as soon as the step DOM renders.
    *
-   * Watching childList+subtree only — attribute changes from render() (adding
-   * .has-comment etc.) are not observed, so we don't loop. Mutations whose
-   * targets are entirely inside widget chrome (sidebar list rebuilds, pill
-   * positioning) are filtered out below as a second safety net. */
-  let _moDebounce;
-  const mo = new MutationObserver(muts=>{
-    let real = false;
-    for(const m of muts){
-      const t = m.target;
-      if(!t || t.nodeType !== 1) continue;
-      if(t.closest && t.closest(CHROME_SEL)) continue;
-      real = true; break;
-    }
-    if(!real) return;
-    clearTimeout(_moDebounce);
-    _moDebounce = setTimeout(()=>{
+   * Implementation notes:
+   *   - We look at addedNodes specifically (not just any mutation target).
+   *     For renderOverlay()-style flows (removeChild + appendChild on body),
+   *     only the appended overlay's subtree matters — anchorPass auto-skips
+   *     anchored elements anyway.
+   *   - Re-anchor is scheduled on a microtask (queueMicrotask), not setTimeout,
+   *     so it runs before the next user interaction tick. An 80ms debounce
+   *     used to race with the user moving the mouse into the overlay before
+   *     anchors existed; the pill would no-op once and the user would think
+   *     'commenting on step 2 doesn't work'.
+   *   - Watching childList+subtree only — render()'s class flips and
+   *     attribute writes are not observed, so we don't loop. As a safety net
+   *     we still skip nodes inside widget chrome below.
+   */
+  let _scheduled = false;
+  function _reanchorSoon(){
+    if(_scheduled) return;
+    _scheduled = true;
+    queueMicrotask(()=>{
+      _scheduled = false;
       anchorPass();
       anchorImagePass();
       render();
-    }, 80);
+    });
+  }
+  const mo = new MutationObserver(muts=>{
+    for(const m of muts){
+      if(!m.addedNodes || !m.addedNodes.length) continue;
+      for(const node of m.addedNodes){
+        if(!node || node.nodeType !== 1) continue;
+        if(node.closest && node.closest(CHROME_SEL)) continue;
+        _reanchorSoon();
+        return;
+      }
+    }
   });
   mo.observe(document.body, { childList:true, subtree:true });
   /* variant-aware anchors (credo variation): the prototype rewrites a zone's
