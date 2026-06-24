@@ -34,7 +34,7 @@ window.CREDO = {
   phone: "(720) 414-1751",
   phoneHref: "tel:+17204141751",
   cluster: "Garnishment",
-  angle: "Post-Judgment — Exemptions",
+  angle: "Post-Judgment. Exemptions",
   statute: "Federal + state garnishment law",
 
   hero: {
@@ -96,12 +96,13 @@ window.CREDO = {
   ],
 
   whatWeDo: {
-    intro: "At Credo Legal, we dig into the exemptions that can protect your income — and file the claims that put the protections in place.",
+    headline: "We claim every exemption that protects you.",
+    intro: "At Credo Legal, we dig into the exemptions that can protect your income, and file the claims that put the protections in place.",
     bullets: [
       "Identify every exemption that applies to your income and household situation.",
       "File exemption claims with the court on your behalf.",
       "Challenge whether the underlying debt is valid and enforceable.",
-      "Fight to reduce the garnishment amount — or stop it entirely.",
+      "Fight to reduce the garnishment amount, or stop it entirely.",
     ],
   },
 
@@ -112,7 +113,7 @@ window.CREDO = {
     ["We know which exemptions apply to your situation", "Every state has its own exemption rules. We know which ones apply, how to document them, and how to get them granted by the court."],
     // Voice fix on label.
     ["Our attorneys review your full case", "Licensed attorneys examine the garnishment order, the judgment behind it, and your income situation to identify every protection available."],
-    ["Flexible payment plans", "Attorney-led defense structured around your budget — accessible even while a garnishment is hitting your paycheck."],
+    ["Flexible payment plans", "Attorney-led defense structured around your budget, accessible even while a garnishment is hitting your paycheck."],
   ],
 
   // Bodies synthesized + 6th added (live were label-only, 5 entries).
@@ -121,7 +122,7 @@ window.CREDO = {
     ["Low-income wage exemptions", "Some states protect wages below a threshold (often tied to federal poverty level or minimum wage) from garnishment entirely.", "State exemption law"],
     ["Social Security, disability, and federal benefit income", "Federal benefits are categorically protected from garnishment by most creditors. Bank accounts holding marked federal-benefit deposits are off-limits to levy.", "31 C.F.R. § 212"],
     ["Cases where exemptions were never filed or applied", "Most people never claim exemptions they qualify for because no one told them. Filing late is usually possible if action is prompt.", "State exemption law"],
-    ["Garnishments that are exceeding legal limits", "Federal cap is 25% of disposable income — state caps are often lower. Mathematically excessive garnishments are correctable.", "15 U.S.C. § 1673"],
+    ["Garnishments that are exceeding legal limits", "Federal cap is 25% of disposable income, state caps are often lower. Mathematically excessive garnishments are correctable.", "15 U.S.C. § 1673"],
     // Synthesized 6th matching the exemptions angle.
     ["Improperly calculated 'disposable income'", "Employers sometimes garnish from gross pay instead of disposable pay (after taxes + mandatory deductions). The garnishable amount can be far less than what's being taken.", "15 U.S.C. § 1672(b)"],
   ],
@@ -132,17 +133,17 @@ window.CREDO = {
     ["Debt investigation", "We check the underlying debt and garnishment order for additional challenges.", "WEEK 1"],
     ["Legal representation", "We file exemption claims and any other applicable motions.", "WEEK 1–2"],
     // Label + body separated.
-    ["Work towards debt resolution", "Once exemptions are in place, we work to reduce the amount being taken — or stop the garnishment entirely — by addressing the underlying debt.", "ONGOING"],
+    ["Work towards debt resolution", "Once exemptions are in place, we work to reduce the amount being taken, or stop the garnishment entirely, by addressing the underlying debt.", "ONGOING"],
   ],
 
   // Live 5 + 1 synthesized.
   rights: {
-    intro: "Federal and state law provide specific exemptions that can protect your income from garnishment. These are not automatic — you have to claim them.",
+    intro: "Federal and state law provide specific exemptions that can protect your income from garnishment. These are not automatic, you have to claim them.",
     items: [
       { cite: "State exemption law",  label: "Head of household",        text: "Head of household status can significantly reduce or eliminate garnishment in many states.", exLabel: "Right", ex: "In some states, head of household = full protection. Documentation is the unlock." },
       { cite: "31 C.F.R. § 212",      label: "Federal benefit protection", text: "Social Security, disability, and most federal benefit income cannot be garnished by most creditors.", exLabel: "Right", ex: "Marked federal-benefit accounts cannot be levied. Protected funds must be released." },
       { cite: "State exemption law",  label: "Low-income exemption",     text: "Low-income earners may qualify for complete exemption from wage garnishment.", exLabel: "Right", ex: "Wages below the state threshold may be fully exempt." },
-      { cite: "15 U.S.C. § 1673",     label: "Federal 25% cap",          text: "Federal law caps garnishment at 25% of disposable income — and many people qualify for less.", exLabel: "Right", ex: "If more than 25% of disposable pay is being taken, the calculation is wrong." },
+      { cite: "15 U.S.C. § 1673",     label: "Federal 25% cap",          text: "Federal law caps garnishment at 25% of disposable income, and many people qualify for less.", exLabel: "Right", ex: "If more than 25% of disposable pay is being taken, the calculation is wrong." },
       { cite: "FDCPA § 1692f",        label: "Accountability for garnishing exempt income", text: "A creditor who garnishes exempt income can be held legally accountable.", exLabel: "Violation", ex: "Garnishing protected Social Security or VA benefits = grounds for a separate claim." },
       // Synthesized 6th.
       { cite: "State exemption law",  label: "Retroactive exemption filing", text: "You can claim exemptions even after a garnishment has started. There is no requirement to have claimed them at the outset.", exLabel: "Right", ex: "Garnishment running for months without exemption claim? File now, get protection going forward, sometimes refund of past." },
@@ -163,7 +164,7 @@ window.CREDO = {
     ["If an exemption applies, does the garnishment stop immediately?", "Once an exemption claim is filed and granted by the court, the garnishment must be adjusted or stopped accordingly. Timing depends on how quickly the court rules."],
     ["Can exemptions be claimed after a garnishment has already started?", "Yes. Exemptions can be claimed at any point during an active garnishment. If you were never informed of available exemptions, you may still be able to claim them now."],
     // Synthesized 5th — addresses the angle's core misconception.
-    ["Are exemptions automatic?", "No — exemptions must be claimed. The court does not apply them on its own. That's why so many people qualify but never get the protection."],
+    ["Are exemptions automatic?", "No, exemptions must be claimed. The court does not apply them on its own. That's why so many people qualify but never get the protection."],
     // Voice fix in body.
     ["How much does this cost?", "Your first case evaluation is completely free. We offer flexible payment plans so attorney help is affordable."],
   ],
@@ -171,7 +172,7 @@ window.CREDO = {
   // Body synthesized (live was heading-only).
   bottomCta: {
     headline: "You may be entitled to more protection than you know. Find out today.",
-    body: "Most people who qualify for exemptions never claim them — and never know they did. Our attorneys file the claims, document the qualifications, and put the protections in place. Find out what you're entitled to — for free.",
+    body: "Most people who qualify for exemptions never claim them, and never know they did. Our attorneys file the claims, document the qualifications, and put the protections in place. Find out what you're entitled to, for free.",
     cta: "Get a free case evaluation",
   },
 

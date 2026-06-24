@@ -4,7 +4,7 @@
    expand. Common Problems 5→6, Your Rights 5→6, FAQ 4→5. Voice ×2. */
 window.CREDO = {
   phone: "(646) 952-7392", phoneHref: "tel:+16469527392",
-  cluster: "Credit Card", angle: "Harassment — Stop calls",
+  cluster: "Credit Card", angle: "Harassment. Stop calls",
   statute: "FDCPA + state consumer law",
 
   hero: {
@@ -64,7 +64,8 @@ window.CREDO = {
   ],
 
   whatWeDo: {
-    intro: "At Credo Legal, we don't just tell collectors to stop — we send the legal notice that requires them to.",
+    headline: "We send the letter that legally requires it.",
+    intro: "At Credo Legal, we don't just tell collectors to stop, we send the legal notice that requires them to.",
     bullets: [
       "Send a legal cease letter to the collector the day you enroll.",
       "Fight against credit card collector harassment under the FDCPA.",
@@ -74,7 +75,7 @@ window.CREDO = {
   },
 
   whyChoose: [
-    ["Attorney assistance from day one", "Licensed attorneys handle your case from the first conversation — no handoffs, no delays."],
+    ["Attorney assistance from day one", "Licensed attorneys handle your case from the first conversation, no handoffs, no delays."],
     ["We send a cease letter the day you enroll", "The legal cease-communication notice goes out immediately. You don't spend weeks waiting for relief."],
     ["We track every FDCPA violation", "Every contact after the cease letter is documented and added to your claim."],
     ["Protection from abusive collector calls", "Once we engage, you stop being the contact point. Communication routes through our office."],
@@ -93,9 +94,9 @@ window.CREDO = {
 
   howItWorks: [
     ["Free consultation", "We review the harassment and your rights under the FDCPA at no cost.", "DAY 0"],
-    ["Cease letter sent", "We send a legal cease notice to the collector on day one — contact must stop.", "DAY 0"],
+    ["Cease letter sent", "We send a legal cease notice to the collector on day one, contact must stop.", "DAY 0"],
     ["Violation tracking", "We document every illegal contact made against you from the moment we engage.", "WEEK 1+"],
-    ["Legal action or resolution", "We hold collectors accountable for every breach — through claim, settlement, or court action.", "ONGOING"],
+    ["Legal action or resolution", "We hold collectors accountable for every breach, through claim, settlement, or court action.", "ONGOING"],
   ],
 
   rights: {
@@ -107,7 +108,7 @@ window.CREDO = {
       { cite: "§ 1692c(b)",      label: "Third-party disclosure",  text: "Discuss your debt with family, friends, or coworkers.", exLabel: "Violation", ex: "Each third-party contact about your debt is a separate violation." },
       { cite: "§ 1692d(5)",      label: "Harassing call patterns", text: "Call repeatedly in a way designed to harass or annoy you.", exLabel: "Violation", ex: "Multiple calls per day with no purpose other than pressure = violation." },
       // Synthesized 6th.
-      { cite: "§ 1692k",         label: "Per-violation damages",   text: "Each FDCPA violation can result in up to $1,000 in statutory damages — plus attorney fees recoverable from the collector.", exLabel: "Remedy", ex: "Multiple violations stack. Fees recoverable from the collector." },
+      { cite: "§ 1692k",         label: "Per-violation damages",   text: "Each FDCPA violation can result in up to $1,000 in statutory damages, plus attorney fees recoverable from the collector.", exLabel: "Remedy", ex: "Multiple violations stack. Fees recoverable from the collector." },
     ],
   },
 
@@ -122,9 +123,9 @@ window.CREDO = {
   faq: [
     ["Can a credit card collector really be forced to stop calling?", "Yes. Under the FDCPA, once a collector receives a legal cease-communication letter, they are required to stop all contact (with limited exceptions like notice of legal action)."],
     ["What if they keep calling after the cease letter?", "Every call after a cease letter is a separate FDCPA violation. We track every one. Each violation can be used to build your case for up to $1,000 in statutory damages per lawsuit."],
-    ["Does this work for original credit card companies, or only third-party collectors?", "The FDCPA applies primarily to third-party debt collectors. If you're being contacted by the original card company, different rules apply — but state consumer protection laws often still provide remedies, and we can advise on what applies in your state."],
+    ["Does this work for original credit card companies, or only third-party collectors?", "The FDCPA applies primarily to third-party debt collectors. If you're being contacted by the original card company, different rules apply, but state consumer protection laws often still provide remedies, and we can advise on what applies in your state."],
     // Synthesized 4th item.
-    ["Will this affect the underlying debt?", "Stopping the calls is separate from the underlying debt. A cease letter halts contact; we then evaluate the debt itself and advise on the best path forward — including whether the amount can be reduced or challenged."],
+    ["Will this affect the underlying debt?", "Stopping the calls is separate from the underlying debt. A cease letter halts contact; we then evaluate the debt itself and advise on the best path forward, including whether the amount can be reduced or challenged."],
     // Voice fix in body.
     ["How much does this cost?", "We offer flexible payment plans so attorney help is accessible from day one. Your first consultation is free."],
   ],

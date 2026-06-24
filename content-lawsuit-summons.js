@@ -31,7 +31,7 @@ window.CREDO = {
   phone: "(347) 523-4662",
   phoneHref: "tel:+13475234662",
   cluster: "Lawsuit",
-  angle: "Served_Papers — Act today",
+  angle: "Served_Papers. Act today",
   statute: "Civil procedure / FDCPA",
 
   hero: {
@@ -92,13 +92,14 @@ window.CREDO = {
   ],
 
   whatWeDo: {
+    headline: "Just served? We move immediately.",
     intro: "At Credo Legal, when you have just been served, speed is everything. We review your court papers immediately and respond before the deadline runs out.",
     bullets: [
       "Read and assess your court papers on the day you call.",
       "File your legal answer before the response deadline closes.",
-      "Identify and raise every valid defense — including debt validity and documentation gaps.",
+      "Identify and raise every valid defense, including debt validity and documentation gaps.",
       "Protect you from an automatic default judgment and its consequences.",
-      "Represent you through the case with our attorneys — not salespeople.",
+      "Represent you through the case with our attorneys, not salespeople.",
     ],
   },
 
@@ -121,7 +122,7 @@ window.CREDO = {
   ],
 
   howItWorks: [
-    ["Free consultation", "Call us the day you are served. We review your papers immediately and explain exactly what you are facing — at no cost.", "DAY 0"],
+    ["Free consultation", "Call us the day you are served. We review your papers immediately and explain exactly what you are facing, at no cost.", "DAY 0"],
     ["Papers reviewed and defense identified", "Our attorneys examine the complaint, the claimed amount, and the documentation. We identify every valid defense before we file.", "WEEK 1"],
     ["Legal response filed before deadline", "We file your formal answer with the court before the window closes, preserving your right to contest the lawsuit.", "BY DEADLINE"],
     ["Case fought through to resolution", "We represent you through negotiations, hearings, or trial as the case requires. Our goal is the best possible outcome for your situation.", "ONGOING"],
@@ -134,7 +135,7 @@ window.CREDO = {
       { cite: "FRE 401–402",       label: "Burden of proof",          text: "Collectors must prove the debt is valid, accurate, and legally theirs to collect. Deficiencies in their documentation are your defense.", exLabel: "Right", ex: "Plaintiff carries the burden. Gaps in their records are gaps in their case." },
       { cite: "FRCP 4",            label: "Service required",         text: "A default judgment entered without proper service can be challenged and potentially vacated.", exLabel: "Right", ex: "No valid service = no valid judgment. Grounds to reopen." },
       { cite: "FDCPA § 1692e(2)",  label: "No false court filings",   text: "Collectors cannot misrepresent the amount owed, even in court filings. Inflated balances are an FDCPA violation.", exLabel: "Violation", ex: "Inflated balance in the complaint = federal claim back against the collector." },
-      { cite: "FRCP 60(b)",        label: "Vacating a judgment",      text: "If a default judgment has already been entered, it is not always final. Prompt legal action can sometimes reopen the case.", exLabel: "Right", ex: "Improper service, mistake, excusable neglect — narrow but real grounds." },
+      { cite: "FRCP 60(b)",        label: "Vacating a judgment",      text: "If a default judgment has already been entered, it is not always final. Prompt legal action can sometimes reopen the case.", exLabel: "Right", ex: "Improper service, mistake, excusable neglect, narrow but real grounds." },
       { cite: "Civil right",       label: "Right to counsel",         text: "You have the right to legal representation at every stage. Debt buyers have attorneys. So can you.", exLabel: "Right", ex: "Hire counsel pre-answer, mid-case, or post-judgment in appropriate cases." },
     ],
   },
@@ -150,8 +151,8 @@ window.CREDO = {
   // FAQ #1 ANSWER REWRITTEN: live has wrong copy (FDCPA cease-letter
   // content pasted from another LP). Synthesized correct answer here.
   faq: [
-    ["What exactly happens if I do not respond to the court papers?", "The court enters a default judgment against you automatically — without ever hearing your side. That judgment gives the collector the legal right to garnish your wages, freeze your bank accounts, and place liens on your property. Responding is what preserves your right to be heard."],
-    ["How long do I actually have to respond?", "In most states, 20 to 28 days from the date you were served — not the date you opened the papers. The clock starts at service."],
+    ["What exactly happens if I do not respond to the court papers?", "The court enters a default judgment against you automatically, without ever hearing your side. That judgment gives the collector the legal right to garnish your wages, freeze your bank accounts, and place liens on your property. Responding is what preserves your right to be heard."],
+    ["How long do I actually have to respond?", "In most states, 20 to 28 days from the date you were served, not the date you opened the papers. The clock starts at service."],
     ["What if my deadline has already passed?", "Depending on the circumstances, a default judgment may still be challengeable. We can review your case and advise on whether there are grounds to reopen it."],
     ["Do I have to appear in court myself?", "In most cases, no. Our attorneys file all required documents and can appear on your behalf."],
     ["What if I think the debt is not mine or the amount is wrong?", "That is exactly what we examine before filing your response. Many collection suits include errors, inflated balances, or invalid claims."],

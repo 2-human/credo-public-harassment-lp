@@ -4,7 +4,7 @@
    add 5th. Bottom CTA heading-only → add body. Voice ×2 + label fix. */
 window.CREDO = {
   phone: "(646) 952-7380", phoneHref: "tel:+16469527380",
-  cluster: "Credit Card", angle: "Lawsuit — Proof challenge",
+  cluster: "Credit Card", angle: "Lawsuit. Proof challenge",
   statute: "Civil procedure + FDCPA + FCRA",
 
   hero: {
@@ -64,7 +64,8 @@ window.CREDO = {
   ],
 
   whatWeDo: {
-    intro: "At Credo Legal, we don't take debt claims at face value. We challenge them legally — and demand the documentation creditors must provide.",
+    headline: "We demand the documentation they must provide.",
+    intro: "At Credo Legal, we don't take debt claims at face value. We challenge them legally, and demand the documentation creditors must provide.",
     bullets: [
       "Investigate whether the creditor holds valid documentation of the debt.",
       "Demand legal proof the debt is yours and the amount is accurate.",
@@ -74,8 +75,8 @@ window.CREDO = {
   },
 
   whyChoose: [
-    ["Attorney assistance from day one", "Licensed attorneys handle your case from the first conversation — no handoffs, no delays."],
-    ["We challenge every dollar of debt validity", "Inflated balances, missing assignments, calculation errors — all become grounds for defense."],
+    ["Attorney assistance from day one", "Licensed attorneys handle your case from the first conversation, no handoffs, no delays."],
+    ["We challenge every dollar of debt validity", "Inflated balances, missing assignments, calculation errors, all become grounds for defense."],
     ["Debt removal from credit report", "When the debt is dismissed or invalidated, we pursue removal from your credit report under the FCRA."],
     ["Protection from unjust lawsuits", "Most collection lawsuits depend on the defendant not showing up. With an attorney, the case becomes a contest."],
     ["Flexible payment plans", "Attorney-led defense structured around your budget."],
@@ -85,7 +86,7 @@ window.CREDO = {
     ["Debts sold without complete records", "Card debts sell many times before reaching court. The documentation often doesn't survive the journey.", "FRE 803(6), 901"],
     ["Inflated or unverifiable balances", "Fees, interest, and adjustments can multiply a balance well beyond what the cardmember agreement allows.", "State usury / contract"],
     ["Invalid or “zombie” debts", "Old debts past the statute of limitations sometimes get brought back to court by new collectors.", "State SOL"],
-    ["Credit report damage from unenforceable debts", "Even debts that can't be enforced in court can sit on your credit report — until challenged.", "FCRA § 623"],
+    ["Credit report damage from unenforceable debts", "Even debts that can't be enforced in court can sit on your credit report, until challenged.", "FCRA § 623"],
     ["Collectors who cannot prove you owe", "Many collection lawsuits rely on default. When attorneys appear, the proof requirement bites.", "Chain of assignment"],
     // Synthesized 6th to hit standard cluster count.
     ["Wrongly identified accounts", "Identity issues, mistaken accounts, and payment errors can mean the debt isn't yours at all.", "FDCPA § 1692g"],
@@ -119,7 +120,7 @@ window.CREDO = {
   ],
 
   faq: [
-    ["How do credit card debts lose their documentation?", "Credit card debts are frequently sold to third-party collectors — sometimes multiple times over. Each sale risks paperwork loss, and many resold debts arrive in court without the documentation needed to enforce them."],
+    ["How do credit card debts lose their documentation?", "Credit card debts are frequently sold to third-party collectors, sometimes multiple times over. Each sale risks paperwork loss, and many resold debts arrive in court without the documentation needed to enforce them."],
     ["What happens if they can't prove the debt?", "If a creditor cannot provide proper documentation to verify the debt, the case can be dismissed. We pursue dismissal and removal of the debt from your credit report."],
     ["Can invalid debts really be removed from my credit report?", "Yes. If a debt is invalid, unenforceable, or improperly documented, we work to have it removed from your credit report under the FCRA."],
     // Synthesized 4th item — addresses cluster-pattern timing concern.
@@ -131,7 +132,7 @@ window.CREDO = {
   // Body synthesized — live was heading-only.
   bottomCta: {
     headline: "Don't pay debt you may not owe. Get a free review today.",
-    body: "Many credit card debts can't survive a legal challenge. Our attorneys check first — and pursue what the evidence supports.",
+    body: "Many credit card debts can't survive a legal challenge. Our attorneys check first, and pursue what the evidence supports.",
     cta: "Get a free case evaluation",
   },
 

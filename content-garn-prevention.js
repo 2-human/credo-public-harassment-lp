@@ -30,7 +30,7 @@ window.CREDO = {
   phone: "(720) 414-1751",
   phoneHref: "tel:+17204141751",
   cluster: "Garnishment",
-  angle: "Pre-Judgment — Prevention",
+  angle: "Pre-Judgment. Prevention",
   statute: "Federal + state garnishment law",
 
   hero: {
@@ -95,7 +95,8 @@ window.CREDO = {
   ],
 
   whatWeDo: {
-    intro: "At Credo Legal, we don't wait for garnishment to start. We act before they touch your paycheck — file the motions, raise the defenses, and put every legal obstacle between the threat and your income.",
+    headline: "We stop garnishment before it starts.",
+    intro: "At Credo Legal, we don't wait for garnishment to start. We act before they touch your paycheck, file the motions, raise the defenses, and put every legal obstacle between the threat and your income.",
     bullets: [
       "File motions to prevent garnishment before the first deduction.",
       "Challenge the underlying debt's validity.",
@@ -105,11 +106,11 @@ window.CREDO = {
   },
 
   whyChoose: [
-    ["Attorney assistance from day one", "Licensed attorneys handle your case from the first conversation — pre-judgment, pre-garnishment, pre-paycheck deduction."],
+    ["Attorney assistance from day one", "Licensed attorneys handle your case from the first conversation, pre-judgment, pre-garnishment, pre-paycheck deduction."],
     ["We act before they garnish your paycheck", "Most garnishments are preventable if action is taken before the judgment is entered. Speed matters."],
-    ["We challenge debt validity", "Before garnishment can begin, the creditor needs a judgment. We attack the basis of that judgment — documentation gaps, inflated balances, improper service."],
+    ["We challenge debt validity", "Before garnishment can begin, the creditor needs a judgment. We attack the basis of that judgment, documentation gaps, inflated balances, improper service."],
     ["We file motions", "Pre-judgment motions, exemption claims, procedural objections, and any other filing that delays or blocks the garnishment order."],
-    ["Flexible payment plans", "Pre-judgment defense structured around your budget — affordable specifically because acting now is cheaper than acting after the deductions start."],
+    ["Flexible payment plans", "Pre-judgment defense structured around your budget, affordable specifically because acting now is cheaper than acting after the deductions start."],
   ],
 
   commonProblems: [
@@ -117,9 +118,9 @@ window.CREDO = {
     ["Medical debt judgment actions", "Medical providers and their assignees can sue for unpaid bills, and a default judgment opens the door to garnishment.", "State civil procedure"],
     ["Private loan collection lawsuits", "Personal-loan and payday-loan collectors file civil suits that follow the same lawsuit → judgment → garnishment pipeline.", "State civil procedure"],
     ["Pre-judgment debt lawsuits", "If you've been sued but no judgment has been entered, garnishment cannot yet begin. The response window is the prevention window.", "FRCP 8, 12"],
-    ["Garnishment after missed court dates", "Default judgments enter automatically when a hearing is missed — and garnishment can follow quickly. Acting before the next date matters.", "FRCP 55"],
+    ["Garnishment after missed court dates", "Default judgments enter automatically when a hearing is missed, and garnishment can follow quickly. Acting before the next date matters.", "FRCP 55"],
     // Synthesized 6th matching the angle.
-    ["Pre-judgment notice never received", "If you weren't properly served with the underlying lawsuit, any judgment that follows is challengeable — and the garnishment with it.", "Due process"],
+    ["Pre-judgment notice never received", "If you weren't properly served with the underlying lawsuit, any judgment that follows is challengeable, and the garnishment with it.", "Due process"],
   ],
 
   // HIW step 4 spacing fixed.
@@ -134,10 +135,10 @@ window.CREDO = {
     intro: "Federal and state laws protect a portion of your wages from garnishment, and require creditors to follow strict rules before touching your paycheck. Before a garnishment can begin, a creditor must:",
     items: [
       { cite: "FRCP 4 + state rules", label: "Valid judgment first",   text: "Obtain a valid court judgment against you through proper legal process.", exLabel: "Right", ex: "No judgment = no garnishment. The lawsuit must be properly served and adjudicated." },
-      { cite: "Due process",          label: "Proper notice required", text: "Provide you with proper legal notice before any deductions begin.", exLabel: "Right", ex: "Notice of the underlying lawsuit + notice of intent to garnish — both required." },
+      { cite: "Due process",          label: "Proper notice required", text: "Provide you with proper legal notice before any deductions begin.", exLabel: "Right", ex: "Notice of the underlying lawsuit + notice of intent to garnish, both required." },
       { cite: "15 U.S.C. § 1673",     label: "Federal 25% cap",        text: "Comply with federal and state limits on how much of your paycheck can be taken.", exLabel: "Right", ex: "25% maximum federally. State caps are often lower." },
-      { cite: "State exemption law",  label: "Exemptions respected",   text: "Respect exemptions that may protect your income in part or entirely.", exLabel: "Right", ex: "Head of household, low income, federal benefits — must be honored." },
-      { cite: "State garn rules",     label: "Procedural compliance",  text: "Follow procedural rules exactly — violations can invalidate the entire garnishment.", exLabel: "Right", ex: "Wrong calculation, missing notice, improper filing = grounds to vacate." },
+      { cite: "State exemption law",  label: "Exemptions respected",   text: "Respect exemptions that may protect your income in part or entirely.", exLabel: "Right", ex: "Head of household, low income, federal benefits, must be honored." },
+      { cite: "State garn rules",     label: "Procedural compliance",  text: "Follow procedural rules exactly, violations can invalidate the entire garnishment.", exLabel: "Right", ex: "Wrong calculation, missing notice, improper filing = grounds to vacate." },
     ],
   },
 
@@ -151,18 +152,18 @@ window.CREDO = {
 
   // Live 4 + 1 synthesized to hit std 5.
   faq: [
-    ["How long do I have to stop a garnishment before it starts?", "The window depends on where you are in the legal process. If you've received a summons, you typically have 20 to 28 days to respond before a default judgment can be entered. If a judgment has already been issued, your options shift — but don't disappear. The sooner you act, the more we can do."],
-    ["Can you actually prevent garnishment before it hits my paycheck?", "Yes — if you act before a court order is entered. We file legal responses, challenge the underlying debt, and pursue every available remedy to block the garnishment order. Thousands of people have stopped garnishment before the first deduction with our help."],
+    ["How long do I have to stop a garnishment before it starts?", "The window depends on where you are in the legal process. If you've received a summons, you typically have 20 to 28 days to respond before a default judgment can be entered. If a judgment has already been issued, your options shift, but don't disappear. The sooner you act, the more we can do."],
+    ["Can you actually prevent garnishment before it hits my paycheck?", "Yes, if you act before a court order is entered. We file legal responses, challenge the underlying debt, and pursue every available remedy to block the garnishment order. Thousands of people have stopped garnishment before the first deduction with our help."],
     ["What if I can't afford an attorney right now?", "We offer flexible payment plans so you can get legal help without paying everything upfront. Protecting 100% of your paycheck now costs far less than losing 25% of it every month while you wait."],
     // Synthesized 5th matching the angle's timing concern.
-    ["Does prevention work after they've already filed the lawsuit?", "Yes — that's actually the prime window. As long as no judgment has been entered yet, defending the lawsuit is the most direct path to preventing the garnishment that would follow. The response deadline is the critical date."],
-    ["How much does this cost?", "Your first case evaluation is completely free. We'll review your situation, explain every option, and lay out a plan — including flexible payment options for ongoing representation."],
+    ["Does prevention work after they've already filed the lawsuit?", "Yes, that's actually the prime window. As long as no judgment has been entered yet, defending the lawsuit is the most direct path to preventing the garnishment that would follow. The response deadline is the critical date."],
+    ["How much does this cost?", "Your first case evaluation is completely free. We'll review your situation, explain every option, and lay out a plan, including flexible payment options for ongoing representation."],
   ],
 
   // Body added (live was heading-only with a double-space typo).
   bottomCta: {
     headline: "Don't let the first deduction happen. Get help today.",
-    body: "Prevention is the cheapest, fastest, and most effective way to handle wage garnishment. Acting before the judgment is entered means there is no garnishment to fight later. Find out where you stand — for free.",
+    body: "Prevention is the cheapest, fastest, and most effective way to handle wage garnishment. Acting before the judgment is entered means there is no garnishment to fight later. Find out where you stand, for free.",
     cta: "Get a free case evaluation",
   },
 

@@ -73,7 +73,8 @@ window.CREDO = {
   ],
 
   whatWeDo: {
-    intro: "At Credo Legal, we start with education. Before recommending any course of action, our attorneys explain the federal and state rules that govern payday loans — so you can decide what to do from a position of knowledge.",
+    headline: "Education first. Then the legal claim.",
+    intro: "At Credo Legal, we start with education. Before recommending any course of action, our attorneys explain the federal and state rules that govern payday loans, so you can decide what to do from a position of knowledge.",
     bullets: [
       "Explain your FDCPA rights against third-party collectors.",
       "Review whether your original loan was legally made in your state.",
@@ -83,18 +84,18 @@ window.CREDO = {
   },
 
   whyChoose: [
-    ["Licensed attorneys — legal advice, not just information", "We don't hand you a list of rules. We review your situation and tell you specifically where you stand."],
-    ["We know payday loan law", "Federal rules, state licensing requirements, rate caps, CFPB regulations — we know them all and how they apply to your case."],
+    ["Licensed attorneys, legal advice, not just information", "We don't hand you a list of rules. We review your situation and tell you specifically where you stand."],
+    ["We know payday loan law", "Federal rules, state licensing requirements, rate caps, CFPB regulations, we know them all and how they apply to your case."],
     ["We explain before we act", "You'll understand your options fully before we recommend anything."],
     ["Free consultation", "No cost to know whether you have rights being violated and what you can do about it."],
     ["Flexible payment plans", "If you decide to move forward, legal help is structured around your budget."],
   ],
 
   commonProblems: [
-    ["Not knowing whether the loan itself was legal", "Payday lenders must be licensed in your state and comply with rate caps. Many online lenders don't — and those loans may be unenforceable.", "State payday law"],
+    ["Not knowing whether the loan itself was legal", "Payday lenders must be licensed in your state and comply with rate caps. Many online lenders don't, and those loans may be unenforceable.", "State payday law"],
     ["Unaware of the right to stop automatic withdrawals", "Payday lenders often use ACH authorization to pull payments. You have the right to revoke that authorization.", "15 U.S.C. § 1693"],
     ["Confused about what collectors are allowed to do", "Third-party collectors pursuing payday loan debt must follow the FDCPA. Most borrowers don't know which behaviors are illegal.", "FDCPA"],
-    ["Worried about a lawsuit", "Many payday loan borrowers fear a lawsuit but don't know that payday loan claims are often challengeable — sometimes void entirely.", "State payday law"],
+    ["Worried about a lawsuit", "Many payday loan borrowers fear a lawsuit but don't know that payday loan claims are often challengeable, sometimes void entirely.", "State payday law"],
     ["Receiving threats that may be illegal", "Threatening arrest for an unpaid payday loan is a federal violation. Many borrowers assume it's legal and don't push back.", "FDCPA § 1692e(4)"],
     ["Unsure whether to pay, dispute, or ignore", "Each option has different legal and financial consequences. You should understand all three before choosing.", "Legal counsel"],
   ],
@@ -103,15 +104,15 @@ window.CREDO = {
     ["Free consultation", "Tell us about your situation. We explain your rights under federal and state law at no cost, no pressure.", "DAY 0"],
     ["Case review", "Our attorneys examine the loan, the collector's conduct, and the full range of your legal options.", "WEEK 1"],
     ["Recommendation", "We outline the best path forward for your specific situation: cease letter, loan challenge, FDCPA claim, or another approach.", "WEEK 1–2"],
-    ["Action", "If you choose to move forward, we handle everything — from stopping the calls to challenging the loan or pursuing damages.", "ONGOING"],
+    ["Action", "If you choose to move forward, we handle everything, from stopping the calls to challenging the loan or pursuing damages.", "ONGOING"],
   ],
 
   rights: {
-    intro: "Payday loan borrowers have more legal protection than most realize — at both the federal and state level.",
+    intro: "Payday loan borrowers have more legal protection than most realize, at both the federal and state level.",
     items: [
       { cite: "FDCPA",             label: "FDCPA applies",          text: "The FDCPA applies fully to third-party collectors pursuing payday loan debt, prohibiting harassment, threats, and abusive tactics.", exLabel: "Right", ex: "Same federal protections that apply to other consumer debts apply here." },
-      { cite: "State payday law",  label: "Licensing + rate caps",  text: "State payday lending laws set licensing requirements and interest rate caps. A loan from an unlicensed lender or above the state cap may be unenforceable.", exLabel: "Right", ex: "Loan from a non-licensed online lender? May be void — principal possibly not owed." },
-      { cite: "15 U.S.C. § 1693",  label: "EFTA / ACH revocation",  text: "The Electronic Funds Transfer Act gives you the right to revoke ACH authorization — you can legally stop automatic bank withdrawals.", exLabel: "Right", ex: "Notify your bank in writing. Withdrawals must stop within 3 business days." },
+      { cite: "State payday law",  label: "Licensing + rate caps",  text: "State payday lending laws set licensing requirements and interest rate caps. A loan from an unlicensed lender or above the state cap may be unenforceable.", exLabel: "Right", ex: "Loan from a non-licensed online lender? May be void, principal possibly not owed." },
+      { cite: "15 U.S.C. § 1693",  label: "EFTA / ACH revocation",  text: "The Electronic Funds Transfer Act gives you the right to revoke ACH authorization, you can legally stop automatic bank withdrawals.", exLabel: "Right", ex: "Notify your bank in writing. Withdrawals must stop within 3 business days." },
       { cite: "CFPB rules",        label: "Disclosure + ability-to-repay", text: "CFPB rules require payday lenders to make specific disclosures and assess ability to repay. Violations can create defenses.", exLabel: "Right", ex: "Loan made without proper ability-to-repay assessment = potential defense." },
       { cite: "FDCPA § 1692e(4)",  label: "No arrest threats",      text: "Threatening arrest for an unpaid payday loan is illegal. Debt is a civil matter, and this threat violates federal law.", exLabel: "Violation", ex: "Any 'we'll have you arrested' threat from a collector = federal violation." },
       { cite: "10 U.S.C. § 987",   label: "Military Lending Act",   text: "The Military Lending Act caps payday loan interest at 36% for active-duty military and their dependents.", exLabel: "Right", ex: "Active duty? Anything above 36% APR is illegal under federal law." },
@@ -128,9 +129,9 @@ window.CREDO = {
 
   faq: [
     ["What laws protect me from payday loan collectors?", "The Fair Debt Collection Practices Act (FDCPA) applies to third-party collectors pursuing payday loan debt. State laws and CFPB rules also apply, and the Military Lending Act provides additional protections for active-duty service members."],
-    ["Can I legally stop my payday lender from withdrawing money from my bank account?", "Yes. Under the Electronic Funds Transfer Act, you have the right to revoke ACH authorization — the electronic permission you gave the lender to debit your account. Notify your bank in writing; withdrawals must stop within 3 business days."],
-    ["What happens if my payday lender wasn't licensed in my state?", "A payday lender operating without a license in your state may have made an unenforceable loan. If the loan is void, you may not legally owe the principal — let alone the interest."],
-    ["What if I'm afraid to take any action because I think I'll be sued?", "Understanding your rights doesn't increase your legal exposure — it reduces it. Knowing whether the loan was legal and what defenses you have puts you in a stronger position regardless of what happens next."],
+    ["Can I legally stop my payday lender from withdrawing money from my bank account?", "Yes. Under the Electronic Funds Transfer Act, you have the right to revoke ACH authorization, the electronic permission you gave the lender to debit your account. Notify your bank in writing; withdrawals must stop within 3 business days."],
+    ["What happens if my payday lender wasn't licensed in my state?", "A payday lender operating without a license in your state may have made an unenforceable loan. If the loan is void, you may not legally owe the principal, let alone the interest."],
+    ["What if I'm afraid to take any action because I think I'll be sued?", "Understanding your rights doesn't increase your legal exposure, it reduces it. Knowing whether the loan was legal and what defenses you have puts you in a stronger position regardless of what happens next."],
     ["How much does this cost?", "Your consultation is free. We offer flexible payment plans and will walk you through every option before any commitment."],
   ],
 

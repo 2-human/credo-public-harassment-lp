@@ -34,7 +34,7 @@ window.CREDO = {
   phone: "(212) 561-5902",
   phoneHref: "tel:+12125615902",
   cluster: "Lawsuit",
-  angle: "Collection_Lawsuit — Deadline urgency (CHAMPION)",
+  angle: "Collection_Lawsuit. Deadline urgency (CHAMPION)",
   statute: "Civil procedure / FDCPA",
 
   hero: {
@@ -94,6 +94,7 @@ window.CREDO = {
   ],
 
   whatWeDo: {
+    headline: "We answer the lawsuit on time.",
     intro: "At Credo Legal, when you're sued by a debt collector, we don't wait. We review the lawsuit, examine the claim, and respond before the deadline runs out.",
     bullets: [
       "File your legal answer by the deadline.",
@@ -105,9 +106,9 @@ window.CREDO = {
 
   // Voice fixes applied to bullets 1 and 5.
   whyChoose: [
-    ["Licensed attorneys — not salespeople", "Our attorneys defend you from day one. Not a settlement service."],
+    ["Licensed attorneys, not salespeople", "Our attorneys defend you from day one. Not a settlement service."],
     ["We file before deadlines hit", "Filing your response before the clock runs out is the single most important thing that can happen right now."],
-    ["We challenge the debt", "Before we respond, we examine the claim — for errors, inflated amounts, and documentation gaps that can lead to dismissal."],
+    ["We challenge the debt", "Before we respond, we examine the claim, for errors, inflated amounts, and documentation gaps that can lead to dismissal."],
     ["Protection from default judgment", "A default judgment allows collectors to garnish your wages and freeze your accounts. We fight to prevent that."],
     ["Flexible payment plans", "Legal defense, structured around your budget."],
   ],
@@ -125,7 +126,7 @@ window.CREDO = {
   ],
 
   howItWorks: [
-    ["Free consultation", "We review your lawsuit and explain exactly where you stand and what options you have — at no cost.", "DAY 0"],
+    ["Free consultation", "We review your lawsuit and explain exactly where you stand and what options you have, at no cost.", "DAY 0"],
     ["Debt investigation", "Our attorneys examine the claim, the documentation, and the legal basis before we respond.", "WEEK 1"],
     ["Legal response filed", "We file your answer by the deadline, preserving your right to defend the case.", "BY DEADLINE"],
     ["Work towards resolution", "We fight the case in court, negotiate a settlement, or move to reduce or dismiss the debt based on the strength of the case.", "ONGOING"],
@@ -138,7 +139,7 @@ window.CREDO = {
       { cite: "FRCP 4",            label: "Proper service first",      text: "Collectors cannot obtain a default judgment without first properly serving you with the lawsuit.", exLabel: "Right", ex: "No valid service = no default judgment." },
       { cite: "FRE 401–402",       label: "Burden of proof",           text: "Collectors must be able to prove the debt is valid, accurate, and that they have the legal right to collect.", exLabel: "Right", ex: "Plaintiff carries the burden. You don't have to disprove the claim." },
       { cite: "FDCPA § 1692e(2)",  label: "No false court filings",    text: "Misrepresenting the amount owed, even in a court filing, violates the FDCPA.", exLabel: "Violation", ex: "Inflated balance in the complaint = federal claim back against the collector." },
-      { cite: "FRCP 60(b)",        label: "Vacating a judgment",       text: "A default judgment is not always final. In certain circumstances, it can be vacated with prompt legal action.", exLabel: "Right", ex: "Improper service, mistake, excusable neglect — narrow but real grounds." },
+      { cite: "FRCP 60(b)",        label: "Vacating a judgment",       text: "A default judgment is not always final. In certain circumstances, it can be vacated with prompt legal action.", exLabel: "Right", ex: "Improper service, mistake, excusable neglect, narrow but real grounds." },
       { cite: "Civil right",       label: "Right to defend",           text: "You have the right to respond, appear, and be represented by an attorney in any civil lawsuit.", exLabel: "Right", ex: "File an answer. Be heard. Be represented at every stage." },
       // Synthesized 6th — validation right.
       { cite: "FDCPA § 1692g",     label: "Validation right",          text: "You have the right to demand the collector verify the debt in writing before you are required to respond.", exLabel: "Right", ex: "Send a validation request. Collection activity pauses until the collector responds." },
@@ -163,7 +164,7 @@ window.CREDO = {
 
   bottomCta: {
     headline: "Don't let the deadline cost you. Act now.",
-    body: "A collection lawsuit isn't a final outcome — it's a starting point. But only if you respond in time.",
+    body: "A collection lawsuit isn't a final outcome, it's a starting point. But only if you respond in time.",
     cta: "Get a free case evaluation",
   },
 

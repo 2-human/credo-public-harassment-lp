@@ -87,6 +87,7 @@ window.CREDO = {
 
   // ---- WHAT WE DO — live copy, verbatim ----
   whatWeDo: {
+    headline: "Education first. Then enforcement.",
     intro: "At Credo Legal, we start with education, because knowing your rights is the first form of protection.",
     bullets: [
       "Break down the FDCPA in plain English: what collectors can do, what they can't do, and where the line is.",
@@ -98,7 +99,7 @@ window.CREDO = {
 
   // ---- WHY CHOOSE — live copy, verbatim ----
   whyChoose: [
-    ["Licensed attorneys, legal advice — not just information", "We don't hand you a fact sheet. We review your specific situation and tell you where you stand."],
+    ["Licensed attorneys, legal advice, not just information", "We don't hand you a fact sheet. We review your specific situation and tell you where you stand."],
     ["We know the FDCPA inside out", "Proven track record. \"Know Your FDCPA Rights\" has driven thousands of consultations because the need is real."],
     ["We explain before we act", "You'll understand your options clearly before we recommend anything or ask you to commit."],
     ["Free consultation", "No cost to know whether collectors have violated your rights."],
@@ -121,7 +122,7 @@ window.CREDO = {
     ["Free consultation", "Tell us what collectors have been doing. We explain your FDCPA rights and whether they've been violated.", "DAY 0"],
     ["Case review", "Our attorneys examine the collector's conduct against the specific requirements of the FDCPA.", "WEEK 1"],
     ["Recommendation", "We outline your options clearly: cease letter, formal complaint, legal claim, or a combination.", "WEEK 1–2"],
-    ["Action", "If you choose to move forward, we handle everything — from stopping the calls to pursuing violations.", "ONGOING"],
+    ["Action", "If you choose to move forward, we handle everything, from stopping the calls to pursuing violations.", "ONGOING"],
   ],
 
   // ---- YOUR RIGHTS — live bullets promoted to structured items.

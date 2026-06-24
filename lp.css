@@ -278,6 +278,11 @@ a.hero-call:hover { color: var(--credo-red); }
 @media (prefers-reduced-motion: no-preference){ .reviewbar .rev { transition: background var(--t-fast); } .reviewbar .rev:hover { background: var(--bg-soft); } }
 
 /* ===== Claim list (What we do) ============================================ */
+/* Lede paragraph between the one-row H2 headline and the .claim-list 2px line. */
+.wwd-lede {
+  font-size: var(--fs-lede); color: var(--fg-muted); line-height: var(--leading-normal);
+  margin: 16px 0 0; max-width: 760px;
+}
 .claim-list { list-style: none; margin: 28px 0 0; padding: 0; }
 .claim-list li {
   display: grid; grid-template-columns: 40px 1fr; gap: 16px; align-items: baseline;

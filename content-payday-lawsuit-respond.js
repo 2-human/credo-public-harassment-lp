@@ -3,7 +3,7 @@
    of /payday-loan-lawsuit-proof. Standard structure, voice fix. */
 window.CREDO = {
   phone: "(347) 744-9014", phoneHref: "tel:+13477449014",
-  cluster: "Payday Loan", angle: "Lawsuit — Deadline urgency",
+  cluster: "Payday Loan", angle: "Lawsuit. Deadline urgency",
   statute: "Civil procedure + state payday law + FDCPA",
 
   hero: {
@@ -63,6 +63,7 @@ window.CREDO = {
   ],
 
   whatWeDo: {
+    headline: "Sued over a payday loan? We answer fast.",
     intro: "At Credo Legal, when you're sued over a payday loan, we act immediately. We review the lawsuit and the loan, then file your response before the deadline.",
     bullets: [
       "File your legal answer before the response deadline.",
@@ -73,7 +74,7 @@ window.CREDO = {
   },
 
   whyChoose: [
-    ["Licensed attorneys — we file", "Your response is submitted before the deadline. We don't let that window close."],
+    ["Licensed attorneys, we file", "Your response is submitted before the deadline. We don't let that window close."],
     ["We know payday loan law", "Payday loans are subject to specific state and federal rules. We examine the loan itself, not just the lawsuit."],
     ["We challenge the loan", "Before we respond, we examine whether the lender was licensed, whether the rate was legal in your state."],
     ["Protection from default judgment", "A default judgment enables wage garnishment and bank levies. We fight to prevent it."],
@@ -104,7 +105,7 @@ window.CREDO = {
       { cite: "State usury law",     label: "Rate caps + payday rules",   text: "State usury and payday lending laws set rate caps and licensing requirements. A loan made in violation may be void or voidable.", exLabel: "Right", ex: "Above-cap rate = potential void of the interest, sometimes principal too." },
       { cite: "Chain of assignment", label: "Standing for debt buyers",   text: "If the debt was sold to a collector, they must prove an unbroken, documented chain of ownership.", exLabel: "Right", ex: "Multiple sales without documentation = standing problem." },
       { cite: "CFPB rules",          label: "Disclosure requirements",    text: "CFPB regulations require specific disclosures and lending practices. Violations can be raised as defenses.", exLabel: "Right", ex: "Missing or inadequate ability-to-repay assessment = potential defense." },
-      { cite: "FRCP 60(b)",          label: "Vacating a judgment",        text: "A default judgment, while serious, can sometimes be vacated with prompt legal action.", exLabel: "Right", ex: "Improper service, mistake, excusable neglect — narrow but real grounds." },
+      { cite: "FRCP 60(b)",          label: "Vacating a judgment",        text: "A default judgment, while serious, can sometimes be vacated with prompt legal action.", exLabel: "Right", ex: "Improper service, mistake, excusable neglect, narrow but real grounds." },
     ],
   },
 
@@ -117,9 +118,9 @@ window.CREDO = {
   ],
 
   faq: [
-    ["What happens if I don't respond to a payday loan lawsuit?", "The court enters a default judgment automatically. This gives the lender or collector the right to garnish wages and levy bank accounts — without ever having to prove the loan was valid."],
+    ["What happens if I don't respond to a payday loan lawsuit?", "The court enters a default judgment automatically. This gives the lender or collector the right to garnish wages and levy bank accounts, without ever having to prove the loan was valid."],
     ["How long do I have to respond?", "Typically 20 to 28 days from the date you were served, depending on your state. The clock starts the day of service."],
-    ["Can a payday loan be challenged if I actually borrowed the money?", "Yes — in many cases. The original loan amount may be legally disputed if the lender was unlicensed, if the rate was above the state cap, or if disclosures were inadequate."],
+    ["Can a payday loan be challenged if I actually borrowed the money?", "Yes, in many cases. The original loan amount may be legally disputed if the lender was unlicensed, if the rate was above the state cap, or if disclosures were inadequate."],
     ["What if I borrowed from an online lender I found through an ad?", "Online payday lenders are required to be licensed in the state where the borrower lives. Many are not. Lack of licensing where you live can void the loan."],
     ["How much does this cost?", "Your consultation is free. We offer flexible payment plans and will explain every option before any commitment."],
   ],

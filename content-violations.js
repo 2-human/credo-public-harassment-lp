@@ -90,7 +90,8 @@ window.CREDO = {
   // ---- WHAT WE DO — live intro paragraph + 4 bullets (live verbatim,
   //      with spacing typos quietly corrected) ----
   whatWeDo: {
-    intro: "At Credo Legal, we don't just make the calls stop — we turn every illegal call into evidence. Our attorneys identify each FDCPA violation, document the pattern of harassment, and build a legal case against the collector. The law was written to hold collectors accountable. We use it.",
+    headline: "Every illegal call becomes evidence.",
+    intro: "At Credo Legal, we don't just make the calls stop, we turn every illegal call into evidence. Our attorneys identify each FDCPA violation, document the pattern of harassment, and build a legal case against the collector. The law was written to hold collectors accountable. We use it.",
     bullets: [
       "Turn every illegal contact into a documented FDCPA claim against the collector.",
       "Translate violations into dollars: statutory damages (up to $1,000 per lawsuit), actual damages, and attorney fees.",
@@ -101,9 +102,9 @@ window.CREDO = {
 
   // ---- WHY CHOOSE — live copy, verbatim ----
   whyChoose: [
-    ["Licensed attorneys — we hold collectors accountable", "We don't send a strongly worded letter and hope for the best. We build FDCPA cases and pursue them."],
+    ["Licensed attorneys, we hold collectors accountable", "We don't send a strongly worded letter and hope for the best. We build FDCPA cases and pursue them."],
     ["We track every violation", "Each illegal call, threat, or contact after a cease request is documented and added to your claim."],
-    ["The FDCPA pays you — we maximize that", "Statutory damages, actual damages, and attorney fees are all recoverable. We pursue the full amount."],
+    ["The FDCPA pays you, we maximize that", "Statutory damages, actual damages, and attorney fees are all recoverable. We pursue the full amount."],
     ["Free consultation", "No cost to find out how many violations you have and what they're worth."],
     ["Flexible payment plans", "Legal help structured around your budget."],
   ],
@@ -128,13 +129,13 @@ window.CREDO = {
 
   // ---- YOUR RIGHTS — live bullets promoted to structured items ----
   rights: {
-    intro: "The FDCPA doesn't just protect you — it creates financial accountability for collectors who break it.",
+    intro: "The FDCPA doesn't just protect you, it creates financial accountability for collectors who break it.",
     items: [
       { cite: "§ 1692k(a)(2)(A)", label: "Statutory damages",      text: "Each lawsuit under the FDCPA can result in up to $1,000 in statutory damages.", exLabel: "Remedy", ex: "Up to $1,000 per lawsuit, paid by the collector." },
       { cite: "§ 1692k(a)",       label: "Strict liability",       text: "You do not need to prove financial harm to recover. The violation itself is enough.", exLabel: "Right", ex: "No proven harm required. The violation alone creates liability." },
-      { cite: "§ 1692k(a)(1)",    label: "Actual damages",         text: "Actual damages — including emotional distress, lost wages, and other real harm — are recoverable on top of statutory damages.", exLabel: "Remedy", ex: "Emotional distress, lost wages, real harm: all recoverable." },
+      { cite: "§ 1692k(a)(1)",    label: "Actual damages",         text: "Actual damages, including emotional distress, lost wages, and other real harm, are recoverable on top of statutory damages.", exLabel: "Remedy", ex: "Emotional distress, lost wages, real harm: all recoverable." },
       { cite: "§ 1692k(a)(3)",    label: "Fee-shifting",           text: "Attorney fees are recoverable from the collector.", exLabel: "Remedy", ex: "Collector pays your legal fees when the claim succeeds." },
-      { cite: "§ 1692a(6)",       label: "Broad coverage",         text: "The law applies to all third-party collectors, regardless of what type of debt they are collecting.", exLabel: "Right", ex: "Credit cards, medical bills, payday loans — the FDCPA covers them all." },
+      { cite: "§ 1692a(6)",       label: "Broad coverage",         text: "The law applies to all third-party collectors, regardless of what type of debt they are collecting.", exLabel: "Right", ex: "Credit cards, medical bills, payday loans, the FDCPA covers them all." },
     ],
   },
 
@@ -142,15 +143,15 @@ window.CREDO = {
   whoHelps: [
     "Anyone who has received repeated or harassing calls from a debt collector about any unsecured debt.",
     "People who have been threatened, humiliated, or misled by a collector.",
-    "Those who've asked collectors to stop but keep getting called — every call after that is a violation.",
+    "Those who've asked collectors to stop but keep getting called, every call after that is a violation.",
     "Anyone whose collector has contacted their employer, family members, or neighbors.",
     "People who want to stop being the victim and become the plaintiff.",
   ],
 
   // ---- FAQ — live copy, verbatim ----
   faq: [
-    ["How much can I recover from a debt collector who violated the FDCPA?", "Up to $1,000 per lawsuit in statutory damages, plus actual damages for real harm suffered, plus attorney fees — all recoverable from the collector if the claim is viable."],
-    ["Do I need to prove I was financially harmed to make a claim?", "No. Under the FDCPA, a violation is enough — you don't need to show that the calls cost you money. The law creates automatic liability for each breach."],
+    ["How much can I recover from a debt collector who violated the FDCPA?", "Up to $1,000 per lawsuit in statutory damages, plus actual damages for real harm suffered, plus attorney fees, all recoverable from the collector if the claim is viable."],
+    ["Do I need to prove I was financially harmed to make a claim?", "No. Under the FDCPA, a violation is enough, you don't need to show that the calls cost you money. The law creates automatic liability for each breach."],
     ["What if the collector only violated the law a few times?", "Even a handful of violations adds up. And in many cases, once we begin documenting, the pattern reveals more than clients initially realize."],
     ["How long does it take to resolve an FDCPA case?", "Timelines vary, but many cases resolve in weeks to months."],
     ["How much does this cost?", "Your consultation is free. After that we have affordable payment plans for you to tackle your debts."],
@@ -159,7 +160,7 @@ window.CREDO = {
   // ---- BOTTOM CTA — live copy, verbatim ----
   bottomCta: {
     headline: "Every illegal call is evidence. Let's use it.",
-    body: "Collectors broke federal law. That's not just something to complain about — it's a legal claim. Our attorneys build that case from day one.",
+    body: "Collectors broke federal law. That's not just something to complain about, it's a legal claim. Our attorneys build that case from day one.",
     cta: "Get a free case evaluation",
   },
 

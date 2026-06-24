@@ -31,7 +31,7 @@ window.CREDO = {
   phone: "(347) 474-9602",
   phoneHref: "tel:+13474749602",
   cluster: "Harassment",
-  angle: "Multiple Collectors — Overwhelm relief",
+  angle: "Multiple Collectors. Overwhelm relief",
   statute: "FDCPA",
 
   hero: {
@@ -98,7 +98,8 @@ window.CREDO = {
 
   // ---- WHAT WE DO — live intro paragraph + 5 bullets (live verbatim) ----
   whatWeDo: {
-    intro: "Multiple-collector situations are our specialty. When several debt collectors are calling at once, the FDCPA applies to all of them. At Credo Legal, we send cease letters to every active collector simultaneously, coordinate your defense across all accounts, and track violations from every source under one legal strategy. You don't have to manage each collector separately — we manage all of them from day one.",
+    headline: "Every collector. One legal strategy.",
+    intro: "Multiple-collector situations are our specialty. When several debt collectors are calling at once, the FDCPA applies to all of them. At Credo Legal, we send cease letters to every active collector simultaneously, coordinate your defense across all accounts, and track violations from every source under one legal strategy. You don't have to manage each collector separately, we manage all of them from day one.",
     bullets: [
       "Cease letters sent to every active collector, not just the loudest one.",
       "Violations tracked and documented across every collector and every account.",
@@ -127,7 +128,7 @@ window.CREDO = {
     ["Calls before 8 AM or after 9 PM", "Federal law applies to every collector equally. Timing violations from any of them are actionable, and we track all of them.", "§ 1692c(a)(1)"],
     ["Collectors you don't recognize", "Debts are frequently sold between agencies. You may be receiving calls about accounts you thought were settled, from collectors who may not even have the documentation to prove you owe anything.", "§ 1692g"],
     // Synthesized 6th row to match standard cluster count.
-    ["Calls about debts you've already paid or settled", "Misrepresenting the amount owed — or that you owe anything at all on a resolved debt — is a federal violation regardless of which collector says it.", "§ 1692e(2)"],
+    ["Calls about debts you've already paid or settled", "Misrepresenting the amount owed, or that you owe anything at all on a resolved debt, is a federal violation regardless of which collector says it.", "§ 1692e(2)"],
   ],
 
   // ---- HOW IT WORKS — live copy + time markers ----
@@ -156,14 +157,14 @@ window.CREDO = {
     "Anyone receiving calls from two or more debt collectors at the same time.",
     "People overwhelmed by simultaneous harassment across multiple accounts or debt types.",
     "Those being contacted at work, through family members, or at illegal hours by any of their collectors.",
-    "Anyone who wants one attorney to handle everything — not a different response for every collector.",
+    "Anyone who wants one attorney to handle everything, not a different response for every collector.",
     "People who want clarity and control over a situation that currently feels completely out of hand.",
   ],
 
   // ---- FAQ — live copy, verbatim (already at standard 5) ----
   faq: [
     ["Can one attorney really handle all my collectors together?", "Yes. The FDCPA applies to all third-party debt collectors. We send cease letters to each of them simultaneously and coordinate legal strategy across all accounts. You make one call. We manage the rest."],
-    ["Do I have to deal with each collector separately?", "No — that is exactly what we are here to prevent. We handle all active collectors on your behalf. You're not managing five problems. You have one attorney managing all of them."],
+    ["Do I have to deal with each collector separately?", "No, that is exactly what we are here to prevent. We handle all active collectors on your behalf. You're not managing five problems. You have one attorney managing all of them."],
     ["What if different collectors are calling about different types of debt?", "The FDCPA covers all unsecured debt types, including credit cards, medical bills, payday loans, and utilities. Regardless of what each collector is calling about, the same federal law governs how they are allowed to treat you."],
     ["What happens if a collector keeps calling after the cease letter?", "Every call after a written cease request is a federal violation worth up to $1,000 in statutory damages. With multiple collectors, violations can multiply quickly. We track and document each one across every account."],
     ["How much does this cost?", "Your consultation is free. We offer flexible payment plans, and in cases where we pursue FDCPA violations, collector-paid penalties may offset costs entirely."],
@@ -172,7 +173,7 @@ window.CREDO = {
   // ---- BOTTOM CTA — live copy, verbatim ----
   bottomCta: {
     headline: "One call ends the chaos for all of them.",
-    body: "Multiple collectors do not mean multiple problems. They mean one attorney, one plan, and one solution that covers everything. Find out what we can do — for free.",
+    body: "Multiple collectors do not mean multiple problems. They mean one attorney, one plan, and one solution that covers everything. Find out what we can do, for free.",
     cta: "Get a free case evaluation",
   },
 

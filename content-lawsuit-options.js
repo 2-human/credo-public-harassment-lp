@@ -23,7 +23,7 @@ window.CREDO = {
   phone: "(347) 523-4662",
   phoneHref: "tel:+13475234662",
   cluster: "Lawsuit",
-  angle: "Served_Papers — Explore options",
+  angle: "Served_Papers. Explore options",
   statute: "Civil procedure / FDCPA",
 
   hero: {
@@ -85,11 +85,12 @@ window.CREDO = {
 
   // ---- WHAT WE DO — live verbatim ----
   whatWeDo: {
-    intro: "At Credo Legal, our first job is to help you understand what you are holding. We read your court papers, explain what they mean in plain language, and tell you exactly where you stand — what the deadline is, what can be challenged, and what your real options are. From there, we help file your legal response and build the strongest defense the facts support. Thousands of people in your situation have come to us not knowing what to do. Most of them had more options than they realized.",
+    headline: "First we explain. Then we defend.",
+    intro: "At Credo Legal, our first job is to help you understand what you are holding. We read your court papers, explain what they mean in plain language, and tell you exactly where you stand, what the deadline is, what can be challenged, and what your real options are. From there, we help file your legal response and build the strongest defense the facts support. Thousands of people in your situation have come to us not knowing what to do. Most of them had more options than they realized.",
     bullets: [
       "Free review of your court papers, explained in plain language.",
       "Deadline confirmed and response filed before the window closes.",
-      "Every available defense identified — documentation gaps, billing errors, and legal deficiencies.",
+      "Every available defense identified, documentation gaps, billing errors, and legal deficiencies.",
       "Legal representation through negotiations or court, whichever the case requires.",
       "Flexible payment plans so you can get help without adding to your financial stress.",
     ],
@@ -112,7 +113,7 @@ window.CREDO = {
     ["Thinking it is already too late", "Unless a final judgment has been entered, there are almost always options. And even then, in some circumstances, those judgments can be challenged.", "FRCP 60(b)"],
     ["Facing a collector's legal team alone", "Debt buyers use experienced attorneys who file these cases every day. You deserve someone in your corner who knows the same playbook.", "Civil right"],
     // Synthesized 6th row matching the angle's reassurance theme.
-    ["Default judgment already entered", "Even after the court has ruled, certain circumstances allow a judgment to be vacated — improper service, lack of notice, mistake. The window to act is narrow but real.", "FRCP 60(b)"],
+    ["Default judgment already entered", "Even after the court has ruled, certain circumstances allow a judgment to be vacated, improper service, lack of notice, mistake. The window to act is narrow but real.", "FRCP 60(b)"],
   ],
 
   // ---- HOW IT WORKS — live verbatim + time markers ----
@@ -131,8 +132,8 @@ window.CREDO = {
       { cite: "FRE 401–402",       label: "Burden on the plaintiff",   text: "Collectors must show the debt is valid, accurate, and legally theirs to collect. If their documentation is incomplete, that is your defense.", exLabel: "Right", ex: "No complete records = no judgment for the collector." },
       { cite: "FDCPA § 1692e(2)",  label: "No false court filings",    text: "Collectors cannot misrepresent the amount you owe, even in court filings. Inflated balances are a federal violation.", exLabel: "Violation", ex: "Inflated balance in the complaint = federal claim back against the collector." },
       { cite: "FRCP 4 + 60(b)",    label: "Service required",          text: "A default judgment entered without proper service can be challenged and potentially vacated with the right legal action.", exLabel: "Right", ex: "No valid service = grounds to vacate the judgment." },
-      { cite: "FRCP 60(b)",        label: "Vacating a judgment",       text: "Even an existing default judgment is not always final. In some cases, prompt legal action can reopen the matter.", exLabel: "Right", ex: "Mistake, excusable neglect, improper service — narrow but real grounds." },
-      { cite: "Civil right",       label: "Right to counsel",          text: "You have the right to an attorney at every stage. The collector has one. There is no reason you should not.", exLabel: "Right", ex: "Hire counsel at any point — pre-answer, mid-litigation, post-judgment." },
+      { cite: "FRCP 60(b)",        label: "Vacating a judgment",       text: "Even an existing default judgment is not always final. In some cases, prompt legal action can reopen the matter.", exLabel: "Right", ex: "Mistake, excusable neglect, improper service, narrow but real grounds." },
+      { cite: "Civil right",       label: "Right to counsel",          text: "You have the right to an attorney at every stage. The collector has one. There is no reason you should not.", exLabel: "Right", ex: "Hire counsel at any point, pre-answer, mid-litigation, post-judgment." },
     ],
   },
 
@@ -158,7 +159,7 @@ window.CREDO = {
   // ---- BOTTOM CTA — live verbatim ----
   bottomCta: {
     headline: "One free conversation can change your entire situation.",
-    body: "Court papers feel final. They are not. Our attorneys will tell you exactly what you are facing and what can be done about it — for free, with no obligation.",
+    body: "Court papers feel final. They are not. Our attorneys will tell you exactly what you are facing and what can be done about it, for free, with no obligation.",
     cta: "Get a free case evaluation",
   },
 

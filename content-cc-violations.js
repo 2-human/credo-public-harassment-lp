@@ -4,7 +4,7 @@
    Bottom CTA body rewritten (live had VarA copy-paste). */
 window.CREDO = {
   phone: "(646) 952-7392", phoneHref: "tel:+16469527392",
-  cluster: "Credit Card", angle: "Harassment — $1K per violation",
+  cluster: "Credit Card", angle: "Harassment, $1K per violation",
   statute: "FDCPA",
 
   hero: {
@@ -64,7 +64,8 @@ window.CREDO = {
   ],
 
   whatWeDo: {
-    intro: "At Credo Legal, we don't just stop the calls — we turn them into a legal case against the collector.",
+    headline: "Every illegal call becomes your legal case.",
+    intro: "At Credo Legal, we don't just stop the calls, we turn them into a legal case against the collector.",
     bullets: [
       "Track every FDCPA violation from the day you enroll.",
       "Identify every illegal call, threat, or unlawful contact for your claim.",
@@ -74,11 +75,11 @@ window.CREDO = {
   },
 
   whyChoose: [
-    ["Attorney assistance from day one", "Licensed attorneys handle your case from the first conversation — no handoffs, no delays."],
+    ["Attorney assistance from day one", "Licensed attorneys handle your case from the first conversation, no handoffs, no delays."],
     ["We track every single violation", "Each illegal call, threat, or contact after a cease request is documented and added to your claim."],
-    ["We identify every illegal breach", "Many people don't realize each illegal contact is a separate $1,000 federal claim. We do — and we find all of them."],
+    ["We identify every illegal breach", "Many people don't realize each illegal contact is a separate $1,000 federal claim. We do, and we find all of them."],
     // Voice fix on label.
-    ["Our attorneys build your case — not salespeople", "Licensed attorneys pursuing real legal claims. Not a settlement service. Real legal authority and real legal remedies."],
+    ["Our attorneys build your case, not salespeople", "Licensed attorneys pursuing real legal claims. Not a settlement service. Real legal authority and real legal remedies."],
     ["Flexible payment plans", "Legal help that works with your financial situation."],
   ],
 
@@ -93,14 +94,14 @@ window.CREDO = {
   ],
 
   howItWorks: [
-    ["Free consultation", "We assess your violations and calculate what you may be owed — at no cost.", "DAY 0"],
+    ["Free consultation", "We assess your violations and calculate what you may be owed, at no cost.", "DAY 0"],
     ["Violation tracking", "We document every illegal contact from day one.", "DAY 0"],
     ["Legal representation", "We build and file your FDCPA claim against the collector.", "WEEK 1–2"],
-    ["Recovery", "We pursue the financial compensation the law entitles you to — statutory damages, actual damages, and attorney fees.", "ONGOING"],
+    ["Recovery", "We pursue the financial compensation the law entitles you to, statutory damages, actual damages, and attorney fees.", "ONGOING"],
   ],
 
   rights: {
-    intro: "The FDCPA doesn't just protect you — it pays you. Every violation by a credit card debt collector can carry up to $1,000 in statutory damages. Collectors cannot:",
+    intro: "The FDCPA doesn't just protect you, it pays you. Every violation by a credit card debt collector can carry up to $1,000 in statutory damages. Collectors cannot:",
     items: [
       { cite: "§ 1692c(a)(1)",   label: "Illegal-hour calls",      text: "Call you before 8 AM or after 9 PM.", exLabel: "Violation", ex: "Each call outside hours = standalone $1,000 violation." },
       { cite: "§ 1692e(4),(5)",  label: "False legal threats",     text: "Threaten arrest or legal action they don't plan to take.", exLabel: "Violation", ex: "Each threat = standalone violation, even if never carried out." },
@@ -108,14 +109,14 @@ window.CREDO = {
       { cite: "§ 1692c(b)",      label: "Third-party disclosure",  text: "Discuss your debt with family, friends, or coworkers.", exLabel: "Violation", ex: "Each third-party contact about your debt is a separate claim." },
       { cite: "§ 1692d(5)",      label: "Harassing call patterns", text: "Call repeatedly in a way designed to harass or annoy you.", exLabel: "Violation", ex: "Multiple calls per day with no purpose other than pressure = violation." },
       // Synthesized 6th.
-      { cite: "§ 1692k",         label: "Per-violation damages",   text: "Each FDCPA violation can result in up to $1,000 in statutory damages — plus attorney fees recoverable from the collector.", exLabel: "Remedy", ex: "Multiple violations stack. Fees recoverable from the collector." },
+      { cite: "§ 1692k",         label: "Per-violation damages",   text: "Each FDCPA violation can result in up to $1,000 in statutory damages, plus attorney fees recoverable from the collector.", exLabel: "Remedy", ex: "Multiple violations stack. Fees recoverable from the collector." },
     ],
   },
 
   whoHelps: [
     "People being harassed by credit card debt collectors.",
     "Anyone who has received illegal threats, early-morning calls, or workplace contacts.",
-    "Those who want to do more than stop the calls — they want to fight back.",
+    "Those who want to do more than stop the calls, they want to fight back.",
     "Anyone who has dealt with repeated illegal contact from a collector.",
     "People who want to know what the collector legally owes them.",
   ],
@@ -134,7 +135,7 @@ window.CREDO = {
   // letter is another day...') which didn't fit the recovery framing.
   bottomCta: {
     headline: "Every illegal call is evidence. Let's build your case.",
-    body: "Collectors broke federal law. That's not just something to complain about — it's a legal claim. Our attorneys build that case from day one and pursue the maximum recovery the FDCPA supports.",
+    body: "Collectors broke federal law. That's not just something to complain about, it's a legal claim. Our attorneys build that case from day one and pursue the maximum recovery the FDCPA supports.",
     cta: "Get a free case evaluation",
   },
 

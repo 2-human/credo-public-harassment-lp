@@ -8,7 +8,7 @@
    Voice on subhead is already 'Our Attorneys' (no fix needed). */
 window.CREDO = {
   phone: "(646) 952-7404", phoneHref: "tel:+16469527404",
-  cluster: "Credit Card", angle: "Negotiation — Negotiate down",
+  cluster: "Credit Card", angle: "Negotiation. Negotiate down",
   statute: "FDCPA + state contract / UCC",
 
   hero: {
@@ -68,6 +68,7 @@ window.CREDO = {
   ],
 
   whatWeDo: {
+    headline: "Not advice. Legal representation.",
     intro: "At Credo Legal, we don't just advise you on your credit card debt. We represent you legally to get better terms than you could get alone.",
     bullets: [
       "Negotiate directly with credit card companies on your behalf.",
@@ -78,18 +79,18 @@ window.CREDO = {
   },
 
   whyChoose: [
-    ["Attorney assistance from day one", "Licensed attorneys on your case from the first conversation — no handoffs, no delays."],
+    ["Attorney assistance from day one", "Licensed attorneys on your case from the first conversation, no handoffs, no delays."],
     ["We talk to them so you don't have to", "Once we engage, all communication routes through our office. No more calls, letters, or pressure on you directly."],
-    ["Attorney-led negotiation gets better terms", "Card companies negotiate differently when an attorney is involved — they know we can challenge validity, dispute amounts, and apply legal pressure."],
+    ["Attorney-led negotiation gets better terms", "Card companies negotiate differently when an attorney is involved, they know we can challenge validity, dispute amounts, and apply legal pressure."],
     ["We challenge inflated balances and fees", "Late fees, default-rate interest, and certain penalties may not be enforceable. We push back on every charge that isn't."],
     ["Flexible payment plans", "Attorney-led negotiation structured around your budget."],
   ],
 
   commonProblems: [
-    ["Unmanageable credit card balances", "When monthly minimums grow beyond what's sustainable, negotiation becomes the path forward — not just minimum payments forever.", "State contract"],
+    ["Unmanageable credit card balances", "When monthly minimums grow beyond what's sustainable, negotiation becomes the path forward, not just minimum payments forever.", "State contract"],
     ["High-interest rate debt spirals", "Default-rate interest can double the effective cost of carrying a balance. Negotiation often includes resetting the rate or settling the inflated portion.", "State usury"],
     ["Multiple cards across several creditors", "Negotiating one at a time is slow. Coordinated multi-creditor negotiation is faster and often produces better terms.", "Legal counsel"],
-    ["Debt already in collections or pre-lawsuit stage", "Once debt is in collections, settlement leverage shifts — and the collector's documentation often becomes the issue.", "FDCPA § 1692g"],
+    ["Debt already in collections or pre-lawsuit stage", "Once debt is in collections, settlement leverage shifts, and the collector's documentation often becomes the issue.", "FDCPA § 1692g"],
     ["Balances inflated by fees and penalties", "Card agreements limit what can be added on top of principal. Many post-default charges don't survive scrutiny.", "State contract"],
     // Synthesized 6th.
     ["Garnishment risk if a lawsuit is filed", "Settling pre-lawsuit avoids the default-judgment cascade: garnishment, levies, credit damage.", "15 U.S.C. § 1673"],
@@ -99,7 +100,7 @@ window.CREDO = {
     ["Free consultation", "We review your cards, balances, and options.", "DAY 0"],
     ["Debt investigation", "We evaluate what's valid and what can be challenged or reduced.", "WEEK 1"],
     ["Legal representation", "We negotiate directly with card companies on your behalf.", "WEEK 1–4"],
-    ["Work towards debt resolution", "Settle for less than the full amount owed — and pursue credit-report cleanup once resolved.", "ONGOING"],
+    ["Work towards debt resolution", "Settle for less than the full amount owed, and pursue credit-report cleanup once resolved.", "ONGOING"],
   ],
 
   rights: {
@@ -125,15 +126,15 @@ window.CREDO = {
 
   faq: [
     ["How is attorney-led negotiation different from doing it myself?", "Card companies negotiate differently when there's an attorney involved. A lawyer can challenge the validity of the debt, dispute inflated amounts, and apply legal pressure that a consumer calling on their own simply can't. That difference typically means better terms and a lower settlement."],
-    ["Will settling for less hurt my credit?", "Settlements can affect your credit score — but so does ongoing unpaid debt. In many cases, resolving debt is better for your long-term credit health than letting balances continue to grow. We'll walk you through all the tradeoffs in your free consultation."],
-    ["What if my debt is already in collections?", "We work with debt at all stages, including debt that's already been sold to collectors. In some cases, collectors cannot even prove you owe the debt — which creates additional leverage in negotiations."],
+    ["Will settling for less hurt my credit?", "Settlements can affect your credit score, but so does ongoing unpaid debt. In many cases, resolving debt is better for your long-term credit health than letting balances continue to grow. We'll walk you through all the tradeoffs in your free consultation."],
+    ["What if my debt is already in collections?", "We work with debt at all stages, including debt that's already been sold to collectors. In some cases, collectors cannot even prove you owe the debt, which creates additional leverage in negotiations."],
     ["What if the creditor sues me before we settle?", "We're prepared to defend you if it gets to that point. Many settlements happen specifically because the creditor knows we're ready to litigate if needed."],
     ["How much does this cost?", "We offer flexible payment plans so attorney-led help is accessible without paying everything upfront. Your first case evaluation is completely free."],
   ],
 
   bottomCta: {
     headline: "You can pay less than you owe. Let's find out how much less.",
-    body: "Attorney-led negotiation regularly produces better terms than consumer-side negotiation alone. Find out what's possible for your situation — for free.",
+    body: "Attorney-led negotiation regularly produces better terms than consumer-side negotiation alone. Find out what's possible for your situation, for free.",
     cta: "Get a free case evaluation",
   },
 

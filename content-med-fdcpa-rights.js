@@ -4,7 +4,7 @@
    Voice ×2. */
 window.CREDO = {
   phone: "(347) 744-9014", phoneHref: "tel:+13477449014",
-  cluster: "Medical Debt", angle: "Rights — Education",
+  cluster: "Medical Debt", angle: "Rights. Education",
   statute: "FDCPA + FCRA + No Surprises Act + CFPB",
 
   hero: {
@@ -65,10 +65,11 @@ window.CREDO = {
 
   // WWD live had only 3 bullets; synthesized 4th to match standard.
   whatWeDo: {
+    headline: "Medical debt has rules. We explain them first.",
     intro: "At Credo Legal, we start with education. Before recommending any course of action, our attorneys review the rules that govern your specific medical debt and explain exactly where your situation stands.",
     bullets: [
       "Break down the rules that apply to medical debt in plain English: FDCPA for collector conduct, FCRA for credit reporting, federal surprise billing laws.",
-      "Review the bill, the collector contacts, and your credit report side by side — flag every likely FDCPA or FCRA violation.",
+      "Review the bill, the collector contacts, and your credit report side by side, flag every likely FDCPA or FCRA violation.",
       "Recommend the specific next step: validation dispute, cease letter, credit-report removal, bill challenge, or another approach.",
       // Synthesized 4th matching the cluster pattern.
       "Carry out the path you choose, with attorneys handling every letter, filing, and follow-up.",
@@ -76,16 +77,16 @@ window.CREDO = {
   },
 
   whyChoose: [
-    ["Licensed attorneys — legal advice, not just information", "We don't hand you a brochure. We review your specific situation and give you direct legal guidance."],
+    ["Licensed attorneys, legal advice, not just information", "We don't hand you a brochure. We review your specific situation and give you direct legal guidance."],
     ["We explain before we act", "You'll understand your options clearly before we recommend anything."],
-    ["FDCPA knowledge", "We know what collectors can and can't do — and we explain where your situation falls."],
+    ["FDCPA knowledge", "We know what collectors can and can't do, and we explain where your situation falls."],
     ["Free consultation", "No cost to know where you stand and what's possible."],
     ["Flexible payment plans", "If you decide to move forward, legal help fits your budget."],
   ],
 
   commonProblems: [
-    ["Not knowing whether the debt is actually valid", "Medical bills are complex. You may owe less than claimed — or nothing at all.", "FDCPA § 1692g"],
-    ["Unsure what collectors are allowed to do", "There are strict rules — most people don't know where the legal lines are.", "FDCPA"],
+    ["Not knowing whether the debt is actually valid", "Medical bills are complex. You may owe less than claimed, or nothing at all.", "FDCPA § 1692g"],
+    ["Unsure what collectors are allowed to do", "There are strict rules, most people don't know where the legal lines are.", "FDCPA"],
     ["Confused about what happens if you ignore it", "Doing nothing has real consequences. Knowing them helps you make better decisions.", "FRCP 55"],
     ["Worried about credit report damage", "Medical debt has specific, changing rules on credit reporting that many people aren't aware of.", "FCRA + CFPB"],
     ["Receiving conflicting information from collectors", "Collectors aren't required to explain your rights. Attorneys are.", "FDCPA § 1692e"],
@@ -96,7 +97,7 @@ window.CREDO = {
     ["Free consultation", "Tell us what's happening. We review your situation and explain your rights at no cost, no pressure.", "DAY 0"],
     ["Case review", "Our attorneys examine the debt, the collector's conduct, and the full range of your options.", "WEEK 1"],
     ["Recommendation", "We outline the best path forward based on your specific situation: cease letter, debt challenge, negotiation, or another approach.", "WEEK 1–2"],
-    ["Action", "If you choose to move forward, we handle it — from cease letters to court filings to settlement negotiation.", "ONGOING"],
+    ["Action", "If you choose to move forward, we handle it, from cease letters to court filings to settlement negotiation.", "ONGOING"],
   ],
 
   rights: {
@@ -106,7 +107,7 @@ window.CREDO = {
       { cite: "FDCPA § 1692g",     label: "Validation right",        text: "You have the right to request written verification of any debt before paying or responding.", exLabel: "Right", ex: "Send a validation request. Collection activity pauses until they respond." },
       { cite: "FCRA § 611",        label: "FCRA disputes",           text: "The Fair Credit Reporting Act gives you the right to dispute inaccurate medical debt on your credit report.", exLabel: "Right", ex: "Inaccurate, outdated, or unverifiable = grounds for removal." },
       { cite: "No Surprises Act",  label: "Surprise-billing limits", text: "Federal surprise billing laws regulate what providers can charge you after the fact for out-of-network care.", exLabel: "Right", ex: "Out-of-network emergency or unannounced provider = protected." },
-      { cite: "CFPB rules",        label: "Medical-debt restrictions", text: "Recent CFPB guidance has removed certain medical debts from credit reports entirely — yours may qualify.", exLabel: "Right", ex: "Paid debt under $500 and debt < 12 months old now excluded from reports." },
+      { cite: "CFPB rules",        label: "Medical-debt restrictions", text: "Recent CFPB guidance has removed certain medical debts from credit reports entirely, yours may qualify.", exLabel: "Right", ex: "Paid debt under $500 and debt < 12 months old now excluded from reports." },
       { cite: "FDCPA § 1692e(5)",  label: "No false threats",        text: "Collectors cannot threaten legal actions they cannot legally or actually take.", exLabel: "Violation", ex: "'We'll have your wages garnished tomorrow' before any judgment = violation." },
     ],
   },
@@ -117,20 +118,20 @@ window.CREDO = {
     "Anyone confused about what debt collectors are and aren't allowed to do under federal law.",
     "Patients who've received conflicting information from collectors, hospitals, or insurance companies.",
     "People who want to understand all their legal options before committing to any action.",
-    "Anyone who suspects they may owe less — or nothing — but aren't sure how to find out.",
+    "Anyone who suspects they may owe less, or nothing, but aren't sure how to find out.",
   ],
 
   faq: [
     ["What federal laws protect me from medical debt collectors?", "The Fair Debt Collection Practices Act (FDCPA) governs how collectors can contact you and what they can say. The Fair Credit Reporting Act (FCRA) governs how debts can be reported. The No Surprises Act limits surprise out-of-network bills."],
     ["Do I have to pay a medical debt that's already in collections?", "Not automatically. Collections don't validate the debt. You have the right to request verification, dispute inaccuracies, and challenge the underlying bill."],
     ["What happens if I do nothing about a medical debt?", "Ignoring it doesn't make it disappear. Collectors can escalate to lawsuits, which can result in default judgments and wage garnishment."],
-    ["Can an attorney really help with something like a hospital bill?", "Yes. Medical billing is legally complex, and an attorney can evaluate things a non-attorney can't — including surprise-billing law claims, FCRA disputes, and FDCPA violations."],
+    ["Can an attorney really help with something like a hospital bill?", "Yes. Medical billing is legally complex, and an attorney can evaluate things a non-attorney can't, including surprise-billing law claims, FCRA disputes, and FDCPA violations."],
     ["How much does this cost?", "Your consultation is free. We offer flexible payment plans, and we'll walk you through every option before any commitment."],
   ],
 
   bottomCta: {
     headline: "Know your rights before you make any decisions.",
-    body: "The decision to pay, dispute, or fight a medical debt is easier — and smarter — when you know the full picture.",
+    body: "The decision to pay, dispute, or fight a medical debt is easier, and smarter, when you know the full picture.",
     cta: "Get a free case evaluation",
   },
 

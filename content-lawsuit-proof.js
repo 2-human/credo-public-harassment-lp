@@ -22,7 +22,7 @@ window.CREDO = {
   phone: "(212) 561-5902",
   phoneHref: "tel:+12125615902",
   cluster: "Lawsuit",
-  angle: "Collection_Lawsuit — Proof challenge",
+  angle: "Collection_Lawsuit. Proof challenge",
   statute: "Civil procedure / FDCPA / FCRA",
 
   hero: {
@@ -83,7 +83,8 @@ window.CREDO = {
   ],
 
   whatWeDo: {
-    intro: "At Credo Legal, we don't take collection lawsuits at face value. Before filing a response, we investigate the underlying claim — who owns the debt, what they can prove, and where their documentation breaks down.",
+    headline: "We don't take their claim at face value.",
+    intro: "At Credo Legal, we don't take collection lawsuits at face value. Before filing a response, we investigate the underlying claim, who owns the debt, what they can prove, and where their documentation breaks down.",
     bullets: [
       "Examine the collector's documentation and proof of ownership.",
       "Challenge debt validity where records are incomplete or distorted.",
@@ -93,9 +94,9 @@ window.CREDO = {
   },
 
   whyChoose: [
-    ["Licensed attorneys — we challenge, not just respond", "We don't just file an answer. We examine the claim and attack its weaknesses."],
+    ["Licensed attorneys, we challenge, not just respond", "We don't just file an answer. We examine the claim and attack its weaknesses."],
     ["We demand proof", "The collector must prove they own the debt, that it's accurate, and that they have the right to sue."],
-    ["We challenge debt validity", "Errors, inflated balances, missing documentation — all become grounds for defense."],
+    ["We challenge debt validity", "Errors, inflated balances, missing documentation, all become grounds for defense."],
     ["Dismissed debts come off your credit report", "A successfully challenged debt may be removed from your credit report entirely."],
     ["Flexible payment plans", "Attorney-led defense structured around your budget."],
   ],
@@ -106,7 +107,7 @@ window.CREDO = {
     ["Inflated or incorrect balances", "Fees, interest, and errors can be added over time. The amount claimed may not reflect what was originally owed.", "FDCPA § 1692e(2)"],
     ["Zombie debts", "Old debts past the statute of limitations brought back to court by new collectors.", "State SOL"],
     ["Debts you don't recognize", "Sold multiple times, often without notice. Many consumers are sued by collectors they've never heard of.", "FDCPA § 1692g"],
-    ["Misrepresented claims", "Collectors sometimes file suits with inaccurate or exaggerated information — a violation in itself.", "FDCPA § 1692e(2),(10)"],
+    ["Misrepresented claims", "Collectors sometimes file suits with inaccurate or exaggerated information, a violation in itself.", "FDCPA § 1692e(2),(10)"],
   ],
 
   howItWorks: [
@@ -140,13 +141,13 @@ window.CREDO = {
     ["How do I know if the collector actually has proof of my debt?", "You often don't, until an attorney demands it. Many collectors file suits hoping for a default judgment without ever having to prove the claim in court."],
     ["What happens if the collector can't prove the debt?", "The case can be dismissed. A dismissed debt can then be disputed with the credit bureaus and removed from your credit report."],
     ["What is a “zombie debt” and do I have to pay it?", "A zombie debt is an old debt, often past the legal time limit for collection, that resurfaces when bought by a new collector. Suing on a time-barred debt may itself be illegal."],
-    ["Do I still need to respond to the lawsuit even if I think the debt is wrong?", "Yes — and urgently. Failing to respond results in a default judgment regardless of whether the debt is valid. The response is what preserves your right to challenge."],
+    ["Do I still need to respond to the lawsuit even if I think the debt is wrong?", "Yes, and urgently. Failing to respond results in a default judgment regardless of whether the debt is valid. The response is what preserves your right to challenge."],
     ["How much does this cost?", "Your consultation is free. We offer flexible payment plans and will explain all options before any commitment."],
   ],
 
   bottomCta: {
     headline: "Don't pay a debt until you know it can be proven.",
-    body: "Collectors file suits counting on you to give up. Our attorneys demand proof first — and fight on what the evidence shows.",
+    body: "Collectors file suits counting on you to give up. Our attorneys demand proof first, and fight on what the evidence shows.",
     cta: "Get a free case evaluation",
   },
 

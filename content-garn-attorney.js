@@ -29,7 +29,7 @@ window.CREDO = {
   phone: "(720) 414-1751",
   phoneHref: "tel:+17204141751",
   cluster: "Garnishment",
-  angle: "Post-Judgment — Fight active garnishment",
+  angle: "Post-Judgment. Fight active garnishment",
   statute: "Federal + state garnishment law",
 
   hero: {
@@ -92,6 +92,7 @@ window.CREDO = {
   ],
 
   whatWeDo: {
+    headline: "We fight active garnishments.",
     intro: "At Credo Legal, we don't accept that a garnishment order is the end of the road. We fight to reduce or stop active garnishments, challenge improper judgments, and identify exemptions that protect your income.",
     bullets: [
       "File legal objections and motions to reduce or stop the active garnishment.",
@@ -105,17 +106,17 @@ window.CREDO = {
   whyChoose: [
     ["Attorney assistance from day one", "Licensed attorneys handle your case from the first conversation. No handoffs, no delays."],
     ["We file objections", "Motions to reduce or stop the garnishment, exemption claims, and procedural challenges go on the record promptly."],
-    ["We challenge the validity of the underlying debt", "If the judgment behind the garnishment was improperly obtained or the debt itself is questionable, we attack the basis — not just the symptom."],
+    ["We challenge the validity of the underlying debt", "If the judgment behind the garnishment was improperly obtained or the debt itself is questionable, we attack the basis, not just the symptom."],
     ["We fight to reduce or stop what's being taken", "Federal cap is 25% of disposable income. State caps are often lower. Exemptions can reduce it further. We pursue every reduction the law allows."],
-    ["Flexible payment plans", "Attorney-led defense structured around your budget — accessible even while a garnishment is hitting your paycheck."],
+    ["Flexible payment plans", "Attorney-led defense structured around your budget, accessible even while a garnishment is hitting your paycheck."],
   ],
 
   // Live were label-only; bodies synthesized + 6th added (federal benefits)
   // to hit standard 6 count.
   commonProblems: [
-    ["Garnishments taking the full 25% of your pay", "Federal law caps garnishment at 25% of disposable income — but state caps are often lower, and exemptions can reduce it further.", "15 U.S.C. § 1673"],
+    ["Garnishments taking the full 25% of your pay", "Federal law caps garnishment at 25% of disposable income, but state caps are often lower, and exemptions can reduce it further.", "15 U.S.C. § 1673"],
     ["Garnishments based on invalid or improperly obtained judgments", "If the underlying judgment was entered without proper service or based on a defective claim, the garnishment that follows is also vulnerable.", "FRCP 60(b)"],
-    ["Cases where exemptions were never filed or applied", "Many people qualify for exemptions — head of household, low income, public benefits — and never claim them because no one told them.", "State exemption law"],
+    ["Cases where exemptions were never filed or applied", "Many people qualify for exemptions, head of household, low income, public benefits, and never claim them because no one told them.", "State exemption law"],
     ["Garnishments with procedural errors by the creditor", "Creditors and employers must follow strict procedure. Errors in notice, calculation, or filing can void the garnishment.", "State garnishment rules"],
     ["Multiple garnishments hitting the same paycheck", "Federal law limits how many active garnishments your employer can withhold from at once. We file to stop the stack.", "29 C.F.R. § 870"],
     // Synthesized 6th to hit std 6 + match cluster pattern.
@@ -134,8 +135,8 @@ window.CREDO = {
   rights: {
     intro: "Even after a garnishment order is in place, the law continues to protect you. Creditors and employers must follow strict rules.",
     items: [
-      { cite: "15 U.S.C. § 1673",  label: "Federal 25% cap",         text: "Federal law caps garnishment at 25% of disposable income — and often less applies in practice.", exLabel: "Right", ex: "If more than 25% of your check is being taken, the calculation is wrong." },
-      { cite: "State exemption law", label: "Exemptions",            text: "Exemptions you were never told about may reduce or eliminate what can be taken.", exLabel: "Right", ex: "Head of household, low income, public benefits — narrow but real protections vary by state." },
+      { cite: "15 U.S.C. § 1673",  label: "Federal 25% cap",         text: "Federal law caps garnishment at 25% of disposable income, and often less applies in practice.", exLabel: "Right", ex: "If more than 25% of your check is being taken, the calculation is wrong." },
+      { cite: "State exemption law", label: "Exemptions",            text: "Exemptions you were never told about may reduce or eliminate what can be taken.", exLabel: "Right", ex: "Head of household, low income, public benefits, narrow but real protections vary by state." },
       { cite: "FRCP 60(b)",        label: "Improper judgment",       text: "A garnishment based on an improper judgment can be legally challenged and overturned.", exLabel: "Right", ex: "No valid service of the underlying lawsuit = grounds to vacate the judgment." },
       { cite: "Due process",        label: "Notice required",         text: "Creditors who garnished wages without proper notice may have violated your rights.", exLabel: "Violation", ex: "Garnishment initiated without notice or hearing = procedural defect." },
       { cite: "State garn rules",   label: "Right to a hearing",      text: "You have the right to contest an active garnishment and request a hearing at any time.", exLabel: "Right", ex: "Object. Request a hearing. Force the creditor to justify the amount." },
@@ -154,7 +155,7 @@ window.CREDO = {
 
   faq: [
     ["Can garnishment be stopped even after it's started?", "Yes. Active garnishment can be challenged through motions to reduce the amount, claims for applicable exemptions, or attacks on the underlying judgment."],
-    ["What is a garnishment exemption and how do I know if I qualify?", "Exemptions are legal protections that reduce or eliminate the amount of your wages that can be garnished. They vary by state and circumstance — head of household, low income, federal benefits, and others."],
+    ["What is a garnishment exemption and how do I know if I qualify?", "Exemptions are legal protections that reduce or eliminate the amount of your wages that can be garnished. They vary by state and circumstance, head of household, low income, federal benefits, and others."],
     ["Can the 25% cap be reduced further?", "Yes. State laws often set lower caps than the federal maximum, and exemptions can reduce the garnishable amount further. In some cases, the protected amount approaches the full paycheck."],
     ["What if my garnishment is based on a default judgment I didn't know about?", "Default judgments can sometimes be vacated, particularly if you weren't properly served with the original lawsuit. Vacating the judgment ends the garnishment that flows from it."],
     ["How much does this cost?", "Your consultation is free. We offer flexible payment plans and will explain every option before any commitment."],
@@ -163,7 +164,7 @@ window.CREDO = {
   // Live was heading-only; body synthesized to match cluster template.
   bottomCta: {
     headline: "Active garnishment isn't the end. Get help today.",
-    body: "Our attorneys file the motions, raise the exemptions, and challenge the judgment that put the garnishment in place. Find out what we can do for your situation — for free.",
+    body: "Our attorneys file the motions, raise the exemptions, and challenge the judgment that put the garnishment in place. Find out what we can do for your situation, for free.",
     cta: "Get a free case evaluation",
   },
 

@@ -4,7 +4,7 @@
    No structural deviations (6 Who-Helps bullets is fine). Voice fix ×2. */
 window.CREDO = {
   phone: "(347) 744-9014", phoneHref: "tel:+13477449014",
-  cluster: "Medical Debt", angle: "Rights — Credit report removal",
+  cluster: "Medical Debt", angle: "Rights. Credit report removal",
   statute: "FCRA + FDCPA + CFPB rules",
 
   hero: {
@@ -64,17 +64,18 @@ window.CREDO = {
   ],
 
   whatWeDo: {
+    headline: "Medical debt on your report? Not a given.",
     intro: "At Credo Legal, we don't accept medical debt on your credit report as a given. We examine the debt's validity, accuracy, and whether federal rule changes apply to remove it.",
     bullets: [
       "Break down what federal law allows on your credit report in plain English: FCRA rights, recent CFPB rule changes, the specific reporting timelines.",
       "Pull all three credit reports, examine the underlying bill, and flag every inaccurate line, outdated entry, or rule-violating collection.",
       "Recommend the specific next step: bureau dispute, direct dispute with the collector, removal claim under recent CFPB rule changes, or another path.",
-      "Carry out the path you choose — attorneys handling every letter, filing, and follow-up until the entry is updated or removed.",
+      "Carry out the path you choose, attorneys handling every letter, filing, and follow-up until the entry is updated or removed.",
     ],
   },
 
   whyChoose: [
-    ["Licensed attorneys — FCRA + FDCPA expertise", "Credit-report disputes backed by legal analysis carry more weight than consumer-filed disputes alone."],
+    ["Licensed attorneys. FCRA + FDCPA expertise", "Credit-report disputes backed by legal analysis carry more weight than consumer-filed disputes alone."],
     ["We know the new rules", "CFPB guidance has changed what can appear on your report. We know whether it applies to your debt."],
     ["We challenge what's inaccurate", "Formal legal disputes filed on your behalf, with the collector and the credit bureaus."],
     ["Free consultation", "Know what's on your report and what's removable, at no cost."],
@@ -82,11 +83,11 @@ window.CREDO = {
   ],
 
   commonProblems: [
-    ["Old medical debts still showing after years", "Collections can linger on credit reports for up to seven years — unless challenged.", "FCRA § 605"],
+    ["Old medical debts still showing after years", "Collections can linger on credit reports for up to seven years, unless challenged.", "FCRA § 605"],
     ["Paid or settled debts still listed as unpaid", "A debt you resolved may still be dragging your score down if it wasn't properly updated.", "FCRA § 623"],
     ["Inaccurate amounts reported to credit bureaus", "The balance reported may not match what was actually owed.", "FCRA § 623"],
     ["Collections from debts you don't recognize", "Old hospital or specialist bills can surface on your report years later without warning.", "FDCPA § 1692g"],
-    ["Bills reported before insurance processed", "Some debts go to collections — and onto your report — before insurance has a chance to pay.", "CFPB rules"],
+    ["Bills reported before insurance processed", "Some debts go to collections, and onto your report, before insurance has a chance to pay.", "CFPB rules"],
     ["Duplicate collections for the same bill", "The same debt reported by multiple collection agencies at the same time.", "FCRA § 611"],
   ],
 
@@ -101,10 +102,10 @@ window.CREDO = {
     intro: "Federal law gives you specific tools to challenge what appears on your credit report.",
     items: [
       { cite: "FCRA § 611",     label: "Right to dispute",          text: "The Fair Credit Reporting Act gives you the right to dispute any inaccurate information on your credit report.", exLabel: "Right", ex: "Inaccurate, outdated, or unverifiable = grounds for removal." },
-      { cite: "CFPB rules",     label: "Medical debt restrictions", text: "Recent CFPB guidance has restricted what medical debt can appear on credit reports — some categories must now be removed.", exLabel: "Right", ex: "Paid medical debt under $500. Medical debt < 12 months old. Both excluded." },
+      { cite: "CFPB rules",     label: "Medical debt restrictions", text: "Recent CFPB guidance has restricted what medical debt can appear on credit reports, some categories must now be removed.", exLabel: "Right", ex: "Paid medical debt under $500. Medical debt < 12 months old. Both excluded." },
       { cite: "FCRA § 623",     label: "Reporting current status",  text: "Paid or settled medical debts should be updated to reflect their current status. If they aren't, that's a reportable violation.", exLabel: "Violation", ex: "Paid debt still showing 'unpaid' = grounds to dispute the furnisher." },
       { cite: "FCRA § 616, 617", label: "Damages for false reporting", text: "Collectors who report inaccurate information may be liable under federal law for damages.", exLabel: "Remedy", ex: "Willful violation = statutory damages + attorney fees." },
-      { cite: "FCRA § 611",     label: "Direct dispute right",      text: "You can dispute medical debt directly with credit bureaus — attorney-backed disputes carry additional weight.", exLabel: "Right", ex: "Bureau must investigate within 30 days. Furnisher must verify." },
+      { cite: "FCRA § 611",     label: "Direct dispute right",      text: "You can dispute medical debt directly with credit bureaus, attorney-backed disputes carry additional weight.", exLabel: "Right", ex: "Bureau must investigate within 30 days. Furnisher must verify." },
       { cite: "FCRA § 605",     label: "Removal + score improvement", text: "Successful challenges can result in complete removal and meaningful credit score improvement.", exLabel: "Remedy", ex: "Single medical collection removed = often 30–100 point swing." },
     ],
   },
@@ -119,9 +120,9 @@ window.CREDO = {
   ],
 
   faq: [
-    ["Can medical debt actually be removed from my credit report?", "Yes — in many cases. Recent CFPB rule changes have restricted the reporting of medical debt significantly. Paid amounts under certain thresholds and recent debts may already be excluded."],
+    ["Can medical debt actually be removed from my credit report?", "Yes, in many cases. Recent CFPB rule changes have restricted the reporting of medical debt significantly. Paid amounts under certain thresholds and recent debts may already be excluded."],
     ["What if the debt is legitimate? Can it still come off my report?", "Possibly. Paid or settled debts should be updated. Even valid debts may be removable if they were reported in error or violate recent CFPB rules."],
-    ["How long does medical debt stay on a credit report?", "Up to seven years from the date of first delinquency — but that's the maximum, not a guarantee. Legal disputes can shorten that timeline substantially."],
+    ["How long does medical debt stay on a credit report?", "Up to seven years from the date of first delinquency, but that's the maximum, not a guarantee. Legal disputes can shorten that timeline substantially."],
     ["Will disputing the debt cause any problems?", "No. You have a legal right to dispute inaccurate information. Collectors cannot retaliate against you for exercising this right."],
     ["How much does this cost?", "Your consultation is free. We offer flexible payment plans, and we'll walk you through every option before any commitment."],
   ],

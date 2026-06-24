@@ -88,7 +88,8 @@ window.CREDO = {
   //      the action sentences in the live paragraph (per 2026-06-23
   //      deviation fix). ----
   whatWeDo: {
-    intro: "Debt collectors rely on pressure, confusion, and the assumption that you don't know your rights. At Credo Legal, we cut through all of that. You shouldn't have to live with this — and with our attorneys on your side, you won't have to.",
+    headline: "We end the pressure legally.",
+    intro: "Debt collectors rely on pressure, confusion, and the assumption that you don't know your rights. At Credo Legal, we cut through all of that. You shouldn't have to live with this, and with our attorneys on your side, you won't have to.",
     bullets: [
       "Cut through pressure tactics and collector misinformation.",
       "Send a formal cease-communication letter on the day you enroll.",
@@ -99,9 +100,9 @@ window.CREDO = {
 
   // ---- WHY CHOOSE — live copy, voice fix on bullet 1 ----
   whyChoose: [
-    ["Licensed attorneys — not a settlement company", "Our attorneys are real lawyers. The cease letter carries legal authority, and if collectors keep calling, we have real legal remedies to pursue."],
+    ["Licensed attorneys, not a settlement company", "Our attorneys are real lawyers. The cease letter carries legal authority, and if collectors keep calling, we have real legal remedies to pursue."],
     ["We act on day one", "The cease letter goes out immediately. You don't spend weeks waiting to feel relief."],
-    ["We investigate every violation", "Calling before 8 AM, contacting your employer, threatening arrest — we identify every federal breach and document it."],
+    ["We investigate every violation", "Calling before 8 AM, contacting your employer, threatening arrest, we identify every federal breach and document it."],
     ["Free consultation", "No cost to find out what's happening and what we can do about it."],
     ["Flexible payment plans", "Legal help that works with your financial situation, not against it."],
   ],
@@ -121,7 +122,7 @@ window.CREDO = {
     ["Free consultation", "Tell us what's been happening. We review your situation and explain your rights at no cost.", "DAY 0"],
     ["Cease letter sent, day one", "Our attorneys send a formal cease-communication letter to the collector immediately after enrollment. Legally, they must stop.", "DAY 0"],
     ["Violations documented", "If contact continues after the cease letter, each instance is a federal violation. We track and record them.", "WEEK 1+"],
-    ["Resolution", "We resolve the harassment and, where warranted, pursue legal claims against the collector — potentially recovering money on your behalf.", "ONGOING"],
+    ["Resolution", "We resolve the harassment and, where warranted, pursue legal claims against the collector, potentially recovering money on your behalf.", "ONGOING"],
   ],
 
   // ---- YOUR RIGHTS — live bullets promoted to structured items ----
@@ -129,7 +130,7 @@ window.CREDO = {
     intro: "The Fair Debt Collection Practices Act (FDCPA) gives you enforceable, specific protections.",
     items: [
       { cite: "§ 1692c(a)(1)", label: "Calling hours",       text: "Collectors cannot call before 8 AM or after 9 PM in your local time zone.", exLabel: "Violation", ex: "A 6:30 AM call to remind you about a balance." },
-      { cite: "§ 1692c(c)",    label: "Cease request",       text: "Once you request in writing that a collector stop contacting you, they must comply. Collectors cannot discuss your debt with anyone other than you, your spouse, or your attorney.", exLabel: "Right", ex: "Send a written cease letter — contact must stop." },
+      { cite: "§ 1692c(c)",    label: "Cease request",       text: "Once you request in writing that a collector stop contacting you, they must comply. Collectors cannot discuss your debt with anyone other than you, your spouse, or your attorney.", exLabel: "Right", ex: "Send a written cease letter, contact must stop." },
       { cite: "§ 1692e(4),(5)", label: "False threats",      text: "Threatening arrest, wage garnishment, or legal action they cannot legally take is prohibited.", exLabel: "Violation", ex: "Caller threatens jail time over a credit-card balance." },
       { cite: "§ 1692d",       label: "Harassment / abuse",  text: "Abusive, obscene, or threatening language is a federal violation regardless of circumstances.", exLabel: "Violation", ex: "Profane voicemails. Yelling. Personal insults." },
       { cite: "§ 1692k",       label: "Damages + fee-shifting", text: "Each violation of the FDCPA can result in $1,000 in statutory damages per lawsuit, plus attorney fees.", exLabel: "Remedy", ex: "$1,000 per lawsuit. Fees recoverable from the collector." },
@@ -150,7 +151,7 @@ window.CREDO = {
     ["Can I legally force a debt collector to stop calling me?", "Yes. Under the FDCPA, once you send a written cease communication request, the collector must stop all contact. Our attorneys send that letter on the day you enroll."],
     ["What if the collector keeps calling after I've asked them to stop?", "Every call after a cease request is a federal law violation worth up to $1,000 in statutory damages. We document those violations and can pursue legal claims on your behalf."],
     ["Do I still owe the debt if the calls stop?", "Stopping the calls is separate from the underlying debt. A cease letter halts contact; we then evaluate the debt itself separately and advise you on the best path forward."],
-    ["Does it matter what kind of debt it is?", "The FDCPA covers all third-party debt collectors, regardless of debt type — credit cards, medical bills, payday loans, utilities, and more."],
+    ["Does it matter what kind of debt it is?", "The FDCPA covers all third-party debt collectors, regardless of debt type, credit cards, medical bills, payday loans, utilities, and more."],
     ["How much does this cost?", "Your consultation is free. We offer flexible payment plans, and in cases where we pursue FDCPA violations, collector-paid penalties may offset costs entirely."],
   ],
 

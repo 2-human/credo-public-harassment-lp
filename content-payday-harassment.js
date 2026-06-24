@@ -33,7 +33,7 @@ window.CREDO = {
   phone: "(407) 512-0808",
   phoneHref: "tel:+14075120808",
   cluster: "Payday Loan",
-  angle: "Payday Harassment — Stop calls",
+  angle: "Payday Harassment. Stop calls",
   statute: "FDCPA + EFTA + state payday law",
 
   hero: {
@@ -100,6 +100,7 @@ window.CREDO = {
   ],
 
   whatWeDo: {
+    headline: "We remove the fear they rely on.",
     intro: "Payday lenders count on fear and confusion to collect. At Credo Legal, we remove both. We send a cease letter, document violations, and pursue the federal claims the law creates.",
     bullets: [
       "Cease-communication letter sent on day one.",
@@ -111,9 +112,9 @@ window.CREDO = {
 
   whyChoose: [
     // Voice fix on b1 body.
-    ["Licensed attorneys — not a settlement company", "Our attorneys are real lawyers. A cease letter from our firm carries legal authority, and if it's ignored, we have grounds to act."],
+    ["Licensed attorneys, not a settlement company", "Our attorneys are real lawyers. A cease letter from our firm carries legal authority, and if it's ignored, we have grounds to act."],
     ["We act on day one of enrollment", "The cease letter goes out immediately. You don't spend weeks waiting for relief."],
-    ["We know payday lender tactics", "Threatening arrest, calling before 8 AM, contacting family — we know every tactic and exactly which ones violate the law."],
+    ["We know payday lender tactics", "Threatening arrest, calling before 8 AM, contacting family, we know every tactic and exactly which ones violate the law."],
     ["Free consultation", "No cost to understand your rights and what we can do today."],
     ["Flexible payment plans", "Legal help that works with your financial situation."],
   ],
@@ -131,7 +132,7 @@ window.CREDO = {
     ["Free consultation", "Tell us what's been happening. We review your situation and explain your rights at no cost.", "DAY 0"],
     ["Cease letter sent, day one", "Our attorneys send a formal cease-communication letter to the collector immediately upon enrollment.", "DAY 0"],
     ["Violations documented", "If contact continues after the cease letter, each instance is a potential $1,000 FDCPA lawsuit. We track every one.", "WEEK 1+"],
-    ["Resolution", "We resolve the harassment and, where warranted, pursue legal claims against the collector — turning violations into recovery.", "ONGOING"],
+    ["Resolution", "We resolve the harassment and, where warranted, pursue legal claims against the collector, turning violations into recovery.", "ONGOING"],
   ],
 
   rights: {
@@ -142,7 +143,7 @@ window.CREDO = {
       { cite: "§ 1692c(c)",        label: "Cease request",            text: "Once you send a written cease request, all contact must stop. Each call after is a statutory violation.", exLabel: "Right", ex: "Send the cease letter. Contact must end except to confirm receipt or give notice of legal action." },
       { cite: "§ 1692e(4)",        label: "No arrest threats",        text: "Threatening arrest for an unpaid payday loan is illegal. Payday debt is a civil matter, not criminal.", exLabel: "Violation", ex: "'We will have you arrested' from any collector = federal violation." },
       { cite: "15 U.S.C. § 1693",  label: "EFTA / ACH revocation",    text: "The Electronic Funds Transfer Act gives you the right to revoke ACH authorization for automatic withdrawals from your bank account.", exLabel: "Right", ex: "Notify your bank in writing. The withdrawals must stop within 3 business days." },
-      { cite: "State payday law",  label: "State-specific protections", text: "State laws may provide additional protections beyond the FDCPA — including rules that apply to the original payday lender, not just collectors.", exLabel: "Right", ex: "Some states cap rates. Some ban payday loans entirely. Some void loans that violate state law." },
+      { cite: "State payday law",  label: "State-specific protections", text: "State laws may provide additional protections beyond the FDCPA, including rules that apply to the original payday lender, not just collectors.", exLabel: "Right", ex: "Some states cap rates. Some ban payday loans entirely. Some void loans that violate state law." },
     ],
   },
 
@@ -155,16 +156,16 @@ window.CREDO = {
   ],
 
   faq: [
-    ["Does the FDCPA cover payday loan collectors?", "Yes — when a third-party debt collector is pursuing a payday loan debt, the FDCPA applies fully. Many payday lenders also fall under it, depending on how the operation is structured."],
-    ["Can a payday lender threaten to have me arrested?", "No. Failing to repay a payday loan is a civil debt matter, not a criminal one. Any collector threatening arrest is violating the FDCPA — every instance is a documented violation."],
+    ["Does the FDCPA cover payday loan collectors?", "Yes, when a third-party debt collector is pursuing a payday loan debt, the FDCPA applies fully. Many payday lenders also fall under it, depending on how the operation is structured."],
+    ["Can a payday lender threaten to have me arrested?", "No. Failing to repay a payday loan is a civil debt matter, not a criminal one. Any collector threatening arrest is violating the FDCPA, every instance is a documented violation."],
     ["Can I stop automatic withdrawals from my bank account?", "Yes. Under the Electronic Funds Transfer Act, you have the right to revoke the ACH authorization that allowed the lender to debit your account. Notify your bank in writing. The withdrawals must stop within 3 business days."],
-    ["Will stopping the calls affect the debt itself?", "Stopping the calls is separate from the underlying debt. A cease letter halts contact; we then evaluate the underlying debt and advise on the best path forward — including whether the loan itself was legally valid in your state."],
-    ["How much does this cost?", "Your consultation is free. We offer flexible payment plans, and in cases where we pursue FDCPA violations, attorney fees are recoverable from the collector — so pursuing the claim may cost you nothing out of pocket on that side."],
+    ["Will stopping the calls affect the debt itself?", "Stopping the calls is separate from the underlying debt. A cease letter halts contact; we then evaluate the underlying debt and advise on the best path forward, including whether the loan itself was legally valid in your state."],
+    ["How much does this cost?", "Your consultation is free. We offer flexible payment plans, and in cases where we pursue FDCPA violations, attorney fees are recoverable from the collector, so pursuing the claim may cost you nothing out of pocket on that side."],
   ],
 
   bottomCta: {
     headline: "You shouldn't have to live under this pressure.",
-    body: "Payday loan collectors are relentless by design. But federal law limits what they can do — and our attorneys enforce those limits.",
+    body: "Payday loan collectors are relentless by design. But federal law limits what they can do, and our attorneys enforce those limits.",
     cta: "Get a free case evaluation",
   },
 

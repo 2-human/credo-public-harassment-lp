@@ -107,7 +107,7 @@
   function Nav() {
     return '' +
       '<nav class="nav"><div class="container nav-inner">' +
-        '<a href="#top" class="brand"><img src="assets/credo-logo.png" alt="Credo Legal — consumer-debt defense law firm"/></a>' +
+        '<a href="#top" class="brand"><img src="assets/credo-logo.png" alt="Credo Legal, consumer-debt defense law firm"/></a>' +
         '<div class="nav-right">' +
           '<div class="nav-links">' +
             '<a href="#whatwedo">What we do</a>' +
@@ -377,9 +377,14 @@
 
   /* ---- body sections ---------------------------------------------------- */
   function WhatWeDo() {
+    // headline (one-row H2) + paragraph (former intro, demoted) + existing line + bullets.
+    // Falls back to intro-as-headline if a content file hasn't been migrated yet.
+    var headline = C.whatWeDo.headline || C.whatWeDo.intro;
+    var paragraph = C.whatWeDo.headline ? '<p class="wwd-lede">' + C.whatWeDo.intro + '</p>' : '';
     return '' +
       '<div class="eyebrow">What we do</div>' +
-      '<h2 class="h2">' + C.whatWeDo.intro + '</h2>' +
+      '<h2 class="h2">' + headline + '</h2>' +
+      paragraph +
       '<ol class="claim-list">' + C.whatWeDo.bullets.map(function (b, i) {
         return '<li><span class="cn">' + pad2(i + 1) + '</span><span>' + b + '</span></li>';
       }).join("") + '</ol>';
@@ -563,7 +568,7 @@
               '<div id="process">' + SectionNo("05", "Method") + HowItWorks(false) + '</div>' +
             '</div>' +
             '<div class="rail-side">' +
-              LeadForm({ headLabel: "START — FREE REVIEW" }) +
+              LeadForm({ headLabel: "START. FREE REVIEW" }) +
               '<p class="rail-reassure">' + Ico.scale(16) + '<span>A licensed attorney reviews your case. We never sell your information. ' + C.form.stateExclusion + '</span></p>' +
             '</div>' +
           '</div>' +

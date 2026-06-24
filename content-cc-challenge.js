@@ -13,7 +13,7 @@
      would have been; standard template restored here). */
 window.CREDO = {
   phone: "(646) 952-7404", phoneHref: "tel:+16469527404",
-  cluster: "Credit Card", angle: "Negotiation — Challenge validity",
+  cluster: "Credit Card", angle: "Negotiation. Challenge validity",
   statute: "FDCPA + FCRA + state UCC",
 
   hero: {
@@ -47,7 +47,7 @@ window.CREDO = {
       "Don't recognize the debt",
       "Believe the amount is inflated",
       "Debt sold multiple times",
-      "Zombie debt — past statute",
+      "Zombie debt, past statute",
       "Inflated fees and interest",
       "Considering negotiating settlement",
     ],
@@ -73,7 +73,8 @@ window.CREDO = {
   ],
 
   whatWeDo: {
-    intro: "At Credo Legal, we don't assume you owe what they say you owe. We challenge it — legally and thoroughly.",
+    headline: "We don't assume you owe it.",
+    intro: "At Credo Legal, we don't assume you owe what they say you owe. We challenge it, legally and thoroughly.",
     bullets: [
       "Investigate whether the debt is valid and properly documented.",
       "Challenge inflated, inaccurate, or unenforceable balances.",
@@ -85,18 +86,18 @@ window.CREDO = {
   // SYNTHESIZED: live page is missing this section entirely. Bullets
   // match the cluster pattern + the challenge-validity angle.
   whyChoose: [
-    ["Licensed attorneys — we challenge before we negotiate", "We don't take the creditor's word for what you owe. We demand proof first."],
-    ["We know what credit card debts actually require", "Cardmember agreements, chain of ownership, statute of limitations — we know what the creditor must show to enforce the debt."],
-    ["We dispute, defend, and remove", "Bureau disputes, court defense, settlement negotiation, credit-report removal — every tool the law gives you."],
-    ["Free consultation", "Know what they can actually prove — and what they can't — at no cost."],
+    ["Licensed attorneys, we challenge before we negotiate", "We don't take the creditor's word for what you owe. We demand proof first."],
+    ["We know what credit card debts actually require", "Cardmember agreements, chain of ownership, statute of limitations, we know what the creditor must show to enforce the debt."],
+    ["We dispute, defend, and remove", "Bureau disputes, court defense, settlement negotiation, credit-report removal, every tool the law gives you."],
+    ["Free consultation", "Know what they can actually prove, and what they can't, at no cost."],
     ["Flexible payment plans", "Attorney-led defense structured around your budget."],
   ],
 
   commonProblems: [
     ["Debts sold without complete records", "Card debts are sold many times before they end up in collections. The documentation often doesn't survive the journey.", "FRE 803(6), 901"],
-    ["Balances inflated with unverifiable fees and interest", "Late fees, over-limit fees, default interest rates — not all of those are legally enforceable.", "State usury / contract"],
+    ["Balances inflated with unverifiable fees and interest", "Late fees, over-limit fees, default interest rates, not all of those are legally enforceable.", "State usury / contract"],
     ["Invalid or “zombie” debts resurfacing", "Old debts past the statute of limitations sometimes get brought back to court by new collectors.", "State SOL"],
-    ["Debts you don't recognize or believe are incorrect", "Identity issues, mistaken accounts, payment errors — any of these can mean you don't actually owe what's claimed.", "FDCPA § 1692g"],
+    ["Debts you don't recognize or believe are incorrect", "Identity issues, mistaken accounts, payment errors, any of these can mean you don't actually owe what's claimed.", "FDCPA § 1692g"],
   ],
 
   howItWorks: [
@@ -127,16 +128,16 @@ window.CREDO = {
   ],
 
   faq: [
-    ["How common is it for a credit card debt to be invalid?", "More common than most people realize. Credit card debts are frequently sold to third-party collectors — sometimes several times over — and documentation gets lost along the way. Balances can also be inflated with fees and interest that aren't legally enforceable."],
-    ["What does “challenging debt validity” actually mean?", "It means our attorneys legally demand that the creditor prove — with documentation — that you owe the debt, that the amount is accurate, and that they have the legal right to collect it. If they can't prove it, the debt can be dismissed."],
-    ["Can invalid debts really be removed from my credit report?", "Yes. If a debt is invalid, unenforceable, or improperly documented, it can be removed from your credit report — which can meaningfully improve your score."],
+    ["How common is it for a credit card debt to be invalid?", "More common than most people realize. Credit card debts are frequently sold to third-party collectors, sometimes several times over, and documentation gets lost along the way. Balances can also be inflated with fees and interest that aren't legally enforceable."],
+    ["What does “challenging debt validity” actually mean?", "It means our attorneys legally demand that the creditor prove, with documentation, that you owe the debt, that the amount is accurate, and that they have the legal right to collect it. If they can't prove it, the debt can be dismissed."],
+    ["Can invalid debts really be removed from my credit report?", "Yes. If a debt is invalid, unenforceable, or improperly documented, it can be removed from your credit report, which can meaningfully improve your score."],
     ["What if my debt has already been sold multiple times?", "That actually strengthens the challenge. Each sale should come with documentation; chains often break, and standing becomes harder for the collector to prove."],
     ["How much does this cost?", "We offer flexible payment plans so attorney help is accessible without paying everything upfront. Your first case evaluation is completely free."],
   ],
 
   bottomCta: {
     headline: "Don't pay until you know what you actually owe. Get a free review.",
-    body: "Many credit card debts can't survive a legal challenge. Our attorneys check first — and pursue what the evidence supports.",
+    body: "Many credit card debts can't survive a legal challenge. Our attorneys check first, and pursue what the evidence supports.",
     cta: "Get a free case evaluation",
   },
 

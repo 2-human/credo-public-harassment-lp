@@ -80,6 +80,7 @@ window.CREDO = {
 
   // ---- WHAT WE DO — live copy, verbatim ----
   whatWeDo: {
+    headline: "Knowing your rights is where we start.",
     intro: "At Credo Legal, knowing your rights isn't where we stop, it's where we start. Our attorneys review your situation and pursue the violations the FDCPA creates.",
     bullets: [
       "Review your collector's conduct against each provision of the FDCPA.",
@@ -126,7 +127,7 @@ window.CREDO = {
     intro: "The FDCPA gives you the right to sue, and collectors know it.",
     items: [
       { cite: "§ 1692k(a)(2)(A)", label: "Statutory damages", text: "Each FDCPA lawsuit can result in up to $1,000 in statutory damages, collectible from the collector.", exLabel: "Remedy", ex: "Up to $1,000 per lawsuit, paid by the collector." },
-      { cite: "§ 1692k(a)(1)",    label: "Actual damages",    text: "Actual damages — emotional distress, job loss, medical expenses related to harassment — are recoverable on top of statutory damages.", exLabel: "Remedy", ex: "Emotional distress, job loss, medical expenses: all recoverable." },
+      { cite: "§ 1692k(a)(1)",    label: "Actual damages",    text: "Actual damages, emotional distress, job loss, medical expenses related to harassment, are recoverable on top of statutory damages.", exLabel: "Remedy", ex: "Emotional distress, job loss, medical expenses: all recoverable." },
       { cite: "§ 1692k(a)(3)",    label: "Fee-shifting",      text: "Attorney fees and court costs are paid by the collector, not you, when you prevail.", exLabel: "Remedy", ex: "Collector pays your legal fees when the claim succeeds." },
       { cite: "§ 1692k(a)",       label: "Strict liability",  text: "You do not need to prove financial harm. The violation itself creates liability.", exLabel: "Right", ex: "The violation alone is enough; no proven harm required." },
       { cite: "§ 1692k(d)",       label: "One-year window",   text: "FDCPA claims must be filed within one year of the violation. Act while the window is open.", exLabel: "Deadline", ex: "One year from the date of the violation, no extensions." },
@@ -155,7 +156,7 @@ window.CREDO = {
   // ---- BOTTOM CTA — live copy, verbatim ----
   bottomCta: {
     headline: "They broke the law. Use it.",
-    body: "The FDCPA wasn't written for collectors — it was written for you. Our attorneys know how to use it, and pursue it on your behalf.",
+    body: "The FDCPA wasn't written for collectors, it was written for you. Our attorneys know how to use it, and pursue it on your behalf.",
     cta: "Get a free case evaluation",
   },
 

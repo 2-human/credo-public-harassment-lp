@@ -4,7 +4,7 @@
    structure, voice fix on subhead. */
 window.CREDO = {
   phone: "(612) 260-9170", phoneHref: "tel:+16122609170",
-  cluster: "Medical Debt", angle: "Lawsuit — Billing errors",
+  cluster: "Medical Debt", angle: "Lawsuit. Billing errors",
   statute: "Civil procedure + FDCPA + FCRA + No Surprises Act",
 
   hero: {
@@ -64,7 +64,8 @@ window.CREDO = {
   ],
 
   whatWeDo: {
-    intro: "We don't take medical debt lawsuits at face value. Before we file a response, we examine the billing record itself — line by line.",
+    headline: "We audit the bill, line by line.",
+    intro: "We don't take medical debt lawsuits at face value. Before we file a response, we examine the billing record itself, line by line.",
     bullets: [
       "Examine every line of the billing record for duplicate charges, inflated amounts, missed insurance credits.",
       "Verify the collector's legal standing to sue: chain of title, assignment documentation, and proof they own the debt.",
@@ -74,7 +75,7 @@ window.CREDO = {
   },
 
   whyChoose: [
-    ["Licensed attorneys — real legal defense", "We don't just help you respond — we examine the foundation of the claim before we do."],
+    ["Licensed attorneys, real legal defense", "We don't just help you respond, we examine the foundation of the claim before we do."],
     ["We examine the bill before responding", "Every charge is reviewed. Errors found before we respond become ammunition in your defense."],
     ["We challenge what's wrong", "Errors, inflation, and procedural defects all get raised formally."],
     ["Free consultation", "Know what you're actually dealing with, at no cost."],
@@ -98,7 +99,7 @@ window.CREDO = {
   ],
 
   rights: {
-    intro: "The law doesn't assume collectors are right — it requires them to prove it.",
+    intro: "The law doesn't assume collectors are right, it requires them to prove it.",
     items: [
       { cite: "FDCPA § 1692g",      label: "Validation right",          text: "You have the right to demand proof that a debt is valid and accurately stated before paying.", exLabel: "Right", ex: "Send a validation request. Collection activity pauses until the collector responds in writing." },
       { cite: "Chain of assignment", label: "Standing for debt buyers", text: "Collectors must demonstrate legal ownership of the debt. If it was sold, the chain of ownership matters.", exLabel: "Right", ex: "No complete chain from provider to current collector = standing problem." },
@@ -121,13 +122,13 @@ window.CREDO = {
     ["How common are billing errors in medical debts that end up in lawsuits?", "Very common. When debts are sold between collectors, documentation frequently gets lost or distorted. Upcoded charges, phantom procedures, and duplicate bills are all routine."],
     ["What does “challenge the validity” of a medical debt in court mean?", "It means formally requiring the collector to prove the debt is accurate, that they legally own it, and that they have the right to collect it. Many collectors cannot."],
     ["If the debt is challenged successfully, does it come off my credit report?", "Yes. If a debt is dismissed or settled on favorable terms, you can request its removal from your credit report under the FCRA."],
-    ["Do I still need to respond to the lawsuit even if I think the bill is wrong?", "Yes — and urgently. Failing to respond results in a default judgment regardless of whether the bill is right."],
+    ["Do I still need to respond to the lawsuit even if I think the bill is wrong?", "Yes, and urgently. Failing to respond results in a default judgment regardless of whether the bill is right."],
     ["How much does this cost?", "Your consultation is free. We offer flexible payment plans and will walk you through every option before committing."],
   ],
 
   bottomCta: {
     headline: "Don't settle a medical debt until you know what you actually owe.",
-    body: "Collectors file lawsuits counting on you to give up. Our attorneys count the charges first — and fight based on what we find.",
+    body: "Collectors file lawsuits counting on you to give up. Our attorneys count the charges first, and fight based on what we find.",
     cta: "Get a free case evaluation",
   },
 

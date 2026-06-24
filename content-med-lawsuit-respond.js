@@ -12,7 +12,7 @@
    - Voice subhead 'Real Attorneys' → 'Our Attorneys'. */
 window.CREDO = {
   phone: "(612) 260-9170", phoneHref: "tel:+16122609170",
-  cluster: "Medical Debt", angle: "Lawsuit — Respond on time",
+  cluster: "Medical Debt", angle: "Lawsuit. Respond on time",
   statute: "Civil procedure + FDCPA + No Surprises Act",
 
   hero: {
@@ -74,21 +74,22 @@ window.CREDO = {
   ],
 
   whatWeDo: {
-    intro: "When you're sued for medical debt, we don't wait. We review the lawsuit, identify errors or invalid charges in the bill, file your legal answer before the deadline, and build a defense. A timely response is the single most important thing that can happen right now — and it's what we do first.",
+    headline: "Sued for medical debt? We act first.",
+    intro: "When you're sued for medical debt, we don't wait. We review the lawsuit, identify errors or invalid charges in the bill, file your legal answer before the deadline, and build a defense. A timely response is the single most important thing that can happen right now, and it's what we do first.",
     bullets: [
       "Review the summons and confirm your response deadline (typically 20–28 days from service).",
       "Examine the underlying medical bill for errors, inflated charges, and documentation gaps the hospital or collector can't close.",
-      "File your legal answer before the deadline — the single step that blocks a default judgment.",
+      "File your legal answer before the deadline, the single step that blocks a default judgment.",
       "Build the defense to challenge the bill's validity, the collector's standing to sue, and any misrepresentation in the filing itself under FDCPA § 1692e.",
     ],
   },
 
   whyChoose: [
-    ["Licensed attorneys — court-ready legal defense", "We appear in court and file documents on your behalf in most cases."],
+    ["Licensed attorneys, court-ready legal defense", "We appear in court and file documents on your behalf in most cases."],
     ["We help you file your response", "Your response is submitted before your deadline. We don't let that window close."],
     ["We challenge the bill", "Before we respond, we review the charges for errors, inflation, and validity issues that can strengthen your defense."],
     ["Free consultation", "Know your options now, at no cost."],
-    ["Flexible payment plans", "Legal defense that fits your budget — not theirs."],
+    ["Flexible payment plans", "Legal defense that fits your budget, not theirs."],
   ],
 
   commonProblems: [
@@ -97,7 +98,7 @@ window.CREDO = {
     ["Wage garnishment", "A default judgment allows collectors to take a percentage of every paycheck until the debt is paid.", "15 U.S.C. § 1673"],
     ["Bank account levies", "Collectors with a judgment can freeze and drain your bank account.", "State levy rules"],
     ["Bills you don't recognize", "Medical debt is frequently sold between collectors. The entity suing you may not be the one you originally owed.", "FDCPA § 1692g"],
-    ["Inflated or inaccurate amounts", "The figure in the lawsuit may not reflect what was actually owed — and that matters in court.", "FDCPA § 1692e(2)"],
+    ["Inflated or inaccurate amounts", "The figure in the lawsuit may not reflect what was actually owed, and that matters in court.", "FDCPA § 1692e(2)"],
   ],
 
   howItWorks: [
@@ -111,11 +112,11 @@ window.CREDO = {
     intro: "Even when you've been sued, federal law continues to protect you.",
     items: [
       { cite: "Civil right",        label: "Right to respond + counsel", text: "You have the right to respond to any civil lawsuit filed against you, and to have an attorney represent you.", exLabel: "Right", ex: "File an answer. Be represented at every stage." },
-      { cite: "FRCP 8, 12",         label: "Procedural compliance",      text: "Collectors who sue must follow proper legal procedures — procedural defects in the filing can be challenged.", exLabel: "Right", ex: "Defective complaints, missing service, etc. — all grounds to attack." },
-      { cite: "FDCPA § 1692e(2)",   label: "Accurate amount required",   text: "Medical debt collectors cannot misrepresent the amount owed — even in a court complaint.", exLabel: "Violation", ex: "Inflated balance in the lawsuit = federal claim against the collector filing it." },
+      { cite: "FRCP 8, 12",         label: "Procedural compliance",      text: "Collectors who sue must follow proper legal procedures, procedural defects in the filing can be challenged.", exLabel: "Right", ex: "Defective complaints, missing service, etc., all grounds to attack." },
+      { cite: "FDCPA § 1692e(2)",   label: "Accurate amount required",   text: "Medical debt collectors cannot misrepresent the amount owed, even in a court complaint.", exLabel: "Violation", ex: "Inflated balance in the lawsuit = federal claim against the collector filing it." },
       { cite: "Chain of assignment", label: "Standing for debt buyers",  text: "If the debt was sold, the collector must prove ownership and the validity of the original amount claimed.", exLabel: "Right", ex: "No complete chain = standing problem the collector must resolve." },
-      { cite: "FRCP 60(b)",         label: "Vacating a judgment",        text: "A default judgment is not always permanent — in certain circumstances it can be vacated with the right legal action.", exLabel: "Right", ex: "Improper service, mistake, excusable neglect — narrow but real grounds." },
-      { cite: "FDCPA",              label: "Continued FDCPA protection", text: "The FDCPA continues to apply to collector conduct even after a lawsuit has been filed.", exLabel: "Right", ex: "Harassment, false statements, threats — still violations even mid-litigation." },
+      { cite: "FRCP 60(b)",         label: "Vacating a judgment",        text: "A default judgment is not always permanent, in certain circumstances it can be vacated with the right legal action.", exLabel: "Right", ex: "Improper service, mistake, excusable neglect, narrow but real grounds." },
+      { cite: "FDCPA",              label: "Continued FDCPA protection", text: "The FDCPA continues to apply to collector conduct even after a lawsuit has been filed.", exLabel: "Right", ex: "Harassment, false statements, threats, still violations even mid-litigation." },
     ],
   },
 
@@ -129,15 +130,15 @@ window.CREDO = {
 
   faq: [
     ["I got court papers and I do not understand what they mean. Where do I start?", "Call us. We read the documents and explain exactly what you are facing in plain language. We confirm your deadline, identify your options, and tell you what we can do. That conversation is completely free."],
-    ["How long do I have to respond?", "Deadlines vary by state — typically 20 to 30 days from the date you were served. The clock starts the day papers were delivered. Every day you wait narrows your options."],
-    ["What if I already missed the deadline and a judgment was entered?", "A default judgment may be vacatable depending on the circumstances. We can review your case and advise whether there are grounds to reopen it — the sooner you act, the more options exist."],
+    ["How long do I have to respond?", "Deadlines vary by state, typically 20 to 30 days from the date you were served. The clock starts the day papers were delivered. Every day you wait narrows your options."],
+    ["What if I already missed the deadline and a judgment was entered?", "A default judgment may be vacatable depending on the circumstances. We can review your case and advise whether there are grounds to reopen it, the sooner you act, the more options exist."],
     ["Do I have to go to court myself?", "Usually not. Our attorneys can appear and file all required documents on your behalf in most cases."],
     ["How much does this cost?", "Your consultation is free. We offer flexible payment plans and will walk you through every option before any commitment is made."],
   ],
 
   bottomCta: {
     headline: "Don't let the deadline cost you everything.",
-    body: "A lawsuit isn't a final outcome — it's an opening. But only if you respond in time. Our attorneys file. Let's use the time you have left.",
+    body: "A lawsuit isn't a final outcome, it's an opening. But only if you respond in time. Our attorneys file. Let's use the time you have left.",
     cta: "Get a free case evaluation",
   },
 

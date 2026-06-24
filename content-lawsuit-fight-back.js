@@ -26,7 +26,7 @@ window.CREDO = {
   phone: "(347) 523-4568",
   phoneHref: "tel:+13475234568",
   cluster: "Lawsuit",
-  angle: "Defense — Fight back",
+  angle: "Defense. Fight back",
   statute: "Civil procedure / FDCPA",
 
   hero: {
@@ -87,7 +87,8 @@ window.CREDO = {
 
   // ---- WHAT WE DO — live verbatim ----
   whatWeDo: {
-    intro: "At Credo Legal, we know the creditor's playbook — because we fight it every day. When a creditor sues you, we respond immediately, challenge the debt's validity, and build a defense designed to contest every weak point in their claim. They count on you giving up. We make sure you don't.",
+    headline: "We know the playbook. We beat it.",
+    intro: "At Credo Legal, we know the creditor's playbook, because we fight it every day. When a creditor sues you, we respond immediately, challenge the debt's validity, and build a defense designed to contest every weak point in their claim. They count on you giving up. We make sure you don't.",
     bullets: [
       "File your legal answer before the response deadline.",
       "Challenge the debt's validity and the creditor's documentation.",
@@ -98,7 +99,7 @@ window.CREDO = {
 
   // ---- WHY CHOOSE — live 4 + 1 synthesized to hit standard 5 count ----
   whyChoose: [
-    ["Licensed attorneys — we know their playbook", "We defend against creditor lawsuits every day. We know what they file, how they argue, and where their claims are weakest."],
+    ["Licensed attorneys, we know their playbook", "We defend against creditor lawsuits every day. We know what they file, how they argue, and where their claims are weakest."],
     ["We fight, not just respond", "Filing an answer is the start. We actively challenge the claim and contest every point we can."],
     ["Our attorneys from day one", "Not salespeople. Attorneys handling your case from the first conversation."],
     ["Flexible payment plans", "Legal defense against a creditor doesn't have to cost you all your savings."],
@@ -133,24 +134,24 @@ window.CREDO = {
       { cite: "FDCPA § 1692e(2)",  label: "No false court filings", text: "Misrepresenting the amount owed, even in a court filing, is a federal FDCPA violation.", exLabel: "Violation", ex: "An inflated balance in the complaint is a federal claim against the collector." },
       { cite: "Civil right",       label: "Right to defend",        text: "You have the right to respond, contest the claim, and be represented by an attorney.", exLabel: "Right", ex: "File an answer. Raise defenses. Be heard before a court can rule against you." },
       { cite: "FRE 803(6), 901",   label: "Chain of ownership",     text: "If the debt was sold, the current collector must establish a complete and documented chain of ownership.", exLabel: "Right", ex: "No complete chain of assignment = standing problem the creditor must resolve." },
-      { cite: "FRCP 60(b)",        label: "Vacating a judgment",    text: "A default judgment is not always permanent — in certain circumstances it can be vacated if you act.", exLabel: "Right", ex: "Improper service, mistake, excusable neglect — all grounds to reopen the case." },
+      { cite: "FRCP 60(b)",        label: "Vacating a judgment",    text: "A default judgment is not always permanent, in certain circumstances it can be vacated if you act.", exLabel: "Right", ex: "Improper service, mistake, excusable neglect, all grounds to reopen the case." },
     ],
   },
 
   // ---- WHO HELPS — live verbatim ----
   whoHelps: [
-    "Anyone sued by a creditor — original lender, debt buyer, or collection attorney firm.",
+    "Anyone sued by a creditor, original lender, debt buyer, or collection attorney firm.",
     "People who received a summons and feel outmatched or overwhelmed by the legal process.",
-    "Those who've been waiting to respond, hoping it goes away. It won't — but it can be fought.",
+    "Those who've been waiting to respond, hoping it goes away. It won't, but it can be fought.",
     "Anyone who believes the debt amount is wrong, inflated, or shouldn't legally be collected.",
     "People who are ready to fight back rather than accept the creditor's version of events.",
   ],
 
   // ---- FAQ — live verbatim ----
   faq: [
-    ["Why do most people lose collection lawsuits?", "Because they don't respond. When no answer is filed, the court enters a default judgment — the creditor wins without proving a thing. The single most important thing you can do is respond."],
+    ["Why do most people lose collection lawsuits?", "Because they don't respond. When no answer is filed, the court enters a default judgment, the creditor wins without proving a thing. The single most important thing you can do is respond."],
     ["What does “fighting back” actually mean legally?", "It means filing a formal legal answer to the lawsuit, raising defenses based on the law and the facts of your case, and requiring the creditor to prove every element of their claim. Many cannot."],
-    ["What if the creditor has already gotten a default judgment against me?", "In some circumstances, a default judgment can be vacated — especially if you weren't properly served or if you act quickly. Contact us for a free review."],
+    ["What if the creditor has already gotten a default judgment against me?", "In some circumstances, a default judgment can be vacated, especially if you weren't properly served or if you act quickly. Contact us for a free review."],
     ["Do I have to show up in court?", "Usually not. Our attorneys can handle appearances and filings on your behalf in most cases."],
     ["How much does this cost?", "Your consultation is free. We offer flexible payment plans and will walk you through every option before any commitment is made."],
   ],
@@ -158,7 +159,7 @@ window.CREDO = {
   // ---- BOTTOM CTA — live verbatim ----
   bottomCta: {
     headline: "They counted on you not showing up. Show up.",
-    body: "A creditor lawsuit is a bet against you. Our attorneys take that bet personally — and fight to win.",
+    body: "A creditor lawsuit is a bet against you. Our attorneys take that bet personally, and fight to win.",
     cta: "Get a free case evaluation",
   },
 

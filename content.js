@@ -73,6 +73,7 @@ window.CREDO = {
   ],
 
   whatWeDo: {
+    headline: "Education first. Then enforcement.",
     intro: "We start with education, because knowing your rights is the first form of protection.",
     bullets: [
       "Break down the FDCPA in plain English: what a collector can do, what they can't, and where the line sits.",
