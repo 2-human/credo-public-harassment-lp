@@ -63,6 +63,24 @@
   function heroStyle() {
     return window.CREDO_HERO_STYLE || document.documentElement.getAttribute("data-hero-style") || "portrait";
   }
+  /* Subject switches: pick the man (m) or woman (w) photoshoot for hero / whoHelps.
+   * Priority: ?hero=m / ?who=m query param, then data-* attr, then global, default 'w'.
+   * Added 2026-06-24 to support the man/woman image-mix variants on the review hub. */
+  function _qsHas(key, val) {
+    var qs = (window.location.search || "").toLowerCase();
+    var pair = key + "=" + val;
+    return qs.indexOf(pair) >= 0;
+  }
+  function heroSubject() {
+    if (_qsHas("hero", "m")) return "m";
+    if (_qsHas("hero", "w")) return "w";
+    return window.CREDO_HERO_SUBJECT || document.documentElement.getAttribute("data-hero-subject") || "w";
+  }
+  function whoSubject() {
+    if (_qsHas("who", "m")) return "m";
+    if (_qsHas("who", "w")) return "w";
+    return window.CREDO_WHO_SUBJECT || document.documentElement.getAttribute("data-who-subject") || "w";
+  }
   function fmtAmt(v) { return v >= 100000 ? "$100,000+" : "$" + Number(v).toLocaleString(); }
 
   /* Auto-format a date of birth as MM/DD/YYYY. Inserts "/" after the MM and DD
@@ -126,29 +144,40 @@
     return '<div class="section-no"><span>§ ' + no + ' · ' + label + '</span></div>';
   }
 
-  /* hero figure — two systems (portrait / watercolor); optional tight crop */
+  /* hero figure — two systems (portrait / watercolor) × two subjects (w / m); optional tight crop.
+   * Slug convention (added 2026-06-24):
+   *   default (woman): harassment-portrait, harassment-portrait-wc, *-tight variants
+   *   man variant:     harassment-portrait-m, harassment-portrait-wc-m, *-m-tight variants
+   */
   var HERO_ART = {
     portrait: {
       slug: "harassment-portrait",
-      alt: "Sarah stands at her kitchen counter, arms crossed, looking out the window as her phone rings face-down beside her."
+      altW: "Sarah stands at her kitchen counter, arms crossed, looking out the window as her phone rings face-down beside her.",
+      altM: "Michael stands at his kitchen counter, arms crossed, looking out the window as his phone rests face-down beside an opened collection letter and a deep-red mug."
     },
     watercolor: {
       slug: "harassment-portrait-wc",
-      alt: "Watercolor illustration: a woman stands at her kitchen counter, arms crossed, looking out the window, her phone face-down beside an opened collection letter and a red mug."
+      altW: "Watercolor illustration: a woman stands at her kitchen counter, arms crossed, looking out the window, her phone face-down beside an opened collection letter and a red mug.",
+      altM: "Watercolor illustration: a man stands at his kitchen counter, arms crossed, looking out the window, his phone face-down beside an opened collection letter and a red mug."
     }
   };
   function HeroFigure(tight) {
     var hs = heroStyle();
+    var subj = heroSubject(); // "w" or "m"
     var a = HERO_ART[hs] || HERO_ART.portrait;
-    var slug = tight
-      ? (hs === "portrait" ? "harassment-portrait-tight" : "harassment-portrait-wc-tight")
-      : a.slug;
+    // base slug without -tight; inject -m before -tight if subject is m.
+    // base: harassment-portrait | harassment-portrait-wc
+    // + man: harassment-portrait-m | harassment-portrait-wc-m
+    // + tight: same with -tight appended (always last)
+    var base = a.slug + (subj === "m" ? "-m" : "");
+    var slug = tight ? base + "-tight" : base;
+    var alt = subj === "m" ? a.altM : a.altW;
     return '' +
-      '<div class="hero-figure" data-style="' + hs + '">' +
+      '<div class="hero-figure" data-style="' + hs + '" data-subject="' + subj + '">' +
         '<picture>' +
           '<source srcset="assets/' + slug + '-960.webp" media="(min-width: 768px)" type="image/webp"/>' +
           '<source srcset="assets/' + slug + '-480.webp" type="image/webp"/>' +
-          '<img src="assets/' + slug + '-480.jpg" loading="eager" decoding="async" alt="' + esc(a.alt) + '"/>' +
+          '<img src="assets/' + slug + '-480.jpg" loading="eager" decoding="async" alt="' + esc(alt) + '"/>' +
         '</picture>' +
       '</div>';
   }
@@ -165,11 +194,20 @@
         altPh: "An attorney's desk with a legal pad, fountain pen, banker's lamp, and a law book with a red ribbon marker." },
       who: { wc: "who-hope", ph: "who-onphone",
         altWc: "Watercolor illustration: a woman at her kitchen counter on the phone with her attorney, a cease-letter and law book beside her in warm morning light.",
-        altPh: "A woman standing in her kitchen on the phone with her attorney, holding a notepad in warm morning light." }
+        altPh: "A woman standing in her kitchen on the phone with her attorney, holding a notepad in warm morning light.",
+        altWcM: "Watercolor illustration: a man at his kitchen counter on the phone with his attorney, a cease-letter and book beside him in warm morning light.",
+        altPhM: "A man standing in his kitchen on the phone with his attorney, holding paperwork, an open law book on the counter in warm morning light." }
     };
     var m = map[kind];
     var slug = portrait ? m.ph : m.wc;
     var alt = portrait ? m.altPh : m.altWc;
+    // Subject swap for the "who this helps" image (added 2026-06-24).
+    // who-onphone → who-onphone-m | who-hope → who-hope-m. 'what' + 'why' unchanged
+    // (those are still neutral hands/desk scenes — no person in shot to swap yet).
+    if (kind === "who" && whoSubject() === "m") {
+      slug = slug + "-m";
+      alt = portrait ? m.altPhM : m.altWcM;
+    }
     return '' +
       '<div class="body-fig has-img">' +
         '<picture>' +

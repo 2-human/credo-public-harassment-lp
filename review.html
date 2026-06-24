@@ -52,6 +52,29 @@
   .toolbar a.live { color: #ff6b73; border-color: #ff6b73; }
   .toolbar a.live:hover { background: #ff6b73; color: #111418; }
 
+  /* Image-mix toggle (added 2026-06-24).
+     Lets reviewers swap Sarah / Michael in the hero + whoHelps slots without
+     leaving the hub. The current mix is appended to every iframe URL as
+     ?hero=w|m&who=w|m and persists in localStorage across LP switches + reloads. */
+  .mix {
+    display: inline-flex; gap: 4px; align-items: center;
+    margin-right: 8px; padding: 3px; background: #1a1e25;
+    border: 1px solid #2a2f37; border-radius: 2px;
+  }
+  .mix-label {
+    font-size: 9px; letter-spacing: 0.1em; color: #8590a0; text-transform: uppercase;
+    padding: 0 8px 0 4px; font-weight: 600;
+  }
+  .mix button {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+    color: #8590a0; background: transparent; border: 0; padding: 4px 9px;
+    cursor: pointer; transition: all .12s; font-family: ui-monospace, Menlo, monospace;
+  }
+  .mix button:hover { color: #fff; }
+  .mix button.active { color: #fff; background: #c92028; }
+  .mix .sep { color: #2a2f37; font-size: 10px; padding: 0 2px; }
+  @media (max-width: 1200px) { .mix-label { display: none; } }
+
   /* ───── Sidebar ───── */
   .sidebar {
     background: #fff; border-right: 1px solid #e7eaee;
@@ -148,6 +171,13 @@
     <span id="m-phone"></span>
   </div>
   <div class="toolbar">
+    <div class="mix" id="mix" title="Image mix: hero · who-this-helps">
+      <span class="mix-label">Mix</span>
+      <button data-mix="w-w" title="Woman hero · Woman who-helps">W·W</button>
+      <button data-mix="w-m" title="Woman hero · Man who-helps">W·M</button>
+      <button data-mix="m-w" title="Man hero · Woman who-helps">M·W</button>
+      <button data-mix="m-m" title="Man hero · Man who-helps">M·M</button>
+    </div>
     <div class="kb"><kbd>↑</kbd><kbd>↓</kbd> switch · <kbd>/</kbd> search</div>
     <a id="t-open" href="#" target="_blank" rel="noopener" style="display:none;">Open ↗</a>
     <a id="t-live" class="live" href="#" target="_blank" rel="noopener" style="display:none;">View live</a>
@@ -278,16 +308,55 @@ let current = -1;
  * so the LP loads the widget too. Reviewers can comment on any LP they
  * navigate to via the hub without having to manually edit the URL. */
 const HUB_IN_REVIEW = new URLSearchParams(location.search).get('review') === '1';
-function withReviewFlag(href) {
-  return HUB_IN_REVIEW ? href + (href.indexOf('?') < 0 ? '?' : '&') + 'review=1' : href;
+
+/* Image-mix state (added 2026-06-24).
+ * Each LP can be previewed in any of 4 hero/whoHelps subject combinations.
+ * State persists across LP switches and reloads via localStorage. The LP
+ * renderer (app.js) honours ?hero=w|m and ?who=w|m on every page. */
+const MIX_KEY = 'credo-review-hub-mix';
+let mixHero = 'w', mixWho = 'w';
+try {
+  const saved = (localStorage.getItem(MIX_KEY) || '').split('-');
+  if (saved.length === 2 && (saved[0] === 'w' || saved[0] === 'm') && (saved[1] === 'w' || saved[1] === 'm')) {
+    mixHero = saved[0]; mixWho = saved[1];
+  }
+} catch (e) { /* localStorage blocked — fall back to defaults */ }
+
+function withParams(href) {
+  const parts = [];
+  if (HUB_IN_REVIEW) parts.push('review=1');
+  if (mixHero === 'm') parts.push('hero=m');
+  if (mixWho === 'm')  parts.push('who=m');
+  if (!parts.length) return href;
+  return href + (href.indexOf('?') < 0 ? '?' : '&') + parts.join('&');
 }
+// Back-compat alias for any code paths still calling withReviewFlag().
+const withReviewFlag = withParams;
+
+function setMix(hero, who) {
+  mixHero = hero; mixWho = who;
+  try { localStorage.setItem(MIX_KEY, hero + '-' + who); } catch (e) {}
+  // Repaint toggle highlight.
+  document.querySelectorAll('.mix button').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.mix === hero + '-' + who);
+  });
+  // Re-render current LP if one is selected (with cache-busting via timestamp,
+  // so the iframe definitely reloads with the new query string).
+  if (current >= 0) select(current);
+}
+document.getElementById('mix').addEventListener('click', e => {
+  const btn = e.target.closest('button[data-mix]');
+  if (!btn) return;
+  const [h, w] = btn.dataset.mix.split('-');
+  setMix(h, w);
+});
 function select(idx) {
   if (idx < 0 || idx >= LPS.length) return;
   current = idx;
   const lp = LPS[idx];
   $empty.style.display = 'none';
   $frame.style.display = 'block';
-  $frame.src = withReviewFlag(lp.file);
+  $frame.src = withParams(lp.file);
   document.getElementById('m-cluster').textContent = lp.c;
   document.getElementById('m-slug').textContent = lp.slug;
   document.getElementById('m-phone').textContent = lp.phone;
@@ -296,7 +365,7 @@ function select(idx) {
   angleEl.style.display = lp.angle ? 'inline-flex' : 'none';
   document.getElementById('m-champ').style.display = lp.champion ? 'inline-flex' : 'none';
   const open = document.getElementById('t-open');
-  open.href = withReviewFlag(lp.file); open.style.display = 'inline-flex';
+  open.href = withParams(lp.file); open.style.display = 'inline-flex';
   const live = document.getElementById('t-live');
   live.href = 'https://start.credolegal.com' + lp.slug; live.style.display = 'inline-flex';
   // sidebar highlight
@@ -322,6 +391,10 @@ $q.addEventListener('input', () => renderList($q.value.trim()));
 
 /* Initial render + hash route */
 renderList('');
+// Paint the persisted mix button so users can see which combination is active.
+document.querySelectorAll('.mix button').forEach(btn => {
+  btn.classList.toggle('active', btn.dataset.mix === mixHero + '-' + mixWho);
+});
 const hashIdx = parseInt(location.hash.slice(1), 10);
 if (!Number.isNaN(hashIdx) && hashIdx >= 0 && hashIdx < LPS.length) {
   select(hashIdx);
