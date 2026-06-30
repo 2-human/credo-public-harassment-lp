@@ -29,7 +29,8 @@ window.CREDO = {
     eyebrow: "FDCPA · Know your rights",
     // Live H1 with "Real" voice fix: "Real Attorneys Can Explain Your Rights and Act."
     // → "Our Attorneys Can Explain Your Rights and Act." with "Rights" in red.
-    h1: ["Our Attorneys Can Explain Your ", "Rights", " and Act."],
+    // 2026-06-30 (milos, h1-1): widened red emphasis to "Your Rights".
+    h1: ["Our Attorneys Can Explain ", "Your Rights", " and Act."],
     // Live subhead with "Real" voice fix.
     lede: "Our Attorneys Can Make Them Pay.",
     filler: "Fill in the form below or call us for a free review of your case.",

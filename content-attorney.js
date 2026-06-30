@@ -19,10 +19,9 @@ window.CREDO = {
 
   hero: {
     eyebrow: "FDCPA · Take legal action",
-    // 2026-06-30 (Sona review): "FDCPA" reads as jargon to consumers; replaced
-    // with "Consumer Debt Attorney" per h1-1 feedback. Red emphasis on the
-    // full noun phrase carries the prominence Sona's caps suggested.
-    h1: ["Need a ", "Consumer Debt Attorney", "?"],
+    // 2026-06-30 (Sona, h1-1): "FDCPA" reads as jargon → "Consumer Debt Attorney".
+    // 2026-06-30 (milos, em-1): red emphasis narrowed to "Attorney" only.
+    h1: ["Need a Consumer Debt ", "Attorney", "?"],
     // 2026-06-30 (Sona, p-1): added "under FDCPA" to specify the statute.
     lede: "We Explain Your Rights Against Debt Harassment under FDCPA for Free.",
     filler: "Fill in the form or call for a free review of your case.",

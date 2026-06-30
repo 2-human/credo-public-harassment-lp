@@ -30,10 +30,11 @@ window.CREDO = {
 
   hero: {
     eyebrow: "FDCPA · Make them pay",
-    // Same H1 as /debt-harassment-stop-calls; same emphasis word ("Stop") to
-    // keep the Creditor_Harassment ad group visually consistent — the lede
-    // does the angle differentiation.
-    h1: ["Debt Collectors Won't ", "Stop", " Calling?"],
+    // Same H1 as /debt-harassment-stop-calls; same emphasis to keep the
+    // Creditor_Harassment ad group visually consistent — the lede does the
+    // angle differentiation.
+    // 2026-06-30 (milos, h1-1): widened red emphasis to "Stop Calling".
+    h1: ["Debt Collectors Won't ", "Stop Calling", "?"],
     lede: "Our Attorneys Can Make Them Pay.",
     filler: "Fill in the form below or call us for a free review of your case.",
   },
@@ -82,9 +83,11 @@ window.CREDO = {
     trustpilot: { title: "Excellent",           meta: "4.5 / 5 · 1,247 reviews" },
     google:     { title: "Google Reviews",      meta: "4.7 / 5" },
   },
+  // 2026-06-30 (Sona, span-12 + span-14, propagated): metrics swap applied
+  // across all LPs. Numbers confirmed by team@2-human.com 2026-06-30.
   metrics: [
-    ["$84M+", "In debt wiped"],
-    ["10,000+", "Cases won"],
+    ["10 million+", "In debt wiped"],
+    ["500k", "Debts settled every month"],
   ],
 
   // ---- WHAT WE DO — live intro paragraph + 4 bullets (live verbatim,
