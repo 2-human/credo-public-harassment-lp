@@ -19,10 +19,12 @@ window.CREDO = {
 
   hero: {
     eyebrow: "FDCPA · Take legal action",
-    // "Attorney" is emphasized in red via <em>. H1 retains the live question
-    // wording per 2026-06-23 socratic decision (keep verbatim + red emphasis).
-    h1: ["Need an FDCPA ", "Attorney", "?"],
-    lede: "We Explain Your Rights Against Debt Harassment for Free.",
+    // 2026-06-30 (Sona review): "FDCPA" reads as jargon to consumers; replaced
+    // with "Consumer Debt Attorney" per h1-1 feedback. Red emphasis on the
+    // full noun phrase carries the prominence Sona's caps suggested.
+    h1: ["Need a ", "Consumer Debt Attorney", "?"],
+    // 2026-06-30 (Sona, p-1): added "under FDCPA" to specify the statute.
+    lede: "We Explain Your Rights Against Debt Harassment under FDCPA for Free.",
     filler: "Fill in the form or call for a free review of your case.",
   },
 
@@ -73,30 +75,40 @@ window.CREDO = {
     trustpilot: { title: "Excellent",           meta: "4.5 / 5 · 1,247 reviews" },
     google:     { title: "Google Reviews",      meta: "4.7 / 5" },
   },
+  // 2026-06-30 (Sona, span-12 + span-14): trust-strip metrics replaced with
+  // the volume figures she confirmed. Number + label confirmed correct by
+  // team@2-human.com 2026-06-30.
   metrics: [
-    ["$84M+", "In debt wiped"],
-    ["10,000+", "Cases won"],
+    ["10 million+", "In debt wiped"],
+    ["500k", "Debts settled every month"],
   ],
 
-  // ---- WHAT WE DO — live copy, verbatim ----
+  // ---- WHAT WE DO — live copy + 2026-06-30 Sona feedback ----
   whatWeDo: {
     headline: "Knowing your rights is where we start.",
     intro: "At Credo Legal, knowing your rights isn't where we stop, it's where we start. Our attorneys review your situation and pursue the violations the FDCPA creates.",
     bullets: [
       "Review your collector's conduct against each provision of the FDCPA.",
-      "Document every violation with date, time, and the statute it breaches.",
+      // 2026-06-30 (Sona, span-20): added "you report" so the bullet credits
+      // the client's role in surfacing violations.
+      "Document every violation you report, with date, time, and the statute it breaches.",
       "Send a formal cease-communication letter to halt further contact.",
       "File legal claims against the collector for statutory damages, actual damages, and attorney fees.",
     ],
   },
 
-  // ---- WHY CHOOSE — live copy, with voice fix on bullet 1 ----
+  // ---- WHY CHOOSE — live copy, with voice fix on bullet 1 + 2026-06-30 Sona pass ----
   whyChoose: [
-    ["Licensed attorneys", "Our attorneys filing real FDCPA claims. Not a complaint hotline, not a settlement company."],
-    ["We act on day one", "Cease letter sent immediately. Violations documented from the first conversation. No waiting."],
+    // 2026-06-30 (Sona, p-7): "filing" → "file" (parallel verb form).
+    ["Licensed attorneys", "Our attorneys file real FDCPA claims. Not a complaint hotline, not a settlement company."],
+    // 2026-06-30 (Sona, p-9): added "upon enrollment" so the immediacy claim
+    // is anchored to a defined trigger.
+    ["We act on day one", "Cease letter sent immediately upon enrollment. Violations documented from the first conversation. No waiting."],
     ["We identify every breach", "A single collector interaction can contain multiple violations. We find all of them."],
     ["Free consultation", "No cost to find out whether your collector broke the law and what your claim is worth."],
-    ["Flexible payment plans", "FDCPA attorney fees are recoverable from the collector; Credo Legal has affordable payment plans for the rest."],
+    // 2026-06-30 (Sona, p-15): added "if case is won" — fee-shifting is
+    // conditional on prevailing under § 1692k(a)(3).
+    ["Flexible payment plans", "FDCPA attorney fees are recoverable from the collector if case is won; Credo Legal has affordable payment plans for the rest."],
   ],
 
   // ---- COMMON PROBLEMS — live copy + statute § tags (added per
@@ -110,12 +122,17 @@ window.CREDO = {
     ["Misrepresenting identity or debt amount", "Claiming to be an attorney, police officer, or government official is a federal violation.", "§ 1692e(1),(3)"],
   ],
 
-  // ---- HOW IT WORKS — live copy + time markers (added per
-  // 2026-06-23 design decision) ----
+  // ---- HOW IT WORKS — live copy + time markers + 2026-06-30 Sona pass ----
   howItWorks: [
     ["Free consultation", "Tell us what the collector has done. We review every contact and identify violations at no cost.", "DAY 0"],
-    ["Cease letter sent, day one", "Our attorneys send a formal cease-communication letter immediately, stopping the calls while we build the case.", "DAY 0"],
-    ["Violations documented and filed", "Every breach is catalogued. We file your FDCPA claim formally and pursue statutory and actual damages.", "WEEK 1–2"],
+    // 2026-06-30 (Sona, h3-8 + p-23): time marker DAY 0 → DAY 1 (Day 0 is the
+    // free consultation; cease letter sequence begins after enrollment), and
+    // body anchors the cease letter to first payment of legal fees.
+    ["Cease letter sent, day one", "Our attorneys send a formal cease-communication letter immediately upon first payment of legal fees, stopping the calls while we build the case.", "DAY 1"],
+    // 2026-06-30 (Sona, p-24 + div-18): added "if there is a clear violation"
+    // (claims aren't guaranteed) and shifted time marker to WEEK 3–4 to match
+    // the realistic intake → cease → review → file cadence.
+    ["Violations documented and filed", "Every breach is catalogued. We file your FDCPA claim formally and pursue statutory and actual damages if there is a clear violation.", "WEEK 3–4"],
     ["Resolution", "We pursue the collector for $1,000 per lawsuit, actual damages, and attorney fees, holding them accountable.", "ONGOING"],
   ],
 
@@ -149,7 +166,9 @@ window.CREDO = {
     ["Can I really sue a debt collector?", "Yes. The FDCPA explicitly gives consumers the right to sue collectors who violate it, in federal or state court."],
     ["What if my collector only violated the law once or twice?", "Even a single violation is actionable. And once we begin reviewing, clients often discover more violations than they expected."],
     ["How long do I have to file an FDCPA claim?", "One year from the date of the violation. If you've been harassed recently, the window is open. Don't wait."],
-    ["Do I have to go to court?", "Many FDCPA cases are resolved before trial. Our attorneys handle proceedings, and you're rarely required to appear."],
+    // 2026-06-30 (Sona, p-35): "rarely required" → "may be required under
+    // certain circumstances only" — more legally precise.
+    ["Do I have to go to court?", "Many FDCPA cases are resolved before trial. Our attorneys handle proceedings, and you may be required to appear under certain circumstances only."],
     ["How much does this cost?", "Your consultation is free."],
   ],
 

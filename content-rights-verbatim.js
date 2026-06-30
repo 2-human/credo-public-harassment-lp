@@ -80,9 +80,14 @@ window.CREDO = {
     trustpilot: { title: "Excellent",           meta: "4.5 / 5 · 1,247 reviews" },
     google:     { title: "Google Reviews",      meta: "4.7 / 5" },
   },
+  // 2026-06-30 (Sona meta-instruction, span-12 on rights-verbatim): mirror the
+  // metric swap applied to content-attorney.js. Numbers confirmed correct by
+  // team@2-human.com 2026-06-30. Other Sona edits on the attorney LP didn't
+  // apply here (different verbatim copy in WhatWeDo / WhyChoose / HowItWorks
+  // / FAQ — the rights-verbatim wording stays distinct).
   metrics: [
-    ["$84M+", "In debt wiped"],
-    ["10,000+", "Cases won"],
+    ["10 million+", "In debt wiped"],
+    ["500k", "Debts settled every month"],
   ],
 
   // ---- WHAT WE DO — live copy, verbatim ----
