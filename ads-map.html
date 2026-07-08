@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Credo Legal — Google Ads → LP map</title>
+<style>
+  /* Shares the LP review hub's visual language (review.html):
+     dark topbar #111418, red accent #c92028 / #ff6b73, light bg #f6f7f9,
+     system font, mono for slugs/URLs. This page is a scrollable document,
+     not the hub's fixed two-pane app shell. */
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #111418; background: #f6f7f9;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  .mono { font-family: ui-monospace, Menlo, monospace; }
+
+  /* ───── Top bar ───── */
+  .topbar {
+    position: sticky; top: 0; z-index: 20;
+    background: #111418; color: #fff;
+    display: flex; align-items: center; gap: 16px;
+    padding: 0 20px; height: 56px;
+    border-bottom: 1px solid #2a2f37;
+  }
+  .brand { font-size: 13px; font-weight: 600; letter-spacing: -0.01em; white-space: nowrap; }
+  .brand .red { color: #ff6b73; }
+  .topbar .title { font-size: 12px; color: #c8cdd6; flex: 1; min-width: 0; }
+  .topbar .title .src { color: #8590a0; }
+  .toolbar { display: flex; gap: 10px; align-items: center; }
+  .toolbar a {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+    color: #c8cdd6; border: 1px solid #2a2f37;
+    padding: 6px 12px; text-decoration: none; transition: all .15s; white-space: nowrap;
+  }
+  .toolbar a:hover { color: #fff; border-color: #5b6470; }
+  .toolbar a.back { color: #ff6b73; border-color: #ff6b73; }
+  .toolbar a.back:hover { background: #ff6b73; color: #111418; }
+
+  /* ───── Controls bar ───── */
+  .controls {
+    position: sticky; top: 56px; z-index: 15;
+    background: #fff; border-bottom: 1px solid #e7eaee;
+    padding: 12px 20px;
+    display: flex; flex-wrap: wrap; gap: 12px 16px; align-items: center;
+  }
+  .stats { display: flex; gap: 16px; align-items: baseline; flex-wrap: wrap; }
+  .stat { display: flex; gap: 6px; align-items: baseline; }
+  .stat b { font-size: 16px; font-weight: 700; }
+  .stat span { font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: #8590a0; }
+  .spacer { flex: 1; min-width: 0; }
+  .search input {
+    width: 260px; max-width: 100%; padding: 8px 12px; border: 1.5px solid #e7eaee;
+    font-size: 13px; font-family: inherit; outline: none; transition: border-color .15s;
+  }
+  .search input:focus { border-color: #c92028; }
+  .chips { display: flex; gap: 6px; flex-wrap: wrap; }
+  .chip {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.03em;
+    padding: 6px 11px; border: 1.5px solid #e7eaee; background: #fff; color: #5b6470;
+    cursor: pointer; transition: all .12s; white-space: nowrap;
+  }
+  .chip:hover { border-color: #c8cdd6; }
+  .chip.active { background: #111418; color: #fff; border-color: #111418; }
+  .chip.state.active { background: #c92028; border-color: #c92028; }
+  button.linkish {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+    color: #5b6470; background: none; border: 0; cursor: pointer; padding: 6px 4px;
+  }
+  button.linkish:hover { color: #c92028; }
+
+  /* ───── Body ───── */
+  main { max-width: 1180px; margin: 0 auto; padding: 8px 20px 80px; }
+  .camp-h {
+    display: flex; align-items: baseline; gap: 10px;
+    padding: 24px 0 8px; border-bottom: 2px solid #f1f3f5; margin-bottom: 12px;
+  }
+  .camp-h .name { font-size: 15px; font-weight: 700; letter-spacing: -0.01em; }
+  .camp-h .code { font-size: 11px; color: #8590a0; }
+  .camp-h .count { margin-left: auto; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: #8590a0; }
+
+  .ad {
+    background: #fff; border: 1px solid #e7eaee; border-left: 3px solid #c8cdd6;
+    margin-bottom: 10px;
+  }
+  .ad.paused { border-left-color: #e7eaee; opacity: 0.85; }
+  .ad.enabled { border-left-color: #16a34a; }
+  .ad-head {
+    display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+    padding: 12px 14px; cursor: pointer; user-select: none;
+  }
+  .ad-head:hover { background: #fafbfc; }
+  .ad-group { font-size: 13px; font-weight: 600; letter-spacing: -0.01em; }
+  .pill {
+    font-size: 9px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 2px 8px; border-radius: 999px;
+  }
+  .pill.enabled { background: #dcfce7; color: #166534; }
+  .pill.paused  { background: #f1f3f5; color: #5b6470; }
+  .ad-type { font-size: 10px; color: #8590a0; letter-spacing: 0.04em; text-transform: uppercase; }
+  .url-wrap { margin-left: auto; display: flex; align-items: center; gap: 10px; min-width: 0; }
+  .final-url {
+    font-family: ui-monospace, Menlo, monospace; font-size: 12px; color: #c92028;
+    text-decoration: none; word-break: break-all;
+  }
+  .final-url:hover { text-decoration: underline; }
+  .toggle { font-size: 10px; color: #8590a0; letter-spacing: 0.04em; white-space: nowrap; }
+  .disp { font-family: ui-monospace, Menlo, monospace; font-size: 10.5px; color: #8590a0; }
+
+  .ad-body { display: none; padding: 4px 14px 16px; border-top: 1px solid #f1f3f5; }
+  .ad.open .ad-body { display: block; }
+  .ad.open .toggle .car { transform: rotate(90deg); }
+  .toggle .car { display: inline-block; transition: transform .12s; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 12px; }
+  @media (max-width: 720px) { .grid { grid-template-columns: 1fr; } }
+  .col h4 {
+    font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    color: #8590a0; margin: 0 0 8px;
+  }
+  ol.hl { margin: 0; padding: 0; list-style: none; counter-reset: h; }
+  ol.hl li {
+    counter-increment: h; font-size: 13px; line-height: 1.5; padding: 3px 0 3px 26px; position: relative;
+  }
+  ol.hl li::before {
+    content: counter(h); position: absolute; left: 0; top: 3px;
+    font-family: ui-monospace, Menlo, monospace; font-size: 9px; color: #b6bcc6;
+    width: 18px; text-align: right;
+  }
+  ul.ds { margin: 0; padding: 0; list-style: none; }
+  ul.ds li {
+    font-size: 12.5px; line-height: 1.5; color: #3a4048; padding: 5px 0 5px 12px;
+    border-left: 2px solid #f1f3f5; margin-bottom: 6px;
+  }
+  .empty { text-align: center; color: #8590a0; font-size: 14px; padding: 60px 0; }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">Credo<span class="red">·</span>Legal · Ads → LP</div>
+  <div class="title">Google Ads campaigns, ad groups &amp; ads mapped to their landing-page final URL <span class="src mono">· RSA export July 7, 2026</span></div>
+  <div class="toolbar">
+    <a href="statute-map.html" target="_blank" rel="noopener" title="FDCPA statute map">Statute map ↗</a>
+    <a class="back" href="review.html" title="Back to the LP review hub">← LP review</a>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="stats">
+    <div class="stat"><b id="s-ads">0</b><span>ads</span></div>
+    <div class="stat"><b id="s-camps">0</b><span>campaigns</span></div>
+    <div class="stat"><b id="s-urls">0</b><span>landing pages</span></div>
+    <div class="stat"><b id="s-enabled">0</b><span>enabled</span></div>
+    <div class="stat"><b id="s-paused">0</b><span>paused</span></div>
+  </div>
+  <div class="spacer"></div>
+  <div class="search"><input id="q" type="search" placeholder="Search headline, URL, ad group…" autocomplete="off"/></div>
+  <button class="linkish" id="toggle-all">Expand all</button>
+</div>
+
+<div class="controls" style="top:105px; padding-top:10px; padding-bottom:10px;">
+  <div class="chips" id="camp-chips"></div>
+  <div class="spacer"></div>
+  <div class="chips" id="state-chips">
+    <button class="chip state active" data-state="all">All</button>
+    <button class="chip state" data-state="Enabled">Enabled</button>
+    <button class="chip state" data-state="Paused">Paused</button>
+  </div>
+</div>
+
+<main id="main"></main>
+
+<script>
+/* ───── Data ─────
+   26 responsive search ads extracted from
+   `intake/Google and Bing Structure.numbers` (Google Ads RSA export,
+   July 7 2026). One object per ad; headlines/descriptions are arrays with
+   the empty "position" columns dropped. Regenerate from the .numbers via
+   numbers-parser if the export is refreshed. */
+const ADS = [
+ {"campaign":"S_Lawsuit_NW","adGroup":"Collection_Lawsuit","state":"Enabled","type":"Responsive search ad","finalUrl":"https://start.credolegal.com/debt-lawsuit-respond-on-time","path1":"debt-lawsuit","path2":"respond-on-time","headlines":["Sued by a Collector? Act Now","You Have 20-28 Days to Act","Collection Lawsuit? Respond.","Don't Default. File Response.","Most People Don't Respond.","They Win If You Ignore It!","Our Attorneys Respond Fast","Real Lawyers From Day One","Not Too Late to Fight Back","We File Your Answer Fast!","Debt Lawsuit Defense Lawyer","Flexible Payment Plans","Call Now. Free Consultation.","Free Debt Lawsuit Defense","Get a Free Case Evaluation"],"descriptions":["Sued by a collector? 20-28 days to respond or you lose by default. We act fast.","Real attorneys file your answer from day one. Not salespeople. Free Consultation.","Most folk sued by collectors don't respond and lose automatically. Don't let that happen.","Collectors count on you not fighting. Our attorneys respond fast. Get Free Consultation."]},
+ {"campaign":"S_Lawsuit_NW","adGroup":"Creditor_Suing","state":"Enabled","type":"Responsive search ad","finalUrl":"https://start.credolegal.com/debt-lawsuit-fight-back","path1":"debt-lawsuit","path2":"fight-back","headlines":["Creditor Suing You?","Don't Let Them Win","Fight Back Against Creditors","They Count on You Giving Up","Default Judgment = They Win","Respond Before It's Too Late","Our Attorneys Fight for You","Real Lawyers From Day One","You Have Legal Options","We File Your Answer Fast","Don't Lose by Not Showing Up","Flexible Payment Plans","Call Now. Free Consultation.","Get a Free Case Evaluation","Fight Back Today. Free Review."],"descriptions":["Creditor suing? They count on you not responding. We file a response on time. Free Cosnult","Real attorneys fight creditor lawsuits from day one. We know their playbook. Free Consult.","Folks don't respond to creditor lawsuits and lose by default. Don't be one such. Act Now.","We challenge the debt, file your response, and protect your rights. Get Free Consult."]},
+ {"campaign":"S_CreditCard_NW","adGroup":"CC_Negotiation","state":"Enabled","type":"Responsive search ad","finalUrl":"https://start.credolegal.com/credit-card-debt-negotiation","path1":"credit-card","path2":"debt-negotiate","headlines":["We Can Help You Talk To Them","You Can Pay Less Than You Owe","Card Debt Negotiation Lawyer","Attorney-Led Negotiation","Settle Card Debt for Less","Don't Negotiate Debt Alone","We Talk to Them. Not You.","Lower Your Card Debt Balance","Real Attorneys. Better Terms","Stop Paying More Than Owed","It's Harder To Negotiate Alone","Flexible Payment Plans","Free Negotiation Consultation","Free Debt Review","Get a Free Case Evaluation"],"descriptions":["Our attorneys negotiate your card debt so you don't have to. Better terms. Free Consult.","Card companies won't negotiate fairly. Our attorneys demand what you deserve. Free Consult","Thousands have settled credit card debt for less with attorney help. Get Free Evaluation.","Negotiate a lump sum and put credit card debt behind you. Real attorneys. Free Consult."]},
+ {"campaign":"S_All-States","adGroup":"FDCPA","state":"Enabled","type":"Responsive search ad","finalUrl":"https://start.credolegal.com/fcba-and-fdcpa","path1":"FDCPA","path2":"Debt-Relief","headlines":["Know Your FDCPA Rights","Stop Abusive Debt Collectors","FDCPA Protection Explained","Harassed by Collectors?","What Does FDCPA Cover?","Your Debt Collection Rights","FDCPA Rules for Collectors","End Illegal Collection Calls","Understand FDCPA Protections","Fight Back With FDCPA Rights","FDCPA: Stop Harassing Calls","Are Collectors Breaking FDCPA?","Use FDCPA to Protect Yourself","FDCPA Help for Consumers NY"],"descriptions":["Learn how FDCPA limits collector calls, harassment, and deceptive tactics.","Discover what collectors can and cannot do under FDCPA guidelines.","Get a clear explanation of your debt collection rights under FDCPA.","See how to demand validation and respond to abusive collection behaviour."]},
+ {"campaign":"S_CreditCard_NW","adGroup":"CC_Branded","state":"Enabled","type":"Responsive search ad","finalUrl":"https://start.credolegal.com/credit-card-debt-stop-calls","path1":"credit-card","path2":"debt-stop-calls","headlines":["{Keyword:Card Company Won't Stop?}","We Send Cease Letter Today","Stop Credit Card Harassment","Calls About Credit Card Debt?","Calls Before 8AM? Illegal.","Threatening You? Violation.","FDCPA Covers Card Collectors","Real Attorneys From Day One","We Stop Card Collector Calls","Attorney Help Starts Today","Calling Your Job? Illegal.","Flexible Payment Plans","Free Confidential Consultation","Talk to an Attorney For Free","Get a Free Case Evaluation"],"descriptions":["Card debt collector won't stop calling? FDCPA protects you. We act fast. Free consult.","We send a cease letter the day you enroll. Real attorneys. Get Free Consultation.","Thousands have stopped credit card harassment with our help. Get Free Evaluation.","Calling before 8AM, threatening arrest, contacting family. It's all illegal. Free Consult."]},
+ {"campaign":"S_Harassment_NW","adGroup":"Creditor_Harassment","state":"Enabled","type":"Responsive search ad","finalUrl":"https://start.credolegal.com/debt-harassment-stop-calls","path1":"debt-harassment","path2":"stop-calls","headlines":["Collector Won't Stop Calling?","We'll Send Cease Letter Today","Harassed by Debt Collectors?","Calling Your Job? Illegal.","Threatening Arrest? Illegal.","Real Attorneys From Day One","Stop Harassment by Collectors","Calls Before 8AM? Violation.","You Don't Have to Take This","Attorney Help Can Start Today","Debt Collector Calling Family?","We Act Fast. So They'll Stop.","Free Confidential Consultation","Talk to an Attorney For Free","Get a Free Case Evaluation"],"descriptions":["Collector calling your job or family? They are violating FDCPA. We act fast. Free Consult.","Real attorneys send legal cease letter the day you enroll to stop calls. Consult for Free.","Thousands have stopped collector harassment with our help. Get Free Evaluation today.","Each illegal call may violate federal law. We identify every breach. Get a Free Review."]},
+ {"campaign":"S_Harassment_NW","adGroup":"FDCPA_Harassment","state":"Enabled","type":"Responsive search ad","finalUrl":"https://start.credolegal.com/debt-harassment-fdcpa-rights","path1":"debt-harassment","path2":"fdcpa-rights","headlines":["Know Your FDCPA Rights","Know What Collectors Can't Do?","FDCPA Protects You By Law","Collectors Have Legal Limits","No Calls 8AM to 9PM!","They Can't Contact Your Boss!","They Can't Threaten Arrest!","FDCPA Violation? Free Review.","Understand Your Legal Rights","Real Attorneys Explain. Free.","Are They Breaking the Law?","FDCPA Attorney for Your Case","Free FDCPA Rights Evaluation","Free Confidential Consultation","Learn Your Rights at No Cost"],"descriptions":["The FDCPA limits how collectors contact you. Learn your rights with real attorneys.","Calling before 8AM, threatening jail, contacting family - all illegal. Get Hep for Free.","Thousands used FDCPA to stop harassment. Our attorneys help you understand. Free Consult.","Not sure if a collector broke the law? Our attorneys review your case For Free."]},
+ {"campaign":"S_Harassment_NW","adGroup":"Creditor_Harassment","state":"Enabled","type":"Responsive search ad","finalUrl":"https://start.credolegal.com/debt-harassment-violations","path1":"debt-harassment","path2":"violations","headlines":["Harassed by Collector? Sue 'em","Each Violation Can Get $1,000","Collector Broke the Law? Sue!","You Could Turn Calls Into Cash","Every Illegal Call Counts","We Track Every Violation","Real Attorneys. Real Money.","FDCPA Can Pay Per Breach","Collectors Might Owe YOU Money","We Build Your FDCPA Case","Multiple Violations? More Cash","Attorney Assistance From Day 1","We Assess Violations for Free","Get a Free Case Evaluation","Find Out What They Owe You"],"descriptions":["Each illegal call can pay you $1,000 under the FDCPA. We find every one. Free Consultation","Our attorneys track every violation from day one. Real lawyers. Get a Free Consultation.","Clients recover thousands from abusive collectors. We build your case. Free Consultation.","Calling before 8AM, contacting your boss, or threatening arrest? Each pays. Free Consult."]},
+ {"campaign":"S_Harassment_NW","adGroup":"FDCPA_Harassment","state":"Enabled","type":"Responsive search ad","finalUrl":"https://start.credolegal.com/debt-harassment-fdcpa-attorney","path1":"debt-harassment","path2":"fdcpa-attorney","headlines":["Collector Broke the Law?","We Act Fast. So They Pay.","Sue Debt Collector for Breach","FDCPA Violation? We Fight.","Cease Letter Sent Same Day","Each Violation Can Get You $1K","We Identify Every Breach","FDCPA Attorneys Who Act Fast","Know Your Rights & Use Them.","We Build Your FDCPA Case","Real Lawyers, Not Snakeoil","From Violation to Lawsuit","Get a Free Case Evaluation","Free FDCPA Violation Review","Talk to an FDCPA Attorney"],"descriptions":["Collector calling illegal hours or threatening you? FDCPA violation. We Sue. Free Consult.","We send a cease letter the day you enroll and track every violation. Real attorneys.","Our attorneys have filed hundreds of FDCPA claims. Each violation = $1,000. Free Consult.","Every illegal call or threat is tracked. More violations = stronger case. Free Consult."]},
+ {"campaign":"S_All-States","adGroup":"FDCPA","state":"Paused","type":"Responsive search ad","finalUrl":"https://start.credolegal.com/fcba-and-fdcpa","path1":"FCBA","path2":"Debt-Relief","headlines":["Know Your FCBA Rights","Dispute Credit Card Errors","FCBA Billing Protections","Charged But You Didn’t Buy?","Fix Wrong Card Charges","FCBA Dispute Rules","Protect Your Credit Bill","Challenge Billing Mistakes","Learn FCBA in Minutes","Credit Card Error Help in NY","FCBA: Fix Billing Mistakes","Overcharged? Use FCBA Rights","FCBA Guide to Disputing Bills","Protect Yourself With FCBA"],"descriptions":["Learn how FDCPA limits collector calls, harassment, and deceptive tactics.","Discover what collectors can and cannot do under FDCPA guidelines.","Get a clear explanation of your debt collection rights under FDCPA.","See how to demand validation and respond to abusive collection behaviour."]},
+ {"campaign":"S_Lawsuit_NW","adGroup":"Collection_Lawsuit","state":"Enabled","type":"Responsive search ad","finalUrl":"https://start.credolegal.com/debt-lawsuit-proof","path1":"debt-lawsuit","path2":"proof","headlines":["Sued by a Collector?","We Demand They Prove Claims","Many Debts Lack Proof","They Have to Prove You Owe","No Proof? Case Dismissed.","We Challenge Debt Validity","Debts Sold Without Records","Real Attorneys From Day One","Fight Back With Evidence","Our Defense Strategy Works","Clean Credit Report from Debt","Flexible Payment Plans","Free Defense Consultation","Get a Free Case Evaluation","Call Them On Their Evidence"],"descriptions":["Many collection lawsuits lack proper documentation. We demand proof. Free Consult.","Real attorneys check if the debt was properly documented before you pay. Get Free Consult.","Invalid debts get dismissed and removed from your credit report. Call Us For Free.","Debts are often sold without records. They can't prove it? You don't owe it. Free Consult."]},
+ {"campaign":"S_All-States","adGroup":"Garnishment","state":"Enabled","type":"Responsive search ad","finalUrl":"https://start.credolegal.com/stop-wage-garnishment","path1":"garnishment","path2":"attorney","headlines":["Stop Wage Garnishment Now","Worried About Garnishment?","Paycheck Garnished? Call Us","Act Before They Take Your Pay","Garnishment Risks Your Housing","Protect Your Paycheck Today","We Can Still Challenge It","File Exemptions to Protect Pay","We CRUSH Wage Garnishments.","We Can Stop Wage Garnishment","Fight Back Against Garnishment","Need a Garnishment Lawyer?","Call Now. Free Consultation","Get a Free Consultation","Lets See If We Can Help You"],"descriptions":["Garnishment can take 25% of your pay and threaten your housing. We act fast. Call us now.","Even after garnishment starts, you may file exemptions to stop or reduce it. Call us free.","Act before garnishment begins. We challenge seizures before they start. Free call now.","Garnishments can be challenged via exemptions and FDCPA violations, even now. Free call."]},
+ {"campaign":"S_CreditCard_NW","adGroup":"CC_Lawsuit","state":"Enabled","type":"Responsive search ad","finalUrl":"https://start.credolegal.com/credit-card-debt-lawsuit-respond","path1":"credit-card","path2":"lawsuit-respond","headlines":["Sued for Credit Card Debt?","You Have Days to Respond","Credit Card Lawsuit? Act Now.","Don't Default. File An Answer.","No Response = You Lose.","Our Attorneys Respond Fast","Real Lawyers From Day One","We File Your Answer Fast","Card Company Has Lawyers","Now You Need an Attorney","Most People Don't Respond","Flexible Payment Plans","Call Now. Free Consultation.","Free Lawsuit Defense Consult","Get a Free Case Evaluation"],"descriptions":["Sued for credit card debt? Days to respond or you lose by default. Get Free Consult.","Real attorneys file your answer and protect you in court. Get a Free Consultation.","Most sued for credit card debt don't respond and lose. Our attorneys fight back. Call Now.","Credit card companies have legal teams. Now you can too. Flexible plans. Get Free Consult."]},
+ {"campaign":"S_Lawsuit_NW","adGroup":"Creditor_Suing","state":"Enabled","type":"Responsive search ad","finalUrl":"https://start.credolegal.com/debt-lawsuit-attorney","path1":"debt-lawsuit","path2":"attorney","headlines":["Creditor Suing You?","They Have Lawyers. You Need.","Outgunned by Creditor Firms?","Get an Attorney on Your Side","Real Attorneys From Day One","Real Lawyers. No Snakeoil.","Level the Playing Field","We Know Their Legal Tactics","Attorney Help Starts Today","Debt Validity? We Challenge.","Expert Help With Lawsuits","Flexible Payment Plans","Free Confidential Consultation","Get a Free Case Evaluation","Talk to a Defense Attorney"],"descriptions":["They have law firms. You deserve attorneys too. We defend from day one. Get Free Consult.","Our attorneys know creditor tactics. We challenge their claims. Get Free Consultation.","Don't face their legal team alone. Attorney-led defense. Flexible plans. Free Consult.","We challenge debt validity, file your answer to remove invalid debts. Get Free Consult."]},
+ {"campaign":"S_All-States","adGroup":"Garnishment","state":"Enabled","type":"Responsive search ad","finalUrl":"https://start.credolegal.com/stop-wage-garnishment","path1":"garnishment","path2":"attorney","headlines":["Fight Wage Garnishment Now","Paycheck Garnished? Call Us","Need a Wage Garnishment Lawyer","Need Debt Collector Attorney?","Need a Debt Lawsuit Lawyer?","Fight For Your Paycheck Today","We Can Help Fight Harassment","Talk to a Real Attorney Now","We Can Fight Wage Garnishment","Proven Lawyers Ready to Help","Get Help Before Court Action","Get Help to Pursue Your Rights","Understand Your Legal Rights","Fight Back Against Garnishment","Get a Free Consultation"],"descriptions":["Our lawyers help you fight wage garnishment. Know your rights. Get a Free Consultation.","Struggling with a garnished paycheck? Talk to our attorneys. Get a Free Consultation.","We can help you with wage garnishment defense. Get a Free Consultation.","Facing a wage garnishment notice? You still have options. Get a Free Consultation."]},
+ {"campaign":"S_CreditCard_NW","adGroup":"CC_Negotiation","state":"Enabled","type":"Responsive search ad","finalUrl":"https://start.credolegal.com/credit-card-debt-challenge","path1":"credit-card","path2":"challenge-debt","headlines":["Credit Card Debt? Not So Fast!","You May Not Owe That Much","Do You Really Owe All That?","Card Debt Can Lack Proof","We Challenge Every Dollar","Wait Until We Check","We Demand They Prove It","Real Attorneys From Day One","Invalid Debts Can Get Removed","You Can Erase Debt From Report","Many Card Debts Are Invalid","Flexible Payment Plans","Free Debt Validity Review","See If You Really Owe It","Get a Free Case Evaluation"],"descriptions":["Many card debts lack proper documentation. We challenge if you really owe it. Free Consult","Our attorneys demand proof of debt. They can't prove it? You don't owe. Free Consult.","Invalid credit card debts get dismissed and removed from your credit report. Free Consult.","Let our attorneys check if the debt is even valid. Get a Free Consultation."]},
+ {"campaign":"S_All-States","adGroup":"Debt Collector","state":"Enabled","type":"Responsive search ad","finalUrl":"https://start.credolegal.com/collection-defense","path1":"debt-collection","path2":"attorney","headlines":["Sued by a Collection Lawyer?","Sued by a Collection Attorney?","Harassed by Debt Collectors?","Collection Law Firm Suing You?","Debt Collectors at Your Door?","Talk to a Defense Attorney","Real Lawyers on Your Side","We Can Help You Fight Back","Real Attorneys. Real Results.","We Can Help With Debt Lawsuits","We Can Help Stop a Judgment","Request Help Before Court Date","Start Fighting Back Now","Know Your Rights Today","Get a Free Consultation"],"descriptions":["Facing a collection lawsuit? Our attorneys can help. Get a Free Consultation.","Fight debt collectors & protect your rights. Talk to an attorney. Get a Free Consultation.","Sued by a collection attorney? You still have options. Get a Free Consultation.","We can help dismiss or settle your debt collection lawsuit. Get a Free Consultation."]},
+ {"campaign":"S_Garnishment_NW","adGroup":"Garnishment","state":"Paused","type":"Responsive search ad","finalUrl":"https://start.credolegal.com/wage-garnishment-exemptions","path1":"garnishment","path2":"exemptions","headlines":["Paycheck Already Garnished?","You May Qualify For Exemptions","Garnishment Exemptions Exist","Head of Household? Protected.","Low Income? Exemption Applies.","Federal Benefits Are Exempt","We File Exemption Claims","Real Attorneys Look At Case","Keep More of Your Paycheck","Exemptions Can Stop It All","Not All Income Is Touchable","Flexible Payment Plans","Free Exemption Review","Talk to an Attorney for Free","Get a Free Case Evaluation"],"descriptions":["Already garnished? You may qualify for exemptions. Free Review by Real Attorney.","Head of household, low income, or on federal benefits? Exemptions apply. Get Free Consult.","Know your might qualify for garnishment exemptions? We file claims fast. Free Consult.","Exemptions can reduce or stop garnishment. Real attorneys review your case. Free Call."]},
+ {"campaign":"S_Garnishment_NW","adGroup":"Garnishment","state":"Enabled","type":"Responsive search ad","finalUrl":"https://start.credolegal.com/wage-garnishment-attorney","path1":"garnishment","path2":"attorney","headlines":["Paycheck Already Garnished?","We Can Reduce or Fight It","Fight Wage Garnishment Now","Don't Accept the Full Amount","Garnishment Can Be Lowered","Real Attorneys Act Fast","Protect What's Left","We File Objections Fast","25% Is Max. Often It's Less.","Attorney Help Starts Today","Your Bills Still Need Paying","Flexible Payment Plans","Call Now. Free Consultation.","Free Garnishment Review","Get a Free Case Evaluation"],"descriptions":["Already garnished? Our attorneys fight to reduce or stop it. We act fast. Free Consult.","Real attorneys file motions to reduce garnishment and protect your income. Free Consult.","Thousands have reduced garnishment with our attorney help. Get a Free Evaluation.","Garnishment taking too much? You may qualify for exemptions. Get Free Consultation."]},
+ {"campaign":"S_Lawsuit_NW","adGroup":"Served_Papers","state":"Enabled","type":"Responsive search ad","finalUrl":"https://start.credolegal.com/debt-lawsuit-options","path1":"debt-lawsuit","path2":"options","headlines":["Got Court Papers? It's OK.","It's Not Too Late to Fight","Served With a Summons?","You Still Have Options","We Explain What Papers Mean","Real Attorneys Will Guide You","Your Rights Are Protected","Attorney Help Starts Today","We Handle Everything Fast","Many Debts Lack Proper Proof","Don't Panic. We Can Help.","Flexible Payment Plans","Free Confidential Consultation","Talk to an Attorney for Free","Get a Free Case Evaluation"],"descriptions":["Got court papers? Don't panic - you have options. Our attorneys respond for you.","Real attorneys read your papers, explain your rights, and file your response. Free Consult","Many debt lawsuits can be challenged. We zero in on the best defense. Free Evaluation.","Court papers are scary but not the end. We've helped thousands. Free Consultation."]},
+ {"campaign":"S_All-States","adGroup":"FDCPA","state":"Enabled","type":"Responsive search ad","finalUrl":"https://start.credolegal.com/fcba-and-fdcpa","path1":"FDCPA","path2":"Debt-Relief","headlines":["FDCPA Violation Against You?","Know Your FDCPA Rights?","Collector Broke the FDCPA?","Filing an FDCPA Lawsuit?","FDCPA Attorney for Your Case?","Collector Won't Stop Calling?","Each FDCPA Violation: $1000","We Identify FDCPA Violations","We Send a Cease Letter. Fast.","You Can Make Them Stop Legally","Those Calls May Break the Law","Talk to an FDCPA Attorney","Get a Free Case Evaluation","Free Confidential Consultation","Know Your Rights. It's Free."],"descriptions":["Collector calls before 8 AM or after 9 PM may violate the FDCPA. We act fast. Free.","Each FDCPA violation can cost the collector $1000 paid to you. We find every one. Free.","Collector contacted your family or employer? That may be an FDCPA violation. Free consult.","An FDCPA cease letter forces collectors to stop. We send it the moment you enroll. Free."]},
+ {"campaign":"S_CreditCard_NW","adGroup":"CC_Lawsuit","state":"Enabled","type":"Responsive search ad","finalUrl":"https://start.credolegal.com/credit-card-debt-lawsuit-records","path1":"credit-card","path2":"lawsuit-records","headlines":["Sued for Credit Card Debt?","They May Not Have The Proof","Card Debts Often Lack Proof","We Demand They Prove It","No Proof? Case Dismissed.","We Challenge Debt Validity","Debts Sold Without Records","Real Attorneys From Day One","Invalid Debts Get Removed","Debt Removed From Credit","Fight Back With Evidence","Flexible Payment Plans","Free Defense Consultation","See If They Have Proof","Get a Free Case Evaluation"],"descriptions":["Many card debts are sold without records. We demand proof and fight back. Free Consult.","Real attorneys challenge whether credit card companies can prove you owe. Free Consult.","Can't prove it? Debt gets dismissed and removed from your credit report. Get Free Consult.","Credit card debts change hands often, records get lost. We check. Get Free Consultation."]},
+ {"campaign":"S_Garnishment_NW","adGroup":"Garnishment","state":"Enabled","type":"Responsive search ad","finalUrl":"https://start.credolegal.com/wage-garnishment-prevention","path1":"garnishment","path2":"prevention","headlines":["Threatened With Garnishment?","We Can Help With Garnishment","Fight Wage Garnishment Now","Don't Wait for Paycheck Cut","We Act Before They Garnish","Protect Your Paycheck Now","Real Attorneys Act Fast","Legal Options Still Open","Don't Let Them Take 25%","Attorney Help Starts Today","Garnishment Is Preventable","Flexible Payment Plans","Call Now. Free Consultation.","Free Garnishment Case Review","Get a Free Case Evaluation"],"descriptions":["Facing garnishment threats? Still time to act. Our attorneys file fast. Get Free Consult.","Real attorneys work to stop garnishment before it hits your paycheck. Get Free Consult.","Thousands stopped garnishments before they started. Don't wait. Get Free Consultation.","Garnishment can take 25% of your paycheck. We fight to keep your money. Get Free Consult."]},
+ {"campaign":"S_Lawsuit_NW","adGroup":"Served_Papers","state":"Enabled","type":"Responsive search ad","finalUrl":"https://start.credolegal.com/debt-lawsuit-summons-respond","path1":"debt-lawsuit","path2":"summons-respond","headlines":["Just Got Served? Act Now.","You Have Days to Respond","Received a Debt Summons?","Don't Ignore Court Papers","No Response = You Lose!","We File Your Answer Fast","Got Papers? Call Today.","Real Attorneys Respond Fast","20-28 Days Is All You Have","Don't Default on a Lawsuit","Attorney Help Starts Today","Flexible Payment Plans","Call Now - Time Is Limited","Free Emergency Consultation","Get a Free Case Evaluation"],"descriptions":["Just got served? You have 20-28 days to respond or lose by default. Call Now.","Our attorneys file your answer fast. Real lawyers, not salespeople. Day one. Free Consult.","Ignoring court papers leads to automatic judgment. Don't wait. Get Free Consult.","We read your papers, explain options, and file a response. Flexible plans. Free Consult."]},
+ {"campaign":"S_All-States","adGroup":"Debt Collector","state":"Enabled","type":"Responsive search ad","finalUrl":"https://start.credolegal.com/collection-defense","path1":"debt-collection","path2":"attorney","headlines":["Sued by a Collection Lawyer?","Sued by a Collection Attorney?","Collection Law Firm Suing You?","Got Served Papers? Act Today.","You Have 20-28 Days to Respond","Don't Face That Lawsuit Alone","Not Too Late to Fight Back","Don't Default. File an Answer","Real Attorneys. Real Results.","Debt Lawsuit Crushing You?","We Turn Tables on Their Plan.","We Can Help You Fight Back","Call Now. Free Consultation","Fight That Lawsuit. Call US!","Get a Free Consultation"],"descriptions":["Served with papers? You have days to respond. Our attorneys act fast. Call now, for free.","Most sued by collectors don't respond and lose by default. Don't let that happen. Call us.","If a collector sues and you don't respond, a judgment enters automatically. Call us now.","Collectors sue counting on you not to fight back. Our attorneys fight. Free consult now."]},
+ {"campaign":"S_CreditCard_NW","adGroup":"CC_Branded","state":"Enabled","type":"Responsive search ad","finalUrl":"https://start.credolegal.com/credit-card-debt-violations","path1":"credit-card","path2":"debt-violations","headlines":["{Keyword:Card Collector Harassing You?}","Each Violation Can Be $1,000","Illegal Card Collector Calls?","Their Calls Can Turn Into Cash","FDCPA Pays You Per Breach","We Track Every Violation","Sue Your Card Debt Collector","Real Attorneys Who Build Cases","Multiple Violations? More $","Collectors May Owe YOU Money","We Identify Every Breach","Attorney Help From Day One","Free Violation Assessment","Find Out What They Owe You","Get a Free Case Evaluation"],"descriptions":["Each illegal call from a card debt collector can cost them $1K under FDCPA. Free Consult.","Our attorneys track every violation from day one. Real lawyers. Get Free Consultation.","Card debt collectors frequently break the law. We identify every violation. Free Consult.","Threatening arrest, early calls, contacting family - each canbe $1,000 for you. Call Now."]}
+];
+
+/* Campaign display order + friendly labels. */
+const CAMP_ORDER = ["S_All-States","S_Harassment_NW","S_Lawsuit_NW","S_CreditCard_NW","S_Garnishment_NW"];
+const CAMP_LABEL = {
+  "S_All-States": "All-States", "S_Harassment_NW": "Harassment", "S_Lawsuit_NW": "Lawsuit",
+  "S_CreditCard_NW": "Credit Card", "S_Garnishment_NW": "Garnishment"
+};
+
+const $main = document.getElementById('main');
+const $q = document.getElementById('q');
+let campFilter = 'all', stateFilter = 'all', allOpen = false;
+const openKeys = new Set();  // preserves per-ad expand state across re-renders
+
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const key = (ad, i) => ad.finalUrl + '#' + i;
+
+/* Header stats reflect the full dataset (not the filtered view). */
+function paintStats() {
+  document.getElementById('s-ads').textContent = ADS.length;
+  document.getElementById('s-camps').textContent = new Set(ADS.map(a => a.campaign)).size;
+  document.getElementById('s-urls').textContent = new Set(ADS.map(a => a.finalUrl)).size;
+  document.getElementById('s-enabled').textContent = ADS.filter(a => a.state === 'Enabled').length;
+  document.getElementById('s-paused').textContent = ADS.filter(a => a.state === 'Paused').length;
+}
+
+function paintCampChips() {
+  const box = document.getElementById('camp-chips');
+  const mk = (val, label, n) => `<button class="chip camp ${val===campFilter?'active':''}" data-camp="${val}">${label}${n!=null?` · ${n}`:''}</button>`;
+  let html = mk('all', 'All campaigns', ADS.length);
+  CAMP_ORDER.forEach(c => { const n = ADS.filter(a => a.campaign === c).length; if (n) html += mk(c, CAMP_LABEL[c] || c, n); });
+  box.innerHTML = html;
+}
+
+function matches(ad, q) {
+  if (!q) return true;
+  const hay = [ad.campaign, ad.adGroup, ad.finalUrl, ...(ad.headlines||[]), ...(ad.descriptions||[])].join(' ').toLowerCase();
+  return hay.includes(q);
+}
+
+function render() {
+  const q = $q.value.trim().toLowerCase();
+  $main.innerHTML = '';
+  let shown = 0;
+  CAMP_ORDER.forEach(camp => {
+    if (campFilter !== 'all' && campFilter !== camp) return;
+    const ads = ADS.map((a, i) => ({a, i}))
+      .filter(({a}) => a.campaign === camp)
+      .filter(({a}) => stateFilter === 'all' || a.state === stateFilter)
+      .filter(({a}) => matches(a, q));
+    if (!ads.length) return;
+    const h = document.createElement('div');
+    h.className = 'camp-h';
+    h.innerHTML = `<span class="name">${CAMP_LABEL[camp] || camp}</span><span class="code mono">${camp}</span><span class="count">${ads.length} ad${ads.length>1?'s':''}</span>`;
+    $main.appendChild(h);
+    ads.forEach(({a, i}) => { $main.appendChild(adCard(a, i)); shown++; });
+  });
+  if (!shown) $main.innerHTML = '<div class="empty">No ads match the current filters.</div>';
+}
+
+function adCard(ad, i) {
+  const k = key(ad, i);
+  const isOpen = allOpen || openKeys.has(k);
+  const el = document.createElement('div');
+  el.className = 'ad ' + (ad.state === 'Enabled' ? 'enabled' : 'paused') + (isOpen ? ' open' : '');
+  const disp = (ad.path1 || ad.path2) ? `<span class="disp">/${esc(ad.path1||'')}${ad.path2?'/'+esc(ad.path2):''}</span>` : '';
+  el.innerHTML = `
+    <div class="ad-head">
+      <span class="ad-group">${esc(ad.adGroup)}</span>
+      <span class="pill ${ad.state==='Enabled'?'enabled':'paused'}">${esc(ad.state)}</span>
+      <span class="ad-type">RSA</span>
+      <span class="url-wrap">
+        ${disp}
+        <a class="final-url" href="${esc(ad.finalUrl)}" target="_blank" rel="noopener" title="Open live landing page">${esc(ad.finalUrl.replace('https://',''))} ↗</a>
+        <span class="toggle"><span class="car">▸</span> ${ad.headlines.length} headlines · ${ad.descriptions.length} desc</span>
+      </span>
+    </div>
+    <div class="ad-body">
+      <div class="grid">
+        <div class="col">
+          <h4>Headlines (${ad.headlines.length})</h4>
+          <ol class="hl">${ad.headlines.map(h => `<li>${esc(h)}</li>`).join('')}</ol>
+        </div>
+        <div class="col">
+          <h4>Descriptions (${ad.descriptions.length})</h4>
+          <ul class="ds">${ad.descriptions.map(d => `<li>${esc(d)}</li>`).join('')}</ul>
+        </div>
+      </div>
+    </div>`;
+  // Toggle expand on header click, except when the actual URL link is clicked.
+  el.querySelector('.ad-head').addEventListener('click', e => {
+    if (e.target.closest('a.final-url')) return;
+    if (openKeys.has(k)) openKeys.delete(k); else openKeys.add(k);
+    el.classList.toggle('open');
+  });
+  return el;
+}
+
+/* Filter wiring */
+document.getElementById('camp-chips').addEventListener('click', e => {
+  const b = e.target.closest('button[data-camp]'); if (!b) return;
+  campFilter = b.dataset.camp; paintCampChips(); render();
+});
+document.getElementById('state-chips').addEventListener('click', e => {
+  const b = e.target.closest('button[data-state]'); if (!b) return;
+  stateFilter = b.dataset.state;
+  document.querySelectorAll('#state-chips .chip').forEach(c => c.classList.toggle('active', c === b));
+  render();
+});
+$q.addEventListener('input', render);
+document.getElementById('toggle-all').addEventListener('click', e => {
+  allOpen = !allOpen;
+  if (!allOpen) openKeys.clear();
+  e.target.textContent = allOpen ? 'Collapse all' : 'Expand all';
+  render();
+});
+
+paintStats();
+paintCampChips();
+render();
+</script>
+</body>
+</html>
