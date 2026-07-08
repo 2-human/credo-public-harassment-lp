@@ -75,6 +75,16 @@
   .mix .sep { color: #2a2f37; font-size: 10px; padding: 0 2px; }
   @media (max-width: 1200px) { .mix-label { display: none; } }
 
+  /* Phone tracking-number preview (call tracking): a per-LP Google/Bing toggle
+     that swaps the number shown inside the LP iframe. Added 2026-07-08. */
+  .mphone { display: inline-flex; align-items: center; gap: 6px; font-family: ui-monospace, Menlo, monospace; font-size: 12px; color: #fff; }
+  .mphone .micon { color: #8590a0; }
+  .phonetog { display: inline-flex; gap: 2px; padding: 2px; background: #1a1e25; border: 1px solid #2a2f37; }
+  .phonetog button { font-size: 10px; font-weight: 700; letter-spacing: 0.04em; color: #8590a0; background: transparent; border: 0; padding: 3px 8px; cursor: pointer; font-family: ui-monospace, Menlo, monospace; }
+  .phonetog button:hover:not(:disabled) { color: #fff; }
+  .phonetog button.active { color: #fff; background: #c92028; }
+  .phonetog button:disabled { opacity: 0.3; cursor: default; }
+
   /* ───── Sidebar ───── */
   .sidebar {
     background: #fff; border-right: 1px solid #e7eaee;
@@ -169,7 +179,14 @@
     <span class="slug" id="m-slug">Select a landing page →</span>
     <span class="pill" id="m-angle" style="display:none;">—</span>
     <span class="pill champ" id="m-champ" style="display:none;">CHAMPION</span>
-    <span id="m-phone"></span>
+    <span class="mphone" id="mphone" style="display:none;">
+      <span class="micon">☎</span>
+      <span id="m-phone"></span>
+      <span class="phonetog" id="phonetog" style="display:none;" title="Tracking number by platform the visitor came from">
+        <button data-plat="google" class="active">G</button>
+        <button data-plat="bing">B</button>
+      </span>
+    </span>
   </div>
   <div class="toolbar">
     <div class="mix" id="mix" title="Image mix: hero · who-this-helps">
@@ -406,6 +423,99 @@ function postCatalogToIframe() {
   } catch (e) { /* sandboxed iframe / cross-origin — fall back to single-page only */ }
 }
 $frame.addEventListener('load', postCatalogToIframe);
+/* On each LP (re)load the iframe shows the Google baseline; re-apply the phone
+   platform. A short retry covers app.js rendering the number just after load. */
+$frame.addEventListener('load', () => { applyPhone(true); setTimeout(() => applyPhone(true), 300); });
+
+/* ───── Phone tracking numbers (call-tracking / DNI preview) ─────
+   Per-LP Google (baseline = the LP's own number) and Bing tracking numbers, from
+   the "Campaign Phone Numbers" sheet, mapped via the ad group that drives each LP
+   (see DRIVEN_BY). Preview-only: the Google/Bing toggle swaps the number shown
+   INSIDE the LP iframe to simulate which platform's ad the visitor arrived from.
+   Bing exists for 9 of the 19 ad-driven LPs; the rest are Google-only. */
+const PHONES = {
+  "/debt-lawsuit-respond-on-time":     { g: "(212) 561-5902", b: "(212) 993-7320" },
+  "/debt-lawsuit-proof":               { g: "(212) 561-5902", b: "(212) 993-7320" },
+  "/debt-lawsuit-fight-back":          { g: "(347) 523-4568", b: "" },
+  "/debt-lawsuit-attorney":            { g: "(347) 523-4568", b: "" },
+  "/debt-lawsuit-options":             { g: "(347) 523-4662", b: "" },
+  "/debt-lawsuit-summons-respond":     { g: "(347) 523-4662", b: "" },
+  "/debt-harassment-stop-calls":       { g: "(201) 416-7080", b: "(201) 535-3725" },
+  "/debt-harassment-violations":       { g: "(201) 416-7080", b: "(201) 535-3725" },
+  "/debt-harassment-fdcpa-rights":     { g: "(443) 483-4080", b: "" },
+  "/debt-harassment-fdcpa-attorney":   { g: "(443) 483-4080", b: "" },
+  "/credit-card-debt-negotiation":     { g: "(646) 952-7404", b: "" },
+  "/credit-card-debt-challenge":       { g: "(646) 952-7404", b: "" },
+  "/credit-card-debt-stop-calls":      { g: "(646) 952-7392", b: "" },
+  "/credit-card-debt-violations":      { g: "(646) 952-7392", b: "" },
+  "/credit-card-debt-lawsuit-respond": { g: "(646) 952-7380", b: "(718) 521-4180" },
+  "/credit-card-debt-lawsuit-records": { g: "(646) 952-7380", b: "(718) 521-4180" },
+  "/wage-garnishment-exemptions":      { g: "(720) 414-1751", b: "(646) 350-2650" },
+  "/wage-garnishment-attorney":        { g: "(720) 414-1751", b: "(646) 350-2650" },
+  "/wage-garnishment-prevention":      { g: "(720) 414-1751", b: "(646) 350-2650" },
+};
+const telHref = n => 'tel:+1' + n.replace(/\D/g, '');
+let phonePlatform = 'google';
+try { const sv = localStorage.getItem('credo-review-hub-phone'); if (sv === 'bing' || sv === 'google') phonePlatform = sv; } catch (e) {}
+let currentPhoneNum = null;   // number currently shown inside the iframe
+
+function effectiveNum(lp) {
+  const rec = PHONES[lp.slug];
+  if (!rec) return lp.phone;
+  return (phonePlatform === 'bing' && rec.b) ? rec.b : rec.g;
+}
+
+/* Replace a phone number (text nodes + tel: href) inside the same-origin LP iframe. */
+function swapPhoneInFrame(fromNum, toNum) {
+  if (!fromNum || !toNum || fromNum === toNum) return;
+  let doc; try { doc = $frame.contentDocument; } catch (e) { return; }
+  if (!doc || !doc.body) return;
+  const walk = doc.createTreeWalker(doc.body, NodeFilter.SHOW_TEXT);
+  const hits = [];
+  for (let n = walk.nextNode(); n; n = walk.nextNode()) if (n.nodeValue.indexOf(fromNum) >= 0) hits.push(n);
+  hits.forEach(n => { n.nodeValue = n.nodeValue.split(fromNum).join(toNum); });
+  const fromTel = telHref(fromNum), toTel = telHref(toNum);
+  doc.querySelectorAll('a[href="' + fromTel + '"]').forEach(a => a.setAttribute('href', toTel));
+}
+
+/* Swap the previewed LP's number to the selected platform. justLoaded=true means
+   the iframe just rendered its Google baseline, so swap from there. */
+function applyPhone(justLoaded) {
+  const lp = current >= 0 ? LPS[current] : null;
+  const rec = lp && PHONES[lp.slug];
+  if (!rec) { currentPhoneNum = null; return; }
+  const from = justLoaded ? rec.g : (currentPhoneNum || rec.g);
+  const target = (phonePlatform === 'bing' && rec.b) ? rec.b : rec.g;
+  if (from !== target) swapPhoneInFrame(from, target);
+  currentPhoneNum = target;
+  document.getElementById('m-phone').textContent = target;
+}
+
+/* Paint the Google/Bing toggle for the selected LP (hidden when the LP has no
+   mapping; Bing disabled when its ad group has no Bing number). */
+function paintPhoneTog() {
+  const lp = current >= 0 ? LPS[current] : null;
+  const rec = lp && PHONES[lp.slug];
+  const tog = document.getElementById('phonetog');
+  if (!rec) { tog.style.display = 'none'; return; }
+  tog.style.display = 'inline-flex';
+  const gBtn = tog.querySelector('[data-plat="google"]');
+  const bBtn = tog.querySelector('[data-plat="bing"]');
+  gBtn.title = 'Google Ads number: ' + rec.g;
+  bBtn.disabled = !rec.b;
+  bBtn.title = rec.b ? ('Bing Ads number: ' + rec.b) : 'No Bing number for this ad group';
+  const eff = (phonePlatform === 'bing' && rec.b) ? 'bing' : 'google';
+  gBtn.classList.toggle('active', eff === 'google');
+  bBtn.classList.toggle('active', eff === 'bing');
+}
+
+document.getElementById('phonetog').addEventListener('click', e => {
+  const b = e.target.closest('button[data-plat]'); if (!b || b.disabled) return;
+  phonePlatform = b.dataset.plat;
+  try { localStorage.setItem('credo-review-hub-phone', phonePlatform); } catch (e2) {}
+  paintPhoneTog();
+  applyPhone(false);
+});
 
 function select(idx) {
   if (idx < 0 || idx >= LPS.length) return;
@@ -416,7 +526,9 @@ function select(idx) {
   $frame.src = withParams(lp.file);
   document.getElementById('m-cluster').textContent = lp.c;
   document.getElementById('m-slug').textContent = lp.slug;
-  document.getElementById('m-phone').textContent = lp.phone;
+  document.getElementById('mphone').style.display = 'inline-flex';
+  document.getElementById('m-phone').textContent = effectiveNum(lp);
+  paintPhoneTog();
   const angleEl = document.getElementById('m-angle');
   angleEl.textContent = lp.angle || '';
   angleEl.style.display = lp.angle ? 'inline-flex' : 'none';
