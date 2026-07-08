@@ -110,6 +110,8 @@
   .adx { background: #fff; border: 1px solid #eef0f3; border-left: 3px solid #c8cdd6; margin-top: 8px; }
   .adx.enabled { border-left-color: #16a34a; }
   .adx.paused  { border-left-color: #e7eaee; opacity: 0.9; }
+  .adx.meta    { border-left-color: #6366f1; }
+  .adkey { font-family: ui-monospace, Menlo, monospace; font-size: 11px; color: #4338ca; background: #eef2ff; padding: 2px 7px; white-space: nowrap; }
   .adx-head {
     display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
     padding: 10px 12px; cursor: pointer; user-select: none;
@@ -197,7 +199,7 @@
 
 <header class="topbar">
   <div class="brand">Credo<span class="red">·</span>Legal · Ads → LP</div>
-  <div class="title">Every ad mapped to its landing-page final URL + UTM tracking suffix <span class="src mono">· RSA export July 7, 2026</span></div>
+  <div class="title">Every ad mapped to its landing-page final URL + UTM tracking suffix <span class="src mono">· Google · Bing · Meta</span></div>
   <div class="toolbar">
     <a href="statute-map.html" target="_blank" rel="noopener" title="FDCPA statute map">Statute map ↗</a>
     <a class="back" href="review.html" title="Back to the LP review hub">← LP review</a>
@@ -205,25 +207,19 @@
 </header>
 
 <div class="controls">
-  <div class="stats">
-    <div class="stat"><b id="s-ads">0</b><span>ads</span></div>
-    <div class="stat"><b id="s-camps">0</b><span>campaigns</span></div>
-    <div class="stat"><b id="s-urls">0</b><span>landing pages</span></div>
-    <div class="stat"><b id="s-enabled">0</b><span>enabled</span></div>
-    <div class="stat"><b id="s-paused">0</b><span>paused</span></div>
-    <div class="stat"><b id="s-linked">0</b><span>in hub</span></div>
-  </div>
+  <div class="stats" id="stats-row"></div>
   <div class="spacer"></div>
-  <div class="srctog" id="srctog" title="Which source the tracking URLs below use">
-    <span class="lbl">Suffix</span>
+  <div class="srctog" id="srctog" title="Ad channel: Google/Bing search or Meta social">
+    <span class="lbl">Channel</span>
     <button data-src="google" class="active">Google</button>
     <button data-src="bing">Bing</button>
+    <button data-src="meta">Meta</button>
   </div>
-  <div class="search"><input id="q" type="search" placeholder="Search headline, URL, ad group…" autocomplete="off"/></div>
+  <div class="search"><input id="q" type="search" placeholder="Search name, URL, ad group / set…" autocomplete="off"/></div>
   <button class="linkish" id="toggle-all">Expand all</button>
 </div>
 
-<div class="controls" style="top:105px; padding-top:10px; padding-bottom:10px;">
+<div class="controls" id="filters-row" style="top:105px; padding-top:10px; padding-bottom:10px;">
   <div class="chips" id="camp-chips"></div>
   <div class="spacer"></div>
   <div class="chips" id="state-chips">
@@ -348,6 +344,34 @@ const CAMP_LABEL = {
   "S_CreditCard_NW": "Credit Card", "S_Garnishment_NW": "Garnishment"
 };
 
+/* ───── Meta Ads v3 (Facebook/Instagram) ─────
+   Campaign → 5 ad sets → 14 ads, from content/campaigns/meta-ads/handoff/
+   credo-meta-ads-v3-handoff/ (campaign-manifest.json, 2026-06-29). Each ad's
+   suffix is the manifest's final_url_utm query; `hub` = matched review-hub LP
+   index. Compliance footer factored out to META_FOOTER. */
+const META_CAMPAIGN = {"name": "Credo Legal — Debt Defense v3 (Meta)", "label": "Debt Defense v3", "utmCampaign": "credo_meta_v3", "utmSource": "meta", "utmMedium": "paid_social"};
+
+const META_HEADLINES = ["Get a Free Review of Your Case", "Talk to an Attorney, Free", "See If You Can Fight Back", "You Don't Have to Face Them Alone", "Know Your Options, Free"];
+
+const META_FOOTER = "Crēdo Legal. The choice of a lawyer is an important decision and should not be based solely upon advertisements.";
+
+const META_ADS = [
+  {"adSet": "Credit Card", "adSetCode": "AS_CreditCard_NW", "ad": "CC_Lawsuit", "topic": "Sued over a card", "finalUrl": "https://start.credolegal.com/credit-card-debt-lawsuit-respond", "suffix": "utm_source=meta&utm_medium=paid_social&utm_campaign=credo_meta_v3&utm_content=CC_Lawsuit", "description": "Flat monthly fee. Attorneys licensed in your state.", "messages": [{"k": "Default", "v": "Sued by a credit card company? The clock is already ticking. Miss the deadline to respond and they can win by default. Our attorneys can file your answer and make the creditor prove they own the debt and the amount. If they can't, your case could be dismissed."}, {"k": "Fight", "v": "Being sued by a credit card company? They have lawyers who do this every day, and a default judgment is their easy win. Our attorneys can file your answer and force them to prove they even own the debt. Make them earn it instead of handing it to them."}, {"k": "Reassurance", "v": "Did a credit card lawsuit just land in your hands? You are not the first to face this, and it is not as hopeless as it feels right now. Our attorneys can take it from here, file your response, and stand between you and the creditor. You could get through this."}, {"k": "Affordability", "v": "Sued over a credit card and worried you can't afford a lawyer? Your defense is a flat monthly fee, not a big upfront retainer. Our attorneys can file your answer and make the creditor prove the debt is valid. Serious defense, at a price that fits your budget."}, {"k": "Fresh Start", "v": "What if this credit card lawsuit didn't have to hang over your year? Right now it colors everything. Our attorneys can answer the suit and challenge whether the debt holds up. You could put it behind you and move on."}], "name": "Lawsuit — Respond on Time", "hub": 27},
+  {"adSet": "Credit Card", "adSetCode": "AS_CreditCard_NW", "ad": "CC_Harassment", "topic": "Collector harassment", "finalUrl": "https://start.credolegal.com/credit-card-debt-stop-calls", "suffix": "utm_source=meta&utm_medium=paid_social&utm_campaign=credo_meta_v3&utm_content=CC_Harassment", "description": "Flat monthly fee. We talk to them, not you.", "messages": [{"k": "Default", "v": "Getting calls non-stop, at work, at dinner, on weekends? The pressure follows you and you dread your own phone. Our attorneys can send a cease-communication letter and pursue the collector for violations. The calls could stop, and they could owe you up to $1,000 per violation."}, {"k": "Fight", "v": "Tired of collectors blowing up your phone? They count on you feeling powerless and picking up. Our attorneys can send a cease-communication letter and come after them for every violation. Turn their harassment into their problem."}, {"k": "Reassurance", "v": "Dreading every time your phone rings? The constant calls wear anyone down, and you don't have to keep answering. Our attorneys can send a cease-communication letter so they deal with us, not you. You could finally get some quiet."}, {"k": "Affordability", "v": "Want the calls to stop but worried about legal costs? For a flat monthly fee, our attorneys can step in, send a cease-communication letter, and pursue collectors for violations. Relief from the calls, at a price you can plan for."}, {"k": "Fresh Start", "v": "What if your phone stopped being a source of dread? Right now the calls follow you everywhere. Our attorneys can send a cease-communication letter and pursue violations. The calls could stop, and you could get your day back."}], "name": "Harassment — Stop Calls", "hub": 29},
+  {"adSet": "Credit Card", "adSetCode": "AS_CreditCard_NW", "ad": "CC_Negotiation", "topic": "Negotiate the balance", "finalUrl": "https://start.credolegal.com/credit-card-debt-negotiation", "suffix": "utm_source=meta&utm_medium=paid_social&utm_campaign=credo_meta_v3&utm_content=CC_Negotiation", "description": "Flat monthly fee. Attorney-led from day one.", "messages": [{"k": "Default", "v": "Buried under a credit card balance that keeps growing? Confusing interest and fees pile on, and you may not owe every dollar your creditors claim. Our attorneys can challenge whether the debt is valid and negotiate your balance down. You could pay less than what they say you owe."}, {"k": "Fight", "v": "Assuming you owe every dollar a creditor claims? That assumption is exactly what they bank on. Our attorneys can challenge whether the debt is even valid and push the balance down. Make them justify the number before you pay it."}, {"k": "Reassurance", "v": "Watching a balance climb faster than you can pay it? It is overwhelming, and you are not stuck with it. Our attorneys can review the debt, challenge what isn't valid, and negotiate on your behalf. You could owe less than you fear."}, {"k": "Affordability", "v": "Want to lower a credit card balance without paying a lawyer upfront? Our flat monthly fee covers the work. Our attorneys can challenge the debt's validity and negotiate your balance down. A path to paying less that you can actually afford."}, {"k": "Fresh Start", "v": "What if that growing balance no longer ran your life? Right now the interest and fees keep piling on. Our attorneys can challenge the debt and negotiate it down. You could pay less and start getting ahead."}], "name": "Negotiation — Negotiate Down", "hub": 28},
+  {"adSet": "Lawsuit", "adSetCode": "AS_Lawsuit_NW", "ad": "Collection_Lawsuit", "topic": "Collection lawsuit", "finalUrl": "https://start.credolegal.com/debt-lawsuit-respond-on-time", "suffix": "utm_source=meta&utm_medium=paid_social&utm_campaign=credo_meta_v3&utm_content=Collection_Lawsuit", "description": "Flat monthly fee. Attorneys licensed in your state.", "messages": [{"k": "Default", "v": "Sued by a debt collector? You usually have just 20 to 28 days to reply, and missing the window lets them win automatically and move to garnish your pay. Our attorneys can file your court answer and demand the collector prove they own the debt. Your case could be dismissed if they can't."}, {"k": "Fight", "v": "A debt collector dragging you into court? They expect you to miss the deadline and hand them a default. Our attorneys can file your answer and demand they prove they own the debt. Don't give them an easy win."}, {"k": "Reassurance", "v": "Just found out a collector is suing you? The short deadline is scary, but it is workable. Our attorneys can file your court answer in time and make them prove their claim. You could be in a far better spot than today."}, {"k": "Affordability", "v": "Being sued by a collector and can't take on legal bills right now? Defense is a flat monthly fee. Our attorneys can file your answer and demand the collector prove the debt. Full representation, without a giant retainer."}, {"k": "Fresh Start", "v": "What if this collection lawsuit didn't end in a judgment hanging over you? The 20-to-28-day window is closing. Our attorneys can answer the suit and challenge the debt. You could put it behind you."}], "name": "Collection — Respond on Time (CHAMPION)", "hub": 10},
+  {"adSet": "Lawsuit", "adSetCode": "AS_Lawsuit_NW", "ad": "Creditor_Suing", "topic": "Creditor suing you", "finalUrl": "https://start.credolegal.com/debt-lawsuit-attorney", "suffix": "utm_source=meta&utm_medium=paid_social&utm_campaign=credo_meta_v3&utm_content=Creditor_Suing", "description": "Flat monthly fee. We level the field.", "messages": [{"k": "Default", "v": "Is a creditor suing you? They have attorneys who do this every day, and standing alone feels stacked from the start. Our attorneys can step in, file your answer, and hold the creditor to their burden of proof. The case could end in a dismissal or a settlement you can live with."}, {"k": "Fight", "v": "A creditor taking you to court with their own legal team? Alone, the odds are stacked. Our attorneys can step in, file your answer, and hold them to their burden of proof. Even the fight before it is decided for you."}, {"k": "Reassurance", "v": "Facing a creditor's lawsuit on your own? You don't have to, and it isn't as one-sided as it looks. Our attorneys can stand in your corner, file your answer, and hold the creditor to proof. You could reach an outcome you can live with."}, {"k": "Affordability", "v": "Up against a creditor's lawyers but can't match their budget? You don't have to. For a flat monthly fee, our attorneys can file your answer and hold the creditor to their burden of proof. Level the field, affordably."}, {"k": "Fresh Start", "v": "What if you weren't facing this creditor alone anymore? Right now it feels stacked from the start. Our attorneys can step in and hold them to their proof. The case could end in a dismissal or a settlement you can move on from."}], "name": "Defense — Level the Field", "hub": 6},
+  {"adSet": "Lawsuit", "adSetCode": "AS_Lawsuit_NW", "ad": "Served_Papers", "topic": "Just got served", "finalUrl": "https://start.credolegal.com/debt-lawsuit-summons-respond", "suffix": "utm_source=meta&utm_medium=paid_social&utm_campaign=credo_meta_v3&utm_content=Served_Papers", "description": "Flat monthly fee. It's not too late to respond.", "messages": [{"k": "Default", "v": "Just got served court papers? Your stomach dropped and it feels final, but it isn't. Our attorneys can review the summons, file your answer in time, and make the collector prove the debt. Acting now could keep the case from becoming a default judgment."}, {"k": "Fight", "v": "Someone just put court papers in your hand? The collector is counting on panic and a missed deadline. Our attorneys can review the summons, file your answer in time, and make them prove the debt. Answer back instead of freezing."}, {"k": "Reassurance", "v": "Just been served and your stomach dropped? Take a breath, this is handle-able and you are not alone. Our attorneys can review the summons, file your response in time, and make the collector prove the debt. You could be okay."}, {"k": "Affordability", "v": "Served papers and afraid of what a lawyer costs? Our defense is a flat monthly fee. Our attorneys can review the summons, file your answer in time, and make the collector prove the debt. Help that fits your budget, starting now."}, {"k": "Fresh Start", "v": "What if getting served was the turning point, not the end? Right now it feels final. Our attorneys can file your answer in time and make the collector prove the debt. Acting now could keep it from becoming a judgment you carry."}], "name": "Served Papers — Act Today", "hub": 11},
+  {"adSet": "Harassment", "adSetCode": "AS_Harassment_NW", "ad": "Creditor_Harassment", "topic": "Creditor harassment", "finalUrl": "https://start.credolegal.com/debt-harassment-stop-calls", "suffix": "utm_source=meta&utm_medium=paid_social&utm_campaign=credo_meta_v3&utm_content=Creditor_Harassment", "description": "Flat monthly fee. We talk to them, not you.", "messages": [{"k": "Default", "v": "Phone ringing before work and after dinner with collector calls? The messages pile up and the constant pressure wears you down. Our attorneys can send a cease-communication letter so collectors have to deal with us instead of you. The calls could stop for good."}, {"k": "Fight", "v": "Letting a collector own your phone before work and after dinner? They keep calling because it works. Our attorneys can send a cease-communication letter so they have to go through us. Take your phone back."}, {"k": "Reassurance", "v": "Worn down by calls that never seem to stop? The constant pressure gets to anyone, and you can hand it off. Our attorneys can send a cease-communication letter so collectors deal with us, not you. The calls could stop for good."}, {"k": "Affordability", "v": "Want the harassment to end without a big legal bill? A flat monthly fee covers it. Our attorneys can send a cease-communication letter so collectors deal with us. Peace and quiet, at a price you can plan for."}, {"k": "Fresh Start", "v": "What if your phone went quiet again? Right now the messages just pile up. Our attorneys can send a cease-communication letter so collectors deal with us. The calls could stop, and your days could feel like yours again."}], "name": "Stop the Calls — Emotional Relief", "hub": 2},
+  {"adSet": "Harassment", "adSetCode": "AS_Harassment_NW", "ad": "FDCPA_Harassment", "topic": "FDCPA violations", "finalUrl": "https://start.credolegal.com/debt-harassment-fdcpa-attorney", "suffix": "utm_source=meta&utm_medium=paid_social&utm_campaign=credo_meta_v3&utm_content=FDCPA_Harassment", "description": "Flat monthly fee. We sue them for breaking the rules.", "messages": [{"k": "Default", "v": "Are collectors threatening you, calling at odd hours, and contacting people you know? Most people never learn that much of it is against the law. Our attorneys can document the violations and sue the collector under the FDCPA. They could owe you up to $1,000 per violation."}, {"k": "Fight", "v": "Letting collectors threaten you and call people you know? A lot of that is illegal, and they're betting you won't act. Our attorneys can document the violations and sue them under the FDCPA. Make their tactics cost them."}, {"k": "Reassurance", "v": "Feeling cornered by collector threats and odd-hour calls? Most people never realize how much of it breaks the law. Our attorneys can document the violations and sue under the FDCPA. You have more protection than you think."}, {"k": "Affordability", "v": "Want to hold a collector accountable without paying upfront? Our flat monthly fee covers it. Our attorneys can document the violations and sue under the FDCPA. They could owe you up to $1,000 per violation, defense that can pay for itself."}, {"k": "Fresh Start", "v": "What if the threats and odd-hour calls were behind you? Right now they wear you down. Our attorneys can document the violations and sue under the FDCPA. They could owe you up to $1,000 per violation, and you could move on."}], "name": "FDCPA Action — We Sue Them", "hub": 0},
+  {"adSet": "Harassment", "adSetCode": "AS_Harassment_NW", "ad": "Multiple_Collectors", "topic": "Multiple collectors", "finalUrl": "https://start.credolegal.com/multiple-collectors-one-attorney", "suffix": "utm_source=meta&utm_medium=paid_social&utm_campaign=credo_meta_v3&utm_content=Multiple_Collectors", "description": "Flat monthly fee. One team for all of them.", "messages": [{"k": "Default", "v": "Juggling calls from several collectors at once? Different debts, no end in sight, and keeping track of them all is exhausting. Our attorneys can take on every collector at once and challenge each debt. Every violation could add to what they owe you."}, {"k": "Fight", "v": "Letting a pile of collectors wear you down one call at a time? Divided you lose, together they are exposed. Our attorneys can take on every collector at once and challenge each debt. Turn their numbers against them."}, {"k": "Reassurance", "v": "Overwhelmed by collectors coming from every direction? It is exhausting, and you don't have to track them all yourself. Our attorneys can take on every collector at once and challenge each debt. You could finally exhale."}, {"k": "Affordability", "v": "Too many collectors, not enough budget for a lawyer? One flat monthly fee covers all of them. Our attorneys can take on every collector at once and challenge each debt. One team for the whole mess, affordably."}, {"k": "Fresh Start", "v": "What if the endless collector calls finally stopped? Right now keeping track of them all is exhausting. Our attorneys can take on every collector at once and challenge each debt. You could clear the noise and move forward."}], "name": "Multiple Collectors — Overwhelm", "hub": 5},
+  {"adSet": "Medical Debt", "adSetCode": "AS_MedicalDebt_NW", "ad": "Medical_Harassment", "topic": "Medical collector calls", "finalUrl": "https://start.credolegal.com/medical-debt-bills-errors", "suffix": "utm_source=meta&utm_medium=paid_social&utm_campaign=credo_meta_v3&utm_content=Medical_Harassment", "description": "Flat monthly fee. We make them prove it.", "messages": [{"k": "Default", "v": "Is a medical collector calling about a bill you're not sure you even owe? Medical billing is full of errors and duplicate charges. Our attorneys can send a cease-communication letter and demand the collector validate the bill. You could owe far less than they claim, or nothing at all."}, {"k": "Fight", "v": "Letting a medical collector hound you over a bill you're not sure you owe? Medical billing is riddled with errors they hope you won't question. Our attorneys can demand the collector validate the bill and stop the calls. Make them prove it."}, {"k": "Reassurance", "v": "Getting calls about a medical bill you don't even recognize? It's confusing and stressful, and you're not alone in it. Our attorneys can send a cease-communication letter and demand the collector validate the bill. You could owe far less than they claim."}, {"k": "Affordability", "v": "Hassled over a medical bill but can't take on legal costs? Our flat monthly fee covers it. Our attorneys can demand the collector validate the bill and stop the calls. You could owe far less, or nothing, without a big retainer."}, {"k": "Fresh Start", "v": "What if that medical bill stopped haunting your phone? Right now the calls keep coming. Our attorneys can demand the collector validate the bill and stop the contact. You could owe far less than they claim, and breathe again."}], "name": "Lawsuit — Billing Errors", "hub": 21},
+  {"adSet": "Medical Debt", "adSetCode": "AS_MedicalDebt_NW", "ad": "Medical_Lawsuit", "topic": "Medical debt lawsuit", "finalUrl": "https://start.credolegal.com/medical-debt-lawsuit-respond", "suffix": "utm_source=meta&utm_medium=paid_social&utm_campaign=credo_meta_v3&utm_content=Medical_Lawsuit", "description": "Flat monthly fee. Attorneys licensed in your state.", "messages": [{"k": "Default", "v": "Sued over a medical bill? The deadline to respond is closing in, and many of these bills carry coding errors and inflated charges. Our attorneys can file your answer and demand the provider prove the amount. Your case could be dismissed or settled for less."}, {"k": "Fight", "v": "Sued over a medical bill you never got to question? Hospitals and collectors expect a quiet default. Our attorneys can file your answer and demand the provider prove the amount. Make them back up every line."}, {"k": "Reassurance", "v": "A lawsuit over a medical bill, on top of everything else? It's a lot, and it is more workable than it feels. Our attorneys can file your answer and demand the provider prove the amount. Your case could be dismissed or settled for less."}, {"k": "Affordability", "v": "Sued over a medical bill and worried about lawyer fees? Defense is a flat monthly fee. Our attorneys can file your answer and demand the provider prove the amount. A solid defense to a medical lawsuit, at a price you can manage."}, {"k": "Fresh Start", "v": "What if a medical lawsuit didn't have to derail your year? The deadline is closing in. Our attorneys can file your answer and challenge the charges. Your case could be dismissed or settled, and you could move on."}], "name": "Lawsuit — Respond on Time", "hub": 24},
+  {"adSet": "Medical Debt", "adSetCode": "AS_MedicalDebt_NW", "ad": "Medical_Rights", "topic": "Medical debt & credit", "finalUrl": "https://start.credolegal.com/medical-debt-credit-report-removal", "suffix": "utm_source=meta&utm_medium=paid_social&utm_campaign=credo_meta_v3&utm_content=Medical_Rights", "description": "Flat monthly fee. Know your medical-debt rights.", "messages": [{"k": "Default", "v": "Is an old medical bill dragging down your credit score? It follows you everywhere, and you may have more rights than you realize. Our attorneys can dispute inaccurate medical debt and push to have it removed from your report. Your credit could start to recover."}, {"k": "Fight", "v": "Letting an old medical bill quietly wreck your credit? Inaccurate medical debt sits on reports because no one challenges it. Our attorneys can dispute it and push to have it removed. Stop letting it drag your score down."}, {"k": "Reassurance", "v": "Frustrated watching a medical bill drag your credit down? You likely have more rights here than you realize. Our attorneys can dispute inaccurate medical debt and push to remove it from your report. Your credit could start to recover."}, {"k": "Affordability", "v": "Want medical debt off your credit without paying upfront? Our flat monthly fee covers the work. Our attorneys can dispute inaccurate medical debt and push to have it removed. A cleaner credit report, affordably."}, {"k": "Fresh Start", "v": "What if an old medical bill stopped following you everywhere? Right now it shadows every application. Our attorneys can dispute it and push to have it removed from your report. Your credit could start fresh."}], "name": "Credit Report Removal", "hub": 22},
+  {"adSet": "Garnishment", "adSetCode": "AS_Garnishment_NW", "ad": "Pre_Judgment_Garn", "topic": "Prevent garnishment", "finalUrl": "https://start.credolegal.com/wage-garnishment-prevention", "suffix": "utm_source=meta&utm_medium=paid_social&utm_campaign=credo_meta_v3&utm_content=Pre_Judgment_Garn", "description": "Flat monthly fee. Act before the judgment lands.", "messages": [{"k": "Default", "v": "Worried a lawsuit could start garnishing your wages? The threat of a smaller paycheck is frightening, and once it starts it is harder to undo. Our attorneys can respond to the case now and fight the judgment that leads to garnishment. More of your paycheck could stay yours."}, {"k": "Fight", "v": "Going to let a lawsuit quietly turn into a garnishment? Once the judgment lands, they reach straight for your paycheck. Our attorneys can respond now and fight the judgment that leads to garnishment. Stop it before it starts."}, {"k": "Reassurance", "v": "Scared a lawsuit could start taking your wages? That fear is valid, and there is something you can do early. Our attorneys can respond to the case now and fight the judgment behind garnishment. More of your paycheck could stay yours."}, {"k": "Affordability", "v": "Worried about garnishment but not about affording a lawyer? A flat monthly fee covers it. Our attorneys can respond to the case now and fight the judgment that leads to garnishment. Protect your paycheck, affordably."}, {"k": "Fresh Start", "v": "What if your paycheck stayed whole? Right now a looming judgment threatens it. Our attorneys can respond to the case now and fight the garnishment before it starts. More of your pay could stay yours, and you could plan ahead."}], "name": "Prevention — Stop It First", "hub": 14},
+  {"adSet": "Garnishment", "adSetCode": "AS_Garnishment_NW", "ad": "Post_Judgment_Garn", "topic": "Active garnishment", "finalUrl": "https://start.credolegal.com/wage-garnishment-exemptions", "suffix": "utm_source=meta&utm_medium=paid_social&utm_campaign=credo_meta_v3&utm_content=Post_Judgment_Garn", "description": "Flat monthly fee. You may qualify for exemptions.", "messages": [{"k": "Default", "v": "Is your paycheck already being garnished? Every check feels short, and it can feel like there is nothing you can do. Our attorneys can file the exemption motion and challenge the garnishment. You could qualify for protection that puts money back in your pocket."}, {"k": "Fight", "v": "Watching them take a cut of every paycheck? A garnishment isn't always the last word. Our attorneys can file the exemption motion and challenge it. Fight to claw your wages back."}, {"k": "Reassurance", "v": "Feeling helpless as your check comes up short each time? It can feel like there's nothing left to do, but there often is. Our attorneys can file the exemption motion and challenge the garnishment. You could qualify for protection."}, {"k": "Affordability", "v": "Already garnished and can't spare money for a lawyer? Our flat monthly fee covers it. Our attorneys can file the exemption motion and challenge the garnishment. You could put money back in your pocket, without a big retainer."}, {"k": "Fresh Start", "v": "What if your full paycheck came back? Right now every check feels short. Our attorneys can file the exemption motion and challenge the garnishment. You could qualify for protection and start rebuilding."}], "name": "Claim Your Exemptions", "hub": 13},
+];
+
 const $main = document.getElementById('main');
 const $q = document.getElementById('q');
 let campFilter = 'all', stateFilter = 'all', source = 'google', allExpanded = false, forceOpen = false;
@@ -369,14 +393,26 @@ const trackedUrl = (ad, i) => ad.finalUrl + '?' + (source === 'bing'
   ? SUFFIXES[i].replace('utm_source=google', 'utm_source=bing')
   : SUFFIXES[i]);
 
-/* Header stats reflect the full dataset (not the filtered view). */
+/* Header stats reflect the full dataset for the active channel, not the filtered view. */
+const statCell = (n, l) => `<div class="stat"><b>${n}</b><span>${l}</span></div>`;
 function paintStats() {
-  document.getElementById('s-ads').textContent = ADS.length;
-  document.getElementById('s-camps').textContent = new Set(ADS.map(a => a.campaign)).size;
-  document.getElementById('s-urls').textContent = new Set(ADS.map(a => a.finalUrl)).size;
-  document.getElementById('s-enabled').textContent = ADS.filter(a => a.state === 'Enabled').length;
-  document.getElementById('s-paused').textContent = ADS.filter(a => a.state === 'Paused').length;
-  document.getElementById('s-linked').textContent = MATCH.filter(m => m.hub != null).length;
+  const box = document.getElementById('stats-row');
+  if (source === 'meta') {
+    box.innerHTML =
+      statCell(META_ADS.length, 'ads') +
+      statCell(1, 'campaign') +
+      statCell(new Set(META_ADS.map(a => a.adSet)).size, 'ad sets') +
+      statCell(new Set(META_ADS.map(a => a.finalUrl)).size, 'landing pages') +
+      statCell(META_ADS.filter(a => a.hub != null).length, 'in hub');
+  } else {
+    box.innerHTML =
+      statCell(ADS.length, 'ads') +
+      statCell(new Set(ADS.map(a => a.campaign)).size, 'campaigns') +
+      statCell(new Set(ADS.map(a => a.finalUrl)).size, 'landing pages') +
+      statCell(ADS.filter(a => a.state === 'Enabled').length, 'enabled') +
+      statCell(ADS.filter(a => a.state === 'Paused').length, 'paused') +
+      statCell(MATCH.filter(m => m.hub != null).length, 'in hub');
+  }
 }
 
 function paintCampChips() {
@@ -397,6 +433,7 @@ function render() {
   const q = $q.value.trim().toLowerCase();
   forceOpen = q.length > 0;   // a search auto-expands the matching path
   $main.innerHTML = '';
+  if (source === 'meta') { renderMeta(q); return; }
   let shown = 0;
   CAMP_ORDER.forEach(camp => {
     if (campFilter !== 'all' && campFilter !== camp) return;
@@ -510,6 +547,119 @@ function adNode(ad, i) {
   return el;
 }
 
+/* ───── Meta view: one campaign › ad sets › ads ───── */
+function metaMatches(a, q) {
+  if (!q) return true;
+  const hay = [a.adSet, a.ad, a.topic, a.finalUrl, a.name, a.description,
+    ...a.messages.map(m => m.v), ...META_HEADLINES].join(' ').toLowerCase();
+  return hay.includes(q);
+}
+
+function renderMeta(q) {
+  const items = META_ADS.map((a, i) => ({a, i})).filter(({a}) => metaMatches(a, q));
+  if (!items.length) { $main.innerHTML = '<div class="empty">No ads match the current search.</div>'; return; }
+  $main.appendChild(metaCampNode(items));
+}
+
+/* Level 1 — the single Meta campaign (carries utm_source + utm_campaign) */
+function metaCampNode(items) {
+  const open = forceOpen || openCamp.has('META');
+  const order = [], bySet = new Map();
+  items.forEach(it => {
+    if (!bySet.has(it.a.adSet)) { bySet.set(it.a.adSet, []); order.push(it.a.adSet); }
+    bySet.get(it.a.adSet).push(it);
+  });
+  const el = document.createElement('div');
+  el.className = 'camp' + (open ? ' open' : '');
+  el.innerHTML = `
+    <div class="camp-head">
+      <span class="car">▸</span>
+      <span class="camp-name">${esc(META_CAMPAIGN.label)}</span>
+      <span class="camp-code mono">${esc(META_CAMPAIGN.name)}</span>
+      <span class="utm">utm_source=meta · utm_campaign=${esc(META_CAMPAIGN.utmCampaign)}</span>
+      <span class="node-count">${order.length} ad set${order.length>1?'s':''} · ${items.length} ad${items.length>1?'s':''}</span>
+    </div>
+    <div class="camp-body"></div>`;
+  const body = el.querySelector('.camp-body');
+  order.forEach(set => body.appendChild(metaSetNode(set, bySet.get(set))));
+  el.querySelector('.camp-head').addEventListener('click', () => {
+    toggleSet(openCamp, 'META'); el.classList.toggle('open');
+  });
+  return el;
+}
+
+/* Level 2 — ad set (Meta groups by debt/service type, not a UTM param) */
+function metaSetNode(setName, items) {
+  const gk = 'META ' + setName;
+  const open = forceOpen || openGrp.has(gk);
+  const el = document.createElement('div');
+  el.className = 'grp' + (open ? ' open' : '');
+  el.innerHTML = `
+    <div class="grp-head">
+      <span class="car">▸</span>
+      <span class="grp-name">${esc(setName)}</span>
+      <span class="utm">${esc(items[0].a.adSetCode)}</span>
+      <span class="node-count">${items.length} ad${items.length>1?'s':''}</span>
+    </div>
+    <div class="grp-body"></div>`;
+  const body = el.querySelector('.grp-body');
+  items.forEach(({a, i}) => body.appendChild(metaAdNode(a, i)));
+  el.querySelector('.grp-head').addEventListener('click', () => {
+    toggleSet(openGrp, gk); el.classList.toggle('open');
+  });
+  return el;
+}
+
+/* Level 3 — individual Meta ad: final URL + suffix (utm_content = ad), copy + hub link */
+function metaAdNode(a, i) {
+  const ok = 'm' + i;
+  const open = forceOpen || openAd.has(ok);
+  const turl = a.finalUrl + '?' + a.suffix;
+  const slug = a.finalUrl.replace('https://start.credolegal.com', '');
+  const hubTag = a.hub != null
+    ? `<a class="hub-link" href="review.html#${a.hub}" target="_blank" rel="noopener" title="Open “${esc(a.name)}” in the LP review hub">In hub ↗</a>`
+    : `<span class="nohub">no hub page</span>`;
+  const el = document.createElement('div');
+  el.className = 'adx meta' + (open ? ' open' : '');
+  el.innerHTML = `
+    <div class="adx-head">
+      <span class="car">▸</span>
+      <span class="adkey">${esc(a.ad)}</span>
+      <span class="ad-name">${esc(a.name)}</span>
+      <a class="final-url" href="${esc(a.finalUrl)}" target="_blank" rel="noopener" title="Open live landing page">${esc(slug)} ↗</a>
+      ${hubTag}
+      <span class="adx-meta">${a.messages.length} msg · ${META_HEADLINES.length} HL</span>
+      <button class="copy-btn mini" data-copy="${esc(turl)}" title="Copy Meta tracking URL">Copy URL</button>
+    </div>
+    <div class="adx-body">
+      <div class="track">
+        <h4>Final URL + tracking suffix · <span class="src-tag">meta</span> · utm_content=${esc(a.ad)}</h4>
+        <div class="track-row">
+          <div class="track-url">${esc(turl)}</div>
+          <button class="copy-btn" data-copy="${esc(turl)}">Copy</button>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="col">
+          <h4>Messages (${a.messages.length})</h4>
+          <ul class="ds">${a.messages.map(m => `<li><b>${esc(m.k)}.</b> ${esc(m.v)}</li>`).join('')}</ul>
+        </div>
+        <div class="col">
+          <h4>Headlines (${META_HEADLINES.length}, shared)</h4>
+          <ol class="hl">${META_HEADLINES.map(h => `<li>${esc(h)}</li>`).join('')}</ol>
+          <h4 style="margin-top:14px;">Angle · description</h4>
+          <ul class="ds"><li>${esc(a.topic)} — ${esc(a.description)}</li></ul>
+        </div>
+      </div>
+      <div style="margin-top:12px; font-size:11px; color:#8590a0;">CTA: Book Now · compliance footer appended to every message: “${esc(META_FOOTER)}”</div>
+    </div>`;
+  el.querySelector('.adx-head').addEventListener('click', e => {
+    if (e.target.closest('a') || e.target.closest('.copy-btn')) return;
+    toggleSet(openAd, ok); el.classList.toggle('open');
+  });
+  return el;
+}
+
 /* Filter wiring */
 document.getElementById('camp-chips').addEventListener('click', e => {
   const b = e.target.closest('button[data-camp]'); if (!b) return;
@@ -526,8 +676,13 @@ document.getElementById('toggle-all').addEventListener('click', e => {
   allExpanded = !allExpanded;
   openCamp.clear(); openGrp.clear(); openAd.clear();
   if (allExpanded) {
-    CAMP_ORDER.forEach(c => openCamp.add(c));
-    ADS.forEach((a, i) => { openGrp.add(grpKey(a.campaign, a.adGroup)); openAd.add(i); });
+    if (source === 'meta') {
+      openCamp.add('META');
+      META_ADS.forEach((a, i) => { openGrp.add('META ' + a.adSet); openAd.add('m' + i); });
+    } else {
+      CAMP_ORDER.forEach(c => openCamp.add(c));
+      ADS.forEach((a, i) => { openGrp.add(grpKey(a.campaign, a.adGroup)); openAd.add(i); });
+    }
   }
   e.target.textContent = allExpanded ? 'Collapse all' : 'Expand all';
   render();
@@ -536,6 +691,9 @@ document.getElementById('srctog').addEventListener('click', e => {
   const b = e.target.closest('button[data-src]'); if (!b) return;
   source = b.dataset.src;
   document.querySelectorAll('#srctog button').forEach(x => x.classList.toggle('active', x === b));
+  // The campaign/state filters are search-ad only; Meta has one campaign + no per-ad state.
+  document.getElementById('filters-row').style.display = (source === 'meta') ? 'none' : '';
+  paintStats();
   render();
 });
 /* Click-to-copy on any tracking URL (header 'Copy URL' or the block's 'Copy'). */
@@ -568,6 +726,12 @@ function focusAd() {
   if (!m) return;
   const i = parseInt(m[1], 10);
   const ad = ADS[i]; if (!ad) return;
+  if (source === 'meta') {   // #ad-N is a search ad — leave the Meta tab
+    source = 'google';
+    document.querySelectorAll('#srctog button').forEach(x => x.classList.toggle('active', x.dataset.src === 'google'));
+    document.getElementById('filters-row').style.display = '';
+    paintStats();
+  }
   campFilter = 'all'; stateFilter = 'all'; $q.value = '';
   document.querySelectorAll('#state-chips .chip').forEach(c => c.classList.toggle('active', c.dataset.state === 'all'));
   openCamp.add(ad.campaign);
