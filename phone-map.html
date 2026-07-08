@@ -86,7 +86,7 @@
   Each ad shows its <b>base URL</b> (landing page, no UTM) once, then one row per <b>UTM source</b> with the call-tracking
   <b>phone number</b> to display for a visitor from that platform. Google covers every ad group; <b>Bing</b> has numbers for
   7 ad groups; <b>Meta</b> numbers aren't provisioned yet. Blank <b>Ad</b>/<b>Base URL</b> cells are ad groups that are live with a tracking
-  number but whose ads/landing pages weren't in the Google export (Medical, Payday, PMax, All-States → Credit Card). Multiple
+  number but whose ads/landing pages weren't in the Google export (Medical, Payday, PMax). Multiple
   creatives pointing to the same page are collapsed to one row. This mirrors the review hub's Google/Bing phone switcher.
 </div>
 
@@ -118,7 +118,7 @@ const CAMP_FRIENDLY = {
 const PLATFORMS = ["google", "bing", "meta"];
 const DATA = [
  {"campaign":"S_All-States","adGroups":[
-   {"adGroup":"Credit Card","phones":{"google":"(347) 474-9602","bing":"(646) 350-2456","meta":""},"ads":[{"ad":"","baseUrl":""}]},
+   {"adGroup":"Credit Card","phones":{"google":"(347) 474-9602","bing":"(646) 350-2456","meta":""},"ads":[{"ad":"Credit Cards","baseUrl":"https://start.credolegal.com/credit-cards"}]},
    {"adGroup":"Debt Collector","phones":{"google":"(646) 257-2720","bing":"","meta":""},"ads":[{"ad":"Collection Defense","baseUrl":"https://start.credolegal.com/collection-defense"}]},
    {"adGroup":"FDCPA","phones":{"google":"(718) 865-8350","bing":"","meta":""},"ads":[{"ad":"FCBA & FDCPA Rights","baseUrl":"https://start.credolegal.com/fcba-and-fdcpa"}]},
    {"adGroup":"Garnishment","phones":{"google":"(917) 267-5502","bing":"","meta":""},"ads":[{"ad":"Stop Wage Garnishment","baseUrl":"https://start.credolegal.com/stop-wage-garnishment"}]}
