@@ -132,6 +132,7 @@
   .lp-link .b.champion { background: #c92028; color: #fff; }
   .lp-link .b.fixed { background: #fff7ed; color: #9a3412; }
   .lp-link .b.new-section { background: #ecfeff; color: #155e75; }
+  .lp-link .b.ad { background: #fdeced; color: #c92028; }
 
   /* ───── Frame ───── */
   .frame-wrap { background: #f6f7f9; position: relative; overflow: hidden; }
@@ -180,7 +181,7 @@
     </div>
     <div class="kb"><kbd>↑</kbd><kbd>↓</kbd> switch · <kbd>/</kbd> search</div>
     <a href="statute-map.html" target="_blank" rel="noopener" title="FDCPA statute map: every &quot;What we see&quot; bullet and FAQ mapped to 15 U.S.C. § 1692">Statute map ↗</a>
-    <a href="ads-map.html" target="_blank" rel="noopener" title="Google Ads campaigns → ad groups → ads mapped to their landing-page final URL">Ads → LP ↗</a>
+    <a id="t-adsmap" href="ads-map.html" target="_blank" rel="noopener" title="Google Ads campaigns → ad groups → ads mapped to their landing-page final URL">Ads → LP ↗</a>
     <a id="t-open" href="#" target="_blank" rel="noopener" style="display:none;">Open ↗</a>
     <a id="t-live" class="live" href="#" target="_blank" rel="noopener" style="display:none;">View live</a>
   </div>
@@ -253,6 +254,33 @@ const LPS = [
   { c:"All-States", n:"FDCPA — Act Fast (overlay)",         slug:"/debt-harassment-act-fast",             phone:"(718) 865-8350", file:"act-fast-locked-paired-portrait-noborders.html",              angle:"Cross-vertical FDCPA", allstates:true, fixed:["Non-std hero","Filler","Missing Call link"] },
 ];
 
+/* ───── Reverse link: which Google/Bing ad drives each LP ─────
+   Keyed by LP slug → the ad on ads-map.html that targets this landing page
+   (campaign, ad group, and the ad's index for the ads-map.html#ad-<i> deep link).
+   19 of the 32 LPs are ad-driven; the rest have no active ad. Derived by matching
+   ad final URLs against these slugs — keep in sync if ad destinations change. */
+const DRIVEN_BY = {
+  "/debt-lawsuit-respond-on-time": { campaign: "Lawsuit", adGroup: "Collection_Lawsuit", i: 0 },
+  "/debt-lawsuit-fight-back": { campaign: "Lawsuit", adGroup: "Creditor_Suing", i: 1 },
+  "/credit-card-debt-negotiation": { campaign: "Credit Card", adGroup: "CC_Negotiation", i: 2 },
+  "/credit-card-debt-stop-calls": { campaign: "Credit Card", adGroup: "CC_Branded", i: 4 },
+  "/debt-harassment-stop-calls": { campaign: "Harassment", adGroup: "Creditor_Harassment", i: 5 },
+  "/debt-harassment-fdcpa-rights": { campaign: "Harassment", adGroup: "FDCPA_Harassment", i: 6 },
+  "/debt-harassment-violations": { campaign: "Harassment", adGroup: "Creditor_Harassment", i: 7 },
+  "/debt-harassment-fdcpa-attorney": { campaign: "Harassment", adGroup: "FDCPA_Harassment", i: 8 },
+  "/debt-lawsuit-proof": { campaign: "Lawsuit", adGroup: "Collection_Lawsuit", i: 10 },
+  "/credit-card-debt-lawsuit-respond": { campaign: "Credit Card", adGroup: "CC_Lawsuit", i: 12 },
+  "/debt-lawsuit-attorney": { campaign: "Lawsuit", adGroup: "Creditor_Suing", i: 13 },
+  "/credit-card-debt-challenge": { campaign: "Credit Card", adGroup: "CC_Negotiation", i: 15 },
+  "/wage-garnishment-exemptions": { campaign: "Garnishment", adGroup: "Garnishment", i: 17 },
+  "/wage-garnishment-attorney": { campaign: "Garnishment", adGroup: "Garnishment", i: 18 },
+  "/debt-lawsuit-options": { campaign: "Lawsuit", adGroup: "Served_Papers", i: 19 },
+  "/credit-card-debt-lawsuit-records": { campaign: "Credit Card", adGroup: "CC_Lawsuit", i: 21 },
+  "/wage-garnishment-prevention": { campaign: "Garnishment", adGroup: "Garnishment", i: 22 },
+  "/debt-lawsuit-summons-respond": { campaign: "Lawsuit", adGroup: "Served_Papers", i: 23 },
+  "/credit-card-debt-violations": { campaign: "Credit Card", adGroup: "CC_Branded", i: 25 },
+};
+
 const CLUSTERS = ["Harassment","Lawsuit","Garnishment","Payday Loan","Medical Debt","Credit Card","All-States"];
 
 /* ───── Render ───── */
@@ -283,6 +311,7 @@ function renderList(filter) {
       // top-bar 'CHAMPION' pill (selection metadata) still appears when the
       // selected LP is a champion. 'New section' badge retained.
       const badges = [];
+      if (DRIVEN_BY[lp.slug]) badges.push('<span class="b ad">AD · ' + DRIVEN_BY[lp.slug].campaign + '</span>');
       if (lp.newSection) badges.push('<span class="b new-section">New section</span>');
       a.innerHTML = `
         <div><span class="num">${String(idx+1).padStart(2,'0')}</span><span class="label">${lp.n}</span></div>
@@ -392,6 +421,17 @@ function select(idx) {
   angleEl.textContent = lp.angle || '';
   angleEl.style.display = lp.angle ? 'inline-flex' : 'none';
   document.getElementById('m-champ').style.display = lp.champion ? 'inline-flex' : 'none';
+  // Reverse link: point the toolbar "Ads → LP" button at the specific ad that
+  // drives this LP (ads-map.html#ad-<i>) when there is one; else the general map.
+  const drv = DRIVEN_BY[lp.slug];
+  const adsLink = document.getElementById('t-adsmap');
+  if (drv) {
+    adsLink.href = 'ads-map.html#ad-' + drv.i;
+    adsLink.title = 'Jump to the ad driving this LP: ' + drv.campaign + ' / ' + drv.adGroup;
+  } else {
+    adsLink.href = 'ads-map.html';
+    adsLink.title = 'Google Ads campaigns → ad groups → ads mapped to their landing-page final URL';
+  }
   const open = document.getElementById('t-open');
   open.href = withParams(lp.file); open.style.display = 'inline-flex';
   const live = document.getElementById('t-live');

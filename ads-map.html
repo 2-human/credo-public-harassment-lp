@@ -73,48 +73,64 @@
   }
   button.linkish:hover { color: #c92028; }
 
-  /* ───── Body ───── */
-  main { max-width: 1180px; margin: 0 auto; padding: 8px 20px 80px; }
-  .camp-h {
-    display: flex; align-items: baseline; gap: 10px;
-    padding: 24px 0 8px; border-bottom: 2px solid #f1f3f5; margin-bottom: 12px;
-  }
-  .camp-h .name { font-size: 15px; font-weight: 700; letter-spacing: -0.01em; }
-  .camp-h .code { font-size: 11px; color: #8590a0; }
-  .camp-h .count { margin-left: auto; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: #8590a0; }
+  /* ───── Body: 3-level accordion (campaign › ad group › ad) ───── */
+  main { max-width: 1180px; margin: 0 auto; padding: 14px 20px 80px; }
 
-  .ad {
-    background: #fff; border: 1px solid #e7eaee; border-left: 3px solid #c8cdd6;
-    margin-bottom: 10px;
+  .car { display: inline-block; color: #b6bcc6; font-size: 11px; width: 12px; transition: transform .12s; }
+  .camp.open > .camp-head > .car,
+  .grp.open  > .grp-head  > .car,
+  .adx.open  > .adx-head  > .car { transform: rotate(90deg); color: #c92028; }
+  .utm { font-family: ui-monospace, Menlo, monospace; font-size: 11px; color: #5b6470; background: #f1f3f5; padding: 2px 7px; border-radius: 3px; white-space: nowrap; }
+  .node-count { margin-left: auto; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #8590a0; white-space: nowrap; }
+
+  /* Level 1 — campaign */
+  .camp { background: #fff; border: 1px solid #e7eaee; margin-bottom: 8px; }
+  .camp-head {
+    display: flex; align-items: center; gap: 12px; padding: 14px 16px;
+    cursor: pointer; user-select: none; border-left: 3px solid #c92028;
   }
-  .ad.paused { border-left-color: #e7eaee; opacity: 0.85; }
-  .ad.enabled { border-left-color: #16a34a; }
-  .ad-head {
-    display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
-    padding: 12px 14px; cursor: pointer; user-select: none;
+  .camp-head:hover { background: #fafbfc; }
+  .camp-name { font-size: 15px; font-weight: 700; letter-spacing: -0.01em; }
+  .camp-code { font-size: 11px; color: #8590a0; }
+  .camp-body { display: none; padding: 2px 12px 12px; }
+  .camp.open > .camp-body { display: block; }
+
+  /* Level 2 — ad group */
+  .grp { background: #fcfcfd; border: 1px solid #eef0f3; border-left: 3px solid #c8cdd6; margin-top: 8px; }
+  .grp-head {
+    display: flex; align-items: center; gap: 10px; padding: 10px 14px;
+    cursor: pointer; user-select: none;
   }
-  .ad-head:hover { background: #fafbfc; }
-  .ad-group { font-size: 13px; font-weight: 600; letter-spacing: -0.01em; }
+  .grp-head:hover { background: #f4f6f8; }
+  .grp-name { font-size: 13px; font-weight: 600; letter-spacing: -0.01em; }
+  .grp-body { display: none; padding: 2px 10px 10px; }
+  .grp.open > .grp-body { display: block; }
+
+  /* Level 3 — individual ad */
+  .adx { background: #fff; border: 1px solid #eef0f3; border-left: 3px solid #c8cdd6; margin-top: 8px; }
+  .adx.enabled { border-left-color: #16a34a; }
+  .adx.paused  { border-left-color: #e7eaee; opacity: 0.9; }
+  .adx-head {
+    display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+    padding: 10px 12px; cursor: pointer; user-select: none;
+  }
+  .adx-head:hover { background: #fafbfc; }
+  .adx-meta { font-size: 10px; color: #8590a0; letter-spacing: 0.03em; white-space: nowrap; margin-left: auto; }
+  .adx-body { display: none; padding: 2px 12px 14px; border-top: 1px solid #f1f3f5; }
+  .adx.open > .adx-body { display: block; }
+
   .pill {
     font-size: 9px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
     padding: 2px 8px; border-radius: 999px;
   }
   .pill.enabled { background: #dcfce7; color: #166534; }
   .pill.paused  { background: #f1f3f5; color: #5b6470; }
-  .ad-type { font-size: 10px; color: #8590a0; letter-spacing: 0.04em; text-transform: uppercase; }
-  .url-wrap { margin-left: auto; display: flex; align-items: center; gap: 10px; min-width: 0; }
   .final-url {
     font-family: ui-monospace, Menlo, monospace; font-size: 12px; color: #c92028;
     text-decoration: none; word-break: break-all;
   }
   .final-url:hover { text-decoration: underline; }
-  .toggle { font-size: 10px; color: #8590a0; letter-spacing: 0.04em; white-space: nowrap; }
   .disp { font-family: ui-monospace, Menlo, monospace; font-size: 10.5px; color: #8590a0; }
-
-  .ad-body { display: none; padding: 4px 14px 16px; border-top: 1px solid #f1f3f5; }
-  .ad.open .ad-body { display: block; }
-  .ad.open .toggle .car { transform: rotate(90deg); }
-  .toggle .car { display: inline-block; transition: transform .12s; }
   .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 12px; }
   @media (max-width: 720px) { .grid { grid-template-columns: 1fr; } }
   .col h4 {
@@ -136,13 +152,52 @@
     border-left: 2px solid #f1f3f5; margin-bottom: 6px;
   }
   .empty { text-align: center; color: #8590a0; font-size: 14px; padding: 60px 0; }
+
+  /* ───── Source toggle + tracking-URL block (Google/Bing suffix view) ───── */
+  .srctog { display: inline-flex; align-items: center; gap: 2px; padding: 3px; background: #111418; }
+  .srctog .lbl { font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: #8590a0; font-weight: 600; padding: 0 8px 0 6px; }
+  .srctog button { font-size: 11px; font-weight: 600; letter-spacing: 0.04em; color: #c8cdd6; background: transparent; border: 0; padding: 5px 12px; cursor: pointer; transition: all .12s; }
+  .srctog button:hover { color: #fff; }
+  .srctog button.active { color: #fff; background: #c92028; }
+  .copy-btn {
+    font-size: 10px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+    color: #5b6470; background: #fff; border: 1px solid #e7eaee; padding: 6px 10px;
+    cursor: pointer; white-space: nowrap; transition: all .12s;
+  }
+  .copy-btn:hover { border-color: #c92028; color: #c92028; }
+  .copy-btn.copied { background: #dcfce7; border-color: #16a34a; color: #166534; }
+  .copy-btn.mini { padding: 3px 8px; font-size: 9px; }
+  .track { margin-top: 4px; }
+  .track h4 {
+    font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    color: #8590a0; margin: 0 0 8px;
+  }
+  .track h4 .src-tag { color: #c92028; }
+  .track-row { display: flex; align-items: stretch; gap: 8px; }
+  .track-url {
+    flex: 1; font-family: ui-monospace, Menlo, monospace; font-size: 11.5px; line-height: 1.55;
+    color: #3a4048; background: #f6f7f9; border: 1px solid #e7eaee; padding: 8px 10px; word-break: break-all;
+  }
+
+  /* ───── Ad name + hub link (ad ⇄ review-hub connection) ───── */
+  .ad-name { font-size: 13px; font-weight: 600; letter-spacing: -0.01em; color: #111418; }
+  .hub-link {
+    font-size: 10px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;
+    color: #c92028; text-decoration: none; border: 1px solid #f3c9cc; background: #fdeced;
+    padding: 2px 7px; white-space: nowrap;
+  }
+  .hub-link:hover { background: #c92028; color: #fff; border-color: #c92028; }
+  .nohub {
+    font-size: 9px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;
+    color: #8590a0; border: 1px dashed #d5dae1; padding: 2px 7px; white-space: nowrap;
+  }
 </style>
 </head>
 <body>
 
 <header class="topbar">
   <div class="brand">Credo<span class="red">·</span>Legal · Ads → LP</div>
-  <div class="title">Google Ads campaigns, ad groups &amp; ads mapped to their landing-page final URL <span class="src mono">· RSA export July 7, 2026</span></div>
+  <div class="title">Every ad mapped to its landing-page final URL + UTM tracking suffix <span class="src mono">· RSA export July 7, 2026</span></div>
   <div class="toolbar">
     <a href="statute-map.html" target="_blank" rel="noopener" title="FDCPA statute map">Statute map ↗</a>
     <a class="back" href="review.html" title="Back to the LP review hub">← LP review</a>
@@ -156,8 +211,14 @@
     <div class="stat"><b id="s-urls">0</b><span>landing pages</span></div>
     <div class="stat"><b id="s-enabled">0</b><span>enabled</span></div>
     <div class="stat"><b id="s-paused">0</b><span>paused</span></div>
+    <div class="stat"><b id="s-linked">0</b><span>in hub</span></div>
   </div>
   <div class="spacer"></div>
+  <div class="srctog" id="srctog" title="Which source the tracking URLs below use">
+    <span class="lbl">Suffix</span>
+    <button data-src="google" class="active">Google</button>
+    <button data-src="bing">Bing</button>
+  </div>
   <div class="search"><input id="q" type="search" placeholder="Search headline, URL, ad group…" autocomplete="off"/></div>
   <button class="linkish" id="toggle-all">Expand all</button>
 </div>
@@ -210,6 +271,76 @@ const ADS = [
  {"campaign":"S_CreditCard_NW","adGroup":"CC_Branded","state":"Enabled","type":"Responsive search ad","finalUrl":"https://start.credolegal.com/credit-card-debt-violations","path1":"credit-card","path2":"debt-violations","headlines":["{Keyword:Card Collector Harassing You?}","Each Violation Can Be $1,000","Illegal Card Collector Calls?","Their Calls Can Turn Into Cash","FDCPA Pays You Per Breach","We Track Every Violation","Sue Your Card Debt Collector","Real Attorneys Who Build Cases","Multiple Violations? More $","Collectors May Owe YOU Money","We Identify Every Breach","Attorney Help From Day One","Free Violation Assessment","Find Out What They Owe You","Get a Free Case Evaluation"],"descriptions":["Each illegal call from a card debt collector can cost them $1K under FDCPA. Free Consult.","Our attorneys track every violation from day one. Real lawyers. Get Free Consultation.","Card debt collectors frequently break the law. We identify every violation. Free Consult.","Threatening arrest, early calls, contacting family - each canbe $1,000 for you. Call Now."]}
 ];
 
+/* ───── Tracking-URL suffixes ─────
+   One resolved Final URL suffix per ad, index-aligned to ADS. utm_campaign and
+   utm_term are concrete (campaign hyphens→underscores + _2025; term = ad group
+   lowercased); every other param is the ad's original suffix, untouched. Bing is
+   derived at render time by swapping utm_source=google→bing. Canonical source:
+   content/campaigns/ad-final-urls-with-suffix.csv. */
+const SUFFIXES = [
+  "utm_source=google&utm_medium=cpc&utm_campaign=S_Lawsuit_NW_2025&utm_term=collection_lawsuit&utm_content={creative}&clgclid={gclid}&gclid={gclid}&search_keyword={keyword}",
+  "utm_source=google&utm_medium=cpc&utm_campaign=S_Lawsuit_NW_2025&utm_term=creditor_suing&utm_content={creative}&clgclid={gclid}&gclid={gclid}&search_keyword={keyword}",
+  "utm_source=google&utm_medium=cpc&utm_campaign=S_CreditCard_NW_2025&utm_term=cc_negotiation&utm_content={creative}&clgclid={gclid}&gclid={gclid}&search_keyword={keyword}",
+  "utm_source=google&utm_medium=cpc&utm_campaign=S_All_States_2025&utm_term=fdcpa&clgclid={gclid}&gclid={gclid}&search_keyword={keyword}",
+  "utm_source=google&utm_medium=cpc&utm_campaign=S_CreditCard_NW_2025&utm_term=cc_branded&utm_content={creative}&clgclid={gclid}&gclid={gclid}&search_keyword={keyword}",
+  "utm_source=google&utm_medium=cpc&utm_campaign=S_Harassment_NW_2025&utm_term=creditor_harassment&utm_content={creative}&clgclid={gclid}&gclid={gclid}&search_keyword={keyword}",
+  "utm_source=google&utm_medium=cpc&utm_campaign=S_Harassment_NW_2025&utm_term=fdcpa_harassment&utm_content={creative}&clgclid={gclid}&gclid={gclid}&search_keyword={keyword}",
+  "utm_source=google&utm_medium=cpc&utm_campaign=S_Harassment_NW_2025&utm_term=creditor_harassment&utm_content={creative}&clgclid={gclid}&gclid={gclid}&search_keyword={keyword}",
+  "utm_source=google&utm_medium=cpc&utm_campaign=S_Harassment_NW_2025&utm_term=fdcpa_harassment&utm_content={creative}&clgclid={gclid}&gclid={gclid}&search_keyword={keyword}",
+  "utm_source=google&utm_medium=cpc&utm_campaign=S_All_States_2025&utm_term=fdcpa&clgclid={gclid}&gclid={gclid}&search_keyword={keyword}",
+  "utm_source=google&utm_medium=cpc&utm_campaign=S_Lawsuit_NW_2025&utm_term=collection_lawsuit&utm_content={creative}&clgclid={gclid}&gclid={gclid}&search_keyword={keyword}",
+  "utm_source=google&utm_medium=cpc&utm_campaign=S_All_States_2025&utm_term=garnishment&clgclid={gclid}&gclid={gclid}&search_keyword={keyword}",
+  "utm_source=google&utm_medium=cpc&utm_campaign=S_CreditCard_NW_2025&utm_term=cc_lawsuit&utm_content={creative}&clgclid={gclid}&gclid={gclid}&search_keyword={keyword}",
+  "utm_source=google&utm_medium=cpc&utm_campaign=S_Lawsuit_NW_2025&utm_term=creditor_suing&utm_content={creative}&clgclid={gclid}&gclid={gclid}&search_keyword={keyword}",
+  "utm_source=google&utm_medium=cpc&utm_campaign=S_All_States_2025&utm_term=garnishment&clgclid={gclid}&gclid={gclid}&search_keyword={keyword}",
+  "utm_source=google&utm_medium=cpc&utm_campaign=S_CreditCard_NW_2025&utm_term=cc_negotiation&utm_content={creative}&clgclid={gclid}&gclid={gclid}&search_keyword={keyword}",
+  "utm_source=google&utm_medium=cpc&utm_campaign=S_All_States_2025&utm_term=debt_collector&clgclid={gclid}&gclid={gclid}&search_keyword={keyword}",
+  "utm_source=google&utm_medium=cpc&utm_campaign=S_Garnishment_NW_2025&utm_term=garnishment&utm_content={creative}&clgclid={gclid}&gclid={gclid}&search_keyword={keyword}",
+  "utm_source=google&utm_medium=cpc&utm_campaign=S_Garnishment_NW_2025&utm_term=garnishment&utm_content={creative}&clgclid={gclid}&gclid={gclid}&search_keyword={keyword}",
+  "utm_source=google&utm_medium=cpc&utm_campaign=S_Lawsuit_NW_2025&utm_term=served_papers&utm_content={creative}&clgclid={gclid}&gclid={gclid}&search_keyword={keyword}",
+  "utm_source=google&utm_medium=cpc&utm_campaign=S_All_States_2025&utm_term=fdcpa&clgclid={gclid}&gclid={gclid}&search_keyword={keyword}",
+  "utm_source=google&utm_medium=cpc&utm_campaign=S_CreditCard_NW_2025&utm_term=cc_lawsuit&utm_content={creative}&clgclid={gclid}&gclid={gclid}&search_keyword={keyword}",
+  "utm_source=google&utm_medium=cpc&utm_campaign=S_Garnishment_NW_2025&utm_term=garnishment&utm_content={creative}&clgclid={gclid}&gclid={gclid}&search_keyword={keyword}",
+  "utm_source=google&utm_medium=cpc&utm_campaign=S_Lawsuit_NW_2025&utm_term=served_papers&utm_content={creative}&clgclid={gclid}&gclid={gclid}&search_keyword={keyword}",
+  "utm_source=google&utm_medium=cpc&utm_campaign=S_All_States_2025&utm_term=debt_collector&clgclid={gclid}&gclid={gclid}&search_keyword={keyword}",
+  "utm_source=google&utm_medium=cpc&utm_campaign=S_CreditCard_NW_2025&utm_term=cc_branded&utm_content={creative}&clgclid={gclid}&gclid={gclid}&search_keyword={keyword}"
+];
+
+/* ───── Ad ↔ hub-LP match ─────
+   Index-aligned to ADS. For each ad, the review-hub LP variant its final URL
+   maps to: `name` = that LP's name (or a destination label when the URL isn't
+   one of the hub's 32 LPs), `hub` = the LP's index in review.html's catalog
+   (open via review.html#<hub>), or null when there's no matching hub page.
+   Matched by exact final-URL ⇄ slug against review.html. */
+const MATCH = [
+  {"name": "Collection — Respond on Time (CHAMPION)", "hub": 10},
+  {"name": "Defense — Fight Back", "hub": 7},
+  {"name": "Negotiation — Negotiate Down", "hub": 28},
+  {"name": "FDCPA & FCBA Rights", "hub": null},
+  {"name": "Harassment — Stop Calls", "hub": 29},
+  {"name": "Stop the Calls — Emotional Relief", "hub": 2},
+  {"name": "FDCPA Rights Education (verbatim)", "hub": 1},
+  {"name": "$1,000 Per Violation", "hub": 3},
+  {"name": "FDCPA Action — We Sue Them", "hub": 0},
+  {"name": "FDCPA & FCBA Rights", "hub": null},
+  {"name": "Collection — Proof Challenge", "hub": 9},
+  {"name": "Stop Wage Garnishment", "hub": null},
+  {"name": "Lawsuit — Respond on Time", "hub": 27},
+  {"name": "Defense — Level the Field", "hub": 6},
+  {"name": "Stop Wage Garnishment", "hub": null},
+  {"name": "Negotiation — Challenge Validity", "hub": 25},
+  {"name": "Collection Defense", "hub": null},
+  {"name": "Claim Your Exemptions", "hub": 13},
+  {"name": "Fight Active Garnishment", "hub": 12},
+  {"name": "Served Papers — Explore Options", "hub": 8},
+  {"name": "FDCPA & FCBA Rights", "hub": null},
+  {"name": "Lawsuit — Proof / Records", "hub": 26},
+  {"name": "Prevention — Stop It First", "hub": 14},
+  {"name": "Served Papers — Act Today", "hub": 11},
+  {"name": "Collection Defense", "hub": null},
+  {"name": "Harassment — $1,000 Per Violation", "hub": 30}
+];
+
 /* Campaign display order + friendly labels. */
 const CAMP_ORDER = ["S_All-States","S_Harassment_NW","S_Lawsuit_NW","S_CreditCard_NW","S_Garnishment_NW"];
 const CAMP_LABEL = {
@@ -219,11 +350,24 @@ const CAMP_LABEL = {
 
 const $main = document.getElementById('main');
 const $q = document.getElementById('q');
-let campFilter = 'all', stateFilter = 'all', allOpen = false;
-const openKeys = new Set();  // preserves per-ad expand state across re-renders
+let campFilter = 'all', stateFilter = 'all', source = 'google', allExpanded = false, forceOpen = false;
+/* Per-level expand state, preserved across re-renders (source toggle, filters). */
+const openCamp = new Set(), openGrp = new Set(), openAd = new Set();
 
 const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const key = (ad, i) => ad.finalUrl + '#' + i;
+const grpKey = (camp, ag) => camp + ' ' + ag;
+const toggleSet = (set, k) => { set.has(k) ? set.delete(k) : set.add(k); };
+
+/* UTM values by hierarchy level — match the resolved SUFFIXES exactly:
+   campaign → utm_campaign, ad group → utm_term. */
+const campUtm = camp => camp.replace(/-/g, '_') + '_2025';
+const termUtm = ag => ag.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '');
+
+/* Final URL + resolved tracking suffix for the current source. Bing is the
+   Google suffix with only utm_source swapped (same campaign structure). */
+const trackedUrl = (ad, i) => ad.finalUrl + '?' + (source === 'bing'
+  ? SUFFIXES[i].replace('utm_source=google', 'utm_source=bing')
+  : SUFFIXES[i]);
 
 /* Header stats reflect the full dataset (not the filtered view). */
 function paintStats() {
@@ -232,60 +376,122 @@ function paintStats() {
   document.getElementById('s-urls').textContent = new Set(ADS.map(a => a.finalUrl)).size;
   document.getElementById('s-enabled').textContent = ADS.filter(a => a.state === 'Enabled').length;
   document.getElementById('s-paused').textContent = ADS.filter(a => a.state === 'Paused').length;
+  document.getElementById('s-linked').textContent = MATCH.filter(m => m.hub != null).length;
 }
 
 function paintCampChips() {
   const box = document.getElementById('camp-chips');
-  const mk = (val, label, n) => `<button class="chip camp ${val===campFilter?'active':''}" data-camp="${val}">${label}${n!=null?` · ${n}`:''}</button>`;
+  const mk = (val, label, n) => `<button class="chip ${val===campFilter?'active':''}" data-camp="${val}">${label}${n!=null?` · ${n}`:''}</button>`;
   let html = mk('all', 'All campaigns', ADS.length);
   CAMP_ORDER.forEach(c => { const n = ADS.filter(a => a.campaign === c).length; if (n) html += mk(c, CAMP_LABEL[c] || c, n); });
   box.innerHTML = html;
 }
 
-function matches(ad, q) {
+function matches(ad, i, q) {
   if (!q) return true;
-  const hay = [ad.campaign, ad.adGroup, ad.finalUrl, ...(ad.headlines||[]), ...(ad.descriptions||[])].join(' ').toLowerCase();
+  const hay = [ad.campaign, ad.adGroup, ad.finalUrl, MATCH[i].name, ...(ad.headlines||[]), ...(ad.descriptions||[])].join(' ').toLowerCase();
   return hay.includes(q);
 }
 
 function render() {
   const q = $q.value.trim().toLowerCase();
+  forceOpen = q.length > 0;   // a search auto-expands the matching path
   $main.innerHTML = '';
   let shown = 0;
   CAMP_ORDER.forEach(camp => {
     if (campFilter !== 'all' && campFilter !== camp) return;
-    const ads = ADS.map((a, i) => ({a, i}))
+    const items = ADS.map((a, i) => ({a, i}))
       .filter(({a}) => a.campaign === camp)
       .filter(({a}) => stateFilter === 'all' || a.state === stateFilter)
-      .filter(({a}) => matches(a, q));
-    if (!ads.length) return;
-    const h = document.createElement('div');
-    h.className = 'camp-h';
-    h.innerHTML = `<span class="name">${CAMP_LABEL[camp] || camp}</span><span class="code mono">${camp}</span><span class="count">${ads.length} ad${ads.length>1?'s':''}</span>`;
-    $main.appendChild(h);
-    ads.forEach(({a, i}) => { $main.appendChild(adCard(a, i)); shown++; });
+      .filter(({a, i}) => matches(a, i, q));
+    if (!items.length) return;
+    // group ads by ad group, preserving first-seen order
+    const order = [], byGroup = new Map();
+    items.forEach(it => {
+      if (!byGroup.has(it.a.adGroup)) { byGroup.set(it.a.adGroup, []); order.push(it.a.adGroup); }
+      byGroup.get(it.a.adGroup).push(it);
+    });
+    $main.appendChild(campNode(camp, order, byGroup));
+    shown += items.length;
   });
   if (!shown) $main.innerHTML = '<div class="empty">No ads match the current filters.</div>';
 }
 
-function adCard(ad, i) {
-  const k = key(ad, i);
-  const isOpen = allOpen || openKeys.has(k);
+/* Level 1 — campaign (carries utm_campaign) */
+function campNode(camp, groups, byGroup) {
+  const open = forceOpen || openCamp.has(camp);
+  const nAds = groups.reduce((s, ag) => s + byGroup.get(ag).length, 0);
   const el = document.createElement('div');
-  el.className = 'ad ' + (ad.state === 'Enabled' ? 'enabled' : 'paused') + (isOpen ? ' open' : '');
-  const disp = (ad.path1 || ad.path2) ? `<span class="disp">/${esc(ad.path1||'')}${ad.path2?'/'+esc(ad.path2):''}</span>` : '';
+  el.className = 'camp' + (open ? ' open' : '');
   el.innerHTML = `
-    <div class="ad-head">
-      <span class="ad-group">${esc(ad.adGroup)}</span>
-      <span class="pill ${ad.state==='Enabled'?'enabled':'paused'}">${esc(ad.state)}</span>
-      <span class="ad-type">RSA</span>
-      <span class="url-wrap">
-        ${disp}
-        <a class="final-url" href="${esc(ad.finalUrl)}" target="_blank" rel="noopener" title="Open live landing page">${esc(ad.finalUrl.replace('https://',''))} ↗</a>
-        <span class="toggle"><span class="car">▸</span> ${ad.headlines.length} headlines · ${ad.descriptions.length} desc</span>
-      </span>
+    <div class="camp-head">
+      <span class="car">▸</span>
+      <span class="camp-name">${esc(CAMP_LABEL[camp] || camp)}</span>
+      <span class="camp-code mono">${esc(camp)}</span>
+      <span class="utm">utm_campaign=${esc(campUtm(camp))}</span>
+      <span class="node-count">${groups.length} ad group${groups.length>1?'s':''} · ${nAds} ad${nAds>1?'s':''}</span>
     </div>
-    <div class="ad-body">
+    <div class="camp-body"></div>`;
+  const body = el.querySelector('.camp-body');
+  groups.forEach(ag => body.appendChild(grpNode(camp, ag, byGroup.get(ag))));
+  el.querySelector('.camp-head').addEventListener('click', () => {
+    toggleSet(openCamp, camp); el.classList.toggle('open');
+  });
+  return el;
+}
+
+/* Level 2 — ad group (carries utm_term) */
+function grpNode(camp, ag, items) {
+  const gk = grpKey(camp, ag);
+  const open = forceOpen || openGrp.has(gk);
+  const el = document.createElement('div');
+  el.className = 'grp' + (open ? ' open' : '');
+  el.innerHTML = `
+    <div class="grp-head">
+      <span class="car">▸</span>
+      <span class="grp-name">${esc(ag)}</span>
+      <span class="utm">utm_term=${esc(termUtm(ag))}</span>
+      <span class="node-count">${items.length} ad${items.length>1?'s':''}</span>
+    </div>
+    <div class="grp-body"></div>`;
+  const body = el.querySelector('.grp-body');
+  items.forEach(({a, i}) => body.appendChild(adNode(a, i)));
+  el.querySelector('.grp-head').addEventListener('click', () => {
+    toggleSet(openGrp, gk); el.classList.toggle('open');
+  });
+  return el;
+}
+
+/* Level 3 — individual ad: its final URL + resolved tracking suffix */
+function adNode(ad, i) {
+  const open = forceOpen || openAd.has(i);
+  const turl = trackedUrl(ad, i);
+  const slug = ad.finalUrl.replace('https://start.credolegal.com', '');
+  const m = MATCH[i];
+  const hubTag = m.hub != null
+    ? `<a class="hub-link" href="review.html#${m.hub}" target="_blank" rel="noopener" title="Open “${esc(m.name)}” in the LP review hub">In hub ↗</a>`
+    : `<span class="nohub" title="This final URL is not one of the review hub's 32 LP variants">no hub page</span>`;
+  const el = document.createElement('div');
+  el.dataset.i = i;
+  el.className = 'adx ' + (ad.state === 'Enabled' ? 'enabled' : 'paused') + (open ? ' open' : '');
+  el.innerHTML = `
+    <div class="adx-head">
+      <span class="car">▸</span>
+      <span class="pill ${ad.state==='Enabled'?'enabled':'paused'}">${esc(ad.state)}</span>
+      <span class="ad-name">${esc(m.name)}</span>
+      <a class="final-url" href="${esc(ad.finalUrl)}" target="_blank" rel="noopener" title="Open live landing page">${esc(slug)} ↗</a>
+      ${hubTag}
+      <span class="adx-meta">${ad.headlines.length} HL · ${ad.descriptions.length} desc</span>
+      <button class="copy-btn mini" data-copy="${esc(turl)}" title="Copy ${source} tracking URL">Copy URL</button>
+    </div>
+    <div class="adx-body">
+      <div class="track">
+        <h4>Final URL + tracking suffix · <span class="src-tag">${source}</span></h4>
+        <div class="track-row">
+          <div class="track-url">${esc(turl)}</div>
+          <button class="copy-btn" data-copy="${esc(turl)}">Copy</button>
+        </div>
+      </div>
       <div class="grid">
         <div class="col">
           <h4>Headlines (${ad.headlines.length})</h4>
@@ -297,11 +503,9 @@ function adCard(ad, i) {
         </div>
       </div>
     </div>`;
-  // Toggle expand on header click, except when the actual URL link is clicked.
-  el.querySelector('.ad-head').addEventListener('click', e => {
-    if (e.target.closest('a.final-url')) return;
-    if (openKeys.has(k)) openKeys.delete(k); else openKeys.add(k);
-    el.classList.toggle('open');
+  el.querySelector('.adx-head').addEventListener('click', e => {
+    if (e.target.closest('a') || e.target.closest('.copy-btn')) return;
+    toggleSet(openAd, i); el.classList.toggle('open');
   });
   return el;
 }
@@ -319,15 +523,63 @@ document.getElementById('state-chips').addEventListener('click', e => {
 });
 $q.addEventListener('input', render);
 document.getElementById('toggle-all').addEventListener('click', e => {
-  allOpen = !allOpen;
-  if (!allOpen) openKeys.clear();
-  e.target.textContent = allOpen ? 'Collapse all' : 'Expand all';
+  allExpanded = !allExpanded;
+  openCamp.clear(); openGrp.clear(); openAd.clear();
+  if (allExpanded) {
+    CAMP_ORDER.forEach(c => openCamp.add(c));
+    ADS.forEach((a, i) => { openGrp.add(grpKey(a.campaign, a.adGroup)); openAd.add(i); });
+  }
+  e.target.textContent = allExpanded ? 'Collapse all' : 'Expand all';
   render();
+});
+document.getElementById('srctog').addEventListener('click', e => {
+  const b = e.target.closest('button[data-src]'); if (!b) return;
+  source = b.dataset.src;
+  document.querySelectorAll('#srctog button').forEach(x => x.classList.toggle('active', x === b));
+  render();
+});
+/* Click-to-copy on any tracking URL (header 'Copy URL' or the block's 'Copy'). */
+$main.addEventListener('click', async e => {
+  const btn = e.target.closest('.copy-btn'); if (!btn) return;
+  e.stopPropagation();
+  const text = btn.dataset.copy;
+  try {
+    await navigator.clipboard.writeText(text);
+  } catch (_) {
+    const ta = document.createElement('textarea');
+    ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand('copy'); } catch (e2) {}
+    ta.remove();
+  }
+  const label = btn.textContent;
+  btn.textContent = 'Copied!'; btn.classList.add('copied');
+  setTimeout(() => { btn.textContent = label; btn.classList.remove('copied'); }, 1200);
 });
 
 paintStats();
 paintCampChips();
 render();
+
+/* Deep link: the review hub links here as ads-map.html#ad-<i> to focus one ad.
+   Open that ad's campaign › ad group › ad path and scroll it into view. */
+function focusAd() {
+  const m = (location.hash || '').match(/^#ad-(\d+)$/);
+  if (!m) return;
+  const i = parseInt(m[1], 10);
+  const ad = ADS[i]; if (!ad) return;
+  campFilter = 'all'; stateFilter = 'all'; $q.value = '';
+  document.querySelectorAll('#state-chips .chip').forEach(c => c.classList.toggle('active', c.dataset.state === 'all'));
+  openCamp.add(ad.campaign);
+  openGrp.add(grpKey(ad.campaign, ad.adGroup));
+  openAd.add(i);
+  paintCampChips();
+  render();
+  const el = $main.querySelector('.adx[data-i="' + i + '"]');
+  if (el) el.scrollIntoView({ block: 'center' });
+}
+focusAd();
+window.addEventListener('hashchange', focusAd);
 </script>
 </body>
 </html>
