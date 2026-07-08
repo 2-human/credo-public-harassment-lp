@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Credo Legal — Campaign · Ad · Phone map</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #111418; background: #f6f7f9; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; }
+  .mono { font-family: ui-monospace, Menlo, monospace; }
+
+  /* Top bar (shared look with the LP review hub) */
+  .topbar { position: sticky; top: 0; z-index: 20; background: #111418; color: #fff; display: flex; align-items: center; gap: 16px; padding: 0 20px; height: 56px; border-bottom: 1px solid #2a2f37; }
+  .brand { font-size: 13px; font-weight: 600; letter-spacing: -0.01em; white-space: nowrap; }
+  .brand .red { color: #ff6b73; }
+  .topbar .title { font-size: 12px; color: #c8cdd6; flex: 1; min-width: 0; }
+  .toolbar { display: flex; gap: 10px; align-items: center; }
+  .toolbar a { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #c8cdd6; border: 1px solid #2a2f37; padding: 6px 12px; text-decoration: none; transition: all .15s; white-space: nowrap; }
+  .toolbar a:hover { color: #fff; border-color: #5b6470; }
+  .toolbar a.back { color: #ff6b73; border-color: #ff6b73; }
+  .toolbar a.back:hover { background: #ff6b73; color: #111418; }
+
+  /* Summary + legend */
+  .controls { background: #fff; border-bottom: 1px solid #e7eaee; padding: 12px 20px; display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; }
+  .stats { display: flex; gap: 16px; align-items: baseline; flex-wrap: wrap; }
+  .stat { display: flex; gap: 6px; align-items: baseline; }
+  .stat b { font-size: 16px; font-weight: 700; }
+  .stat span { font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: #8590a0; }
+  .spacer { flex: 1; }
+  .legend { font-size: 11px; color: #5b6470; display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+  .legend .src { margin-right: 3px; }
+  .note { max-width: 1300px; margin: 12px auto 0; padding: 0 20px; font-size: 12px; color: #5b6470; line-height: 1.55; }
+  .note b { color: #111418; }
+
+  /* Table */
+  main { max-width: 1300px; margin: 0 auto; padding: 14px 20px 80px; }
+  .tablewrap { overflow-x: auto; border: 1px solid #e7eaee; background: #fff; }
+  table { border-collapse: collapse; width: 100%; font-size: 12.5px; }
+  thead th { background: #111418; color: #fff; text-align: left; font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 10px 12px; white-space: nowrap; }
+  td { padding: 8px 12px; vertical-align: top; border-bottom: 1px solid #f1f3f5; }
+  tr.ad-end td { border-bottom: 1px solid #e3e7eb; }
+  tr.camp-end td { border-bottom: 2px solid #cfd5db; }
+
+  td.c-camp { font-weight: 700; font-family: ui-monospace, Menlo, monospace; font-size: 12px; background: #fafbfc; border-left: 3px solid #c92028; border-right: 1px solid #eef0f3; white-space: nowrap; }
+  td.c-camp .friendly { display: block; font-family: -apple-system, sans-serif; font-size: 10px; font-weight: 600; color: #8590a0; letter-spacing: 0.02em; margin-top: 2px; }
+  td.c-ag { font-weight: 600; font-family: ui-monospace, Menlo, monospace; font-size: 12px; background: #fcfcfd; border-right: 1px solid #eef0f3; white-space: nowrap; }
+  td.c-ad { font-size: 12.5px; max-width: 260px; }
+  td.c-url { max-width: 300px; }
+  td.c-url a { font-family: ui-monospace, Menlo, monospace; font-size: 11.5px; color: #c92028; text-decoration: none; word-break: break-all; }
+  td.c-url a:hover { text-decoration: underline; }
+  td.c-src { white-space: nowrap; }
+  td.c-phone { font-family: ui-monospace, Menlo, monospace; font-size: 12.5px; white-space: nowrap; }
+
+  .src { font-size: 9px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 2px 8px; border-radius: 999px; }
+  .src.google { background: #e8eaed; color: #3c4043; }
+  .src.bing   { background: #e7f0fe; color: #1a67d2; }
+  .src.meta   { background: #eef2ff; color: #4338ca; }
+  .blank { color: #c8cdd6; }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">Credo<span class="red">·</span>Legal · Phone map</div>
+  <div class="title">Every campaign → ad group → ad → landing page, with the call-tracking number per platform (UTM source)</div>
+  <div class="toolbar">
+    <a href="ads-map.html" target="_blank" rel="noopener" title="Ads → LP map">Ads → LP ↗</a>
+    <a class="back" href="review.html" title="Back to the LP review hub">← LP review</a>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="stats" id="stats"></div>
+  <div class="spacer"></div>
+  <div class="legend">
+    <span><span class="src google">google</span> Google Ads</span>
+    <span><span class="src bing">bing</span> Bing Ads</span>
+    <span><span class="src meta">meta</span> Meta Ads</span>
+    <span><span class="blank mono">—</span> no value yet</span>
+  </div>
+</div>
+
+<div class="note">
+  Each ad shows its <b>base URL</b> (landing page, no UTM) once, then one row per <b>UTM source</b> with the call-tracking
+  <b>phone number</b> to display for a visitor from that platform. Google covers every ad group; <b>Bing</b> has numbers for
+  7 ad groups; <b>Meta</b> numbers aren't provisioned yet. Blank <b>Ad</b>/<b>Base URL</b> cells are ad groups that are live with a tracking
+  number but whose ads/landing pages weren't in the Google export (Medical, Payday, PMax, All-States → Credit Card). Multiple
+  creatives pointing to the same page are collapsed to one row. This mirrors the review hub's Google/Bing phone switcher.
+</div>
+
+<main>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Campaign</th><th>Ad Group</th><th>Ad</th><th>Base URL</th><th>UTM source</th><th>Phone number</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+</main>
+
+<script>
+/* ───── Data ─────
+   Merged from the "Campaign Phone Numbers" sheet (campaign → ad group → phone per
+   platform) and the Google Ads RSA export (ad → final URL, active + paused).
+   Ad names are the landing-page/destination labels from the review hub. Meta phone
+   column is empty (no numbers provisioned). Canonical source:
+   content/campaigns/campaign-phone-numbers.csv. */
+const CAMP_FRIENDLY = {
+  "S_All-States": "All-States", "S_Garnishment_NW": "Garnishment", "S_Harassment_NW": "Harassment",
+  "S_Lawsuit_NW": "Lawsuit", "S_MedicalDebt_NW": "Medical Debt", "S_PaydayLoan_NW": "Payday Loan",
+  "S_CreditCard_NW": "Credit Card", "PMax_Core_HighLTV": "Performance Max"
+};
+const PLATFORMS = ["google", "bing", "meta"];
+const DATA = [
+ {"campaign":"S_All-States","adGroups":[
+   {"adGroup":"Credit Card","phones":{"google":"(347) 474-9602","bing":"(646) 350-2456","meta":""},"ads":[{"ad":"","baseUrl":""}]},
+   {"adGroup":"Debt Collector","phones":{"google":"(646) 257-2720","bing":"","meta":""},"ads":[{"ad":"Collection Defense","baseUrl":"https://start.credolegal.com/collection-defense"}]},
+   {"adGroup":"FDCPA","phones":{"google":"(718) 865-8350","bing":"","meta":""},"ads":[{"ad":"FCBA & FDCPA Rights","baseUrl":"https://start.credolegal.com/fcba-and-fdcpa"}]},
+   {"adGroup":"Garnishment","phones":{"google":"(917) 267-5502","bing":"","meta":""},"ads":[{"ad":"Stop Wage Garnishment","baseUrl":"https://start.credolegal.com/stop-wage-garnishment"}]}
+ ]},
+ {"campaign":"S_Garnishment_NW","adGroups":[
+   {"adGroup":"Garnishment","phones":{"google":"(720) 414-1751","bing":"(646) 350-2650","meta":""},"ads":[
+     {"ad":"Claim Your Exemptions","baseUrl":"https://start.credolegal.com/wage-garnishment-exemptions"},
+     {"ad":"Fight Active Garnishment","baseUrl":"https://start.credolegal.com/wage-garnishment-attorney"},
+     {"ad":"Prevention — Stop It First","baseUrl":"https://start.credolegal.com/wage-garnishment-prevention"}]}
+ ]},
+ {"campaign":"S_Harassment_NW","adGroups":[
+   {"adGroup":"Creditor_Harassment","phones":{"google":"(201) 416-7080","bing":"(201) 535-3725","meta":""},"ads":[
+     {"ad":"Stop the Calls — Emotional Relief","baseUrl":"https://start.credolegal.com/debt-harassment-stop-calls"},
+     {"ad":"$1,000 Per Violation","baseUrl":"https://start.credolegal.com/debt-harassment-violations"}]},
+   {"adGroup":"FDCPA_Harassment","phones":{"google":"(443) 483-4080","bing":"","meta":""},"ads":[
+     {"ad":"FDCPA Rights Education (verbatim)","baseUrl":"https://start.credolegal.com/debt-harassment-fdcpa-rights"},
+     {"ad":"FDCPA Action — We Sue Them","baseUrl":"https://start.credolegal.com/debt-harassment-fdcpa-attorney"}]}
+ ]},
+ {"campaign":"S_Lawsuit_NW","adGroups":[
+   {"adGroup":"Collection_Lawsuit","phones":{"google":"(212) 561-5902","bing":"(212) 993-7320","meta":""},"ads":[
+     {"ad":"Collection — Respond on Time (CHAMPION)","baseUrl":"https://start.credolegal.com/debt-lawsuit-respond-on-time"},
+     {"ad":"Collection — Proof Challenge","baseUrl":"https://start.credolegal.com/debt-lawsuit-proof"}]},
+   {"adGroup":"Creditor_Suing","phones":{"google":"(347) 523-4568","bing":"","meta":""},"ads":[
+     {"ad":"Defense — Fight Back","baseUrl":"https://start.credolegal.com/debt-lawsuit-fight-back"},
+     {"ad":"Defense — Level the Field","baseUrl":"https://start.credolegal.com/debt-lawsuit-attorney"}]},
+   {"adGroup":"Served_Papers","phones":{"google":"(347) 523-4662","bing":"","meta":""},"ads":[
+     {"ad":"Served Papers — Explore Options","baseUrl":"https://start.credolegal.com/debt-lawsuit-options"},
+     {"ad":"Served Papers — Act Today","baseUrl":"https://start.credolegal.com/debt-lawsuit-summons-respond"}]}
+ ]},
+ {"campaign":"S_MedicalDebt_NW","adGroups":[
+   {"adGroup":"Medical_Lawsuit","phones":{"google":"(612) 260-9170","bing":"(407) 734-2024","meta":""},"ads":[{"ad":"","baseUrl":""}]},
+   {"adGroup":"Medical_Rights","phones":{"google":"(347) 744-9014","bing":"","meta":""},"ads":[{"ad":"","baseUrl":""}]}
+ ]},
+ {"campaign":"S_PaydayLoan_NW","adGroups":[
+   {"adGroup":"Payday_Brand_Harassment","phones":{"google":"(407) 512-0808","bing":"","meta":""},"ads":[{"ad":"","baseUrl":""}]},
+   {"adGroup":"S_PaydayLoan_General","phones":{"google":"(407) 605-5014","bing":"","meta":""},"ads":[{"ad":"","baseUrl":""}]}
+ ]},
+ {"campaign":"S_CreditCard_NW","adGroups":[
+   {"adGroup":"CC_Lawsuit","phones":{"google":"(646) 952-7380","bing":"(718) 521-4180","meta":""},"ads":[
+     {"ad":"Lawsuit — Respond on Time","baseUrl":"https://start.credolegal.com/credit-card-debt-lawsuit-respond"},
+     {"ad":"Lawsuit — Proof / Records","baseUrl":"https://start.credolegal.com/credit-card-debt-lawsuit-records"}]},
+   {"adGroup":"CC_Branded","phones":{"google":"(646) 952-7392","bing":"","meta":""},"ads":[
+     {"ad":"Harassment — Stop Calls","baseUrl":"https://start.credolegal.com/credit-card-debt-stop-calls"},
+     {"ad":"Harassment — $1,000 Per Violation","baseUrl":"https://start.credolegal.com/credit-card-debt-violations"}]},
+   {"adGroup":"CC_Negotiation","phones":{"google":"(646) 952-7404","bing":"","meta":""},"ads":[
+     {"ad":"Negotiation — Negotiate Down","baseUrl":"https://start.credolegal.com/credit-card-debt-negotiation"},
+     {"ad":"Negotiation — Challenge Validity","baseUrl":"https://start.credolegal.com/credit-card-debt-challenge"}]}
+ ]},
+ {"campaign":"PMax_Core_HighLTV","adGroups":[
+   {"adGroup":"","phones":{"google":"","bing":"(443) 341-9092","meta":""},"ads":[{"ad":"","baseUrl":""}]}
+ ]}
+];
+
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const blank = '<span class="blank">—</span>';
+
+/* Stats */
+(function () {
+  const ags = DATA.reduce((s, c) => s + c.adGroups.length, 0);
+  const ads = DATA.reduce((s, c) => s + c.adGroups.reduce((t, ag) => t + ag.ads.length, 0), 0);
+  const bing = DATA.reduce((s, c) => s + c.adGroups.filter(ag => ag.phones.bing).length, 0);
+  const cell = (n, l) => `<div class="stat"><b>${n}</b><span>${l}</span></div>`;
+  document.getElementById('stats').innerHTML =
+    cell(DATA.length, 'campaigns') + cell(ags, 'ad groups') + cell(ads, 'ads') +
+    cell(ads * 3, 'rows') + cell(bing, 'bing numbers');
+})();
+
+/* Build the row-spanned table */
+(function () {
+  const tb = document.getElementById('tbody');
+  DATA.forEach(camp => {
+    const campRows = camp.adGroups.reduce((s, ag) => s + ag.ads.length * 3, 0);
+    let campFirst = true;
+    const lastAg = camp.adGroups.length - 1;
+    camp.adGroups.forEach((ag, agi) => {
+      const agRows = ag.ads.length * 3;
+      let agFirst = true;
+      const lastAd = ag.ads.length - 1;
+      ag.ads.forEach((ad, adi) => {
+        PLATFORMS.forEach((plat, pi) => {
+          const tr = document.createElement('tr');
+          let html = '';
+          if (campFirst) {
+            const fr = CAMP_FRIENDLY[camp.campaign] || '';
+            html += `<td class="c-camp" rowspan="${campRows}">${camp.campaign ? esc(camp.campaign) : blank}${fr ? `<span class="friendly">${esc(fr)}</span>` : ''}</td>`;
+            campFirst = false;
+          }
+          if (agFirst) {
+            html += `<td class="c-ag" rowspan="${agRows}">${ag.adGroup ? esc(ag.adGroup) : blank}</td>`;
+            agFirst = false;
+          }
+          if (pi === 0) {
+            html += `<td class="c-ad" rowspan="3">${ad.ad ? esc(ad.ad) : blank}</td>`;
+            html += `<td class="c-url" rowspan="3">${ad.baseUrl ? `<a href="${esc(ad.baseUrl)}" target="_blank" rel="noopener">${esc(ad.baseUrl.replace('https://',''))}</a>` : blank}</td>`;
+          }
+          html += `<td class="c-src"><span class="src ${plat}">${plat}</span></td>`;
+          const ph = ag.phones[plat];
+          html += `<td class="c-phone">${ph ? esc(ph) : blank}</td>`;
+          tr.innerHTML = html;
+          if (pi === 2) tr.className = (agi === lastAg && adi === lastAd) ? 'camp-end' : 'ad-end';
+          tb.appendChild(tr);
+        });
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>
