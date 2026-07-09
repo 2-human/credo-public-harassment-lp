@@ -32,6 +32,10 @@ const NEVER_ANCHOR = new Set([
   'col','colgroup'
 ]);
 const CHROME_SEL = '.review-banner,.review-sidebar,.review-modal-overlay,.review-floating-pill,[data-review-skip]';
+/* Opt-in (set window.CREDO_REVIEW_ANCHOR_ALL=true before this loads): also anchor
+   every table cell, even empty ones with no direct text — so data pages like the
+   phone map can be commented on cell-by-cell. Off by default; LP pages unaffected. */
+const ANCHOR_CELLS = !!(typeof window !== 'undefined' && window.CREDO_REVIEW_ANCHOR_ALL);
 function hasDirectText(el){
   for (const child of el.childNodes) {
     if (child.nodeType === Node.TEXT_NODE && child.textContent.trim().length >= 2) return true;
@@ -251,7 +255,7 @@ function anchorPass(){
     if(elm.hasAttribute('data-review-skip'))return;
     const tag=elm.tagName.toLowerCase();
     if(NEVER_ANCHOR.has(tag))return;
-    if(!hasDirectText(elm))return;
+    if(!hasDirectText(elm) && !(ANCHOR_CELLS && tag==='td' && (elm.textContent||'').trim().length<=1))return;   // empty (— / blank) cells anchorable when opted in
     if(isInSiteChrome(elm))return;                 // chromeAnchored opt-in not enabled
     ANCHOR_COUNTERS[tag]=(ANCHOR_COUNTERS[tag]||0)+1;
     elm.setAttribute('data-comment-id',SLUG+'-'+tag+'-'+ANCHOR_COUNTERS[tag]);

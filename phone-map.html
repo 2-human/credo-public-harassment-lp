@@ -307,6 +307,7 @@ render();
 <!-- Review / commenting widget — same one used across the LP hub. Inert until
      ?review=1 (shows a floating "Comments" button); then loads the Firebase-backed
      comment overlay. Comments are bucketed per page by pathname. -->
+<script>window.CREDO_REVIEW_ANCHOR_ALL = true;  /* make every table cell commentable, including empty ones */</script>
 <script src="review.config.js"></script>
 <script src="review-bootstrap.js"></script>
 </body>
