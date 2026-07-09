@@ -121,9 +121,10 @@
 </main>
 
 <script>
-/* IIFE-scoped so this page's globals (esc, render, …) don't collide with the
-   review widget's classic-script globals of the same name. */
-(function () {
+/* Page script for the phone-map data grid. (Formerly IIFE-wrapped to avoid
+   global collisions with the review widget's esc/render; the widget now
+   self-isolates per library/features/review-widget/js-isolation.md, so the
+   defensive wrap is dropped.) */
 /* ───── Data ─────
    SEARCH = the Google/Bing account (campaign → ad group → ad → final URL) merged
    with per-ad-group phone numbers from the "Campaign Phone Numbers" sheet. Every
@@ -301,14 +302,19 @@ function paintCarets() {
 
 paintCarets();
 render();
-})();
 </script>
 
 <!-- Review / commenting widget — same one used across the LP hub. Inert until
      ?review=1 (shows a floating "Comments" button); then loads the Firebase-backed
      comment overlay. Comments are bucketed per page by pathname. -->
-<script>window.CREDO_REVIEW_ANCHOR_ALL = true;  /* make every table cell commentable, including empty ones */</script>
 <script src="review.config.js"></script>
+<script>
+  /* C17 · library/features/review-widget/commentable-everything.md → anchorEmpty.
+     This data grid opts empty <td> cells (blank tracking-number / base-URL cells)
+     into commenting. Page-scoped — only this grid sets it. Replaces the former
+     window.CREDO_REVIEW_ANCHOR_ALL core-gate flag. */
+  (window.CREDO_REVIEW_CONFIG = window.CREDO_REVIEW_CONFIG || {}).anchorEmpty = ['td'];
+</script>
 <script src="review-bootstrap.js"></script>
 </body>
 </html>

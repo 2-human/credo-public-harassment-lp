@@ -233,9 +233,10 @@
 <main id="main"></main>
 
 <script>
-/* IIFE-scoped so this page's globals (esc, render, …) don't collide with the
-   review widget's classic-script globals of the same name. */
-(function () {
+/* Page script for the ads-map data grid. (Formerly IIFE-wrapped to avoid
+   global collisions with the review widget's esc/render; the widget now
+   self-isolates per library/features/review-widget/js-isolation.md, so the
+   defensive wrap is dropped.) */
 /* ───── Data ─────
    26 responsive search ads extracted from
    `intake/Google and Bing Structure.numbers` (Google Ads RSA export,
@@ -748,7 +749,6 @@ function focusAd() {
 }
 focusAd();
 window.addEventListener('hashchange', focusAd);
-})();
 </script>
 
 <!-- Review / commenting widget — same one used across the LP hub. Inert until

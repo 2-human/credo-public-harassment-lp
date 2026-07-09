@@ -2,6 +2,15 @@
  * Floating add-comment pill (deepest hovered anchor) + banner + sidebar with
  * three status tabs (Active/Applied/Archived) per comment-lifecycle.md.
  * Persists via Firebase RTDB (/comments/{id}) or a localStorage fallback. */
+/* C6 · library/features/review-widget/js-isolation.md — the entire widget body
+ * is wrapped in one IIFE so its helpers (el, esc, render, modal, store, …) are
+ * IIFE-locals, never bare top-level globals. A host page that declares its own
+ * top-level `esc`/`render` (e.g. ads-map.html / phone-map.html data grids) no
+ * longer collides with the widget, so those pages need no defensive wrap of
+ * their own. The only cross-boundary surface is the window.__rw* hooks below
+ * (host-called re-render/reveal), which already go through `window.` explicitly
+ * and so survive the wrap. This is the JS-scope parallel to css-isolation.md. */
+(function(){
 const CFG = (window.CREDO_REVIEW_CONFIG) || {};
 const L = Object.assign({
   bannerTitle:'Review mode', localOnly:'Local-only', exit:'Exit review', sidebarTitle:'Comments',
@@ -32,10 +41,13 @@ const NEVER_ANCHOR = new Set([
   'col','colgroup'
 ]);
 const CHROME_SEL = '.review-banner,.review-sidebar,.review-modal-overlay,.review-floating-pill,[data-review-skip]';
-/* Opt-in (set window.CREDO_REVIEW_ANCHOR_ALL=true before this loads): also anchor
-   every table cell, even empty ones with no direct text — so data pages like the
-   phone map can be commented on cell-by-cell. Off by default; LP pages unaffected. */
-const ANCHOR_CELLS = !!(typeof window !== 'undefined' && window.CREDO_REVIEW_ANCHOR_ALL);
+/* C17 · library/features/review-widget/commentable-everything.md → anchorEmpty.
+   A tag listed in CREDO_REVIEW_CONFIG.anchorEmpty bypasses the direct-text gate
+   when the element is genuinely (near-)empty, so blank data-grid cells (— / empty)
+   are commentable. A page opts in via config (phone-map sets anchorEmpty:['td']);
+   off by default, so LP pages are unaffected. Replaces the former hardcoded
+   ANCHOR_CELLS / window.CREDO_REVIEW_ANCHOR_ALL core-gate flag. */
+const ANCHOR_EMPTY = Array.isArray(CFG.anchorEmpty) ? CFG.anchorEmpty : [];
 function hasDirectText(el){
   for (const child of el.childNodes) {
     if (child.nodeType === Node.TEXT_NODE && child.textContent.trim().length >= 2) return true;
@@ -255,7 +267,7 @@ function anchorPass(){
     if(elm.hasAttribute('data-review-skip'))return;
     const tag=elm.tagName.toLowerCase();
     if(NEVER_ANCHOR.has(tag))return;
-    if(!hasDirectText(elm) && !(ANCHOR_CELLS && tag==='td' && (elm.textContent||'').trim().length<=1))return;   // empty (— / blank) cells anchorable when opted in
+    if(!hasDirectText(elm) && !(ANCHOR_EMPTY.includes(tag) && (elm.textContent||'').trim().length<=1))return;   // anchorEmpty: listed tags anchorable even when (near-)empty
     if(isInSiteChrome(elm))return;                 // chromeAnchored opt-in not enabled
     ANCHOR_COUNTERS[tag]=(ANCHOR_COUNTERS[tag]||0)+1;
     elm.setAttribute('data-comment-id',SLUG+'-'+tag+'-'+ANCHOR_COUNTERS[tag]);
@@ -542,3 +554,4 @@ function spotlight(anchorOrComment){
   window.__rwRefresh=render;
   ADAPTER.subscribe(data=>{COMMENTS=data||{};render()});
 })();
+})();  /* end C6 js-isolation IIFE — see file head */
