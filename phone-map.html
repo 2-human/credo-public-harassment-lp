@@ -99,20 +99,20 @@
     <table>
       <thead>
         <tr class="head">
-          <th data-sort="campaign">Campaign<span class="caret"></span></th>
-          <th data-sort="adGroup">Ad Group<span class="caret"></span></th>
-          <th data-sort="ad">Ad<span class="caret"></span></th>
           <th data-sort="baseUrl">Base URL<span class="caret"></span></th>
           <th data-sort="utmSource">UTM source<span class="caret"></span></th>
           <th data-sort="phone">Phone number<span class="caret"></span></th>
+          <th data-sort="campaign">Campaign<span class="caret"></span></th>
+          <th data-sort="adGroup">Ad Group<span class="caret"></span></th>
+          <th data-sort="ad">Ad<span class="caret"></span></th>
         </tr>
         <tr class="filters">
-          <th><select data-col="campaign"></select></th>
-          <th><input data-col="adGroup" type="search" placeholder="filter…" autocomplete="off"/></th>
-          <th><input data-col="ad" type="search" placeholder="filter…" autocomplete="off"/></th>
           <th><input data-col="baseUrl" type="search" placeholder="filter…" autocomplete="off"/></th>
           <th><select data-col="utmSource"></select></th>
           <th><input data-col="phone" type="search" placeholder="filter…" autocomplete="off"/></th>
+          <th><select data-col="campaign"></select></th>
+          <th><input data-col="adGroup" type="search" placeholder="filter…" autocomplete="off"/></th>
+          <th><input data-col="ad" type="search" placeholder="filter…" autocomplete="off"/></th>
         </tr>
       </thead>
       <tbody id="tbody"></tbody>
@@ -249,7 +249,7 @@ function match(r) {
   });
 }
 
-let sortCol = null, sortDir = 'asc';
+let sortCol = 'baseUrl', sortDir = 'asc';   // default: grouped by landing page
 function render() {
   const tb = document.getElementById('tbody');
   let rows = ROWS.filter(match);
@@ -264,12 +264,12 @@ function render() {
   }
   tb.innerHTML = rows.length ? rows.map(r => `
     <tr data-src="${r.utmSource}">
-      <td class="c-camp">${r.campaign ? esc(r.campaign) : blank}</td>
-      <td class="c-ag">${r.adGroup ? esc(r.adGroup) : blank}</td>
-      <td class="c-ad">${r.ad ? esc(r.ad) : blank}</td>
       <td class="c-url">${r.baseUrl ? `<a href="${esc(r.baseUrl)}" target="_blank" rel="noopener">${esc(r.baseUrl.replace('https://',''))}</a>` : blank}</td>
       <td class="c-src"><span class="src ${r.utmSource}">${r.utmSource}</span></td>
       <td class="c-phone">${r.phone ? esc(r.phone) : blank}</td>
+      <td class="c-camp">${r.campaign ? esc(r.campaign) : blank}</td>
+      <td class="c-ag">${r.adGroup ? esc(r.adGroup) : blank}</td>
+      <td class="c-ad">${r.ad ? esc(r.ad) : blank}</td>
     </tr>`).join('') : `<tr class="empty-row"><td colspan="6">No rows match the current filters.</td></tr>`;
   document.getElementById('count').textContent = `${rows.length} of ${ROWS.length} rows`;
 }
@@ -280,7 +280,7 @@ document.querySelectorAll('thead [data-col]').forEach(el => {
 document.getElementById('clear').addEventListener('click', () => {
   COLS.forEach(c => filters[c] = "");
   document.querySelectorAll('thead [data-col]').forEach(el => { el.value = ""; });
-  sortCol = null; paintCarets();
+  sortCol = 'baseUrl'; sortDir = 'asc'; paintCarets();
   render();
 });
 
@@ -299,6 +299,7 @@ function paintCarets() {
   });
 }
 
+paintCarets();
 render();
 })();
 </script>
