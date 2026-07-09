@@ -233,6 +233,9 @@
 <main id="main"></main>
 
 <script>
+/* IIFE-scoped so this page's globals (esc, render, …) don't collide with the
+   review widget's classic-script globals of the same name. */
+(function () {
 /* ───── Data ─────
    26 responsive search ads extracted from
    `intake/Google and Bing Structure.numbers` (Google Ads RSA export,
@@ -745,6 +748,13 @@ function focusAd() {
 }
 focusAd();
 window.addEventListener('hashchange', focusAd);
+})();
 </script>
+
+<!-- Review / commenting widget — same one used across the LP hub. Inert until
+     ?review=1 (shows a floating "Comments" button); then loads the Firebase-backed
+     comment overlay. Comments are bucketed per page by pathname. -->
+<script src="review.config.js"></script>
+<script src="review-bootstrap.js"></script>
 </body>
 </html>

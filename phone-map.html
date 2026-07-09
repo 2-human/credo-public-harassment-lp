@@ -121,6 +121,9 @@
 </main>
 
 <script>
+/* IIFE-scoped so this page's globals (esc, render, …) don't collide with the
+   review widget's classic-script globals of the same name. */
+(function () {
 /* ───── Data ─────
    SEARCH = the Google/Bing account (campaign → ad group → ad → final URL) merged
    with per-ad-group phone numbers from the "Campaign Phone Numbers" sheet. Every
@@ -297,6 +300,13 @@ function paintCarets() {
 }
 
 render();
+})();
 </script>
+
+<!-- Review / commenting widget — same one used across the LP hub. Inert until
+     ?review=1 (shows a floating "Comments" button); then loads the Firebase-backed
+     comment overlay. Comments are bucketed per page by pathname. -->
+<script src="review.config.js"></script>
+<script src="review-bootstrap.js"></script>
 </body>
 </html>
