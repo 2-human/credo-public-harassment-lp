@@ -86,8 +86,8 @@
 
 <div class="note">
   One row per <b>ad × platform</b>. <b>Google</b> and <b>Bing</b> share the search campaigns (Bing mirrors Google's structure;
-  its number is blank where Bing isn't tracking that ad group). <b>Meta</b> is its own campaign — <span class="mono">Debt Defense v3</span>
-  → 5 ad sets → 14 ads — so its rows carry their own campaign/ad-group names; Meta numbers aren't provisioned yet.
+  its number is blank where Bing isn't tracking that ad group). <b>Meta</b> is its own campaign — <span class="mono">Debt Defense v4</span>
+  → 4 ad sets → 14 ads (Credit Card &amp; Medical merged) — so its rows carry their own campaign/ad-group names; Meta numbers aren't provisioned yet.
   <b>base URL</b> + <b>UTM source</b> = the tracked destination; <b>phone number</b> is the call-tracking number to show for that source.
   Blank cells are values we don't have yet. Use the filter under each column header.
 </div>
@@ -118,7 +118,7 @@
    SEARCH = the Google/Bing account (campaign → ad group → ad → final URL) merged
    with per-ad-group phone numbers from the "Campaign Phone Numbers" sheet. Every
    search ad becomes a Google row and a Bing row. META = the separate Meta campaign
-   (Debt Defense v3 → ad sets → ads); each becomes one Meta row. Canonical data:
+   (Debt Defense v4 → 4 ad sets → ads); each becomes one Meta row. Canonical data:
    content/campaigns/campaign-phone-numbers.csv. */
 const SEARCH = [
  {"campaign":"S_All-States","adGroups":[
@@ -181,20 +181,20 @@ const SEARCH = [
    {"adGroup":"","phones":{"google":"","bing":"(443) 341-9092"},"ads":[{"ad":"","baseUrl":""}]}
  ]}
 ];
-const META_CAMPAIGN = "Debt Defense v3 (Meta)";
+const META_CAMPAIGN = "Debt Defense v4 (Meta)";
 const META = [
- {"adSet":"Credit Card","ad":"CC_Lawsuit","baseUrl":"https://start.credolegal.com/credit-card-debt-lawsuit-respond"},
- {"adSet":"Credit Card","ad":"CC_Harassment","baseUrl":"https://start.credolegal.com/credit-card-debt-stop-calls"},
- {"adSet":"Credit Card","ad":"CC_Negotiation","baseUrl":"https://start.credolegal.com/credit-card-debt-negotiation"},
+ {"adSet":"Credit Card & Medical","ad":"CC_Lawsuit","baseUrl":"https://start.credolegal.com/credit-card-debt-lawsuit-respond"},
+ {"adSet":"Credit Card & Medical","ad":"CC_Harassment","baseUrl":"https://start.credolegal.com/credit-card-debt-stop-calls"},
+ {"adSet":"Credit Card & Medical","ad":"CC_Negotiation","baseUrl":"https://start.credolegal.com/credit-card-debt-negotiation"},
+ {"adSet":"Credit Card & Medical","ad":"Medical_Harassment","baseUrl":"https://start.credolegal.com/medical-debt-bills-errors"},
+ {"adSet":"Credit Card & Medical","ad":"Medical_Lawsuit","baseUrl":"https://start.credolegal.com/medical-debt-lawsuit-respond"},
+ {"adSet":"Credit Card & Medical","ad":"Medical_Rights","baseUrl":"https://start.credolegal.com/medical-debt-credit-report-removal"},
  {"adSet":"Lawsuit","ad":"Collection_Lawsuit","baseUrl":"https://start.credolegal.com/debt-lawsuit-respond-on-time"},
  {"adSet":"Lawsuit","ad":"Creditor_Suing","baseUrl":"https://start.credolegal.com/debt-lawsuit-attorney"},
  {"adSet":"Lawsuit","ad":"Served_Papers","baseUrl":"https://start.credolegal.com/debt-lawsuit-summons-respond"},
  {"adSet":"Harassment","ad":"Creditor_Harassment","baseUrl":"https://start.credolegal.com/debt-harassment-stop-calls"},
  {"adSet":"Harassment","ad":"FDCPA_Harassment","baseUrl":"https://start.credolegal.com/debt-harassment-fdcpa-attorney"},
  {"adSet":"Harassment","ad":"Multiple_Collectors","baseUrl":"https://start.credolegal.com/multiple-collectors-one-attorney"},
- {"adSet":"Medical Debt","ad":"Medical_Harassment","baseUrl":"https://start.credolegal.com/medical-debt-bills-errors"},
- {"adSet":"Medical Debt","ad":"Medical_Lawsuit","baseUrl":"https://start.credolegal.com/medical-debt-lawsuit-respond"},
- {"adSet":"Medical Debt","ad":"Medical_Rights","baseUrl":"https://start.credolegal.com/medical-debt-credit-report-removal"},
  {"adSet":"Garnishment","ad":"Pre_Judgment_Garn","baseUrl":"https://start.credolegal.com/wage-garnishment-prevention"},
  {"adSet":"Garnishment","ad":"Post_Judgment_Garn","baseUrl":"https://start.credolegal.com/wage-garnishment-exemptions"}
 ];
