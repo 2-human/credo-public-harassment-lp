@@ -1,0 +1,112 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Credo Legal — Blog</title>
+<style>
+  :root{ --red:#c92028; --ink:#1a1d23; --muted:#6b7280; --line:#e6e8ec; --bg:#f7f8fa; --card:#fff; }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--bg)}
+  a{color:inherit; text-decoration:none}
+  .topbar{position:sticky; top:0; z-index:10; display:flex; align-items:center; gap:14px; height:56px; padding:0 20px;
+    background:#fff; border-bottom:1px solid var(--line)}
+  .brand{display:flex; align-items:center; gap:10px; font-weight:700; white-space:nowrap}
+  .brand img{height:24px; display:block}
+  .brand .t small{display:block; font-weight:500; color:var(--muted); font-size:11px}
+  .spacer{flex:1}
+  .toolbar a{font-size:12.5px; color:var(--red); border:1px solid var(--line); padding:6px 11px; border-radius:7px; background:#fff}
+  .toolbar a:hover{background:#fff4f4; border-color:#f2c9cb}
+  .hero{max-width:1180px; margin:0 auto; padding:34px 24px 10px}
+  .hero h1{font-size:30px; font-weight:800; letter-spacing:-.02em; margin:0 0 6px}
+  .hero p{color:var(--muted); margin:0 0 18px; max-width:640px}
+  .controls{display:flex; gap:12px; align-items:center; flex-wrap:wrap}
+  .controls input{flex:1; min-width:220px; max-width:420px; padding:9px 12px; border:1px solid var(--line); border-radius:9px; font-size:14px; background:#fff}
+  .filters{display:flex; gap:7px; flex-wrap:wrap}
+  .fchip{font-size:12px; color:var(--muted); background:#fff; border:1px solid var(--line); border-radius:20px; padding:4px 12px; cursor:pointer}
+  .fchip:hover{border-color:#c9ced6}
+  .fchip.on{background:var(--red); color:#fff; border-color:var(--red)}
+  .wrap{max-width:1180px; margin:0 auto; padding:18px 24px 80px}
+  .count{font-size:12.5px; color:var(--muted); margin:6px 2px 14px}
+  .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:18px}
+  .card{display:flex; flex-direction:column; background:var(--card); border:1px solid var(--line); border-radius:14px;
+    padding:18px 18px 16px; box-shadow:0 1px 2px rgba(20,20,40,.04); transition:box-shadow .15s, transform .15s, border-color .15s}
+  .card:hover{box-shadow:0 8px 24px rgba(20,20,40,.10); transform:translateY(-2px); border-color:#dfe2e8}
+  .card .pill{align-self:flex-start; font-size:10.5px; font-weight:700; letter-spacing:.03em; text-transform:uppercase;
+    color:var(--red); background:#fff4f4; border:1px solid #f2d3d4; border-radius:20px; padding:3px 10px; margin-bottom:11px}
+  .card h2{font-size:17px; font-weight:700; line-height:1.32; margin:0 0 8px; letter-spacing:-.01em}
+  .card .ex{font-size:13.5px; color:#5a616b; line-height:1.5; margin:0 0 14px; flex:1;
+    display:-webkit-box; -webkit-line-clamp:4; -webkit-box-orient:vertical; overflow:hidden}
+  .card .read{font-size:12.5px; font-weight:600; color:var(--red)}
+  .empty{color:var(--muted); padding:40px 4px; text-align:center}
+  @media (max-width:560px){ .brand .t small{display:none} .hero h1{font-size:24px} }
+</style>
+
+<div class="topbar">
+  <a class="brand" href="review.html" title="Back to review hub"><img src="assets/credo-logo.png" alt="Credo Legal"><span class="t">Blog<small>Article library</small></span></a>
+  <span class="spacer"></span>
+  <span class="toolbar"><a href="review.html">← Review hub</a></span>
+</div>
+
+<header class="hero">
+  <h1>Credo Legal Blog</h1>
+  <p>Plain-language guides to challenging debt, your rights under the FDCPA and FCRA, and what to do when a collector comes after you.</p>
+  <div class="controls">
+    <input id="q" type="search" placeholder="Search articles…" autocomplete="off">
+    <div class="filters" id="filters"></div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="count" id="count"></div>
+  <div class="grid" id="grid"></div>
+</div>
+
+<script src="blog-index.js"></script>
+<script>
+(function () {
+  var ALL = (window.CREDO_BLOG_INDEX || []);
+  var $grid = document.getElementById('grid'), $q = document.getElementById('q'),
+      $count = document.getElementById('count'), $filters = document.getElementById('filters');
+  var pillar = 'all';
+
+  function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g,function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+
+  // pillar filter chips (in first-seen order)
+  var pillars = [];
+  ALL.forEach(function(a){ if(a.pillar && pillars.indexOf(a.pillar)<0) pillars.push(a.pillar); });
+  var chips = [{k:'all',label:'All'}].concat(pillars.map(function(p){
+    var a = ALL.filter(function(x){return x.pillar===p;})[0];
+    return {k:p, label:(a&&a.pillarLabel)||p};
+  }));
+  $filters.innerHTML = chips.map(function(c){
+    return '<span class="fchip'+(c.k==='all'?' on':'')+'" data-k="'+esc(c.k)+'">'+esc(c.label)+'</span>';
+  }).join('');
+  $filters.addEventListener('click', function(e){
+    var c = e.target.closest('.fchip'); if(!c) return;
+    pillar = c.dataset.k;
+    $filters.querySelectorAll('.fchip').forEach(function(x){ x.classList.toggle('on', x.dataset.k===pillar); });
+    render();
+  });
+
+  function render(){
+    var f = $q.value.trim().toLowerCase();
+    var items = ALL.filter(function(a){
+      if(pillar!=='all' && a.pillar!==pillar) return false;
+      if(!f) return true;
+      return (a.title+' '+a.excerpt+' '+a.pillarLabel).toLowerCase().indexOf(f)>-1;
+    });
+    $count.textContent = items.length + (items.length===1?' article':' articles');
+    if(!items.length){ $grid.innerHTML=''; $grid.insertAdjacentHTML('beforebegin',''); $grid.innerHTML='<div class="empty">No articles match your search.</div>'; return; }
+    $grid.innerHTML = items.map(function(a){
+      return '<a class="card" href="blog-post.html?slug='+encodeURIComponent(a.slug)+'">'+
+        '<span class="pill">'+esc(a.pillarLabel||a.pillar)+'</span>'+
+        '<h2>'+esc(a.title)+'</h2>'+
+        '<p class="ex">'+esc(a.excerpt)+'</p>'+
+        '<span class="read">Read article →</span></a>';
+    }).join('');
+  }
+
+  $q.addEventListener('input', render);
+  render();
+})();
+</script>
