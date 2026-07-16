@@ -1,0 +1,196 @@
+/* Per-LP phone numbers by traffic source (auto-generated: build-phone-map.js).
+ * default = Google/on-page number; blank bing/meta => fall back to default. Meta unassigned in source data. */
+window.CREDO_PHONE_MAP = {
+ "act-fast": {
+  "default": "(718) 865-8350",
+  "google": "(718) 865-8350",
+  "bing": "",
+  "meta": ""
+ },
+ "attorney": {
+  "default": "(443) 483-4080",
+  "google": "(443) 483-4080",
+  "bing": "",
+  "meta": ""
+ },
+ "cc-challenge": {
+  "default": "(646) 952-7404",
+  "google": "(646) 952-7404",
+  "bing": "",
+  "meta": ""
+ },
+ "cc-lawsuit-records": {
+  "default": "(646) 952-7380",
+  "google": "(646) 952-7380",
+  "bing": "(718) 521-4180",
+  "meta": ""
+ },
+ "cc-lawsuit-respond": {
+  "default": "(646) 952-7380",
+  "google": "(646) 952-7380",
+  "bing": "(718) 521-4180",
+  "meta": ""
+ },
+ "cc-negotiation": {
+  "default": "(646) 952-7404",
+  "google": "(646) 952-7404",
+  "bing": "",
+  "meta": ""
+ },
+ "cc-stop-calls": {
+  "default": "(646) 952-7392",
+  "google": "(646) 952-7392",
+  "bing": "",
+  "meta": ""
+ },
+ "cc-violations": {
+  "default": "(646) 952-7392",
+  "google": "(646) 952-7392",
+  "bing": "",
+  "meta": ""
+ },
+ "garn-attorney": {
+  "default": "(720) 414-1751",
+  "google": "(720) 414-1751",
+  "bing": "(646) 350-2650",
+  "meta": ""
+ },
+ "garn-exemptions": {
+  "default": "(720) 414-1751",
+  "google": "(720) 414-1751",
+  "bing": "(646) 350-2650",
+  "meta": ""
+ },
+ "garn-prevention": {
+  "default": "(720) 414-1751",
+  "google": "(720) 414-1751",
+  "bing": "(646) 350-2650",
+  "meta": ""
+ },
+ "lawsuit-attorney": {
+  "default": "(347) 523-4568",
+  "google": "(347) 523-4568",
+  "bing": "",
+  "meta": ""
+ },
+ "lawsuit-fight-back": {
+  "default": "(347) 523-4568",
+  "google": "(347) 523-4568",
+  "bing": "",
+  "meta": ""
+ },
+ "lawsuit-options": {
+  "default": "(347) 523-4662",
+  "google": "(347) 523-4662",
+  "bing": "",
+  "meta": ""
+ },
+ "lawsuit-proof": {
+  "default": "(212) 561-5902",
+  "google": "(212) 561-5902",
+  "bing": "(212) 993-7320",
+  "meta": ""
+ },
+ "lawsuit-respond": {
+  "default": "(212) 561-5902",
+  "google": "(212) 561-5902",
+  "bing": "(212) 993-7320",
+  "meta": ""
+ },
+ "lawsuit-summons": {
+  "default": "(347) 523-4662",
+  "google": "(347) 523-4662",
+  "bing": "",
+  "meta": ""
+ },
+ "med-bills-errors": {
+  "default": "(612) 260-9170",
+  "google": "(612) 260-9170",
+  "bing": "(407) 734-2024",
+  "meta": ""
+ },
+ "med-credit-report": {
+  "default": "(347) 744-9014",
+  "google": "(347) 744-9014",
+  "bing": "",
+  "meta": ""
+ },
+ "med-fdcpa-rights": {
+  "default": "(347) 744-9014",
+  "google": "(347) 744-9014",
+  "bing": "",
+  "meta": ""
+ },
+ "med-lawsuit-respond": {
+  "default": "(612) 260-9170",
+  "google": "(612) 260-9170",
+  "bing": "(407) 734-2024",
+  "meta": ""
+ },
+ "more-money": {
+  "default": "(347) 474-9602",
+  "google": "(347) 474-9602",
+  "bing": "(646) 350-2456",
+  "meta": ""
+ },
+ "one-attorney": {
+  "default": "(347) 474-9602",
+  "google": "(347) 474-9602",
+  "bing": "(646) 350-2456",
+  "meta": ""
+ },
+ "payday-fight-back": {
+  "default": "(347) 744-9014",
+  "google": "(347) 744-9014",
+  "bing": "",
+  "meta": ""
+ },
+ "payday-harassment": {
+  "default": "(407) 512-0808",
+  "google": "(407) 512-0808",
+  "bing": "",
+  "meta": ""
+ },
+ "payday-lawsuit-proof": {
+  "default": "(347) 744-9014",
+  "google": "(347) 744-9014",
+  "bing": "",
+  "meta": ""
+ },
+ "payday-lawsuit-respond": {
+  "default": "(347) 744-9014",
+  "google": "(347) 744-9014",
+  "bing": "",
+  "meta": ""
+ },
+ "payday-rights": {
+  "default": "(347) 744-9014",
+  "google": "(347) 744-9014",
+  "bing": "",
+  "meta": ""
+ },
+ "payday-violations": {
+  "default": "(407) 512-0808",
+  "google": "(407) 512-0808",
+  "bing": "",
+  "meta": ""
+ },
+ "rights-verbatim": {
+  "default": "(443) 483-4080",
+  "google": "(443) 483-4080",
+  "bing": "",
+  "meta": ""
+ },
+ "stop-calls": {
+  "default": "(201) 416-7080",
+  "google": "(201) 416-7080",
+  "bing": "(201) 535-3725",
+  "meta": ""
+ },
+ "violations": {
+  "default": "(201) 416-7080",
+  "google": "(201) 416-7080",
+  "bing": "(201) 535-3725",
+  "meta": ""
+ }
+};

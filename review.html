@@ -52,6 +52,27 @@
   .toolbar a.live { color: #ff6b73; border-color: #ff6b73; }
   .toolbar a.live:hover { background: #ff6b73; color: #111418; }
 
+  /* Sections dropdown (added 2026-07-10): consolidates the page/tool links so the
+     header stays uncluttered; the switchers (mix, phone, kbd, open/live) remain inline. */
+  .menu { position: relative; display: inline-flex; }
+  .menu-btn::after { content: " ▾"; color: #8590a0; }
+  .menu.open .menu-btn { color: #fff; border-color: #5b6470; background: #1a1e25; }
+  .menu-panel {
+    position: absolute; top: calc(100% + 6px); right: 0; z-index: 60;
+    min-width: 190px; padding: 5px; display: none; flex-direction: column;
+    background: #1a1e25; border: 1px solid #2a2f37; border-radius: 4px;
+    box-shadow: 0 10px 28px rgba(0,0,0,.45);
+  }
+  .menu.open .menu-panel { display: flex; }
+  .menu-panel a {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;
+    color: #c8cdd6; text-decoration: none; padding: 8px 11px; border-radius: 3px;
+    border: 0; white-space: nowrap; transition: background .12s, color .12s;
+  }
+  .menu-panel a:hover { background: #2a2f37; color: #fff; }
+  .menu-sep { height: 1px; background: #2a2f37; margin: 5px 8px; }
+  .menu-head { font-size: 9px; letter-spacing: 0.1em; color: #6b7480; text-transform: uppercase; padding: 6px 11px 3px; font-weight: 700; }
+
   /* Image-mix toggle (added 2026-06-24).
      Lets reviewers swap Sarah / Michael in the hero + whoHelps slots without
      leaving the hub. The current mix is appended to every iframe URL as
@@ -197,12 +218,21 @@
       <button data-mix="m-m" title="Man hero · Man who-helps">M·M</button>
     </div>
     <div class="kb"><kbd>↑</kbd><kbd>↓</kbd> switch · <kbd>/</kbd> search</div>
-    <a href="statute-map.html" target="_blank" rel="noopener" title="FDCPA statute map: every &quot;What we see&quot; bullet and FAQ mapped to 15 U.S.C. § 1692">Statute map ↗</a>
-    <a id="t-adsmap" href="ads-map.html" target="_blank" rel="noopener" title="Google Ads campaigns → ad groups → ads mapped to their landing-page final URL">Ads → LP ↗</a>
-    <a href="phone-map.html" target="_blank" rel="noopener" title="Campaign → ad group → ad → landing page, with the call-tracking phone number per platform">Phone map ↗</a>
-    <a href="blog.html" target="_blank" rel="noopener" title="Blog: all 51 articles in a grid; each opens as its own standalone page">Blog ↗</a>
-    <a href="https://2-human.github.io/credo-public-social-hub/" target="_blank" rel="noopener" title="Social campaign hub: 2 LinkedIn + 2 Facebook posts derived from each blog article, with posting dates">Social hub ↗</a>
-    <a href="https://2-human.github.io/credo-public-social-hub/calendar.html" target="_blank" rel="noopener" title="Unified social media calendar: 1 LinkedIn + 1 Facebook per day, Jul 20 – Oct 29, 2026">Social calendar ↗</a>
+    <div class="menu" id="menu">
+      <button class="menu-btn" id="menu-btn" aria-haspopup="true" aria-expanded="false">Sections</button>
+      <div class="menu-panel" id="menu-panel" role="menu">
+        <div class="menu-head">This hub</div>
+        <a href="statute-map.html" target="_blank" rel="noopener" role="menuitem" title="FDCPA statute map: every &quot;What we see&quot; bullet and FAQ mapped to 15 U.S.C. § 1692">Statute map ↗</a>
+        <a id="t-adsmap" href="ads-map.html" target="_blank" rel="noopener" role="menuitem" title="Google Ads campaigns → ad groups → ads mapped to their landing-page final URL">Ads → LP ↗</a>
+        <a href="phone-map.html" target="_blank" rel="noopener" role="menuitem" title="Campaign → ad group → ad → landing page, with the call-tracking phone number per platform">Phone map ↗</a>
+        <a href="blog.html" target="_blank" rel="noopener" role="menuitem" title="Blog: all 51 articles in a grid; each opens as its own standalone page">Blog ↗</a>
+        <a href="webflow-lp/index.html" target="_blank" rel="noopener" role="menuitem" title="Webflow export: static template + copy deck + specs + downloadable zip">Webflow export ↗</a>
+        <div class="menu-sep"></div>
+        <div class="menu-head">Social campaign</div>
+        <a href="https://2-human.github.io/credo-public-social-hub/" target="_blank" rel="noopener" role="menuitem" title="Social campaign hub: 2 LinkedIn + 2 Facebook posts derived from each blog article, with posting dates">Social hub ↗</a>
+        <a href="https://2-human.github.io/credo-public-social-hub/calendar.html" target="_blank" rel="noopener" role="menuitem" title="Unified social media calendar: 1 LinkedIn + 1 Facebook per day, Jul 20 – Oct 29, 2026">Social calendar ↗</a>
+      </div>
+    </div>
     <a id="t-open" href="#" target="_blank" rel="noopener" style="display:none;">Open ↗</a>
     <a id="t-live" class="live" href="#" target="_blank" rel="noopener" style="display:none;">View live</a>
   </div>
@@ -590,6 +620,26 @@ if (!Number.isNaN(hashIdx) && hashIdx >= 0 && hashIdx < LPS.length) {
  * loads with its widget active. The user enters review mode once at the hub
  * URL and every LP they click into is reviewable — but the widget banner +
  * sidebar render INSIDE the iframe, not on the hub chrome. */
+</script>
+<script>
+/* Sections dropdown: toggle open, close on outside-click / Esc / item click. */
+(function () {
+  var menu = document.getElementById('menu');
+  var btn = document.getElementById('menu-btn');
+  if (!menu || !btn) return;
+  function close() { menu.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); }
+  function toggle(e) {
+    e.stopPropagation();
+    var open = menu.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  btn.addEventListener('click', toggle);
+  document.getElementById('menu-panel').addEventListener('click', function (e) {
+    if (e.target.closest('a')) close();
+  });
+  document.addEventListener('click', function (e) { if (!menu.contains(e.target)) close(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+})();
 </script>
 </body>
 </html>
