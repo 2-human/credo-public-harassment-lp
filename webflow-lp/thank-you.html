@@ -3,15 +3,16 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Thank you — Credo Legal</title>
-<!-- Post-conversion page. Shares the same design system as the LP template:
-     links tokens.css + lp.css + assets/credo-logo.png (all in this bundle). The form
-     (see FORM-SPEC.md) redirects here after submit. Static — no scripts. -->
+<title>Thank you | Credo Legal</title>
+<meta name="robots" content="noindex"/>
+<!-- Post-conversion page the lead form redirects to after submit (see FORM-SPEC.md).
+     Same page as the live hub thank-you (public/harassment-lp/thank-you.html); only the
+     review-widget scripts are stripped for the handoff. Shares the bundle's design system:
+     links tokens.css + lp.css + assets/credo-logo.png. Static — no scripts. Keep noindex. -->
 <link rel="stylesheet" href="tokens.css"/>
 <link rel="stylesheet" href="lp.css"/>
 <style>
   body { background: var(--bg); }
-  .ty { }
   .ty-hero { border-bottom: 2px solid var(--fg); background: var(--bg-soft); }
   .ty-hero .container { padding-top: 56px; padding-bottom: 56px; text-align: center; }
   .ty-logo { display: flex; justify-content: center; margin: 0 0 28px; }
@@ -37,7 +38,7 @@
 
 <section class="ty-hero">
   <div class="container">
-    <div class="ty-logo"><img src="assets/credo-logo.png" alt="Credo Legal — consumer-debt defense law firm"/></div>
+    <div class="ty-logo"><img src="assets/credo-logo.png" alt="Credo Legal, consumer-debt defense law firm"/></div>
     <h1>You're pre-approved for a free legal consultation with <em>our attorney</em>.</h1>
     <p class="lede">We appreciate the trust you've placed in our team to help protect your rights and guide you toward financial relief. One of our legal professionals will be in touch shortly to discuss your situation in more detail.</p>
     <div class="ty-stamp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Request received</div>
@@ -81,8 +82,8 @@
 
 <footer class="foot"><div class="container">
   <div class="frow">
-    <a href="#" class="brand"><img src="assets/credo-logo.png" alt="Credo Legal"/></a>
-    <div class="flinks"><a href="#">Home</a><a href="#">About</a><a href="#">Contact</a><a href="#">Privacy</a></div>
+    <a href="index.html" class="brand"><img src="assets/credo-logo.png" alt="Credo Legal"/></a>
+    <div class="flinks"><a href="index.html">Home</a><a href="#">About</a><a href="#">Contact</a><a href="#">Privacy</a></div>
     <span class="fmeta">© 2026 · ATTORNEY ADVERTISING</span>
   </div>
   <div style="display:grid;grid-template-columns:1fr;gap:6px;margin-top:20px;" class="footer-contacts">
