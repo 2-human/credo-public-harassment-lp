@@ -303,6 +303,9 @@ const LPS = [
 
   // ──── All-States overlay (1) ────
   { c:"All-States", n:"FDCPA — Act Fast (overlay)",         slug:"/debt-harassment-act-fast",             phone:"(718) 865-8350", file:"act-fast-locked-paired-portrait-noborders.html",              angle:"Cross-vertical FDCPA", allstates:true, fixed:["Non-std hero","Filler","Missing Call link"] },
+
+  // ──── Funnel (1) ──── post-conversion page the lead form redirects to (not an ad variant)
+  { c:"Funnel", n:"Thank-you page",                         slug:"/thank-you",                            phone:"(443) 483-4080", file:"thank-you.html",                                            angle:"Post-conversion confirmation" },
 ];
 
 /* ───── Reverse link: which Google/Bing ad drives each LP ─────
@@ -332,7 +335,7 @@ const DRIVEN_BY = {
   "/credit-card-debt-violations": { campaign: "Credit Card", adGroup: "CC_Branded", i: 25 },
 };
 
-const CLUSTERS = ["Harassment","Lawsuit","Garnishment","Payday Loan","Medical Debt","Credit Card","All-States"];
+const CLUSTERS = ["Harassment","Lawsuit","Garnishment","Payday Loan","Medical Debt","Credit Card","All-States","Funnel"];
 
 /* ───── Render ───── */
 const $list = document.getElementById('list');
@@ -374,7 +377,7 @@ function renderList(filter) {
       count++;
     });
   });
-  $prog.textContent = filter ? `${count} of ${LPS.length} match` : `${LPS.length} variants · ${CLUSTERS.length} clusters`;
+  $prog.textContent = filter ? `${count} of ${LPS.length} match` : `${LPS.filter(l=>l.c!=='Funnel').length} variants · ${CLUSTERS.filter(c=>c!=='Funnel').length} clusters`;
 }
 
 function matches(lp, f) {
