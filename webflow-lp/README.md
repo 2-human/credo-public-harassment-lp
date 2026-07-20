@@ -11,6 +11,7 @@ static HTML, plus every page's copy.
 | File | What it is |
 |---|---|
 | `template.html` | The landing page rendered to **static HTML** (no JavaScript). This is the structure + markup to reproduce in Webflow. Example copy is the "Act-Fast" page. |
+| `thank-you.html` | The **post-conversion "thank you" page** the lead form redirects to after submit. Static HTML sharing the same design system (`tokens.css`/`lp.css`/`assets/`): a "Request received" confirmation, a "what to expect" grid, a call / Calendly CTA, next-steps, and the footer. Rebuild it in Webflow alongside the LPs and point the form's success redirect at it. |
 | `tokens.css` | Design tokens — colors (`--credo-red: #c92028`), type scale, spacing, radii, shadows. Also `@import`s the web font. |
 | `lp.css` | All layout/component styles (class-based, uses the tokens). ~690 lines. |
 | `assets/` | All images (logo + hero/body/who-helps photos), responsive `webp` + `jpg` at 480/960 widths. |
@@ -45,8 +46,9 @@ rendered output — the real markup — captured statically.
 ## Important notes
 
 - **The form does not submit anywhere.** It's a client-side 3-step wizard (debt slider → situation →
-  details) that just redirects to a thank-you page — no backend, action URL, or tracking. Full
-  behavior + fields + validation are in **`FORM-SPEC.md`**; rebuild it and wire your own submission/CRM.
+  details) that just redirects to the thank-you page (**`thank-you.html`**, included in this bundle) —
+  no backend, action URL, or tracking. Full behavior + fields + validation are in **`FORM-SPEC.md`**;
+  rebuild it and wire your own submission/CRM, then point the success redirect at your thank-you page.
 - **The phone number does not change by traffic source.** Each page shows one fixed number; the
   `utm_source` → Google/Bing/Meta switching was mapped but never implemented in the page. See
   **`PHONE-DNI-SPEC.md`** for the ready-to-use snippet + the per-page number table (Google on all
@@ -68,7 +70,7 @@ The pipeline lives in `handoff/webflow-lp/_build/` and writes into this folder
 (`public/harassment-lp/webflow-lp/`). From the repo root:
 
 ```
-node handoff/webflow-lp/_build/build-export.js       # template.html, copy.json, copy-deck.html, tokens.css, lp.css, assets/
+node handoff/webflow-lp/_build/build-export.js       # template.html, thank-you.html, copy.json, copy-deck.html, tokens.css, lp.css, assets/
 node handoff/webflow-lp/_build/build-phone-map.js     # phone-map.json (+ prints the number table)
 # then refresh the download bundle:
 cd public/harassment-lp/webflow-lp && zip -rq webflow-lp.zip . -x 'index.html' 'webflow-lp.zip' '.*'
