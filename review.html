@@ -27,7 +27,9 @@
     border-bottom: 1px solid #2a2f37;
     z-index: 10;
   }
-  .brand { font-size: 13px; font-weight: 600; letter-spacing: -0.01em; }
+  .brand { display: inline-flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 600; letter-spacing: -0.01em; }
+  .brand .brand-logo { height: 22px; width: auto; display: block; }
+  .brand .brand-mid { color: #5b6470; margin: 0 3px; }
   .brand .red { color: #ff6b73; }
   .meta {
     font-size: 12px; color: #c8cdd6;
@@ -194,7 +196,7 @@
 <body>
 
 <header class="topbar">
-  <div class="brand">Credo<span class="red">·</span>Legal · LP review</div>
+  <div class="brand"><img class="brand-logo" src="assets/credo-logo.png" alt="Credo Legal"><span><span class="brand-mid">·</span><b>LP Review</b></span></div>
   <div class="meta" id="meta">
     <span id="m-cluster">—</span>
     <span class="slug" id="m-slug">Select a landing page →</span>
