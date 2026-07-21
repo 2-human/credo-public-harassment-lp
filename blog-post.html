@@ -35,9 +35,9 @@
   .missing{color:var(--muted); text-align:center; padding:80px 20px}
 </style>
 
-<div class="topbar">
-  <a class="back" href="blog.html"><img src="assets/credo-logo.png" alt="Credo Legal">← Blog</a>
-  <span class="spacer"></span>
+<div id="hub-header" data-page="blog-post" data-hub="lp"></div>
+<script src="hub-header.js"></script>
+<div style="display:flex;justify-content:flex-end;padding:8px 20px;border-bottom:1px solid #eceef0;background:#fff">
   <a class="viewlink" id="viewlink" href="#" target="_blank" rel="noopener" style="display:none">View live ↗</a>
 </div>
 
@@ -57,6 +57,8 @@
     return;
   }
   document.title = 'Credo Legal — ' + rec.title;
+  var hbHere = document.querySelector('#hub-header .hh-here'); // breadcrumb leaf → the article title
+  if (hbHere) hbHere.textContent = rec.title;
   var vl = document.getElementById('viewlink');
   vl.href = rec.link; vl.style.display = '';
   $main.innerHTML =

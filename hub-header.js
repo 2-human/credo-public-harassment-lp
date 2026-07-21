@@ -1,57 +1,82 @@
-/* Shared review-hub header — one uniform header across every hub component
- * (LP review, Ads → LP, Phone map, Statute map, Blog). Single source of truth.
+/* Shared review-hub header — ONE uniform header across every hub nav page, on
+ * BOTH hubs (LP Review Hub + Social hub). Single source of truth; kept as an
+ * identical copy in each hub folder (public/harassment-lp/ + public/social-hub/).
  *
  * Usage on a page:
- *   <div id="hub-header" data-page="ads-map"></div>
+ *   <div id="hub-header" data-page="ads-map" data-hub="lp"></div>
  *   <script src="hub-header.js"></script>
+ * Optional data-crumb="…" overrides the current (leaf) breadcrumb label — used by
+ * blog-post.html to show the article title.
  *
- * Renders: [logo] Credo·Legal · <Section>  <subtitle> ........ [← LP review] [Sections ▾]
- * Matches review.html's dark bar (#111418 / accent #ff6b73). The interactive
- * review.html keeps its own toolbar (mix/phone/search) but the same brand + Sections. */
+ * Renders a dark bar (#111418 / accent #ff6b73):
+ *   [logo]  <Hub> › <Page>            ...........  [Sections ▾]
+ *           <subtitle>
+ * Cross-hub links resolve to the live mirror; same-hub links stay relative. The
+ * interactive review.html keeps its own tool controls (mix/phone/search) in a
+ * second row below this bar. */
 (function () {
   var mount = document.getElementById('hub-header');
   if (!mount) return;
   var page = mount.getAttribute('data-page') || '';
+  var hub  = mount.getAttribute('data-hub') || 'lp';
+  var leafOverride = mount.getAttribute('data-crumb') || '';
+
+  var HUBS = {
+    lp:     { label: 'LP Review Hub', root: 'review.html', base: 'https://2-human.github.io/credo-public-harassment-lp/' },
+    social: { label: 'Social Hub',    root: 'index.html',  base: 'https://2-human.github.io/credo-public-social-hub/' }
+  };
+  /* Resolve a target (hub,file) to an href: relative within the current hub,
+   * absolute (live mirror) across hubs. */
+  function href(targetHub, file) {
+    return targetHub === hub ? file : (HUBS[targetHub] ? HUBS[targetHub].base + file : file);
+  }
 
   var META = {
-    'review':      { name: 'LP Review',   sub: '32 landing-page variants across 7 debt clusters' },
-    'ads-map':     { name: 'Ads → LP',    sub: 'Every ad mapped to its landing-page final URL + UTM tracking' },
-    'phone-map':   { name: 'Phone map',   sub: 'Every ad × platform, with its call-tracking phone number' },
-    'statute-map': { name: 'Statute map', sub: 'Every claim + FAQ mapped to 15 U.S.C. § 1692' },
-    'blog':        { name: 'Blog',        sub: 'Article library' }
+    'review':      { hub: 'lp',     name: 'LP Review',       sub: '32 landing-page variants across 7 debt clusters', root: true },
+    'ads-map':     { hub: 'lp',     name: 'Ads → LP',        sub: 'Every ad mapped to its landing-page final URL + UTM tracking' },
+    'phone-map':   { hub: 'lp',     name: 'Phone map',       sub: 'Every ad × platform, with its call-tracking phone number' },
+    'statute-map': { hub: 'lp',     name: 'Statute map',     sub: 'Every claim + FAQ mapped to 15 U.S.C. § 1692' },
+    'blog':        { hub: 'lp',     name: 'Blog',            sub: 'Article library' },
+    'blog-post':   { hub: 'lp',     name: 'Article',         sub: '', parent: { label: 'Blog', hub: 'lp', file: 'blog.html' } },
+    'social-hub':  { hub: 'social', name: 'Social hub',      sub: 'Blog article + its derived posts', root: true },
+    'social-cal':  { hub: 'social', name: 'Social calendar', sub: '1 LinkedIn + 1 Facebook daily · Jul 20 – Oct 29, 2026' }
   };
-  /* Canonical section list (mirrors review.html's Sections menu). */
+
+  /* Canonical section list — spans both hubs. */
   var SECTIONS = [
-    { h: 'This hub', items: [
-      { id: 'review',      label: 'LP review',      href: 'review.html' },
-      { id: 'statute-map', label: 'Statute map',    href: 'statute-map.html' },
-      { id: 'ads-map',     label: 'Ads → LP',       href: 'ads-map.html' },
-      { id: 'phone-map',   label: 'Phone map',      href: 'phone-map.html' },
-      { id: 'blog',        label: 'Blog',           href: 'blog.html' },
-      { id: 'webflow',     label: 'Webflow export', href: 'webflow-lp/index.html' }
+    { h: 'LP Review Hub', items: [
+      { id: 'review',      hub: 'lp',     label: 'LP review',      file: 'review.html' },
+      { id: 'statute-map', hub: 'lp',     label: 'Statute map',    file: 'statute-map.html' },
+      { id: 'ads-map',     hub: 'lp',     label: 'Ads → LP',       file: 'ads-map.html' },
+      { id: 'phone-map',   hub: 'lp',     label: 'Phone map',      file: 'phone-map.html' },
+      { id: 'blog',        hub: 'lp',     label: 'Blog',           file: 'blog.html' },
+      { id: 'webflow',     hub: 'lp',     label: 'Webflow export', file: 'webflow-lp/index.html' }
     ]},
     { h: 'Social campaign', items: [
-      { id: 'social-hub', label: 'Social hub',      href: 'https://2-human.github.io/credo-public-social-hub/' },
-      { id: 'social-cal', label: 'Social calendar', href: 'https://2-human.github.io/credo-public-social-hub/calendar.html' }
+      { id: 'social-hub',  hub: 'social', label: 'Social hub',      file: 'index.html' },
+      { id: 'social-cal',  hub: 'social', label: 'Social calendar', file: 'calendar.html' }
     ]}
   ];
 
   var CSS =
-  '.hh-bar{position:sticky;top:0;z-index:50;background:#111418;color:#fff;display:flex;align-items:center;gap:14px;' +
-  'padding:0 20px;height:56px;border-bottom:1px solid #2a2f37;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}' +
-  '.hh-brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:#fff;white-space:nowrap;flex:0 0 auto}' +
-  '.hh-logo{height:22px;width:auto;display:block}' +
-  '.hh-nm{font-size:13px;font-weight:600;letter-spacing:-0.01em}' +
-  '.hh-nm .hh-dot{color:#ff6b73}.hh-nm .hh-mid{color:#5b6470;margin:0 3px}.hh-nm b{font-weight:600}' +
+  '.hh-bar{position:sticky;top:0;z-index:50;background:#111418;color:#fff;display:flex;align-items:center;gap:16px;' +
+  'padding:0 20px;height:72px;border-bottom:1px solid #2a2f37;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}' +
+  '.hh-brand{display:inline-flex;align-items:center;text-decoration:none;flex:0 0 auto}' +
+  '.hh-logo{height:26px;width:auto;display:block}' +
+  '.hh-left{display:flex;flex-direction:column;justify-content:center;gap:3px;min-width:0}' +
+  '.hh-crumbs{display:flex;align-items:center;gap:7px;font-size:13.5px;line-height:1.2;white-space:nowrap;overflow:hidden}' +
+  '.hh-crumbs a{color:#c8cdd6;text-decoration:none;transition:color .15s}.hh-crumbs a:hover{color:#fff}' +
+  '.hh-crumbs .hh-here{color:#fff;font-weight:600;overflow:hidden;text-overflow:ellipsis}' +
+  '.hh-crumbs .hh-sp{color:#5b6470}' +
   '.hh-sub{font-size:12px;color:#8590a0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}' +
   '.hh-spacer{flex:1 1 auto;min-width:8px}' +
-  '.hh-back,.hh-menu-btn{font:600 11px/1 -apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:.08em;text-transform:uppercase;' +
-  'color:#c8cdd6;background:none;border:1px solid #2a2f37;padding:8px 12px;cursor:pointer;text-decoration:none;border-radius:3px;transition:all .15s;white-space:nowrap;flex:0 0 auto}' +
-  '.hh-back:hover,.hh-menu-btn:hover{color:#fff;border-color:#5b6470}' +
+  '.hh-menu-btn{font:600 11px/1 -apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:.08em;text-transform:uppercase;' +
+  'color:#c8cdd6;background:none;border:1px solid #2a2f37;padding:9px 13px;cursor:pointer;border-radius:3px;transition:all .15s;white-space:nowrap}' +
+  '.hh-menu-btn:hover{color:#fff;border-color:#5b6470}' +
   '.hh-menu{position:relative;display:inline-flex;flex:0 0 auto}' +
   '.hh-menu-btn::after{content:" \\25be";color:#8590a0}' +
   '.hh-menu.open .hh-menu-btn{color:#fff;border-color:#5b6470;background:#1a1e25}' +
-  '.hh-menu-panel{position:absolute;top:calc(100% + 6px);right:0;z-index:60;min-width:200px;padding:5px;display:none;flex-direction:column;' +
+  '.hh-menu-panel{position:absolute;top:calc(100% + 8px);right:0;z-index:60;min-width:210px;padding:5px;display:none;flex-direction:column;' +
   'background:#1a1e25;border:1px solid #2a2f37;border-radius:4px;box-shadow:0 10px 28px rgba(0,0,0,.45)}' +
   '.hh-menu.open .hh-menu-panel{display:flex}' +
   '.hh-mi{font:600 11px/1 -apple-system,sans-serif;letter-spacing:.05em;text-transform:uppercase;color:#c8cdd6;text-decoration:none;' +
@@ -60,31 +85,49 @@
   '.hh-mi.hh-cur{color:#ff6b73;cursor:default}.hh-mi.hh-cur::after{content:" \\2713";opacity:.8}' +
   '.hh-sep{height:1px;background:#2a2f37;margin:5px 8px}' +
   '.hh-mh{font-size:9px;letter-spacing:.1em;color:#6b7480;text-transform:uppercase;padding:6px 11px 3px;font-weight:700}' +
-  '@media(max-width:720px){.hh-sub{display:none}}';
+  '@media(max-width:720px){.hh-sub{display:none}.hh-bar{height:60px}}';
 
   if (!document.getElementById('hh-css')) {
     var st = document.createElement('style'); st.id = 'hh-css'; st.textContent = CSS;
     document.head.appendChild(st);
   }
 
-  var m = META[page] || { name: page || 'Review hub', sub: '' };
+  var m = META[page] || { hub: hub, name: page || 'Review hub', sub: '' };
+  var curHub = HUBS[m.hub] ? m.hub : hub;
+  var hubInfo = HUBS[curHub];
+
+  /* Breadcrumb: [Hub] › (parent ›) Current — left-aligned; the hub crumb is the
+   * back link (replaces the old "← LP review" button). */
+  var crumbs;
+  if (m.root && !leafOverride) {
+    /* hub root (review.html / index.html): just the hub name, no redundant leaf. */
+    crumbs = '<span class="hh-here">' + hubInfo.label + '</span>';
+  } else {
+    crumbs = '<a href="' + href(curHub, hubInfo.root) + '">' + hubInfo.label + '</a>';
+    if (m.parent) {
+      crumbs += '<span class="hh-sp">›</span><a href="' + href(m.parent.hub, m.parent.file) + '">' + m.parent.label + '</a>';
+    }
+    crumbs += '<span class="hh-sp">›</span><span class="hh-here">' + (leafOverride || m.name) + '</span>';
+  }
+
   var menuHtml = SECTIONS.map(function (g) {
     return '<div class="hh-mh">' + g.h + '</div>' + g.items.map(function (it) {
-      var ext = it.href.indexOf('http') === 0;
       if (it.id === page) return '<span class="hh-mi hh-cur" aria-current="page">' + it.label + '</span>';
-      return '<a class="hh-mi" href="' + it.href + '"' + (ext ? ' target="_blank" rel="noopener"' : '') + '>' + it.label + (ext ? ' ↗' : '') + '</a>';
+      var cross = it.hub !== hub;
+      return '<a class="hh-mi" href="' + href(it.hub, it.file) + '"' + (cross ? ' target="_blank" rel="noopener"' : '') + '>' + it.label + (cross ? ' ↗' : '') + '</a>';
     }).join('');
   }).join('<div class="hh-sep"></div>');
 
   mount.className = 'hh-bar';
   mount.innerHTML =
-    '<a class="hh-brand" href="review.html" title="Back to the LP review hub">' +
+    '<a class="hh-brand" href="' + href(curHub, hubInfo.root) + '" title="' + hubInfo.label + '">' +
       '<img class="hh-logo" src="assets/credo-logo.png" alt="Credo Legal">' +
-      '<span class="hh-nm"><span class="hh-mid">·</span><b>' + m.name + '</b></span>' +
     '</a>' +
-    (m.sub ? '<span class="hh-sub">' + m.sub + '</span>' : '') +
+    '<div class="hh-left">' +
+      '<nav class="hh-crumbs" aria-label="Breadcrumb">' + crumbs + '</nav>' +
+      (m.sub ? '<div class="hh-sub">' + m.sub + '</div>' : '') +
+    '</div>' +
     '<span class="hh-spacer"></span>' +
-    (page !== 'review' ? '<a class="hh-back" href="review.html">← LP review</a>' : '') +
     '<div class="hh-menu" id="hh-menu"><button class="hh-menu-btn" aria-haspopup="true" aria-expanded="false">Sections</button>' +
       '<div class="hh-menu-panel" role="menu">' + menuHtml + '</div></div>';
 

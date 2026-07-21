@@ -13,7 +13,7 @@
     color: #111418; background: #f6f7f9;
     display: grid;
     grid-template-columns: 320px 1fr;
-    grid-template-rows: 56px 1fr;
+    grid-template-rows: auto auto 1fr;   /* row1 = shared hub-header, row2 = review toolbar, row3 = app */
     height: 100vh;
   }
   a { color: inherit; }
@@ -195,8 +195,10 @@
 </head>
 <body>
 
+<div id="hub-header" data-page="review" data-hub="lp" style="grid-column:1/-1"></div>
+<script src="hub-header.js"></script>
+
 <header class="topbar">
-  <div class="brand"><img class="brand-logo" src="assets/credo-logo.png" alt="Credo Legal"><span><span class="brand-mid">·</span><b>LP Review</b></span></div>
   <div class="meta" id="meta">
     <span id="m-cluster">—</span>
     <span class="slug" id="m-slug">Select a landing page →</span>
@@ -220,21 +222,7 @@
       <button data-mix="m-m" title="Man hero · Man who-helps">M·M</button>
     </div>
     <div class="kb"><kbd>↑</kbd><kbd>↓</kbd> switch · <kbd>/</kbd> search</div>
-    <div class="menu" id="menu">
-      <button class="menu-btn" id="menu-btn" aria-haspopup="true" aria-expanded="false">Sections</button>
-      <div class="menu-panel" id="menu-panel" role="menu">
-        <div class="menu-head">This hub</div>
-        <a href="statute-map.html" target="_blank" rel="noopener" role="menuitem" title="FDCPA statute map: every &quot;What we see&quot; bullet and FAQ mapped to 15 U.S.C. § 1692">Statute map ↗</a>
-        <a id="t-adsmap" href="ads-map.html" target="_blank" rel="noopener" role="menuitem" title="Google Ads campaigns → ad groups → ads mapped to their landing-page final URL">Ads → LP ↗</a>
-        <a href="phone-map.html" target="_blank" rel="noopener" role="menuitem" title="Campaign → ad group → ad → landing page, with the call-tracking phone number per platform">Phone map ↗</a>
-        <a href="blog.html" target="_blank" rel="noopener" role="menuitem" title="Blog: all 51 articles in a grid; each opens as its own standalone page">Blog ↗</a>
-        <a href="webflow-lp/index.html" target="_blank" rel="noopener" role="menuitem" title="Webflow export: static template + copy deck + specs + downloadable zip">Webflow export ↗</a>
-        <div class="menu-sep"></div>
-        <div class="menu-head">Social campaign</div>
-        <a href="https://2-human.github.io/credo-public-social-hub/" target="_blank" rel="noopener" role="menuitem" title="Social campaign hub: 2 LinkedIn + 2 Facebook posts derived from each blog article, with posting dates">Social hub ↗</a>
-        <a href="https://2-human.github.io/credo-public-social-hub/calendar.html" target="_blank" rel="noopener" role="menuitem" title="Unified social media calendar: 1 LinkedIn + 1 Facebook per day, Jul 20 – Oct 29, 2026">Social calendar ↗</a>
-      </div>
-    </div>
+    <a id="t-adsmap" class="tbtn-adsmap" href="ads-map.html" target="_blank" rel="noopener" title="Google Ads campaigns → ad groups → ads mapped to their landing-page final URL">Ads → LP ↗</a>
     <a id="t-open" href="#" target="_blank" rel="noopener" style="display:none;">Open ↗</a>
     <a id="t-live" class="live" href="#" target="_blank" rel="noopener" style="display:none;">View live</a>
   </div>
