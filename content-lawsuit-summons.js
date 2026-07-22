@@ -28,8 +28,8 @@
      pronoun substitution rule applies).
    - State exclusion list includes NC. */
 window.CREDO = {
-  phone: "(347) 523-4662",
-  phoneHref: "tel:+13475234662",
+  phone: "(718) 521-4060",
+  phoneHref: "tel:+17185214060",
   cluster: "Lawsuit",
   angle: "Served_Papers. Act today",
   statute: "Civil procedure / FDCPA",

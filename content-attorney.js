@@ -11,8 +11,8 @@
      design support; statute references verified against 15 U.S.C. § 1692.
    Voice fix: "Real attorneys" in Why Choose bullet 1 → "Our attorneys". */
 window.CREDO = {
-  phone: "(443) 483-4080",
-  phoneHref: "tel:+14434834080",
+  phone: "(612) 256-8820",
+  phoneHref: "tel:+16122568820",
   cluster: "Harassment",
   angle: "FDCPA action",
   statute: "FDCPA",

@@ -19,8 +19,8 @@
    - Your Rights bullets promoted to structured items
    - Trust strip = Lawsuit-cluster "Court / Defense, not settlement only". */
 window.CREDO = {
-  phone: "(212) 561-5902",
-  phoneHref: "tel:+12125615902",
+  phone: "(718) 521-4060",
+  phoneHref: "tel:+17185214060",
   cluster: "Lawsuit",
   angle: "Collection_Lawsuit. Proof challenge",
   statute: "Civil procedure / FDCPA / FCRA",

@@ -3,7 +3,7 @@
    Per-LP: label-only Why Choose + Common Problems → expand. FAQ 4 → 5,
    add 5th. Bottom CTA heading-only → add body. Voice ×2 + label fix. */
 window.CREDO = {
-  phone: "(646) 952-7380", phoneHref: "tel:+16469527380",
+  phone: "(407) 624-3722", phoneHref: "tel:+14076243722",
   cluster: "Credit Card", angle: "Lawsuit. Proof challenge",
   statute: "Civil procedure + FDCPA + FCRA",
 

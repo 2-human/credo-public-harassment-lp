@@ -3,7 +3,7 @@
    Removal LP (URL #23). WWD had 3 bullets on live (std 4) → synth 4th.
    Voice ×2. */
 window.CREDO = {
-  phone: "(347) 744-9014", phoneHref: "tel:+13477449014",
+  phone: "(801) 386-9050", phoneHref: "tel:+18013869050",
   cluster: "Medical Debt", angle: "Rights. Education",
   statute: "FDCPA + FCRA + No Surprises Act + CFPB",
 

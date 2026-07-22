@@ -3,7 +3,7 @@
    different from /medical-debt-bills-errors which uses (612) 260-9170).
    No structural deviations (6 Who-Helps bullets is fine). Voice fix ×2. */
 window.CREDO = {
-  phone: "(347) 744-9014", phoneHref: "tel:+13477449014",
+  phone: "(801) 386-9050", phoneHref: "tel:+18013869050",
   cluster: "Medical Debt", angle: "Rights. Credit report removal",
   statute: "FCRA + FDCPA + CFPB rules",
 

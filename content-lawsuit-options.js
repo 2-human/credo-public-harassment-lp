@@ -20,8 +20,8 @@
    markers, structured Your Rights items. Trust strip uses the Lawsuit
    cluster's "Court / Defense, not settlement only" set. */
 window.CREDO = {
-  phone: "(347) 523-4662",
-  phoneHref: "tel:+13475234662",
+  phone: "(718) 521-4060",
+  phoneHref: "tel:+17185214060",
   cluster: "Lawsuit",
   angle: "Served_Papers. Explore options",
   statute: "Civil procedure / FDCPA",

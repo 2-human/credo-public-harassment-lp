@@ -3,7 +3,7 @@
    Debt cluster (distinct from all other cluster routings). Standard
    structure, voice fix on subhead. */
 window.CREDO = {
-  phone: "(612) 260-9170", phoneHref: "tel:+16122609170",
+  phone: "(801) 386-9050", phoneHref: "tel:+18013869050",
   cluster: "Medical Debt", angle: "Lawsuit. Billing errors",
   statute: "Civil procedure + FDCPA + FCRA + No Surprises Act",
 

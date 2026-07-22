@@ -28,8 +28,8 @@
    - Your Rights bullets promoted to structured items
    - Trust strip = prototype's compliance-safe credentials. */
 window.CREDO = {
-  phone: "(347) 474-9602",
-  phoneHref: "tel:+13474749602",
+  phone: "(612) 256-8820",
+  phoneHref: "tel:+16122568820",
   cluster: "Harassment",
   angle: "Multiple Collectors. Aggregation",
   statute: "FDCPA",

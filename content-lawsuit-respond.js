@@ -31,8 +31,8 @@
 
    Design enhancements applied (full set per 2026-06-23 decisions). */
 window.CREDO = {
-  phone: "(212) 561-5902",
-  phoneHref: "tel:+12125615902",
+  phone: "(718) 521-4060",
+  phoneHref: "tel:+17185214060",
   cluster: "Lawsuit",
   angle: "Collection_Lawsuit. Deadline urgency (CHAMPION)",
   statute: "Civil procedure / FDCPA",

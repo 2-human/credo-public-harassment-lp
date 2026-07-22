@@ -3,7 +3,7 @@
    Per-LP: label-only Why Choose + Common Problems + HIW step bodies →
    expand. Common Problems 5→6, Your Rights 5→6, FAQ 4→5. Voice ×2. */
 window.CREDO = {
-  phone: "(646) 952-7392", phoneHref: "tel:+16469527392",
+  phone: "(407) 624-3722", phoneHref: "tel:+14076243722",
   cluster: "Credit Card", angle: "Harassment. Stop calls",
   statute: "FDCPA + state consumer law",
 

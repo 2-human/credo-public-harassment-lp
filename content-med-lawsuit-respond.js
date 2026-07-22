@@ -11,7 +11,7 @@
    - Subhead typo 'Help Your Respond' → 'Help You Respond'.
    - Voice subhead 'Real Attorneys' → 'Our Attorneys'. */
 window.CREDO = {
-  phone: "(612) 260-9170", phoneHref: "tel:+16122609170",
+  phone: "(801) 386-9050", phoneHref: "tel:+18013869050",
   cluster: "Medical Debt", angle: "Lawsuit. Respond on time",
   statute: "Civil procedure + FDCPA + No Surprises Act",
 

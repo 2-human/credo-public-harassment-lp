@@ -3,7 +3,7 @@
    Choose + Common Problems → expand. HIW step 4 missing body → write.
    FAQ 4→5. Bottom CTA heading→add body. H1 casing fix. Voice ×2. */
 window.CREDO = {
-  phone: "(646) 952-7380", phoneHref: "tel:+16469527380",
+  phone: "(407) 624-3722", phoneHref: "tel:+14076243722",
   cluster: "Credit Card", angle: "Lawsuit. Deadline urgency",
   statute: "Civil procedure + FDCPA",
 

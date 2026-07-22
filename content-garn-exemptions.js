@@ -31,8 +31,8 @@
      help is affordable'
    - State exclusion list includes NC. */
 window.CREDO = {
-  phone: "(720) 414-1751",
-  phoneHref: "tel:+17204141751",
+  phone: "(720) 414-5055",
+  phoneHref: "tel:+17204145055",
   cluster: "Garnishment",
   angle: "Post-Judgment. Exemptions",
   statute: "Federal + state garnishment law",

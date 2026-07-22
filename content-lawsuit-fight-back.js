@@ -23,8 +23,8 @@
    - Trust strip = "Court / Defense, not settlement only" (Lawsuit
      cluster), not the FDCPA Harassment-cluster set. */
 window.CREDO = {
-  phone: "(347) 523-4568",
-  phoneHref: "tel:+13475234568",
+  phone: "(718) 521-4060",
+  phoneHref: "tel:+17185214060",
   cluster: "Lawsuit",
   angle: "Defense. Fight back",
   statute: "Civil procedure / FDCPA",

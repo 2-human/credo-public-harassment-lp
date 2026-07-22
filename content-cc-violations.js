@@ -3,7 +3,7 @@
    Choose + Common Problems → expand. Common Problems 5→6, FAQ 4→5.
    Bottom CTA body rewritten (live had VarA copy-paste). */
 window.CREDO = {
-  phone: "(646) 952-7392", phoneHref: "tel:+16469527392",
+  phone: "(407) 624-3722", phoneHref: "tel:+14076243722",
   cluster: "Credit Card", angle: "Harassment, $1K per violation",
   statute: "FDCPA",
 

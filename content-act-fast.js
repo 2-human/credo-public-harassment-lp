@@ -20,7 +20,7 @@
    No voice violations on live (this LP was rewritten with 'Our
    Attorneys' throughout). */
 window.CREDO = {
-  phone: "(718) 865-8350", phoneHref: "tel:+17188658350",
+  phone: "(612) 256-8820", phoneHref: "tel:+16122568820",
   cluster: "All-States",
   angle: "FDCPA Action. Act fast (cross-vertical overlay)",
   statute: "FDCPA",

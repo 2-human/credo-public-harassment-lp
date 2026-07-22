@@ -20,8 +20,8 @@
      body + violation/right/remedy example)
    - Trust strip = prototype's compliance-safe credentials. */
 window.CREDO = {
-  phone: "(201) 416-7080",
-  phoneHref: "tel:+12014167080",
+  phone: "(612) 256-8820",
+  phoneHref: "tel:+16122568820",
   cluster: "Harassment",
   angle: "Stop calls (emotional relief)",
   statute: "FDCPA",
