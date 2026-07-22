@@ -148,7 +148,7 @@ window.CREDO = {
     "People who have been threatened, humiliated, or misled by a collector.",
     "Those who've asked collectors to stop but keep getting called, every call after that is a violation.",
     "Anyone whose collector has contacted their employer, family members, or neighbors.",
-    "People who want to stop being the victim and become the plaintiff.",
+    "People who want to stop being the victim of debt harassment.",
   ],
 
   // ---- FAQ — live copy, verbatim ----

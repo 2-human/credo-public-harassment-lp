@@ -97,7 +97,7 @@ window.CREDO = {
     headline: "Just served? We move immediately.",
     intro: "At Credo Legal, when you have just been served, speed is everything. We review your court papers immediately and respond before the deadline runs out.",
     bullets: [
-      "Read and assess your court papers on the day you call.",
+      "Read and assess your court papers on the day you enroll.",
       "File your legal answer before the response deadline closes.",
       "Identify and raise every valid defense, including debt validity and documentation gaps.",
       "Protect you from an automatic default judgment and its consequences.",

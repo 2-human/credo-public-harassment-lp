@@ -105,7 +105,7 @@ window.CREDO = {
   howItWorks: [
     ["Free consultation", "We review the debt and what you've been told you owe.", "DAY 0"],
     ["Debt investigation", "We check every dollar for validity and proper documentation.", "WEEK 1"],
-    ["Legal representation", "We challenge the debt with the creditor or in court.", "WEEK 1–2"],
+    ["Legal representation", "We challenge the debt with the creditor or in court.", "MONTH 2–3"],
     ["Dismissal or resolution", "Invalid debts get dismissed and removed from your record.", "ONGOING"],
   ],
 
