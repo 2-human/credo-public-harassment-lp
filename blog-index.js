@@ -1,4 +1,4 @@
-/* Credo Legal — blog index for the landing-page hub grid (auto-generated).
+/* Credo Legal: blog index for the landing-page hub grid (auto-generated).
  * Regenerate: node content/blog/_pipeline/build-blog-pages.js
  */
 window.CREDO_BLOG_INDEX = [
