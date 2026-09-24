@@ -3,6 +3,11 @@
  * ?review=1     -> sets data-review-mode=on, loads review-mode.css + review-mode.js.
  */
 (function () {
+  /* Resolve the widget assets next to this script (2026-09-24), so pages in
+   * sub-folders (e.g. qa/<report>/) can load ../../review-bootstrap.js. For pages
+   * in the same folder the base is that folder, so nothing changes for them. */
+  var me = document.currentScript;
+  var base = me && me.src ? me.src.replace(/[^\/]*$/, '') : '';
   var cfg = window.CREDO_REVIEW_CONFIG || {};
   var L = cfg.REVIEW_LABELS || {};
   var active = new URLSearchParams(window.location.search).get('review') === '1';
@@ -31,6 +36,6 @@
    * 10-minute cache and browsers hold them far longer, so reviewers were seeing
    * a stale widget for hours after a fix shipped. The page itself stays cached. */
   var v = '?v=' + Date.now();
-  var css = document.createElement('link'); css.rel = 'stylesheet'; css.href = 'review-mode.css' + v; document.head.appendChild(css);
-  var js = document.createElement('script'); js.src = 'review-mode.js' + v; document.body.appendChild(js);
+  var css = document.createElement('link'); css.rel = 'stylesheet'; css.href = base + 'review-mode.css' + v; document.head.appendChild(css);
+  var js = document.createElement('script'); js.src = base + 'review-mode.js' + v; document.body.appendChild(js);
 })();
