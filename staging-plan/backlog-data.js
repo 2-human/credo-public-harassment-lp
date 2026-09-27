@@ -8,7 +8,7 @@
  * `blocked` names the decision (D#) or manual step (M#) a PBI waits on. */
 window.BACKLOG = {
   updated: '27 Sep 2026',
-  state: 'PBI-00 and PBI-00b done: backup and baseline complete; 10 dead-weight pages removed from staging (drafts, reversible). Next: PBI-01, consolidate and clean the page code.',
+  state: 'PBI-01 published and verified on staging; independent review settled except one decision for you (D12, ZIP message).',
   site: { name: 'Credo: Microsite Staging', id: '6ab90fb0761d44332faf21c8', domain: 'staging.credolegal.com' },
 
   pbis: [
@@ -33,16 +33,43 @@ window.BACKLOG = {
         ['Verify: removed pages 404, kept pages 200, enroll and start fingerprints unchanged', 'done']
       ] },
 
-    { id: 'PBI-01', title: 'Consolidate and clean the page code', refs: ['W1', 'L1', 'G30', 'G31'], by: 'claude',
-      why: 'One place for shared code turns every later code fix into a single edit; removes the script error and the calls to videsigns-staging.co.uk.',
-      done: 'No multi-step.js, one GTM, one UTM mechanism; form walk completes on all 30 pages and 8 devices; phone numbers still match the sheet; UTM and gclid fields fill.',
+    { id: 'PBI-01', title: 'Clean the page code', refs: ['L1', 'G30', 'G31'], by: 'claude', note: 'W1 (move to Site settings) split out as PBI-01d: it would add GTM to the thank-you pages.',
+      why: 'Removes the script error and the calls to videsigns-staging.co.uk, the duplicate GTM loader and dead code, without touching pages whose old form still needs it.',
+      done: 'Dead or duplicate code gone where it is dead; form walk, phone numbers, tracking fields and tags unchanged; enroll and start unchanged; independent review settled.',
       tasks: [
-        ['Read the site and page custom code on all 30 pages', 'todo'],
-        ['Move the shared code into Site settings (head / footer)', 'todo'],
-        ['Leave only canonical, og:url and schema in each page\'s code', 'todo'],
-        ['Remove multi-step.js, the duplicate GTM line, Font Awesome, dead validators, the year swap and the extra UTM scripts', 'todo'],
-        ['Publish to staging only', 'todo'],
-        ['Verify: lpcheck form walk, phones, hidden fields', 'todo']
+        ['Read the site and page custom code on all 53 live pages with code', 'done'],
+        ['Find the 21 pages whose old form still uses multi-step.js, #submitBtn, #phone-number and Font Awesome (left as they are)', 'done'],
+        ['Remove the duplicate GTM loader (52 pages); multi-step.js, Font Awesome, dead validators and the localStorage UTM copy (30 landing pages + home)', 'done'],
+        ['Shadow test before writing: old vs new code, 3 browsers', 'done'],
+        ['Publish to staging only', 'done'],
+        ['Verify: 83/83 code blocks served as intended; 30 pages × 8 devices (form 240/240, phones 344/344); tracking on 52 pages; enroll and start unchanged', 'done'],
+        ['Independent review: packet to GPT; 14 findings settled with before/after tests (see Independent reviews)', 'doing']
+      ] },
+
+    { id: 'PBI-01b', title: 'One UTM mechanism', refs: ['G31'], by: 'claude',
+      why: 'Three overlapping UTM scripts (host cookies, .credolegal.com cookies, localStorage + URL rewrite) decide which phone number and tracking values a returning visitor gets.',
+      done: 'One mechanism; a test matrix (first visit, return visit, no-query revisit, navigation, cross-subdomain) identical to today on every page type.',
+      tasks: [
+        ['Map what each mechanism writes and who reads it', 'todo'],
+        ['Return-visit / cross-subdomain test matrix on the current code (baseline)', 'todo'],
+        ['Remove the redundant mechanisms; keep one', 'todo'],
+        ['Publish to staging only; re-run the matrix', 'todo']
+      ] },
+
+    { id: 'PBI-01c', title: 'Old-form pages: multi-step.js and the videsigns-staging call', refs: ['L1'], by: 'decision', blocked: 'D11',
+      why: 'The 21 state and old landing pages still load multi-step.js (it shows their form one step at a time) and it posts to videsigns-staging.co.uk.',
+      done: 'Per D11: pages rebuilt in the new design, or the library replaced, so no page calls a staging server.',
+      tasks: [
+        ['Apply the D11 decision on staging', 'todo'],
+        ['Publish to staging only and verify the forms step by step', 'todo']
+      ] },
+
+    { id: 'PBI-01d', title: 'Move shared page code to Site settings', refs: ['W1'], by: 'decision', blocked: 'D10',
+      why: 'Site code loads on every page; 7 pages (thank-you, 401, 404, CMS templates) load no GTM today. Moving GTM site-wide would start it on the thank-you pages.',
+      done: 'GTM trigger setup known; shared code moved without double-counting conversions.',
+      tasks: [
+        ['Check in GTM whether thank-you page views count as conversions (D10)', 'todo'],
+        ['Move the shared code; publish to staging only; verify tags', 'todo']
       ] },
 
     { id: 'PBI-02', title: 'Lead form destination for staging', refs: ['G9'], by: 'decision', blocked: 'D1',
@@ -81,6 +108,8 @@ window.BACKLOG = {
         ['Hide while body.mj-popup-open', 'todo'],
         ['Publish to staging only', 'todo'],
         ['Verify on phone sizes with the clock inside business hours', 'todo']
+,
+        ['Independent review: packet to GPT; findings settled', 'todo']
       ] },
 
     { id: 'PBI-06', title: 'Tracked phone number in the mobile header', refs: ['G25'], by: 'likely',
@@ -91,6 +120,8 @@ window.BACKLOG = {
         ['Apply to all pages; add its id to the phone-swap list', 'todo'],
         ['Publish to staging only', 'todo'],
         ['Verify numbers per utm_source on phones', 'todo']
+,
+        ['Independent review: packet to GPT; findings settled', 'todo']
       ] },
 
     { id: 'PBI-07', title: 'Phone and ZIP fields open the number pad', refs: ['F1'], by: 'likely',
@@ -111,6 +142,8 @@ window.BACKLOG = {
         ['Add the hidden fbclid field (API, or one Designer copy-paste)', 'todo'],
         ['Publish to staging only', 'todo'],
         ['Test with ?fbclid=test123', 'todo']
+,
+        ['Independent review: packet to GPT; findings settled', 'todo']
       ] },
 
     { id: 'PBI-09', title: 'Dropdown options stored in Webflow', refs: ['F2'], by: 'likely',
@@ -122,6 +155,8 @@ window.BACKLOG = {
         ['Remove the G17 rewrite block', 'todo'],
         ['Publish to staging only', 'todo'],
         ['Verify the options on every page', 'todo']
+,
+        ['Independent review: packet to GPT; findings settled', 'todo']
       ] },
 
     { id: 'PBI-10', title: 'Slider label and unique element ids', refs: ['F3', 'F4'], by: 'claude',
@@ -175,6 +210,8 @@ window.BACKLOG = {
         ['Build a FAQPage per page from its own FAQs', 'todo'],
         ['Remove or replace the @handle placeholder (D9)', 'todo'],
         ['Publish to staging only and validate the JSON-LD', 'todo']
+,
+        ['Independent review: packet to GPT; findings settled', 'todo']
       ] },
 
     { id: 'PBI-15', title: 'Colour and contrast', refs: ['L3', 'G26', 'G27'], by: 'claude',
@@ -186,6 +223,8 @@ window.BACKLOG = {
         ['Body font and colour; weights 300 → 400, eyebrows 600', 'todo'],
         ['Publish to staging only', 'todo'],
         ['Verify with lpcheck (axe) and screenshots', 'todo']
+,
+        ['Independent review: packet to Gemini; findings settled', 'todo']
       ] },
 
     { id: 'PBI-16', title: 'Mobile type scale and text case', refs: ['G24', 'G22', 'L4'], by: 'claude',
@@ -197,6 +236,8 @@ window.BACKLOG = {
         ['Intro paragraph Capitalize: None', 'todo'],
         ['Step labels and rights tags to 12px', 'todo'],
         ['Publish to staging only and verify', 'todo']
+,
+        ['Independent review: packet to Gemini; findings settled', 'todo']
       ] },
 
     { id: 'PBI-17', title: 'Form card, bottom CTA and page width', refs: ['G27', 'G28', 'L6'], by: 'claude',
@@ -208,6 +249,8 @@ window.BACKLOG = {
         ['Bottom CTA: left-align, headline max width', 'todo'],
         ['Fix the poition typo and the missing }', 'todo'],
         ['Publish to staging only and verify', 'todo']
+,
+        ['Independent review: packet to Gemini; findings settled', 'todo']
       ] },
 
     { id: 'PBI-18', title: 'Red accent word in the H1', refs: ['G23'], by: 'likely',
@@ -219,6 +262,8 @@ window.BACKLOG = {
         ['Wrap each page\'s accent word', 'todo'],
         ['Remove the ctaheading recolour script', 'todo'],
         ['Publish to staging only and verify', 'todo']
+,
+        ['Independent review: packet to Gemini; findings settled', 'todo']
       ] },
 
     { id: 'PBI-19', title: 'Small polish', refs: ['L5', 'G29'], by: 'claude',
@@ -273,6 +318,8 @@ window.BACKLOG = {
         ['Full lpcheck on the 30 staging pages vs the baseline', 'todo'],
         ['Re-fingerprint enroll and start: must be unchanged', 'todo'],
         ['Change log per item (what changed, where in Webflow)', 'todo']
+,
+        ['Independent review: packet to GPT + Gemini; findings settled', 'todo']
       ] }
   ],
 
@@ -286,6 +333,9 @@ window.BACKLOG = {
     ['D7', 'F2', 'State list', 'Confirm North Carolina should stay removed from the state dropdown.', '—'],
     ['D8', 'L2', 'Tidio chat', 'Is chat staffed? Lazy-load it, or remove it.', 'PBI-23'],
     ['D9', 'G6', 'Twitter/X handle', 'Credo\'s real handle, or delete the @handle placeholder.', 'PBI-14']
+    ,['D10', 'W1', 'GTM on thank-you pages', 'Does GTM count thank-you page views as conversions? Needs someone with GTM access. Decides whether shared code can move to Site settings.', 'PBI-01d'],
+    ['D11', 'L1', 'Old-form pages', 'Rebuild the 21 state and old landing pages in the new design, or replace the multi-step library, so no page calls videsigns-staging.co.uk.', 'PBI-01c'],
+    ['D12', 'PBI-01', 'ZIP error message', 'Accept one ZIP error message instead of two ("Please enter valid 5 digit zip code" only).', 'PBI-01']
   ],
 
   manual: [

@@ -8,6 +8,7 @@
   var ITEMS = [
     { id: 'backlog',   href: 'index.html',     icon: '📋', label: 'Backlog',             sub: 'PBIs and tasks, WIP limit 1' },
     { id: 'decisions', href: 'decisions.html', icon: '⚖️', label: 'Decisions & manual',  sub: 'What only you can do' },
+    { id: 'review',    href: 'review.html',    icon: '🔍', label: 'Independent reviews', sub: 'GPT / Gemini second opinions' },
     { id: 'rules',     href: 'rules.html',     icon: '🛡️', label: 'Guard rails',         sub: 'Staging only: how it is kept safe' }
   ];
 

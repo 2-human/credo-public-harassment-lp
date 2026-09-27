@@ -38,6 +38,8 @@
     <li><b>No test data in production.</b> The automated checks answer every form post and analytics beacon
       themselves. A manual test lead on staging would enter the real lead pipeline, so none is sent until D1
       decides where staging's form posts.</li>
+    <li><b>Testing staging by hand.</b> Staging sets UTM cookies on <code>.credolegal.com</code>, which the same browser then also
+      sends to start.credolegal.com. Test staging in a private window, or clear credolegal.com cookies before visiting production.</li>
   </ol></div>
 
   <h2>Shared with production: not touched</h2>
