@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Guard rails · Staging fix plan</title>
+<link rel="stylesheet" href="plan.css">
+<style>ol.rails li{margin:0 0 10px}.site{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 6px}.site .card{flex:1 1 260px}</style>
+</head>
+<body>
+<script src="plan-nav.js" data-page="rules"></script>
+<main>
+  <h1>Guard rails</h1>
+  <p class="lede">All fixes go to staging.credolegal.com only. This page shows how changes are kept away
+  from enroll.credolegal.com, start.credolegal.com and every account the pages share with production.</p>
+
+  <h2>Where the work happens</h2>
+  <div class="site">
+    <div class="card" style="border-left:4px solid var(--ok)"><b>Credo: Microsite Staging</b><br>
+      <code>6ab90fb0761d44332faf21c8</code><br>staging.credolegal.com · <b>the only site that is edited</b></div>
+    <div class="card" style="border-left:4px solid #6b7280"><b>NEW Credo Legal Landing Pages</b><br>
+      <code>6a5be784cc1cab7ef8e99233</code><br>enroll.credolegal.com · read only, never written to</div>
+  </div>
+  <p class="lede" style="margin-top:8px">A separate Webflow project isolates well: page settings, custom
+  code, styles, assets, scripts and elements all live inside it, so editing and publishing staging cannot
+  change enroll or start.</p>
+
+  <h2>Rules on every step</h2>
+  <div class="card"><ol class="rails">
+    <li><b>One site id.</b> Every write uses the staging site id. Before each PBI Claude re-reads the site list
+      and confirms its only domain is staging.credolegal.com; if not, work stops.</li>
+    <li><b>Backup first.</b> Before the first change: site and page custom code, registered scripts, page
+      settings and SEO, styles and each page's element tree are exported, so any step can be rolled back.</li>
+    <li><b>Publish to staging only.</b> Publishing names the staging domain alone, once per PBI.</li>
+    <li><b>Prove enroll and start are unchanged.</b> All 30 pages on both are fingerprinted before the first
+      PBI and after the last; the fingerprints must match.</li>
+    <li><b>No test data in production.</b> The automated checks answer every form post and analytics beacon
+      themselves. A manual test lead on staging would enter the real lead pipeline, so none is sent until D1
+      decides where staging's form posts.</li>
+  </ol></div>
+
+  <h2>Shared with production: not touched</h2>
+  <div class="tw"><table>
+    <thead><tr><th>Shared dependency</th><th>Also used by</th><th>Rule</th></tr></thead>
+    <tbody>
+      <tr><td>GTM <code>GTM-PTLMPVGH</code> and GA4</td><td>enroll, start</td><td>No edits. GTM-side items are manual, for production.</td></tr>
+      <tr><td>Formspree lead form</td><td>enroll, start</td><td>Not edited; see D1.</td></tr>
+      <tr><td>Clarity, Mouseflow, Tidio, Optibase, Finsweet, Inputflow accounts</td><td>enroll, start</td><td>Account settings unchanged; only element attributes on staging.</td></tr>
+      <tr><td>Call-tracking numbers</td><td>enroll, start, ads</td><td>Read only; the numbers stay as they are.</td></tr>
+      <tr><td>Call-click backend <code>credo.debtfixer.co</code></td><td>enroll, start</td><td>Not edited; staging posts to it only if D6 allows.</td></tr>
+      <tr><td>Videsigns <code>multi-step.js</code> (jsDelivr)</td><td>other sites</td><td>Never edited; only removed from staging's page code.</td></tr>
+      <tr><td>Other Webflow sites</td><td>—</td><td>No write calls.</td></tr>
+      <tr><td>Prototypes and review hub in the repo</td><td>public mirror</td><td>Read only, as the source of approved copy.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>How each PBI runs</h2>
+  <div class="card"><p style="margin:0">Edit on staging → publish to staging only → verify (lpcheck on the
+  staging pages, plus the PBI's own “done when” check) → report → move the row to Done → take the next
+  unblocked row. Only one row is in Doing at a time.</p></div>
+</main>
+</body>
+</html>

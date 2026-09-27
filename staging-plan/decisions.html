@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Decisions and manual steps · Staging fix plan</title>
+<link rel="stylesheet" href="plan.css">
+</head>
+<body>
+<script src="plan-nav.js" data-page="decisions"></script>
+<main>
+  <h1>Decisions and manual steps</h1>
+  <p class="lede">The backlog items that wait on you. A decision unblocks its PBI, which Claude then
+  does on staging. Manual steps need a person, a shared account, or the production site.</p>
+
+  <h2>Decisions</h2>
+  <div class="tw"><table id="dec"><thead><tr><th>#</th><th>Audit item</th><th>Decision</th><th>Options</th><th>Unblocks</th></tr></thead><tbody></tbody></table></div>
+
+  <h2>Manual steps</h2>
+  <div class="tw"><table id="man"><thead><tr><th>Item</th><th>What</th><th>Status</th></tr></thead><tbody></tbody></table></div>
+</main>
+<script src="backlog-data.js"></script>
+<script>
+(function () {
+  var B = window.BACKLOG, E = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+  document.querySelector('#dec tbody').innerHTML = B.decisions.map(function (d) {
+    var link = d[4] === '—' ? '—' : '<a href="index.html#' + d[4] + '">' + d[4] + '</a>';
+    return '<tr><td><b>' + d[0] + '</b></td><td><span class="ref">' + E(d[1]) + '</span></td><td><b>' + E(d[2]) + '</b></td><td>' + E(d[3]) + '</td><td>' + link + '</td></tr>';
+  }).join('');
+  document.querySelector('#man tbody').innerHTML = B.manual.map(function (m) {
+    var ok = /^Done/.test(m[2]);
+    return '<tr><td><span class="ref">' + E(m[0]) + '</span></td><td>' + E(m[1]) + '</td><td>' + (ok ? '<b style="color:var(--ok)">✓ ' + E(m[2]) + '</b>' : E(m[2])) + '</td></tr>';
+  }).join('');
+})();
+</script>
+</body>
+</html>
