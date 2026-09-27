@@ -8,7 +8,7 @@
  * `blocked` names the decision (D#) or manual step (M#) a PBI waits on. */
 window.BACKLOG = {
   updated: '27 Sep 2026',
-  state: 'PBI-00 done 27 Sep: backup, fingerprints and baseline complete. Next: PBI-01 (consolidate and clean the page code). Nothing changed in Webflow yet.',
+  state: 'PBI-00 and PBI-00b done: backup and baseline complete; 10 dead-weight pages removed from staging (drafts, reversible). Next: PBI-01, consolidate and clean the page code.',
   site: { name: 'Credo: Microsite Staging', id: '6ab90fb0761d44332faf21c8', domain: 'staging.credolegal.com' },
 
   pbis: [
@@ -20,6 +20,17 @@ window.BACKLOG = {
         ['Back up site + page custom code, registered scripts, page settings/SEO, styles and element trees', 'done'],
         ['Fingerprint all 30 pages on enroll and start', 'done'],
         ['Run lpcheck on the 30 staging URLs (baseline report)', 'done']
+      ] },
+
+    { id: 'PBI-00b', title: 'Remove dead-weight pages', refs: [], by: 'claude',
+      why: '10 pages in the staging project with no traffic and no purpose: test pages, an unpublished draft, the unused know-your-rights blog and four old landing pages already replaced. All 13 state pages are kept (your call, 27 Sep).',
+      done: 'The 8 pages set to draft and the 4 blog articles unpublished on staging only (reversible); they return 404; every kept page and all 30 landing pages still load; enroll and start unchanged.',
+      tasks: [
+        ['Back up the pages and CMS items being removed', 'done'],
+        ['Set test, test-page, know-your-rights, wage-garnishment-rights, medical-debt-harassment, medical-debt-errors, wage-garnishment-attorney-active and remove-property-lien to draft', 'done'],
+        ['Unpublish the 4 know-your-rights articles', 'done'],
+        ['Publish to staging only', 'done'],
+        ['Verify: removed pages 404, kept pages 200, enroll and start fingerprints unchanged', 'done']
       ] },
 
     { id: 'PBI-01', title: 'Consolidate and clean the page code', refs: ['W1', 'L1', 'G30', 'G31'], by: 'claude',
