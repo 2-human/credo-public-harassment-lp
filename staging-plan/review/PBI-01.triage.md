@@ -6,7 +6,7 @@ pages: 2 landing pages, home, ohio, letter, payday-loan-debt-rights, medical-deb
 
 | # | Finding | Resolution |
 |---|---|---|
-| 1 | R6 was not fully dead: `#msgzip` exists; invalid ZIP now shows one message instead of two | **Agreed.** `#msgzip` exists on 30/30 landing pages (omitted from the evidence list). Accepted as a behaviour change pending the operator's OK. |
+| 1 | R6 was not fully dead: `#msgzip` exists; invalid ZIP now shows one message instead of two | **Agreed.** `#msgzip` exists on 30/30 landing pages (omitted from the evidence list). Accepted by the operator on 27 Sep (D12). |
 | 2 | Return visits / localStorage (R4) not tested | **Tested: identical.** Visit with UTMs, then revisit without: phone links, hidden fields, cookies, stored localStorage keys, rewritten link and URL identical before/after. |
 | 3 | Only the GTM container was checked, not tags | **Tested: identical.** Every request to analytics/ads/recorder hosts compared before/after: same set on all pages, except one GTM diagnostics ping (`googletagmanager.com/td`) on home in Chromium that appeared only before (side effect of the double GTM load). dataLayer event names identical. |
 | 4 | Phone numbers on the 21 old pages not covered | **Tested: identical** on ohio, letter, payday-loan-debt-rights, medical-debt-attorney (desktop + iPhone). |

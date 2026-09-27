@@ -8,7 +8,7 @@
  * `blocked` names the decision (D#) or manual step (M#) a PBI waits on. */
 window.BACKLOG = {
   updated: '27 Sep 2026',
-  state: 'PBI-01 published and verified on staging; independent review settled except one decision for you (D12, ZIP message).',
+  state: 'PBI-01 done 27 Sep (D12 accepted). Next unblocked item: PBI-04, mask form inputs in session recordings.',
   site: { name: 'Credo: Microsite Staging', id: '6ab90fb0761d44332faf21c8', domain: 'staging.credolegal.com' },
 
   pbis: [
@@ -43,7 +43,7 @@ window.BACKLOG = {
         ['Shadow test before writing: old vs new code, 3 browsers', 'done'],
         ['Publish to staging only', 'done'],
         ['Verify: 83/83 code blocks served as intended; 30 pages × 8 devices (form 240/240, phones 344/344); tracking on 52 pages; enroll and start unchanged', 'done'],
-        ['Independent review: packet to GPT; 14 findings settled with before/after tests (see Independent reviews)', 'doing']
+        ['Independent review: packet to GPT; 14 findings settled with before/after tests (see Independent reviews)', 'done']
       ] },
 
     { id: 'PBI-01b', title: 'One UTM mechanism', refs: ['G31'], by: 'claude',
@@ -335,7 +335,7 @@ window.BACKLOG = {
     ['D9', 'G6', 'Twitter/X handle', 'Credo\'s real handle, or delete the @handle placeholder.', 'PBI-14']
     ,['D10', 'W1', 'GTM on thank-you pages', 'Does GTM count thank-you page views as conversions? Needs someone with GTM access. Decides whether shared code can move to Site settings.', 'PBI-01d'],
     ['D11', 'L1', 'Old-form pages', 'Rebuild the 21 state and old landing pages in the new design, or replace the multi-step library, so no page calls videsigns-staging.co.uk.', 'PBI-01c'],
-    ['D12', 'PBI-01', 'ZIP error message', 'Accept one ZIP error message instead of two ("Please enter valid 5 digit zip code" only).', 'PBI-01']
+    ['D12', 'PBI-01', 'ZIP error message', 'Decided 27 Sep: accepted. An invalid ZIP now shows one message ("Please enter valid 5 digit zip code") instead of two.', 'PBI-01']
   ],
 
   manual: [
