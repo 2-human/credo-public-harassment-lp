@@ -8,7 +8,7 @@
  * `blocked` names the decision (D#) or manual step (M#) a PBI waits on. */
 window.BACKLOG = {
   updated: '27 Sep 2026',
-  state: 'PBI-01 done 27 Sep (D12 accepted). Next unblocked item: PBI-04, mask form inputs in session recordings.',
+  state: 'PBI-04 done 27 Sep: all 73 lead forms masked in Clarity recordings (proven by capturing Clarity uploads). Next unblocked item: PBI-05, sticky call bar.',
   site: { name: 'Credo: Microsite Staging', id: '6ab90fb0761d44332faf21c8', domain: 'staging.credolegal.com' },
 
   pbis: [
@@ -90,13 +90,16 @@ window.BACKLOG = {
         ['Verify text, link and contrast', 'todo']
       ] },
 
-    { id: 'PBI-04', title: 'Mask form inputs in session recordings', refs: ['G32'], by: 'claude',
+    { id: 'PBI-04', title: 'Mask form inputs in session recordings', refs: ['G32'], by: 'claude', note: 'Mouseflow input masking and the Tidio/Optibase privacy review stay manual (shared accounts).',
       why: 'Clarity and Mouseflow record sessions on a form that collects PII.',
-      done: 'data-clarity-mask on the form on staging. Mouseflow masking and the Tidio/Optibase review stay manual (shared accounts).',
+      done: 'Every lead form on staging carries data-clarity-mask; a capture of Clarity uploads shows no form text or typed values.',
       tasks: [
-        ['Add data-clarity-mask="true" to the form block on each page', 'todo'],
-        ['Publish to staging only', 'todo'],
-        ['Verify the attribute is served', 'todo']
+        ['Mask the form block on the 30 landing pages and home (31 pages, page elements)', 'done'],
+        ['Mask the 4 form blocks inside the 2 local form components (Hero-Form, Hero-Form-For-New-Pages) used by the 21 state and old pages', 'done'],
+        ['Publish to staging only', 'done'],
+        ['Verify: 73/73 forms on 52 pages inside a masked block; enroll and start unchanged', 'done'],
+        ['Prove it: capture Clarity uploads; form text present without the mask, absent with it; typed values never sent', 'done'],
+        ['Form still works: form walk to submit on 3 pages × 3 browsers', 'done']
       ] },
 
     { id: 'PBI-05', title: 'Sticky call bar never covers the form', refs: ['G19'], by: 'claude',
