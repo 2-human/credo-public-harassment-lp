@@ -50,7 +50,7 @@
         return '<a href="' + i.href + '"' + (i.id === page ? ' class="on" aria-current="page"' : '') + '>' +
           '<span class="t">' + i.icon + ' ' + i.label + '</span><span class="s">' + i.sub + '</span></a>';
       }).join('') +
-      '<div class="foot">Plan · awaiting approval<br>' +
+      '<div class="foot">Plan approved · in progress<br>' +
         '<a href="https://staging.credolegal.com/debt-harassment-stop-calls" target="_blank" rel="noopener">Staging site ↗</a><br>' +
         '<a href="../qa/lpcheck-2026-09-23/" target="_blank" rel="noopener">Cross-browser report ↗</a></div>';
     document.body.insertBefore(nav, document.body.firstChild);

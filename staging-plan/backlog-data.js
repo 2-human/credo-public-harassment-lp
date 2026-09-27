@@ -8,7 +8,7 @@
  * `blocked` names the decision (D#) or manual step (M#) a PBI waits on. */
 window.BACKLOG = {
   updated: '27 Sep 2026',
-  state: 'Awaiting plan approval: nothing has been changed in Webflow yet.',
+  state: 'Plan approved 27 Sep. PBI-00 in progress: read-only backup and baseline; nothing changed in Webflow yet.',
   site: { name: 'Credo: Microsite Staging', id: '6ab90fb0761d44332faf21c8', domain: 'staging.credolegal.com' },
 
   pbis: [
@@ -16,8 +16,8 @@ window.BACKLOG = {
       why: 'Every later change can be rolled back, and we can prove enroll and start were never touched.',
       done: 'Backup saved; enroll + start fingerprints recorded; lpcheck baseline report for the 30 staging pages.',
       tasks: [
-        ['Confirm the staging site id and that its only domain is staging.credolegal.com', 'todo'],
-        ['Back up site + page custom code, registered scripts, page settings/SEO, styles and element trees', 'todo'],
+        ['Confirm the staging site id and that its only domain is staging.credolegal.com', 'done'],
+        ['Back up site + page custom code, registered scripts, page settings/SEO, styles and element trees', 'doing'],
         ['Fingerprint all 30 pages on enroll and start', 'todo'],
         ['Run lpcheck on the 30 staging URLs (baseline report)', 'todo']
       ] },
