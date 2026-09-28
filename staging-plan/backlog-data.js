@@ -8,7 +8,7 @@
  * `blocked` names the decision (D#) or manual step (M#) a PBI waits on. */
 window.BACKLOG = {
   updated: '27 Sep 2026',
-  state: '28 Sep: PBI-07 done: every phone field opens the phone keypad and every ZIP field the numeric keypad on all 52 form pages. New item PBI-07b (invalid or empty phone still sent sometimes, pre-existing). Next unblocked item: PBI-07b.',
+  state: '28 Sep: PBI-07 done: every phone field opens the phone keypad and every ZIP field the numeric keypad on all 52 form pages. New item PBI-07b: the old form still sends a too-short phone (the new form validates phone and email correctly). Next: PBI-07b.',
   site: { name: 'Credo: Microsite Staging', id: '6ab90fb0761d44332faf21c8', domain: 'staging.credolegal.com' },
 
   pbis: [
@@ -203,13 +203,13 @@ window.BACKLOG = {
         ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots when anything visible changes; findings settled', 'done']
       ] },
 
-    { id: 'PBI-07b', title: 'The form must not send an invalid or empty phone number', refs: ['Found 28 Sep'], by: 'claude', note: 'Found by the PBI-07 tests; pre-existing, not caused by PBI-07.',
-      why: 'The old form (21 pages) sends leads with a too-short or empty phone. The new form (31 pages) usually blocks letters in the phone field, but in about 1 of 8 test runs it still sent the lead with an empty phone.',
-      done: 'No lead is sent without a valid 10-digit phone, on both form types, under typed, soft-keyboard and autofill input.',
+    { id: 'PBI-07b', title: 'Phone and email must be valid before the form sends', refs: ['Found 28 Sep', 'Operator, 28 Sep'], by: 'claude', note: 'Corrected 28 Sep: an earlier test counted a Google Analytics beacon (its URL mentions formspree) as a form send. Strict re-test: the new form already blocks every invalid phone and email.',
+      why: 'The operator wants phone and email format validated. Strict test (only real posts to formspree.io count): the new form (31 pages) blocks invalid phones and emails; the old form (21 pages) blocks invalid emails and empty/letter phones, but still sends a too-short phone such as "(212) 555".',
+      done: 'No lead is sent without a 10-digit phone and a well-formed email, on both form types.',
       tasks: [
-        ['Find why the new form occasionally submits after its own "10 digits" message', 'todo'],
-        ['Old form: block submit on an invalid phone (or rely on the rebuild, D11)', 'todo'],
-        ['Publish to staging.credolegal.com and verify with repeated invalid-input runs', 'todo'],
+        ['Test which invalid phone/email values each form sends (strict: real formspree posts only)', 'done'],
+        ['Old form: block a phone with fewer than 10 digits (or rely on the rebuild, D11: operator to choose)', 'todo'],
+        ['Publish to staging.credolegal.com and repeat the invalid-input test on both form types', 'todo'],
         ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots when anything visible changes; findings settled', 'todo']
       ] },
 

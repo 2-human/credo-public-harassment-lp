@@ -38,6 +38,8 @@
 6. The on-screen keyboard itself cannot be captured in a headless browser and no iOS simulator is available; the keyboard type follows from the
    field attributes checked in #2 (`type="tel"` → phone keypad; `inputmode="numeric"` → numeric keypad).
 
+**Correction (28 Sep, after the reviews):** in #5 the "sends" with an empty PHONE were Google Analytics `form_start` beacons whose URL mentions formspree, counted by a too-loose test filter. Strict re-test: the new form blocks all invalid phones and emails; the old form sends only a too-short phone.
+
 ## Conclusions to challenge
 1. On phones, every phone field now opens the phone keypad and every ZIP field the numeric keypad, on all 52 form pages.
 2. Formatting, validation and what the form sends are unchanged.

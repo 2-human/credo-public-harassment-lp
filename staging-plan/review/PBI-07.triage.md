@@ -13,7 +13,7 @@ UX review: **not possible on screenshots.** The change is the phone's on-screen 
 | 6 | CSS/JS selectors that target `type="text"` (GPT 7) | **Checked:** the published site stylesheet has no selector on `type=text` or `type=tel`, and the page code of all 57 pages has none either. The fields are styled by class. |
 | 7 | Shared components in unpublished or future pages (GPT 11, 12) | Unpublished slots are the drafts removed in PBI-00b; any future page using these components gets the same, intended fields. |
 | 8 | The 5 pages without a form (Gemini 7) | /401, /404, /thank-you, /page/thank-you, /page/already-submitted: no phone or ZIP fields, so nothing changed there. |
-| 9 | Invalid phone still sent sometimes (GPT 8, 9) | Pre-existing, identical before and after: the old form sends invalid or empty phones; the new form occasionally sends an empty phone when letters are typed. Logged as **PBI-07b** for the operator. |
+| 9 | Invalid phone still sent sometimes (GPT 8, 9) | **Corrected 28 Sep:** the "occasional send with an empty phone" was a test error: the test counted any request whose URL contained "formspree", and Google Analytics' `form_start` beacon mentions the formspree URL. A strict re-test (only real posts to formspree.io) shows the new form blocks every invalid phone and email; the old form blocks invalid emails and empty/letter phones but sends a too-short phone such as "(212) 555" (before and after this change). Logged as **PBI-07b**. |
 | 10 | Changes alter the Webflow project for all collaborators (Gemini 8) | Intended; every change is listed on the board and in these packets for the developer. |
 
 **Status: settled.**
