@@ -8,7 +8,7 @@
  * `blocked` names the decision (D#) or manual step (M#) a PBI waits on. */
 window.BACKLOG = {
   updated: '27 Sep 2026',
-  state: 'PBI-04 done 27 Sep: all 73 lead forms masked in Clarity recordings (proven by capturing Clarity uploads). Next unblocked item: PBI-05, sticky call bar.',
+  state: 'PBI-05 done 28 Sep: the mobile sticky call bar no longer covers the form on any of the 31 pages (155 phone/desktop runs in business hours, 0 problems). Next unblocked item: PBI-06, tracked number in the mobile header.',
   site: { name: 'Credo: Microsite Staging', id: '6ab90fb0761d44332faf21c8', domain: 'staging.credolegal.com' },
 
   pbis: [
@@ -106,13 +106,13 @@ window.BACKLOG = {
       why: 'On 21 pages the bar covers Continue on the first phone screen during business hours.',
       done: 'At 390×844 inside business hours: no bar while the form is on screen or the pop-up is open; bar appears after scrolling past the form.',
       tasks: [
-        ['Hidden-by-default styles for .sticky-call-button', 'todo'],
-        ['IntersectionObserver on the step-1 form card', 'todo'],
-        ['Hide while body.mj-popup-open', 'todo'],
-        ['Publish to staging only', 'todo'],
-        ['Verify on phone sizes with the clock inside business hours', 'todo']
+        ['Hidden-by-default styles for .sticky-call-button', 'done'],
+        ['IntersectionObserver on the step-1 form card', 'done'],
+        ['Hide while body.mj-popup-open', 'done'],
+        ['Publish to staging only', 'done'],
+        ['Verify on phone sizes with the clock inside business hours', 'done']
 ,
-        ['Independent review: packet to GPT; findings settled', 'todo']
+        ['Independent review: packet to GPT; findings settled', 'done']
       ] },
 
     { id: 'PBI-06', title: 'Tracked phone number in the mobile header', refs: ['G25'], by: 'likely',
