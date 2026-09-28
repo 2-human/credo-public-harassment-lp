@@ -8,7 +8,7 @@
  * `blocked` names the decision (D#) or manual step (M#) a PBI waits on. */
 window.BACKLOG = {
   updated: '27 Sep 2026',
-  state: '28 Sep: DS-7 pilot approved; /ohio serves the new design. Building the other 12 state pages.',
+  state: '28 Sep: DS-7: all 13 state pages live on the new design with the new form only (old versions kept as drafts); reviews settled. Next: letter, medical-debt-attorney, act-fast, more-money and the 4 payday pages.',
   site: { name: 'Credo: Microsite Staging', id: '6ab90fb0761d44332faf21c8', domain: 'staging.credolegal.com' },
 
   pbis: [
@@ -221,13 +221,22 @@ window.BACKLOG = {
 
     { id: 'DS-7', title: 'Rebuild the 21 older pages on the landing-page template (new form only)', refs: ['D11', 'D4', 'L1'], by: 'claude', note: 'Operator 28 Sep: only the new form on every page; remove every legacy form. Pilot: Ohio, then the other 12 state pages from it.',
       why: '13 state pages and 8 older pages still use the old purple design and the old multi-step form (plus a hidden second form that never sends).',
+      review: { items: [
+        { kind: 'Code', by: 'GPT-5.5', verdict: 'approve with fixes', file: 'review/DS-7-states.review-gpt.md', settled: true, note: 'State pages. Blocker (real lead) waits on D1; the rest proven or raised as D15/D16.' },
+        { kind: 'Code', by: 'Gemini 3.1 Pro', verdict: 'do not approve', file: 'review/DS-7-states.review-gemini.md', settled: true, note: 'Blockers: real lead (waits on D1); GTM tracking (tested: form_submit pushed on 13/13, same as the landing pages).' },
+        { kind: 'UX', by: 'GPT-5.5', verdict: 'approve with fixes', file: 'review/DS-7-states.review-gpt-ux.md', settled: true, note: 'Template-wide design points logged for the design system; claims raised as D17.' },
+        { kind: 'UX', by: 'Gemini 3.1 Pro', verdict: 'approve with fixes', file: 'review/DS-7-states.review-gemini-ux.md', settled: true, note: 'Sticky bar tested: never covers the form buttons.' }
+      ], links: [['Packet', 'review/DS-7-states.md'], ['Resolution', 'review/DS-7-states.triage.md']] },
       done: 'All 21 URLs serve the landing-page design with the new form; no legacy form or its scripts left on the site; each page keeps its own copy, tracked number, SEO and tracking; old versions kept as drafts.',
       tasks: [
         ['Pilot: rebuild /ohio from a landing page (duplicate, state copy, number, SEO), preview under a temporary slug: live at /ohio-new, checks passed', 'done'],
         ['Operator approves the pilot: approved 28 Sep', 'done'],
         ['Swap slugs: new page takes /ohio, old page kept as draft at /ohio-old: live, submit test 1 post, 21 fields on iPhone and desktop', 'done'],
-        ['The other 12 state pages from the approved pilot', 'doing'],
-        ['letter, medical-debt-attorney, debt-harassment-act-fast, multiple-collectors-more-money and the 4 payday pages, each with its own copy', 'todo'],
+        ['The other 12 state pages from the approved pilot: duplicated from Ohio, 3 state strings each, old SEO + old head code kept, own tracked number (6 local numbers kept), old pages drafted as {state}-old', 'done'],
+        ['Found and fixed: the pilot Ohio page had the landing page\u2019s noindex head; Ohio now has its own old head (index, follow) again', 'done'],
+        ['Verified on staging.credolegal.com: 13/13 served-HTML checks, 26/26 submit tests (1 post, 21 fields), 52/52 numbers per ad source, 13/13 form_submit pushes, head/footer byte-diff 13/13', 'done'],
+        ['Independent review of the 13 state pages (code + UX, GPT + Gemini); findings settled except D1, D15, D16, D17', 'done'],
+        ['letter, medical-debt-attorney, debt-harassment-act-fast, multiple-collectors-more-money and the 4 payday pages, each with its own copy', 'doing'],
         ['Remove the legacy form component and scripts once no published page uses them', 'todo'],
         ['Publish to staging.credolegal.com and verify: forms, numbers per source, submit test, lpcheck', 'todo'],
         ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots when anything visible changes; findings settled', 'todo']
@@ -448,7 +457,10 @@ window.BACKLOG = {
     ['D11', 'L1', 'Old-form pages', 'Decided 28 Sep: rebuild all 21 older pages (13 state, 8 others incl. the 4 payday pages) on the landing-page template: new design and the new form only; every legacy form removed. Method B: each page is a duplicate of a landing page with its own copy, number, SEO and tracking; the old page is kept as a draft until the new one passes.', 'PBI-01c'],
     ['D12', 'PBI-01', 'ZIP error message', 'Decided 27 Sep: accepted. An invalid ZIP now shows one message ("Please enter valid 5 digit zip code") instead of two.', 'PBI-01'],
     ['D13', 'Design preview', 'Thank-you wording', 'Legal sign-off on the thank-you headline. Today: "You have been pre-approved for a free legal consultation call with our attorney!" Proposed (in the preview): "Thank you. Your request has been received." with "One of our legal professionals will contact you shortly to schedule your free, confidential consultation." Needs a Credo attorney to approve before it goes into Webflow. Also: which phone number the unified thank-you page shows (today /thank-you has (443) 483-4080, /page/thank-you and /page/already-submitted (718) 865-8350).', 'DS-6'],
-    ['D14', 'PBI-06', 'Tablet menu', 'Decided 28 Sep: accepted. Tablets (768–991px) also show the call button instead of the ☰ menu, like phones; the menu only held 5 same-page links and the number.', 'PBI-06']
+    ['D14', 'PBI-06', 'Tablet menu', 'Decided 28 Sep: accepted. Tablets (768–991px) also show the call button instead of the ☰ menu, like phones; the menu only held 5 same-page links and the number.', 'PBI-06'],
+    ['D15', 'DS-7 review', 'Call numbers per ad source', 'Every state page shows one number whatever the ad source (as before): 718-865-8350, or the state\u2019s local number on MN, MD, CO, NY, NJ, FL. Keep that, or give Google / Meta / Bing their own tracked numbers so calls can be attributed? New numbers come from the call-tracking account (not ours to change).', 'DS-7'],
+    ['D16', 'DS-7 review', 'State pages in search', 'The 13 state pages say index, follow but their canonical points to the home page (start.credolegal.com/), which folds them into the home page for Google. Kept as it was. Should each state page rank on its own (self canonical), or stay as is?', 'DS-7'],
+    ['D17', 'DS-7 review', 'Stats claims', 'The pages show \u201c10 million+ in debt wiped\u201d and \u201c500k debts settled every month\u201d with no source. A Credo attorney should confirm they are accurate and allowed in attorney advertising, or change them.', 'DS-7']
   ],
 
   manual: [
