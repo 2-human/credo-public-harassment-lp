@@ -8,7 +8,7 @@
  * `blocked` names the decision (D#) or manual step (M#) a PBI waits on. */
 window.BACKLOG = {
   updated: '27 Sep 2026',
-  state: '28 Sep: D11 decided (the 21 old-design pages are rebuilt on the landing-page template). Thank-you preview: call and booking moved to the first screen, reviewed by GPT + Gemini; new headline waits on legal sign-off (D13). Next unblocked item: PBI-06, phone header.',
+  state: 'PBI-06 in progress: two phone-header options mocked on the real staging page and reviewed by GPT + Gemini (both recommend Option B). Waiting for the operator to pick.',
   site: { name: 'Credo: Microsite Staging', id: '6ab90fb0761d44332faf21c8', domain: 'staging.credolegal.com' },
 
   pbis: [
@@ -147,15 +147,21 @@ window.BACKLOG = {
       ] },
 
     { id: 'PBI-06', title: 'Tracked phone number in the mobile header', refs: ['G25'], by: 'likely',
+      review: { items: [
+        { kind: 'UX', by: 'GPT-5.5', verdict: 'approve with fixes', file: 'review/PBI-06-options-ux.review-gpt.md', settled: true, note: 'Options A/B on 3 phones (9 screenshots). Recommends B.' },
+        { kind: 'UX', by: 'Gemini 3.1 Pro', verdict: 'approve with fixes', file: 'review/PBI-06-options-ux.review-gemini.md', settled: true, note: 'Recommends B; rejects A (redundant, crowded at 360px).' },
+        { kind: 'Code', by: 'GPT + Gemini', note: 'After the build.' }
+      ], links: [['Options packet', 'review/PBI-06-options-ux.md'], ['Resolution', 'review/PBI-06-options-ux.triage.md']] },
       why: 'On phones the call link is hidden behind the menu button.',
       done: 'Tracked number and a "Free review" button visible in the mobile header; phone swap updates it per utm_source.',
       tasks: [
+        ['First: two phone-header options (call icon button, or the number without the Free review button) as screenshots; UX review by GPT + Gemini before building (Gemini rated today’s crowded header a blocker)', 'done'],
+        ['Operator picks the option (both reviewers recommend B: logo + one wide call button with the number; ☰ menu removed on phones)', 'doing'],
         ['Confirm on one page that the API can add the mobile-only link outside the Nav Menu', 'todo'],
         ['Apply to all pages; add its id to the phone-swap list', 'todo'],
         ['Publish to staging only', 'todo'],
         ['Verify numbers per utm_source on phones', 'todo']
 ,
-        ['First: two phone-header options (call icon button, or the number without the Free review button) as screenshots; UX review by GPT + Gemini before building (Gemini rated today’s crowded header a blocker)', 'todo'],
         ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots when anything visible changes; findings settled', 'todo']
       ] },
 
