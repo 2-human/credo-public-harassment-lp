@@ -8,7 +8,7 @@
  * `blocked` names the decision (D#) or manual step (M#) a PBI waits on. */
 window.BACKLOG = {
   updated: '27 Sep 2026',
-  state: '28 Sep: PBI-07 and PBI-07b done: phone/ZIP fields open the number pad, and no form sends without a 10-digit phone and a valid email (old form fixed; new form already did). Next unblocked item: PBI-08, capture the Meta click id.',
+  state: '28 Sep: DS-7 pilot approved; /ohio serves the new design. Building the other 12 state pages.',
   site: { name: 'Credo: Microsite Staging', id: '6ab90fb0761d44332faf21c8', domain: 'staging.credolegal.com' },
 
   pbis: [
@@ -219,6 +219,20 @@ window.BACKLOG = {
         ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots when anything visible changes; findings settled', 'done']
       ] },
 
+    { id: 'DS-7', title: 'Rebuild the 21 older pages on the landing-page template (new form only)', refs: ['D11', 'D4', 'L1'], by: 'claude', note: 'Operator 28 Sep: only the new form on every page; remove every legacy form. Pilot: Ohio, then the other 12 state pages from it.',
+      why: '13 state pages and 8 older pages still use the old purple design and the old multi-step form (plus a hidden second form that never sends).',
+      done: 'All 21 URLs serve the landing-page design with the new form; no legacy form or its scripts left on the site; each page keeps its own copy, tracked number, SEO and tracking; old versions kept as drafts.',
+      tasks: [
+        ['Pilot: rebuild /ohio from a landing page (duplicate, state copy, number, SEO), preview under a temporary slug: live at /ohio-new, checks passed', 'done'],
+        ['Operator approves the pilot: approved 28 Sep', 'done'],
+        ['Swap slugs: new page takes /ohio, old page kept as draft at /ohio-old: live, submit test 1 post, 21 fields on iPhone and desktop', 'done'],
+        ['The other 12 state pages from the approved pilot', 'doing'],
+        ['letter, medical-debt-attorney, debt-harassment-act-fast, multiple-collectors-more-money and the 4 payday pages, each with its own copy', 'todo'],
+        ['Remove the legacy form component and scripts once no published page uses them', 'todo'],
+        ['Publish to staging.credolegal.com and verify: forms, numbers per source, submit test, lpcheck', 'todo'],
+        ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots when anything visible changes; findings settled', 'todo']
+      ] },
+
     { id: 'PBI-08', visible: false, title: 'Capture the Meta click id (fbclid)', refs: ['G20'], by: 'claude',
       why: 'A typo stores "fbclig", and the form has no fbclid field.',
       done: '?fbclid=test123 reaches the cookie and the hidden fbclid field.',
@@ -424,14 +438,14 @@ window.BACKLOG = {
     ['D1', 'G9', 'Where the form posts', 'Webflow native forms, a first-party endpoint, or formspree with a DPA; and whether staging posts to a test destination meanwhile (recommended).', 'PBI-02'],
     ['D2', 'G10', 'Consent text', 'Counsel-approved wording, and whether express consent needs a checkbox.', 'PBI-03'],
     ['D3', 'G16', 'CTA labels', 'Which two labels to keep.', 'PBI-20'],
-    ['D4', 'Part B', 'The four payday-content pages', 'Draft them on staging.credolegal.com, rebuild them with new copy, or redirect them.', 'PBI-21'],
+    ['D4', 'Part B', 'The four payday-content pages', 'Decided 28 Sep: rebuild them on the landing-page template, like the other older pages.', 'PBI-21'],
     ['D5', 'G32', 'Session recorders', 'Keep Mouseflow, or remove it and rely on Clarity.', 'PBI-23'],
     ['D6', 'G21a', 'Call-click posting', 'May staging.credolegal.com post call clicks to the live call-click backend (credo.debtfixer.co) while testing?', 'PBI-22'],
     ['D7', 'F2', 'State list', 'Confirm North Carolina should stay removed from the state dropdown.', '—'],
     ['D8', 'L2', 'Tidio chat', 'Is chat staffed? Lazy-load it, or remove it. If chat stays: a neutral dark launcher colour, so red stays reserved for the call and form buttons (UX reviews, 28 Sep).', 'PBI-23'],
     ['D9', 'G6', 'Twitter/X handle', 'Credo\'s real handle, or delete the @handle placeholder.', 'PBI-14']
     ,['D10', 'W1', 'GTM on thank-you pages', 'Does GTM count thank-you page views as conversions? Needs someone with GTM access. Decides whether shared code can move to Site settings.', 'PBI-01d'],
-    ['D11', 'L1', 'Old-form pages', 'Decided 28 Sep: rebuild the 21 state and old landing pages on the landing-page template (new design, new form), keeping each page’s own copy, tracked number, SEO and tracking. The old multi-step library and its call to videsigns-staging.co.uk go with the old form. Preview: design-system.html.', 'PBI-01c'],
+    ['D11', 'L1', 'Old-form pages', 'Decided 28 Sep: rebuild all 21 older pages (13 state, 8 others incl. the 4 payday pages) on the landing-page template: new design and the new form only; every legacy form removed. Method B: each page is a duplicate of a landing page with its own copy, number, SEO and tracking; the old page is kept as a draft until the new one passes.', 'PBI-01c'],
     ['D12', 'PBI-01', 'ZIP error message', 'Decided 27 Sep: accepted. An invalid ZIP now shows one message ("Please enter valid 5 digit zip code") instead of two.', 'PBI-01'],
     ['D13', 'Design preview', 'Thank-you wording', 'Legal sign-off on the thank-you headline. Today: "You have been pre-approved for a free legal consultation call with our attorney!" Proposed (in the preview): "Thank you. Your request has been received." with "One of our legal professionals will contact you shortly to schedule your free, confidential consultation." Needs a Credo attorney to approve before it goes into Webflow. Also: which phone number the unified thank-you page shows (today /thank-you has (443) 483-4080, /page/thank-you and /page/already-submitted (718) 865-8350).', 'DS-6'],
     ['D14', 'PBI-06', 'Tablet menu', 'Decided 28 Sep: accepted. Tablets (768–991px) also show the call button instead of the ☰ menu, like phones; the menu only held 5 same-page links and the number.', 'PBI-06']
