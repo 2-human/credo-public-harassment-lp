@@ -1,0 +1,19 @@
+# DS-7 (last 8 older pages) · Resolution of the independent reviews (GPT-5.5 and Gemini 3.1 Pro, 28 Sep)
+
+Verdicts: **Code · GPT approve with fixes** · **Code · Gemini do not approve** (1 blocker) ·
+**UX · GPT approve with fixes** · **UX · Gemini do not approve** (1 blocker).
+
+| # | Finding (reviewer) | Resolution |
+|---|---|---|
+| 1 | **Blocker (Gemini code 1):** `RemoveStateOptions` on general pages may leave visitors no way to give their state | **Tested, not an issue.** The script only trims the states Credo does not serve (the page still serves the full state list and the visitor picks theirs); it runs on all 31 landing pages already. The submit test posts a `state` field on 8/8 pages (16/16 submits). |
+| 2 | **Blocker (Gemini UX 1):** body paragraphs shown in Title Case ("At Credo Legal, Multiple Collectors Mean…") | **Real, but template-wide and pre-existing:** the what-we-do paragraph class `text-block-16` has `text-transform: capitalize`; measured on 5 landing pages that predate DS-7 (stop-calls, payday-harassment, one-attorney, cc-challenge, garnishment-attorney) and on the rebuilt pages. Not introduced here. Fixing it is one style change for every page, so it goes to the board as the next item (PBI-11 widened: Title Case on paragraph copy, not only citations), for the operator to approve as a visible change. |
+| 3 | Copy may have been dropped where a copy file has more fields than the template (Gemini code 3); cross-wiring by repeated text (GPT 3) | The check already runs in that direction: **every field of each page's own copy file** that the template shows (not the template's) must be present on the served page; 8/8. Counts were matched before building (templates chosen for equal bullets/rights/FAQ counts; the 2 extra medical FAQs added). A leftover check (template copy that should have been replaced) found none. Section order is the template's; values were mapped per section key, so a value can only land in its own section. |
+| 4 | Old footer scripts lost (Gemini code 4) | Intended: the old footer held the old form's code (multi-step.js, `submitForm`, phone formatting, old validation) plus a UTM→localStorage copy. The new footer keeps the UTM→cookie script and link decoration. **Tested:** utm_source, utm_medium, utm_campaign and gclid reach the lead on 8/8 pages. |
+| 5 | SEO description / Open Graph not shown (Gemini code 5, GPT 6) | **Checked on the served pages:** meta description, og:title and og:description equal the old page's values on 8/8. |
+| 6 | Added FAQ items: accordion behaviour, spacing (Gemini code 2, GPT 5; Gemini UX 4) | The template FAQ is static (no accordion, no interaction): items are plain `faqitem` blocks. The screenshot shows items 6 and 7 (the ones added: "Will this affect my credit score?", "Do I need to show up in court?") rendered like the others; the served page contains exactly 7 FAQ items. |
+| 7 | Real lead, unblocked tracking, indexable domain, external services (GPT 9, 10, 13, 14) | Same as the state pages: real lead waits on D1; GTM counting on D10; indexing policy is D16; staging.credolegal.com is the production site being built. |
+| 8 | Sticky call bar covers text; FAQ line length; "or call" contrast; hero pushes form down on phones; stats claims (GPT UX 6, 9, 10, 12, 13, 14; Gemini UX 2, 3, 5) | Template-wide design points, logged for the design system (sticky bar tested earlier: never covers the form buttons). Stats claims: D17. |
+| 9 | "Anyone who wants…" deviates from the prototype (GPT 4) | Grammar fix of a slip in my own prototype, not live copy; noted for the operator. |
+| 10 | Legacy components still exist (GPT 15) | Agreed: kept until the operator decides the old drafts can go (D18). |
+
+**Status: settled**, except the Title Case fix (next board item, needs the operator's go) and the operator decisions D1, D16, D17, D18.

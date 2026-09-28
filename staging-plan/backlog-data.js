@@ -8,7 +8,7 @@
  * `blocked` names the decision (D#) or manual step (M#) a PBI waits on. */
 window.BACKLOG = {
   updated: '27 Sep 2026',
-  state: '28 Sep: DS-7: all 13 state pages live on the new design with the new form only (old versions kept as drafts); reviews settled. Next: letter, medical-debt-attorney, act-fast, more-money and the 4 payday pages.',
+  state: '28 Sep: DS-7 done: all 21 older pages live on the new design with the new form only (old versions kept as drafts); no published page has the old form; reviews settled. Waiting on the operator: D18 (delete old drafts + legacy form), Title Case fix (PBI-11).',
   site: { name: 'Credo: Microsite Staging', id: '6ab90fb0761d44332faf21c8', domain: 'staging.credolegal.com' },
 
   pbis: [
@@ -75,7 +75,7 @@ window.BACKLOG = {
       why: 'The 21 state and old landing pages still load multi-step.js (it shows their form one step at a time) and it posts to videsigns-staging.co.uk.',
       done: 'Per D11: pages rebuilt in the new design, or the library replaced, so no page calls a staging server.',
       tasks: [
-        ['Rebuild the 21 pages on the landing-page template (DS-7), one page approved before the rest', 'todo'],
+        ['Rebuild the 21 pages on the landing-page template (DS-7), one page approved before the rest: done 28 Sep, no published page uses the old form or multi-step.js', 'done'],
         ['Publish to staging only and verify the forms step by step', 'todo'],
         ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots when anything visible changes; findings settled', 'todo']
       ] },
@@ -226,7 +226,11 @@ window.BACKLOG = {
         { kind: 'Code', by: 'Gemini 3.1 Pro', verdict: 'do not approve', file: 'review/DS-7-states.review-gemini.md', settled: true, note: 'Blockers: real lead (waits on D1); GTM tracking (tested: form_submit pushed on 13/13, same as the landing pages).' },
         { kind: 'UX', by: 'GPT-5.5', verdict: 'approve with fixes', file: 'review/DS-7-states.review-gpt-ux.md', settled: true, note: 'Template-wide design points logged for the design system; claims raised as D17.' },
         { kind: 'UX', by: 'Gemini 3.1 Pro', verdict: 'approve with fixes', file: 'review/DS-7-states.review-gemini-ux.md', settled: true, note: 'Sticky bar tested: never covers the form buttons.' }
-      ], links: [['Packet', 'review/DS-7-states.md'], ['Resolution', 'review/DS-7-states.triage.md']] },
+        ,{ kind: 'Code', by: 'GPT-5.5', verdict: 'approve with fixes', file: 'review/DS-7-others.review-gpt.md', settled: true, note: 'Last 8 pages. SEO/OG and ad-source fields checked on the served pages: 8/8.' },
+        { kind: 'Code', by: 'Gemini 3.1 Pro', verdict: 'do not approve', file: 'review/DS-7-others.review-gemini.md', settled: true, note: 'Blocker: state choice on general pages. Tested: every lead carries a state (16/16).' },
+        { kind: 'UX', by: 'GPT-5.5', verdict: 'approve with fixes', file: 'review/DS-7-others.review-gpt-ux.md', settled: true, note: 'Template-wide design points logged.' },
+        { kind: 'UX', by: 'Gemini 3.1 Pro', verdict: 'do not approve', file: 'review/DS-7-others.review-gemini-ux.md', settled: true, note: 'Blocker: Title Case paragraphs. Template-wide and pre-existing; raised as PBI-11 for the operator.' }
+      ], links: [['Packet', 'review/DS-7-states.md'], ['Resolution', 'review/DS-7-states.triage.md'], ['Packet (8 pages)', 'review/DS-7-others.md'], ['Resolution (8 pages)', 'review/DS-7-others.triage.md']] },
       done: 'All 21 URLs serve the landing-page design with the new form; no legacy form or its scripts left on the site; each page keeps its own copy, tracked number, SEO and tracking; old versions kept as drafts.',
       tasks: [
         ['Pilot: rebuild /ohio from a landing page (duplicate, state copy, number, SEO), preview under a temporary slug: live at /ohio-new, checks passed', 'done'],
@@ -236,10 +240,10 @@ window.BACKLOG = {
         ['Found and fixed: the pilot Ohio page had the landing page\u2019s noindex head; Ohio now has its own old head (index, follow) again', 'done'],
         ['Verified on staging.credolegal.com: 13/13 served-HTML checks, 26/26 submit tests (1 post, 21 fields), 52/52 numbers per ad source, 13/13 form_submit pushes, head/footer byte-diff 13/13', 'done'],
         ['Independent review of the 13 state pages (code + UX, GPT + Gemini); findings settled except D1, D15, D16, D17', 'done'],
-        ['letter, medical-debt-attorney, debt-harassment-act-fast, multiple-collectors-more-money and the 4 payday pages, each with its own copy', 'doing'],
-        ['Remove the legacy form component and scripts once no published page uses them', 'todo'],
-        ['Publish to staging.credolegal.com and verify: forms, numbers per source, submit test, lpcheck', 'todo'],
-        ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots when anything visible changes; findings settled', 'todo']
+        ['letter, medical-debt-attorney, debt-harassment-act-fast, multiple-collectors-more-money and the 4 payday pages, each with its own copy: duplicated from a new-form page with the same section counts, copy mapped node by node, 2 FAQ items added on medical; own SEO, head code and tracked numbers kept', 'done'],
+        ['Remove the legacy form component and scripts once no published page uses them: 0 of 54 published pages use them; the 21 old drafts still do, so removal waits on D18 (blocked)', 'todo'],
+        ['Publish to staging.credolegal.com and verify (8 pages): copy 8/8, submit 16/16, numbers 32/32, form_submit 8/8, head/footer byte-diff 8/8, SEO/OG 8/8', 'done'],
+        ['Independent review of the last 8 pages (code + UX, GPT + Gemini); findings settled; Title Case raised as PBI-11', 'done']
       ] },
 
     { id: 'PBI-08', visible: false, title: 'Capture the Meta click id (fbclid)', refs: ['G20'], by: 'claude',
@@ -284,6 +288,7 @@ window.BACKLOG = {
       done: 'Every citation displays as typed; word tags match the prototype.',
       tasks: [
         ['Capitalize: None on the mjfdcpaboxtext family (merge into one class)', 'todo'],
+        ['Also the what-we-do paragraph (class text-block-16 has text-transform: capitalize, so body copy shows in Title Case on every landing page; flagged as a blocker by the Gemini UX review, DS-7)', 'todo'],
         ['Retype the word tags shown in mixed case in the prototype', 'todo'],
         ['Publish to staging only', 'todo'],
         ['Check each page\'s citation list from the audit', 'todo'],
@@ -460,7 +465,8 @@ window.BACKLOG = {
     ['D14', 'PBI-06', 'Tablet menu', 'Decided 28 Sep: accepted. Tablets (768–991px) also show the call button instead of the ☰ menu, like phones; the menu only held 5 same-page links and the number.', 'PBI-06'],
     ['D15', 'DS-7 review', 'Call numbers per ad source', 'Every state page shows one number whatever the ad source (as before): 718-865-8350, or the state\u2019s local number on MN, MD, CO, NY, NJ, FL. Keep that, or give Google / Meta / Bing their own tracked numbers so calls can be attributed? New numbers come from the call-tracking account (not ours to change).', 'DS-7'],
     ['D16', 'DS-7 review', 'State pages in search', 'The 13 state pages say index, follow but their canonical points to the home page (start.credolegal.com/), which folds them into the home page for Google. Kept as it was. Should each state page rank on its own (self canonical), or stay as is?', 'DS-7'],
-    ['D17', 'DS-7 review', 'Stats claims', 'The pages show \u201c10 million+ in debt wiped\u201d and \u201c500k debts settled every month\u201d with no source. A Credo attorney should confirm they are accurate and allowed in attorney advertising, or change them.', 'DS-7']
+    ['D17', 'DS-7 review', 'Stats claims', 'The pages show \u201c10 million+ in debt wiped\u201d and \u201c500k debts settled every month\u201d with no source. A Credo attorney should confirm they are accurate and allowed in attorney advertising, or change them.', 'DS-7'],
+    ['D18', 'DS-7', 'Old page drafts and the legacy form', 'The 21 older pages are rebuilt; their old versions are kept as hidden drafts ({slug}-old) so any page can be put back. The old form components (Hero-Form, Hero-Form-For-New-Pages) and the site script OldFormPhoneEmailGuard are only used by those drafts. When can the drafts be deleted? Deleting them lets the legacy form and its scripts be removed from the site for good.', 'DS-7']
   ],
 
   manual: [
