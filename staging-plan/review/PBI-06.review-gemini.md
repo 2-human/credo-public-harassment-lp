@@ -1,0 +1,10 @@
+<!-- reviewer: gemini-3.1-pro-preview · 2026-09-28T15:27:42.127Z · 29s · images sent: 0 · usage {"promptTokenCount":1719,"candidatesTokenCount":429,"totalTokenCount":4689,"promptTokensDetails":[{"modality":"TEXT","tokenCount":1719}],"thoughtsTokenCount":2541,"serviceTier":"standard"} -->
+
+| # | Severity (blocker / should-fix / note) | Finding | Evidence or reasoning | Suggested check |
+|---|---|---|---|---|
+| 1 | blocker | Mobile navigation (menu links) is completely inaccessible on phones and tablets. | The packet states the ☰ button was set to "hidden" to add the call button, and Evidence 1 confirms "☰ visible 0/324". Before this change, the menu contained the site's navigation. There is no evidence that mobile users can still access these links. | Confirm if destroying the mobile navigation was intentional. If not, restore the ☰ button, place it alongside the new call button, and ensure both fit within the mobile header. |
+| 2 | should-fix | Conclusion 1 is incomplete regarding overall header functionality. | Evidence supports that the call button itself works and shows the tracked number, but Conclusion 1 fails to note that the rest of the header's functionality (the mobile menu) is now broken. | Evaluate the mobile header as a whole component, not just the new button, to ensure no pre-existing features were lost. |
+| 3 | note | Risk of SVG icon being overwritten by the swap script. | The context states the script writes text into `.callnumbers` if present, else replaces `innerHTML`. The SVG is a sibling of `.callnumbers`. If the script logic ever fails to find `.callnumbers` (e.g., due to a typo or script update) and targets the parent `.mobile-call` instead, the SVG icon will be deleted. | Visually verify on a swapped page (e.g., source=google) that the SVG phone icon is still visible inside the button after the DOMContentLoaded script runs. |
+| 4 | note | Conclusions 2, 3, and 4 are supported by the evidence. | Evidence 1 explicitly confirms desktop is unchanged. Evidence 2 confirms GTM tracking catches the correct swapped number. Evidence 4 confirms total isolation of staging environments. | None needed. |
+
+do not approve
