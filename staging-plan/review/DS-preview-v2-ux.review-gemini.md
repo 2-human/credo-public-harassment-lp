@@ -1,0 +1,11 @@
+<!-- reviewer: gemini-3.1-pro-preview · 2026-09-28T13:33:25.370Z · 85s · usage {"promptTokenCount":25303,"candidatesTokenCount":493,"totalTokenCount":35425,"promptTokensDetails":[{"modality":"TEXT","tokenCount":1363},{"modality":"IMAGE","tokenCount":23940}],"thoughtsTokenCount":9629,"serviceTier":"standard"} -->
+
+| # | Severity | Finding | Screenshot | Suggested change |
+|---|---|---|---|---|
+| 1 | Note | Conclusions 1 (visual consistency), 2 (state visibility), 3 (primary action prominence), and 4 (401/404 funnel recovery) are visually supported by the prototypes. The overall design provides strong trust signals and a professional legal tone. | `state-after-desktop`, `404-after-desktop` | None needed. |
+| 2 | Should-fix | Conclusion 5 is not fully supported regarding contrast. The red "NO UPFRONT COST" text on the near-black form header introduces poor contrast and is harder to read than the older purple legacy forms. | `state-after-desktop`, `legacy-after-desktop` | Change the red "NO UPFRONT COST" text in the form header to white or a lighter shade to pass contrast guidelines against the dark background. |
+| 3 | Blocker | Phone usability issue: The mobile header is heavily cramped, squeezing the logo, a 10-digit phone number, and a CTA button onto a single line. This creates tiny, poorly-spaced tap targets for primary actions and removes the old navigation menu entirely. | `state-after-mobile`, `med-after-mobile` | Simplify the mobile header (e.g., display only the Logo and a single, prominently sized Call icon/button) to ensure tap targets are usable on narrow screens. |
+| 4 | Should-fix | Covering content: The fixed red Tidio chat bubble in the bottom right corner overlaps and obscures the page text (specifically the "04 / Contact" grid item) on the mobile layout. | `thanks-after-mobile` | Add sufficient bottom padding to the main page container so users can scroll the content completely clear of the fixed chat bubble. |
+| 5 | Should-fix | Phone usability issue: The layout of the fallback action buttons is broken on mobile. The primary red button and the "OR" text share a line, awkwardly forcing the secondary call button onto a misaligned new line. | `404-after-mobile`, `401-after-mobile` | Stack the buttons vertically at 100% width and place the "OR" text on its own centered line between them. |
+
+approve with fixes

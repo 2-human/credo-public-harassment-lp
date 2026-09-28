@@ -1,0 +1,11 @@
+<!-- reviewer: gemini-3.1-pro-preview · 2026-09-28T13:21:07.378Z · 71s · usage {"promptTokenCount":24088,"candidatesTokenCount":492,"totalTokenCount":30127,"promptTokensDetails":[{"modality":"IMAGE","tokenCount":22862},{"modality":"TEXT","tokenCount":1226}],"thoughtsTokenCount":5547,"serviceTier":"standard"} -->
+
+| # | Severity | Finding | Screenshot | Suggested change |
+|---|---|---|---|---|
+| 1 | blocker | **Conclusion 3 (False for mobile) / Covering primary actions:** On mobile, a floating red "Comments" widget visually competes with the primary "Continue" button and directly covers the alternative action ("Or call [number]"). Since calling is one of the two sole goals, this is a blocker. | `state-after-mobile`, `med-after-mobile`, `thanks-after-mobile` | Hide the "Comments" widget on all landing pages, or change its color and reposition it so it doesn't overlap conversion text. |
+| 2 | note | **Conclusions 1, 4, 5 / Consistency & Readability:** Supported. The new design system is applied perfectly across all variants, unifying the site. Typography (dark text on white/grey) offers excellent contrast and readability. The proposed 401 and 404 pages now feature header CTAs and on-page buttons to return to the funnel. | `legacy-after-desktop`, `404-after-desktop`, `med-after-desktop`, `401-after-desktop` | No change needed. |
+| 3 | note | **Conclusion 2 / State visibility:** Supported. The state name is clearly visible in the paragraph directly below the main heading on the first screen. | `state-after-desktop`, `state-after-mobile` | No change needed. |
+| 4 | note | **Trust and legal-tone signals:** The new design surfaces trust badges (BBB, Google Reviews) at the bottom edge of the desktop viewport, which strongly improves credibility and professional tone compared to the older layouts. | `lp-after-desktop`, `state-after-desktop` | No change needed. |
+| 5 | should-fix | **Phone usability / Header crowding:** The proposed mobile header fits a logo, a full 14-character phone number, and a CTA button into a single horizontal row. This creates a very cramped space with small touch targets that could cause accidental misclicks. | `state-after-mobile`, `med-after-mobile` | Replace the visible phone number in the mobile header with a standard phone icon, or stack the elements. |
+
+**Overall verdict:** approve with fixes

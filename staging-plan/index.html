@@ -15,7 +15,7 @@
 .legend{display:flex;flex-wrap:wrap;gap:14px;font-size:12.5px;color:var(--mute);margin:0 0 14px}
 .legend span{display:flex;gap:6px;align-items:center}
 
-.board{display:grid;grid-template-columns:minmax(280px,1.35fr) 1fr 1fr 1fr;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--card)}
+.board{display:grid;grid-template-columns:minmax(260px,1.3fr) 1fr 1fr 1fr minmax(220px,1.15fr);border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--card)}
 .board .hd{background:#12141d;color:#fff;font:700 11.5px/1 system-ui,sans-serif;text-transform:uppercase;letter-spacing:.05em;padding:11px 12px}
 .board .hd.doing{background:#b45309}
 .board .hd em{font-style:normal;font-weight:400;opacity:.75;text-transform:none;letter-spacing:0}
@@ -36,6 +36,15 @@
 .col-doing .task{border-color:#e8b77a;background:#fff9f0}
 .col-done .task{color:var(--mute);text-decoration:line-through;text-decoration-color:#9aa0a8}
 .col .lbl{display:none}
+.col-review .rv{font-size:12px;line-height:1.35;border:1px solid var(--line);border-radius:7px;padding:6px 8px;margin:0 0 6px;background:#fff}
+.col-review .rv .k{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.col-review .rv .who{font:700 10.5px ui-monospace,Menlo,monospace;text-transform:uppercase;letter-spacing:.03em;color:#12141d}
+.col-review .rv .v{font:700 10.5px system-ui,sans-serif;border-radius:999px;padding:2px 7px;white-space:nowrap}
+.v.ok{background:#e3f4e9;color:#1f7a4d}.v.fix{background:#fff3e0;color:#9a5b00}.v.no{background:#fdecec;color:#b42318}.v.pend{background:#eef0f3;color:#5b6470}.v.na{background:#f4f3ef;color:#8a8f98}
+.col-review .rv .s{color:var(--mute);margin-top:3px}
+.col-review .rv a{color:var(--blue);font-weight:600}
+.col-review .rvlinks{font-size:12px;margin:2px 0 0}
+.col-review .rvlinks a{color:var(--blue);font-weight:600;margin-right:10px}
 .warn{background:#fdecec;border:1px solid #f3c6c9;color:var(--red);border-radius:10px;padding:10px 14px;margin:0 0 14px;font-weight:600}
 @media(max-width:1000px){
   .board{display:block}
@@ -61,13 +70,18 @@
     <span><i class="pill by-claude">Claude</i> Claude does it end to end</span>
     <span><i class="pill by-likely">Likely Claude</i> confirmed on one page first; else a short Designer step</span>
     <span><i class="pill by-decision">Needs decision</i> waits on a decision (D#)</span>
+    <span><i class="v ok" style="font:700 10.5px system-ui;border-radius:999px;padding:2px 7px">approve</i><i class="v fix" style="font:700 10.5px system-ui;border-radius:999px;padding:2px 7px">approve with fixes</i><i class="v no" style="font:700 10.5px system-ui;border-radius:999px;padding:2px 7px">do not approve</i> reviewer's verdict; ✓ settled = every finding answered in the resolution file</span>
   </div>
+  <p style="font-size:13px;color:var(--mute);margin:-4px 0 14px;max-width:900px"><b>Review rule:</b> every change gets a <b>code</b> review from both GPT-5.5 and Gemini 3.1 Pro;
+  every visible change also gets a <b>UX</b> review from both, on before/after screenshots. Reviewers see only the review packet (and screenshots), never this conversation or the site.
+  Full packets, replies and resolutions: <a href="review.html">Reviews</a>.</p>
 
   <div class="board" id="board">
     <div class="hd">Backlog item (PBI)</div>
     <div class="hd">To do</div>
     <div class="hd doing">Doing <em>· WIP limit: 1 row</em></div>
     <div class="hd">Done</div>
+    <div class="hd">Independent review <em>· GPT + Gemini</em></div>
   </div>
 
   <h2>Why one row at a time</h2>
@@ -95,6 +109,22 @@
     '<div class="card"><small>Waiting on a decision</small><b>' + blocked.length + '</b></div>';
   if (active.length > 1) document.getElementById('wipwarn').innerHTML = '<div class="warn">WIP limit broken: ' + active.length + ' rows have tasks in Doing (' + E(active.map(function (p) { return p.id; }).join(', ')) + ').</div>';
 
+  var VCLS = { 'approve': 'ok', 'approve with fixes': 'fix', 'do not approve': 'no' };
+  function reviewCol(p, cls) {
+    var R = p.review, out = '';
+    if (!R) {
+      out = '<div class="rv"><div class="s">Planned: code review by GPT + Gemini' + (p.visible === false ? '' : '; UX review by GPT + Gemini on screenshots') + '.</div></div>';
+    } else {
+      (R.items || []).forEach(function (r) {
+        var v = r.verdict ? '<i class="v ' + (VCLS[r.verdict] || 'pend') + '">' + E(r.verdict) + '</i>' : '<i class="v ' + (r.na ? 'na' : 'pend') + '">' + (r.na ? 'not needed' : 'pending') + '</i>';
+        out += '<div class="rv"><div class="k"><span class="who">' + E(r.kind) + ' · ' + E(r.by) + '</span>' + v + (r.settled ? '<span title="every finding answered in the resolution">✓ settled</span>' : '') + '</div>' +
+          (r.note ? '<div class="s">' + E(r.note) + '</div>' : '') +
+          (r.file ? '<div class="s"><a href="review.html#' + E(r.file) + '">read the reply</a></div>' : '') + '</div>';
+      });
+      out += '<div class="rvlinks">' + (R.links || []).map(function (l) { return '<a href="review.html#' + E(l[1]) + '">' + E(l[0]) + '</a>'; }).join('') + '</div>';
+    }
+    return '<div class="cell col col-review ' + cls + '"><span class="lbl">Independent review</span>' + out + '</div>';
+  }
   var html = '';
   B.pbis.forEach(function (p) {
     var isActive = active.indexOf(p) >= 0, isDone = done.indexOf(p) >= 0;
@@ -112,7 +142,7 @@
       '<div class="ttl">' + E(p.title) + '</div><p class="why">' + E(p.why) + '</p>' +
       (p.note ? '<div class="note">' + E(p.note) + '</div>' : '') +
       '<details><summary>Done when</summary><div class="dod">' + E(p.done) + '</div></details></div>' +
-      col('todo', 'To do') + col('doing', 'Doing') + col('done', 'Done');
+      col('todo', 'To do') + col('doing', 'Doing') + col('done', 'Done') + reviewCol(p, cls);
   });
   document.getElementById('board').insertAdjacentHTML('beforeend', html);
 })();

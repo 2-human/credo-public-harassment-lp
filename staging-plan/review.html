@@ -16,28 +16,42 @@
 <script src="plan-nav.js" data-page="review"></script>
 <main>
   <h1>Independent reviews</h1>
-  <p class="lede">High-risk backlog items get a second opinion from another AI (GPT or Gemini). The reviewer sees only the
+  <p class="lede">Every change gets a <b>code</b> review from both GPT-5.5 and Gemini 3.1 Pro, and every visible change a <b>UX</b> review from both, on before/after screenshots. The reviewer sees only the
   review packet: what changed, the evidence and the conclusions, not our conversation. Its findings and how each was settled are shown here.</p>
   <div id="list"></div>
 </main>
 <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="backlog-data.js"></script>
 <script>
-var REVIEWS = [
-  { id: 'PBI-05', title: 'Sticky call bar never covers the form', files: [['Packet', 'review/PBI-05.md'], ['GPT-5.5 review', 'review/PBI-05.review-gpt.md'], ['Resolution', 'review/PBI-05.triage.md']] },
-  { id: 'PBI-01', title: 'Clean the page code', files: [['Packet', 'review/PBI-01.md'], ['GPT-5.5 review', 'review/PBI-01.review-gpt.md'], ['Resolution', 'review/PBI-01.triage.md']] }
+/* One source of truth: the review entries come from backlog-data.js (each PBI's review), plus reviews of work that is not a PBI yet. */
+var EXTRA = [
+  { id: 'Design preview', title: 'One design for all 57 staging pages (UX, screenshots only)', files: [
+    ['Packet v1', 'review/DS-preview-ux.md'], ['UX · GPT-5.5 · v1', 'review/DS-preview-ux.review-gpt.md'], ['UX · Gemini 3.1 Pro · v1', 'review/DS-preview-ux.review-gemini.md'],
+    ['Packet v2', 'review/DS-preview-v2-ux.md'], ['UX · GPT-5.5 · v2', 'review/DS-preview-v2-ux.review-gpt.md'], ['UX · Gemini 3.1 Pro · v2', 'review/DS-preview-v2-ux.review-gemini.md'],
+    ['Resolution', 'review/DS-preview-ux.triage.md']] }
 ];
-var list = document.getElementById('list');
+var REVIEWS = EXTRA.concat(window.BACKLOG.pbis.filter(function (p) { return p.review && (p.review.links || []).length; }).reverse().map(function (p) {
+  var links = p.review.links, files = links.filter(function (l) { return !/Resolution/.test(l[0]); });
+  p.review.items.forEach(function (r) { if (r.file) files.push([r.kind + ' · ' + r.by + (r.verdict ? ' · ' + r.verdict : ''), r.file]); });
+  return { id: p.id, title: p.title, files: files.concat(links.filter(function (l) { return /Resolution/.test(l[0]); })) };
+}));
+var list = document.getElementById('list'), want = decodeURIComponent(location.hash.slice(1));
 REVIEWS.forEach(function (r) {
-  var box = document.createElement('section'); box.className = 'rv';
+  var box = document.createElement('section'); box.className = 'rv'; box.id = r.id.replace(/\s+/g, '-');
   box.innerHTML = '<h2>' + r.id + ' · ' + r.title + '</h2><div class="files"></div><div class="md">Loading…</div>';
   list.appendChild(box);
   var md = box.querySelector('.md'), files = box.querySelector('.files');
   function show(i) {
     files.querySelectorAll('button').forEach(function (b, j) { b.classList.toggle('on', i === j); });
-    fetch(r.files[i][1] + '?cb=' + Date.now()).then(function (x) { return x.text(); }).then(function (t) { md.innerHTML = marked.parse(t.replace(/^<!--.*?-->\s*/s, '')); });
+    fetch(r.files[i][1] + '?cb=' + Date.now()).then(function (x) { return x.text(); }).then(function (t) {
+      var head = (t.match(/^<!--\s*(reviewer:[^>]*?)\s*-->/) || [])[1];
+      md.innerHTML = (head ? '<p style="font:12px ui-monospace,Menlo,monospace;color:var(--mute);margin:0 0 10px">' + head.replace(/usage .*$/, '') + '</p>' : '') + marked.parse(t.replace(/^<!--.*?-->\s*/s, ''));
+    });
   }
   r.files.forEach(function (f, i) { var b = document.createElement('button'); b.textContent = f[0]; b.onclick = function () { show(i); }; files.appendChild(b); });
-  show(r.files.length - 1);
+  var k = r.files.findIndex(function (f) { return f[1] === want; });
+  show(k >= 0 ? k : r.files.length - 1);
+  if (k >= 0) setTimeout(function () { box.scrollIntoView(); }, 300);
 });
 </script>
 </body>
