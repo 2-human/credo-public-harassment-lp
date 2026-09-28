@@ -8,7 +8,7 @@
  * `blocked` names the decision (D#) or manual step (M#) a PBI waits on. */
 window.BACKLOG = {
   updated: '27 Sep 2026',
-  state: '28 Sep: PBI-07 done: every phone field opens the phone keypad and every ZIP field the numeric keypad on all 52 form pages. New item PBI-07b: the old form still sends a too-short phone (the new form validates phone and email correctly). Next: PBI-07b.',
+  state: '28 Sep: PBI-07 and PBI-07b done: phone/ZIP fields open the number pad, and no form sends without a 10-digit phone and a valid email (old form fixed; new form already did). Next unblocked item: PBI-08, capture the Meta click id.',
   site: { name: 'Credo: Microsite Staging', id: '6ab90fb0761d44332faf21c8', domain: 'staging.credolegal.com' },
 
   pbis: [
@@ -204,13 +204,19 @@ window.BACKLOG = {
       ] },
 
     { id: 'PBI-07b', title: 'Phone and email must be valid before the form sends', refs: ['Found 28 Sep', 'Operator, 28 Sep'], by: 'claude', note: 'Corrected 28 Sep: an earlier test counted a Google Analytics beacon (its URL mentions formspree) as a form send. Strict re-test: the new form already blocks every invalid phone and email.',
-      why: 'The operator wants phone and email format validated. Strict test (only real posts to formspree.io count): the new form (31 pages) blocks invalid phones and emails; the old form (21 pages) blocks invalid emails and empty/letter phones, but still sends a too-short phone such as "(212) 555".',
-      done: 'No lead is sent without a 10-digit phone and a well-formed email, on both form types.',
+      why: 'The operator wants phone and email format validated. The new form (31 pages) already blocked every invalid phone and email. The old form (21 pages) greys out Submit until both are valid, but a keyboard Enter on the Submit link still sent the lead (e.g. "(212) 555" or a bad email).',
+      done: 'No lead is sent without a 10-digit phone and a well-formed email, on both form types, by tap or keyboard.',
+      review: { items: [
+        { kind: 'Code', by: 'GPT-5.5', verdict: 'approve with fixes', file: 'review/PBI-07b.review-gpt.md', settled: true },
+        { kind: 'Code', by: 'Gemini 3.1 Pro', verdict: 'approve with fixes', file: 'review/PBI-07b.review-gemini.md', settled: true, note: 'Blocker: Enter inside a field. Tested: never sends, valid or not.' },
+        { kind: 'UX', by: 'GPT + Gemini', na: true, note: 'No visual change; the forms\u2019 existing error messages show.' }
+      ], links: [['Packet', 'review/PBI-07b.md'], ['Resolution', 'review/PBI-07b.triage.md']] },
       tasks: [
         ['Test which invalid phone/email values each form sends (strict: real formspree posts only)', 'done'],
-        ['Old form: block a phone with fewer than 10 digits (or rely on the rebuild, D11: operator to choose)', 'todo'],
-        ['Publish to staging.credolegal.com and repeat the invalid-input test on both form types', 'todo'],
-        ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots when anything visible changes; findings settled', 'todo']
+        ['Operator chose to fix the old form now (28 Sep); tap vs keyboard test found the real gap: Enter on the Submit link', 'done'],
+        ['Guard as a registered site script (OldFormPhoneEmailGuard 1.0.0, footer): blocks the old form’s Submit until phone = 10 digits and email is well formed; shadow-tested first', 'done'],
+        ['Publish to staging.credolegal.com; all 21 old-form pages: short phone 0/21 sent, bad email 0/21, valid 21/21; Enter inside fields sends nothing; new form unchanged', 'done'],
+        ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots when anything visible changes; findings settled', 'done']
       ] },
 
     { id: 'PBI-08', visible: false, title: 'Capture the Meta click id (fbclid)', refs: ['G20'], by: 'claude',
