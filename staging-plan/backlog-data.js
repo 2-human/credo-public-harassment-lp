@@ -8,7 +8,7 @@
  * `blocked` names the decision (D#) or manual step (M#) a PBI waits on. */
 window.BACKLOG = {
   updated: '27 Sep 2026',
-  state: '28 Sep: PBI-06 (phone header, Option B) live on staging and verified on 57 pages; one open question for the operator (D14: tablet menu). PBI-06b (same gap above the closing CTA button, 39px on all 31 pages) done and reviewed.',
+  state: '28 Sep: PBI-06 done (phone and tablet header with the tracked number; D14 accepted) and PBI-06b done (same 39px gap above the closing CTA on 31 pages). Next unblocked item: PBI-07, phone and ZIP fields open the number pad.',
   site: { name: 'Credo: Microsite Staging', id: '6ab90fb0761d44332faf21c8', domain: 'staging.credolegal.com' },
 
   pbis: [
@@ -146,14 +146,14 @@ window.BACKLOG = {
         ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots when anything visible changes; findings settled', 'done']
       ] },
 
-    { id: 'PBI-06', title: 'Tracked phone number in the mobile header', refs: ['G25'], by: 'likely', blocked: 'D14',
+    { id: 'PBI-06', title: 'Tracked phone number in the mobile header', refs: ['G25'], by: 'likely', note: 'D14 decided 28 Sep: tablets accepted (no ☰ menu below 992px).',
       review: { items: [
         { kind: 'UX', by: 'GPT-5.5', verdict: 'approve with fixes', file: 'review/PBI-06-options-ux.review-gpt.md', settled: true, note: 'Options A/B on 3 phones (9 screenshots). Recommends B.' },
         { kind: 'UX', by: 'Gemini 3.1 Pro', verdict: 'approve with fixes', file: 'review/PBI-06-options-ux.review-gemini.md', settled: true, note: 'Recommends B; rejects A (redundant, crowded at 360px).' },
         { kind: 'Code', by: 'GPT-5.5', verdict: 'approve with fixes', file: 'review/PBI-06.review-gpt.md', settled: true },
-        { kind: 'Code', by: 'Gemini 3.1 Pro', verdict: 'do not approve', file: 'review/PBI-06.review-gemini.md', note: 'Blocker: ☰ menu gone. Phones = operator decision; tablets (768–991px) put to the operator as D14.' },
+        { kind: 'Code', by: 'Gemini 3.1 Pro', verdict: 'do not approve', file: 'review/PBI-06.review-gemini.md', settled: true, note: 'Blocker: ☰ menu gone. Settled by operator decisions: phones (Option B) and tablets (D14, accepted 28 Sep).' },
         { kind: 'UX', by: 'GPT-5.5', verdict: 'approve with fixes', file: 'review/PBI-06-ux.review-gpt.md', settled: true, note: 'Built version, 7 screenshots.' },
-        { kind: 'UX', by: 'Gemini 3.1 Pro', verdict: 'approve with fixes', file: 'review/PBI-06-ux.review-gemini.md', note: 'Same tablet-menu blocker (D14); corner/edge claims not supported by the screenshot.' }
+        { kind: 'UX', by: 'Gemini 3.1 Pro', verdict: 'approve with fixes', file: 'review/PBI-06-ux.review-gemini.md', settled: true, note: 'Tablet-menu blocker settled by D14 (accepted); corner/edge claims not supported by the screenshot.' }
       ], links: [['Options packet', 'review/PBI-06-options-ux.md'], ['Packet', 'review/PBI-06.md'], ['UX packet', 'review/PBI-06-ux.md'], ['Resolution (options)', 'review/PBI-06-options-ux.triage.md'], ['Resolution', 'review/PBI-06.triage.md']] },
       why: 'On phones the call link is hidden behind the menu button.',
       done: 'Tracked number and a "Free review" button visible in the mobile header; phone swap updates it per utm_source.',
@@ -165,7 +165,7 @@ window.BACKLOG = {
         ['Publish to staging only', 'done'],
         ['Verify on all 57 pages: phones, 360px, iPad, desktop; numbers per utm_source; tap fires gtm.linkClick; lpcheck regression', 'done']
 ,
-        ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots when anything visible changes; findings settled', 'doing']
+        ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots when anything visible changes; findings settled', 'done']
       ] },
 
     { id: 'PBI-06b', title: 'Same gap above the closing CTA button on every page', refs: ['Operator, 28 Sep'], by: 'claude', note: 'Asked for by the operator on 28 Sep while PBI-06 was being verified; published together with PBI-06 so the checks cover one state.',
@@ -412,7 +412,7 @@ window.BACKLOG = {
     ['D11', 'L1', 'Old-form pages', 'Decided 28 Sep: rebuild the 21 state and old landing pages on the landing-page template (new design, new form), keeping each page’s own copy, tracked number, SEO and tracking. The old multi-step library and its call to videsigns-staging.co.uk go with the old form. Preview: design-system.html.', 'PBI-01c'],
     ['D12', 'PBI-01', 'ZIP error message', 'Decided 27 Sep: accepted. An invalid ZIP now shows one message ("Please enter valid 5 digit zip code") instead of two.', 'PBI-01'],
     ['D13', 'Design preview', 'Thank-you wording', 'Legal sign-off on the thank-you headline. Today: "You have been pre-approved for a free legal consultation call with our attorney!" Proposed (in the preview): "Thank you. Your request has been received." with "One of our legal professionals will contact you shortly to schedule your free, confidential consultation." Needs a Credo attorney to approve before it goes into Webflow. Also: which phone number the unified thank-you page shows (today /thank-you has (443) 483-4080, /page/thank-you and /page/already-submitted (718) 865-8350).', 'DS-6'],
-    ['D14', 'PBI-06', 'Tablet menu', 'Option B hides the ☰ menu below 992px, so tablets (768–991px, e.g. iPad portrait) lose it too, not only phones. Accept on tablets (recommended: the menu only holds 5 same-page links and the number, now in the header), or keep ☰ on tablets with one small site-CSS rule.', 'PBI-06']
+    ['D14', 'PBI-06', 'Tablet menu', 'Decided 28 Sep: accepted. Tablets (768–991px) also show the call button instead of the ☰ menu, like phones; the menu only held 5 same-page links and the number.', 'PBI-06']
   ],
 
   manual: [

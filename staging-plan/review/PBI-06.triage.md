@@ -18,4 +18,4 @@ Both blockers are the same point: the ☰ menu is gone.
 | 11 | On phones the call button is more prominent than the form's Continue, which is below the first screen (GPT UX 2, 5) | Calling is an intended primary action. The form's Continue moves up when the H1 shrinks to 32 px on phones (PBI-16). |
 | 12 | Small, pale form labels; old design on state pages (GPT UX 7, 8) | PBI-15/16; state pages are being rebuilt (D11). |
 
-**Status:** settled except #1 (tablets), which waits on the operator (D14).
+**Status: settled.** #1 closed by the operator on 28 Sep: D14 accepted (tablets, like phones, show the call button instead of the ☰ menu).
