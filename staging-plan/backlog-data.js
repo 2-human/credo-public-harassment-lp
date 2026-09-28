@@ -8,7 +8,7 @@
  * `blocked` names the decision (D#) or manual step (M#) a PBI waits on. */
 window.BACKLOG = {
   updated: '27 Sep 2026',
-  state: '28 Sep: PBI-06 done (phone and tablet header with the tracked number; D14 accepted) and PBI-06b done (same 39px gap above the closing CTA on 31 pages). Next unblocked item: PBI-07, phone and ZIP fields open the number pad.',
+  state: '28 Sep: PBI-07 done: every phone field opens the phone keypad and every ZIP field the numeric keypad on all 52 form pages. New item PBI-07b (invalid or empty phone still sent sometimes, pre-existing). Next unblocked item: PBI-07b.',
   site: { name: 'Credo: Microsite Staging', id: '6ab90fb0761d44332faf21c8', domain: 'staging.credolegal.com' },
 
   pbis: [
@@ -186,14 +186,30 @@ window.BACKLOG = {
         ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots when anything visible changes; findings settled', 'done']
       ] },
 
-    { id: 'PBI-07', title: 'Phone and ZIP fields open the number pad', refs: ['F1'], by: 'likely',
-      why: 'The phone field is type="text", so phones show the letter keyboard.',
-      done: 'Phone input is type="tel", ZIP has inputmode="numeric"; formatting still works.',
+    { id: 'PBI-07', title: 'Phone and ZIP fields open the number pad', refs: ['F1'], by: 'claude',
+      why: 'The phone fields are type="text", so phones show the letter keyboard; on the 21 old pages the ZIP fields do too.',
+      done: 'Every phone field is type="tel" (phone keypad), every ZIP field has inputmode="numeric" (numeric keypad), both with autofill hints; formatting, validation and what the form sends are unchanged.',
+      review: { items: [
+        { kind: 'Code', by: 'GPT-5.5', verdict: 'approve with fixes', file: 'review/PBI-07.review-gpt.md', settled: true },
+        { kind: 'Code', by: 'Gemini 3.1 Pro', verdict: 'do not approve', file: 'review/PBI-07.review-gemini.md', settled: true, note: 'Blocker: soft keyboards might break formatting. Tested Android-keyboard and autofill input: identical before/after.' },
+        { kind: 'UX', by: 'GPT + Gemini', na: true, note: 'The change is the on-screen keyboard, which cannot be screenshotted headless; the page looks the same.' }
+      ], links: [['Packet', 'review/PBI-07.md'], ['Resolution', 'review/PBI-07.triage.md']] },
       tasks: [
-        ['Confirm on one page that the field type can be set through the API', 'todo'],
-        ['Apply to all form pages', 'todo'],
-        ['Publish to staging only', 'todo'],
-        ['Verify with lpcheck (form fields) and a form walk', 'todo'],
+        ['Shadow test first (new types applied to the served page): both form types submit the same fields and values; phone formatting unchanged', 'done'],
+        ['Confirm on one page that the field type can be set through the API', 'done'],
+        ['Apply: phone field on the 31 new-form pages; 6 phone + 4 ZIP fields in the 2 shared old-form components', 'done'],
+        ['Publish to staging.credolegal.com', 'done'],
+        ['Verify: 167 fields on 52 pages as intended; submit test 104/104 same fields; regression "letter keyboard" 30 → 0, form walk 240/240, phones 344/344; formatting identical under key, Android-keyboard and autofill input', 'done'],
+        ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots when anything visible changes; findings settled', 'done']
+      ] },
+
+    { id: 'PBI-07b', title: 'The form must not send an invalid or empty phone number', refs: ['Found 28 Sep'], by: 'claude', note: 'Found by the PBI-07 tests; pre-existing, not caused by PBI-07.',
+      why: 'The old form (21 pages) sends leads with a too-short or empty phone. The new form (31 pages) usually blocks letters in the phone field, but in about 1 of 8 test runs it still sent the lead with an empty phone.',
+      done: 'No lead is sent without a valid 10-digit phone, on both form types, under typed, soft-keyboard and autofill input.',
+      tasks: [
+        ['Find why the new form occasionally submits after its own "10 digits" message', 'todo'],
+        ['Old form: block submit on an invalid phone (or rely on the rebuild, D11)', 'todo'],
+        ['Publish to staging.credolegal.com and verify with repeated invalid-input runs', 'todo'],
         ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots when anything visible changes; findings settled', 'todo']
       ] },
 
