@@ -132,11 +132,11 @@ var FAMS = [
   { k: 'med', t: 'Medical debt attorney', n: '1 page · family B2', proto: 'med-attorney-locked-paired-portrait-noborders.html', live: '/medical-debt-attorney',
     note: 'Its own copy (7 FAQs, "What happens if you can\'t pay" list) mapped 1:1 onto the landing-page sections.' },
   { k: 'thanks', t: 'Thank-you pages', n: '3 URLs · family C', proto: 'thank-you.html', live: '/page/thank-you',
-    note: '/thank-you is already on the new design. /page/thank-you and /page/already-submitted (a CMS template, same copy) switch to it.' },
+    note: '/thank-you is already on the new design. /page/thank-you and /page/already-submitted (a CMS template, same copy) switch to it. After the UX review (28 Sep): Call now and Schedule a consultation moved onto the first screen; the headline no longer says "pre-approved" (proposed wording waits for legal sign-off, D13).' },
   { k: '404', t: '404 · Page not found', n: '1 page · family C', proto: '404.html', live: '/404',
     note: 'Webflow\'s default page today. New: brand header and footer, a way back into the funnel (free review or call).' },
   { k: '401', t: '401 · Protected page', n: '1 page · family C', proto: '401.html', live: '/401',
-    note: 'Webflow\'s default password page today (Arial, blue button). New: brand header, form field and button from the lead form.' }
+    note: 'Webflow\'s default password page today (Arial, blue button). New: brand header, form field and button from the lead form, plus a free-review and call path under the password form.' }
 ];
 var STAGING = 'https://staging.credolegal.com';
 document.getElementById('fams').innerHTML = FAMS.map(function (f) {

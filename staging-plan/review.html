@@ -28,7 +28,9 @@ var EXTRA = [
   { id: 'Design preview', title: 'One design for all 57 staging pages (UX, screenshots only)', files: [
     ['Packet v1', 'review/DS-preview-ux.md'], ['UX · GPT-5.5 · v1', 'review/DS-preview-ux.review-gpt.md'], ['UX · Gemini 3.1 Pro · v1', 'review/DS-preview-ux.review-gemini.md'],
     ['Packet v2', 'review/DS-preview-v2-ux.md'], ['UX · GPT-5.5 · v2', 'review/DS-preview-v2-ux.review-gpt.md'], ['UX · Gemini 3.1 Pro · v2', 'review/DS-preview-v2-ux.review-gemini.md'],
-    ['Resolution', 'review/DS-preview-ux.triage.md']] }
+    ['Resolution', 'review/DS-preview-ux.triage.md']] },
+  { id: 'Thank-you page', title: 'Call and booking on the first screen; new headline (UX, screenshots only)', files: [
+    ['Packet', 'review/TY-ux.md'], ['UX · GPT-5.5', 'review/TY-ux.review-gpt.md'], ['UX · Gemini 3.1 Pro', 'review/TY-ux.review-gemini.md'], ['Resolution', 'review/TY-ux.triage.md']] }
 ];
 var REVIEWS = EXTRA.concat(window.BACKLOG.pbis.filter(function (p) { return p.review && (p.review.links || []).length; }).reverse().map(function (p) {
   var links = p.review.links, files = links.filter(function (l) { return !/Resolution/.test(l[0]); });

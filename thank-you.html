@@ -28,6 +28,12 @@
   .ty-cta .or { font-family: var(--font-mono); font-size: 11px; letter-spacing: var(--tracking-wider); color: var(--fg-soft); }
   .ty-cta p { font-size: var(--fs-body); color: var(--fg-muted); max-width: 560px; margin: 18px auto 0; line-height: 1.6; }
   .ty-phone-big { font-family: var(--font-mono); }
+  .ty-cta-hero { margin-top: 30px; }
+  .ty-cta-hero .btns { display: flex; gap: 16px; justify-content: center; align-items: center; flex-wrap: wrap; }
+  .ty-cta-hero .or { font-family: var(--font-mono); font-size: 11px; letter-spacing: var(--tracking-wider); color: var(--fg-muted); }
+  .ty-cta-hero p { font-size: var(--fs-meta); color: var(--fg-muted); margin: 14px 0 0; }
+  .ty-legal-note { display: inline-block; margin: 22px 0 0; font-family: var(--font-mono); font-size: 11px; letter-spacing: var(--tracking-wide); text-transform: uppercase; color: var(--fg-warn); background: var(--bg-warn); border: 1px solid var(--border-warn); padding: 4px 10px; }
+  @media (max-width: 560px) { .ty-cta-hero .btns { flex-direction: column; align-items: stretch; } .ty-cta-hero .btns a { justify-content: center; } }
 </style>
 </head>
 <body>
@@ -35,9 +41,20 @@
 <section class="ty-hero">
   <div class="container">
     <div class="ty-logo"><img src="assets/credo-logo.png" alt="Credo Legal, consumer-debt defense law firm"/></div>
-    <h1>You're pre-approved for a free legal consultation with <em>our attorney</em>.</h1>
-    <p class="lede">We appreciate the trust you've placed in our team to help protect your rights and guide you toward financial relief. One of our legal professionals will be in touch shortly to discuss your situation in more detail.</p>
-    <div class="ty-stamp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Request received</div>
+    <div class="ty-stamp" style="margin:0 0 22px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Request received</div>
+    <!-- D13: headline + lede wording proposed 28 Sep, waiting for a Credo attorney's sign-off. Live wording today:
+         "You have been pre-approved for a free legal consultation call with our attorney!" -->
+    <h1>Thank you. Your request has been <em>received</em>.</h1>
+    <p class="lede">We appreciate the trust you've placed in our team to help protect your rights. One of our legal professionals will contact you shortly to schedule your free, confidential consultation.</p>
+    <div class="ty-cta-hero">
+      <div class="btns">
+        <a href="tel:+14434834080" class="btn-stamp">Call now · (443) 483-4080 <span class="ar">→</span></a>
+        <span class="or">OR</span>
+        <a href="https://calendly.com/d/cyg7-w2t-9gj/consultation-call" class="btn-ghost" target="_blank" rel="noopener">Schedule a consultation</a>
+      </div>
+      <p>Don't want to wait? Call us now, or pick a time that suits you.</p>
+    </div>
+    <p class="ty-legal-note">Wording pending legal review (D13)</p>
   </div>
 </section>
 
@@ -55,13 +72,7 @@
 
 <section class="ty-cta">
   <div class="container">
-    <div class="eyebrow" style="text-align:center;margin-bottom:18px;">Talk to us now</div>
-    <div class="btns">
-      <a href="tel:+14434834080" class="btn-stamp">Call now · (443) 483-4080 <span class="ar">→</span></a>
-      <span class="or">OR</span>
-      <a href="https://calendly.com/d/cyg7-w2t-9gj/consultation-call" class="btn-ghost" target="_blank" rel="noopener">Schedule a consultation</a>
-    </div>
-    <p>If you have any immediate questions, call or email us at <a href="mailto:support@credolegal.com" style="color:var(--credo-red);border-bottom:1.5px solid var(--credo-red);">support@credolegal.com</a>. We look forward to helping you regain control of your financial future.</p>
+    <p style="margin-top:0">If you have any immediate questions, call or email us at <a href="mailto:support@credolegal.com" style="color:var(--credo-red);border-bottom:1.5px solid var(--credo-red);">support@credolegal.com</a>. We look forward to helping you regain control of your financial future.</p>
   </div>
 </section>
 

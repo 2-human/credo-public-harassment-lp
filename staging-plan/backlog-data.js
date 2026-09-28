@@ -8,7 +8,7 @@
  * `blocked` names the decision (D#) or manual step (M#) a PBI waits on. */
 window.BACKLOG = {
   updated: '27 Sep 2026',
-  state: 'Independent reviews backfilled 28 Sep: PBI-00b, 01, 04 and 05 each reviewed by GPT-5.5 and Gemini 3.1 Pro (code), PBI-05 also UX on screenshots; all findings settled. Next unblocked item: PBI-06, tracked number in the mobile header.',
+  state: '28 Sep: D11 decided (the 21 old-design pages are rebuilt on the landing-page template). Thank-you preview: call and booking moved to the first screen, reviewed by GPT + Gemini; new headline waits on legal sign-off (D13). Next unblocked item: PBI-06, phone header.',
   site: { name: 'Credo: Microsite Staging', id: '6ab90fb0761d44332faf21c8', domain: 'staging.credolegal.com' },
 
   pbis: [
@@ -71,11 +71,11 @@ window.BACKLOG = {
         ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots when anything visible changes; findings settled', 'todo']
       ] },
 
-    { id: 'PBI-01c', title: 'Old-form pages: multi-step.js and the videsigns-staging call', refs: ['L1'], by: 'decision', blocked: 'D11',
+    { id: 'PBI-01c', title: 'Old-form pages: multi-step.js and the videsigns-staging call', refs: ['L1'], by: 'claude', note: 'D11 decided 28 Sep: the 21 pages are rebuilt on the landing-page template (design-system plan, DS-7), which removes the old form and its library.',
       why: 'The 21 state and old landing pages still load multi-step.js (it shows their form one step at a time) and it posts to videsigns-staging.co.uk.',
       done: 'Per D11: pages rebuilt in the new design, or the library replaced, so no page calls a staging server.',
       tasks: [
-        ['Apply the D11 decision on staging', 'todo'],
+        ['Rebuild the 21 pages on the landing-page template (DS-7), one page approved before the rest', 'todo'],
         ['Publish to staging only and verify the forms step by step', 'todo'],
         ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots when anything visible changes; findings settled', 'todo']
       ] },
@@ -380,11 +380,12 @@ window.BACKLOG = {
     ['D5', 'G32', 'Session recorders', 'Keep Mouseflow, or remove it and rely on Clarity.', 'PBI-23'],
     ['D6', 'G21a', 'Call-click posting', 'May staging post call clicks to the production backend (credo.debtfixer.co) while testing?', 'PBI-22'],
     ['D7', 'F2', 'State list', 'Confirm North Carolina should stay removed from the state dropdown.', '—'],
-    ['D8', 'L2', 'Tidio chat', 'Is chat staffed? Lazy-load it, or remove it.', 'PBI-23'],
+    ['D8', 'L2', 'Tidio chat', 'Is chat staffed? Lazy-load it, or remove it. If chat stays: a neutral dark launcher colour, so red stays reserved for the call and form buttons (UX reviews, 28 Sep).', 'PBI-23'],
     ['D9', 'G6', 'Twitter/X handle', 'Credo\'s real handle, or delete the @handle placeholder.', 'PBI-14']
     ,['D10', 'W1', 'GTM on thank-you pages', 'Does GTM count thank-you page views as conversions? Needs someone with GTM access. Decides whether shared code can move to Site settings.', 'PBI-01d'],
-    ['D11', 'L1', 'Old-form pages', 'Rebuild the 21 state and old landing pages in the new design, or replace the multi-step library, so no page calls videsigns-staging.co.uk.', 'PBI-01c'],
-    ['D12', 'PBI-01', 'ZIP error message', 'Decided 27 Sep: accepted. An invalid ZIP now shows one message ("Please enter valid 5 digit zip code") instead of two.', 'PBI-01']
+    ['D11', 'L1', 'Old-form pages', 'Decided 28 Sep: rebuild the 21 state and old landing pages on the landing-page template (new design, new form), keeping each page’s own copy, tracked number, SEO and tracking. The old multi-step library and its call to videsigns-staging.co.uk go with the old form. Preview: design-system.html.', 'PBI-01c'],
+    ['D12', 'PBI-01', 'ZIP error message', 'Decided 27 Sep: accepted. An invalid ZIP now shows one message ("Please enter valid 5 digit zip code") instead of two.', 'PBI-01'],
+    ['D13', 'Design preview', 'Thank-you wording', 'Legal sign-off on the thank-you headline. Today: "You have been pre-approved for a free legal consultation call with our attorney!" Proposed (in the preview): "Thank you. Your request has been received." with "One of our legal professionals will contact you shortly to schedule your free, confidential consultation." Needs a Credo attorney to approve before it goes into Webflow. Also: which phone number the unified thank-you page shows (today /thank-you has (443) 483-4080, /page/thank-you and /page/already-submitted (718) 865-8350).', 'DS-6']
   ],
 
   manual: [
