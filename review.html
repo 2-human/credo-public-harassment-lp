@@ -296,6 +296,33 @@ const LPS = [
 
   // ──── Funnel (1) ──── post-conversion page the lead form redirects to (not an ad variant)
   { c:"Funnel", n:"Thank-you page",                         slug:"/thank-you",                            phone:"(443) 483-4080", file:"thank-you.html",                                            angle:"Post-conversion confirmation" },
+
+  /* ──── Design alignment preview (28 Sep 2026, staging plan DS-6/DS-7) ────
+     Old-design and system pages on staging.credolegal.com, shown in the landing-page design.
+     "View live" opens the current staging page (live: overrides the start. default). */
+  // ──── State pages (13): one template, ?state= picks the state ────
+  { c:"State pages", n:"California", slug:"/california", live:"https://staging.credolegal.com/california", phone:"(718) 865-8350", file:"state-locked-paired-portrait-noborders.html?state=california", angle:"State page · new design", redesign:true },
+  { c:"State pages", n:"Colorado", slug:"/colorado", live:"https://staging.credolegal.com/colorado", phone:"(718) 865-8350", file:"state-locked-paired-portrait-noborders.html?state=colorado", angle:"State page · new design", redesign:true },
+  { c:"State pages", n:"Florida", slug:"/florida", live:"https://staging.credolegal.com/florida", phone:"(718) 865-8350", file:"state-locked-paired-portrait-noborders.html?state=florida", angle:"State page · new design", redesign:true },
+  { c:"State pages", n:"Kansas", slug:"/kansas", live:"https://staging.credolegal.com/kansas", phone:"(718) 865-8350", file:"state-locked-paired-portrait-noborders.html?state=kansas", angle:"State page · new design", redesign:true },
+  { c:"State pages", n:"Kentucky", slug:"/kentucky", live:"https://staging.credolegal.com/kentucky", phone:"(718) 865-8350", file:"state-locked-paired-portrait-noborders.html?state=kentucky", angle:"State page · new design", redesign:true },
+  { c:"State pages", n:"Maryland", slug:"/maryland", live:"https://staging.credolegal.com/maryland", phone:"(718) 865-8350", file:"state-locked-paired-portrait-noborders.html?state=maryland", angle:"State page · new design", redesign:true },
+  { c:"State pages", n:"Minnesota", slug:"/minnesota", live:"https://staging.credolegal.com/minnesota", phone:"(718) 865-8350", file:"state-locked-paired-portrait-noborders.html?state=minnesota", angle:"State page · new design", redesign:true },
+  { c:"State pages", n:"Missouri", slug:"/missouri", live:"https://staging.credolegal.com/missouri", phone:"(718) 865-8350", file:"state-locked-paired-portrait-noborders.html?state=missouri", angle:"State page · new design", redesign:true },
+  { c:"State pages", n:"New Jersey", slug:"/new-jersey", live:"https://staging.credolegal.com/new-jersey", phone:"(718) 865-8350", file:"state-locked-paired-portrait-noborders.html?state=new-jersey", angle:"State page · new design", redesign:true },
+  { c:"State pages", n:"New York", slug:"/new-york", live:"https://staging.credolegal.com/new-york", phone:"(718) 865-8350", file:"state-locked-paired-portrait-noborders.html?state=new-york", angle:"State page · new design", redesign:true },
+  { c:"State pages", n:"Ohio", slug:"/ohio", live:"https://staging.credolegal.com/ohio", phone:"(718) 865-8350", file:"state-locked-paired-portrait-noborders.html?state=ohio", angle:"State page · new design", redesign:true },
+  { c:"State pages", n:"South Dakota", slug:"/south-dakota", live:"https://staging.credolegal.com/south-dakota", phone:"(718) 865-8350", file:"state-locked-paired-portrait-noborders.html?state=south-dakota", angle:"State page · new design", redesign:true },
+  { c:"State pages", n:"Utah", slug:"/utah", live:"https://staging.credolegal.com/utah", phone:"(718) 865-8350", file:"state-locked-paired-portrait-noborders.html?state=utah", angle:"State page · new design", redesign:true },
+
+  // ──── Legacy pages (2) ────
+  { c:"Legacy", n:"Letter (harassment)",           slug:"/letter", live:"https://staging.credolegal.com/letter", phone:"(718) 865-8350", file:"state-locked-paired-portrait-noborders.html?page=letter", angle:"Harassment · new design", redesign:true },
+  { c:"Legacy", n:"Medical Debt Attorney",         slug:"/medical-debt-attorney", live:"https://staging.credolegal.com/medical-debt-attorney", phone:"(718) 865-8350", file:"med-attorney-locked-paired-portrait-noborders.html", angle:"Medical debt · new design", redesign:true },
+
+  // ──── System pages (3 + the thank-you template) ────
+  { c:"System", n:"Already submitted (uses the thank-you design)", slug:"/page/already-submitted", live:"https://staging.credolegal.com/page/already-submitted", phone:"(443) 483-4080", file:"thank-you.html", angle:"CMS page · same copy as thank-you" },
+  { c:"System", n:"404 · Page not found",          slug:"/404", live:"https://staging.credolegal.com/404", phone:"(718) 865-8350", file:"404.html", angle:"System page · new design", redesign:true },
+  { c:"System", n:"401 · Protected page",          slug:"/401", live:"https://staging.credolegal.com/401", phone:"—", file:"401.html", angle:"System page · new design", redesign:true },
 ];
 
 /* ───── Reverse link: which Google/Bing ad drives each LP ─────
@@ -325,7 +352,8 @@ const DRIVEN_BY = {
   "/credit-card-debt-violations": { campaign: "Credit Card", adGroup: "CC_Branded", i: 25 },
 };
 
-const CLUSTERS = ["Harassment","Lawsuit","Garnishment","Payday Loan","Medical Debt","Credit Card","All-States","Funnel"];
+const CLUSTERS = ["Harassment","Lawsuit","Garnishment","Payday Loan","Medical Debt","Credit Card","All-States","Funnel","State pages","Legacy","System"];
+const NON_AD = ["Funnel","State pages","Legacy","System"];   // not ad destinations: left out of the variant count
 
 /* ───── Render ───── */
 const $list = document.getElementById('list');
@@ -357,6 +385,7 @@ function renderList(filter) {
       const badges = [];
       if (DRIVEN_BY[lp.slug]) badges.push('<span class="b ad">AD · ' + DRIVEN_BY[lp.slug].campaign + '</span>');
       if (lp.newSection) badges.push('<span class="b new-section">New section</span>');
+      if (lp.redesign) badges.push('<span class="b new-section">New design</span>');
       a.innerHTML = `
         <div><span class="num">${String(idx+1).padStart(2,'0')}</span><span class="label">${lp.n}</span></div>
         <div class="slug">${lp.slug}</div>
@@ -367,7 +396,7 @@ function renderList(filter) {
       count++;
     });
   });
-  $prog.textContent = filter ? `${count} of ${LPS.length} match` : `${LPS.filter(l=>l.c!=='Funnel').length} variants · ${CLUSTERS.filter(c=>c!=='Funnel').length} clusters`;
+  $prog.textContent = filter ? `${count} of ${LPS.length} match` : `${LPS.filter(l=>!NON_AD.includes(l.c)).length} variants · ${CLUSTERS.filter(c=>!NON_AD.includes(c)).length} clusters`;
 }
 
 function matches(lp, f) {
@@ -574,7 +603,7 @@ function select(idx) {
   const open = document.getElementById('t-open');
   open.href = withParams(lp.file); open.style.display = 'inline-flex';
   const live = document.getElementById('t-live');
-  live.href = 'https://start.credolegal.com' + lp.slug; live.style.display = 'inline-flex';
+  live.href = lp.live || ('https://start.credolegal.com' + lp.slug); live.style.display = 'inline-flex';
   // sidebar highlight
   document.querySelectorAll('.lp-link').forEach(el => {
     el.classList.toggle('active', Number(el.dataset.idx) === idx);

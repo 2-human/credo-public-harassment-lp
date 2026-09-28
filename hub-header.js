@@ -37,6 +37,7 @@
     'phone-map':   { hub: 'lp',     name: 'Phone map',       sub: 'Every ad × platform, with its call-tracking phone number' },
     'statute-map': { hub: 'lp',     name: 'Statute map',     sub: 'Every claim + FAQ mapped to 15 U.S.C. § 1692' },
     'blog':        { hub: 'lp',     name: 'Blog',            sub: 'Article library' },
+    'design-system': { hub: 'lp',   name: 'Design system',   sub: 'One design for all 57 staging pages: before/after, tokens, components' },
     'blog-post':   { hub: 'lp',     name: 'Article',         sub: '', parent: { label: 'Blog', hub: 'lp', file: 'blog.html' } },
     'social-hub':  { hub: 'social', name: 'Social hub',      sub: 'Blog article + its derived posts', root: true },
     'social-cal':  { hub: 'social', name: 'Social calendar', sub: '1 LinkedIn + 1 Facebook daily · Jul 20 – Oct 29, 2026' }
@@ -50,6 +51,7 @@
       { id: 'ads-map',     hub: 'lp',     label: 'Ads → LP',       file: 'ads-map.html' },
       { id: 'phone-map',   hub: 'lp',     label: 'Phone map',      file: 'phone-map.html' },
       { id: 'blog',        hub: 'lp',     label: 'Blog',           file: 'blog.html' },
+      { id: 'design-system', hub: 'lp',   label: 'Design system',  file: 'design-system.html' },
       { id: 'webflow',     hub: 'lp',     label: 'Webflow export', file: 'webflow-lp/index.html' }
     ]},
     { h: 'Social campaign', items: [

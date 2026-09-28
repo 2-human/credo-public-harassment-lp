@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Credo Legal | Design system: one design for every staging page</title>
+<meta name="robots" content="noindex"/>
+<link rel="stylesheet" href="tokens.css"/>
+<link rel="stylesheet" href="lp.css"/>
+<style>
+  /* Design-alignment preview (28 Sep 2026). Built on the same tokens.css as the landing pages. */
+  body { background: var(--bg-soft); }
+  .ds { max-width: 1180px; margin: 0 auto; padding: 36px 24px 96px; }
+  .ds h1 { font-size: clamp(28px, 4vw, 40px); font-weight: var(--fw-semi); letter-spacing: -0.02em; line-height: 1.1; margin: 0 0 14px; }
+  .ds h1 em { color: var(--credo-red); font-style: normal; }
+  .ds .intro { font-size: var(--fs-body); color: var(--fg-muted); max-width: 760px; line-height: 1.6; margin: 0 0 12px; }
+  .ds .facts { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0 8px; }
+  .ds .fact { background: #fff; border: 1px solid var(--border); padding: 12px 16px; min-width: 150px; }
+  .ds .fact b { display: block; font-size: 26px; font-weight: var(--fw-semi); letter-spacing: -0.02em; }
+  .ds .fact span { font-family: var(--font-mono); font-size: 11px; letter-spacing: var(--tracking-wide); text-transform: uppercase; color: var(--fg-muted); }
+  .ds h2 { font-size: var(--fs-section); font-weight: var(--fw-semi); letter-spacing: -0.015em; margin: 64px 0 8px; }
+  .ds .sub { color: var(--fg-muted); margin: 0 0 24px; max-width: 760px; line-height: 1.6; }
+  .ds .toc { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 0; }
+  .ds .toc a { font-family: var(--font-mono); font-size: 11px; letter-spacing: var(--tracking-wide); text-transform: uppercase; color: var(--fg); border: 1px solid var(--border); background: #fff; padding: 7px 12px; }
+  .ds .toc a:hover { border-color: var(--credo-red); color: var(--credo-red); }
+
+  /* before / after */
+  .fam { background: #fff; border: 1px solid var(--border); margin: 0 0 22px; }
+  .fam-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 16px; padding: 16px 20px; border-bottom: 1px solid var(--border); }
+  .fam-head h3 { margin: 0; font-size: 19px; font-weight: var(--fw-semi); }
+  .fam-head .n { font-family: var(--font-mono); font-size: 11px; letter-spacing: var(--tracking-wide); text-transform: uppercase; color: var(--credo-red); font-weight: 700; }
+  .fam-head .links { margin-left: auto; display: flex; gap: 14px; font-size: 13px; }
+  .fam-head .links a { color: var(--credo-red); border-bottom: 1px solid currentColor; }
+  .fam-note { padding: 12px 20px 0; color: var(--fg-muted); font-size: 14px; line-height: 1.55; margin: 0; }
+  .ba { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+  .ba > div { padding: 16px 20px 20px; min-width: 0; }
+  .ba > div + div { border-left: 1px solid var(--border); }
+  .ba .lbl { font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: var(--tracking-wider); text-transform: uppercase; margin-bottom: 10px; color: var(--fg-muted); }
+  .ba .after .lbl { color: var(--credo-red); }
+  .shots { display: grid; grid-template-columns: 1fr 26%; gap: 10px; align-items: start; }
+  .shots img { width: 100%; height: auto; display: block; border: 1px solid var(--border); background: #fff; }
+  .shots a { display: block; }
+
+  /* tokens */
+  .sw-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 12px; }
+  .sw { background: #fff; border: 1px solid var(--border); }
+  .sw .chip { height: 64px; border-bottom: 1px solid var(--border); }
+  .sw .t { padding: 10px 12px 12px; }
+  .sw .t b { display: block; font-size: 14px; }
+  .sw .t code { font-family: var(--font-mono); font-size: 12px; color: var(--fg-muted); }
+  .sw .t p { margin: 6px 0 0; font-size: 12.5px; color: var(--fg-muted); line-height: 1.45; }
+  .sw .t .rep { margin-top: 6px; display: flex; flex-wrap: wrap; gap: 4px; align-items: center; font-size: 11px; color: var(--fg-muted); }
+  .sw .t .rep i { display: inline-block; width: 12px; height: 12px; border: 1px solid var(--border); vertical-align: middle; }
+  .type-row { display: grid; grid-template-columns: 170px 1fr; gap: 16px; align-items: baseline; padding: 14px 0; border-bottom: 1px solid var(--border); }
+  .type-row code { font-family: var(--font-mono); font-size: 12px; color: var(--fg-muted); line-height: 1.5; }
+  .tbl { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid var(--border); font-size: 14px; }
+  .tbl th { text-align: left; font-family: var(--font-mono); font-size: 11px; letter-spacing: var(--tracking-wide); text-transform: uppercase; color: var(--fg-muted); font-weight: 600; padding: 10px 12px; border-bottom: 2px solid var(--fg); background: var(--bg-soft); }
+  .tbl td { padding: 9px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .tbl td a { color: var(--credo-red); }
+  .tbl .famtag { font-family: var(--font-mono); font-size: 11px; font-weight: 700; padding: 2px 6px; border: 1px solid; white-space: nowrap; }
+  .tbl .famtag.A { color: #1f7a4d; border-color: #9fd3b8; }
+  .tbl .famtag.B1, .tbl .famtag.B2 { color: var(--fg-warn); border-color: var(--border-warn); }
+  .tbl .famtag.C { color: var(--fg-muted); border-color: var(--border); }
+  .tbl .dots i { display: inline-block; width: 12px; height: 12px; border: 1px solid var(--border); margin-right: 2px; vertical-align: middle; }
+  .tblwrap { overflow-x: auto; }
+  .comp li { margin: 0 0 10px; line-height: 1.55; }
+  .comp b { font-weight: var(--fw-semi); }
+  .pill { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: var(--tracking-wide); text-transform: uppercase; padding: 2px 7px; border: 1px solid var(--border); color: var(--fg-muted); margin-left: 6px; white-space: nowrap; }
+  @media (max-width: 760px) {
+    .ba { grid-template-columns: 1fr; }
+    .ba > div + div { border-left: 0; border-top: 1px solid var(--border); }
+    .type-row { grid-template-columns: 1fr; gap: 4px; }
+    .fam-head .links { margin-left: 0; }
+  }
+</style>
+</head>
+<body>
+<div id="hub-header" data-page="design-system" data-hub="lp"></div>
+<script src="hub-header.js"></script>
+
+<main class="ds">
+  <h1>One design for every <em>staging</em> page.</h1>
+  <p class="intro">staging.credolegal.com has 57 published pages in three different designs. This page previews every page family in the landing-page design, the design values (tokens) that will drive it in Webflow, and where each of the 57 pages ends up. Nothing here is live on staging yet: it is a preview for approval.</p>
+  <div class="facts">
+    <div class="fact"><b>57</b><span>Published pages</span></div>
+    <div class="fact"><b>31</b><span>Already new design</span></div>
+    <div class="fact"><b>21</b><span>Old purple design</span></div>
+    <div class="fact"><b>5</b><span>Thank-you + system</span></div>
+    <div class="fact"><b>44 → 17</b><span>Colours → tokens</span></div>
+  </div>
+  <div class="toc"><a href="#families">Before / after</a><a href="#tokens">Tokens</a><a href="#type">Type</a><a href="#components">Components</a><a href="#pages">All 57 pages</a></div>
+
+  <h2 id="families">Before and after, by page family</h2>
+  <p class="sub">Left: the page as it is on staging today (28 Sep). Right: the same page on the landing-page design. Each family links to the prototype you can click through; every page is also in <a href="review.html" style="color:var(--credo-red)">LP review</a> under State pages, Legacy and System.</p>
+  <div id="fams"></div>
+
+  <h2 id="tokens">Colour tokens</h2>
+  <p class="sub">Today the Webflow project has 1,258 styles with 44 hard-coded colours, including six different reds. In the new system every colour is a Webflow variable with the prototype's name; the right-hand chips show the colours each token replaces.</p>
+  <div class="sw-grid" id="swatches"></div>
+
+  <h2 id="type">Type</h2>
+  <p class="sub">Two fonts, already loaded on every page: Hanken Grotesk for text and Inconsolata for labels and numbers. What changes is the scale: body text moves off Webflow's default Arial #333, and headlines get proper phone sizes.</p>
+  <div id="typescale"></div>
+
+  <h2 id="components">Shared components</h2>
+  <p class="sub">Built once in Webflow and reused, so a change lands on every page at the same time.</p>
+  <ul class="comp">
+    <li><b>Header</b> (<code>navbar</code>): already shared on 61 page slots. Gains the tracked phone number and a "Free review" button on phones (PBI-06). <span class="pill">exists</span></li>
+    <li><b>Footer</b> (<code>Footer-MJ</code>): on the 31 new pages today; replaces the unlinked copies of the old dark footer on the 21 old pages. <span class="pill">extend</span></li>
+    <li><b>Hero form</b>: <code>Hero-Form</code> and <code>Hero-Form-For-New-Pages</code> merged into one component with a variant property; replaces the old purple multi-step form. <span class="pill">merge</span></li>
+    <li><b>CTA button</b>: one button with a text property, so the labels stay consistent (wording waits on decision D3). <span class="pill">new</span></li>
+    <li><b>Reviews bar</b> (<code>Reviews section</code>): already on 26 pages; added to the state and legacy pages. <span class="pill">extend</span></li>
+    <li><b>Bottom CTA</b> and <b>Thank-you block</b>: one each, used by every landing page and both thank-you URLs. <span class="pill">new</span></li>
+    <li><b>Removed</b>: <code>navbar-dynamic</code> (0 uses) and the old <code>footer</code> (1 use). <span class="pill">delete</span></li>
+  </ul>
+
+  <h2 id="pages">All 57 published pages</h2>
+  <p class="sub">Every page on staging.credolegal.com today, its current design family, and the prototype it moves to. A = new design already (alignment is tokens only); B1/B2 = old purple design (rebuilt on the landing-page template); C = thank-you and system pages.</p>
+  <div class="tblwrap"><table class="tbl" id="pagetbl"><thead><tr><th>Page</th><th>Today</th><th>Text colours today</th><th>New design</th></tr></thead><tbody></tbody></table></div>
+</main>
+
+<script>
+var FAMS = [
+  { k: 'lp', t: 'Landing pages (the reference)', n: '31 pages · family A', proto: 'lawsuit-attorney-locked-paired-portrait-noborders.html', live: '/debt-lawsuit-attorney',
+    note: 'Already on the new design. Alignment here is small: body text on the ink colour instead of Arial #333, the H1 at 32px on phones instead of 52px, accessible greys, the card shadow and the red H1 accent (PBI-15 to PBI-18).' },
+  { k: 'state', t: 'State pages', n: '13 pages · family B1', proto: 'state-locked-paired-portrait-noborders.html?state=ohio', live: '/ohio',
+    note: 'All 13 are the same page with only the state name changed, so one template covers them. The state shows in the hero ("Serving Ohio residents"). Try another: <a href="state-locked-paired-portrait-noborders.html?state=new-york">New York</a>, <a href="state-locked-paired-portrait-noborders.html?state=utah">Utah</a>.' },
+  { k: 'legacy', t: 'Older landing pages', n: '6 pages · family B2', proto: 'payday-fight-back-locked-paired-portrait-noborders.html', live: '/payday-loan-fight-back',
+    note: 'Act-fast, more-money and the four payday pages already had new-design prototypes in this hub; they move onto them. The four payday pages wait on decision D4.' },
+  { k: 'letter', t: 'Letter', n: '1 page · family B2', proto: 'state-locked-paired-portrait-noborders.html?page=letter', live: '/letter',
+    note: 'The state-page copy with its own harassment headline and no state name; uses the same template.' },
+  { k: 'med', t: 'Medical debt attorney', n: '1 page · family B2', proto: 'med-attorney-locked-paired-portrait-noborders.html', live: '/medical-debt-attorney',
+    note: 'Its own copy (7 FAQs, "What happens if you can\'t pay" list) mapped 1:1 onto the landing-page sections.' },
+  { k: 'thanks', t: 'Thank-you pages', n: '3 URLs · family C', proto: 'thank-you.html', live: '/page/thank-you',
+    note: '/thank-you is already on the new design. /page/thank-you and /page/already-submitted (a CMS template, same copy) switch to it.' },
+  { k: '404', t: '404 · Page not found', n: '1 page · family C', proto: '404.html', live: '/404',
+    note: 'Webflow\'s default page today. New: brand header and footer, a way back into the funnel (free review or call).' },
+  { k: '401', t: '401 · Protected page', n: '1 page · family C', proto: '401.html', live: '/401',
+    note: 'Webflow\'s default password page today (Arial, blue button). New: brand header, form field and button from the lead form.' }
+];
+var STAGING = 'https://staging.credolegal.com';
+document.getElementById('fams').innerHTML = FAMS.map(function (f) {
+  function shots(tag, href) {
+    return '<div class="shots"><a href="' + href + '" target="_blank" rel="noopener"><img loading="lazy" src="assets/design-system/' + f.k + '-' + tag + '-desktop.jpg" alt="' + f.t + ', ' + tag + ', desktop"/></a>' +
+      '<a href="' + href + '" target="_blank" rel="noopener"><img loading="lazy" src="assets/design-system/' + f.k + '-' + tag + '-mobile.jpg" alt="' + f.t + ', ' + tag + ', phone"/></a></div>';
+  }
+  return '<section class="fam"><div class="fam-head"><h3>' + f.t + '</h3><span class="n">' + f.n + '</span>' +
+    '<span class="links"><a href="' + f.proto + '" target="_blank" rel="noopener">Open new design ↗</a><a href="' + STAGING + f.live + '" target="_blank" rel="noopener">Open staging today ↗</a></span></div>' +
+    '<p class="fam-note">' + f.note + '</p>' +
+    '<div class="ba"><div class="before"><div class="lbl">Today on staging</div>' + shots('before', STAGING + f.live) + '</div>' +
+    '<div class="after"><div class="lbl">New design</div>' + shots('after', f.proto) + '</div></div></section>';
+}).join('');
+
+var TOKENS = [
+  ['credo-red', '#c92028', 'Buttons, links, accent word, step numbers.', ['#eb3b45', '#eb3a45', '#dc3545', '#d92d20']],
+  ['credo-red-dark', '#a3181f', 'Button hover.', []],
+  ['credo-red-soft', '#ff6b73', 'Red on dark backgrounds only.', []],
+  ['ink', '#111418', 'Headlines, body text, dark footer.', ['#333333', '#000000', '#1a1a1a', '#1c0326']],
+  ['muted', '#5b6470', 'Secondary text, ledes.', ['#696969', '#666666', '#595959']],
+  ['secondary', '#6a7688', 'Small print on white (passes 4.5:1).', ['#8590a0', '#c8cdd6 on white']],
+  ['on-dark', '#c8cdd6', 'Text on the dark footer and bottom CTA.', []],
+  ['on-dark-soft', '#8a93a3', 'Small print on dark.', []],
+  ['border', '#e7eaee', 'Card and section lines.', []],
+  ['border-soft', '#f1f3f5', 'Subtle dividers.', []],
+  ['border-on-dark', '#2a2f37', 'Lines on dark.', []],
+  ['bg', '#ffffff', 'Page background.', ['#fbfbfb']],
+  ['bg-soft', '#fafbfc', 'Alternate sections.', ['#e0e1f6', '#f6f6f6']],
+  ['bg-sand', '#f6f3ee', 'Warm accent section.', []],
+  ['warn · bg / border / text', '#fff7ed', 'Deadline and warning notes (#fed7aa / #9a3412).', []],
+  ['success (retired)', '—', 'The old thank-you green #41b38f goes; the new thank-you uses red + ink.', ['#41b38f']],
+  ['legacy blue (retired)', '—', 'Webflow default button blue on the 401 page.', ['#3898ec']]
+];
+document.getElementById('swatches').innerHTML = TOKENS.map(function (t) {
+  var chip = t[1].charAt(0) === '#' ? t[1] : 'repeating-linear-gradient(45deg,#fff,#fff 6px,#f1f3f5 6px,#f1f3f5 12px)';
+  return '<div class="sw"><div class="chip" style="background:' + chip + '"></div><div class="t"><b>' + t[0] + '</b><code>' + t[1] + '</code><p>' + t[2] + '</p>' +
+    (t[3].length ? '<div class="rep">replaces ' + t[3].map(function (c) { var hex = c.split(' ')[0]; return '<i style="background:' + hex + '"></i><code>' + c + '</code>'; }).join(' ') + '</div>' : '') + '</div></div>';
+}).join('');
+
+var TYPE = [
+  ['Display · H1', 'Hanken Grotesk 600 · 52px desktop / 32px phone · line height 1.05', '<span style="font-size:var(--fs-display);font-weight:600;letter-spacing:-.025em;line-height:1.05">Is a Creditor <em style="color:var(--credo-red);font-style:normal">Suing</em> You?</span>'],
+  ['Section · H2', 'Hanken Grotesk 600 · 38px / 26px phone · 1.2', '<span style="font-size:var(--fs-section);font-weight:600;letter-spacing:-.015em">Common problems, and the line each one crosses.</span>'],
+  ['Body', 'Hanken Grotesk 400 · 17px · 1.6 · ink', '<span style="font-size:17px">Our attorneys review your case for violations and explain your options, free.</span>'],
+  ['Small', 'Hanken Grotesk 400 · 13px · secondary', '<span style="font-size:13px;color:#6a7688">This is attorney advertising. Prior results do not guarantee a similar outcome.</span>'],
+  ['Label', 'Inconsolata 700 · 12px · uppercase · tracking 0.08em', '<span style="font-family:var(--font-mono);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--credo-red)">§ 1692c(b) · Third-party contact</span>'],
+  ['Button', 'Hanken Grotesk 700 · 13px · uppercase · credo-red', '<span class="btn-stamp" style="pointer-events:none">Get a free case evaluation →</span>']
+];
+document.getElementById('typescale').innerHTML = TYPE.map(function (t) {
+  return '<div class="type-row"><code><b style="color:var(--fg)">' + t[0] + '</b><br/>' + t[1] + '</code><div>' + t[2] + '</div></div>';
+}).join('');
+
+var ROWS = [{"path": "/", "fam": "A", "proto": null, "h1": "Stop collection calls. Legally.", "font": "Arial", "colors": ["#5b6470", "#333333", "#1a1a1a", "#8a93a3"]}, {"path": "/collection-defense", "fam": "A", "proto": null, "h1": "Payday Lender Suing You?", "font": "Arial", "colors": ["#5b6470", "#333333", "#1a1a1a", "#8a93a3"]}, {"path": "/credit-card-debt-challenge", "fam": "A", "proto": "cc-challenge-locked-paired-portrait-noborders.html", "h1": "Got Credit Card Debt?", "font": "Arial", "colors": ["#5b6470", "#333333", "#1a1a1a", "#8a93a3"]}, {"path": "/credit-card-debt-lawsuit-records", "fam": "A", "proto": "cc-lawsuit-records-locked-paired-portrait-noborders.html", "h1": "Sued for Credit Card Debt?", "font": "Arial", "colors": ["#5b6470", "#333333", "#1a1a1a", "#8a93a3"]}, {"path": "/credit-card-debt-lawsuit-respond", "fam": "A", "proto": "cc-lawsuit-respond-locked-paired-portrait-noborders.html", "h1": "Sued for Credit Card Debt?", "font": "Arial", "colors": ["#5b6470", "#333333", "#1a1a1a", "#8a93a3"]}, {"path": "/credit-card-debt-negotiation", "fam": "A", "proto": "cc-negotiation-locked-paired-portrait-noborders.html", "h1": "Got Credit Card Debt?", "font": "Arial", "colors": ["#5b6470", "#333333", "#1a1a1a", "#8a93a3"]}, {"path": "/credit-card-debt-stop-calls", "fam": "A", "proto": "cc-stop-calls-locked-paired-portrait-noborders.html", "h1": "Credit Card Debt Collector Calling?", "font": "Arial", "colors": ["#5b6470", "#333333", "#1a1a1a", "#8a93a3"]}, {"path": "/credit-card-debt-violations", "fam": "A", "proto": "cc-violations-locked-paired-portrait-noborders.html", "h1": "Credit Card Debt Collector After You?", "font": "Arial", "colors": ["#5b6470", "#333333", "#1a1a1a", "#8a93a3"]}, {"path": "/credit-cards", "fam": "A", "proto": null, "h1": "Payday Lender Suing You?", "font": "Arial", "colors": ["#5b6470", "#333333", "#1a1a1a", "#8a93a3"]}, {"path": "/debt-harassment-fdcpa-attorney", "fam": "A", "proto": "attorney-locked-paired-portrait-noborders.html", "h1": "Need a Consumer Debt Attorney?", "font": "Arial", "colors": ["#5b6470", "#333333", "#1a1a1a", "#8a93a3"]}, {"path": "/debt-harassment-fdcpa-rights", "fam": "A", "proto": "rights-verbatim-locked-paired-portrait-noborders.html", "h1": "Our Attorneys Can Make Them Pay", "font": "Arial", "colors": ["#5b6470", "#333333", "#1a1a1a", "#8a93a3"]}, {"path": "/debt-harassment-stop-calls", "fam": "A", "proto": "stop-calls-locked-paired-portrait-noborders.html", "h1": "Debt Collectors Won't Stop Calling?", "font": "Arial", "colors": ["#5b6470", "#333333", "#1a1a1a", "#8a93a3"]}, {"path": "/debt-harassment-violations", "fam": "A", "proto": "violations-locked-paired-portrait-noborders.html", "h1": "Debt Collectors Won't Stop Calling?", "font": "Arial", "colors": ["#5b6470", "#333333", "#1a1a1a", "#8a93a3"]}, {"path": "/debt-lawsuit-attorney", "fam": "A", "proto": "lawsuit-attorney-locked-paired-portrait-noborders.html", "h1": "Is a Creditor Suing You?", "font": "Arial", "colors": ["#5b6470", "#333333", "#1a1a1a", "#8a93a3"]}, {"path": "/debt-lawsuit-fight-back", "fam": "A", "proto": "lawsuit-fight-back-locked-paired-portrait-noborders.html", "h1": "Is a Creditor Suing You?", "font": "Arial", "colors": ["#5b6470", "#333333", "#1a1a1a", "#8a93a3"]}, {"path": "/debt-lawsuit-options", "fam": "A", "proto": "lawsuit-options-locked-paired-portrait-noborders.html", "h1": "Received a Lawsuit Summons?", "font": "Arial", "colors": ["#5b6470", "#333333", "#1a1a1a", "#8a93a3"]}, {"path": "/debt-lawsuit-proof", "fam": "A", "proto": "lawsuit-proof-locked-paired-portrait-noborders.html", "h1": "Debt Collector Suing You?", "font": "Arial", "colors": ["#5b6470", "#333333", "#1a1a1a", "#8a93a3"]}, {"path": "/debt-lawsuit-respond-on-time", "fam": "A", "proto": "lawsuit-respond-locked-paired-portrait-noborders.html", "h1": "Debt Collector Suing You?", "font": "Arial", "colors": ["#5b6470", "#333333", "#1a1a1a", "#8a93a3"]}, {"path": "/debt-lawsuit-summons-respond", "fam": "A", "proto": "lawsuit-summons-locked-paired-portrait-noborders.html", "h1": "You've Been Served Papers?", "font": "Arial", "colors": ["#5b6470", "#333333", "#1a1a1a", "#8a93a3"]}, {"path": "/fcba-and-fdcpa", "fam": "A", "proto": null, "h1": "Payday Lender Suing You?", "font": "Arial", "colors": ["#5b6470", "#333333", "#1a1a1a", "#8a93a3"]}, {"path": "/medical-debt-bills-errors", "fam": "A", "proto": "med-bills-errors-locked-paired-portrait-noborders.html", "h1": "Medical Bills Look Wrong?", "font": "Arial", "colors": ["#5b6470", "#333333", "#1a1a1a", "#8a93a3"]}, {"path": "/medical-debt-credit-report-removal", "fam": "A", "proto": "med-credit-report-locked-paired-portrait-noborders.html", "h1": "Medical Debt You Don't Recognize?", "font": "Arial", "colors": ["#5b6470", "#333333", "#1a1a1a", "#8a93a3"]}, {"path": "/medical-debt-fdcpa-rights", "fam": "A", "proto": "med-fdcpa-rights-locked-paired-portrait-noborders.html", "h1": "Confused About Your Medical Debt?", "font": "Arial", "colors": ["#5b6470", "#333333", "#1a1a1a", "#8a93a3"]}, {"path": "/medical-debt-lawsuit-respond", "fam": "A", "proto": "med-lawsuit-respond-locked-paired-portrait-noborders.html", "h1": "Medical Debt Collector Suing You?", "font": "Arial", "colors": ["#5b6470", "#333333", "#1a1a1a", "#8a93a3"]}, {"path": "/multiple-collectors-one-attorney", "fam": "A", "proto": "one-attorney-locked-paired-portrait-noborders.html", "h1": "Multiple Debt Collectors Harassing You?", "font": "Arial", "colors": ["#5b6470", "#333333", "#1a1a1a", "#8a93a3"]}, {"path": "/payday-loan-debt-harassment", "fam": "A", "proto": "payday-harassment-locked-paired-portrait-noborders.html", "h1": "Payday Lenders Calling Rudely?", "font": "Arial", "colors": ["#5b6470", "#333333", "#1a1a1a", "#8a93a3"]}, {"path": "/payday-loan-debt-violations", "fam": "A", "proto": "payday-violations-locked-paired-portrait-noborders.html", "h1": "Payday Lenders Violating Your Rights?", "font": "Arial", "colors": ["#5b6470", "#333333", "#1a1a1a", "#8a93a3"]}, {"path": "/stop-wage-garnishment", "fam": "A", "proto": null, "h1": "Payday Lender Suing You?", "font": "Arial", "colors": ["#5b6470", "#333333", "#1a1a1a", "#8a93a3"]}, {"path": "/wage-garnishment-attorney", "fam": "A", "proto": "garn-attorney-locked-paired-portrait-noborders.html", "h1": "Is Your Paycheck Being Garnished?", "font": "Arial", "colors": ["#5b6470", "#333333", "#1a1a1a", "#8a93a3"]}, {"path": "/wage-garnishment-exemptions", "fam": "A", "proto": "garn-exemptions-locked-paired-portrait-noborders.html", "h1": "Paycheck Already Garnished?", "font": "Arial", "colors": ["#5b6470", "#333333", "#1a1a1a", "#8a93a3"]}, {"path": "/wage-garnishment-prevention", "fam": "A", "proto": "garn-prevention-locked-paired-portrait-noborders.html", "h1": "Is Garnishment Looming?", "font": "Arial", "colors": ["#5b6470", "#333333", "#1a1a1a", "#8a93a3"]}, {"path": "/california", "fam": "B1", "proto": "state-locked-paired-portrait-noborders.html?state=california", "h1": "Let\u2019s See If We Can Help You withCreditor Harassmentand Debt", "font": "Arial", "colors": ["#000000", "#ffffff", "#696969", "#333333"]}, {"path": "/colorado", "fam": "B1", "proto": "state-locked-paired-portrait-noborders.html?state=colorado", "h1": "Let\u2019s See If We Can Help You withCreditor Harassmentand Debt", "font": "Arial", "colors": ["#000000", "#ffffff", "#696969", "#333333"]}, {"path": "/florida", "fam": "B1", "proto": "state-locked-paired-portrait-noborders.html?state=florida", "h1": "Let\u2019s See If We Can Help You withCreditor Harassmentand Debt", "font": "Arial", "colors": ["#000000", "#ffffff", "#696969", "#333333"]}, {"path": "/kansas", "fam": "B1", "proto": "state-locked-paired-portrait-noborders.html?state=kansas", "h1": "Let\u2019s See If We Can Help You withCreditor Harassmentand Debt", "font": "Arial", "colors": ["#000000", "#ffffff", "#696969", "#333333"]}, {"path": "/kentucky", "fam": "B1", "proto": "state-locked-paired-portrait-noborders.html?state=kentucky", "h1": "Let\u2019s See If We Can Help You withCreditor Harassmentand Debt", "font": "Arial", "colors": ["#000000", "#ffffff", "#696969", "#333333"]}, {"path": "/maryland", "fam": "B1", "proto": "state-locked-paired-portrait-noborders.html?state=maryland", "h1": "Let\u2019s See If We Can Help You withCreditor Harassmentand Debt", "font": "Arial", "colors": ["#000000", "#ffffff", "#696969", "#333333"]}, {"path": "/minnesota", "fam": "B1", "proto": "state-locked-paired-portrait-noborders.html?state=minnesota", "h1": "Let\u2019s See If We Can Help You withCreditor Harassmentand Debt", "font": "Arial", "colors": ["#000000", "#ffffff", "#696969", "#333333"]}, {"path": "/missouri", "fam": "B1", "proto": "state-locked-paired-portrait-noborders.html?state=missouri", "h1": "Let\u2019s See If We Can Help You withCreditor Harassmentand Debt", "font": "Arial", "colors": ["#000000", "#ffffff", "#696969", "#333333"]}, {"path": "/new-jersey", "fam": "B1", "proto": "state-locked-paired-portrait-noborders.html?state=new-jersey", "h1": "Let\u2019s See If We Can Help You withCreditor Harassmentand Debt", "font": "Arial", "colors": ["#000000", "#ffffff", "#696969", "#333333"]}, {"path": "/new-york", "fam": "B1", "proto": "state-locked-paired-portrait-noborders.html?state=new-york", "h1": "Let\u2019s See If We Can Help You withCreditor Harassmentand Debt", "font": "Arial", "colors": ["#000000", "#ffffff", "#696969", "#333333"]}, {"path": "/ohio", "fam": "B1", "proto": "state-locked-paired-portrait-noborders.html?state=ohio", "h1": "Let\u2019s See If We Can Help You withCreditor Harassmentand Debt", "font": "Arial", "colors": ["#000000", "#ffffff", "#696969", "#333333"]}, {"path": "/south-dakota", "fam": "B1", "proto": "state-locked-paired-portrait-noborders.html?state=south-dakota", "h1": "Let\u2019s See If We Can Help You withCreditor Harassmentand Debt", "font": "Arial", "colors": ["#000000", "#ffffff", "#696969", "#333333"]}, {"path": "/utah", "fam": "B1", "proto": "state-locked-paired-portrait-noborders.html?state=utah", "h1": "Let\u2019s See If We Can Help You withCreditor Harassmentand Debt", "font": "Arial", "colors": ["#000000", "#ffffff", "#696969", "#333333"]}, {"path": "/debt-harassment-act-fast", "fam": "B2", "proto": "act-fast-locked-paired-portrait-noborders.html", "h1": "Let\u2019s See If We Can Help You withCreditor Harassmentand Debt", "font": "Arial", "colors": ["#000000", "#ffffff", "#696969", "#5b6470"]}, {"path": "/letter", "fam": "B2", "proto": "state-locked-paired-portrait-noborders.html?page=letter", "h1": "Creditors Harassing You Over Debt?", "font": "Arial", "colors": ["#000000", "#ffffff", "#696969", "#333333"]}, {"path": "/medical-debt-attorney", "fam": "B2", "proto": "med-attorney-locked-paired-portrait-noborders.html", "h1": "Struggling With Medical Debt?", "font": "Arial", "colors": ["#000000", "#696969", "#ffffff", "#5b6470"]}, {"path": "/multiple-collectors-more-money", "fam": "B2", "proto": "more-money-locked-paired-portrait-noborders.html", "h1": "Multipe Debt Collectors Harrasing You?", "font": "Arial", "colors": ["#000000", "#ffffff", "#696969", "#5b6470"]}, {"path": "/payday-loan-debt-rights", "fam": "B2", "proto": "payday-rights-locked-paired-portrait-noborders.html", "h1": "Confused About Payday Loan Rights?", "font": "Arial", "colors": ["#000000", "#ffffff", "#696969", "#5b6470"]}, {"path": "/payday-loan-fight-back", "fam": "B2", "proto": "payday-fight-back-locked-paired-portrait-noborders.html", "h1": "Payday Loan Broke the Law?", "font": "Arial", "colors": ["#000000", "#ffffff", "#696969", "#5b6470"]}, {"path": "/payday-loan-lawsuit-proof", "fam": "B2", "proto": "payday-lawsuit-proof-locked-paired-portrait-noborders.html", "h1": "Payday Loan Debt Seems Wrong?", "font": "Arial", "colors": ["#000000", "#ffffff", "#696969", "#5b6470"]}, {"path": "/payday-loan-lawsuit-respond", "fam": "B2", "proto": "payday-lawsuit-respond-locked-paired-portrait-noborders.html", "h1": "Payday Lender Suing You?", "font": "Arial", "colors": ["#000000", "#ffffff", "#696969", "#5b6470"]}, {"path": "/401", "fam": "C", "proto": "401.html", "h1": "", "font": "Arial", "colors": ["#333333"]}, {"path": "/404", "fam": "C", "proto": "404.html", "h1": "", "font": "Arial", "colors": ["#333333"]}, {"path": "/page/already-submitted", "fam": "C", "proto": "thank-you.html", "h1": "You have been pre-approved for a free legal consultation call with our", "font": "Arial", "colors": ["#ffffff", "#666666", "#111418", "#eb3b45"]}, {"path": "/page/thank-you", "fam": "C", "proto": "thank-you.html", "h1": "You have been pre-approved for a free legal consultation call with our", "font": "Arial", "colors": ["#ffffff", "#666666", "#111418", "#eb3b45"]}, {"path": "/thank-you", "fam": "C", "proto": "thank-you.html", "h1": "You're pre-approved for a free legal consultation with our attorney.", "font": "Arial", "colors": ["#5b6470", "#8a93a3", "#333333", "#c92028"]}];
+var FAMNAME = { A: 'A · new', B1: 'B1 · old (state)', B2: 'B2 · old', C: 'C · system' };
+document.querySelector('#pagetbl tbody').innerHTML = ROWS.map(function (r) {
+  var target = r.proto ? '<a href="' + r.proto + '" target="_blank" rel="noopener">' + r.proto.replace('-locked-paired-portrait-noborders.html', '').replace('.html', '') + ' ↗</a>'
+    : '<span style="color:var(--fg-muted)">Same landing-page template (tokens only)</span>';
+  return '<tr><td><a href="' + STAGING + r.path + '" target="_blank" rel="noopener">' + (r.path === '/' ? '/ (home)' : r.path) + '</a></td>' +
+    '<td><span class="famtag ' + r.fam + '">' + FAMNAME[r.fam] + '</span></td>' +
+    '<td class="dots">' + r.colors.map(function (c) { return '<i title="' + c + '" style="background:' + c + '"></i>'; }).join('') + '</td>' +
+    '<td>' + target + '</td></tr>';
+}).join('');
+</script>
+<!-- review widget: inert by default; ?review=1 activates -->
+<script src="review.config.js"></script>
+<script src="review-bootstrap.js" defer></script>
+</body>
+</html>
