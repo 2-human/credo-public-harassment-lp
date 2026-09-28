@@ -8,7 +8,7 @@
  * `blocked` names the decision (D#) or manual step (M#) a PBI waits on. */
 window.BACKLOG = {
   updated: '27 Sep 2026',
-  state: '28 Sep: DS-7 done: all 21 older pages live on the new design with the new form only (old versions kept as drafts); no published page has the old form; reviews settled. Waiting on the operator: D18 (delete old drafts + legacy form), Title Case fix (PBI-11).',
+  state: '29 Sep: Title Case fixed on every landing page (PBI-11 part); the 13 state pages kept out of search (D16); legacy form script removed from the site. Reviews settled. Waiting on the operator: delete the 21 old drafts in Webflow (M2), then the legacy form components go.',
   site: { name: 'Credo: Microsite Staging', id: '6ab90fb0761d44332faf21c8', domain: 'staging.credolegal.com' },
 
   pbis: [
@@ -241,7 +241,7 @@ window.BACKLOG = {
         ['Verified on staging.credolegal.com: 13/13 served-HTML checks, 26/26 submit tests (1 post, 21 fields), 52/52 numbers per ad source, 13/13 form_submit pushes, head/footer byte-diff 13/13', 'done'],
         ['Independent review of the 13 state pages (code + UX, GPT + Gemini); findings settled except D1, D15, D16, D17', 'done'],
         ['letter, medical-debt-attorney, debt-harassment-act-fast, multiple-collectors-more-money and the 4 payday pages, each with its own copy: duplicated from a new-form page with the same section counts, copy mapped node by node, 2 FAQ items added on medical; own SEO, head code and tracked numbers kept', 'done'],
-        ['Remove the legacy form component and scripts once no published page uses them: 0 of 54 published pages use them; the 21 old drafts still do, so removal waits on D18 (blocked)', 'todo'],
+        ['Remove the legacy form: site script OldFormPhoneEmailGuard removed 29 Sep (D18; 0 of 54 pages load it, form_submit still pushed); the components Hero-Form (17 instances) and Hero-Form-For-New-Pages (10) are only on the 21 old drafts, so they go once the operator deletes the drafts (M2: pages cannot be deleted through the API) (blocked)', 'todo'],
         ['Publish to staging.credolegal.com and verify (8 pages): copy 8/8, submit 16/16, numbers 32/32, form_submit 8/8, head/footer byte-diff 8/8, SEO/OG 8/8', 'done'],
         ['Independent review of the last 8 pages (code + UX, GPT + Gemini); findings settled; Title Case raised as PBI-11', 'done']
       ] },
@@ -285,10 +285,16 @@ window.BACKLOG = {
 
     { id: 'PBI-11', title: 'Statute citations keep their case', refs: ['G18'], by: 'claude',
       why: '"§ 1692e(2)" displays as "§ 1692E(2)" on all 30 pages (179 citations).',
+      review: { items: [
+        { kind: 'Code', by: 'GPT-5.5', verdict: 'approve with fixes', file: 'review/PBI-11-D16.review-gpt.md', settled: true, note: 'What-we-do paragraph + D16. Form, numbers and form_submit re-tested after the publish on the 13 state pages: all pass.' },
+        { kind: 'Code', by: 'Gemini 3.1 Pro', verdict: 'approve with fixes', file: 'review/PBI-11-D16.review-gemini.md', settled: true, note: '54 vs 51: thank-you, 404 and 401 have no what-we-do section.' },
+        { kind: 'UX', by: 'GPT-5.5', verdict: 'approve with fixes', file: 'review/PBI-11-D16.review-gpt-ux.md', settled: true, note: 'Sentence case confirmed; sticky bar and body size logged for the design system.' },
+        { kind: 'UX', by: 'Gemini 3.1 Pro', verdict: 'approve with fixes', file: 'review/PBI-11-D16.review-gemini-ux.md', settled: true, note: 'Sentence case confirmed.' }
+      ], links: [['Packet', 'review/PBI-11-D16.md'], ['Resolution', 'review/PBI-11-D16.triage.md']] },
       done: 'Every citation displays as typed; word tags match the prototype.',
       tasks: [
         ['Capitalize: None on the mjfdcpaboxtext family (merge into one class)', 'todo'],
-        ['Also the what-we-do paragraph (class text-block-16 has text-transform: capitalize, so body copy shows in Title Case on every landing page; flagged as a blocker by the Gemini UX review, DS-7)', 'todo'],
+        ['Also the what-we-do paragraph (class text-block-16 had text-transform: capitalize, so body copy showed in Title Case on every landing page; Gemini UX blocker, DS-7): set to none 29 Sep, published; 0 of 54 pages render capitalized body text (negative control passes)', 'done'],
         ['Retype the word tags shown in mixed case in the prototype', 'todo'],
         ['Publish to staging only', 'todo'],
         ['Check each page\'s citation list from the audit', 'todo'],
@@ -463,10 +469,10 @@ window.BACKLOG = {
     ['D12', 'PBI-01', 'ZIP error message', 'Decided 27 Sep: accepted. An invalid ZIP now shows one message ("Please enter valid 5 digit zip code") instead of two.', 'PBI-01'],
     ['D13', 'Design preview', 'Thank-you wording', 'Legal sign-off on the thank-you headline. Today: "You have been pre-approved for a free legal consultation call with our attorney!" Proposed (in the preview): "Thank you. Your request has been received." with "One of our legal professionals will contact you shortly to schedule your free, confidential consultation." Needs a Credo attorney to approve before it goes into Webflow. Also: which phone number the unified thank-you page shows (today /thank-you has (443) 483-4080, /page/thank-you and /page/already-submitted (718) 865-8350).', 'DS-6'],
     ['D14', 'PBI-06', 'Tablet menu', 'Decided 28 Sep: accepted. Tablets (768–991px) also show the call button instead of the ☰ menu, like phones; the menu only held 5 same-page links and the number.', 'PBI-06'],
-    ['D15', 'DS-7 review', 'Call numbers per ad source', 'Every state page shows one number whatever the ad source (as before): 718-865-8350, or the state\u2019s local number on MN, MD, CO, NY, NJ, FL. Keep that, or give Google / Meta / Bing their own tracked numbers so calls can be attributed? New numbers come from the call-tracking account (not ours to change).', 'DS-7'],
-    ['D16', 'DS-7 review', 'State pages in search', 'The 13 state pages say index, follow but their canonical points to the home page (start.credolegal.com/), which folds them into the home page for Google. Kept as it was. Should each state page rank on its own (self canonical), or stay as is?', 'DS-7'],
-    ['D17', 'DS-7 review', 'Stats claims', 'The pages show \u201c10 million+ in debt wiped\u201d and \u201c500k debts settled every month\u201d with no source. A Credo attorney should confirm they are accurate and allowed in attorney advertising, or change them.', 'DS-7'],
-    ['D18', 'DS-7', 'Old page drafts and the legacy form', 'The 21 older pages are rebuilt; their old versions are kept as hidden drafts ({slug}-old) so any page can be put back. The old form components (Hero-Form, Hero-Form-For-New-Pages) and the site script OldFormPhoneEmailGuard are only used by those drafts. When can the drafts be deleted? Deleting them lets the legacy form and its scripts be removed from the site for good.', 'DS-7']
+    ['D15', 'DS-7 review', 'Call numbers per ad source', 'Decided 29 Sep: leave as is (one number per page for every source). Every state page shows one number whatever the ad source (as before): 718-865-8350, or the state\u2019s local number on MN, MD, CO, NY, NJ, FL. Keep that, or give Google / Meta / Bing their own tracked numbers so calls can be attributed? New numbers come from the call-tracking account (not ours to change).', 'DS-7'],
+    ['D16', 'DS-7 review', 'State pages in search', 'Decided 29 Sep: they should not rank for now. Done: robots noindex, nofollow and canonical + og:url to the page itself (start.credolegal.com/{slug}), like the other landing pages; the rest of each head unchanged; verified 13/13 (recheck on start.credolegal.com at go-live). Before: the 13 state pages say index, follow but their canonical points to the home page (start.credolegal.com/), which folds them into the home page for Google. Kept as it was. Should each state page rank on its own (self canonical), or stay as is?', 'DS-7'],
+    ['D17', 'DS-7 review', 'Stats claims', 'Decided 29 Sep: the claims are fine, kept. The pages show \u201c10 million+ in debt wiped\u201d and \u201c500k debts settled every month\u201d with no source. A Credo attorney should confirm they are accurate and allowed in attorney advertising, or change them.', 'DS-7'],
+    ['D18', 'DS-7', 'Old page drafts and the legacy form', 'Decided 29 Sep: delete the drafts now. Done: the legacy site script removed. Open: the operator deletes the 21 drafts in the Webflow Pages panel (M2), then the 2 legacy components are removed. The 21 older pages are rebuilt; their old versions are kept as hidden drafts ({slug}-old) so any page can be put back. The old form components (Hero-Form, Hero-Form-For-New-Pages) and the site script OldFormPhoneEmailGuard are only used by those drafts. When can the drafts be deleted? Deleting them lets the legacy form and its scripts be removed from the site for good.', 'DS-7']
   ],
 
   manual: [
@@ -475,6 +481,7 @@ window.BACKLOG = {
     ['G32', 'Mouseflow input masking; Tidio and Optibase privacy review (shared accounts)', 'Open'],
     ['G9', 'Data-processing agreement / CRM routing for the lead data', 'Open'],
     ['G15 · G21b', 'GTM: form_submit only on success; call clicks as one key event (shared container)', 'Open'],
-    ['G2', 'Old-domain duplicates and redirects on start.credolegal.com (old site)', 'Open']
+    ['G2', 'Old-domain duplicates and redirects on start.credolegal.com (old site)', 'Open'],
+    ['M2', 'Delete the 21 old drafts in Webflow (Pages panel: the 21 top-level draft pages whose names end in "(old design)", slugs {slug}-old: ohio, kentucky, utah, south-dakota, missouri, kansas, california, minnesota, maryland, colorado, new-york, new-jersey, florida, letter, medical-debt-attorney, debt-harassment-act-fast, multiple-collectors-more-money, payday-loan-fight-back, payday-loan-debt-rights, payday-loan-lawsuit-proof, payday-loan-lawsuit-respond). The API cannot delete pages. D18', 'Open']
   ]
 };
