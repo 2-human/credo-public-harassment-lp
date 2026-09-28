@@ -12,19 +12,20 @@
 <script src="plan-nav.js" data-page="rules"></script>
 <main>
   <h1>Guard rails</h1>
-  <p class="lede">All fixes go to staging.credolegal.com only. This page shows how changes are kept away
-  from enroll.credolegal.com, start.credolegal.com and every account the pages share with production.</p>
+  <p class="lede"><b>staging.credolegal.com is the production site being built</b>: every fix goes there, and it is the only
+  site the work is checked against. This page shows how changes stay inside it and away from the other Webflow sites
+  and the accounts the pages share.</p>
 
   <h2>Where the work happens</h2>
   <div class="site">
     <div class="card" style="border-left:4px solid var(--ok)"><b>Credo: Microsite Staging</b><br>
       <code>6ab90fb0761d44332faf21c8</code><br>staging.credolegal.com · <b>the only site that is edited</b></div>
     <div class="card" style="border-left:4px solid #6b7280"><b>NEW Credo Legal Landing Pages</b><br>
-      <code>6a5be784cc1cab7ef8e99233</code><br>enroll.credolegal.com · read only, never written to</div>
+      <code>6a5be784cc1cab7ef8e99233</code><br>enroll.credolegal.com · never written to, not used for checks</div>
   </div>
   <p class="lede" style="margin-top:8px">A separate Webflow project isolates well: page settings, custom
-  code, styles, assets, scripts and elements all live inside it, so editing and publishing staging cannot
-  change enroll or start.</p>
+  code, styles, assets, scripts and elements all live inside it, so editing and publishing staging.credolegal.com
+  cannot change the other Webflow sites.</p>
 
   <h2>Rules on every step</h2>
   <div class="card"><ol class="rails">
@@ -33,20 +34,21 @@
     <li><b>Backup first.</b> Before the first change: site and page custom code, registered scripts, page
       settings and SEO, styles and each page's element tree are exported, so any step can be rolled back.</li>
     <li><b>Publish to staging only.</b> Publishing names the staging domain alone, once per PBI.</li>
-    <li><b>Prove enroll and start are unchanged.</b> All 30 pages on both are fingerprinted before the first
-      PBI and after the last; the fingerprints must match.</li>
-    <li><b>No test data in production.</b> The automated checks answer every form post and analytics beacon
+    <li><b>Verify on staging.credolegal.com.</b> Every change is measured on the published pages of
+      staging.credolegal.com (all affected pages, phone and desktop) before it is called done. (Until 28 Sep the
+      enroll and start sites were also fingerprinted; by the operator's decision of 28 Sep they are no longer checked.)</li>
+    <li><b>No test data in the live lead systems.</b> The automated checks answer every form post and analytics beacon
       themselves. A manual test lead on staging would enter the real lead pipeline, so none is sent until D1
       decides where staging's form posts.</li>
     <li><b>Testing staging by hand.</b> Staging sets UTM cookies on <code>.credolegal.com</code>, which the same browser then also
-      sends to start.credolegal.com. Test staging in a private window, or clear credolegal.com cookies before visiting production.</li>
+      sends to the other credolegal.com sites. Test in a private window, or clear credolegal.com cookies afterwards.</li>
   </ol></div>
 
-  <h2>Shared with production: not touched</h2>
+  <h2>Shared accounts and systems: not touched</h2>
   <div class="tw"><table>
     <thead><tr><th>Shared dependency</th><th>Also used by</th><th>Rule</th></tr></thead>
     <tbody>
-      <tr><td>GTM <code>GTM-PTLMPVGH</code> and GA4</td><td>enroll, start</td><td>No edits. GTM-side items are manual, for production.</td></tr>
+      <tr><td>GTM <code>GTM-PTLMPVGH</code> and GA4</td><td>enroll, start</td><td>No edits. GTM-side items are manual (shared container).</td></tr>
       <tr><td>Formspree lead form</td><td>enroll, start</td><td>Not edited; see D1.</td></tr>
       <tr><td>Clarity, Mouseflow, Tidio, Optibase, Finsweet, Inputflow accounts</td><td>enroll, start</td><td>Account settings unchanged; only element attributes on staging.</td></tr>
       <tr><td>Call-tracking numbers</td><td>enroll, start, ads</td><td>Read only; the numbers stay as they are.</td></tr>

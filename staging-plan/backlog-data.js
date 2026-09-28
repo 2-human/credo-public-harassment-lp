@@ -90,7 +90,7 @@ window.BACKLOG = {
       ] },
 
     { id: 'PBI-02', visible: false, title: 'Lead form destination for staging', refs: ['G9'], by: 'decision', blocked: 'D1',
-      why: 'Staging still posts to the production formspree form, so a manual test lead enters the real pipeline.',
+      why: 'staging.credolegal.com posts to the live formspree form, so a manual test lead enters the real lead pipeline.',
       done: 'Staging form posts to the chosen destination; a test lead arrives there and nowhere else; the success page still shows.',
       tasks: [
         ['Set the form action on staging to the chosen destination', 'todo'],
@@ -366,7 +366,7 @@ window.BACKLOG = {
 
     { id: 'PBI-22', visible: false, title: 'Call-click tracker listens to the real links', refs: ['G21a'], by: 'decision', blocked: 'D6',
       why: 'The tracker waits for ids that don\'t exist, so it never fires.',
-      done: 'Clicks on the real call links reach the tracker (only once D6 allows staging to post to the production backend).',
+      done: 'Clicks on the real call links reach the tracker (only once D6 allows posting to the live call-click backend).',
       tasks: [
         ['Give the sticky bar link an id', 'todo'],
         ['Point the tracker at the real call-link ids', 'todo'],
@@ -387,11 +387,10 @@ window.BACKLOG = {
       ] },
 
     { id: 'PBI-24', visible: false, title: 'Close-out', refs: [], by: 'claude',
-      why: 'Proof of the result and a clean hand-over for production.',
-      done: 'Full lpcheck vs baseline; enroll and start fingerprints unchanged; change log for porting to production.',
+      why: 'Proof of the result on staging.credolegal.com and a clean record of every change.',
+      done: 'Full lpcheck on staging.credolegal.com vs the baseline; change log per item.',
       tasks: [
         ['Full lpcheck on the 30 staging pages vs the baseline', 'todo'],
-        ['Re-fingerprint enroll and start: must be unchanged', 'todo'],
         ['Change log per item (what changed, where in Webflow)', 'todo']
 ,
         ['Clarity payload capture on each form type: page form, Hero-Form, Hero-Form-For-New-Pages (review PBI-04)', 'todo'],
@@ -403,9 +402,9 @@ window.BACKLOG = {
     ['D1', 'G9', 'Where the form posts', 'Webflow native forms, a first-party endpoint, or formspree with a DPA; and whether staging posts to a test destination meanwhile (recommended).', 'PBI-02'],
     ['D2', 'G10', 'Consent text', 'Counsel-approved wording, and whether express consent needs a checkbox.', 'PBI-03'],
     ['D3', 'G16', 'CTA labels', 'Which two labels to keep.', 'PBI-20'],
-    ['D4', 'Part B', 'The four payday-content pages', 'Draft them on staging, rebuild with new copy, or leave them for production redirects.', 'PBI-21'],
+    ['D4', 'Part B', 'The four payday-content pages', 'Draft them on staging.credolegal.com, rebuild them with new copy, or redirect them.', 'PBI-21'],
     ['D5', 'G32', 'Session recorders', 'Keep Mouseflow, or remove it and rely on Clarity.', 'PBI-23'],
-    ['D6', 'G21a', 'Call-click posting', 'May staging post call clicks to the production backend (credo.debtfixer.co) while testing?', 'PBI-22'],
+    ['D6', 'G21a', 'Call-click posting', 'May staging.credolegal.com post call clicks to the live call-click backend (credo.debtfixer.co) while testing?', 'PBI-22'],
     ['D7', 'F2', 'State list', 'Confirm North Carolina should stay removed from the state dropdown.', '—'],
     ['D8', 'L2', 'Tidio chat', 'Is chat staffed? Lazy-load it, or remove it. If chat stays: a neutral dark launcher colour, so red stays reserved for the call and form buttons (UX reviews, 28 Sep).', 'PBI-23'],
     ['D9', 'G6', 'Twitter/X handle', 'Credo\'s real handle, or delete the @handle placeholder.', 'PBI-14']
@@ -421,7 +420,7 @@ window.BACKLOG = {
     ['L2', 'Site settings → Publishing → minify HTML, CSS and JS (not in the API)', 'Open'],
     ['G32', 'Mouseflow input masking; Tidio and Optibase privacy review (shared accounts)', 'Open'],
     ['G9', 'Data-processing agreement / CRM routing for the lead data', 'Open'],
-    ['G15 · G21b', 'GTM: form_submit only on success; call clicks as one key event (shared container, production)', 'Open'],
-    ['G2', 'Old-domain duplicates and redirects on start.credolegal.com (production)', 'Open']
+    ['G15 · G21b', 'GTM: form_submit only on success; call clicks as one key event (shared container)', 'Open'],
+    ['G2', 'Old-domain duplicates and redirects on start.credolegal.com (old site)', 'Open']
   ]
 };
