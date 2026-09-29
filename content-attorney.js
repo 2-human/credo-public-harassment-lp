@@ -147,7 +147,7 @@ window.CREDO = {
       { cite: "§ 1692k(a)(3)",    label: "Fee-shifting",      text: "Attorney fees and court costs are paid by the collector, not you, when you prevail.", exLabel: "Remedy", ex: "Collector pays your legal fees when the claim succeeds." },
       { cite: "§ 1692k(a)",       label: "Strict liability",  text: "You do not need to prove financial harm. The violation itself creates liability.", exLabel: "Right", ex: "The violation alone is enough; no proven harm required." },
       { cite: "§ 1692k(d)",       label: "One-year window",   text: "FDCPA claims must be filed within one year of the violation. Act while the window is open.", exLabel: "Deadline", ex: "One year from the date of the violation, no extensions." },
-      { cite: "§ 1692k(b)",       label: "Per-violation accumulation", text: "Multiple violations in the same case are pursued individually. More violations mean a larger claim.", exLabel: "Remedy", ex: "Each call after a cease request: another $1,000 in play." },
+      { cite: "§ 1692k(b)",       label: "Per-violation accumulation", text: "Multiple violations in the same case are pursued individually. More violations mean a larger claim.", exLabel: "Remedy", ex: "Each call after a cease request can add evidence of another FDCPA violation." },
     ],
   },
 

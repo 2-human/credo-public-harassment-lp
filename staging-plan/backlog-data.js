@@ -8,7 +8,7 @@
  * `blocked` names the decision (D#) or manual step (M#) a PBI waits on. */
 window.BACKLOG = {
   updated: '27 Sep 2026',
-  state: '29 Sep (evening): board clean-up. PBI-12: all Part B copy fixes live; it closes when D20 is answered (one rights line on fdcpa-attorney). G29 (WEEK 1 tags, 22 pages) done under PBI-19; PBI-01c and PBI-11 closed (PBI-11 follow-up moved to PBI-16); PBI-08 built and reviewed, closes with the operator\'s CRM check (M3). Shared code (PBI-01d) steps 1\u20132 done: the page code and the phone-swap script that were copied onto 52 pages now live once in Site settings, all tracked numbers in one table. Waiting on the operator: D20, D21 (canonical until go-live), M2 (delete the 21 old drafts, then the legacy form components go), M3 (CRM check), D1\u2013D3, D5\u2013D9 (D10 optional); PBI-01b and PBI-21 deferred.',
+  state: '29 Sep (evening): board clean-up. PBI-12 done (all Part B copy fixes live, D20 wording applied). G29 (WEEK 1 tags, 22 pages) done under PBI-19; PBI-01c and PBI-11 closed (PBI-11 follow-up moved to PBI-16); PBI-08 built and reviewed, closes with the operator\'s CRM check (M3). Shared code (PBI-01d) steps 1\u20132 done: the page code and the phone-swap script that were copied onto 52 pages now live once in Site settings, all tracked numbers in one table. D20 and D21 decided. Waiting on the operator: M2 (delete the 21 old drafts, then the legacy form components go), M3 (CRM check), D1\u2013D3, D5\u2013D9 (D10 optional); PBI-01b and PBI-21 deferred.',
   site: { name: 'Credo: Microsite Staging', id: '6ab90fb0761d44332faf21c8', domain: 'staging.credolegal.com' },
 
   pbis: [
@@ -324,7 +324,7 @@ window.BACKLOG = {
         ['Follow-up (design system): one citation class and one label class: moved to PBI-16 (29 Sep)', 'done']
       ] },
 
-    { id: 'PBI-12', title: 'Page-specific copy fixes', refs: ['Part B', 'D20'], by: 'claude', blocked: 'D20', note: 'All Part B fixes live 29 Sep; closes when the operator answers D20 and that line is applied.',
+    { id: 'PBI-12', title: 'Page-specific copy fixes', refs: ['Part B', 'D20'], by: 'claude', note: 'All Part B fixes live 29 Sep, including the D20 wording.',
       review: { items: [
         { kind: 'Code', by: 'GPT-5.5', verdict: 'approve with fixes', file: 'review/PBI-12.review-gpt.md', settled: true, note: 'Sixth fdcpa-attorney line to the operator (D20); functional check added.' },
         { kind: 'Code', by: 'Gemini 3.1 Pro', verdict: 'approve with fixes', file: 'review/PBI-12.review-gemini.md', settled: true, note: 'Blocker = legal sign-off on the sixth line: D20.' },
@@ -343,7 +343,7 @@ window.BACKLOG = {
         ['credit-card-debt-challenge: remove the empty <em> in the H1: done 29 Sep (H1 is one text node)', 'done'],
         ['Publish to staging only and verify: served HTML of all 56 pages, only the 5 pages and lines above changed; live vs pre-change: phones, form payload, trackers, cookies, links identical', 'done'],
         ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots (2 rounds); findings settled, D20 with the operator', 'done'],
-        ['Apply the operator\'s D20 answer to the sixth fdcpa-attorney rights line (keep, alternative, or other wording) and publish to staging', 'todo']
+        ['Apply the operator\'s D20 answer to the sixth fdcpa-attorney rights line: GPT wording "Each call after a cease request can add evidence of another FDCPA violation." live 29 Sep; served HTML of all 56 pages changed only in that line; prototype updated', 'done']
       ] },
 
     { id: 'PBI-13', visible: false, title: 'Meta descriptions within 160 characters', refs: ['G3'], by: 'claude',
@@ -481,7 +481,8 @@ window.BACKLOG = {
       done: 'Full lpcheck on staging.credolegal.com vs the baseline; change log per item.',
       tasks: [
         ['Full lpcheck on the 30 staging pages vs the baseline', 'todo'],
-        ['Change log per item (what changed, where in Webflow)', 'todo']
+        ['Change log per item (what changed, where in Webflow)', 'todo'],
+        ['At the domain switch (D16, D21): every page\'s robots, canonical and og:url set for the final domain (today noindex, nofollow + canonical to start.credolegal.com/{slug}); recheck the served heads', 'todo']
 ,
         ['Clarity payload capture on the published form (the landing-page form on all 52 form pages; Hero-Form and Hero-Form-For-New-Pages are only on the 21 old drafts and go with M2) (review PBI-04)', 'todo'],
         ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots when anything visible changes; findings settled', 'todo']
@@ -508,8 +509,8 @@ window.BACKLOG = {
     ['D17', 'DS-7 review', 'Stats claims', 'Decided 29 Sep: the claims are fine, kept; operator confirmed all copy as accepted by legal (29 Sep). The pages show \u201c10 million+ in debt wiped\u201d and \u201c500k debts settled every month\u201d with no source. A Credo attorney should confirm they are accurate and allowed in attorney advertising, or change them.', 'DS-7'],
     ['D18', 'DS-7', 'Old page drafts and the legacy form', 'Decided 29 Sep: delete the drafts now. Done: the legacy site script removed. Open: the operator deletes the 21 drafts in the Webflow Pages panel (M2), then the 2 legacy components are removed. The 21 older pages are rebuilt; their old versions are kept as hidden drafts ({slug}-old) so any page can be put back. The old form components (Hero-Form, Hero-Form-For-New-Pages) and the site script OldFormPhoneEmailGuard are only used by those drafts. When can the drafts be deleted? Deleting them lets the legacy form and its scripts be removed from the site for good.', 'DS-7'],
     ['D19', 'PBI-01d plan', 'Shared code: order, phone numbers, search', 'Decided 29 Sep (operator): (1) make the code shared (P1\u2013P4) before the design polish, so each design fix is made once; (2) phone numbers in one table keyed by page slug in the site code (recommended option); (3) align with D16: every page noindex, nofollow with a self canonical, including the 8 pages rebuilt last (letter, medical-debt-attorney, debt-harassment-act-fast, multiple-collectors-more-money and the 4 payday pages), which said index, follow with the canonical on the home page.', 'PBI-01d'],
-    ['D20', 'PBI-12 review', 'Rights line on debt-harassment-fdcpa-attorney', 'Open. The prototype line "Each call after a cease request: another $1,000 in play." contradicts the FDCPA cap of $1,000 statutory damages per action (\u00a7 1692k(a)(2)(A)) and the line above it on the same page. Live now (29 Sep): "Each call after a cease request adds another violation to the claim." (Gemini: accurate and compliant). Alternative (GPT): "Each call after a cease request can add evidence of another FDCPA violation." Keep the live line, use the alternative, or give other wording? Optional, same pass: the prototype copy has a few comma splices left from the dash clean-up (e.g. violations, Who this helps, item 3); fix them in prototype + Webflow?', 'PBI-12'],
-    ['D21', 'Board QA', 'Canonical of the staging pages until go-live', 'Open. Every staging page now says noindex, nofollow with its canonical and og:url on start.credolegal.com/{slug} (D16, D19), while the old start pages say index, follow with their canonical on start.credolegal.com/. Mixed signals (noindex + a cross-domain canonical) are harmless while staging is not linked, but at the domain switch the heads must say index, follow with the final URL. Keep as is until go-live (recommended, recheck in PBI-24), or point the canonicals at staging.credolegal.com meanwhile? Nothing on start is changed either way.', 'PBI-24'],
+    ['D20', 'PBI-12 review', 'Rights line on debt-harassment-fdcpa-attorney', 'Decided 29 Sep (operator): use the GPT wording. Live 29 Sep on staging: "Each call after a cease request can add evidence of another FDCPA violation." (prototype content-attorney.js updated to match). Before: the prototype line "Each call after a cease request: another $1,000 in play." contradicts the FDCPA cap of $1,000 statutory damages per action (\u00a7 1692k(a)(2)(A)) and the line above it on the same page. Live now (29 Sep): "Each call after a cease request adds another violation to the claim." (Gemini: accurate and compliant). Alternative (GPT): "Each call after a cease request can add evidence of another FDCPA violation." Keep the live line, use the alternative, or give other wording? Optional, same pass: the prototype copy has a few comma splices left from the dash clean-up (e.g. violations, Who this helps, item 3); fix them in prototype + Webflow?', 'PBI-12'],
+    ['D21', 'Board QA', 'Canonical of the staging pages until go-live', 'Decided 29 Sep (operator): keep as is until go-live; PBI-24 rechecks robots, canonical and og:url at the domain switch. Before: every staging page now says noindex, nofollow with its canonical and og:url on start.credolegal.com/{slug} (D16, D19), while the old start pages say index, follow with their canonical on start.credolegal.com/. Mixed signals (noindex + a cross-domain canonical) are harmless while staging is not linked, but at the domain switch the heads must say index, follow with the final URL. Keep as is until go-live (recommended, recheck in PBI-24), or point the canonicals at staging.credolegal.com meanwhile? Nothing on start is changed either way.', 'PBI-24'],
   ],
 
   manual: [

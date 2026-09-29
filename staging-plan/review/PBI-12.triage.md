@@ -19,3 +19,9 @@ Verdicts:
 | 9 | Screenshot of the wage steps cut at the top of the numbers (UX round 2: GPT 17) | Screenshot crop, not the page: the phone shot and the page itself show the numbers in full. |
 
 **Status: settled; D20 is open with the operator.**
+
+## D20 applied (29 Sep, evening)
+Operator decision: use GPT's wording. Live on staging: "Each call after a cease request can add evidence of another FDCPA
+violation." The served HTML of all 56 pages changed only in that line. The prototype (`content-attorney.js`) was updated
+to match. Screenshots: `img/D20-atty-rights-desktop.png`, `img/D20-atty-rights-phone.png`. The wording is the code
+reviewer's own suggestion, chosen by the operator; no further review round. **PBI-12 is done.**
