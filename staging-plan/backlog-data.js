@@ -60,7 +60,7 @@ window.BACKLOG = {
         ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots when anything visible changes; findings settled', 'done']
       ] },
 
-    { id: 'PBI-01b', visible: false, title: 'One UTM mechanism', refs: ['G31'], by: 'claude',
+    { id: 'PBI-01b', visible: false, title: 'One UTM mechanism', refs: ['G31'], by: 'claude', note: 'Deferred by the operator 29 Sep.',
       why: 'Three overlapping UTM scripts (host cookies, .credolegal.com cookies, localStorage + URL rewrite) decide which phone number and tracking values a returning visitor gets.',
       done: 'One mechanism; a test matrix (first visit, return visit, no-query revisit, navigation, cross-subdomain) identical to today on every page type.',
       tasks: [
@@ -250,12 +250,12 @@ window.BACKLOG = {
       why: 'A typo stores "fbclig", and the form has no fbclid field.',
       done: '?fbclid=test123 reaches the cookie and the hidden fbclid field.',
       tasks: [
-        ['Fix fbclig → fbclid in the UTM block', 'todo'],
-        ['Add the hidden fbclid field (API, or one Designer copy-paste)', 'todo'],
+        ['Fix fbclig → fbclid in the UTM block (site-wide custom code, section 7: the utmKeys list and the field mapping). Tested 29 Sep by patching the live page in a test browser: 4/4 pages then send fbclid, on the first visit and on a return visit; live today sends none (4/4). Waiting to be written: the Webflow connector returned tools without input schemas, so every call is refused', 'doing'],
+        ['Add the hidden fbclid field: not needed. The same script adds a hidden field to the form for every key in its list, so the fix above adds fbclid by itself (21 → 22 fields posted)', 'done'],
         ['Publish to staging only', 'todo'],
         ['Test with ?fbclid=test123', 'todo']
 ,
-        ['Add the missing gbraid, wbraid and fbclid fields on the 6 old pages whose form lacks them (found by the 28 Sep submit test)', 'todo'],
+        ['Add the missing gbraid, wbraid and fbclid fields on the 6 old pages whose form lacks them: moot after DS-7; all 51 landing pages have gbraid and wbraid (served-HTML check 29 Sep), fbclid comes with the fix above', 'done'],
         ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots when anything visible changes; findings settled', 'todo']
       ] },
 
@@ -411,7 +411,7 @@ window.BACKLOG = {
         ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots when anything visible changes; findings settled', 'todo']
       ] },
 
-    { id: 'PBI-21', title: 'The four payday-content pages', refs: ['Part B'], by: 'decision', blocked: 'D4',
+    { id: 'PBI-21', title: 'The four payday-content pages', refs: ['Part B'], by: 'decision', note: 'Deferred by the operator 29 Sep. Open question: own copy for the 4 pages, or redirect them to matching pages.', blocked: 'D4',
       why: 'collection-defense, credit-cards, fcba-and-fdcpa and stop-wage-garnishment show the payday page.',
       done: 'Per D4: drafted/unlisted on staging, or rebuilt with approved copy.',
       tasks: [
@@ -424,6 +424,7 @@ window.BACKLOG = {
       why: 'The tracker waits for ids that don\'t exist, so it never fires.',
       done: 'Clicks on the real call links reach the tracker (only once D6 allows posting to the live call-click backend).',
       tasks: [
+        ['Note (PBI-08, 29 Sep): the tracker also sends fbclig read from a cookie of that name, so it is always empty. Left as is: what it sends to the live call-click backend is part of D6', 'todo'],
         ['Give the sticky bar link an id', 'todo'],
         ['Point the tracker at the real call-link ids', 'todo'],
         ['Publish to staging only and verify', 'todo'],
