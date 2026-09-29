@@ -316,6 +316,8 @@ window.BACKLOG = {
       done: 'Each page\'s Part B items match the prototype.',
       tasks: [
         ['debt-harassment-fdcpa-attorney: six rights summary lines from the prototype', 'todo'],
+        ['Problem cards numbered 01-04, 06, 06 on 30 pages (29 landing pages + home), found by the PBI-11 UX review: fifth card set to 05; thank-you boxes 01, 02, 04, 06 renumbered 01-04 and its citation § 1692c(A)(1) corrected; 50 pages read 01-06 at phone and desktop width (29 Sep); reviewed (GPT + Gemini, code + UX), settled (review/NUM-cards.triage.md)', 'done'],
+        ['Thank-you box 02 "Personalized guidance" is tagged with the calling-hours citation § 1692c(a)(1): suggested tag GUIDANCE (like EXPERTISE / PRIVACY / CONTACT); operator to confirm (D13 area)', 'todo'],
         ['wage-garnishment-attorney: how-it-works step titles', 'todo'],
         ['debt-harassment-violations: tag RIGHT → Remedy, headline full stop', 'todo'],
         ['medical-debt-credit-report-removal: tag → Violation, sub-headline punctuation', 'todo'],
