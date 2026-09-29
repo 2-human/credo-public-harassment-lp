@@ -1,0 +1,16 @@
+<!-- reviewer: gemini-3.1-pro-preview · 2026-09-29T21:39:13.531Z · 38s · images sent: 12 · usage {"promptTokenCount":16064,"candidatesTokenCount":795,"totalTokenCount":20388,"promptTokensDetails":[{"modality":"TEXT","tokenCount":3091},{"modality":"IMAGE","tokenCount":12973}],"thoughtsTokenCount":3529,"serviceTier":"standard"} -->
+
+| # | Severity | Finding | Screenshot | Suggested change |
+|---|---|---|---|---|
+| 1 | note | **Verification of Changes 1 & 4:** Supported. Step tags are updated to weight 700 and capitalized ("CONSULTATION" → "REVIEW"). | P4-steps-before.png, P4-steps-after.png | None. |
+| 2 | note | **Verification of Change 2:** Supported. Rights descriptions are pulled up to align properly with the red statute citations. FAQ questions also show corrected, tighter top spacing. | P4-rights-phone-before.png, P4-rights-phone-after.png, P4-faq-before.png, P4-faq-after.png | None. |
+| 3 | note | **Verification of Change 3:** Supported. The erroneous eyebrow copy "WHY CREDO" was successfully standardized to "WHAT WE SEE". | P4-eyebrow-before.png, P4-eyebrow-after.png | None. |
+| 4 | note | **Verification of Change 5:** Supported. The unusually large blank vertical space below the "Common problems..." heading has been removed, normalizing the section. | P4-blankline-before.png, P4-blankline-after.png | None. |
+| 5 | note | **Verification of Change 6:** Supported. The 6th FAQ question ("How much does this cost?") now visually matches the size, weight, and positioning of the surrounding `<h3>` questions. | P4-faq6-before.png, P4-faq6-after.png | None. |
+| 6 | note | **Clarity of primary action & Trust signals:** The "SPEAK TO AN ATTORNEY NOW →" CTA is highly visible with excellent contrast. The typography, clean layout, and precise legal citations (e.g., FDCPA, FRCP 4) establish a strong, professional legal tone. | P4-steps-after.png, P4-rights-phone-after.png | None. |
+| 7 | note | **Form interference:** Cannot evaluate if anything covers or competes with the form. The lead form is not visible in any provided screenshot. | All | Provide screenshots of the active form state if a review of its visibility is required. |
+| 8 | should-fix | **Readability (Line length):** The FAQ answers on desktop span the entire width of the text container. This makes the character count per line excessively long, reducing optimal reading comfort. | P4-faq-after.png, P4-faq6-after.png | Apply a `max-width` (e.g., `65ch` to `80ch`, or roughly 700px-800px) to the FAQ body text blocks to improve tracking. |
+| 9 | note | **Phone usability:** The narrow left column on mobile forces aggressive word wrapping (e.g., "Accurate / amount / required"). As acknowledged in the packet, this is an existing issue slated for PBI-18, so it does not block this release. | P4-rights-phone-after.png | Address the column proportion constraints during the PBI-18 design polish. |
+| 10 | note | **Answers to packet questions:** The standardizations are correct (accessibility improves by eliminating heading skips like h4s among h3s). The fixed-slot model with show/hide props is a standard, robust Webflow workaround. Combo classes and custom `h3 > strong` elements carry zero SEO or accessibility risk as long as the DOM heading hierarchy remains intact. | N/A | None. |
+
+approve with fixes

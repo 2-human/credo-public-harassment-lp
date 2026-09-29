@@ -136,7 +136,7 @@
       "Anyone whose workplace or family is being contacted by debt collectors.",
       "Anyone facing threats or harassment from creditors.",
       "Anyone who has been sued or served a summons over an unsecured debt.",
-      (st ? st + " residents" : "Anyone") + " who want attorney representation from day one.",
+      (st ? st + " residents who want" : "Anyone who wants") + " attorney representation from day one.",
     ],
 
     // Live "How our program works", verbatim; step markers NEW.
