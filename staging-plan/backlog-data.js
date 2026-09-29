@@ -8,7 +8,7 @@
  * `blocked` names the decision (D#) or manual step (M#) a PBI waits on. */
 window.BACKLOG = {
   updated: '27 Sep 2026',
-  state: '29 Sep: one thank-you design (shared component) and one number (718) 865-8350 on all three thank-you pages; D13 done (all copy accepted by legal; repeat submitters get their own line); thank-you wording applied on all three thank-you pages; card numbering fixed on 30 pages. PBI-08 (Meta click id, return-visit attribution) and PBI-11 (citations keep their case) done and reviewed; the CRM check of PBI-08 is with the operator. Earlier: Title Case fixed on every landing page (PBI-11 part); the 13 state pages kept out of search (D16); legacy form script removed from the site. Reviews settled. Waiting on the operator: delete the 21 old drafts in Webflow (M2), then the legacy form components go.',
+  state: '29 Sep: shared code, step 1 (PBI-01d P1): the page code that was copied onto 52 pages now lives once in Site settings; every page behaves and looks as before (tested live on 52 pages \u00d7 2 widths); all pages noindex with a self canonical (D19). Earlier: one thank-you design (shared component) and one number (718) 865-8350 on all three thank-you pages; D13 done (all copy accepted by legal; repeat submitters get their own line); thank-you wording applied on all three thank-you pages; card numbering fixed on 30 pages. PBI-08 (Meta click id, return-visit attribution) and PBI-11 (citations keep their case) done and reviewed; the CRM check of PBI-08 is with the operator. Earlier: Title Case fixed on every landing page (PBI-11 part); the 13 state pages kept out of search (D16); legacy form script removed from the site. Reviews settled. Waiting on the operator: delete the 21 old drafts in Webflow (M2), then the legacy form components go.',
   site: { name: 'Credo: Microsite Staging', id: '6ab90fb0761d44332faf21c8', domain: 'staging.credolegal.com' },
 
   pbis: [
@@ -80,13 +80,23 @@ window.BACKLOG = {
         ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots when anything visible changes; findings settled', 'todo']
       ] },
 
-    { id: 'PBI-01d', visible: false, title: 'Move shared page code to Site settings', refs: ['W1'], by: 'decision', blocked: 'D10',
-      why: 'Site code loads on every page; 7 pages (thank-you, 401, 404, CMS templates) load no GTM today. Moving GTM site-wide would start it on the thank-you pages.',
-      done: 'GTM trigger setup known; shared code moved without double-counting conversions.',
+    { id: 'PBI-01d', title: 'Shared code: Site settings, components and a landing-page template', refs: ['W1', 'D19'], by: 'claude', note: 'Plan 29 Sep (content/research/shared-code-plan-2026-09-29.md); operator decisions in D19. P1 done 29 Sep; next P2 (phone swap in one place). D10 no longer blocks: a system-page check keeps GTM and Mouseflow off exactly the pages they were off (404, 401, /thank-you, /page/*). A new system page must be added to that list (site head code, window.credoSystemPage).',
+      review: { items: [
+        { kind: 'Code', by: 'GPT-5.5', verdict: 'approve with fixes', file: 'review/PBI-01d-P1.review-gpt.md', settled: true, note: 'P1. Fixed: helper functions back to top-level declarations. System URLs incl. /401 and an arbitrary 404 checked live.' },
+        { kind: 'Code', by: 'Gemini 3.1 Pro', verdict: 'approve with fixes', file: 'review/PBI-01d-P1.review-gemini.md', settled: true, note: 'P1. Its "blocker" is a real test lead, which waits on D1; the form payload is identical on 52/52 pages.' },
+        { kind: 'UX', by: 'GPT + Gemini', na: true, note: 'Nothing visible changed: computed styles and text identical on 52 pages \u00d7 2 widths (live vs pre-change).' }
+      ], links: [['Packet (P1)', 'review/PBI-01d-P1.md'], ['Resolution (P1)', 'review/PBI-01d-P1.triage.md']] },
+      why: 'Since DS-7 all 50 landing pages share one 11-section skeleton, but only the header and footer are shared: each of the 52 form pages carried its own copy of about 33 KB of identical code (page head/footer code, a 15.7 KB phone script that differs only in 4 numbers, about 13 KB of CSS in embeds) and its own copy of the form, hero, trust strip, content sections and bottom CTA. Every later design or form fix therefore has to be made 50 times.',
+      done: 'Page-agnostic code in Site settings (system-page check); every landing-page section a component, with per-page copy in properties and slots; per page only SEO settings, canonical/og:url/robots and the phone numbers; every page behaves and looks exactly as before (same scripts in the same order, phones, form walk, tracking, styles).',
       tasks: [
-        ['Check in GTM whether thank-you page views count as conversions (D10)', 'todo'],
-        ['Move the shared code; publish to staging only; verify tags', 'todo'],
-        ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots when anything visible changes; findings settled', 'todo']
+        ['Inventory all published pages (served HTML + API): what is shared, what is copied, what differs per page', 'done'],
+        ['Plan: three layers (Site settings / components / per-page data), phases P1\u2013P5, risks, open points; operator decisions D19', 'done'],
+        ['P1 (29 Sep): the page code that was identical on 52 pages moved to Site settings (GTM, Mouseflow and page scripts behind a system-page check); RemoveStateOptions applied site-wide; page code down to robots/canonical/og:url (+ heading-fix CSS on 51); all 52 noindex with a self canonical (D19); duplicate twitter/og tags, twitter:site "@handle" and unused Font Awesome dropped. Shadow test before writing; served HTML 56/56 as intended; live vs pre-change identical on 52 pages \u00d7 2 widths (form payload, cookies, dataLayer, phones, links, styles, text); GTM/Mouseflow still absent on /401, 404, /thank-you, /page/*', 'done'],
+        ['P2: phone-swap logic once in site footer code, numbers in one table keyed by slug', 'todo'],
+        ['P3: Lead form, Trust strip, Hero and Bottom CTA as components (section CSS inside); pilot 1 page, then 49', 'todo'],
+        ['P4: content sections as components with slots and card components', 'todo'],
+        ['P5: draft landing-page template + prototype content-to-properties sync tool', 'todo'],
+        ['Independent review per phase: code by GPT + Gemini; UX by GPT + Gemini on screenshots when anything visible changes; findings settled (P1 settled)', 'doing']
       ] },
 
     { id: 'PBI-02', visible: false, title: 'Lead form destination for staging', refs: ['G9'], by: 'decision', blocked: 'D1',
@@ -486,6 +496,7 @@ window.BACKLOG = {
     ['D16', 'DS-7 review', 'State pages in search', 'Decided 29 Sep: they should not rank for now. Done: robots noindex, nofollow and canonical + og:url to the page itself (start.credolegal.com/{slug}), like the other landing pages; the rest of each head unchanged; verified 13/13 (recheck on start.credolegal.com at go-live). Before: the 13 state pages say index, follow but their canonical points to the home page (start.credolegal.com/), which folds them into the home page for Google. Kept as it was. Should each state page rank on its own (self canonical), or stay as is?', 'DS-7'],
     ['D17', 'DS-7 review', 'Stats claims', 'Decided 29 Sep: the claims are fine, kept; operator confirmed all copy as accepted by legal (29 Sep). The pages show \u201c10 million+ in debt wiped\u201d and \u201c500k debts settled every month\u201d with no source. A Credo attorney should confirm they are accurate and allowed in attorney advertising, or change them.', 'DS-7'],
     ['D18', 'DS-7', 'Old page drafts and the legacy form', 'Decided 29 Sep: delete the drafts now. Done: the legacy site script removed. Open: the operator deletes the 21 drafts in the Webflow Pages panel (M2), then the 2 legacy components are removed. The 21 older pages are rebuilt; their old versions are kept as hidden drafts ({slug}-old) so any page can be put back. The old form components (Hero-Form, Hero-Form-For-New-Pages) and the site script OldFormPhoneEmailGuard are only used by those drafts. When can the drafts be deleted? Deleting them lets the legacy form and its scripts be removed from the site for good.', 'DS-7']
+    ['D19', 'PBI-01d plan', 'Shared code: order, phone numbers, search', 'Decided 29 Sep (operator): (1) make the code shared (P1\u2013P4) before the design polish, so each design fix is made once; (2) phone numbers in one table keyed by page slug in the site code (recommended option); (3) align with D16: every page noindex, nofollow with a self canonical, including the 8 pages rebuilt last (letter, medical-debt-attorney, debt-harassment-act-fast, multiple-collectors-more-money and the 4 payday pages), which said index, follow with the canonical on the home page.', 'PBI-01d'],
   ],
 
   manual: [
