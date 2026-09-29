@@ -64,7 +64,7 @@ window.BACKLOG = {
       why: 'Three overlapping UTM scripts (host cookies, .credolegal.com cookies, localStorage + URL rewrite) decide which phone number and tracking values a returning visitor gets.',
       done: 'One mechanism; a test matrix (first visit, return visit, no-query revisit, navigation, cross-subdomain) identical to today on every page type.',
       tasks: [
-        ['Map what each mechanism writes and who reads it', 'todo'],
+        ['Map what each mechanism writes and who reads it: done 29 Sep (probe-utm-stores.mjs). 4 writers (site code: host cookies 90 days + form fields + link decoration; site code: localStorage + address-bar rewrite, wiped on any visit without parameters; page footer: .credolegal.com session cookies; page footer: decorates credolegal.com links) and 2 readers (phone script, Finsweet from the URL). Found: every value is stored twice, and the site code\'s cookie reader returns nothing for a name stored twice, so a returning visitor\'s lead sends utm_* and gclid empty (tested). One-line reader fix tested in the browser: attribution kept. The live start site has the same code', 'done'],
         ['Return-visit / cross-subdomain test matrix on the current code (baseline)', 'todo'],
         ['Remove the redundant mechanisms; keep one', 'todo'],
         ['Publish to staging only; re-run the matrix', 'todo'],
