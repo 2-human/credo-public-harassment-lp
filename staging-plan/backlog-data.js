@@ -8,7 +8,7 @@
  * `blocked` names the decision (D#) or manual step (M#) a PBI waits on. */
 window.BACKLOG = {
   updated: '27 Sep 2026',
-  state: '29 Sep: Title Case fixed on every landing page (PBI-11 part); the 13 state pages kept out of search (D16); legacy form script removed from the site. Reviews settled. Waiting on the operator: delete the 21 old drafts in Webflow (M2), then the legacy form components go.',
+  state: '29 Sep: PBI-08 (Meta click id, return-visit attribution) and PBI-11 (citations keep their case) done and reviewed; the CRM check of PBI-08 is with the operator. Earlier: Title Case fixed on every landing page (PBI-11 part); the 13 state pages kept out of search (D16); legacy form script removed from the site. Reviews settled. Waiting on the operator: delete the 21 old drafts in Webflow (M2), then the legacy form components go.',
   site: { name: 'Credo: Microsite Staging', id: '6ab90fb0761d44332faf21c8', domain: 'staging.credolegal.com' },
 
   pbis: [
@@ -291,19 +291,24 @@ window.BACKLOG = {
     { id: 'PBI-11', title: 'Statute citations keep their case', refs: ['G18'], by: 'claude',
       why: '"§ 1692e(2)" displays as "§ 1692E(2)" on all 30 pages (179 citations).',
       review: { items: [
-        { kind: 'Code', by: 'GPT-5.5', verdict: 'approve with fixes', file: 'review/PBI-11-D16.review-gpt.md', settled: true, note: 'What-we-do paragraph + D16. Form, numbers and form_submit re-tested after the publish on the 13 state pages: all pass.' },
+        { kind: 'Code', by: 'GPT-5.5', verdict: 'approve with fixes', file: 'review/PBI-11.review-gpt.md', settled: true, note: 'Breakpoints checked in Webflow; counts reconciled (44 labels were already in capitals); home page found and fixed.' },
+        { kind: 'Code', by: 'Gemini 3.1 Pro', verdict: 'do not approve', file: 'review/PBI-11.review-gemini.md', settled: true, note: 'Blockers: typed capitals (kept, design-system follow-up logged); CMS bindings (not applicable, static pages).' },
+        { kind: 'UX', by: 'GPT-5.5', verdict: 'approve with fixes', file: 'review/PBI-11.review-gpt-ux.md', settled: true, note: 'Found the 01-04, 06, 06 card numbering on 30 pages (pre-existing), offered as a follow-up.' },
+        { kind: 'UX', by: 'Gemini 3.1 Pro', verdict: 'approve', file: 'review/PBI-11.review-gemini-ux.md', settled: true, note: '' }
+        ,        { kind: 'Code', by: 'GPT-5.5', verdict: 'approve with fixes', file: 'review/PBI-11-D16.review-gpt.md', settled: true, note: 'What-we-do paragraph + D16. Form, numbers and form_submit re-tested after the publish on the 13 state pages: all pass.' },
         { kind: 'Code', by: 'Gemini 3.1 Pro', verdict: 'approve with fixes', file: 'review/PBI-11-D16.review-gemini.md', settled: true, note: '54 vs 51: thank-you, 404 and 401 have no what-we-do section.' },
         { kind: 'UX', by: 'GPT-5.5', verdict: 'approve with fixes', file: 'review/PBI-11-D16.review-gpt-ux.md', settled: true, note: 'Sentence case confirmed; sticky bar and body size logged for the design system.' },
         { kind: 'UX', by: 'Gemini 3.1 Pro', verdict: 'approve with fixes', file: 'review/PBI-11-D16.review-gemini-ux.md', settled: true, note: 'Sentence case confirmed.' }
-      ], links: [['Packet', 'review/PBI-11-D16.md'], ['Resolution', 'review/PBI-11-D16.triage.md']] },
+      ], links: [['Packet (citations)', 'review/PBI-11.md'], ['Resolution (citations)', 'review/PBI-11.triage.md'], ['Packet (paragraph + D16)', 'review/PBI-11-D16.md'], ['Resolution (paragraph + D16)', 'review/PBI-11-D16.triage.md']] },
       done: 'Every citation displays as typed; word tags match the prototype.',
       tasks: [
-        ['Capitalize: None on the mjfdcpaboxtext family (merge into one class)', 'todo'],
+        ['Capitalize: None on the citation classes: mjfdcpaboxtext and mjfdcpaboxtext Copy set to none at the base breakpoint and the xl (1440px+) uppercase override removed; the other Copy classes carry no citations (form label, typed in capitals)', 'done'],
         ['Also the what-we-do paragraph (class text-block-16 had text-transform: capitalize, so body copy showed in Title Case on every landing page; Gemini UX blocker, DS-7): set to none 29 Sep, published; 0 of 54 pages render capitalized body text (negative control passes)', 'done'],
-        ['Retype the word tags shown in mixed case in the prototype', 'todo'],
-        ['Publish to staging only', 'todo'],
-        ['Check each page\'s citation list from the audit', 'todo'],
-        ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots when anything visible changes; findings settled', 'todo']
+        ['Retype the word labels the prototype shows in capitals: 362 labels on 51 pages (Right/Violation/Remedy/Deadline tags, card-row words); law names in the rights column left as typed, as in the prototype. Home page too (found by the review), where 4 mistyped card citations were corrected', 'done'],
+        ['Publish to staging only', 'done'],
+        ['Check each page\'s citations: every label element on all 51 pages compared with its saved before-text at 1920/1440/1280/390 px: 474 citations and law names as typed, 406 labels in capitals, 0 problems; page-wide scan: 0 citations in capitals (was 305)', 'done'],
+        ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots when anything visible changes; findings settled', 'done'],
+        ['Follow-up (design system): one citation class and one label class (uppercase via style, words typed normally), replacing the typed capitals (review, Gemini)', 'todo']
       ] },
 
     { id: 'PBI-12', title: 'Page-specific copy fixes', refs: ['Part B'], by: 'claude',
