@@ -1,0 +1,13 @@
+<!-- reviewer: gemini-3.1-pro-preview · 2026-09-29T08:28:28.851Z · 58s · images sent: 0 · usage {"promptTokenCount":1428,"candidatesTokenCount":557,"totalTokenCount":8475,"promptTokensDetails":[{"modality":"TEXT","tokenCount":1428}],"thoughtsTokenCount":6490,"serviceTier":"standard"} -->
+
+| # | Severity (blocker / should-fix / note) | Finding | Evidence or reasoning | Suggested check |
+|---|---|---|---|---|
+| 1 | note | Conclusion 1 (fbclid capture) is supported | `verify-fbclid.mjs` confirms 4/4 pages send `fbclid` and 22 fields (previously 21), with no `fbclig`. | None |
+| 2 | note | Conclusion 2 (returning visitors) is supported | `probe-utm-stores.mjs` confirms return visits now successfully send `utm_*` and `gclid`. | None |
+| 3 | blocker | New `fbclid` field could break external Formspree/CRM integration | The POST was "answered locally", meaning the live Formspree endpoint and the external CRM were not tested. Adding a 22nd field affects external systems and could break strict schema validation, causing the CRM to reject the lead entirely. | Verify with the CRM administrator that receiving a new `fbclid` field will not cause webhook or payload rejection. |
+| 4 | should-fix | Internal link decoration was not tested | Context states Section 7 "adds values to internal links". The evidence does not confirm if internal links are correctly decorated with the newly captured `fbclid` or if URLs break as a result of the rename. | Click internal links after landing with an `fbclid` parameter to ensure valid URL decoration. |
+| 5 | should-fix | MutationObserver effects are unknown and untested | Question 2 asks about a MutationObserver, but it is not described in the Context or verified in the Evidence. If it interacts with form fields or links, renaming the key might affect its logic. | Provide details on what the MutationObserver does and test its behavior with the new `fbclid` key. |
+| 6 | note | Missing evidence for call-click tracker not firing | The packet notes claim the call-click tracker "never fires today anyway (see evidence)", but the Evidence section contains no proof or mention of this. | Provide the missing evidence or verify the tracker safely handles the key change if it unexpectedly fires. |
+| 7 | note | `parts[1]` may capture stale cookie data | `document.cookie` order is browser-dependent but usually favors the most specific domain/path first. `parts[1]` grabs the first matching string. If an older cookie exists on the specific host and a newer one on the root domain, it will prioritize the older one. | Accept this as a known edge case, or implement logic to clear stale cookies if freshness is strictly required. |
+
+do not approve

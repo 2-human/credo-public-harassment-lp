@@ -247,16 +247,21 @@ window.BACKLOG = {
       ] },
 
     { id: 'PBI-08', visible: false, title: 'Capture the Meta click id (fbclid)', refs: ['G20'], by: 'claude',
+      review: { items: [
+        { kind: 'Code', by: 'GPT-5.5', verdict: 'approve with fixes', file: 'review/PBI-08.review-gpt.md', settled: true, note: 'Cookie precedence tested and changed to newest; link decoration and call tracker tested.' },
+        { kind: 'Code', by: 'Gemini 3.1 Pro', verdict: 'do not approve', file: 'review/PBI-08.review-gemini.md', settled: true, note: 'Blocker: CRM handling of the new fbclid field. With the operator, who tests on the CRM end.' }
+      ], links: [['Packet', 'review/PBI-08.md'], ['Resolution', 'review/PBI-08.triage.md']] },
       why: 'A typo stores "fbclig", and the form has no fbclid field.',
       done: '?fbclid=test123 reaches the cookie and the hidden fbclid field.',
       tasks: [
-        ['Fix fbclig → fbclid in the UTM block (site-wide custom code, section 7: the utmKeys list and the field mapping). Tested 29 Sep by patching the live page in a test browser: 4/4 pages then send fbclid, on the first visit and on a return visit; live today sends none (4/4). Waiting to be written: the Webflow connector returned tools without input schemas, so every call is refused', 'doing'],
+        ['Fix fbclig → fbclid in the UTM block (site-wide custom code, section 7: the utmKeys list and the field mapping): published 29 Sep; served code byte-checked; 4/4 pages send fbclid on the first and on a return visit (before: none)', 'done'],
         ['Add the hidden fbclid field: not needed. The same script adds a hidden field to the form for every key in its list, so the fix above adds fbclid by itself (21 → 22 fields posted)', 'done'],
-        ['Publish to staging only', 'todo'],
-        ['Test with ?fbclid=test123', 'todo']
-,
+        ['Also (operator 29 Sep: apply all fixes): the section-7 cookie reader returned nothing when a name is stored twice (this host and .credolegal.com), so return visits sent utm_source/medium/campaign and gclid empty. It now takes the newest match, like the phone script: return visits keep them; when the two differ the newer is sent', 'done'],
+        ['Publish to staging only', 'done'],
+        ['Test with ?fbclid=… : verify-fbclid.mjs, probe-utm-stores.mjs, probe-cookie-conflict.mjs, probe-tracking-channels.mjs; form_submit unchanged', 'done'],
         ['Add the missing gbraid, wbraid and fbclid fields on the 6 old pages whose form lacks them: moot after DS-7; all 51 landing pages have gbraid and wbraid (served-HTML check 29 Sep), fbclid comes with the fix above', 'done'],
-        ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots when anything visible changes; findings settled', 'todo']
+        ['Independent review: code by GPT + Gemini (no UX: nothing visible); findings settled except the CRM check', 'done'],
+        ['Operator tests the new fbclid field and the return-visit values on the CRM end', 'todo']
       ] },
 
     { id: 'PBI-09', title: 'Dropdown options stored in Webflow', refs: ['F2'], by: 'likely',
