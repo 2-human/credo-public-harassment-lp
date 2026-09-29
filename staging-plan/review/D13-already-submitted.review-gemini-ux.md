@@ -1,0 +1,10 @@
+<!-- reviewer: gemini-3.1-pro-preview · 2026-09-29T11:40:12.342Z · 29s · images sent: 2 · usage {"promptTokenCount":2932,"candidatesTokenCount":435,"totalTokenCount":6194,"promptTokensDetails":[{"modality":"IMAGE","tokenCount":2167},{"modality":"TEXT","tokenCount":765}],"thoughtsTokenCount":2827,"serviceTier":"standard"} -->
+
+| # | Severity | Finding | Screenshot | Suggested change |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | Note | **Regarding Q1 (Wording clarity & consistency):** The repeat-submission wording is clear and matches the text provided in the packet. The tone is textually consistent with the `/page/thank-you` copy provided in the context. However, visual consistency between the two pages cannot be verified because a screenshot of `/page/thank-you` is missing. | D13-already-submitted-desktop.png, D13-already-submitted-phone.png | Provide a screenshot of `/page/thank-you` to verify visual consistency across the templates. |
+| 2 | Should-fix | **Regarding Q2 (Risk of CMS binding) & Readability:** The packet correctly notes that removing the old line breaks via plain-text CMS binding resulted in a smaller gap. The screenshots show this gap is now insufficient; the subtitle paragraph crashes into the "Here's what you can expect from us:" heading, making the layout feel cramped and harming visual hierarchy. | D13-already-submitted-desktop.png, D13-already-submitted-phone.png | Add a CSS `margin-bottom` to the subtitle paragraph element within the Webflow template to ensure consistent spacing, rather than relying on manual line breaks in the CMS text. |
+| 3 | Note | **Readability:** The line length of the main subtitle paragraph on desktop is quite wide, which can cause eye fatigue and reduce readability. | D13-already-submitted-desktop.png | Apply a `max-width` (e.g., `800px` or `65ch`) to the text container on desktop viewports to optimize reading length. |
+| 4 | Note | **Phone Usability:** The large, prominent red call button in the mobile header clearly supports the primary action. | D13-already-submitted-phone.png | None. |
+
+Overall verdict: approve with fixes
