@@ -8,7 +8,7 @@
  * `blocked` names the decision (D#) or manual step (M#) a PBI waits on. */
 window.BACKLOG = {
   updated: '27 Sep 2026',
-  state: '29 Sep: shared code, steps 1\u20132 (PBI-01d P1, P2): the page code and the phone-swap script that were copied onto 52 pages now live once in Site settings, with all tracked numbers in one table; every page behaves and looks as before (tested live on 52 pages \u00d7 2 widths); all pages noindex with a self canonical (D19). Earlier: one thank-you design (shared component) and one number (718) 865-8350 on all three thank-you pages; D13 done (all copy accepted by legal; repeat submitters get their own line); thank-you wording applied on all three thank-you pages; card numbering fixed on 30 pages. PBI-08 (Meta click id, return-visit attribution) and PBI-11 (citations keep their case) done and reviewed; the CRM check of PBI-08 is with the operator. Earlier: Title Case fixed on every landing page (PBI-11 part); the 13 state pages kept out of search (D16); legacy form script removed from the site. Reviews settled. Waiting on the operator: delete the 21 old drafts in Webflow (M2), then the legacy form components go.',
+  state: '29 Sep (evening): board clean-up. PBI-12: all Part B copy fixes live; it closes when D20 is answered (one rights line on fdcpa-attorney). G29 (WEEK 1 tags, 22 pages) done under PBI-19; PBI-01c and PBI-11 closed (PBI-11 follow-up moved to PBI-16); PBI-08 built and reviewed, closes with the operator\'s CRM check (M3). Shared code (PBI-01d) steps 1\u20132 done: the page code and the phone-swap script that were copied onto 52 pages now live once in Site settings, all tracked numbers in one table. Waiting on the operator: D20, D21 (canonical until go-live), M2 (delete the 21 old drafts, then the legacy form components go), M3 (CRM check), D1\u2013D3, D5\u2013D9 (D10 optional); PBI-01b and PBI-21 deferred.',
   site: { name: 'Credo: Microsite Staging', id: '6ab90fb0761d44332faf21c8', domain: 'staging.credolegal.com' },
 
   pbis: [
@@ -76,11 +76,11 @@ window.BACKLOG = {
       done: 'Per D11: pages rebuilt in the new design, or the library replaced, so no page calls a staging server.',
       tasks: [
         ['Rebuild the 21 pages on the landing-page template (DS-7), one page approved before the rest: done 28 Sep, no published page uses the old form or multi-step.js', 'done'],
-        ['Publish to staging only and verify the forms step by step', 'todo'],
-        ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots when anything visible changes; findings settled', 'todo']
+        ['Publish to staging only and verify the forms step by step: done in DS-7 (28 Sep): 26/26 + 16/16 submit tests, 13/13 + 8/8 form_submit pushes; no published page loads multi-step.js or calls videsigns-staging (served-HTML check 29 Sep)', 'done'],
+        ['Independent review: done in DS-7 (code + UX, GPT + Gemini, both rounds settled)', 'done']
       ] },
 
-    { id: 'PBI-01d', title: 'Shared code: Site settings, components and a landing-page template', refs: ['W1', 'D19'], by: 'claude', note: 'Plan 29 Sep (content/research/shared-code-plan-2026-09-29.md); operator decisions in D19. P1 and P2 done 29 Sep; next P3 (identical sections as components). Tracked phone numbers now live in one table in the site footer code (window.CREDO_PHONES, key = page slug): edit numbers there; a new page needs a row. D10 no longer blocks: a system-page check keeps GTM and Mouseflow off exactly the pages they were off (404, 401, /thank-you, /page/*). A new system page must be added to that list (site head code, window.credoSystemPage).',
+    { id: 'PBI-01d', title: 'Shared code: Site settings, components and a landing-page template', refs: ['W1', 'D19'], by: 'claude', note: 'Plan 29 Sep (content/research/shared-code-plan-2026-09-29.md); operator decisions in D19. P1 and P2 done 29 Sep; next P3 (identical sections as components). Tracked phone numbers now live in one table in the site footer code (window.CREDO_PHONES, key = page slug): edit numbers there; a new page needs a row (check: python3 tools/webflow/check-phone-table.py <slug>). D10 no longer blocks: a system-page check keeps GTM and Mouseflow off exactly the pages they were off (404, 401, /thank-you, /page/*). A new system page must be added to that list (site head code, window.credoSystemPage).',
       review: { items: [
         { kind: 'Code', by: 'GPT-5.5', verdict: 'approve with fixes', file: 'review/PBI-01d-P1.review-gpt.md', settled: true, note: 'P1. Fixed: helper functions back to top-level declarations. System URLs incl. /401 and an arbitrary 404 checked live.' },
         { kind: 'Code', by: 'Gemini 3.1 Pro', verdict: 'approve with fixes', file: 'review/PBI-01d-P1.review-gemini.md', settled: true, note: 'P1. Its "blocker" is a real test lead, which waits on D1; the form payload is identical on 52/52 pages.' },
@@ -259,7 +259,7 @@ window.BACKLOG = {
         ['Independent review of the last 8 pages (code + UX, GPT + Gemini); findings settled; Title Case raised as PBI-11', 'done']
       ] },
 
-    { id: 'PBI-08', visible: false, title: 'Capture the Meta click id (fbclid)', refs: ['G20'], by: 'claude',
+    { id: 'PBI-08', visible: false, title: 'Capture the Meta click id (fbclid)', blocked: 'M3 (operator)', refs: ['G20'], by: 'claude',
       review: { items: [
         { kind: 'Code', by: 'GPT-5.5', verdict: 'approve with fixes', file: 'review/PBI-08.review-gpt.md', settled: true, note: 'Cookie precedence tested and changed to newest; link decoration and call tracker tested.' },
         { kind: 'Code', by: 'Gemini 3.1 Pro', verdict: 'do not approve', file: 'review/PBI-08.review-gemini.md', settled: true, note: 'Blocker: CRM handling of the new fbclid field. With the operator, who tests on the CRM end.' }
@@ -274,7 +274,7 @@ window.BACKLOG = {
         ['Test with ?fbclid=… : verify-fbclid.mjs, probe-utm-stores.mjs, probe-cookie-conflict.mjs, probe-tracking-channels.mjs; form_submit unchanged', 'done'],
         ['Add the missing gbraid, wbraid and fbclid fields on the 6 old pages whose form lacks them: moot after DS-7; all 51 landing pages have gbraid and wbraid (served-HTML check 29 Sep), fbclid comes with the fix above', 'done'],
         ['Independent review: code by GPT + Gemini (no UX: nothing visible); findings settled except the CRM check', 'done'],
-        ['Operator tests the new fbclid field and the return-visit values on the CRM end', 'todo']
+        ['Operator tests the new fbclid field and the return-visit values on the CRM end (manual item M3); the item closes on that check, nothing left to build', 'todo']
       ] },
 
     { id: 'PBI-09', title: 'Dropdown options stored in Webflow', refs: ['F2'], by: 'likely',
@@ -321,22 +321,29 @@ window.BACKLOG = {
         ['Publish to staging only', 'done'],
         ['Check each page\'s citations: every label element on all 51 pages compared with its saved before-text at 1920/1440/1280/390 px: 474 citations and law names as typed, 406 labels in capitals, 0 problems; page-wide scan: 0 citations in capitals (was 305)', 'done'],
         ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots when anything visible changes; findings settled', 'done'],
-        ['Follow-up (design system): one citation class and one label class (uppercase via style, words typed normally), replacing the typed capitals (review, Gemini)', 'todo']
+        ['Follow-up (design system): one citation class and one label class: moved to PBI-16 (29 Sep)', 'done']
       ] },
 
-    { id: 'PBI-12', title: 'Page-specific copy fixes', refs: ['Part B'], by: 'claude',
+    { id: 'PBI-12', title: 'Page-specific copy fixes', refs: ['Part B', 'D20'], by: 'claude', blocked: 'D20', note: 'All Part B fixes live 29 Sep; closes when the operator answers D20 and that line is applied.',
+      review: { items: [
+        { kind: 'Code', by: 'GPT-5.5', verdict: 'approve with fixes', file: 'review/PBI-12.review-gpt.md', settled: true, note: 'Sixth fdcpa-attorney line to the operator (D20); functional check added.' },
+        { kind: 'Code', by: 'Gemini 3.1 Pro', verdict: 'approve with fixes', file: 'review/PBI-12.review-gemini.md', settled: true, note: 'Blocker = legal sign-off on the sixth line: D20.' },
+        { kind: 'UX', by: 'GPT-5.5', verdict: 'approve with fixes', file: 'review/PBI-12.review-gpt-ux.md', settled: true, note: 'Round 2 on full-section screenshots.' },
+        { kind: 'UX', by: 'Gemini 3.1 Pro', verdict: 'approve with fixes', file: 'review/PBI-12.review-gemini-ux.md', settled: true, note: 'Round 1 withheld approval (rows cut off); round 2 approves. Its WEEK 1 finding fixed (G29).' }
+      ], links: [['Packet', 'review/PBI-12.md'], ['Resolution', 'review/PBI-12.triage.md']] },
       why: 'Rights lines from another vertical on fdcpa-attorney, and small text differences on four pages.',
       done: 'Each page\'s Part B items match the prototype.',
       tasks: [
-        ['debt-harassment-fdcpa-attorney: six rights summary lines from the prototype', 'todo'],
+        ['debt-harassment-fdcpa-attorney: six rights summary lines from the prototype (were payday text): done 29 Sep; the sixth line without the prototype\'s "another $1,000" claim (contradicts the $1,000-per-action cap): wording with the operator as D20', 'done'],
         ['Problem cards numbered 01-04, 06, 06 on 30 pages (29 landing pages + home), found by the PBI-11 UX review: fifth card set to 05; thank-you boxes 01, 02, 04, 06 renumbered 01-04 and its citation § 1692c(A)(1) corrected; 50 pages read 01-06 at phone and desktop width (29 Sep); reviewed (GPT + Gemini, code + UX), settled (review/NUM-cards.triage.md)', 'done'],
         ['Thank-you box 02 "Personalized guidance" was tagged with the calling-hours citation § 1692c(a)(1): now GUIDANCE (operator 29 Sep, as in the prototype)', 'done'],
-        ['wage-garnishment-attorney: how-it-works step titles', 'todo'],
-        ['debt-harassment-violations: tag RIGHT → Remedy, headline full stop', 'todo'],
-        ['medical-debt-credit-report-removal: tag → Violation, sub-headline punctuation', 'todo'],
-        ['credit-card-debt-challenge: remove the empty <em> in the H1', 'todo'],
-        ['Publish to staging only and verify', 'todo'],
-        ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots when anything visible changes; findings settled', 'todo']
+        ['wage-garnishment-attorney: how-it-works step titles (Debt investigation / Legal representation / Work towards debt resolution): done 29 Sep', 'done'],
+        ['debt-harassment-violations: first rights tag RIGHT → REMEDY, headline full stop: done 29 Sep', 'done'],
+        ['medical-debt-credit-report-removal: § 1692f tag → VIOLATION, hero sub-headline as in the prototype: done 29 Sep', 'done'],
+        ['credit-card-debt-challenge: remove the empty <em> in the H1: done 29 Sep (H1 is one text node)', 'done'],
+        ['Publish to staging only and verify: served HTML of all 56 pages, only the 5 pages and lines above changed; live vs pre-change: phones, form payload, trackers, cookies, links identical', 'done'],
+        ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots (2 rounds); findings settled, D20 with the operator', 'done'],
+        ['Apply the operator\'s D20 answer to the sixth fdcpa-attorney rights line (keep, alternative, or other wording) and publish to staging', 'todo']
       ] },
 
     { id: 'PBI-13', visible: false, title: 'Meta descriptions within 160 characters', refs: ['G3'], by: 'claude',
@@ -357,7 +364,7 @@ window.BACKLOG = {
         ['Site-wide LegalService block', 'todo'],
         ['Remove the old per-page LegalService blocks', 'todo'],
         ['Build a FAQPage per page from its own FAQs', 'todo'],
-        ['Remove or replace the @handle placeholder (D9)', 'todo'],
+        ['Remove or replace the @handle placeholder (D9): the twitter:site "@handle" tag was dropped in PBI-01d P1 (29 Sep); D9 now only asks whether the X profile in the JSON-LD sameAs is right', 'done'],
         ['Publish to staging only and validate the JSON-LD', 'todo']
 ,
         ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots when anything visible changes; findings settled', 'todo']
@@ -383,7 +390,8 @@ window.BACKLOG = {
       tasks: [
         ['Mobile-portrait sizes for the H1 and section headlines', 'todo'],
         ['Form-question line height 1.3', 'todo'],
-        ['Intro paragraph Capitalize: None', 'todo'],
+        ['Intro paragraph Capitalize: None (G22, class Text Block 16): done 29 Sep in PBI-11; 0 of 54 pages render capitalized body text', 'done'],
+        ['One citation class and one label class (labels uppercase via style, words typed normally), replacing the capitals typed in PBI-11 (from the PBI-11 review, Gemini)', 'todo'],
         ['Step labels and rights tags to 12px', 'todo'],
         ['Publish to staging only and verify', 'todo']
 ,
@@ -422,7 +430,7 @@ window.BACKLOG = {
       tasks: [
         ['Bottom padding while the sticky call bar or chat bubble is visible, so the end of the page is never hidden (UX reviews PBI-05 and design preview)', 'todo'],
                 ['Padding on the call links and the BBB link', 'todo'],
-        ['"Week 1" to the step-tag case on 21 pages', 'todo'],
+        ['"Week 1" to the step-tag case on 21 pages (G29): done 29 Sep with PBI-12 (found again by its UX review): 21 pages + the 3 Week tags on home retyped in capitals; served HTML of 56 pages changed only there; 0 mixed-case left', 'done'],
         ['Publish to staging only and verify', 'todo'],
         ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots when anything visible changes; findings settled', 'todo']
       ] },
@@ -436,11 +444,11 @@ window.BACKLOG = {
         ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots when anything visible changes; findings settled', 'todo']
       ] },
 
-    { id: 'PBI-21', title: 'The four payday-content pages', refs: ['Part B'], by: 'decision', note: 'Deferred by the operator 29 Sep. Open question: own copy for the 4 pages, or redirect them to matching pages.', blocked: 'D4',
+    { id: 'PBI-21', title: 'The four payday-content pages', refs: ['Part B'], by: 'decision', note: 'Deferred by the operator 29 Sep. Open question: own copy for the 4 pages, or redirect them to matching pages. (D4\'s rebuild decision was applied to the 4 payday-loan pages in DS-7; it does not cover these 4.)', blocked: 'Deferred (operator)',
       why: 'collection-defense, credit-cards, fcba-and-fdcpa and stop-wage-garnishment show the payday page.',
       done: 'Per D4: drafted/unlisted on staging, or rebuilt with approved copy.',
       tasks: [
-        ['Apply the D4 decision on staging', 'todo'],
+        ['Apply the operator\'s answer (own copy or redirect) on staging', 'todo'],
         ['Publish to staging only and verify', 'todo'],
         ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots when anything visible changes; findings settled', 'todo']
       ] },
@@ -475,7 +483,7 @@ window.BACKLOG = {
         ['Full lpcheck on the 30 staging pages vs the baseline', 'todo'],
         ['Change log per item (what changed, where in Webflow)', 'todo']
 ,
-        ['Clarity payload capture on each form type: page form, Hero-Form, Hero-Form-For-New-Pages (review PBI-04)', 'todo'],
+        ['Clarity payload capture on the published form (the landing-page form on all 52 form pages; Hero-Form and Hero-Form-For-New-Pages are only on the 21 old drafts and go with M2) (review PBI-04)', 'todo'],
         ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots when anything visible changes; findings settled', 'todo']
       ] }
   ],
@@ -484,13 +492,13 @@ window.BACKLOG = {
     ['D1', 'G9', 'Where the form posts', 'Webflow native forms, a first-party endpoint, or formspree with a DPA; and whether staging posts to a test destination meanwhile (recommended).', 'PBI-02'],
     ['D2', 'G10', 'Consent text', 'Counsel-approved wording, and whether express consent needs a checkbox. Note 29 Sep: the operator accepted all existing copy as legal-approved, but no consent text has been written yet, so this stays open: it needs the text itself (or a request to draft it for counsel).', 'PBI-03'],
     ['D3', 'G16', 'CTA labels', 'Which two labels to keep.', 'PBI-20'],
-    ['D4', 'Part B', 'The four payday-content pages', 'Decided 28 Sep: rebuild them on the landing-page template, like the other older pages.', 'PBI-21'],
+    ['D4', 'Part B', 'The four payday-content pages', 'Decided 28 Sep: rebuild them on the landing-page template, like the other older pages. Applied in DS-7 to the 4 payday-loan pages (own copy each). Separate and still open: the 4 pages that show the payday page\'s content (collection-defense, credit-cards, fcba-and-fdcpa, stop-wage-garnishment), deferred by the operator 29 Sep: own copy or redirect? (PBI-21)', 'PBI-21'],
     ['D5', 'G32', 'Session recorders', 'Keep Mouseflow, or remove it and rely on Clarity.', 'PBI-23'],
     ['D6', 'G21a', 'Call-click posting', 'May staging.credolegal.com post call clicks to the live call-click backend (credo.debtfixer.co) while testing?', 'PBI-22'],
     ['D7', 'F2', 'State list', 'Confirm North Carolina should stay removed from the state dropdown.', '—'],
     ['D8', 'L2', 'Tidio chat', 'Is chat staffed? Lazy-load it, or remove it. If chat stays: a neutral dark launcher colour, so red stays reserved for the call and form buttons (UX reviews, 28 Sep).', 'PBI-23'],
-    ['D9', 'G6', 'Twitter/X handle', 'Credo\'s real handle, or delete the @handle placeholder.', 'PBI-14']
-    ,['D10', 'W1', 'GTM on thank-you pages', 'Does GTM count thank-you page views as conversions? Needs someone with GTM access. Decides whether shared code can move to Site settings.', 'PBI-01d'],
+    ['D9', 'G6', 'Twitter/X handle', 'The @handle placeholder is gone (dropped in PBI-01d P1, 29 Sep). Still open: is https://twitter.com/Credolegal (in the site JSON-LD sameAs) Credo\'s real X profile, or should it be removed?', 'PBI-14']
+    ,['D10', 'W1', 'GTM on thank-you pages', 'No longer blocks PBI-01d (29 Sep): the shared code moved to Site settings behind a system-page check, so GTM and Mouseflow stay off the thank-you, 401 and 404 pages exactly as before. Still open, optional: should GTM run on the thank-you pages, and does it count their page views as conversions? Needs someone with GTM access; the answer only changes the page-id list in the site head.', 'PBI-01d'],
     ['D11', 'L1', 'Old-form pages', 'Decided 28 Sep: rebuild all 21 older pages (13 state, 8 others incl. the 4 payday pages) on the landing-page template: new design and the new form only; every legacy form removed. Method B: each page is a duplicate of a landing page with its own copy, number, SEO and tracking; the old page is kept as a draft until the new one passes.', 'PBI-01c'],
     ['D12', 'PBI-01', 'ZIP error message', 'Decided 27 Sep: accepted. An invalid ZIP now shows one message ("Please enter valid 5 digit zip code") instead of two.', 'PBI-01'],
     ['D13', 'Design preview', 'Thank-you wording', 'Decided 29 Sep (operator): apply the proposed wording. Done on /thank-you, /page/thank-you and /page/already-submitted: "Thank you. Your request has been received." + "We appreciate the trust you\'ve placed in our team to help protect your rights. One of our legal professionals will contact you shortly to schedule your free, confidential consultation."; box 02 tagged GUIDANCE. Operator 29 Sep: all copy accepted by legal (no further legal review of the remaining outcome-like lines). Repeat submissions now get their own line on /page/already-submitted ("We already have your request.", CMS-bound headline and paragraph; review/D13-already-submitted.triage.md). Phone decided 29 Sep: (718) 865-8350 on all thank-you pages; /page/thank-you (and already-submitted) now use the /thank-you design via a shared "Thank-you page" component (Headline/Message props, CMS-bound on the template); review/TY-unify.triage.md. D13 closed. Before: legal sign-off on the thank-you headline. Today: "You have been pre-approved for a free legal consultation call with our attorney!" Proposed (in the preview): "Thank you. Your request has been received." with "One of our legal professionals will contact you shortly to schedule your free, confidential consultation." Needs a Credo attorney to approve before it goes into Webflow. Also: which phone number the unified thank-you page shows (today /thank-you has (443) 483-4080, /page/thank-you and /page/already-submitted (718) 865-8350).', 'DS-6'],
@@ -498,8 +506,10 @@ window.BACKLOG = {
     ['D15', 'DS-7 review', 'Call numbers per ad source', 'Decided 29 Sep: leave as is (one number per page for every source). Every state page shows one number whatever the ad source (as before): 718-865-8350, or the state\u2019s local number on MN, MD, CO, NY, NJ, FL. Keep that, or give Google / Meta / Bing their own tracked numbers so calls can be attributed? New numbers come from the call-tracking account (not ours to change).', 'DS-7'],
     ['D16', 'DS-7 review', 'State pages in search', 'Decided 29 Sep: they should not rank for now. Done: robots noindex, nofollow and canonical + og:url to the page itself (start.credolegal.com/{slug}), like the other landing pages; the rest of each head unchanged; verified 13/13 (recheck on start.credolegal.com at go-live). Before: the 13 state pages say index, follow but their canonical points to the home page (start.credolegal.com/), which folds them into the home page for Google. Kept as it was. Should each state page rank on its own (self canonical), or stay as is?', 'DS-7'],
     ['D17', 'DS-7 review', 'Stats claims', 'Decided 29 Sep: the claims are fine, kept; operator confirmed all copy as accepted by legal (29 Sep). The pages show \u201c10 million+ in debt wiped\u201d and \u201c500k debts settled every month\u201d with no source. A Credo attorney should confirm they are accurate and allowed in attorney advertising, or change them.', 'DS-7'],
-    ['D18', 'DS-7', 'Old page drafts and the legacy form', 'Decided 29 Sep: delete the drafts now. Done: the legacy site script removed. Open: the operator deletes the 21 drafts in the Webflow Pages panel (M2), then the 2 legacy components are removed. The 21 older pages are rebuilt; their old versions are kept as hidden drafts ({slug}-old) so any page can be put back. The old form components (Hero-Form, Hero-Form-For-New-Pages) and the site script OldFormPhoneEmailGuard are only used by those drafts. When can the drafts be deleted? Deleting them lets the legacy form and its scripts be removed from the site for good.', 'DS-7']
+    ['D18', 'DS-7', 'Old page drafts and the legacy form', 'Decided 29 Sep: delete the drafts now. Done: the legacy site script removed. Open: the operator deletes the 21 drafts in the Webflow Pages panel (M2), then the 2 legacy components are removed. The 21 older pages are rebuilt; their old versions are kept as hidden drafts ({slug}-old) so any page can be put back. The old form components (Hero-Form, Hero-Form-For-New-Pages) and the site script OldFormPhoneEmailGuard are only used by those drafts. When can the drafts be deleted? Deleting them lets the legacy form and its scripts be removed from the site for good.', 'DS-7'],
     ['D19', 'PBI-01d plan', 'Shared code: order, phone numbers, search', 'Decided 29 Sep (operator): (1) make the code shared (P1\u2013P4) before the design polish, so each design fix is made once; (2) phone numbers in one table keyed by page slug in the site code (recommended option); (3) align with D16: every page noindex, nofollow with a self canonical, including the 8 pages rebuilt last (letter, medical-debt-attorney, debt-harassment-act-fast, multiple-collectors-more-money and the 4 payday pages), which said index, follow with the canonical on the home page.', 'PBI-01d'],
+    ['D20', 'PBI-12 review', 'Rights line on debt-harassment-fdcpa-attorney', 'Open. The prototype line "Each call after a cease request: another $1,000 in play." contradicts the FDCPA cap of $1,000 statutory damages per action (\u00a7 1692k(a)(2)(A)) and the line above it on the same page. Live now (29 Sep): "Each call after a cease request adds another violation to the claim." (Gemini: accurate and compliant). Alternative (GPT): "Each call after a cease request can add evidence of another FDCPA violation." Keep the live line, use the alternative, or give other wording? Optional, same pass: the prototype copy has a few comma splices left from the dash clean-up (e.g. violations, Who this helps, item 3); fix them in prototype + Webflow?', 'PBI-12'],
+    ['D21', 'Board QA', 'Canonical of the staging pages until go-live', 'Open. Every staging page now says noindex, nofollow with its canonical and og:url on start.credolegal.com/{slug} (D16, D19), while the old start pages say index, follow with their canonical on start.credolegal.com/. Mixed signals (noindex + a cross-domain canonical) are harmless while staging is not linked, but at the domain switch the heads must say index, follow with the final URL. Keep as is until go-live (recommended, recheck in PBI-24), or point the canonicals at staging.credolegal.com meanwhile? Nothing on start is changed either way.', 'PBI-24'],
   ],
 
   manual: [
@@ -509,6 +519,7 @@ window.BACKLOG = {
     ['G9', 'Data-processing agreement / CRM routing for the lead data', 'Open'],
     ['G15 · G21b', 'GTM: form_submit only on success; call clicks as one key event (shared container)', 'Open'],
     ['G2', 'Old-domain duplicates and redirects on start.credolegal.com (old site)', 'Open'],
-    ['M2', 'Delete the 21 old drafts in Webflow (Pages panel: the 21 top-level draft pages whose names end in "(old design)", slugs {slug}-old: ohio, kentucky, utah, south-dakota, missouri, kansas, california, minnesota, maryland, colorado, new-york, new-jersey, florida, letter, medical-debt-attorney, debt-harassment-act-fast, multiple-collectors-more-money, payday-loan-fight-back, payday-loan-debt-rights, payday-loan-lawsuit-proof, payday-loan-lawsuit-respond). The API cannot delete pages. D18', 'Open']
+    ['M2', 'Delete the 21 old drafts in Webflow (Pages panel: the 21 top-level draft pages whose names end in "(old design)", slugs {slug}-old: ohio, kentucky, utah, south-dakota, missouri, kansas, california, minnesota, maryland, colorado, new-york, new-jersey, florida, letter, medical-debt-attorney, debt-harassment-act-fast, multiple-collectors-more-money, payday-loan-fight-back, payday-loan-debt-rights, payday-loan-lawsuit-proof, payday-loan-lawsuit-respond). The API cannot delete pages. D18', 'Open'],
+    ['M3', 'CRM check (PBI-08): a staging lead now carries fbclid (new field) and keeps utm_source/medium/campaign and gclid on a return visit; confirm the CRM maps or ignores fbclid and stores the return-visit values', 'Open'],
   ]
 };
