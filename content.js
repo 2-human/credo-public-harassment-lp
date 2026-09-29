@@ -144,4 +144,33 @@ window.CREDO = {
   },
 
   disclaimer: "This is attorney advertising. Prior results do not guarantee a similar outcome.",
+
+  // Footer — company info + links carried over from the live landing page
+  // (start.credolegal.com), 2026-08-11. Entity, address, client phone lines,
+  // support email, nav links, and the site legal statements. External links
+  // point at the live credolegal.com site and open in a new tab.
+  footer: {
+    entity: "Credo Legal Services, P.A.",
+    address: "1 Liberty Plaza, Suite 401, New York, NY 10006",
+    phones: [
+      { label: "Existing clients", number: "(212) 461-4026", href: "tel:+12124614026" },
+      { label: "New clients",      number: "(718) 865-8350", href: "tel:+17188658350" },
+    ],
+    email: "support@credolegal.com",
+    emailHref: "mailto:support@credolegal.com",
+    links: [
+      { text: "Home",               href: "https://credolegal.com" },
+      { text: "About",              href: "https://credolegal.com/About" },
+      { text: "Contact",            href: "https://credolegal.com/ContactUs" },
+      { text: "Privacy policy",     href: "https://credolegal.com/privacy-policy" },
+      { text: "Cookie Policy",      href: "https://credolegal.com/cookie-policy" },
+      { text: "Terms & Conditions", href: "https://credolegal.com/term-of-service" },
+    ],
+    // Two legal statements verbatim from the live site's footer.
+    legal: [
+      "Attorney Advertising: Prior results do not guarantee a similar outcome.",
+      "The information on this website is for informational purposes only and is not legal advice. Viewing this site does not create an attorney–client relationship.",
+    ],
+    copyright: "© 2026 Credo Legal. All rights reserved.",
+  },
 };

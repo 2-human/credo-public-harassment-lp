@@ -550,15 +550,41 @@
       '</div></section>';
   }
   function Footer() {
+    var F = C.footer || {};
+    var links = (F.links || []).map(function (l) {
+      return '<a href="' + esc(l.href) + '" target="_blank" rel="noopener">' + esc(l.text) + '</a>';
+    }).join("");
+    var phones = (F.phones || []).map(function (p) {
+      return '<div class="fcontact-row"><span class="flabel">' + esc(p.label) + '</span>' +
+        '<a href="' + esc(p.href) + '">' + esc(p.number) + '</a></div>';
+    }).join("");
+    var email = F.email
+      ? '<div class="fcontact-row"><span class="flabel">Email</span>' +
+        '<a href="' + esc(F.emailHref || ('mailto:' + F.email)) + '">' + esc(F.email) + '</a></div>'
+      : '';
+    // Site legal statements (from the live LP) + campaign compliance tail.
+    var legal = ((F.legal || []).join(" ") +
+      ' ' + esc(F.entity || 'Credo Legal') + ' is a multi-jurisdictional law firm. ' +
+      'Not a debt-settlement company. Not a credit-counseling service.').trim();
     return '' +
       '<footer class="foot"><div class="container">' +
         '<div class="frow">' +
           '<a href="#top" class="brand"><img src="assets/credo-logo.png" alt="Credo Legal"/></a>' +
-          '<div class="flinks"><a href="#">About</a><a href="#">Contact</a><a href="#">Privacy</a><a href="#">Disclaimer</a></div>' +
-          '<span class="fmeta">© 2026 · ATTORNEY ADVERTISING</span>' +
+          '<div class="flinks">' + links + '</div>' +
         '</div>' +
-        '<p class="disclaimer" data-slot="disclaimer">' + C.disclaimer + ' Credo Legal is a multi-jurisdictional law firm. Communication through this site does not create an attorney–client relationship. Not a debt-settlement company. Not a credit-counseling service.</p>' +
+        '<div class="fgrid">' +
+          '<div class="fcol fcol-org">' +
+            '<div class="fentity">' + esc(F.entity || '') + '</div>' +
+            '<address class="faddr">' + esc(F.address || '') + '</address>' +
+          '</div>' +
+          '<div class="fcol fcol-contact">' + phones + email + '</div>' +
+        '</div>' +
+        '<p class="disclaimer" data-slot="disclaimer">' + legal + '</p>' +
         '<p class="state-excl">' + C.form.stateExclusion + '</p>' +
+        '<div class="fbottom">' +
+          '<span class="fcopy">' + esc(F.copyright || '') + '</span>' +
+          '<span class="fmeta">Attorney Advertising</span>' +
+        '</div>' +
       '</div></footer>';
   }
   function StickyCTA() {
