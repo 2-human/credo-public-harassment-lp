@@ -64,6 +64,13 @@ tr.gh .gs b{color:var(--ink)}
 td.c-term{min-width:220px;max-width:300px}
 td.c-trig{min-width:230px;max-width:280px}
 td.c-kw{min-width:170px;max-width:220px;font-size:12px}
+.kwsel{display:flex;align-items:center;gap:4px;width:100%;text-align:left;background:#fff;border:1px solid var(--line);border-radius:999px;padding:3px 8px;margin:0 0 5px;cursor:pointer;font:inherit;font-size:12px;color:var(--ink)}
+.kwsel:hover,.kwsel:focus-visible{border-color:var(--blue);outline:none}
+.kwsel[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.kwsel[aria-pressed=true] .kwm,.kwsel[aria-pressed=true] .small{color:#dfe3e8;border-color:#5b636d}
+.kwsel .small{margin-left:auto}
+.kwclr{background:none;border:0;padding:0;color:var(--blue);font-size:11.5px;cursor:pointer;text-decoration:underline}
+.adscope{font-size:11px;color:var(--mute);margin:0 0 5px}
 .kwm{display:inline-block;font:600 10px/1.6 ui-monospace,Menlo,monospace;border:1px solid var(--line);border-radius:4px;padding:0 4px;color:var(--mute);margin-left:3px}
 .paused{background:#8a6d3b}
 td.c-best,td.c-new{min-width:190px;max-width:240px}
@@ -169,9 +176,9 @@ details.ana .box b:first-child{margin-top:0}
     <table id="tbl">
       <thead><tr>
         <th data-k="term">Search term</th>
+        <th data-k="kw">Triggered by keyword <span class="small">(click to filter ads)</span></th>
         <th data-k="impr">Impr.</th><th data-k="clicks">Clicks</th><th data-k="ctr">CTR vs benchmark</th><th data-k="conv">Conv. / CPA</th><th data-k="top" class="grp-last">Top of page (30 d)</th>
         <th data-k="dom">Ads triggered (ad group, lifetime) → landing page</th>
-        <th data-k="kw">Triggered by keyword</th>
         <th data-k="liveShare">Best current page</th>
         <th data-k="newp">Recommended new page</th>
         <th data-k="action">Recommended action</th>
@@ -296,30 +303,55 @@ details.ana .box b:first-child{margin-top:0}
   const DB = window.ADS_DB;
   const agAdsOf = r => DB.agAds[r.campaign + '|' + r.adgroup] || [];
   const pairOf = (ad, kw) => kw ? DB.adkw[ad + '|' + kw.text + '|' + kw.match] : null;
+  // Keyword selection per row: empty = every keyword that triggered the term.
+  const selKw = new Map();
+  const selOf = r => selKw.get(r.key) || new Set();
+  const activeKws = r => { const k = r.keywords || [], sel = selOf(r); return sel.size ? k.filter((_, i) => sel.has(i)) : k; };
+  // Sum an ad's metrics over a set of keywords (totals and months).
+  const aggPair = (ad, kws) => {
+    const ps = (kws || []).map(k => pairOf(ad, k)).filter(Boolean);
+    if (!ps.length) return null;
+    const total = { impr: 0, clicks: 0, cost: 0, conv: 0 }, by = {};
+    ps.forEach(p => {
+      ['impr', 'clicks', 'cost', 'conv'].forEach(f => total[f] += p.total[f]);
+      p.monthly.forEach(m => { const o = by[m.m] || (by[m.m] = { m: m.m, impr: 0, clicks: 0, cost: 0, conv: 0 }); ['impr', 'clicks', 'cost', 'conv'].forEach(f => o[f] += m[f]); });
+    });
+    return { total, monthly: Object.values(by).sort((x, y) => x.m.localeCompare(y.m)), n: ps.length };
+  };
+  const kwName = kws => kws.length === 1 ? `the keyword "${kws[0].text}" (${kws[0].match.toLowerCase()} match)` : `its ${kws.length} keywords (${kws.map(k => '"' + k.text + '"').join(', ')})`;
   const stLabel = st => st === 'ENABLED' ? 'Live' : st.toLowerCase();
   const trigCell = r => {
-    const ids = agAdsOf(r);
+    let ids = agAdsOf(r);
     if (!ids.length) {
       if (r.campaign.startsWith('PMax')) return '<span class="pill paused">Performance Max</span><div class="small">Asset groups, not ads: no ad-level data.</div>';
       return r.current.map(c => `<div class="ad">${c.share}% → ${link(P[c.page].url, path(P[c.page].url))}</div>`).join('') || '<span class="small">–</span>';
     }
-    const agTot = ids.reduce((t, i) => t + DB.ads[i].total.impr, 0);
-    const kw = r.keywords && r.keywords[0];
-    return ids.map(i => {
-      const a = DB.ads[i], pr = pairOf(i, kw);
+    const kws = activeKws(r), sel = selOf(r).size;
+    const ag = Object.fromEntries(ids.map(i => [i, aggPair(i, kws)]));
+    if (sel) ids = ids.filter(i => ag[i]);
+    const byKw = kws.length && ids.some(i => ag[i]);
+    if (byKw) ids = [...ids].sort((x, y) => (ag[y] ? ag[y].total.impr : -1) - (ag[x] ? ag[x].total.impr : -1));
+    const tot = ids.reduce((t, i) => t + (byKw ? (ag[i] ? ag[i].total.impr : 0) : DB.ads[i].total.impr), 0);
+    const head = !kws.length ? '' : `<div class="adscope">${sel ? `Ads on the ${sel === 1 ? 'selected keyword' : sel + ' selected keywords'}` : `All ads · stats across ${kws.length === 1 ? 'its keyword' : 'its ' + kws.length + ' keywords'}`}</div>`;
+    if (!ids.length) return head + '<span class="small">No ad has data on this keyword.</span>';
+    return head + ids.map(i => {
+      const a = DB.ads[i], pr = ag[i], t = pr && pr.total;
+      const share = byKw ? (t ? t.impr : 0) : a.total.impr;
       return `<button class="adbtn" data-ad="${i}" data-row="${esc(r.key)}" title="Open this ad's analysis">` +
-        `<span class="top"><span class="pill st-${a.status}">${stLabel(a.status)}</span> Ad ${i} · <b>${Math.round(a.total.impr / Math.max(agTot, 1) * 100)}%</b> of ad group</span>` +
+        `<span class="top"><span class="pill st-${a.status}">${stLabel(a.status)}</span> Ad ${i} · <b>${Math.round(share / Math.max(tot, 1) * 100)}%</b> of ${byKw ? 'impr.' : 'ad group'}</span>` +
         (a.headlines.length ? `<span class="hl">${a.headlines.slice(0, 2).map(h => esc(h.t)).join(' | ')}</span>` : '') +
-        (pr ? `<span class="kwline">This keyword: ${pr.total.impr.toLocaleString('en-US')} impr · ${pct(pr.total.clicks / Math.max(pr.total.impr, 1))} CTR</span>` : '') +
+        (t ? `<span class="kwline">${t.impr.toLocaleString('en-US')} impr · ${pct(t.clicks / Math.max(t.impr, 1))} CTR · ${t.conv.toFixed(1)} conv${t.conv ? ' · ' + usd(t.cost / t.conv) + ' CPA' : ''}</span>` :
+          kws.length ? '<span class="kwline small">No data on these keywords</span>' : '') +
         `<span class="small">→ ${esc(path(a.url) || a.type.toLowerCase())}</span></button>`;
     }).join('');
   };
   const kwCell = r => {
     if (!r.keywords || !r.keywords.length) return '<span class="small">–</span>';
-    const tot = r.keywords.reduce((a, k) => a + k.impr, 0);
+    const tot = r.keywords.reduce((a, k) => a + k.impr, 0), sel = selOf(r);
     const M = { EXACT: 'exact', PHRASE: 'phrase', BROAD: 'broad' };
-    return r.keywords.slice(0, 3).map(k => `<div>${esc(k.text)}<span class="kwm">${M[k.match] || esc(k.match.toLowerCase())}</span> <span class="small">${Math.round(k.impr / tot * 100)}%</span></div>`).join('') +
-      (r.keywords.length > 3 ? `<div class="small">+${r.keywords.length - 3} more</div>` : '');
+    return r.keywords.map((k, i) => `<button class="kwsel" data-row="${esc(r.key)}" data-i="${i}" aria-pressed="${sel.has(i)}" title="Show ads and stats for this keyword">` +
+      `<span>${esc(k.text)}</span><span class="kwm">${M[k.match] || esc(k.match.toLowerCase())}</span><span class="small">${Math.round(k.impr / tot * 100)}%</span></button>`).join('') +
+      (sel.size ? `<button class="kwclr" data-row="${esc(r.key)}">Show all keywords</button>` : (r.keywords.length > 1 ? '<div class="small">% = share of this term\'s impressions</div>' : ''));
   };
   const bestCell = r => {
     if (!r.liveBest) return '<span class="pill none">None</span><div class="txt">Not a Credo search.</div>';
@@ -340,15 +372,15 @@ details.ana .box b:first-child{margin-top:0}
     (r.f && r.f.lp && r.f.lp.note ? `<div class="txt">${esc(r.f.lp.note)}</div>` : '') +
     (r.note ? `<span class="flag">${esc(r.note)}</span>` : '');
 
-  const rowHtml = r => `<tr>
+  const rowHtml = r => `<tr data-key="${esc(r.key)}">
     <td class="c-term" data-l="Search term">${termCell(r)}</td>
+    <td class="c-kw" data-l="Triggered by keyword">${kwCell(r)}</td>
     <td class="num" data-l="Impressions">${r.impr.toLocaleString('en-US')}</td>
     <td class="num" data-l="Clicks">${r.clicks}</td>
     <td data-l="CTR vs benchmark">${ctrCell(r)}</td>
     <td class="num" data-l="Conversions / CPA">${r.conv.toFixed(1)}<br><span class="small">${r.cpa ? usd(r.cpa) : '–'}</span></td>
     <td class="num" data-l="Top of page">${r.top != null ? pct(r.top) : '–'}</td>
     <td class="c-trig" data-l="Triggered today → landing page">${trigCell(r)}</td>
-    <td class="c-kw" data-l="Triggered by keyword">${kwCell(r)}</td>
     <td class="c-best" data-l="Best current page">${bestCell(r)}</td>
     <td class="c-new" data-l="Recommended new page">${newCell(r)}</td>
     <td class="c-act" data-l="Recommended action">${actCell(r)}</td></tr>`;
@@ -411,26 +443,27 @@ details.ana .box b:first-child{margin-top:0}
       `<div class="ax"><span>${mLabel(sr.xs[0])}</span><span>max ${fmt(hi)}</span><span>${mLabel(sr.xs[sr.xs.length - 1])}</span></div>`;
   }
   const rate = (a, b) => b ? a / b : null;
-  function analysis(r, adId, kw) {
-    const a = DB.ads[adId], at = a.total, pr = pairOf(adId, kw), s = [];
+  function analysis(r, adId, kws) {
+    const a = DB.ads[adId], at = a.total, pr = aggPair(adId, kws), s = [];
     const pgPath = path(a.url);
     const bestPg = P[r.best], bestLive = r.liveBest ? path(P[r.liveBest].url) : null;
     if (pr) {
       const t = pr.total;
-      const sib = agAdsOf(r).filter(i => i !== adId).map(i => ({ i, p: pairOf(i, kw) })).filter(x => x.p && x.p.total.impr >= 50);
+      const sib = agAdsOf(r).filter(i => i !== adId).map(i => ({ i, p: aggPair(i, kws) })).filter(x => x.p && x.p.total.impr >= 50);
       const kwTot = t.impr + sib.reduce((q, x) => q + x.p.total.impr, 0);
-      s.push(`For the keyword "${kw.text}" (${kw.match.toLowerCase()} match), this ad has taken ${t.impr.toLocaleString('en-US')} impressions over its life, ${Math.round(t.impr / Math.max(kwTot, 1) * 100)}% of what the ad group showed on that keyword.`);
+      const one = kws.length === 1;
+      s.push(`On ${kwName(kws)}, this ad has taken ${t.impr.toLocaleString('en-US')} impressions over its life, ${Math.round(t.impr / Math.max(kwTot, 1) * 100)}% of what the ad group showed on ${one ? 'that keyword' : 'them'}.`);
       const ctr = rate(t.clicks, t.impr), actr = rate(at.clicks, at.impr);
-      if (t.impr >= 50 && ctr != null) s.push(`Its CTR on this keyword is ${pct(ctr)}, ${(ctr / BM.ctr).toFixed(1)}× the ${bmp(BM.ctr)} legal benchmark and ${ctr >= actr ? 'above' : 'below'} the ad's own average of ${pct(actr)}.`);
-      else s.push(`Volume on this keyword is too small (${t.impr} impressions) to judge its CTR.`);
+      if (t.impr >= 50 && ctr != null) s.push(`Its CTR there is ${pct(ctr)}, ${(ctr / BM.ctr).toFixed(1)}× the ${bmp(BM.ctr)} legal benchmark and ${ctr >= actr ? 'above' : 'below'} the ad's own average of ${pct(actr)}.`);
+      else s.push(`Volume there is too small (${t.impr} impressions) to judge its CTR.`);
       if (t.conv >= 1) {
         const cpa = t.cost / t.conv;
         s.push(`It produced ${t.conv.toFixed(1)} conversions at ${usd(cpa)} each, ${cpa <= BM.cpl ? 'better' : 'worse'} than the ${usd2(BM.cpl)} industry cost per lead${at.conv ? ` (the ad overall: ${usd(at.cost / at.conv)})` : ''}.`);
-      } else if (t.clicks >= 5) s.push(`It has ${t.clicks} clicks and ${usd(t.cost)} spent on this keyword with no conversions.`);
+      } else if (t.clicks >= 5) s.push(`It has ${t.clicks} clicks and ${usd(t.cost)} spent there with no conversions.`);
       const best = sib.sort((x, y) => y.p.total.impr - x.p.total.impr)[0];
       if (best && t.impr >= 50) {
         const bc = rate(best.p.total.clicks, best.p.total.impr), bcpa = best.p.total.conv ? best.p.total.cost / best.p.total.conv : null, mcpa = t.conv ? t.cost / t.conv : null;
-        s.push(`Against ad ${best.i} on the same keyword it has ${ctr >= bc ? 'the higher' : 'the lower'} CTR (${pct(ctr)} vs ${pct(bc)})` +
+        s.push(`Against ad ${best.i} on the same keyword${one ? '' : 's'} it has ${ctr >= bc ? 'the higher' : 'the lower'} CTR (${pct(ctr)} vs ${pct(bc)})` +
           (mcpa && bcpa ? ` and ${mcpa <= bcpa ? 'the cheaper' : 'the more expensive'} conversion (${usd(mcpa)} vs ${usd(bcpa)}).` : '.'));
       }
       const sr = series(pr.monthly, false).rows.filter(Boolean);
@@ -456,14 +489,15 @@ details.ana .box b:first-child{margin-top:0}
     return s.join(' ');
   }
   let drCtx = null, lastFocus = null;
-  function openDrawer(rowKey, adId, kwIdx) {
+  function openDrawer(rowKey, adId, tab) {
     const r = byKey.get(rowKey), a = DB.ads[adId];
     if (!r || !a) return;
     if (!drCtx) lastFocus = document.activeElement;
-    const kws = (r.keywords || []).filter(k => pairOf(adId, k));
-    const kw = kws.length ? kws[Math.min(kwIdx || 0, kws.length - 1)] : null;
+    const base = activeKws(r).filter(k => pairOf(adId, k));
+    const t = tab == null || tab === 'c' || base.length < 2 ? 'c' : Math.min(Number(tab), base.length - 1);
+    const kws = t === 'c' ? base : [base[t]];
     drCtx = { rowKey, adId };
-    const pr = pairOf(adId, kw);
+    const pr = aggPair(adId, kws);
     $('dr-title').textContent = `Ad ${adId}`;
     $('dr-sub').innerHTML = `<span class="pill st-${a.status}">${stLabel(a.status)}</span> ${esc(a.campaign)} › ${esc(a.adgroup)}` +
       (a.strength ? ` · ad strength ${esc(a.strength.toLowerCase())}` : '') +
@@ -477,14 +511,17 @@ details.ana .box b:first-child{margin-top:0}
       return `<div class="mtile"><small>${label}</small><b>${v == null ? '–' : fmt(v)}</b>` +
         (pr ? `<div class="cmp">Ad overall: ${av == null ? '–' : fmt(av)}</div>` : '') + chart(src, fn, ref, fmt) + '</div>';
     }).join('');
-    const tabs = kws.length > 1 ? `<div class="sec">Keyword</div><div class="kwtabs">${kws.map((k, i) =>
-      `<button class="kwtab" data-kw="${i}" aria-pressed="${k === kw}">${esc(k.text)} <span class="kwm">${esc(k.match.toLowerCase())}</span></button>`).join('')}</div>` : '';
-    const scopeLine = pr ? `Metrics for <b>this ad on "${esc(kw.text)}"</b> (${esc(kw.match.toLowerCase())} match), all time.` : `Metrics for <b>the ad overall</b>, all time.`;
-    const chartLine = useKw ? `Charts: this ad on this keyword, by month; months under ${DB.monthlyFloor} impressions are gaps.` :
-      pr ? `Charts: the ad overall by month, because this keyword has too little monthly volume for its own trend.` : `Charts: the ad by month.`;
+    const sel = selOf(r).size;
+    const tabs = base.length > 1 ? `<div class="sec">Keyword</div><div class="kwtabs">` +
+      `<button class="kwtab" data-kw="c" aria-pressed="${t === 'c'}">${sel ? 'Selected' : 'All'} (${base.length}) combined</button>` +
+      base.map((k, i) => `<button class="kwtab" data-kw="${i}" aria-pressed="${t === i}">${esc(k.text)} <span class="kwm">${esc(k.match.toLowerCase())}</span></button>`).join('') + '</div>' : '';
+    const kwLbl = kws.length === 1 ? `"${esc(kws[0].text)}" (${esc(kws[0].match.toLowerCase())} match)` : `${kws.length} keywords combined`;
+    const scopeLine = pr ? `Metrics for <b>this ad on ${kwLbl}</b>, all time. Google reports ads by keyword, not by search term, so these cover every search the keyword matched.` : `Metrics for <b>the ad overall</b>, all time.`;
+    const chartLine = useKw ? `Charts: this ad on ${kws.length === 1 ? 'this keyword' : 'these keywords'}, by month; months under ${DB.monthlyFloor} impressions per keyword are left out.` :
+      pr ? `Charts: the ad overall by month, because ${kws.length === 1 ? 'this keyword has' : 'these keywords have'} too little monthly volume for their own trend.` : `Charts: the ad by month.`;
     $('dr-body').innerHTML =
       `<div class="sec">Search term</div><div><b>${esc(r.term)}</b> <span class="small">${r.scope === 'history' ? 'history' : 'active, 90 days'} · ${esc(r.intentLabel)}</span></div>` + tabs +
-      `<div class="sec">Analysis</div><p class="ana-p">${esc(analysis(r, adId, kw))}</p>` +
+      `<div class="sec">Analysis</div><p class="ana-p">${esc(analysis(r, adId, kws))}</p>` +
       `<div class="sec">Performance</div><div class="small" style="margin:0 0 8px">${scopeLine} ${chartLine} Dashed line: benchmark (CTR ${bmp(BM.ctr)}, cost per lead ${usd2(BM.cpl)}).</div><div class="mgrid">${tiles}</div>` +
       `<div class="sec">Headlines</div><ol class="copyl">${a.headlines.map(h => `<li>${esc(h.t)}${h.pin ? `<span class="pin">${esc(h.pin.replace('HEADLINE_', 'pinned '))}</span>` : ''}</li>`).join('') || '<li>–</li>'}</ol>` +
       `<div class="sec">Descriptions</div><ol class="copyl">${a.descriptions.map(h => `<li>${esc(h.t)}</li>`).join('') || '<li>–</li>'}</ol>` +
@@ -542,12 +579,22 @@ details.ana .box b:first-child{margin-top:0}
   });
   ['scope', 'q', 'debt', 'camp', 'int', 'ver', 'act', 'grp'].forEach(id => $(id).addEventListener('input', render));
   document.querySelector('#tbl tbody').addEventListener('click', e => {
+    const k = e.target.closest('.kwsel, .kwclr');
+    if (k) {
+      const set = new Set(selKw.get(k.dataset.row) || []);
+      if (k.classList.contains('kwclr')) set.clear(); else { const i = Number(k.dataset.i); set.has(i) ? set.delete(i) : set.add(i); }
+      set.size ? selKw.set(k.dataset.row, set) : selKw.delete(k.dataset.row);
+      const tr = k.closest('tr'), r = byKey.get(k.dataset.row);
+      tr.querySelector('.c-kw').innerHTML = kwCell(r); tr.querySelector('.c-trig').innerHTML = trigCell(r);
+      const f = tr.querySelector(`.kwsel[data-i="${k.dataset.i}"]`) || tr.querySelector('.kwsel'); if (f) f.focus();
+      return;
+    }
     const b = e.target.closest('.adbtn'); if (!b) return;
-    openDrawer(b.dataset.row, b.dataset.ad, 0);
+    openDrawer(b.dataset.row, b.dataset.ad, 'c');
   });
   $('dr-body').addEventListener('click', e => {
     const t = e.target.closest('.kwtab'); if (!t || !drCtx) return;
-    openDrawer(drCtx.rowKey, drCtx.adId, Number(t.dataset.kw));
+    openDrawer(drCtx.rowKey, drCtx.adId, t.dataset.kw);
   });
   $('dr-close').addEventListener('click', closeDrawer);
   $('scrim').addEventListener('click', closeDrawer);
