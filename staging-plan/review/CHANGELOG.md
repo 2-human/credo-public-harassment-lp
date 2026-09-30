@@ -634,6 +634,26 @@ Not a board row: tracked as decision D13. Listed here because it changed the sit
 **Evidence / review**
 - Code GPT approve with fixes; UX GPT approve with fixes; Gemini pending. [PBI-29.md](PBI-29.md), [PBI-29.triage.md](PBI-29.triage.md).
 
+## PBI-30 · Badges after the first interaction; two site scripts inline (30 Sep)
+
+**What changed**
+- The Trustpilot widgets and the BBB seals load on the visitor's first scroll, tap, click or key press, or 5 s after
+  the page has loaded (their boxes are reserved). First load without interaction: 88 → 47 requests.
+- Webflow's two registered site scripts (FormSubmitDataLayer, RemoveStateOptions) run inline from the site footer.
+
+**Where in Webflow**
+- Site settings → Custom code → Footer code: the "PBI-30" loader and the two scripts' code at the end. **The inline
+  copies are now the source**: the registered scripts are still registered but not applied.
+- Site settings → registered scripts: FormSubmitDataLayer 1.0.0 and RemoveStateOptions 1.0.0 un-applied.
+- LP · Trust strip, Code Embed 8: Trustpilot `<script>` tag replaced by a comment. BBB seal embeds (Trust strip,
+  Rights and FAQ, home): `src` placeholder + `data-credo-src`.
+
+**Revert**
+- `2026-09-30-pbi30/` with REVERT.md (footer before/after, embed before/after).
+
+**Evidence / review**
+- Code GPT approve with fixes; Gemini pending. [PBI-30.md](PBI-30.md), [PBI-30.triage.md](PBI-30.triage.md).
+
 ## At a glance
 
 | ID | Title | Main Webflow location(s) | Status |
@@ -668,6 +688,7 @@ Not a board row: tracked as decision D13. Listed here because it changed the sit
 | PBI-24 | Close-out | Class Link 3 Copy (footer links) | close-out done; its domain-switch task waits on D16, D21 |
 | PBI-28 | Tidio after first interaction | Site head code (loader) | done |
 | PBI-29 | Logo images | Navbar, Footer-MJ, footer, Thank-you page, LP · Lead form, home; BBB embeds | done |
+| PBI-30 | Badges after interaction; scripts inline | Site footer code; Trust strip and BBB embeds; registered scripts un-applied | done |
 
 ## Open / not changed
 
