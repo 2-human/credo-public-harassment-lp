@@ -82,6 +82,15 @@ tr.sub td:first-child{border-left:3px solid var(--blue)}
 .adopen{border:0;background:none;padding:0;color:var(--blue);font:600 12px system-ui,sans-serif;cursor:pointer;text-decoration:underline}
 .est{font-size:10px;color:var(--mute);font-weight:600}
 .kwsum{font-size:11.5px;color:var(--mute);margin:0 0 5px}
+.sublbl{font:700 10px/1.4 system-ui,sans-serif;text-transform:uppercase;letter-spacing:.05em;color:var(--mute)}
+tr.pg td{border-top:0}
+tr.pg td:first-child .subad{padding-left:30px}
+tr.rec td{background:#f3f8f4}
+tr.rec td:first-child{border-left:3px solid var(--ok)}
+.recad .hl{display:block;color:#1a0dab;font-weight:600;font-size:11.5px}
+.recad .ds{display:block;font-size:11.5px;color:#2c323a;margin-top:3px}
+.adids{margin-top:5px;font-size:11.5px}
+.adids div{white-space:nowrap}
 .adscope{font-size:11px;color:var(--mute);margin:0 0 5px}
 .kwm{display:inline-block;font:600 10px/1.6 ui-monospace,Menlo,monospace;border:1px solid var(--line);border-radius:4px;padding:0 4px;color:var(--mute);margin-left:3px}
 .paused{background:#8a6d3b}
@@ -126,6 +135,19 @@ details.ana .box b:first-child{margin-top:0}
 .copyl{font-size:12.5px;margin:0;padding-left:18px}
 .copyl li{margin:0 0 3px}
 .copyl .pin{font-size:10px;color:var(--mute);border:1px solid var(--line);border-radius:4px;padding:0 4px;margin-left:4px}
+.atab{width:100%;border-collapse:collapse;font-size:12px;background:#fff;border:1px solid var(--line);border-radius:8px}
+.atab th,.atab td{padding:5px 7px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.atab th{font:700 10px system-ui,sans-serif;text-transform:uppercase;letter-spacing:.04em;color:var(--mute)}
+.atab td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.atab tr.hi td:first-child{box-shadow:inset 3px 0 0 var(--ok)}
+.atab tr.lo td:first-child{box-shadow:inset 3px 0 0 var(--red)}
+.atab .pin{font-size:10px;color:var(--mute);border:1px solid var(--line);border-radius:4px;padding:0 4px;margin-left:4px}
+.gad{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:0 0 8px}
+.gad .sp{font:600 11px system-ui,sans-serif;color:#202124}
+.gad .url{font-size:11.5px;color:#4d5156}
+.gad .h{font-size:16px;line-height:1.3;color:#1a0dab;margin:2px 0}
+.gad .d{font-size:12.5px;color:#4d5156}
+.gad .meta{font-size:11px;color:var(--mute);margin-top:5px}
 .dnote{font-size:11.5px;color:var(--mute);margin-top:14px}
 @media (max-width:640px){.mgrid{grid-template-columns:1fr}}
 @media (max-width:900px){
@@ -191,7 +213,8 @@ details.ana .box b:first-child{margin-top:0}
         <th data-k="term">Search term</th>
         <th data-k="kw">Triggered by keyword <span class="small">(click to filter ads)</span></th>
         <th data-k="impr">Impr.</th><th data-k="clicks">Clicks</th><th data-k="ctr">CTR vs benchmark</th><th data-k="conv">Conv. / CPA</th><th data-k="top" class="grp-last">Top of page (30 d)</th>
-        <th data-k="dom">Ads (90 days) → landing pages</th>
+        <th data-k="dom">Ads (90 days)</th>
+        <th data-k="pages">Current pages</th>
         <th data-k="liveShare">Best current page</th>
         <th data-k="newp">Recommended new page</th>
         <th data-k="action">Recommended action</th>
@@ -374,17 +397,26 @@ details.ana .box b:first-child{margin-top:0}
   // Open = expand-all flag XOR a per-row toggle, so rows revealed later by a filter follow the flag.
   const toggled = new Set(); let expAll = false;
   const isOpen = key => expAll !== toggled.has(key);
+  const expBtn = (r, label) => `<button class="exp" data-row="${esc(r.key)}" aria-expanded="${isOpen(r.key)}"><span class="car">▸</span> ${label}</button>`;
   const trigCell = r => {
     const ids = agAdsOf(r);
     if (!ids.length) {
-      if (r.campaign.startsWith('PMax')) return '<span class="pill paused">Performance Max</span><div class="small">Asset groups, not ads: no ad-level data.</div>';
-      return r.current.map(c => `<div class="ad">${c.share}% → ${link(P[c.page].url, path(P[c.page].url))}</div>`).join('') || '<span class="small">–</span>';
+      if (r.campaign.startsWith('PMax')) return expBtn(r, '<span class="pill paused">Performance Max</span>') + '<div class="small">Asset groups, not ads: no ad-level data.</div>';
+      return expBtn(r, 'No ad data') + '<div class="small">This ad group has no ad-level data.</div>';
+    }
+    const sp = adSplit(r), tot = sp.reduce((q, x) => q + x.t.impr, 0) || 1;
+    return expBtn(r, `<b>${sp.length}</b> ad${sp.length === 1 ? '' : 's'}`) +
+      `<div class="adids">${sp.map(x => `<div><span class="pill st-${DB.ads[x.i].status}">${stLabel(DB.ads[x.i].status)}</span> ${x.i} <span class="small">${Math.round(x.t.impr / tot * 100)}%</span></div>`).join('')}</div>`;
+  };
+  const pagesCell = r => {
+    if (!agAdsOf(r).length) {
+      if (r.campaign.startsWith('PMax')) return '<span class="small">–</span>';
+      return r.current.map(c => `<div class="ad">${c.share}% → ${link(P[c.page].url, pagePath(P[c.page].url))}</div>`).join('') || '<span class="small">–</span>';
     }
     const sp = adSplit(r), pg = new Map();
     sp.forEach(x => { const u = pagePath(DB.ads[x.i].url) || '–'; pg.set(u, (pg.get(u) || 0) + x.t.impr); });
     const pgs = [...pg.entries()].sort((a, b) => b[1] - a[1]), tot = sp.reduce((q, x) => q + x.t.impr, 0) || 1;
-    return `<button class="exp" data-row="${esc(r.key)}" aria-expanded="${isOpen(r.key)}"><span class="car">▸</span> <b>${sp.length}</b> ad${sp.length === 1 ? '' : 's'} · <b>${pgs.length}</b> page${pgs.length === 1 ? '' : 's'}</button>` +
-      `<div class="pglist">${pgs.map(([u, v]) => `<div>${esc(u)} <span class="small">${Math.round(v / tot * 100)}%</span></div>`).join('')}</div>`;
+    return `<b>${pgs.length}</b> page${pgs.length === 1 ? '' : 's'}<div class="pglist">${pgs.map(([u, v]) => `<div>${esc(u)} <span class="small">${Math.round(v / tot * 100)}%</span></div>`).join('')}</div>`;
   };
   const kwCell = r => {
     if (!r.keywords || !r.keywords.length) return '<span class="small">–</span>';
@@ -423,32 +455,78 @@ details.ana .box b:first-child{margin-top:0}
     <td data-l="CTR vs benchmark">${ctrCell(r, m)}</td>
     <td class="num" data-l="Conversions / CPA">${m.conv.toFixed(1)}<br><span class="small">${cpa ? usd(cpa) : '–'}</span></td>
     <td class="num" data-l="Top of page">${r.top != null ? pct(r.top) : '–'}</td>
-    <td class="c-trig" data-l="Ads → landing pages">${trigCell(r)}</td>
+    <td class="c-trig" data-l="Ads (90 days)">${trigCell(r)}</td>
+    <td class="c-pages" data-l="Current pages">${pagesCell(r)}</td>
     <td class="c-best" data-l="Best current page">${bestCell(r)}</td>
     <td class="c-new" data-l="Recommended new page">${newCell(r)}</td>
     <td class="c-act" data-l="Recommended action">${actCell(r)}</td></tr>`;
   };
   const M3 = { EXACT: 'exact', PHRASE: 'phrase', BROAD: 'broad' };
-  const subHtml = r => {
+  const E12 = n => '<td></td>'.repeat(n);
+  const adRows = r => {
     const sp = adSplit(r), k = esc(r.key);
-    if (!sp.length) return `<tr class="sub" data-parent="${k}"><td colspan="11"><span class="small">No ad served on ${selOf(r).size ? 'the selected keywords' : 'this term'} in the last 90 days.</span></td></tr>`;
+    if (!agAdsOf(r).length) return '';
+    if (!sp.length) return `<tr class="sub" data-parent="${k}"><td colspan="12"><span class="small">No ad served on ${selOf(r).size ? 'the selected keywords' : 'this term'} in the last 90 days.</span></td></tr>`;
     const bestPath = r.liveBest ? pagePath(P[r.liveBest].url) : null;
     return sp.map(({ i, t }) => {
-      const a = DB.ads[i], u = pagePath(a.url), cpa = t.conv >= 0.05 ? t.cost / t.conv : null;
-      const ctr = t.impr ? t.clicks / t.impr : 0;
+      const a = DB.ads[i], u = pagePath(a.url), cpa = t.conv >= 0.05 ? t.cost / t.conv : null, ctr = t.impr ? t.clicks / t.impr : 0;
       return `<tr class="sub" data-parent="${k}">
-      <td data-l="Ad"><div class="subad"><span class="pill st-${a.status}">${stLabel(a.status)}</span> Ad ${i} <span class="est">EST.</span>${a.headlines.length ? `<span class="hl">${a.headlines.slice(0, 2).map(h => esc(h.t)).join(' | ')}</span>` : ''}</div></td>
+      <td data-l="Ad"><div class="subad"><span class="pill st-${a.status}">${stLabel(a.status)}</span> <b>Ad ${i}</b> <span class="est">EST.</span></div></td>
       <td data-l="Served on">${t.kws.length ? t.kws.map(q => `${esc(q.text)}<span class="kwm">${M3[q.match] || esc(q.match.toLowerCase())}</span>`).join('<br>') : '<span class="small">ad group share</span>'}</td>
       <td class="num" data-l="Impressions (est.)">≈${Math.round(t.impr).toLocaleString('en-US')}</td>
       <td class="num" data-l="Clicks (est.)">≈${Math.round(t.clicks)}</td>
       <td data-l="CTR (est.)"><b class="num">${pct(ctr)}</b>${r.brand ? '' : ` <span class="small">${(ctr / BM.ctr).toFixed(1)}×</span>`}</td>
       <td class="num" data-l="Conversions / CPA (est.)">≈${t.conv.toFixed(1)}<br><span class="small">${cpa ? usd(cpa) : '–'}</span></td>
       <td class="num" data-l="Top of page">–</td>
-      <td data-l="Landing page">${a.url ? link(a.url, u) : '<span class="small">–</span>'}<div><button class="adopen" data-ad="${i}" data-row="${k}">Ad analysis ›</button></div></td>
+      <td data-l="Ad">${a.headlines.length ? `<span class="hl" style="color:#1a0dab;font-weight:600;font-size:11.5px">${a.headlines.slice(0, 2).map(h => esc(h.t)).join(' | ')}</span>` : ''}<div><button class="adopen" data-ad="${i}" data-row="${k}">Ad analysis ›</button></div></td>
+      ${E12(4)}</tr>
+      <tr class="sub pg" data-parent="${k}">
+      <td data-l="Page"><div class="subad"><span class="sublbl">Page of ad ${i}</span></div></td>${E12(7)}
+      <td data-l="Current page">${a.url ? link(a.url, u) : '<span class="small">–</span>'}</td>
       <td data-l="Page fit">${!u || !bestPath ? '' : u === bestPath ? '<span class="pill live">Best page</span>' : `<span class="small">Not the best page (${esc(bestPath)})</span>`}</td>
-      <td></td><td></td></tr>`;
+      ${E12(2)}</tr>`;
     }).join('');
   };
+  // Recommendations follow each keyword's own intent; keywords that share one share a recommendation.
+  const recGroups = r => {
+    const kws = activeKws(r), fi = $('int').value;
+    let g;
+    if (kws.length) {
+      const m = new Map();
+      kws.forEach(k => { const o = m.get(k.intent) || { intent: k.intent, kws: [], impr: 0 }; o.kws.push(k); o.impr += k.impr; m.set(k.intent, o); });
+      g = [...m.values()].sort((a, b) => b.impr - a.impr);
+    } else g = [{ intent: r.intent, kws: [], impr: r.impr }];
+    return fi ? g.filter(x => x.intent === fi) : g;
+  };
+  const recRows = r => {
+    const k = esc(r.key);
+    return recGroups(r).map(({ intent, kws }) => {
+      const it = I[intent], pid = it.page, pg = P[pid];
+      const own = r.f && r.f.ad && intent === r.intent;
+      const ad = own ? { h: r.f.ad.h, d: [r.f.ad.d] } : it.ad;
+      const adHtml = ad ? `<div class="recad">${ad.h.map(h => `<span class="hl">${esc(h)}</span>`).join('')}${ad.d.map(d => `<span class="ds">${esc(d)}</span>`).join('')}` +
+        `<div class="small" style="margin-top:3px">${own ? 'Written for this search term.' : 'Intent ad, shared by every term and keyword with this intent.'}${ad.note ? ' ' + esc(ad.note) : ''}</div></div>` :
+        `<span class="small">${esc(it.noAd)}</span>`;
+      const kwList = kws.length ? kws.map(q => `${esc(q.text)}<span class="kwm">${M3[q.match] || esc(q.match.toLowerCase())}</span>`).join('<br>') : '<span class="small">the search term</span>';
+      let best = '', neu = '';
+      if (pg.kind === 'none') best = '<span class="pill none">None</span><div class="txt">Not a Credo search: add as a negative.</div>';
+      else if (pg.kind === 'new') {
+        const il = P[pg.interim], n = window.NEW_PAGES[pg.newKey];
+        best = il ? `<span class="pill live">Live</span> ${link(il.url, pagePath(il.url))}<div class="small">Until the new page is built</div>` : '';
+        neu = n ? `<span class="pill new">New</span> <b>${esc(n.name)}</b><div class="small">${esc(n.slug)}</div><div class="txt"><a href="${esc(n.hub)}" target="_blank" rel="noopener">LP hub</a> · <a href="${esc(n.file)}" target="_blank" rel="noopener">Preview</a></div>` : '';
+      } else best = `<span class="pill live">${pg.kind === 'brand' ? 'Brand' : 'Live'}</span> ${link(pg.url, pagePath(pg.url))}<div class="small">${esc(pg.label)}</div>`;
+      return `<tr class="sub rec" data-parent="${k}">
+      <td data-l="Recommended ad"><div class="subad"><span class="sublbl">Recommended ad</span><div class="small">${esc(it.label)}</div></div></td>
+      <td data-l="For keywords">${kwList}</td>${E12(5)}
+      <td data-l="Recommended ad copy">${adHtml}</td>${E12(4)}</tr>
+      <tr class="sub rec pg" data-parent="${k}">
+      <td data-l="Recommended page"><div class="subad"><span class="sublbl">Recommended page</span></div></td>${E12(8)}
+      <td data-l="Best current page">${best}</td>
+      <td data-l="Recommended new page">${neu || '<span class="small">–</span>'}</td>
+      <td></td></tr>`;
+    }).join('');
+  };
+  const subHtml = r => adRows(r) + recRows(r);
   const rowHtml = r => topHtml(r) + (isOpen(r.key) ? subHtml(r) : '');
   function refreshRow(key) {
     const tr = [...document.querySelectorAll('#tbl tbody tr.top')].find(t => t.dataset.key === key); if (!tr) return;
@@ -469,7 +547,7 @@ details.ana .box b:first-child{margin-top:0}
              pg.kind === 'none' ? 'Best page: <b>none (negatives)</b>' : `Best page: <b>${esc(path(pg.url))}</b>`;
     }
     const bar = on == null ? '' : `<span class="bar" style="display:inline-block;margin:0;vertical-align:middle"><i style="width:${on * 100}%;background:${on >= .5 ? 'var(--ok)' : 'var(--red)'}"></i></span>`;
-    return `<tr class="gh"><td colspan="11"><div class="gl">${esc(label)}</div>${why ? `<div class="gw">${esc(why)}</div>` : ''}
+    return `<tr class="gh"><td colspan="12"><div class="gl">${esc(label)}</div>${why ? `<div class="gw">${esc(why)}</div>` : ''}
       <div class="gs">${page ? `<span>${page}</span>` : ''}<span><b>${terms}</b> terms</span><span><b>${impr.toLocaleString('en-US')}</b> impr.</span><span><b>${conv.toFixed(1)}</b> conv.</span>
       ${on == null ? '' : `<span>On the best page today: <b>${pct(on)}</b> ${bar}</span>`}</div></td></tr>`;
   };
@@ -558,6 +636,40 @@ details.ana .box b:first-child{margin-top:0}
     if (a.status !== 'ENABLED') s.push(`The ad is ${a.status.toLowerCase()} today.`);
     return s.join(' ');
   }
+  // Per-headline/description performance (all time). A click counts toward every line on show, so rows overlap.
+  function assetSection(a) {
+    if (!a.assets || !a.assets.length) return '';
+    const tbl = f => {
+      const L = a.assets.filter(x => x.f === f).sort((x, y) => (y.m ? y.m[0] : -1) - (x.m ? x.m[0] : -1));
+      const q = L.filter(x => x.m && x.m[0] >= 500).map(x => x.m[1] / x.m[0]);
+      const hi = q.length >= 3 ? Math.max(...q) : null, lo = q.length >= 3 ? Math.min(...q) : null;
+      return `<table class="atab"><thead><tr><th>${f === 'H' ? 'Headline' : 'Description'}</th><th class="n">Impr.</th><th class="n">CTR</th><th class="n">Conv.</th><th class="n">CPA</th></tr></thead><tbody>` +
+        L.map(x => {
+          const m = x.m, ctr = m && m[0] ? m[1] / m[0] : null;
+          const cls = m && m[0] >= 500 && ctr === hi ? 'hi' : m && m[0] >= 500 && ctr === lo ? 'lo' : '';
+          return `<tr class="${cls}"><td>${esc(x.t)}${x.pin ? `<span class="pin">${esc(x.pin.replace('HEADLINE_', 'pinned ').replace('DESCRIPTION_', 'pinned '))}</span>` : ''}</td>` +
+            (m ? `<td class="n">${m[0].toLocaleString('en-US')}</td><td class="n">${pct(ctr)}</td><td class="n">${m[3].toFixed(1)}</td><td class="n">${m[3] >= 0.5 ? usd(m[2] / m[3]) : '–'}</td>` :
+              '<td class="n" colspan="4"><span class="small">≤10 impressions</span></td>') + '</tr>';
+        }).join('') + '</tbody></table>';
+    };
+    return `<div class="sec">Headlines and descriptions (all time)</div><div class="small" style="margin:0 0 6px">Each line's own numbers. One click counts toward every headline and description that was showing, so rows overlap and do not add up to the ad. Green = highest CTR, red = lowest (lines with 500+ impressions).</div>` +
+      tbl('H') + '<div style="height:8px"></div>' + tbl('D');
+  }
+  // Most-served combinations (last 90 days). Google reports impressions only, not clicks, for combinations.
+  function comboSection(a) {
+    const T = Object.fromEntries((a.assets || []).map(x => [x.id, x.t]));
+    const host = a.url ? short(a.url).split('/')[0] : 'start.credolegal.com', p = a.url ? pagePath(a.url).split('/').filter(Boolean).slice(0, 2).join(' › ') : '';
+    const body = !a.combos || !a.combos.length ? `<div class="small">No combination reached 10 impressions in the last 90 days${a.status === 'ENABLED' ? '' : ' (the ad is ' + a.status.toLowerCase() + ')'}.</div>` :
+      a.combos.map((c, i) => {
+        const hs = c.a.filter(x => x[1].startsWith('HEADLINE')).sort((x, y) => x[1].localeCompare(y[1])).map(x => T[x[0]] || '(headline)');
+        const ds = c.a.filter(x => x[1].startsWith('DESCRIPTION')).sort((x, y) => x[1].localeCompare(y[1])).map(x => T[x[0]] || '(description)');
+        const ext = c.a.map(x => x[1]).filter(f => !/^(HEADLINE|DESCRIPTION)/.test(f)).map(f => f.toLowerCase().replace(/_/g, ' '));
+        return `<div class="gad"><div class="sp">Sponsored</div><div class="url">${esc(host)}${p ? ' › ' + esc(p) : ''}</div>` +
+          `<div class="h">${hs.map(esc).join(' | ')}</div><div class="d">${ds.map(esc).join(' ')}</div>` +
+          `<div class="meta">#${i + 1} · ${c.impr.toLocaleString('en-US')} impressions${ext.length ? ' · also showed: ' + esc(ext.join(', ')) : ''}</div></div>`;
+      }).join('');
+    return `<div class="sec">Most-served combinations (last 90 days)</div><div class="small" style="margin:0 0 6px">What searchers actually saw, most frequent first. Google reports impressions only for combinations, so which one was clicked is not available.</div>` + body;
+  }
   let drCtx = null, lastFocus = null;
   function openDrawer(rowKey, adId, tab) {
     const r = byKey.get(rowKey), a = DB.ads[adId];
@@ -593,9 +705,8 @@ details.ana .box b:first-child{margin-top:0}
       `<div class="sec">Search term</div><div><b>${esc(r.term)}</b> <span class="small">${r.scope === 'history' ? 'history' : 'active, 90 days'} · ${esc(r.intentLabel)}</span></div>` + tabs +
       `<div class="sec">Analysis</div><p class="ana-p">${esc(analysis(r, adId, kws))}</p>` +
       `<div class="sec">Performance</div><div class="small" style="margin:0 0 8px">${scopeLine} ${chartLine} Dashed line: benchmark (CTR ${bmp(BM.ctr)}, cost per lead ${usd2(BM.cpl)}).</div><div class="mgrid">${tiles}</div>` +
-      `<div class="sec">Headlines</div><ol class="copyl">${a.headlines.map(h => `<li>${esc(h.t)}${h.pin ? `<span class="pin">${esc(h.pin.replace('HEADLINE_', 'pinned '))}</span>` : ''}</li>`).join('') || '<li>–</li>'}</ol>` +
-      `<div class="sec">Descriptions</div><ol class="copyl">${a.descriptions.map(h => `<li>${esc(h.t)}</li>`).join('') || '<li>–</li>'}</ol>` +
-      `<div class="dnote">${esc(DB.source)} ${esc(DB.kwSource)} The analysis paragraph is generated from these numbers.</div>`;
+      assetSection(a) + comboSection(a) +
+      `<div class="dnote">${esc(DB.source)} ${esc(DB.kwSource)} The analysis paragraph is generated from these numbers. ${esc(DB.assetSource)} ${esc(DB.comboSource)}</div>`;
     $('scrim').classList.add('on');
     const d = $('drawer'); d.classList.add('on'); d.setAttribute('aria-hidden', 'false');
     $('dr-body').scrollTop = 0; $('dr-close').focus();
@@ -623,7 +734,7 @@ details.ana .box b:first-child{margin-top:0}
     grp = $('grp').value;
     const sc = $('scope').value;
     if (chip === 'ideas' && sc === 'active') { $('scope').value = 'history'; return render(); }
-    const list = rows.filter(r => (sc === 'both' || r.scope === sc) && chipOk(r) && (!q || r.term.includes(q)) && Object.entries(f).every(([k, v]) => !v || r[k] === v))
+    const list = rows.filter(r => (sc === 'both' || r.scope === sc) && chipOk(r) && (!q || r.term.includes(q)) && Object.entries(f).every(([k, v]) => !v || r[k] === v || (k === 'intent' && (r.keywords || []).some(q => q.intent === v))))
       .sort((a, b) => { const x = val(a, sortK), y = val(b, sortK); return (typeof x === 'string' ? String(x).localeCompare(String(y)) : (x ?? -1) - (y ?? -1)) * dir; });
     let html = '';
     if (grp) {
@@ -693,6 +804,7 @@ details.ana .box b:first-child{margin-top:0}
     `Conversion flags use the account's own cost per conversion (${usd(acctCpa)}). Conversions are Google Ads conversions as configured (fractional values mean data-driven attribution), not verified leads.`,
     'Recommended ad copy (under "Analysis and recommended ad") follows brand/voice.md and RSA limits (headlines ≤ 30 characters, descriptions ≤ 90; {LOCATION(State):Your State} is Google\'s location insertion). It is draft copy for attorney review. New pages are drafts too: attorney review and a Webflow build come before any ad points to them. Any landing page that carries an ad needs the NY attorney-advertising snippet.',
     `Ad subrows (marked EST.) are estimates. Google reports ads by keyword, not by search term, so each keyword's slice of the search term is split across the ads that served on that keyword, in proportion to each ad's own 90-day numbers there (${esc(DB.period90)}): clicks by click share, conversions by conversion share, and so on. The subrows add up to the top row. History rows have no keyword split and use each ad's lifetime share of its ad group. The ad analysis drawer shows the exact, all-time ad × keyword numbers.`,
+    'Recommendation subrows (green) follow each triggering keyword\'s own intent, so a term with several keywords can get several recommendations; selecting keywords or an intent in the filter narrows them. The recommended ad is one draft RSA per intent (scripts/google-ads/intent_ads.py, headlines ≤ 30 and descriptions ≤ 90 characters, checked at build), except where a term has its own hand-written ad. All recommended copy is a draft for attorney review. The intent filter matches a row when the term or any of its keywords has that intent.',
     'Data: content/campaigns/google-ads/search-terms/2026-09-30-active-90d.json + 2026-09-30-history.json → scripts/google-ads/build-search-terms.py (mapping rules in search_term_intents.py) → terms-data.js. Analysis: featured.js (hand-authored, 30-day window).'
   ].map(x => `<li>${x}</li>`).join('');
 })();

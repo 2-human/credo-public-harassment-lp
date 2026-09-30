@@ -229,235 +229,719 @@ window.TERMS = {
    "label": "Brand",
    "page": "BRAND",
    "why": "Navigational brand search.",
-   "debtType": "Brand"
+   "debtType": "Brand",
+   "ad": {
+    "h": [
+     "Credo Legal: Official Site",
+     "Consumer Debt Defense Lawyers",
+     "Sued Over a Debt?",
+     "Collector Calls? We Can Help",
+     "Free Consultation",
+     "Talk to Our Attorneys Today"
+    ],
+    "d": [
+     "Credo Legal defends consumers against debt lawsuits and collector harassment.",
+     "Tell us what happened. Our attorneys review your case in a free consultation."
+    ]
+   },
+   "noAd": "No ad: not Credo's business. Add as a negative."
   },
   "negative": {
    "label": "Not Credo: other",
    "page": "NEG",
    "why": "Competitor, lender or a product Credo does not sell.",
-   "debtType": "Not Credo"
+   "debtType": "Not Credo",
+   "ad": null,
+   "noAd": "No ad: not Credo's business. Add as a negative."
   },
   "cant_pay": {
    "label": "Sued, no money to pay",
    "page": "NCANT",
    "why": "Fear of consequences; wants to know what can be taken.",
-   "debtType": "Lawsuit"
+   "debtType": "Lawsuit",
+   "ad": {
+    "h": [
+     "Sued and Cannot Pay?",
+     "You Still Need to Answer",
+     "Some Income Is Protected",
+     "Answer Before the Deadline",
+     "Free Lawsuit Review",
+     "Talk to Our Attorneys"
+    ],
+    "d": [
+     "Having no money does not end the case. An answer keeps your defenses open.",
+     "We review the lawsuit, your deadline and what income is protected. Free consultation."
+    ]
+   },
+   "noAd": "No ad: not Credo's business. Add as a negative."
   },
   "garn_exempt": {
    "label": "Garnishment: exemptions, protected funds",
    "page": "GE",
    "why": "Asks about exemptions, benefits or bank funds; the exemptions page answers it directly.",
-   "debtType": "Garnishment"
+   "debtType": "Garnishment",
+   "ad": {
+    "h": [
+     "Garnished Benefits?",
+     "Some Funds Are Exempt",
+     "Bank Account Frozen?",
+     "Claim Your Exemptions",
+     "Protect Exempt Income",
+     "Free Garnishment Review"
+    ],
+    "d": [
+     "Social Security and some other benefits are generally protected from debt collectors.",
+     "We check which funds are exempt and file the claim of exemption. Free consultation."
+    ]
+   },
+   "noAd": "No ad: not Credo's business. Add as a negative."
   },
   "garn_active": {
    "label": "Garnishment: already taking pay",
    "page": "GA",
    "why": "Stage stated: money is already being taken or the order is in hand.",
-   "debtType": "Garnishment"
+   "debtType": "Garnishment",
+   "ad": {
+    "h": [
+     "Wages Being Garnished?",
+     "Options After Garnishment",
+     "Challenge the Judgment",
+     "Garnishment Attorneys",
+     "Act Before the Next Payday",
+     "Free Garnishment Review"
+    ],
+    "d": [
+     "Wage garnishment can often be challenged, reduced or stopped. We review your judgment.",
+     "Federal law caps most garnishments at 25% of disposable pay. We check yours for free."
+    ]
+   },
+   "noAd": "No ad: not Credo's business. Add as a negative."
   },
   "garn_prevent": {
    "label": "Garnishment: not started, can they?",
    "page": "GP",
    "why": "Asks whether or how a garnishment can happen; answered by 'judgment and notice first'.",
-   "debtType": "Garnishment"
+   "debtType": "Garnishment",
+   "ad": {
+    "h": [
+     "Can They Garnish My Wages?",
+     "Judgment Comes First",
+     "Sued Over a Debt?",
+     "Stop It Before It Starts",
+     "Answer the Lawsuit on Time",
+     "Free Lawsuit Review"
+    ],
+    "d": [
+     "Most creditors need a court judgment before garnishing pay. Answering the suit matters.",
+     "We review the lawsuit and your deadline so a default judgment does not happen."
+    ]
+   },
+   "noAd": "No ad: not Credo's business. Add as a negative."
   },
   "garn_lawyer": {
    "label": "Garnishment: wants a lawyer",
    "page": "GA",
    "why": "Attorney intent; the attorney page says who handles it and what they file.",
-   "debtType": "Garnishment"
+   "debtType": "Garnishment",
+   "ad": {
+    "h": [
+     "Wage Garnishment Attorney",
+     "Garnishment Lawyers",
+     "Challenge the Garnishment",
+     "Exemption Claims Filed",
+     "Free Garnishment Review",
+     "Talk to Our Attorneys"
+    ],
+    "d": [
+     "Our attorneys review the judgment, file exemption claims and negotiate with the creditor.",
+     "Tell us what is being taken and when it started. Free consultation, no obligation."
+    ]
+   },
+   "noAd": "No ad: not Credo's business. Add as a negative."
   },
   "garn_stop": {
    "label": "Garnishment: how to stop, stage not stated",
    "page": "NSTOP",
    "why": "'Stop' without a stage; the new page answers both stages.",
-   "debtType": "Garnishment"
+   "debtType": "Garnishment",
+   "ad": {
+    "h": [
+     "How to Stop Garnishment",
+     "Already Garnished or Not Yet?",
+     "Options at Every Stage",
+     "Exemptions and Challenges",
+     "Free Garnishment Review",
+     "Talk to Our Attorneys"
+    ],
+    "d": [
+     "Before a judgment, answer the lawsuit. After one, exemptions and challenges can reduce it.",
+     "We check your stage, your judgment and what is protected. Free consultation."
+    ]
+   },
+   "noAd": "No ad: not Credo's business. Add as a negative."
   },
   "garn_general": {
    "label": "Garnishment: head term",
    "page": "NSTOP",
    "why": "No stage and no action word; the new page gives the cap and both remedies.",
-   "debtType": "Garnishment"
+   "debtType": "Garnishment",
+   "ad": {
+    "h": [
+     "Wage Garnishment Help",
+     "Garnishment Limits by Law",
+     "Most Pay Capped at 25%",
+     "Exemptions May Apply",
+     "Free Garnishment Review",
+     "Talk to Our Attorneys"
+    ],
+    "d": [
+     "Federal law caps most wage garnishments at 25% of disposable pay. Some income is exempt.",
+     "We review your judgment and exemptions and explain your options. Free consultation."
+    ]
+   },
+   "noAd": "No ad: not Credo's business. Add as a negative."
   },
   "garn_definition": {
    "label": "Garnishment: definition search",
    "page": "NSTOP",
    "why": "Wants a definition; low buying intent. Page as fallback, bid down.",
-   "debtType": "Garnishment"
+   "debtType": "Garnishment",
+   "ad": {
+    "h": [
+     "What Is Wage Garnishment?",
+     "How Garnishment Works",
+     "Most Pay Capped at 25%",
+     "Some Income Is Exempt",
+     "Free Garnishment Review",
+     "Questions? Ask an Attorney"
+    ],
+    "d": [
+     "A court order lets a creditor take part of your pay. Federal law limits how much.",
+     "If a garnishment is coming or has started, our attorneys review your options for free."
+    ]
+   },
+   "noAd": "No ad: not Credo's business. Add as a negative."
   },
   "debt_buyer": {
    "label": "Sued by a named debt buyer or its law firm",
    "page": "NBUY",
    "why": "Names the plaintiff (debt buyer or collection law firm).",
-   "debtType": "Lawsuit"
+   "debtType": "Lawsuit",
+   "ad": {
+    "h": [
+     "Sued by a Debt Buyer?",
+     "Debt Buyers Must Prove It",
+     "They Must Show Ownership",
+     "Missing Records Matter",
+     "Answer Before the Deadline",
+     "Free Lawsuit Defense Review"
+    ],
+    "d": [
+     "Debt buyers must show they own your account and the amount is right. We demand that proof.",
+     "Answer deadlines can be short. Our attorneys review your summons in a free consultation."
+    ]
+   },
+   "noAd": "No ad: not Credo's business. Add as a negative."
   },
   "collector_name": {
    "label": "Collector named, not sued",
    "page": "HS",
    "why": "Looks up who is contacting them; the calls page answers 'who is this and can they do this'.",
-   "debtType": "Harassment"
+   "debtType": "Harassment",
+   "ad": {
+    "h": [
+     "Who Is Calling You?",
+     "Unknown Collector Calling?",
+     "Ask Them to Validate",
+     "Stop the Calls in Writing",
+     "Know Your Rights",
+     "Free Consultation"
+    ],
+    "d": [
+     "Collectors must identify themselves and verify the debt when you dispute it in writing.",
+     "We send the validation request and the cease letter for you. Free consultation."
+    ]
+   },
+   "noAd": "No ad: not Credo's business. Add as a negative."
   },
   "cc_dismiss": {
    "label": "Credit card lawsuit: get it dismissed",
    "page": "CCREC",
    "why": "Wants to win; the records page argues missing proof.",
-   "debtType": "Credit Card"
+   "debtType": "Credit Card",
+   "ad": {
+    "h": [
+     "Card Lawsuit? Ask for Proof",
+     "Card Debts Are Often Resold",
+     "Missing Records Matter",
+     "Grounds to Dismiss",
+     "Answer the Suit on Time",
+     "Free Lawsuit Defense Review"
+    ],
+    "d": [
+     "Card debts change hands and records get lost. Our attorneys demand the proof in court.",
+     "An answer filed on time keeps your defenses open. Free consultation."
+    ]
+   },
+   "noAd": "No ad: not Credo's business. Add as a negative."
   },
   "cc_lawsuit": {
    "label": "Credit card lawsuit: sued",
    "page": "CCR",
    "why": "Sued by a card issuer; deadline and answer.",
-   "debtType": "Credit Card"
+   "debtType": "Credit Card",
+   "ad": {
+    "h": [
+     "Sued by a Card Company?",
+     "Credit Card Lawsuit Defense",
+     "Answer Before the Deadline",
+     "Defenses May Apply",
+     "Free Lawsuit Review",
+     "Talk to Our Attorneys"
+    ],
+    "d": [
+     "A credit card lawsuit has a short answer deadline. We review your summons and deadline.",
+     "Missing records, wrong amounts and old debts are common defenses. Free consultation."
+    ]
+   },
+   "noAd": "No ad: not Credo's business. Add as a negative."
   },
   "cc_general": {
    "label": "Credit card debt: lawyer, not sued",
    "page": "CCC",
    "why": "No lawsuit stated; the challenge page fits someone not yet sued.",
-   "debtType": "Credit Card"
+   "debtType": "Credit Card",
+   "ad": {
+    "h": [
+     "Credit Card Debt Lawyer",
+     "Behind on Credit Cards?",
+     "Challenge Invalid Debts",
+     "Know Your Options",
+     "Free Debt Review",
+     "Talk to Our Attorneys"
+    ],
+    "d": [
+     "We check whether the balance is valid and what the collector can prove.",
+     "Validation disputes and negotiation, before any lawsuit. Free consultation."
+    ]
+   },
+   "noAd": "No ad: not Credo's business. Add as a negative."
   },
   "fdcpa_action": {
    "label": "FDCPA: violation, wants to act",
    "page": "FA",
    "why": "Wants to act on a violation or hire an FDCPA attorney.",
-   "debtType": "Harassment"
+   "debtType": "Harassment",
+   "ad": {
+    "h": [
+     "FDCPA Violation Attorney",
+     "Collector Broke the Law?",
+     "You May Be Owed Damages",
+     "Fees Paid If You Win",
+     "Free FDCPA Case Review",
+     "Talk to Our Attorneys"
+    ],
+    "d": [
+     "The FDCPA lets you sue a collector for violations. Winning cases recover attorney fees.",
+     "Tell us about the calls or letters. Our attorneys review your case for free."
+    ]
+   },
+   "noAd": "No ad: not Credo's business. Add as a negative."
   },
   "fdcpa_research": {
    "label": "FDCPA: the statute",
    "page": "FR",
    "why": "Reading about the law; the rights page is the education page.",
-   "debtType": "Harassment"
+   "debtType": "Harassment",
+   "ad": {
+    "h": [
+     "FDCPA: Your Rights",
+     "What Collectors Cannot Do",
+     "Fair Debt Collection Act",
+     "Know Your Rights",
+     "Free Case Review",
+     "Questions? Ask an Attorney"
+    ],
+    "d": [
+     "The FDCPA limits when and how collectors contact you, and what they can say.",
+     "If a collector crossed the line, our attorneys review your options for free."
+    ]
+   },
+   "noAd": "No ad: not Credo's business. Add as a negative."
   },
   "harassment": {
    "label": "Collector harassment",
    "page": "HS",
    "why": "Calls and pressure; wants them to stop.",
-   "debtType": "Harassment"
+   "debtType": "Harassment",
+   "ad": {
+    "h": [
+     "Collector Harassment?",
+     "Stop Collector Calls",
+     "Calls at Work or Late?",
+     "Send a Cease Letter",
+     "Know Your FDCPA Rights",
+     "Free Consultation"
+    ],
+    "d": [
+     "Calls before 8 a.m. or after 9 p.m. are generally not allowed. Stop them in writing.",
+     "We send the cease letter and review the calls for violations. Free consultation."
+    ]
+   },
+   "noAd": "No ad: not Credo's business. Add as a negative."
   },
   "dispute": {
    "label": "Dispute a collection (not sued)",
    "page": "FR",
    "why": "Wants to dispute; the rights page covers validation (§ 1692g).",
-   "debtType": "Harassment"
+   "debtType": "Harassment",
+   "ad": {
+    "h": [
+     "Dispute a Collection Debt",
+     "Ask for Validation",
+     "They Must Verify the Debt",
+     "Challenge Wrong Balances",
+     "Free Debt Review",
+     "Talk to Our Attorneys"
+    ],
+    "d": [
+     "Dispute in writing within 30 days of notice and the collector must verify the debt.",
+     "We send the dispute and review the response for errors. Free consultation."
+    ]
+   },
+   "noAd": "No ad: not Credo's business. Add as a negative."
   },
   "settlement": {
    "label": "Wants debt settlement",
    "page": "NSET",
    "why": "Settlement shopper; validation-first comparison page.",
-   "debtType": "General"
+   "debtType": "General",
+   "ad": {
+    "h": [
+     "Debt Settlement Attorney",
+     "Validate Before You Settle",
+     "Settle for Less?",
+     "Attorney-Led Negotiation",
+     "Free Debt Review",
+     "Talk to Our Attorneys"
+    ],
+    "d": [
+     "Before paying anything, check the debt is valid. Some debts are not owed as claimed.",
+     "Our attorneys validate the debt, then negotiate. Free consultation."
+    ]
+   },
+   "noAd": "No ad: not Credo's business. Add as a negative."
   },
   "lawsuit_options": {
    "label": "Lawsuit: settle it or after judgment",
    "page": "OP",
    "why": "Wants options, not a deadline.",
-   "debtType": "Lawsuit"
+   "debtType": "Lawsuit",
+   "ad": {
+    "h": [
+     "Options After a Lawsuit",
+     "Settle or Defend?",
+     "Judgment Already Entered?",
+     "Negotiate a Settlement",
+     "Free Lawsuit Review",
+     "Talk to Our Attorneys"
+    ],
+    "d": [
+     "Whether you want to defend, settle or deal with a judgment, we review your options.",
+     "Our attorneys explain each path and what it means for you. Free consultation."
+    ]
+   },
+   "noAd": "No ad: not Credo's business. Add as a negative."
   },
   "lawsuit_summons": {
    "label": "Lawsuit: summons, how to answer",
    "page": "SR",
    "why": "Holding the summons; wants to know how to respond.",
-   "debtType": "Lawsuit"
+   "debtType": "Lawsuit",
+   "ad": {
+    "h": [
+     "Got a Debt Summons?",
+     "How to Answer a Summons",
+     "Answer Before the Deadline",
+     "Do Not Ignore the Summons",
+     "Free Summons Review",
+     "Talk to Our Attorneys"
+    ],
+    "d": [
+     "Missing the answer deadline can mean a default judgment. We review your summons.",
+     "We check the deadline, the claim and your defenses. Free consultation."
+    ]
+   },
+   "noAd": "No ad: not Credo's business. Add as a negative."
   },
   "lawsuit_dismiss": {
    "label": "Lawsuit: dismissal, proof, old debt",
    "page": "PR",
    "why": "Wants to win or asks about old debts; the proof page covers both.",
-   "debtType": "Lawsuit"
+   "debtType": "Lawsuit",
+   "ad": {
+    "h": [
+     "Grounds to Dismiss a Debt Suit",
+     "They Must Prove You Owe It",
+     "Old Debt? Check the Date",
+     "Missing Records Matter",
+     "Answer the Suit on Time",
+     "Free Lawsuit Defense Review"
+    ],
+    "d": [
+     "Many debt suits lack the records to prove the debt. Our attorneys ask the court for them.",
+     "Old debts may be past the statute of limitations. We check the dates. Free review."
+    ]
+   },
+   "noAd": "No ad: not Credo's business. Add as a negative."
   },
   "lawsuit_lawyer": {
    "label": "Lawsuit: wants a defense lawyer",
    "page": "RT",
    "why": "Sued and looking for counsel; the champion page.",
-   "debtType": "Lawsuit"
+   "debtType": "Lawsuit",
+   "ad": {
+    "h": [
+     "Debt Lawsuit Attorney",
+     "Debt Defense Lawyers",
+     "Sued Over a Debt?",
+     "We File Your Answer",
+     "Free Lawsuit Review",
+     "Talk to Our Attorneys"
+    ],
+    "d": [
+     "Our attorneys review the summons, file your answer and raise your defenses.",
+     "Answer deadlines can be short. Free consultation, no obligation."
+    ]
+   },
+   "noAd": "No ad: not Credo's business. Add as a negative."
   },
   "lawsuit_sued": {
    "label": "Lawsuit: sued, what now",
    "page": "RT",
    "why": "Sued or about to be; deadline first.",
-   "debtType": "Lawsuit"
+   "debtType": "Lawsuit",
+   "ad": {
+    "h": [
+     "Sued by a Debt Collector?",
+     "Answer Before the Deadline",
+     "Do Not Ignore the Lawsuit",
+     "What Happens Next",
+     "Free Lawsuit Review",
+     "Talk to Our Attorneys"
+    ],
+    "d": [
+     "Ignoring a debt lawsuit can lead to a default judgment. An answer keeps options open.",
+     "We review the summons, the deadline and your defenses. Free consultation."
+    ]
+   },
+   "noAd": "No ad: not Credo's business. Add as a negative."
   },
   "debt_lawyer": {
    "label": "Debt lawyer, stage not stated",
    "page": "CD",
    "why": "General attorney search; the general collection-defense page.",
-   "debtType": "General"
+   "debtType": "General",
+   "ad": {
+    "h": [
+     "Debt Collection Lawyer",
+     "Debt Defense Attorneys",
+     "Collectors Calling or Suing?",
+     "Validation and Defense",
+     "Free Consultation",
+     "Talk to Our Attorneys"
+    ],
+    "d": [
+     "We handle collector calls, validation disputes and debt lawsuits.",
+     "Tell us where you are in the process. Our attorneys review it for free."
+    ]
+   },
+   "noAd": "No ad: not Credo's business. Add as a negative."
   },
   "debt_relief": {
    "label": "Debt relief shopper",
    "page": "NSET",
    "why": "Looking for debt relief or a way out of debt, not a lawyer yet; the validation-first comparison page.",
-   "debtType": "General"
+   "debtType": "General",
+   "ad": {
+    "h": [
+     "Debt Help From Attorneys",
+     "Validate Before You Pay",
+     "Not Every Debt Is Owed",
+     "Attorney-Led Negotiation",
+     "Know Your Options",
+     "Free Debt Review"
+    ],
+    "d": [
+     "Before a settlement plan, check the debts are valid. Some are not owed as claimed.",
+     "Our attorneys review your debts and your options. Free consultation."
+    ]
+   },
+   "noAd": "No ad: not Credo's business. Add as a negative."
   },
   "debt_generic": {
    "label": "Debt, no intent stated",
    "page": "CD",
    "why": "One or two generic words; low buying intent. General page as fallback, bid down.",
-   "debtType": "General"
+   "debtType": "General",
+   "ad": {
+    "h": [
+     "Dealing With Debt?",
+     "Collector Calls or Lawsuit?",
+     "Know Your Rights",
+     "Validation and Defense",
+     "Free Debt Review",
+     "Talk to Our Attorneys"
+    ],
+    "d": [
+     "We help with collector calls, debt disputes and debt lawsuits.",
+     "Tell us where you are in the process. Our attorneys review it for free."
+    ]
+   },
+   "noAd": "No ad: not Credo's business. Add as a negative."
   },
   "spanish": {
    "label": "Spanish-language debt search",
    "page": "CD",
    "why": "Spanish query about debt or collections; there is no Spanish landing page yet.",
-   "debtType": "General"
+   "debtType": "General",
+   "ad": {
+    "h": [
+     "Abogados de Deudas",
+     "¿Lo Demandaron por Deuda?",
+     "¿Llamadas de Cobradores?",
+     "Conozca Sus Derechos",
+     "Revisamos Su Caso Gratis",
+     "Consulta Gratis"
+    ],
+    "d": [
+     "Revisamos llamadas de cobradores, disputas y demandas de deudas. Consulta gratis.",
+     "Nuestros abogados le explican sus opciones. Sin compromiso."
+    ],
+    "note": "Spanish ad copy; there is no Spanish landing page yet, so pair it with one before running."
+   },
+   "noAd": "No ad: not Credo's business. Add as a negative."
   },
   "credit_report": {
    "label": "Collections on a credit report",
    "page": "CCC",
    "why": "Wants a collection or charge-off off their report; the challenge page covers removing invalid debts.",
-   "debtType": "Credit Card"
+   "debtType": "Credit Card",
+   "ad": {
+    "h": [
+     "Collections on Your Report?",
+     "Dispute Invalid Collections",
+     "Check Your Credit Report",
+     "FCRA Disputes Handled",
+     "Free Credit Review",
+     "Talk to Our Attorneys"
+    ],
+    "d": [
+     "Collections that are wrong or unverified can be disputed under the FCRA.",
+     "We review your report and dispute what is invalid. Free consultation."
+    ]
+   },
+   "noAd": "No ad: not Credo's business. Add as a negative."
   },
   "medical": {
    "label": "Medical debt",
    "page": "MEDR",
    "why": "Medical debt; the medical campaign and its pages are paused.",
-   "debtType": "Medical Debt"
+   "debtType": "Medical Debt",
+   "ad": {
+    "h": [
+     "Medical Debt Collections?",
+     "Medical Bill Lawsuit?",
+     "Check the Bill First",
+     "Know Your Rights",
+     "Free Medical Debt Review",
+     "Talk to Our Attorneys"
+    ],
+    "d": [
+     "Medical bills often contain errors. Collectors must verify the debt when you dispute it.",
+     "We review the bill, the collector and any lawsuit. Free consultation."
+    ],
+    "note": "The medical campaign is paused; use this only if it restarts."
+   },
+   "noAd": "No ad: not Credo's business. Add as a negative."
   },
   "payday": {
    "label": "Payday loan debt",
    "page": "PAY",
    "why": "Payday loan debt; the payday campaign and its pages are paused.",
-   "debtType": "Payday Loan"
+   "debtType": "Payday Loan",
+   "ad": {
+    "h": [
+     "Payday Loan Debt Help",
+     "Payday Lender Calling?",
+     "Stop Collector Calls",
+     "Know Your Rights",
+     "Free Payday Loan Review",
+     "Talk to Our Attorneys"
+    ],
+    "d": [
+     "Some payday loans break state lending laws. We check yours and the collector's conduct.",
+     "Our attorneys review the loan and your options. Free consultation."
+    ],
+    "note": "The payday campaign is paused; use this only if it restarts."
+   },
+   "noAd": "No ad: not Credo's business. Add as a negative."
   },
   "neg_competitor": {
    "label": "Not Credo: competitor or other firm",
    "page": "NEG",
    "why": "Looking for a named debt-relief company, law firm or service.",
-   "debtType": "Not Credo"
+   "debtType": "Not Credo",
+   "ad": null,
+   "noAd": "No ad: not Credo's business. Add as a negative."
   },
   "neg_aid": {
    "label": "Not Credo: loans, grants, hardship aid",
    "page": "NEG",
    "why": "Wants money (loans, grants, hardship programs), not legal help.",
-   "debtType": "Not Credo"
+   "debtType": "Not Credo",
+   "ad": null,
+   "noAd": "No ad: not Credo's business. Add as a negative."
   },
   "neg_legal": {
    "label": "Not Credo: other legal need",
    "page": "NEG",
    "why": "Injury, employment, bankruptcy, legal aid, small claims: not what Credo does.",
-   "debtType": "Not Credo"
+   "debtType": "Not Credo",
+   "ad": null,
+   "noAd": "No ad: not Credo's business. Add as a negative."
   },
   "neg_gov": {
    "label": "Not Credo: government or agency",
    "page": "NEG",
    "why": "Navigating to a government body or consumer agency.",
-   "debtType": "Not Credo"
+   "debtType": "Not Credo",
+   "ad": null,
+   "noAd": "No ad: not Credo's business. Add as a negative."
   },
   "neg_foreign": {
    "label": "Not Credo: outside the US",
    "page": "NEG",
    "why": "UK or other non-US terms.",
-   "debtType": "Not Credo"
+   "debtType": "Not Credo",
+   "ad": null,
+   "noAd": "No ad: not Credo's business. Add as a negative."
   },
   "unclassified": {
    "label": "Unclassified: review by hand",
    "page": "NEG",
    "why": "No rule matched. Low volume; review before acting.",
-   "debtType": "Not Credo"
+   "debtType": "Not Credo",
+   "ad": null,
+   "noAd": "No ad: review the term by hand first."
   },
   "related_brand": {
    "label": "Consumer Legal Group: related brand?",
    "page": "NEG",
    "why": "The paused 2025 state campaigns sent traffic to start.consumerlegalgroup.com, so this is likely Credo's former brand or a partner, not a competitor. Confirm before negating.",
-   "debtType": "Brand"
+   "debtType": "Brand",
+   "ad": null,
+   "noAd": "No ad until the Consumer Legal Group relationship is confirmed."
   }
  },
  "rows": [
@@ -476,7 +960,8 @@ window.TERMS = {
      "impr": 1631,
      "clicks": 56,
      "cost": 378.83,
-     "conv": 5.667
+     "conv": 5.667,
+     "intent": "garn_general"
     }
    ],
    "top30": 0.566,
@@ -512,7 +997,8 @@ window.TERMS = {
      "impr": 1520,
      "clicks": 83,
      "cost": 231.51,
-     "conv": 3.5
+     "conv": 3.5,
+     "intent": "fdcpa_research"
     }
    ],
    "top30": 0.4752475247524752,
@@ -547,7 +1033,8 @@ window.TERMS = {
      "impr": 1503,
      "clicks": 109,
      "cost": 1412.05,
-     "conv": 13.497
+     "conv": 13.497,
+     "intent": "debt_lawyer"
     }
    ],
    "top30": 0.8789808917197452,
@@ -582,7 +1069,8 @@ window.TERMS = {
      "impr": 1439,
      "clicks": 120,
      "cost": 1445.5,
-     "conv": 21.497
+     "conv": 21.497,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "top30": 0.879245283018868,
@@ -621,7 +1109,8 @@ window.TERMS = {
      "impr": 559,
      "clicks": 43,
      "cost": 301.65,
-     "conv": 7.619
+     "conv": 7.619,
+     "intent": "lawsuit_summons"
     },
     {
      "text": "how to get a debt lawsuit dismissed",
@@ -629,7 +1118,8 @@ window.TERMS = {
      "impr": 277,
      "clicks": 22,
      "cost": 167.97,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_dismiss"
     },
     {
      "text": "lawsuit dismissed",
@@ -637,7 +1127,8 @@ window.TERMS = {
      "impr": 195,
      "clicks": 22,
      "cost": 128.08,
-     "conv": 2.25
+     "conv": 2.25,
+     "intent": "lawsuit_dismiss"
     },
     {
      "text": "being sued by debt collector",
@@ -645,7 +1136,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "i got sued by a debt collector",
@@ -653,7 +1145,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 3,
      "cost": 20.74,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "top30": 0.875,
@@ -692,7 +1185,8 @@ window.TERMS = {
      "impr": 306,
      "clicks": 28,
      "cost": 295.34,
-     "conv": 5.167
+     "conv": 5.167,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt collection lawyer",
@@ -700,7 +1194,8 @@ window.TERMS = {
      "impr": 298,
      "clicks": 23,
      "cost": 520.97,
-     "conv": 3.667
+     "conv": 3.667,
+     "intent": "debt_lawyer"
     },
     {
      "text": "collection defense attorney",
@@ -708,7 +1203,8 @@ window.TERMS = {
      "impr": 159,
      "clicks": 8,
      "cost": 124.36,
-     "conv": 3.333
+     "conv": 3.333,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "collection defense lawyer",
@@ -716,7 +1212,8 @@ window.TERMS = {
      "impr": 87,
      "clicks": 5,
      "cost": 60.95,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt collection lawsuit attorney",
@@ -724,7 +1221,8 @@ window.TERMS = {
      "impr": 34,
      "clicks": 1,
      "cost": 13.82,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "collections lawyer",
@@ -732,7 +1230,8 @@ window.TERMS = {
      "impr": 33,
      "clicks": 6,
      "cost": 79.39,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt collection attorney",
@@ -740,7 +1239,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "credit collection attorney",
@@ -748,7 +1248,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "top30": 0.8932806324110671,
@@ -783,7 +1284,8 @@ window.TERMS = {
      "impr": 857,
      "clicks": 152,
      "cost": 887.14,
-     "conv": 14.0
+     "conv": 14.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.95,
@@ -823,7 +1325,8 @@ window.TERMS = {
      "impr": 830,
      "clicks": 93,
      "cost": 1026.12,
-     "conv": 19.787
+     "conv": 19.787,
+     "intent": "garn_lawyer"
     }
    ],
    "top30": 0.865,
@@ -858,7 +1361,8 @@ window.TERMS = {
      "impr": 239,
      "clicks": 31,
      "cost": 212.12,
-     "conv": 8.333
+     "conv": 8.333,
+     "intent": "garn_stop"
     },
     {
      "text": "how can i stop a wage garnishment immediately",
@@ -866,7 +1370,8 @@ window.TERMS = {
      "impr": 213,
      "clicks": 27,
      "cost": 137.04,
-     "conv": 0.998
+     "conv": 0.998,
+     "intent": "garn_stop"
     },
     {
      "text": "stop wage garnishment immediately",
@@ -874,7 +1379,8 @@ window.TERMS = {
      "impr": 155,
      "clicks": 17,
      "cost": 150.95,
-     "conv": 1.5
+     "conv": 1.5,
+     "intent": "garn_stop"
     },
     {
      "text": "stop garnishment",
@@ -882,7 +1388,8 @@ window.TERMS = {
      "impr": 129,
      "clicks": 13,
      "cost": 73.39,
-     "conv": 2.5
+     "conv": 2.5,
+     "intent": "garn_stop"
     },
     {
      "text": "how to stop wage garnishments",
@@ -890,7 +1397,8 @@ window.TERMS = {
      "impr": 87,
      "clicks": 12,
      "cost": 69.19,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.886,
@@ -930,7 +1438,8 @@ window.TERMS = {
      "impr": 476,
      "clicks": 48,
      "cost": 617.3,
-     "conv": 4.0
+     "conv": 4.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "credit debt lawyers",
@@ -938,7 +1447,8 @@ window.TERMS = {
      "impr": 235,
      "clicks": 32,
      "cost": 470.59,
-     "conv": 7.5
+     "conv": 7.5,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt defense attorney near me",
@@ -946,7 +1456,8 @@ window.TERMS = {
      "impr": 29,
      "clicks": 4,
      "cost": 47.18,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt lawsuit attorney near me",
@@ -954,7 +1465,8 @@ window.TERMS = {
      "impr": 28,
      "clicks": 2,
      "cost": 27.37,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "attorney for debt lawsuit",
@@ -962,7 +1474,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 2,
      "cost": 19.36,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "top30": 0.8947368421052632,
@@ -1001,7 +1514,8 @@ window.TERMS = {
      "impr": 756,
      "clicks": 80,
      "cost": 519.92,
-     "conv": 3.998
+     "conv": 3.998,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.875,
@@ -1041,7 +1555,8 @@ window.TERMS = {
      "impr": 699,
      "clicks": 57,
      "cost": 782.1,
-     "conv": 16.0
+     "conv": 16.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "top30": 0.8376068376068376,
@@ -1080,7 +1595,8 @@ window.TERMS = {
      "impr": 266,
      "clicks": 16,
      "cost": 257.45,
-     "conv": 10.667
+     "conv": 10.667,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt lawyer",
@@ -1088,7 +1604,8 @@ window.TERMS = {
      "impr": 218,
      "clicks": 19,
      "cost": 352.64,
-     "conv": 1.002
+     "conv": 1.002,
+     "intent": "debt_lawyer"
     },
     {
      "text": "collection defense lawyer",
@@ -1096,7 +1613,8 @@ window.TERMS = {
      "impr": 150,
      "clicks": 15,
      "cost": 200.91,
-     "conv": 4.0
+     "conv": 4.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt collection lawyers near me",
@@ -1104,7 +1622,8 @@ window.TERMS = {
      "impr": 21,
      "clicks": 5,
      "cost": 87.13,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "collections lawyer",
@@ -1112,7 +1631,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "top30": 0.8991596638655462,
@@ -1147,7 +1667,8 @@ window.TERMS = {
      "impr": 399,
      "clicks": 36,
      "cost": 530.17,
-     "conv": 6.005
+     "conv": 6.005,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt collection attorney near me",
@@ -1155,7 +1676,8 @@ window.TERMS = {
      "impr": 191,
      "clicks": 21,
      "cost": 256.68,
-     "conv": 2.5
+     "conv": 2.5,
+     "intent": "debt_lawyer"
     },
     {
      "text": "lawyers for debt collection near me",
@@ -1163,7 +1685,8 @@ window.TERMS = {
      "impr": 36,
      "clicks": 2,
      "cost": 18.56,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt collection lawyers near me",
@@ -1171,7 +1694,8 @@ window.TERMS = {
      "impr": 23,
      "clicks": 4,
      "cost": 31.81,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "attorney for debt collection near me",
@@ -1179,7 +1703,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "top30": 0.8674698795180723,
@@ -1214,7 +1739,8 @@ window.TERMS = {
      "impr": 220,
      "clicks": 24,
      "cost": 243.33,
-     "conv": 2.0
+     "conv": 2.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt lawyer near me",
@@ -1222,7 +1748,8 @@ window.TERMS = {
      "impr": 197,
      "clicks": 14,
      "cost": 239.55,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "lawyers for debt collection near me",
@@ -1230,7 +1757,8 @@ window.TERMS = {
      "impr": 52,
      "clicks": 6,
      "cost": 56.8,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt lawyers",
@@ -1238,7 +1766,8 @@ window.TERMS = {
      "impr": 50,
      "clicks": 7,
      "cost": 65.78,
-     "conv": 1.5
+     "conv": 1.5,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt collection lawyers near me",
@@ -1246,7 +1775,8 @@ window.TERMS = {
      "impr": 35,
      "clicks": 4,
      "cost": 40.92,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt lawyer",
@@ -1254,7 +1784,8 @@ window.TERMS = {
      "impr": 29,
      "clicks": 1,
      "cost": 13.32,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt attorneys near me",
@@ -1262,7 +1793,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "attorney for debt collection near me",
@@ -1270,7 +1802,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 1,
      "cost": 8.11,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "top30": 0.8611111111111112,
@@ -1305,7 +1838,8 @@ window.TERMS = {
      "impr": 433,
      "clicks": 37,
      "cost": 470.92,
-     "conv": 12.0
+     "conv": 12.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt defense lawyer",
@@ -1313,7 +1847,8 @@ window.TERMS = {
      "impr": 154,
      "clicks": 12,
      "cost": 157.85,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt defense attorney",
@@ -1321,7 +1856,8 @@ window.TERMS = {
      "impr": 21,
      "clicks": 2,
      "cost": 21.85,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -1359,7 +1895,8 @@ window.TERMS = {
      "impr": 607,
      "clicks": 50,
      "cost": 556.04,
-     "conv": 10.498
+     "conv": 10.498,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "top30": 0.7846153846153846,
@@ -1398,7 +1935,8 @@ window.TERMS = {
      "impr": 570,
      "clicks": 109,
      "cost": 728.32,
-     "conv": 19.505
+     "conv": 19.505,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.957,
@@ -1438,7 +1976,8 @@ window.TERMS = {
      "impr": 566,
      "clicks": 29,
      "cost": 134.2,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "top30": 0.5319148936170213,
@@ -1473,7 +2012,8 @@ window.TERMS = {
      "impr": 489,
      "clicks": 46,
      "cost": 645.92,
-     "conv": 6.0
+     "conv": 6.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt lawsuit lawyer",
@@ -1481,7 +2021,8 @@ window.TERMS = {
      "impr": 27,
      "clicks": 2,
      "cost": 36.75,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "collection defense lawyer",
@@ -1489,7 +2030,8 @@ window.TERMS = {
      "impr": 21,
      "clicks": 2,
      "cost": 18.75,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "attorney for debt lawsuit",
@@ -1497,7 +2039,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -1535,7 +2078,8 @@ window.TERMS = {
      "impr": 541,
      "clicks": 30,
      "cost": 191.68,
-     "conv": 2.0
+     "conv": 2.0,
+     "intent": "garn_general"
     }
    ],
    "top30": 0.734,
@@ -1571,7 +2115,8 @@ window.TERMS = {
      "impr": 356,
      "clicks": 24,
      "cost": 271.66,
-     "conv": 4.5
+     "conv": 4.5,
+     "intent": "debt_lawyer"
     },
     {
      "text": "collection defense lawyer",
@@ -1579,7 +2124,8 @@ window.TERMS = {
      "impr": 101,
      "clicks": 3,
      "cost": 37.4,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "collection defense attorney",
@@ -1587,7 +2133,8 @@ window.TERMS = {
      "impr": 43,
      "clicks": 2,
      "cost": 23.24,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt collection lawsuit attorney",
@@ -1595,7 +2142,8 @@ window.TERMS = {
      "impr": 22,
      "clicks": 2,
      "cost": 27.15,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "top30": 0.8431372549019608,
@@ -1630,7 +2178,8 @@ window.TERMS = {
      "impr": 306,
      "clicks": 18,
      "cost": 290.12,
-     "conv": 2.0
+     "conv": 2.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt collection defense attorney",
@@ -1638,7 +2187,8 @@ window.TERMS = {
      "impr": 110,
      "clicks": 6,
      "cost": 56.36,
-     "conv": 2.0
+     "conv": 2.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "attorney to fight collection agency",
@@ -1646,7 +2196,8 @@ window.TERMS = {
      "impr": 27,
      "clicks": 1,
      "cost": 6.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt collection defense lawyer",
@@ -1654,7 +2205,8 @@ window.TERMS = {
      "impr": 26,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt collection lawyers near me",
@@ -1662,7 +2214,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 3,
      "cost": 36.46,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "credit collection attorney",
@@ -1670,7 +2223,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "top30": 0.808,
@@ -1705,7 +2259,8 @@ window.TERMS = {
      "impr": 488,
      "clicks": 49,
      "cost": 493.76,
-     "conv": 7.0
+     "conv": 7.0,
+     "intent": "garn_lawyer"
     }
    ],
    "top30": 0.892,
@@ -1740,7 +2295,8 @@ window.TERMS = {
      "impr": 484,
      "clicks": 43,
      "cost": 236.87,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "top30": 0.5526315789473685,
@@ -1775,7 +2331,8 @@ window.TERMS = {
      "impr": 317,
      "clicks": 27,
      "cost": 311.99,
-     "conv": 7.995
+     "conv": 7.995,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt lawsuit attorney",
@@ -1783,7 +2340,8 @@ window.TERMS = {
      "impr": 139,
      "clicks": 7,
      "cost": 68.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt defense attorney near me",
@@ -1791,7 +2349,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 3,
      "cost": 49.4,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "credit debt lawyers",
@@ -1799,7 +2358,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -1837,7 +2397,8 @@ window.TERMS = {
      "impr": 460,
      "clicks": 37,
      "cost": 380.59,
-     "conv": 2.0
+     "conv": 2.0,
+     "intent": "debt_lawyer"
     }
    ],
    "top30": 0.8522727272727273,
@@ -1872,7 +2433,8 @@ window.TERMS = {
      "impr": 416,
      "clicks": 37,
      "cost": 456.92,
-     "conv": 21.0
+     "conv": 21.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "collection defense lawyer",
@@ -1880,7 +2442,8 @@ window.TERMS = {
      "impr": 26,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt lawsuit lawyer",
@@ -1888,7 +2451,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 1,
      "cost": 19.13,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -1926,7 +2490,8 @@ window.TERMS = {
      "impr": 453,
      "clicks": 15,
      "cost": 97.82,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_general"
     }
    ],
    "top30": 0.627,
@@ -1962,7 +2527,8 @@ window.TERMS = {
      "impr": 220,
      "clicks": 17,
      "cost": 92.28,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "i got sued by a debt collector",
@@ -1970,7 +2536,8 @@ window.TERMS = {
      "impr": 126,
      "clicks": 2,
      "cost": 26.32,
-     "conv": 5.0
+     "conv": 5.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "being sued by debt collector",
@@ -1978,7 +2545,8 @@ window.TERMS = {
      "impr": 56,
      "clicks": 3,
      "cost": 14.37,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "i have been sued by a debt collector",
@@ -1986,7 +2554,8 @@ window.TERMS = {
      "impr": 41,
      "clicks": 5,
      "cost": 35.51,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "top30": 0.8661417322834646,
@@ -2026,7 +2595,8 @@ window.TERMS = {
      "impr": 438,
      "clicks": 55,
      "cost": 532.79,
-     "conv": 6.0
+     "conv": 6.0,
+     "intent": "garn_lawyer"
     }
    ],
    "top30": 0.804,
@@ -2061,7 +2631,8 @@ window.TERMS = {
      "impr": 277,
      "clicks": 19,
      "cost": 315.68,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt collection attorney near me",
@@ -2069,7 +2640,8 @@ window.TERMS = {
      "impr": 53,
      "clicks": 4,
      "cost": 36.32,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "lawyers for debt collection near me",
@@ -2077,7 +2649,8 @@ window.TERMS = {
      "impr": 37,
      "clicks": 1,
      "cost": 11.99,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt collection lawyers near me",
@@ -2085,7 +2658,8 @@ window.TERMS = {
      "impr": 32,
      "clicks": 5,
      "cost": 31.3,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "attorney for debt collection near me",
@@ -2093,7 +2667,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "top30": 0.8770491803278688,
@@ -2128,7 +2703,8 @@ window.TERMS = {
      "impr": 310,
      "clicks": 12,
      "cost": 168.81,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "collection defense lawyer",
@@ -2136,7 +2712,8 @@ window.TERMS = {
      "impr": 80,
      "clicks": 12,
      "cost": 127.46,
-     "conv": 6.0
+     "conv": 6.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt collection lawyers near me",
@@ -2144,7 +2721,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 4,
      "cost": 47.04,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "debt_lawyer"
     }
    ],
    "top30": 0.9166666666666666,
@@ -2179,7 +2757,8 @@ window.TERMS = {
      "impr": 407,
      "clicks": 48,
      "cost": 481.41,
-     "conv": 18.423
+     "conv": 18.423,
+     "intent": "garn_lawyer"
     }
    ],
    "top30": 0.869,
@@ -2214,7 +2793,8 @@ window.TERMS = {
      "impr": 388,
      "clicks": 62,
      "cost": 437.97,
-     "conv": 6.507
+     "conv": 6.507,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.888,
@@ -2254,7 +2834,8 @@ window.TERMS = {
      "impr": 369,
      "clicks": 63,
      "cost": 665.73,
-     "conv": 10.498
+     "conv": 10.498,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.987,
@@ -2294,7 +2875,8 @@ window.TERMS = {
      "impr": 336,
      "clicks": 19,
      "cost": 264.67,
-     "conv": 8.0
+     "conv": 8.0,
+     "intent": "debt_lawyer"
     }
    ],
    "top30": 0.8450704225352113,
@@ -2329,7 +2911,8 @@ window.TERMS = {
      "impr": 166,
      "clicks": 11,
      "cost": 47.11,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "cc_dismiss"
     },
     {
      "text": "how to fight a credit card lawsuit",
@@ -2337,7 +2920,8 @@ window.TERMS = {
      "impr": 154,
      "clicks": 6,
      "cost": 36.31,
-     "conv": 1.5
+     "conv": 1.5,
+     "intent": "cc_lawsuit"
     },
     {
      "text": "summons for credit card debt",
@@ -2345,7 +2929,8 @@ window.TERMS = {
      "impr": 8,
      "clicks": 1,
      "cost": 4.32,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "top30": 0.8571428571428571,
@@ -2384,7 +2969,8 @@ window.TERMS = {
      "impr": 230,
      "clicks": 17,
      "cost": 180.82,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt defense lawyer",
@@ -2392,7 +2978,8 @@ window.TERMS = {
      "impr": 60,
      "clicks": 6,
      "cost": 79.09,
-     "conv": 1.453
+     "conv": 1.453,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt defense attorney",
@@ -2400,7 +2987,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 1,
      "cost": 8.87,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -2438,7 +3026,8 @@ window.TERMS = {
      "impr": 218,
      "clicks": 32,
      "cost": 266.79,
-     "conv": 4.333
+     "conv": 4.333,
+     "intent": "garn_stop"
     },
     {
      "text": "how to stop wage garnishments",
@@ -2446,7 +3035,8 @@ window.TERMS = {
      "impr": 76,
      "clicks": 16,
      "cost": 123.15,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "stop garnishment",
@@ -2454,7 +3044,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 31.73,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.975,
@@ -2494,7 +3085,8 @@ window.TERMS = {
      "impr": 301,
      "clicks": 40,
      "cost": 396.05,
-     "conv": 7.0
+     "conv": 7.0,
+     "intent": "garn_lawyer"
     }
    ],
    "top30": 0.858,
@@ -2529,7 +3121,8 @@ window.TERMS = {
      "impr": 252,
      "clicks": 12,
      "cost": 158.28,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "collections attorney",
@@ -2537,7 +3130,8 @@ window.TERMS = {
      "impr": 26,
      "clicks": 1,
      "cost": 13.24,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt collection lawyer",
@@ -2545,7 +3139,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "top30": 0.8478260869565217,
@@ -2580,7 +3175,8 @@ window.TERMS = {
      "impr": 171,
      "clicks": 2,
      "cost": 16.18,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     },
     {
      "text": "resurgent capital debt collector",
@@ -2588,7 +3184,8 @@ window.TERMS = {
      "impr": 115,
      "clicks": 7,
      "cost": 39.16,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -2626,7 +3223,8 @@ window.TERMS = {
      "impr": 286,
      "clicks": 71,
      "cost": 199.7,
-     "conv": 10.473
+     "conv": 10.473,
+     "intent": "brand"
     }
    ],
    "top30": 0.7934272300469484,
@@ -2661,7 +3259,8 @@ window.TERMS = {
      "impr": 223,
      "clicks": 4,
      "cost": 7.88,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     },
     {
      "text": "garnered wages",
@@ -2669,7 +3268,8 @@ window.TERMS = {
      "impr": 21,
      "clicks": 1,
      "cost": 3.88,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     },
     {
      "text": "wages being garnished",
@@ -2677,7 +3277,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 2,
      "cost": 1.08,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     },
     {
      "text": "garnishment",
@@ -2685,7 +3286,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     },
     {
      "text": "pay garnishment",
@@ -2693,7 +3295,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "top30": 0.609,
@@ -2728,7 +3331,8 @@ window.TERMS = {
      "impr": 278,
      "clicks": 22,
      "cost": 418.7,
-     "conv": 3.0
+     "conv": 3.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "top30": 0.8771929824561403,
@@ -2767,7 +3371,8 @@ window.TERMS = {
      "impr": 266,
      "clicks": 8,
      "cost": 47.1,
-     "conv": 2.0
+     "conv": 2.0,
+     "intent": "debt_buyer"
     }
    ],
    "top30": 0.38848920863309355,
@@ -2807,7 +3412,8 @@ window.TERMS = {
      "impr": 266,
      "clicks": 5,
      "cost": 25.35,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -2845,7 +3451,8 @@ window.TERMS = {
      "impr": 141,
      "clicks": 9,
      "cost": 132.68,
-     "conv": 3.5
+     "conv": 3.5,
+     "intent": "debt_lawyer"
     },
     {
      "text": "collection attorney",
@@ -2853,7 +3460,8 @@ window.TERMS = {
      "impr": 91,
      "clicks": 1,
      "cost": 31.31,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "collections lawyer",
@@ -2861,7 +3469,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "collection defense lawyer",
@@ -2869,7 +3478,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "top30": 0.78125,
@@ -2904,7 +3514,8 @@ window.TERMS = {
      "impr": 253,
      "clicks": 10,
      "cost": 37.48,
-     "conv": 2.0
+     "conv": 2.0,
+     "intent": "debt_buyer"
     }
    ],
    "scope": "active",
@@ -2942,7 +3553,8 @@ window.TERMS = {
      "impr": 244,
      "clicks": 4,
      "cost": 68.92,
-     "conv": 3.0
+     "conv": 3.0,
+     "intent": "settlement"
     }
    ],
    "top30": 0.5483870967741935,
@@ -2976,7 +3588,8 @@ window.TERMS = {
      "impr": 187,
      "clicks": 4,
      "cost": 31.12,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     },
     {
      "text": "paycheck garnishment",
@@ -2984,7 +3597,8 @@ window.TERMS = {
      "impr": 33,
      "clicks": 1,
      "cost": 13.44,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     },
     {
      "text": "pay garnishment",
@@ -2992,7 +3606,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "top30": 0.167,
@@ -3027,7 +3642,8 @@ window.TERMS = {
      "impr": 240,
      "clicks": 17,
      "cost": 109.0,
-     "conv": 2.0
+     "conv": 2.0,
+     "intent": "collector_name"
     }
    ],
    "top30": 0.62,
@@ -3066,7 +3682,8 @@ window.TERMS = {
      "impr": 137,
      "clicks": 18,
      "cost": 203.78,
-     "conv": 1.5
+     "conv": 1.5,
+     "intent": "debt_lawyer"
     },
     {
      "text": "collection defense lawyer",
@@ -3074,7 +3691,8 @@ window.TERMS = {
      "impr": 35,
      "clicks": 5,
      "cost": 58.21,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "collections lawyer",
@@ -3082,7 +3700,8 @@ window.TERMS = {
      "impr": 27,
      "clicks": 3,
      "cost": 30.86,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "collection defense attorney",
@@ -3090,7 +3709,8 @@ window.TERMS = {
      "impr": 24,
      "clicks": 1,
      "cost": 9.92,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt collection lawsuit attorney",
@@ -3098,7 +3718,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 3,
      "cost": 57.66,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "top30": 0.9166666666666666,
@@ -3133,7 +3754,8 @@ window.TERMS = {
      "impr": 138,
      "clicks": 11,
      "cost": 124.72,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "cc_general"
     },
     {
      "text": "credit card lawyer",
@@ -3141,7 +3763,8 @@ window.TERMS = {
      "impr": 99,
      "clicks": 3,
      "cost": 47.29,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_general"
     }
    ],
    "top30": 0.7966101694915254,
@@ -3180,7 +3803,8 @@ window.TERMS = {
      "impr": 234,
      "clicks": 10,
      "cost": 158.04,
-     "conv": 4.0
+     "conv": 4.0,
+     "intent": "debt_lawyer"
     }
    ],
    "top30": 0.6976744186046512,
@@ -3215,7 +3839,8 @@ window.TERMS = {
      "impr": 221,
      "clicks": 15,
      "cost": 146.7,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "top30": 0.627906976744186,
@@ -3250,7 +3875,8 @@ window.TERMS = {
      "impr": 114,
      "clicks": 20,
      "cost": 262.22,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_lawyer"
     },
     {
      "text": "garnishment lawyer near me",
@@ -3258,7 +3884,8 @@ window.TERMS = {
      "impr": 107,
      "clicks": 10,
      "cost": 68.72,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_lawyer"
     }
    ],
    "top30": 0.925,
@@ -3293,7 +3920,8 @@ window.TERMS = {
      "impr": 135,
      "clicks": 20,
      "cost": 243.3,
-     "conv": 1.5
+     "conv": 1.5,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt lawsuit attorney near me",
@@ -3301,7 +3929,8 @@ window.TERMS = {
      "impr": 84,
      "clicks": 15,
      "cost": 179.78,
-     "conv": 2.5
+     "conv": 2.5,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "top30": 0.9574468085106383,
@@ -3340,7 +3969,8 @@ window.TERMS = {
      "impr": 156,
      "clicks": 12,
      "cost": 117.79,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt collection lawyers near me",
@@ -3348,7 +3978,8 @@ window.TERMS = {
      "impr": 49,
      "clicks": 5,
      "cost": 48.3,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "collection lawyers near me",
@@ -3356,7 +3987,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "top30": 0.7857142857142857,
@@ -3391,7 +4023,8 @@ window.TERMS = {
      "impr": 141,
      "clicks": 13,
      "cost": 164.81,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "credit debt lawyers",
@@ -3399,7 +4032,8 @@ window.TERMS = {
      "impr": 74,
      "clicks": 7,
      "cost": 112.09,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "top30": 0.8653846153846154,
@@ -3438,7 +4072,8 @@ window.TERMS = {
      "impr": 211,
      "clicks": 21,
      "cost": 278.37,
-     "conv": 0.833
+     "conv": 0.833,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "top30": 0.9473684210526315,
@@ -3477,7 +4112,8 @@ window.TERMS = {
      "impr": 210,
      "clicks": 24,
      "cost": 142.96,
-     "conv": 2.0
+     "conv": 2.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.867,
@@ -3512,7 +4148,8 @@ window.TERMS = {
      "impr": 142,
      "clicks": 10,
      "cost": 93.9,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt defense lawyer",
@@ -3520,7 +4157,8 @@ window.TERMS = {
      "impr": 39,
      "clicks": 2,
      "cost": 38.72,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt lawsuit attorney",
@@ -3528,7 +4166,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt lawsuit lawyer",
@@ -3536,7 +4175,8 @@ window.TERMS = {
      "impr": 7,
      "clicks": 1,
      "cost": 8.65,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -3574,7 +4214,8 @@ window.TERMS = {
      "impr": 208,
      "clicks": 28,
      "cost": 299.54,
-     "conv": 3.667
+     "conv": 3.667,
+     "intent": "fdcpa_action"
     }
    ],
    "scope": "active",
@@ -3612,7 +4253,8 @@ window.TERMS = {
      "impr": 96,
      "clicks": 9,
      "cost": 37.56,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_stop"
     },
     {
      "text": "garnishment",
@@ -3620,7 +4262,8 @@ window.TERMS = {
      "impr": 58,
      "clicks": 5,
      "cost": 11.93,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     },
     {
      "text": "help with wage garnishment",
@@ -3628,7 +4271,8 @@ window.TERMS = {
      "impr": 53,
      "clicks": 8,
      "cost": 47.58,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.94,
@@ -3663,7 +4307,8 @@ window.TERMS = {
      "impr": 206,
      "clicks": 3,
      "cost": 15.39,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_buyer"
     }
    ],
    "top30": 0.6037735849056604,
@@ -3703,7 +4348,8 @@ window.TERMS = {
      "impr": 82,
      "clicks": 6,
      "cost": 130.14,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt collection attorney near me",
@@ -3711,7 +4357,8 @@ window.TERMS = {
      "impr": 63,
      "clicks": 7,
      "cost": 85.45,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt lawyer",
@@ -3719,7 +4366,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 2,
      "cost": 28.96,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "collection lawyers near me",
@@ -3727,7 +4375,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 1,
      "cost": 3.31,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "lawyers for debt collection near me",
@@ -3735,7 +4384,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 2,
      "cost": 12.11,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt lawyers",
@@ -3743,7 +4393,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 11.68,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt collection lawyers near me",
@@ -3751,7 +4402,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 1.75,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "debt_lawyer"
     }
    ],
    "top30": 0.9069767441860465,
@@ -3786,7 +4438,8 @@ window.TERMS = {
      "impr": 201,
      "clicks": 13,
      "cost": 50.79,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "top30": 0.8229166666666666,
@@ -3825,7 +4478,8 @@ window.TERMS = {
      "impr": 88,
      "clicks": 9,
      "cost": 165.94,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt lawyers",
@@ -3833,7 +4487,8 @@ window.TERMS = {
      "impr": 77,
      "clicks": 7,
      "cost": 109.24,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "collection defense lawyer",
@@ -3841,7 +4496,8 @@ window.TERMS = {
      "impr": 36,
      "clicks": 6,
      "cost": 80.88,
-     "conv": 3.0
+     "conv": 3.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "top30": 0.88,
@@ -3876,7 +4532,8 @@ window.TERMS = {
      "impr": 162,
      "clicks": 20,
      "cost": 276.7,
-     "conv": 9.0
+     "conv": 9.0,
+     "intent": "garn_lawyer"
     },
     {
      "text": "stop wage garnishment attorney",
@@ -3884,7 +4541,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 5,
      "cost": 81.34,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_lawyer"
     },
     {
      "text": "lawyer to stop garnishment",
@@ -3892,7 +4550,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 5,
      "cost": 41.16,
-     "conv": 0.725
+     "conv": 0.725,
+     "intent": "garn_lawyer"
     }
    ],
    "top30": 0.82,
@@ -3931,7 +4590,8 @@ window.TERMS = {
      "impr": 195,
      "clicks": 15,
      "cost": 41.95,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -3965,7 +4625,8 @@ window.TERMS = {
      "impr": 195,
      "clicks": 17,
      "cost": 156.35,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "fdcpa_action"
     }
    ],
    "scope": "active",
@@ -4003,7 +4664,8 @@ window.TERMS = {
      "impr": 156,
      "clicks": 12,
      "cost": 125.42,
-     "conv": 2.5
+     "conv": 2.5,
+     "intent": "debt_lawyer"
     },
     {
      "text": "collection defense lawyer",
@@ -4011,7 +4673,8 @@ window.TERMS = {
      "impr": 22,
      "clicks": 1,
      "cost": 12.56,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "collection defense attorney",
@@ -4019,7 +4682,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "top30": 0.8208955223880597,
@@ -4054,7 +4718,8 @@ window.TERMS = {
      "impr": 102,
      "clicks": 8,
      "cost": 41.17,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "being sued by debt collector",
@@ -4062,7 +4727,8 @@ window.TERMS = {
      "impr": 64,
      "clicks": 8,
      "cost": 64.65,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "sued by debt collector",
@@ -4070,7 +4736,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 1,
      "cost": 3.67,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "i got sued by a debt collector",
@@ -4078,7 +4745,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 3,
      "cost": 16.74,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "top30": 0.9534883720930233,
@@ -4117,7 +4785,8 @@ window.TERMS = {
      "impr": 109,
      "clicks": 14,
      "cost": 89.12,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "how to stop my check from being garnished",
@@ -4125,7 +4794,8 @@ window.TERMS = {
      "impr": 57,
      "clicks": 11,
      "cost": 69.4,
-     "conv": 0.5
+     "conv": 0.5,
+     "intent": "garn_stop"
     },
     {
      "text": "can a garnishment be stopped",
@@ -4133,7 +4803,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 4,
      "cost": 47.28,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.939,
@@ -4172,7 +4843,8 @@ window.TERMS = {
      "impr": 142,
      "clicks": 7,
      "cost": 153.01,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt lawsuit lawyer",
@@ -4180,7 +4852,8 @@ window.TERMS = {
      "impr": 33,
      "clicks": 6,
      "cost": 136.11,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "attorney for debt lawsuit",
@@ -4188,7 +4861,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "top30": 0.9047619047619048,
@@ -4228,7 +4902,8 @@ window.TERMS = {
      "impr": 183,
      "clicks": 11,
      "cost": 136.83,
-     "conv": 2.0
+     "conv": 2.0,
+     "intent": "cc_general"
     }
    ],
    "top30": 0.8695652173913043,
@@ -4267,7 +4942,8 @@ window.TERMS = {
      "impr": 157,
      "clicks": 9,
      "cost": 63.53,
-     "conv": 2.0
+     "conv": 2.0,
+     "intent": "collector_name"
     },
     {
      "text": "lvnv funding debt collectors",
@@ -4275,7 +4951,8 @@ window.TERMS = {
      "impr": 26,
      "clicks": 1,
      "cost": 4.71,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -4313,7 +4990,8 @@ window.TERMS = {
      "impr": 120,
      "clicks": 14,
      "cost": 204.92,
-     "conv": 4.003
+     "conv": 4.003,
+     "intent": "debt_lawyer"
     },
     {
      "text": "collection attorney",
@@ -4321,7 +4999,8 @@ window.TERMS = {
      "impr": 52,
      "clicks": 5,
      "cost": 51.84,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "collection defense lawyer",
@@ -4329,7 +5008,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "top30": 0.8909090909090909,
@@ -4364,7 +5044,8 @@ window.TERMS = {
      "impr": 77,
      "clicks": 6,
      "cost": 29.37,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_stop"
     },
     {
      "text": "stop wage garnishment immediately",
@@ -4372,7 +5053,8 @@ window.TERMS = {
      "impr": 68,
      "clicks": 6,
      "cost": 60.03,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_stop"
     },
     {
      "text": "how to stop wage garnishment",
@@ -4380,7 +5062,8 @@ window.TERMS = {
      "impr": 37,
      "clicks": 3,
      "cost": 22.52,
-     "conv": 4.0
+     "conv": 4.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.881,
@@ -4420,7 +5103,8 @@ window.TERMS = {
      "impr": 181,
      "clicks": 30,
      "cost": 436.28,
-     "conv": 2.0
+     "conv": 2.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "top30": 0.84375,
@@ -4459,7 +5143,8 @@ window.TERMS = {
      "impr": 180,
      "clicks": 18,
      "cost": 276.45,
-     "conv": 2.0
+     "conv": 2.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -4497,7 +5182,8 @@ window.TERMS = {
      "impr": 176,
      "clicks": 13,
      "cost": 174.0,
-     "conv": 8.0
+     "conv": 8.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -4535,7 +5221,8 @@ window.TERMS = {
      "impr": 113,
      "clicks": 17,
      "cost": 157.36,
-     "conv": 5.0
+     "conv": 5.0,
+     "intent": "garn_stop"
     },
     {
      "text": "how to stop my check from being garnished",
@@ -4543,7 +5230,8 @@ window.TERMS = {
      "impr": 34,
      "clicks": 5,
      "cost": 55.08,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_stop"
     },
     {
      "text": "how to stop wage garnishments",
@@ -4551,7 +5239,8 @@ window.TERMS = {
      "impr": 29,
      "clicks": 3,
      "cost": 7.23,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.9,
@@ -4591,7 +5280,8 @@ window.TERMS = {
      "impr": 149,
      "clicks": 21,
      "cost": 246.68,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_lawyer"
     },
     {
      "text": "lawyer to stop garnishment",
@@ -4599,7 +5289,8 @@ window.TERMS = {
      "impr": 23,
      "clicks": 2,
      "cost": 57.16,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_lawyer"
     }
    ],
    "top30": 0.969,
@@ -4638,7 +5329,8 @@ window.TERMS = {
      "impr": 82,
      "clicks": 11,
      "cost": 82.81,
-     "conv": 2.378
+     "conv": 2.378,
+     "intent": "garn_stop"
     },
     {
      "text": "can a garnishment be stopped",
@@ -4646,7 +5338,8 @@ window.TERMS = {
      "impr": 39,
      "clicks": 5,
      "cost": 29.39,
-     "conv": 1.5
+     "conv": 1.5,
+     "intent": "garn_stop"
     },
     {
      "text": "how to stop a garnishment",
@@ -4654,7 +5347,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 2,
      "cost": 8.66,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "stop garnishment",
@@ -4662,7 +5356,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 2,
      "cost": 7.52,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "can you stop a garnishment once it starts",
@@ -4670,7 +5365,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "top30": 0.841,
@@ -4709,7 +5405,8 @@ window.TERMS = {
      "impr": 128,
      "clicks": 12,
      "cost": 123.21,
-     "conv": 2.833
+     "conv": 2.833,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "attorney for debt collection lawsuit",
@@ -4717,7 +5414,8 @@ window.TERMS = {
      "impr": 21,
      "clicks": 1,
      "cost": 7.9,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "attorney for debt collection lawsuit",
@@ -4725,7 +5423,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 1,
      "cost": 16.78,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "lawyer for debt lawsuit",
@@ -4733,7 +5432,8 @@ window.TERMS = {
      "impr": 8,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -4771,7 +5471,8 @@ window.TERMS = {
      "impr": 170,
      "clicks": 10,
      "cost": 24.92,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -4805,7 +5506,8 @@ window.TERMS = {
      "impr": 170,
      "clicks": 18,
      "cost": 64.68,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -4843,7 +5545,8 @@ window.TERMS = {
      "impr": 113,
      "clicks": 9,
      "cost": 154.35,
-     "conv": 3.0
+     "conv": 3.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt defense lawyer",
@@ -4851,7 +5554,8 @@ window.TERMS = {
      "impr": 39,
      "clicks": 2,
      "cost": 45.2,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt defense attorney",
@@ -4859,7 +5563,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -4897,7 +5602,8 @@ window.TERMS = {
      "impr": 98,
      "clicks": 9,
      "cost": 115.37,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt lawsuit attorney near me",
@@ -4905,7 +5611,8 @@ window.TERMS = {
      "impr": 67,
      "clicks": 5,
      "cost": 95.15,
-     "conv": 0.5
+     "conv": 0.5,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "top30": 0.875,
@@ -4944,7 +5651,8 @@ window.TERMS = {
      "impr": 84,
      "clicks": 4,
      "cost": 34.85,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "sued by debt collector",
@@ -4952,7 +5660,8 @@ window.TERMS = {
      "impr": 81,
      "clicks": 1,
      "cost": 2.82,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "top30": 0.9117647058823529,
@@ -4991,7 +5700,8 @@ window.TERMS = {
      "impr": 110,
      "clicks": 14,
      "cost": 122.8,
-     "conv": 2.0
+     "conv": 2.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "a debt collector is suing me",
@@ -4999,7 +5709,8 @@ window.TERMS = {
      "impr": 54,
      "clicks": 7,
      "cost": 40.53,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "top30": 0.9215686274509803,
@@ -5038,7 +5749,8 @@ window.TERMS = {
      "impr": 67,
      "clicks": 3,
      "cost": 16.46,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_stop"
     },
     {
      "text": "how to remove wage garnishment",
@@ -5046,7 +5758,8 @@ window.TERMS = {
      "impr": 29,
      "clicks": 1,
      "cost": 8.1,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "stop garnishment",
@@ -5054,7 +5767,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "how to get out of wage garnishment",
@@ -5062,7 +5776,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 2,
      "cost": 11.61,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     },
     {
      "text": "can you stop a garnishment before it starts",
@@ -5070,7 +5785,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 2,
      "cost": 28.21,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_stop"
     },
     {
      "text": "how to stop a garnishment that has already started",
@@ -5078,7 +5794,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 2,
      "cost": 5.83,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "top30": 0.805,
@@ -5117,7 +5834,8 @@ window.TERMS = {
      "impr": 160,
      "clicks": 16,
      "cost": 170.92,
-     "conv": 3.0
+     "conv": 3.0,
+     "intent": "garn_lawyer"
     }
    ],
    "top30": 0.955,
@@ -5152,7 +5870,8 @@ window.TERMS = {
      "impr": 159,
      "clicks": 3,
      "cost": 75.07,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "top30": 0.6829268292682927,
@@ -5187,7 +5906,8 @@ window.TERMS = {
      "impr": 158,
      "clicks": 19,
      "cost": 187.86,
-     "conv": 2.001
+     "conv": 2.001,
+     "intent": "garn_lawyer"
     }
    ],
    "top30": 0.892,
@@ -5222,7 +5942,8 @@ window.TERMS = {
      "impr": 79,
      "clicks": 5,
      "cost": 63.2,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "collection attorney near me",
@@ -5230,7 +5951,8 @@ window.TERMS = {
      "impr": 54,
      "clicks": 5,
      "cost": 41.62,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "collection lawyers near me",
@@ -5238,7 +5960,8 @@ window.TERMS = {
      "impr": 25,
      "clicks": 3,
      "cost": 84.27,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "debt_lawyer"
     }
    ],
    "top30": 0.7027027027027027,
@@ -5273,7 +5996,8 @@ window.TERMS = {
      "impr": 57,
      "clicks": 4,
      "cost": 50.33,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "consumer debt defense attorney",
@@ -5281,7 +6005,8 @@ window.TERMS = {
      "impr": 56,
      "clicks": 2,
      "cost": 20.46,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt defense lawyer near me",
@@ -5289,7 +6014,8 @@ window.TERMS = {
      "impr": 44,
      "clicks": 3,
      "cost": 37.22,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -5327,7 +6053,8 @@ window.TERMS = {
      "impr": 157,
      "clicks": 8,
      "cost": 53.67,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_general"
     }
    ],
    "top30": 0.711,
@@ -5363,7 +6090,8 @@ window.TERMS = {
      "impr": 94,
      "clicks": 4,
      "cost": 64.06,
-     "conv": 3.0
+     "conv": 3.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "attorney for debt collection lawsuit",
@@ -5371,7 +6099,8 @@ window.TERMS = {
      "impr": 51,
      "clicks": 8,
      "cost": 101.88,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt defense attorney",
@@ -5379,7 +6108,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -5417,7 +6147,8 @@ window.TERMS = {
      "impr": 80,
      "clicks": 11,
      "cost": 48.27,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     },
     {
      "text": "how to answer a court summons debt collection",
@@ -5425,7 +6156,8 @@ window.TERMS = {
      "impr": 73,
      "clicks": 5,
      "cost": 31.82,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "top30": 0.9,
@@ -5464,7 +6196,8 @@ window.TERMS = {
      "impr": 144,
      "clicks": 10,
      "cost": 97.97,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt litigation attorney",
@@ -5472,7 +6205,8 @@ window.TERMS = {
      "impr": 8,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -5510,7 +6244,8 @@ window.TERMS = {
      "impr": 107,
      "clicks": 8,
      "cost": 76.61,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_summons"
     },
     {
      "text": "lawsuit dismissed",
@@ -5518,7 +6253,8 @@ window.TERMS = {
      "impr": 45,
      "clicks": 6,
      "cost": 24.07,
-     "conv": 1.003
+     "conv": 1.003,
+     "intent": "lawsuit_dismiss"
     }
    ],
    "top30": 0.8857142857142857,
@@ -5557,7 +6293,8 @@ window.TERMS = {
      "impr": 96,
      "clicks": 3,
      "cost": 13.08,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "being sued by debt collector",
@@ -5565,7 +6302,8 @@ window.TERMS = {
      "impr": 33,
      "clicks": 1,
      "cost": 3.39,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "being sued by debt collector",
@@ -5573,7 +6311,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "a debt collector is suing me",
@@ -5581,7 +6320,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "top30": 0.6153846153846154,
@@ -5620,7 +6360,8 @@ window.TERMS = {
      "impr": 149,
      "clicks": 62,
      "cost": 172.85,
-     "conv": 5.0
+     "conv": 5.0,
+     "intent": "brand"
     }
    ],
    "top30": 0.9186991869918699,
@@ -5655,7 +6396,8 @@ window.TERMS = {
      "impr": 148,
      "clicks": 9,
      "cost": 50.11,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -5693,7 +6435,8 @@ window.TERMS = {
      "impr": 85,
      "clicks": 12,
      "cost": 72.43,
-     "conv": 5.0
+     "conv": 5.0,
+     "intent": "garn_stop"
     },
     {
      "text": "how to stop wage garnishments",
@@ -5701,7 +6444,8 @@ window.TERMS = {
      "impr": 35,
      "clicks": 7,
      "cost": 45.71,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "how to stop wage garnishment",
@@ -5709,7 +6453,8 @@ window.TERMS = {
      "impr": 22,
      "clicks": 4,
      "cost": 28.55,
-     "conv": 0.998
+     "conv": 0.998,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.958,
@@ -5749,7 +6494,8 @@ window.TERMS = {
      "impr": 140,
      "clicks": 11,
      "cost": 180.14,
-     "conv": 3.0
+     "conv": 3.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -5787,7 +6533,8 @@ window.TERMS = {
      "impr": 140,
      "clicks": 15,
      "cost": 291.14,
-     "conv": 2.999
+     "conv": 2.999,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -5825,7 +6572,8 @@ window.TERMS = {
      "impr": 140,
      "clicks": 11,
      "cost": 142.27,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_general"
     }
    ],
    "top30": 0.7419354838709677,
@@ -5864,7 +6612,8 @@ window.TERMS = {
      "impr": 139,
      "clicks": 15,
      "cost": 58.61,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -5898,7 +6647,8 @@ window.TERMS = {
      "impr": 139,
      "clicks": 25,
      "cost": 299.86,
-     "conv": 5.92
+     "conv": 5.92,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.906,
@@ -5938,7 +6688,8 @@ window.TERMS = {
      "impr": 108,
      "clicks": 9,
      "cost": 46.21,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     },
     {
      "text": "credit card suing me",
@@ -5946,7 +6697,8 @@ window.TERMS = {
      "impr": 31,
      "clicks": 3,
      "cost": 12.17,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "top30": 0.95,
@@ -5985,7 +6737,8 @@ window.TERMS = {
      "impr": 66,
      "clicks": 9,
      "cost": 58.58,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_stop"
     },
     {
      "text": "how to get out of wage garnishment",
@@ -5993,7 +6746,8 @@ window.TERMS = {
      "impr": 37,
      "clicks": 3,
      "cost": 22.25,
-     "conv": 4.0
+     "conv": 4.0,
+     "intent": "garn_active"
     },
     {
      "text": "how can i stop my wages from being garnished",
@@ -6001,7 +6755,8 @@ window.TERMS = {
      "impr": 21,
      "clicks": 6,
      "cost": 38.93,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "stop wage garnishment immediately",
@@ -6009,7 +6764,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 2,
      "cost": 7.87,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.84,
@@ -6049,7 +6805,8 @@ window.TERMS = {
      "impr": 135,
      "clicks": 23,
      "cost": 273.21,
-     "conv": 2.996
+     "conv": 2.996,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "top30": 0.9714285714285714,
@@ -6088,7 +6845,8 @@ window.TERMS = {
      "impr": 131,
      "clicks": 15,
      "cost": 82.57,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "fdcpa_action"
     }
    ],
    "scope": "active",
@@ -6126,7 +6884,8 @@ window.TERMS = {
      "impr": 81,
      "clicks": 2,
      "cost": 17.22,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt defense lawyer",
@@ -6134,7 +6893,8 @@ window.TERMS = {
      "impr": 42,
      "clicks": 2,
      "cost": 18.27,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "collection defense",
@@ -6142,7 +6902,8 @@ window.TERMS = {
      "impr": 7,
      "clicks": 1,
      "cost": 3.75,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "top30": 0.6857142857142857,
@@ -6181,7 +6942,8 @@ window.TERMS = {
      "impr": 130,
      "clicks": 9,
      "cost": 102.23,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "cc_general"
     }
    ],
    "top30": 0.7428571428571429,
@@ -6220,7 +6982,8 @@ window.TERMS = {
      "impr": 129,
      "clicks": 7,
      "cost": 54.25,
-     "conv": 2.0
+     "conv": 2.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -6254,7 +7017,8 @@ window.TERMS = {
      "impr": 54,
      "clicks": 2,
      "cost": 17.08,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     },
     {
      "text": "can a credit card company sue you",
@@ -6262,7 +7026,8 @@ window.TERMS = {
      "impr": 51,
      "clicks": 6,
      "cost": 28.96,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     },
     {
      "text": "lawsuit by credit card company",
@@ -6270,7 +7035,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     },
     {
      "text": "im being sued by a credit card company",
@@ -6278,7 +7044,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 1,
      "cost": 2.68,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "top30": 0.9166666666666666,
@@ -6317,7 +7084,8 @@ window.TERMS = {
      "impr": 87,
      "clicks": 7,
      "cost": 122.13,
-     "conv": 2.0
+     "conv": 2.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "collection defense attorney",
@@ -6325,7 +7093,8 @@ window.TERMS = {
      "impr": 37,
      "clicks": 3,
      "cost": 40.04,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "top30": 0.85,
@@ -6360,7 +7129,8 @@ window.TERMS = {
      "impr": 122,
      "clicks": 12,
      "cost": 65.75,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -6398,7 +7168,8 @@ window.TERMS = {
      "impr": 122,
      "clicks": 9,
      "cost": 67.28,
-     "conv": 4.0
+     "conv": 4.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -6436,7 +7207,8 @@ window.TERMS = {
      "impr": 122,
      "clicks": 11,
      "cost": 50.23,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -6474,7 +7246,8 @@ window.TERMS = {
      "impr": 119,
      "clicks": 11,
      "cost": 80.17,
-     "conv": 5.0
+     "conv": 5.0,
+     "intent": "garn_active"
     }
    ],
    "top30": 0.905,
@@ -6513,7 +7286,8 @@ window.TERMS = {
      "impr": 85,
      "clicks": 2,
      "cost": 17.44,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt collection defense attorney",
@@ -6521,7 +7295,8 @@ window.TERMS = {
      "impr": 23,
      "clicks": 1,
      "cost": 13.83,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "attorney to fight collection agency",
@@ -6529,7 +7304,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "top30": 1,
@@ -6564,7 +7340,8 @@ window.TERMS = {
      "impr": 99,
      "clicks": 6,
      "cost": 29.66,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "im being sued for a debt what do i do",
@@ -6572,7 +7349,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 1,
      "cost": 2.78,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -6610,7 +7388,8 @@ window.TERMS = {
      "impr": 116,
      "clicks": 6,
      "cost": 23.31,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "scope": "active",
@@ -6645,7 +7424,8 @@ window.TERMS = {
      "impr": 79,
      "clicks": 6,
      "cost": 99.81,
-     "conv": 4.0
+     "conv": 4.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "credit attorney",
@@ -6653,7 +7433,8 @@ window.TERMS = {
      "impr": 37,
      "clicks": 1,
      "cost": 17.47,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -6687,7 +7468,8 @@ window.TERMS = {
      "impr": 63,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     },
     {
      "text": "resurgent capital debt collector",
@@ -6695,7 +7477,8 @@ window.TERMS = {
      "impr": 51,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -6733,7 +7516,8 @@ window.TERMS = {
      "impr": 113,
      "clicks": 9,
      "cost": 90.29,
-     "conv": 4.004
+     "conv": 4.004,
+     "intent": "cc_general"
     }
    ],
    "scope": "active",
@@ -6771,7 +7555,8 @@ window.TERMS = {
      "impr": 113,
      "clicks": 4,
      "cost": 16.56,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -6809,7 +7594,8 @@ window.TERMS = {
      "impr": 112,
      "clicks": 9,
      "cost": 122.18,
-     "conv": 8.0
+     "conv": 8.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -6847,7 +7633,8 @@ window.TERMS = {
      "impr": 112,
      "clicks": 4,
      "cost": 74.96,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "debt_buyer"
     }
    ],
    "top30": 0.46153846153846156,
@@ -6887,7 +7674,8 @@ window.TERMS = {
      "impr": 58,
      "clicks": 8,
      "cost": 56.04,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_active"
     },
     {
      "text": "stop garnishment",
@@ -6895,7 +7683,8 @@ window.TERMS = {
      "impr": 39,
      "clicks": 4,
      "cost": 23.93,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_stop"
     },
     {
      "text": "can a garnishment be stopped",
@@ -6903,7 +7692,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 2,
      "cost": 12.39,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 1,
@@ -6943,7 +7733,8 @@ window.TERMS = {
      "impr": 61,
      "clicks": 12,
      "cost": 63.47,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "how to stop wage garnishments",
@@ -6951,7 +7742,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 4,
      "cost": 32.86,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "how to remove wage garnishment",
@@ -6959,7 +7751,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 2,
      "cost": 8.6,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "stop garnishment",
@@ -6967,7 +7760,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 3,
      "cost": 13.98,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 1,
@@ -7006,7 +7800,8 @@ window.TERMS = {
      "impr": 56,
      "clicks": 11,
      "cost": 67.72,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "how to fight a garnishment",
@@ -7014,7 +7809,8 @@ window.TERMS = {
      "impr": 54,
      "clicks": 16,
      "cost": 116.76,
-     "conv": 2.0
+     "conv": 2.0,
+     "intent": "garn_active"
     }
    ],
    "top30": 0.955,
@@ -7054,7 +7850,8 @@ window.TERMS = {
      "impr": 46,
      "clicks": 4,
      "cost": 24.27,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "how to fight a garnishment",
@@ -7062,7 +7859,8 @@ window.TERMS = {
      "impr": 35,
      "clicks": 3,
      "cost": 10.79,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     },
     {
      "text": "how to stop wage garnishments",
@@ -7070,7 +7868,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 1,
      "cost": 2.32,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "can a garnishment be stopped",
@@ -7078,7 +7877,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.923,
@@ -7118,7 +7918,8 @@ window.TERMS = {
      "impr": 109,
      "clicks": 2,
      "cost": 19.14,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_definition"
     }
    ],
    "top30": 0.786,
@@ -7155,7 +7956,8 @@ window.TERMS = {
      "impr": 67,
      "clicks": 4,
      "cost": 18.22,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_prevent"
     },
     {
      "text": "help with wage garnishment",
@@ -7163,7 +7965,8 @@ window.TERMS = {
      "impr": 42,
      "clicks": 1,
      "cost": 1.78,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.61,
@@ -7198,7 +8001,8 @@ window.TERMS = {
      "impr": 49,
      "clicks": 7,
      "cost": 30.55,
-     "conv": 1.5
+     "conv": 1.5,
+     "intent": "garn_stop"
     },
     {
      "text": "how to stop wage garnishments",
@@ -7206,7 +8010,8 @@ window.TERMS = {
      "impr": 41,
      "clicks": 2,
      "cost": 14.76,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "how can i stop my wages from being garnished",
@@ -7214,7 +8019,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 1,
      "cost": 3.37,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.981,
@@ -7254,7 +8060,8 @@ window.TERMS = {
      "impr": 50,
      "clicks": 4,
      "cost": 52.39,
-     "conv": 3.0
+     "conv": 3.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "a debt collector is suing me",
@@ -7262,7 +8069,8 @@ window.TERMS = {
      "impr": 50,
      "clicks": 8,
      "cost": 99.18,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "being sued by debt collector",
@@ -7270,7 +8078,8 @@ window.TERMS = {
      "impr": 8,
      "clicks": 1,
      "cost": 4.21,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -7308,7 +8117,8 @@ window.TERMS = {
      "impr": 105,
      "clicks": 9,
      "cost": 37.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "top30": 0.8387096774193549,
@@ -7347,7 +8157,8 @@ window.TERMS = {
      "impr": 105,
      "clicks": 10,
      "cost": 109.57,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_lawyer"
     }
    ],
    "top30": 0.918,
@@ -7382,7 +8193,8 @@ window.TERMS = {
      "impr": 54,
      "clicks": 3,
      "cost": 27.26,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_general"
     },
     {
      "text": "credit card attorney near me",
@@ -7390,7 +8202,8 @@ window.TERMS = {
      "impr": 32,
      "clicks": 3,
      "cost": 22.97,
-     "conv": 6.0
+     "conv": 6.0,
+     "intent": "cc_general"
     },
     {
      "text": "credit card debt attorney",
@@ -7398,7 +8211,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 1,
      "cost": 2.97,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_general"
     }
    ],
    "top30": 0.7407407407407407,
@@ -7437,7 +8251,8 @@ window.TERMS = {
      "impr": 51,
      "clicks": 4,
      "cost": 49.33,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "attorney for debt collection lawsuit",
@@ -7445,7 +8260,8 @@ window.TERMS = {
      "impr": 30,
      "clicks": 3,
      "cost": 60.05,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "collection defense attorney",
@@ -7453,7 +8269,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 1,
      "cost": 22.01,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "collection defense lawyer",
@@ -7461,7 +8278,8 @@ window.TERMS = {
      "impr": 7,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "top30": 0.7727272727272727,
@@ -7500,7 +8318,8 @@ window.TERMS = {
      "impr": 85,
      "clicks": 7,
      "cost": 115.9,
-     "conv": 0.5
+     "conv": 0.5,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt collection attorney near me",
@@ -7508,7 +8327,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 4,
      "cost": 66.03,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "top30": 0.7954545454545454,
@@ -7543,7 +8363,8 @@ window.TERMS = {
      "impr": 63,
      "clicks": 13,
      "cost": 218.51,
-     "conv": 4.633
+     "conv": 4.633,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt defense lawyer near me",
@@ -7551,7 +8372,8 @@ window.TERMS = {
      "impr": 40,
      "clicks": 1,
      "cost": 17.34,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "top30": 0.8524590163934426,
@@ -7591,7 +8413,8 @@ window.TERMS = {
      "impr": 101,
      "clicks": 7,
      "cost": 75.37,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -7629,7 +8452,8 @@ window.TERMS = {
      "impr": 101,
      "clicks": 5,
      "cost": 52.62,
-     "conv": 0.5
+     "conv": 0.5,
+     "intent": "garn_active"
     }
    ],
    "top30": 0.75,
@@ -7669,7 +8493,8 @@ window.TERMS = {
      "impr": 101,
      "clicks": 7,
      "cost": 52.07,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_general"
     }
    ],
    "scope": "active",
@@ -7707,7 +8532,8 @@ window.TERMS = {
      "impr": 72,
      "clicks": 6,
      "cost": 37.71,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "debt collection lawsuit",
@@ -7715,7 +8541,8 @@ window.TERMS = {
      "impr": 28,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -7753,7 +8580,8 @@ window.TERMS = {
      "impr": 100,
      "clicks": 6,
      "cost": 33.0,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_active"
     }
    ],
    "top30": 0.727,
@@ -7793,7 +8621,8 @@ window.TERMS = {
      "impr": 39,
      "clicks": 1,
      "cost": 3.08,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     },
     {
      "text": "credit card lawsuit attorney",
@@ -7801,7 +8630,8 @@ window.TERMS = {
      "impr": 33,
      "clicks": 2,
      "cost": 31.11,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     },
     {
      "text": "credit card lawyers",
@@ -7809,7 +8639,8 @@ window.TERMS = {
      "impr": 28,
      "clicks": 3,
      "cost": 33.34,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "cc_general"
     }
    ],
    "scope": "active",
@@ -7847,7 +8678,8 @@ window.TERMS = {
      "impr": 99,
      "clicks": 10,
      "cost": 55.75,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -7885,7 +8717,8 @@ window.TERMS = {
      "impr": 97,
      "clicks": 3,
      "cost": 27.33,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "top30": 0.8125,
@@ -7925,7 +8758,8 @@ window.TERMS = {
      "impr": 55,
      "clicks": 1,
      "cost": 6.18,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "help with wage garnishment",
@@ -7933,7 +8767,8 @@ window.TERMS = {
      "impr": 23,
      "clicks": 2,
      "cost": 4.34,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "wage garnishment",
@@ -7941,7 +8776,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 1,
      "cost": 3.29,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "top30": 1,
@@ -7976,7 +8812,8 @@ window.TERMS = {
      "impr": 97,
      "clicks": 10,
      "cost": 80.08,
-     "conv": 2.997
+     "conv": 2.997,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.86,
@@ -8016,7 +8853,8 @@ window.TERMS = {
      "impr": 64,
      "clicks": 3,
      "cost": 11.77,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     },
     {
      "text": "portfolio recovery debt collector",
@@ -8024,7 +8862,8 @@ window.TERMS = {
      "impr": 33,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -8062,7 +8901,8 @@ window.TERMS = {
      "impr": 86,
      "clicks": 4,
      "cost": 18.62,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "collection agency threatening to sue",
@@ -8070,7 +8910,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -8109,7 +8950,8 @@ window.TERMS = {
      "impr": 54,
      "clicks": 5,
      "cost": 34.25,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt defense lawyer near me",
@@ -8117,7 +8959,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "attorney for debt collection lawsuit",
@@ -8125,7 +8968,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 1,
      "cost": 9.19,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "attorney for debt collection lawsuit",
@@ -8133,7 +8977,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 4,
      "cost": 43.4,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -8171,7 +9016,8 @@ window.TERMS = {
      "impr": 55,
      "clicks": 4,
      "cost": 17.05,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "how to fight a garnishment",
@@ -8179,7 +9025,8 @@ window.TERMS = {
      "impr": 41,
      "clicks": 7,
      "cost": 31.76,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "top30": 0.875,
@@ -8219,7 +9066,8 @@ window.TERMS = {
      "impr": 59,
      "clicks": 1,
      "cost": 24.44,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt lawsuit attorney",
@@ -8227,7 +9075,8 @@ window.TERMS = {
      "impr": 23,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "credit debt lawyers",
@@ -8235,7 +9084,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -8273,7 +9123,8 @@ window.TERMS = {
      "impr": 48,
      "clicks": 1,
      "cost": 2.54,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     },
     {
      "text": "help with wage garnishment",
@@ -8281,7 +9132,8 @@ window.TERMS = {
      "impr": 45,
      "clicks": 1,
      "cost": 3.12,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.625,
@@ -8316,7 +9168,8 @@ window.TERMS = {
      "impr": 61,
      "clicks": 3,
      "cost": 14.22,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     },
     {
      "text": "being sued by credit card company",
@@ -8324,7 +9177,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 1,
      "cost": 1.69,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     },
     {
      "text": "im being sued by a credit card company",
@@ -8332,7 +9186,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 1,
      "cost": 17.17,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -8370,7 +9225,8 @@ window.TERMS = {
      "impr": 51,
      "clicks": 1,
      "cost": 2.4,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     },
     {
      "text": "resurgent capital debt collector",
@@ -8378,7 +9234,8 @@ window.TERMS = {
      "impr": 42,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -8416,7 +9273,8 @@ window.TERMS = {
      "impr": 70,
      "clicks": 10,
      "cost": 89.23,
-     "conv": 1.5
+     "conv": 1.5,
+     "intent": "garn_stop"
     },
     {
      "text": "how to stop a garnishment",
@@ -8424,7 +9282,8 @@ window.TERMS = {
      "impr": 22,
      "clicks": 4,
      "cost": 31.16,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.931,
@@ -8463,7 +9322,8 @@ window.TERMS = {
      "impr": 84,
      "clicks": 10,
      "cost": 82.27,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt defense attorney near me",
@@ -8471,7 +9331,8 @@ window.TERMS = {
      "impr": 7,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -8509,7 +9370,8 @@ window.TERMS = {
      "impr": 91,
      "clicks": 11,
      "cost": 87.58,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_active"
     }
    ],
    "top30": 1,
@@ -8548,7 +9410,8 @@ window.TERMS = {
      "impr": 91,
      "clicks": 10,
      "cost": 41.19,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -8586,7 +9449,8 @@ window.TERMS = {
      "impr": 52,
      "clicks": 3,
      "cost": 8.95,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     },
     {
      "text": "how to fight debt collectors",
@@ -8594,7 +9458,8 @@ window.TERMS = {
      "impr": 38,
      "clicks": 1,
      "cost": 3.47,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -8632,7 +9497,8 @@ window.TERMS = {
      "impr": 89,
      "clicks": 2,
      "cost": 7.68,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -8670,7 +9536,8 @@ window.TERMS = {
      "impr": 46,
      "clicks": 3,
      "cost": 45.49,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_general"
     },
     {
      "text": "lawyer for credit card lawsuit near me",
@@ -8678,7 +9545,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     },
     {
      "text": "credit card attorney",
@@ -8686,7 +9554,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 3,
      "cost": 28.84,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_general"
     },
     {
      "text": "attorney for credit card lawsuit near me",
@@ -8694,7 +9563,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 2,
      "cost": 21.82,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "cc_lawsuit"
     },
     {
      "text": "credit card debt lawyers near me",
@@ -8702,7 +9572,8 @@ window.TERMS = {
      "impr": 7,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_general"
     }
    ],
    "scope": "active",
@@ -8740,7 +9611,8 @@ window.TERMS = {
      "impr": 87,
      "clicks": 4,
      "cost": 18.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -8778,7 +9650,8 @@ window.TERMS = {
      "impr": 32,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt attorneys",
@@ -8786,7 +9659,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "collection defense lawyer",
@@ -8794,7 +9668,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "collection attorney",
@@ -8802,7 +9677,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "law office debt collection",
@@ -8810,7 +9686,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -8844,7 +9721,8 @@ window.TERMS = {
      "impr": 52,
      "clicks": 4,
      "cost": 31.26,
-     "conv": 1.5
+     "conv": 1.5,
+     "intent": "lawsuit_summons"
     },
     {
      "text": "how to respond to a lawsuit from a debt collector",
@@ -8852,7 +9730,8 @@ window.TERMS = {
      "impr": 34,
      "clicks": 4,
      "cost": 30.05,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -8890,7 +9769,8 @@ window.TERMS = {
      "impr": 46,
      "clicks": 1,
      "cost": 6.33,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     },
     {
      "text": "how to fight debt collectors",
@@ -8898,7 +9778,8 @@ window.TERMS = {
      "impr": 40,
      "clicks": 1,
      "cost": 6.42,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -8936,7 +9817,8 @@ window.TERMS = {
      "impr": 86,
      "clicks": 11,
      "cost": 55.56,
-     "conv": 1.996
+     "conv": 1.996,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.946,
@@ -8971,7 +9853,8 @@ window.TERMS = {
      "impr": 86,
      "clicks": 4,
      "cost": 26.01,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "top30": 0.718,
@@ -9011,7 +9894,8 @@ window.TERMS = {
      "impr": 67,
      "clicks": 6,
      "cost": 32.92,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     },
     {
      "text": "how to answer a court summons debt collection",
@@ -9019,7 +9903,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 1,
      "cost": 8.46,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -9057,7 +9942,8 @@ window.TERMS = {
      "impr": 85,
      "clicks": 11,
      "cost": 86.94,
-     "conv": 2.0
+     "conv": 2.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.88,
@@ -9097,7 +9983,8 @@ window.TERMS = {
      "impr": 76,
      "clicks": 7,
      "cost": 104.31,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "credit debt lawyers",
@@ -9105,7 +9992,8 @@ window.TERMS = {
      "impr": 8,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -9143,7 +10031,8 @@ window.TERMS = {
      "impr": 41,
      "clicks": 4,
      "cost": 95.17,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "credit debt lawyers",
@@ -9151,7 +10040,8 @@ window.TERMS = {
      "impr": 24,
      "clicks": 2,
      "cost": 22.75,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt litigation attorney",
@@ -9159,7 +10049,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 2,
      "cost": 20.02,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -9198,7 +10089,8 @@ window.TERMS = {
      "impr": 84,
      "clicks": 1,
      "cost": 2.55,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -9232,7 +10124,8 @@ window.TERMS = {
      "impr": 84,
      "clicks": 6,
      "cost": 33.79,
-     "conv": 3.0
+     "conv": 3.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 1,
@@ -9272,7 +10165,8 @@ window.TERMS = {
      "impr": 84,
      "clicks": 4,
      "cost": 22.5,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_dismiss"
     }
    ],
    "top30": 0.813953488372093,
@@ -9311,7 +10205,8 @@ window.TERMS = {
      "impr": 84,
      "clicks": 10,
      "cost": 79.86,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -9349,7 +10244,8 @@ window.TERMS = {
      "impr": 61,
      "clicks": 5,
      "cost": 33.79,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_general"
     },
     {
      "text": "credit card lawyers",
@@ -9357,7 +10253,8 @@ window.TERMS = {
      "impr": 23,
      "clicks": 2,
      "cost": 16.49,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_general"
     }
    ],
    "top30": 0.8918918918918919,
@@ -9396,7 +10293,8 @@ window.TERMS = {
      "impr": 84,
      "clicks": 6,
      "cost": 67.08,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_action"
     }
    ],
    "scope": "active",
@@ -9434,7 +10332,8 @@ window.TERMS = {
      "impr": 83,
      "clicks": 4,
      "cost": 40.66,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -9472,7 +10371,8 @@ window.TERMS = {
      "impr": 30,
      "clicks": 4,
      "cost": 44.3,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "i ve been sued by a debt collector",
@@ -9480,7 +10380,8 @@ window.TERMS = {
      "impr": 29,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "i got sued by a debt collector",
@@ -9488,7 +10389,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 1,
      "cost": 6.11,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "being sued by debt collector",
@@ -9496,7 +10398,8 @@ window.TERMS = {
      "impr": 8,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -9534,7 +10437,8 @@ window.TERMS = {
      "impr": 83,
      "clicks": 4,
      "cost": 49.24,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -9572,7 +10476,8 @@ window.TERMS = {
      "impr": 82,
      "clicks": 1,
      "cost": 7.06,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -9606,7 +10511,8 @@ window.TERMS = {
      "impr": 38,
      "clicks": 6,
      "cost": 53.59,
-     "conv": 4.0
+     "conv": 4.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt collection attorneys near me",
@@ -9614,7 +10520,8 @@ window.TERMS = {
      "impr": 35,
      "clicks": 1,
      "cost": 12.6,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt collection attorney near me",
@@ -9622,7 +10529,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 1,
      "cost": 3.51,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -9656,7 +10564,8 @@ window.TERMS = {
      "impr": 82,
      "clicks": 7,
      "cost": 46.23,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.895,
@@ -9696,7 +10605,8 @@ window.TERMS = {
      "impr": 81,
      "clicks": 7,
      "cost": 45.16,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.9,
@@ -9731,7 +10641,8 @@ window.TERMS = {
      "impr": 81,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -9765,7 +10676,8 @@ window.TERMS = {
      "impr": 71,
      "clicks": 3,
      "cost": 25.8,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_stop"
     },
     {
      "text": "help with wage garnishment",
@@ -9773,7 +10685,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 0.45,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 1,
@@ -9808,7 +10721,8 @@ window.TERMS = {
      "impr": 80,
      "clicks": 6,
      "cost": 76.9,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -9846,7 +10760,8 @@ window.TERMS = {
      "impr": 51,
      "clicks": 4,
      "cost": 72.25,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "collection defense lawyer",
@@ -9854,7 +10769,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 3,
      "cost": 23.29,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "collection defense attorney",
@@ -9862,7 +10778,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 1,
      "cost": 3.67,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -9896,7 +10813,8 @@ window.TERMS = {
      "impr": 60,
      "clicks": 2,
      "cost": 20.42,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt lawsuit lawyer",
@@ -9904,7 +10822,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -9943,7 +10862,8 @@ window.TERMS = {
      "impr": 79,
      "clicks": 6,
      "cost": 8.49,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -9977,7 +10897,8 @@ window.TERMS = {
      "impr": 78,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_buyer"
     }
    ],
    "scope": "active",
@@ -10016,7 +10937,8 @@ window.TERMS = {
      "impr": 41,
      "clicks": 3,
      "cost": 11.54,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "i have been sued by a debt collector",
@@ -10024,7 +10946,8 @@ window.TERMS = {
      "impr": 30,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "i ve been sued by a debt collector",
@@ -10032,7 +10955,8 @@ window.TERMS = {
      "impr": 7,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -10071,7 +10995,8 @@ window.TERMS = {
      "impr": 78,
      "clicks": 3,
      "cost": 8.25,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -10105,7 +11030,8 @@ window.TERMS = {
      "impr": 58,
      "clicks": 4,
      "cost": 9.79,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     },
     {
      "text": "being sued by credit card company",
@@ -10113,7 +11039,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 1,
      "cost": 6.61,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -10151,7 +11078,8 @@ window.TERMS = {
      "impr": 77,
      "clicks": 10,
      "cost": 105.05,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_lawyer"
     }
    ],
    "top30": 0.667,
@@ -10186,7 +11114,8 @@ window.TERMS = {
      "impr": 50,
      "clicks": 2,
      "cost": 10.74,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt collection lawyer near me",
@@ -10194,7 +11123,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "collection defense attorney",
@@ -10202,7 +11132,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 14.26,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -10236,7 +11167,8 @@ window.TERMS = {
      "impr": 49,
      "clicks": 3,
      "cost": 9.66,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "a debt collector is suing me",
@@ -10244,7 +11176,8 @@ window.TERMS = {
      "impr": 26,
      "clicks": 2,
      "cost": 6.02,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -10282,7 +11215,8 @@ window.TERMS = {
      "impr": 56,
      "clicks": 3,
      "cost": 31.36,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "collection defense attorney",
@@ -10290,7 +11224,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 2,
      "cost": 5.38,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt collection defense attorney",
@@ -10298,7 +11233,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "top30": 0.851063829787234,
@@ -10333,7 +11269,8 @@ window.TERMS = {
      "impr": 74,
      "clicks": 4,
      "cost": 11.73,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -10371,7 +11308,8 @@ window.TERMS = {
      "impr": 74,
      "clicks": 3,
      "cost": 13.9,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -10409,7 +11347,8 @@ window.TERMS = {
      "impr": 73,
      "clicks": 5,
      "cost": 23.01,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -10448,7 +11387,8 @@ window.TERMS = {
      "impr": 73,
      "clicks": 6,
      "cost": 30.09,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -10486,7 +11426,8 @@ window.TERMS = {
      "impr": 73,
      "clicks": 2,
      "cost": 45.91,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_buyer"
     }
    ],
    "scope": "active",
@@ -10525,7 +11466,8 @@ window.TERMS = {
      "impr": 50,
      "clicks": 4,
      "cost": 44.55,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "consumer debt defense attorney",
@@ -10533,7 +11475,8 @@ window.TERMS = {
      "impr": 23,
      "clicks": 2,
      "cost": 33.19,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -10571,7 +11514,8 @@ window.TERMS = {
      "impr": 53,
      "clicks": 1,
      "cost": 7.46,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "collection attorney",
@@ -10579,7 +11523,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "collections attorney",
@@ -10587,7 +11532,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 1,
      "cost": 26.03,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -10621,7 +11567,8 @@ window.TERMS = {
      "impr": 35,
      "clicks": 1,
      "cost": 26.15,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "being sued by debt collector",
@@ -10629,7 +11576,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "debt collection lawsuit",
@@ -10637,7 +11585,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 2,
      "cost": 41.74,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -10675,7 +11624,8 @@ window.TERMS = {
      "impr": 22,
      "clicks": 3,
      "cost": 17.66,
-     "conv": 2.0
+     "conv": 2.0,
+     "intent": "garn_stop"
     },
     {
      "text": "how to stop wage garnishments",
@@ -10683,7 +11633,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 3,
      "cost": 30.58,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "stop garnishment",
@@ -10691,7 +11642,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 2,
      "cost": 27.56,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "how to stop a garnishment",
@@ -10699,7 +11651,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 3.7,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "how can i stop my wages from being garnished",
@@ -10707,7 +11660,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.941,
@@ -10746,7 +11700,8 @@ window.TERMS = {
      "impr": 71,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_buyer"
     }
    ],
    "scope": "active",
@@ -10785,7 +11740,8 @@ window.TERMS = {
      "impr": 57,
      "clicks": 2,
      "cost": 11.22,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     },
     {
      "text": "summons for debt collection",
@@ -10793,7 +11749,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -10831,7 +11788,8 @@ window.TERMS = {
      "impr": 50,
      "clicks": 6,
      "cost": 65.13,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "im being sued for a debt what do i do",
@@ -10839,7 +11797,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 2,
      "cost": 27.51,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "being sued by debt collector",
@@ -10847,7 +11806,8 @@ window.TERMS = {
      "impr": 8,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -10885,7 +11845,8 @@ window.TERMS = {
      "impr": 71,
      "clicks": 5,
      "cost": 35.78,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "top30": 0.783,
@@ -10924,7 +11885,8 @@ window.TERMS = {
      "impr": 39,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     },
     {
      "text": "how to fight debt collectors",
@@ -10932,7 +11894,8 @@ window.TERMS = {
      "impr": 31,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -10970,7 +11933,8 @@ window.TERMS = {
      "impr": 42,
      "clicks": 5,
      "cost": 21.38,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     },
     {
      "text": "resurgent capital debt collector",
@@ -10978,7 +11942,8 @@ window.TERMS = {
      "impr": 28,
      "clicks": 5,
      "cost": 37.93,
-     "conv": 2.0
+     "conv": 2.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -11016,7 +11981,8 @@ window.TERMS = {
      "impr": 36,
      "clicks": 2,
      "cost": 8.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     },
     {
      "text": "portfolio recovery debt collectors",
@@ -11024,7 +11990,8 @@ window.TERMS = {
      "impr": 34,
      "clicks": 3,
      "cost": 17.96,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -11062,7 +12029,8 @@ window.TERMS = {
      "impr": 35,
      "clicks": 4,
      "cost": 30.66,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_general"
     },
     {
      "text": "credit card debt lawyers near me",
@@ -11070,7 +12038,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 3,
      "cost": 27.16,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "cc_general"
     },
     {
      "text": "lawyer for credit card lawsuit near me",
@@ -11078,7 +12047,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 4,
      "cost": 35.49,
-     "conv": 4.0
+     "conv": 4.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -11116,7 +12086,8 @@ window.TERMS = {
      "impr": 25,
      "clicks": 1,
      "cost": 11.14,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt lawsuit attorney",
@@ -11124,7 +12095,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 2,
      "cost": 8.98,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "lawyer for debt lawsuit",
@@ -11132,7 +12104,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 3,
      "cost": 22.91,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "attorney for debt collection lawsuit",
@@ -11140,7 +12113,8 @@ window.TERMS = {
      "impr": 8,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -11178,7 +12152,8 @@ window.TERMS = {
      "impr": 69,
      "clicks": 2,
      "cost": 6.03,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "top30": 0.7142857142857143,
@@ -11213,7 +12188,8 @@ window.TERMS = {
      "impr": 69,
      "clicks": 10,
      "cost": 94.04,
-     "conv": 1.667
+     "conv": 1.667,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.938,
@@ -11253,7 +12229,8 @@ window.TERMS = {
      "impr": 52,
      "clicks": 3,
      "cost": 26.06,
-     "conv": 2.275
+     "conv": 2.275,
+     "intent": "garn_active"
     },
     {
      "text": "help with garnishment",
@@ -11261,7 +12238,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 1,
      "cost": 3.42,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -11299,7 +12277,8 @@ window.TERMS = {
      "impr": 49,
      "clicks": 2,
      "cost": 18.45,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     },
     {
      "text": "garnered wages",
@@ -11307,7 +12286,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "top30": 0.5,
@@ -11342,7 +12322,8 @@ window.TERMS = {
      "impr": 67,
      "clicks": 7,
      "cost": 40.52,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_general"
     }
    ],
    "scope": "active",
@@ -11380,7 +12361,8 @@ window.TERMS = {
      "impr": 66,
      "clicks": 7,
      "cost": 105.58,
-     "conv": 2.0
+     "conv": 2.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -11418,7 +12400,8 @@ window.TERMS = {
      "impr": 40,
      "clicks": 2,
      "cost": 9.8,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     },
     {
      "text": "how to fight debt collectors",
@@ -11426,7 +12409,8 @@ window.TERMS = {
      "impr": 26,
      "clicks": 2,
      "cost": 24.24,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -11464,7 +12448,8 @@ window.TERMS = {
      "impr": 31,
      "clicks": 1,
      "cost": 12.21,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt defense attorney",
@@ -11472,7 +12457,8 @@ window.TERMS = {
      "impr": 21,
      "clicks": 1,
      "cost": 8.09,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "collection defense",
@@ -11480,7 +12466,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -11518,7 +12505,8 @@ window.TERMS = {
      "impr": 66,
      "clicks": 12,
      "cost": 37.91,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -11552,7 +12540,8 @@ window.TERMS = {
      "impr": 51,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "help with wage garnishment",
@@ -11560,7 +12549,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 1,
      "cost": 5.58,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.727,
@@ -11595,7 +12585,8 @@ window.TERMS = {
      "impr": 66,
      "clicks": 13,
      "cost": 81.11,
-     "conv": 4.0
+     "conv": 4.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -11634,7 +12625,8 @@ window.TERMS = {
      "impr": 66,
      "clicks": 7,
      "cost": 32.58,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -11673,7 +12665,8 @@ window.TERMS = {
      "impr": 49,
      "clicks": 8,
      "cost": 50.89,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "how to fight a garnishment",
@@ -11681,7 +12674,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 2,
      "cost": 9.66,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "top30": 1,
@@ -11721,7 +12715,8 @@ window.TERMS = {
      "impr": 36,
      "clicks": 4,
      "cost": 23.7,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_active"
     },
     {
      "text": "how to fight a garnishment",
@@ -11729,7 +12724,8 @@ window.TERMS = {
      "impr": 30,
      "clicks": 6,
      "cost": 35.57,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "top30": 0.929,
@@ -11768,7 +12764,8 @@ window.TERMS = {
      "impr": 65,
      "clicks": 4,
      "cost": 91.98,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -11806,7 +12803,8 @@ window.TERMS = {
      "impr": 55,
      "clicks": 1,
      "cost": 6.59,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "debt collection lawsuit",
@@ -11814,7 +12812,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -11852,7 +12851,8 @@ window.TERMS = {
      "impr": 55,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "being sued by debt collector",
@@ -11860,7 +12860,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 2.61,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -11898,7 +12899,8 @@ window.TERMS = {
      "impr": 47,
      "clicks": 4,
      "cost": 40.74,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt lawsuit attorney",
@@ -11906,7 +12908,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -11944,7 +12947,8 @@ window.TERMS = {
      "impr": 40,
      "clicks": 5,
      "cost": 63.94,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "lawyer for debt lawsuit",
@@ -11952,7 +12956,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 1,
      "cost": 27.65,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "credit debt lawyers",
@@ -11960,7 +12965,8 @@ window.TERMS = {
      "impr": 8,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "top30": 0.8913043478260869,
@@ -11999,7 +13005,8 @@ window.TERMS = {
      "impr": 44,
      "clicks": 1,
      "cost": 0.1,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt collection practices",
@@ -12007,7 +13014,8 @@ window.TERMS = {
      "impr": 21,
      "clicks": 1,
      "cost": 0.14,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -12041,7 +13049,8 @@ window.TERMS = {
      "impr": 64,
      "clicks": 5,
      "cost": 20.86,
-     "conv": 0.393
+     "conv": 0.393,
+     "intent": "garn_active"
     }
    ],
    "top30": 0.75,
@@ -12080,7 +13089,8 @@ window.TERMS = {
      "impr": 50,
      "clicks": 6,
      "cost": 31.84,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "can a garnishment be stopped",
@@ -12088,7 +13098,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 3,
      "cost": 20.1,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.923,
@@ -12127,7 +13138,8 @@ window.TERMS = {
      "impr": 43,
      "clicks": 3,
      "cost": 12.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     },
     {
      "text": "help with garnished wages",
@@ -12135,7 +13147,8 @@ window.TERMS = {
      "impr": 21,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "top30": 0.762,
@@ -12174,7 +13187,8 @@ window.TERMS = {
      "impr": 29,
      "clicks": 3,
      "cost": 25.81,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     },
     {
      "text": "help with garnished wages",
@@ -12182,7 +13196,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 3,
      "cost": 24.67,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     },
     {
      "text": "stop garnishment",
@@ -12190,7 +13205,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 6,
      "cost": 73.69,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 1,
@@ -12230,7 +13246,8 @@ window.TERMS = {
      "impr": 52,
      "clicks": 6,
      "cost": 27.58,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     },
     {
      "text": "how to answer a debt summons",
@@ -12238,7 +13255,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 13.38,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -12276,7 +13294,8 @@ window.TERMS = {
      "impr": 38,
      "clicks": 1,
      "cost": 4.01,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "how to fight debt collectors",
@@ -12284,7 +13303,8 @@ window.TERMS = {
      "impr": 24,
      "clicks": 4,
      "cost": 16.35,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -12322,7 +13342,8 @@ window.TERMS = {
      "impr": 51,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt lawsuit lawyer",
@@ -12330,7 +13351,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 22.14,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -12370,7 +13392,8 @@ window.TERMS = {
      "impr": 34,
      "clicks": 3,
      "cost": 10.58,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "midland credit management suing me",
@@ -12378,7 +13401,8 @@ window.TERMS = {
      "impr": 27,
      "clicks": 2,
      "cost": 9.21,
-     "conv": 2.0
+     "conv": 2.0,
+     "intent": "debt_buyer"
     }
    ],
    "scope": "active",
@@ -12416,7 +13440,8 @@ window.TERMS = {
      "impr": 61,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -12450,7 +13475,8 @@ window.TERMS = {
      "impr": 52,
      "clicks": 4,
      "cost": 60.86,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "collection defense lawyer",
@@ -12458,7 +13484,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 2,
      "cost": 19.21,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -12492,7 +13519,8 @@ window.TERMS = {
      "impr": 48,
      "clicks": 2,
      "cost": 5.35,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_action"
     },
     {
      "text": "sue debt collector",
@@ -12500,7 +13528,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_action"
     }
    ],
    "scope": "active",
@@ -12538,7 +13567,8 @@ window.TERMS = {
      "impr": 60,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "top30": 0.6571428571428571,
@@ -12577,7 +13607,8 @@ window.TERMS = {
      "impr": 53,
      "clicks": 3,
      "cost": 13.11,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_buyer"
     },
     {
      "text": "being sued by debt collector",
@@ -12585,7 +13616,8 @@ window.TERMS = {
      "impr": 7,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -12624,7 +13656,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 2,
      "cost": 32.99,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt lawsuit lawyer",
@@ -12632,7 +13665,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "attorney for debt lawsuit",
@@ -12640,7 +13674,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "lawyer for debt lawsuit",
@@ -12648,7 +13683,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 1,
      "cost": 12.73,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -12687,7 +13723,8 @@ window.TERMS = {
      "impr": 27,
      "clicks": 1,
      "cost": 2.52,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     },
     {
      "text": "pay garnishment",
@@ -12695,7 +13732,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     },
     {
      "text": "garnered wages",
@@ -12703,7 +13741,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     },
     {
      "text": "paycheck garnishment",
@@ -12711,7 +13750,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "top30": 0.8,
@@ -12746,7 +13786,8 @@ window.TERMS = {
      "impr": 41,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "how to stop a garnishment",
@@ -12754,7 +13795,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 1,
      "cost": 5.48,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -12792,7 +13834,8 @@ window.TERMS = {
      "impr": 60,
      "clicks": 10,
      "cost": 67.81,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -12830,7 +13873,8 @@ window.TERMS = {
      "impr": 40,
      "clicks": 3,
      "cost": 89.11,
-     "conv": 7.0
+     "conv": 7.0,
+     "intent": "lawsuit_summons"
     },
     {
      "text": "summons for debt collection",
@@ -12838,7 +13882,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 3,
      "cost": 18.07,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -12876,7 +13921,8 @@ window.TERMS = {
      "impr": 27,
      "clicks": 4,
      "cost": 53.35,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt lawsuit lawyer",
@@ -12884,7 +13930,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 1,
      "cost": 20.86,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "attorney for debt collection lawsuit",
@@ -12892,7 +13939,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -12930,7 +13978,8 @@ window.TERMS = {
      "impr": 59,
      "clicks": 4,
      "cost": 10.64,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -12968,7 +14017,8 @@ window.TERMS = {
      "impr": 45,
      "clicks": 11,
      "cost": 58.45,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "how to stop a garnishment",
@@ -12976,7 +14026,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 1,
      "cost": 4.17,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -13015,7 +14066,8 @@ window.TERMS = {
      "impr": 59,
      "clicks": 6,
      "cost": 25.08,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -13053,7 +14105,8 @@ window.TERMS = {
      "impr": 43,
      "clicks": 9,
      "cost": 60.46,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "collector_name"
     },
     {
      "text": "portfolio recovery debt collectors",
@@ -13061,7 +14114,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -13099,7 +14153,8 @@ window.TERMS = {
      "impr": 58,
      "clicks": 8,
      "cost": 108.81,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -13137,7 +14192,8 @@ window.TERMS = {
      "impr": 46,
      "clicks": 3,
      "cost": 24.66,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     },
     {
      "text": "im being sued for a debt what do i do",
@@ -13145,7 +14201,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -13183,7 +14240,8 @@ window.TERMS = {
      "impr": 34,
      "clicks": 3,
      "cost": 33.82,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt defense attorney",
@@ -13191,7 +14249,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 3,
      "cost": 15.52,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "attorney for debt collection lawsuit",
@@ -13199,7 +14258,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -13237,7 +14297,8 @@ window.TERMS = {
      "impr": 24,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     },
     {
      "text": "help with wage garnishment",
@@ -13245,7 +14306,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 5,
      "cost": 14.59,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "stop wage garnishment immediately",
@@ -13253,7 +14315,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 3,
      "cost": 33.6,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.909,
@@ -13288,7 +14351,8 @@ window.TERMS = {
      "impr": 24,
      "clicks": 1,
      "cost": 6.19,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     },
     {
      "text": "help with wage garnishment",
@@ -13296,7 +14360,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 1,
      "cost": 17.56,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "pay garnishment",
@@ -13304,7 +14369,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "top30": 1,
@@ -13339,7 +14405,8 @@ window.TERMS = {
      "impr": 57,
      "clicks": 3,
      "cost": 63.7,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -13377,7 +14444,8 @@ window.TERMS = {
      "impr": 37,
      "clicks": 1,
      "cost": 2.72,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     },
     {
      "text": "summons for debt collection",
@@ -13385,7 +14453,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 2,
      "cost": 8.45,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -13423,7 +14492,8 @@ window.TERMS = {
      "impr": 31,
      "clicks": 2,
      "cost": 12.67,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "i got sued by a debt collector",
@@ -13431,7 +14501,8 @@ window.TERMS = {
      "impr": 26,
      "clicks": 3,
      "cost": 23.67,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -13469,7 +14540,8 @@ window.TERMS = {
      "impr": 57,
      "clicks": 5,
      "cost": 19.87,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "top30": 0.8,
@@ -13505,7 +14577,8 @@ window.TERMS = {
      "impr": 42,
      "clicks": 1,
      "cost": 7.75,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     },
     {
      "text": "garnered wages",
@@ -13513,7 +14586,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "top30": 0.533,
@@ -13548,7 +14622,8 @@ window.TERMS = {
      "impr": 34,
      "clicks": 6,
      "cost": 45.69,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "stop wage garnishment immediately",
@@ -13556,7 +14631,8 @@ window.TERMS = {
      "impr": 23,
      "clicks": 2,
      "cost": 20.27,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 1,
@@ -13591,7 +14667,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt attorneys",
@@ -13599,7 +14676,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "law office debt collection",
@@ -13607,7 +14685,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "collection attorney",
@@ -13615,7 +14694,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -13649,7 +14729,8 @@ window.TERMS = {
      "impr": 48,
      "clicks": 7,
      "cost": 67.0,
-     "conv": 0.25
+     "conv": 0.25,
+     "intent": "cc_lawsuit"
     },
     {
      "text": "attorney for credit card lawsuit",
@@ -13657,7 +14738,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -13695,7 +14777,8 @@ window.TERMS = {
      "impr": 33,
      "clicks": 1,
      "cost": 3.19,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     },
     {
      "text": "portfolio recovery debt collector",
@@ -13703,7 +14786,8 @@ window.TERMS = {
      "impr": 24,
      "clicks": 4,
      "cost": 15.38,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -13741,7 +14825,8 @@ window.TERMS = {
      "impr": 56,
      "clicks": 3,
      "cost": 58.5,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -13779,7 +14864,8 @@ window.TERMS = {
      "impr": 46,
      "clicks": 7,
      "cost": 76.74,
-     "conv": 2.0
+     "conv": 2.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt litigation attorney",
@@ -13787,7 +14873,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 4.83,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -13825,7 +14912,8 @@ window.TERMS = {
      "impr": 34,
      "clicks": 2,
      "cost": 40.85,
-     "conv": 4.0
+     "conv": 4.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "attorney for debt collection lawsuit",
@@ -13833,7 +14921,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 3,
      "cost": 26.75,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt defense attorney",
@@ -13841,7 +14930,8 @@ window.TERMS = {
      "impr": 7,
      "clicks": 1,
      "cost": 22.17,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -13879,7 +14969,8 @@ window.TERMS = {
      "impr": 46,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     },
     {
      "text": "help with garnishment",
@@ -13887,7 +14978,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 2,
      "cost": 21.38,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -13926,7 +15018,8 @@ window.TERMS = {
      "impr": 26,
      "clicks": 4,
      "cost": 26.44,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "can a garnishment be stopped",
@@ -13934,7 +15027,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 1,
      "cost": 2.75,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "stop garnishment",
@@ -13942,7 +15036,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 2,
      "cost": 14.11,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "how to stop a garnishment",
@@ -13950,7 +15045,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 1,
      "cost": 6.1,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.895,
@@ -13989,7 +15085,8 @@ window.TERMS = {
      "impr": 48,
      "clicks": 4,
      "cost": 37.9,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt defense lawyer near me",
@@ -13997,7 +15094,8 @@ window.TERMS = {
      "impr": 7,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -14035,7 +15133,8 @@ window.TERMS = {
      "impr": 54,
      "clicks": 5,
      "cost": 37.97,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -14073,7 +15172,8 @@ window.TERMS = {
      "impr": 43,
      "clicks": 2,
      "cost": 20.23,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "collection defense",
@@ -14081,7 +15181,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -14119,7 +15220,8 @@ window.TERMS = {
      "impr": 54,
      "clicks": 2,
      "cost": 29.51,
-     "conv": 1.996
+     "conv": 1.996,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -14153,7 +15255,8 @@ window.TERMS = {
      "impr": 43,
      "clicks": 2,
      "cost": 7.85,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "collection lawyer near me",
@@ -14161,7 +15264,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -14195,7 +15299,8 @@ window.TERMS = {
      "impr": 42,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     },
     {
      "text": "help with wage garnishment",
@@ -14203,7 +15308,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.7,
@@ -14238,7 +15344,8 @@ window.TERMS = {
      "impr": 39,
      "clicks": 4,
      "cost": 30.41,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "help with wage garnishment",
@@ -14246,7 +15353,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.917,
@@ -14281,7 +15389,8 @@ window.TERMS = {
      "impr": 23,
      "clicks": 1,
      "cost": 2.91,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt lawyers",
@@ -14289,7 +15398,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "law office debt collection",
@@ -14297,7 +15407,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -14330,7 +15441,8 @@ window.TERMS = {
      "impr": 34,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "how to fight a garnishment",
@@ -14338,7 +15450,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "top30": 0.87,
@@ -14377,7 +15490,8 @@ window.TERMS = {
      "impr": 32,
      "clicks": 9,
      "cost": 45.83,
-     "conv": 0.5
+     "conv": 0.5,
+     "intent": "garn_active"
     },
     {
      "text": "stop garnishment",
@@ -14385,7 +15499,8 @@ window.TERMS = {
      "impr": 22,
      "clicks": 5,
      "cost": 15.59,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.895,
@@ -14425,7 +15540,8 @@ window.TERMS = {
      "impr": 54,
      "clicks": 3,
      "cost": 33.2,
-     "conv": 0.5
+     "conv": 0.5,
+     "intent": "cc_general"
     }
    ],
    "scope": "active",
@@ -14463,7 +15579,8 @@ window.TERMS = {
      "impr": 44,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "debt collection lawsuit",
@@ -14471,7 +15588,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 1,
      "cost": 11.67,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -14509,7 +15627,8 @@ window.TERMS = {
      "impr": 38,
      "clicks": 2,
      "cost": 16.63,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "i ve been sued by a debt collector",
@@ -14517,7 +15636,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -14556,7 +15676,8 @@ window.TERMS = {
      "impr": 32,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     },
     {
      "text": "how to fight debt collectors",
@@ -14564,7 +15685,8 @@ window.TERMS = {
      "impr": 21,
      "clicks": 2,
      "cost": 5.16,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -14602,7 +15724,8 @@ window.TERMS = {
      "impr": 30,
      "clicks": 4,
      "cost": 44.01,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt lawsuit lawyer",
@@ -14610,7 +15733,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 1,
      "cost": 8.25,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt collection defense attorney",
@@ -14618,7 +15742,8 @@ window.TERMS = {
      "impr": 8,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -14656,7 +15781,8 @@ window.TERMS = {
      "impr": 53,
      "clicks": 9,
      "cost": 91.1,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -14690,7 +15816,8 @@ window.TERMS = {
      "impr": 53,
      "clicks": 2,
      "cost": 7.17,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -14724,7 +15851,8 @@ window.TERMS = {
      "impr": 38,
      "clicks": 2,
      "cost": 9.85,
-     "conv": 0.5
+     "conv": 0.5,
+     "intent": "garn_stop"
     },
     {
      "text": "help with wage garnishment",
@@ -14732,7 +15860,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.955,
@@ -14767,7 +15896,8 @@ window.TERMS = {
      "impr": 39,
      "clicks": 7,
      "cost": 79.92,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "cc_lawsuit"
     },
     {
      "text": "credit card lawyers",
@@ -14775,7 +15905,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 1,
      "cost": 7.59,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_general"
     }
    ],
    "scope": "active",
@@ -14813,7 +15944,8 @@ window.TERMS = {
      "impr": 30,
      "clicks": 3,
      "cost": 11.74,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     },
     {
      "text": "portfolio recovery debt collectors",
@@ -14821,7 +15953,8 @@ window.TERMS = {
      "impr": 23,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -14859,7 +15992,8 @@ window.TERMS = {
      "impr": 44,
      "clicks": 3,
      "cost": 15.05,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_summons"
     },
     {
      "text": "debt collection lawsuit defense",
@@ -14867,7 +16001,8 @@ window.TERMS = {
      "impr": 8,
      "clicks": 1,
      "cost": 12.38,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -14905,7 +16040,8 @@ window.TERMS = {
      "impr": 52,
      "clicks": 8,
      "cost": 58.0,
-     "conv": 2.0
+     "conv": 2.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.969,
@@ -14940,7 +16076,8 @@ window.TERMS = {
      "impr": 52,
      "clicks": 4,
      "cost": 12.17,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.762,
@@ -14975,7 +16112,8 @@ window.TERMS = {
      "impr": 52,
      "clicks": 5,
      "cost": 27.01,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -15013,7 +16151,8 @@ window.TERMS = {
      "impr": 51,
      "clicks": 2,
      "cost": 15.94,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -15051,7 +16190,8 @@ window.TERMS = {
      "impr": 23,
      "clicks": 2,
      "cost": 13.34,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "being sued by debt collector",
@@ -15059,7 +16199,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 4,
      "cost": 56.2,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "a debt collector is suing me",
@@ -15067,7 +16208,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 1,
      "cost": 9.86,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -15105,7 +16247,8 @@ window.TERMS = {
      "impr": 51,
      "clicks": 8,
      "cost": 49.08,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -15139,7 +16282,8 @@ window.TERMS = {
      "impr": 42,
      "clicks": 9,
      "cost": 46.66,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "how can i stop my wages from being garnished",
@@ -15147,7 +16291,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 2,
      "cost": 15.91,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -15186,7 +16331,8 @@ window.TERMS = {
      "impr": 40,
      "clicks": 4,
      "cost": 18.21,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_stop"
     },
     {
      "text": "how to stop wage garnishment",
@@ -15194,7 +16340,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 3,
      "cost": 11.71,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.969,
@@ -15234,7 +16381,8 @@ window.TERMS = {
      "impr": 27,
      "clicks": 4,
      "cost": 44.64,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_general"
     },
     {
      "text": "credit card debt attorney",
@@ -15242,7 +16390,8 @@ window.TERMS = {
      "impr": 24,
      "clicks": 2,
      "cost": 48.51,
-     "conv": 1.003
+     "conv": 1.003,
+     "intent": "cc_general"
     }
    ],
    "scope": "active",
@@ -15280,7 +16429,8 @@ window.TERMS = {
      "impr": 51,
      "clicks": 11,
      "cost": 162.48,
-     "conv": 2.0
+     "conv": 2.0,
+     "intent": "fdcpa_action"
     }
    ],
    "scope": "active",
@@ -15318,7 +16468,8 @@ window.TERMS = {
      "impr": 50,
      "clicks": 4,
      "cost": 15.12,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -15356,7 +16507,8 @@ window.TERMS = {
      "impr": 28,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt lawsuit lawyer",
@@ -15364,7 +16516,8 @@ window.TERMS = {
      "impr": 22,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -15403,7 +16556,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 1,
      "cost": 9.96,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "attorney for debt collection lawsuit",
@@ -15411,7 +16565,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 7,
      "cost": 52.48,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "attorney for debt collection lawsuit",
@@ -15419,13 +16574,14 @@ window.TERMS = {
      "impr": 11,
      "clicks": 3,
      "cost": 77.32,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
-   "intent": "debt_relief",
+   "intent": "debt_lawyer",
    "debtType": "General",
-   "best": "NSET",
+   "best": "CD",
    "current": [
     {
      "page": "RT",
@@ -15438,10 +16594,9 @@ window.TERMS = {
    ],
    "bestShare": 0,
    "dup": false,
-   "interim": "RT",
-   "action": "new_page",
-   "actionText": "Now: keep /debt-lawsuit-respond-on-time. When the new page is built: S_Lawsuit_NW › Settlement_Attorney (new).",
-   "home": "S_Lawsuit_NW|Settlement_Attorney (new)"
+   "action": "move",
+   "actionText": "Move the term to S_All-States › Debt Collector, whose ad lands on the best page.",
+   "home": "S_All-States|Debt Collector"
   },
   {
    "campaign": "S_All-States",
@@ -15458,7 +16613,8 @@ window.TERMS = {
      "impr": 24,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "consumer debt attorney near me",
@@ -15466,7 +16622,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 2,
      "cost": 14.66,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "collection defense attorney",
@@ -15474,7 +16631,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -15508,7 +16666,8 @@ window.TERMS = {
      "impr": 36,
      "clicks": 5,
      "cost": 17.97,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "how can i stop my wages from being garnished",
@@ -15516,7 +16675,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 6,
      "cost": 53.6,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.938,
@@ -15556,7 +16716,8 @@ window.TERMS = {
      "impr": 29,
      "clicks": 4,
      "cost": 41.44,
-     "conv": 0.667
+     "conv": 0.667,
+     "intent": "garn_stop"
     },
     {
      "text": "can a garnishment be stopped",
@@ -15564,7 +16725,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 1,
      "cost": 11.78,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_stop"
     },
     {
      "text": "how to fight a garnishment",
@@ -15572,7 +16734,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "top30": 0.643,
@@ -15612,7 +16775,8 @@ window.TERMS = {
      "impr": 50,
      "clicks": 1,
      "cost": 3.86,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -15650,7 +16814,8 @@ window.TERMS = {
      "impr": 49,
      "clicks": 2,
      "cost": 11.45,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -15688,7 +16853,8 @@ window.TERMS = {
      "impr": 25,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     },
     {
      "text": "pay garnishment",
@@ -15696,7 +16862,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 1,
      "cost": 1.48,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     },
     {
      "text": "paycheck garnishment",
@@ -15704,7 +16871,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 1,
      "cost": 4.92,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "top30": 0.833,
@@ -15740,7 +16908,8 @@ window.TERMS = {
      "impr": 25,
      "clicks": 2,
      "cost": 31.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_options"
     },
     {
      "text": "judgement lawyers",
@@ -15748,7 +16917,8 @@ window.TERMS = {
      "impr": 24,
      "clicks": 4,
      "cost": 47.15,
-     "conv": 3.0
+     "conv": 3.0,
+     "intent": "lawsuit_options"
     }
    ],
    "scope": "active",
@@ -15782,7 +16952,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 2,
      "cost": 28.4,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt lawsuit attorney near me",
@@ -15790,7 +16961,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 5,
      "cost": 65.2,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt defense attorney near me",
@@ -15798,7 +16970,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 12.44,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -15836,7 +17009,8 @@ window.TERMS = {
      "impr": 48,
      "clicks": 4,
      "cost": 31.71,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -15870,7 +17044,8 @@ window.TERMS = {
      "impr": 48,
      "clicks": 1,
      "cost": 1.51,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -15904,7 +17079,8 @@ window.TERMS = {
      "impr": 48,
      "clicks": 6,
      "cost": 22.36,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -15943,7 +17119,8 @@ window.TERMS = {
      "impr": 48,
      "clicks": 4,
      "cost": 39.79,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -15981,7 +17158,8 @@ window.TERMS = {
      "impr": 47,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "top30": 0.9354838709677419,
@@ -16019,7 +17197,8 @@ window.TERMS = {
      "impr": 47,
      "clicks": 2,
      "cost": 12.43,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -16057,7 +17236,8 @@ window.TERMS = {
      "impr": 39,
      "clicks": 7,
      "cost": 29.44,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_summons"
     },
     {
      "text": "how to fight debt collectors",
@@ -16065,7 +17245,8 @@ window.TERMS = {
      "impr": 8,
      "clicks": 1,
      "cost": 10.07,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -16103,7 +17284,8 @@ window.TERMS = {
      "impr": 24,
      "clicks": 2,
      "cost": 8.77,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "i have been sued by a debt collector",
@@ -16111,7 +17293,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 2,
      "cost": 13.06,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "i ve been sued by a debt collector",
@@ -16119,7 +17302,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -16157,7 +17341,8 @@ window.TERMS = {
      "impr": 47,
      "clicks": 4,
      "cost": 22.06,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -16191,7 +17376,8 @@ window.TERMS = {
      "impr": 47,
      "clicks": 6,
      "cost": 14.63,
-     "conv": 0.5
+     "conv": 0.5,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -16225,7 +17411,8 @@ window.TERMS = {
      "impr": 47,
      "clicks": 1,
      "cost": 2.53,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -16263,7 +17450,8 @@ window.TERMS = {
      "impr": 46,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -16301,7 +17489,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 6,
      "cost": 37.5,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt lawsuit lawyer",
@@ -16309,7 +17498,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 3,
      "cost": 30.51,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "attorney for debt collection lawsuit",
@@ -16317,7 +17507,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -16355,7 +17546,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt lawsuit attorney",
@@ -16363,7 +17555,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 2,
      "cost": 34.11,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "attorney for debt collection lawsuit",
@@ -16371,7 +17564,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "collection defense lawyer",
@@ -16379,7 +17573,8 @@ window.TERMS = {
      "impr": 8,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -16417,7 +17612,8 @@ window.TERMS = {
      "impr": 46,
      "clicks": 8,
      "cost": 31.45,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -16456,7 +17652,8 @@ window.TERMS = {
      "impr": 46,
      "clicks": 2,
      "cost": 17.57,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_active"
     }
    ],
    "top30": 0.484,
@@ -16496,7 +17693,8 @@ window.TERMS = {
      "impr": 46,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -16534,7 +17732,8 @@ window.TERMS = {
      "impr": 46,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -16572,7 +17771,8 @@ window.TERMS = {
      "impr": 46,
      "clicks": 7,
      "cost": 49.17,
-     "conv": 2.0
+     "conv": 2.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -16610,7 +17810,8 @@ window.TERMS = {
      "impr": 39,
      "clicks": 1,
      "cost": 3.52,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     },
     {
      "text": "summons for credit card debt",
@@ -16618,7 +17819,8 @@ window.TERMS = {
      "impr": 7,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -16656,7 +17858,8 @@ window.TERMS = {
      "impr": 34,
      "clicks": 1,
      "cost": 16.68,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     },
     {
      "text": "portfolio recovery debt collectors",
@@ -16664,7 +17867,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -16702,7 +17906,8 @@ window.TERMS = {
      "impr": 46,
      "clicks": 22,
      "cost": 61.54,
-     "conv": 3.5
+     "conv": 3.5,
+     "intent": "brand"
     }
    ],
    "top30": 0.9210526315789473,
@@ -16737,7 +17942,8 @@ window.TERMS = {
      "impr": 45,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -16775,7 +17981,8 @@ window.TERMS = {
      "impr": 36,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "being sued by debt collector",
@@ -16783,7 +17990,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 2,
      "cost": 7.15,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -16821,7 +18029,8 @@ window.TERMS = {
      "impr": 30,
      "clicks": 2,
      "cost": 22.18,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt lawsuit lawyer",
@@ -16829,7 +18038,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 2,
      "cost": 26.01,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -16867,7 +18077,8 @@ window.TERMS = {
      "impr": 32,
      "clicks": 1,
      "cost": 2.08,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_exempt"
     },
     {
      "text": "help with wage garnishment",
@@ -16875,7 +18086,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 1,
      "cost": 9.96,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.647,
@@ -16910,7 +18122,8 @@ window.TERMS = {
      "impr": 45,
      "clicks": 10,
      "cost": 125.58,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -16949,7 +18162,8 @@ window.TERMS = {
      "impr": 45,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -16987,7 +18201,8 @@ window.TERMS = {
      "impr": 44,
      "clicks": 5,
      "cost": 28.65,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -17025,7 +18240,8 @@ window.TERMS = {
      "impr": 44,
      "clicks": 6,
      "cost": 70.45,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.905,
@@ -17061,7 +18277,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "collection attorney",
@@ -17069,7 +18286,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 1,
      "cost": 5.53,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "collection defense attorney",
@@ -17077,7 +18295,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 1,
      "cost": 9.9,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "collection defense lawyer",
@@ -17085,7 +18304,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -17119,7 +18339,8 @@ window.TERMS = {
      "impr": 43,
      "clicks": 4,
      "cost": 33.88,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -17157,7 +18378,8 @@ window.TERMS = {
      "impr": 43,
      "clicks": 2,
      "cost": 19.34,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -17195,7 +18417,8 @@ window.TERMS = {
      "impr": 30,
      "clicks": 2,
      "cost": 15.39,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt lawsuit defense attorney near me",
@@ -17203,7 +18426,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "top30": 0.7586206896551724,
@@ -17242,7 +18466,8 @@ window.TERMS = {
      "impr": 43,
      "clicks": 3,
      "cost": 45.04,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_lawyer"
     }
    ],
    "top30": 0.889,
@@ -17277,7 +18502,8 @@ window.TERMS = {
      "impr": 43,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "top30": 0.857,
@@ -17312,7 +18538,8 @@ window.TERMS = {
      "impr": 26,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt attorneys",
@@ -17320,7 +18547,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -17355,7 +18583,8 @@ window.TERMS = {
      "impr": 43,
      "clicks": 5,
      "cost": 37.86,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_lawyer"
     }
    ],
    "top30": 0.826,
@@ -17394,7 +18623,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 3,
      "cost": 12.78,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "how to stop wage garnishments",
@@ -17402,7 +18632,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 3,
      "cost": 11.08,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "can a garnishment be stopped",
@@ -17410,7 +18641,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 1,
      "cost": 1.18,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 1,
@@ -17450,7 +18682,8 @@ window.TERMS = {
      "impr": 43,
      "clicks": 1,
      "cost": 2.4,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -17488,7 +18721,8 @@ window.TERMS = {
      "impr": 28,
      "clicks": 1,
      "cost": 1.96,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     },
     {
      "text": "portfolio recovery debt collector",
@@ -17496,7 +18730,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -17534,7 +18769,8 @@ window.TERMS = {
      "impr": 43,
      "clicks": 4,
      "cost": 47.36,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "fdcpa_action"
     }
    ],
    "scope": "active",
@@ -17572,7 +18808,8 @@ window.TERMS = {
      "impr": 31,
      "clicks": 5,
      "cost": 43.16,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_action"
     },
     {
      "text": "sue debt collector",
@@ -17580,13 +18817,14 @@ window.TERMS = {
      "impr": 12,
      "clicks": 4,
      "cost": 23.37,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_action"
     }
    ],
    "scope": "active",
-   "intent": "lawsuit_sued",
-   "debtType": "Lawsuit",
-   "best": "RT",
+   "intent": "fdcpa_action",
+   "debtType": "Harassment",
+   "best": "FA",
    "current": [
     {
      "page": "FA",
@@ -17597,11 +18835,11 @@ window.TERMS = {
      "share": 26
     }
    ],
-   "bestShare": 0,
+   "bestShare": 74,
    "dup": false,
-   "action": "move",
-   "actionText": "Move the term to S_Lawsuit_NW › Collection_Lawsuit, whose ad lands on the best page.",
-   "home": "S_Lawsuit_NW|Collection_Lawsuit"
+   "action": "keep",
+   "actionText": "Keep: already on the best page.",
+   "home": "S_Harassment_NW|FDCPA_Harassment"
   },
   {
    "campaign": "S_Lawsuit_NW",
@@ -17618,7 +18856,8 @@ window.TERMS = {
      "impr": 29,
      "clicks": 3,
      "cost": 17.97,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     },
     {
      "text": "how to answer a court summons debt collection",
@@ -17626,7 +18865,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 2,
      "cost": 24.2,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -17664,7 +18904,8 @@ window.TERMS = {
      "impr": 22,
      "clicks": 3,
      "cost": 42.86,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt defense lawyer near me",
@@ -17672,7 +18913,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 1,
      "cost": 24.08,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -17710,7 +18952,8 @@ window.TERMS = {
      "impr": 42,
      "clicks": 3,
      "cost": 33.07,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -17744,7 +18987,8 @@ window.TERMS = {
      "impr": 42,
      "clicks": 6,
      "cost": 61.43,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -17778,7 +19022,8 @@ window.TERMS = {
      "impr": 42,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -17812,7 +19057,8 @@ window.TERMS = {
      "impr": 23,
      "clicks": 4,
      "cost": 40.12,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_lawyer"
     },
     {
      "text": "wage garnishment attorney",
@@ -17820,7 +19066,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 4,
      "cost": 46.25,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_lawyer"
     }
    ],
    "top30": 0.909,
@@ -17855,7 +19102,8 @@ window.TERMS = {
      "impr": 42,
      "clicks": 2,
      "cost": 18.15,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -17893,7 +19141,8 @@ window.TERMS = {
      "impr": 42,
      "clicks": 5,
      "cost": 89.04,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_lawyer"
     }
    ],
    "top30": 0.857,
@@ -17932,7 +19181,8 @@ window.TERMS = {
      "impr": 42,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "settlement"
     }
    ],
    "top30": 0.6666666666666666,
@@ -17966,7 +19216,8 @@ window.TERMS = {
      "impr": 21,
      "clicks": 1,
      "cost": 7.87,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     },
     {
      "text": "portfolio recovery debt collectors",
@@ -17974,7 +19225,8 @@ window.TERMS = {
      "impr": 21,
      "clicks": 1,
      "cost": 2.33,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -18012,7 +19264,8 @@ window.TERMS = {
      "impr": 22,
      "clicks": 1,
      "cost": 12.2,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt defense attorney",
@@ -18020,7 +19273,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 1,
      "cost": 26.59,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt lawsuit attorney",
@@ -18028,7 +19282,8 @@ window.TERMS = {
      "impr": 8,
      "clicks": 2,
      "cost": 17.14,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -18066,7 +19321,8 @@ window.TERMS = {
      "impr": 22,
      "clicks": 3,
      "cost": 31.03,
-     "conv": 3.44
+     "conv": 3.44,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "lawyer for debt lawsuit",
@@ -18074,7 +19330,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 2,
      "cost": 26.51,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -18112,7 +19369,8 @@ window.TERMS = {
      "impr": 41,
      "clicks": 2,
      "cost": 21.26,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "scope": "active",
@@ -18147,7 +19405,8 @@ window.TERMS = {
      "impr": 41,
      "clicks": 2,
      "cost": 59.35,
-     "conv": 5.0
+     "conv": 5.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -18181,7 +19440,8 @@ window.TERMS = {
      "impr": 41,
      "clicks": 1,
      "cost": 0.24,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -18215,7 +19475,8 @@ window.TERMS = {
      "impr": 41,
      "clicks": 2,
      "cost": 0.55,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -18250,7 +19511,8 @@ window.TERMS = {
      "impr": 41,
      "clicks": 1,
      "cost": 2.33,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -18284,7 +19546,8 @@ window.TERMS = {
      "impr": 24,
      "clicks": 2,
      "cost": 10.95,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     },
     {
      "text": "help with wage garnishment",
@@ -18292,7 +19555,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 1,
      "cost": 3.23,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.828,
@@ -18327,7 +19591,8 @@ window.TERMS = {
      "impr": 31,
      "clicks": 6,
      "cost": 96.27,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_lawyer"
     },
     {
      "text": "lawyer to stop garnishment",
@@ -18335,7 +19600,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 33.52,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_lawyer"
     }
    ],
    "top30": 1,
@@ -18374,7 +19640,8 @@ window.TERMS = {
      "impr": 21,
      "clicks": 2,
      "cost": 10.79,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "how to stop a garnishment",
@@ -18382,7 +19649,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 1,
      "cost": 4.01,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "stop garnishment",
@@ -18390,7 +19658,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 1,
      "cost": 2.21,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -18428,7 +19697,8 @@ window.TERMS = {
      "impr": 41,
      "clicks": 6,
      "cost": 39.77,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -18466,7 +19736,8 @@ window.TERMS = {
      "impr": 41,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -18504,7 +19775,8 @@ window.TERMS = {
      "impr": 40,
      "clicks": 2,
      "cost": 14.7,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "debt_buyer"
     }
    ],
    "scope": "active",
@@ -18543,7 +19815,8 @@ window.TERMS = {
      "impr": 40,
      "clicks": 4,
      "cost": 88.72,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -18581,7 +19854,8 @@ window.TERMS = {
      "impr": 40,
      "clicks": 1,
      "cost": 6.92,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -18619,7 +19893,8 @@ window.TERMS = {
      "impr": 40,
      "clicks": 5,
      "cost": 26.56,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -18657,7 +19932,8 @@ window.TERMS = {
      "impr": 21,
      "clicks": 4,
      "cost": 31.91,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "attorney for debt collection lawsuit",
@@ -18665,7 +19941,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 2,
      "cost": 29.12,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -18704,7 +19981,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 1,
      "cost": 12.53,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "credit debt lawyers",
@@ -18712,7 +19990,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 1,
      "cost": 43.79,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -18749,7 +20028,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "being sued by debt collector",
@@ -18757,7 +20037,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 1,
      "cost": 1.5,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "i got sued by a debt collector",
@@ -18765,7 +20046,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -18803,7 +20085,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 1,
      "cost": 10.53,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt lawsuit attorney",
@@ -18811,7 +20094,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt lawsuit attorney near me",
@@ -18819,7 +20103,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 3,
      "cost": 33.2,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -18857,7 +20142,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 4,
      "cost": 69.81,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt litigation attorney",
@@ -18865,7 +20151,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 3,
      "cost": 34.82,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt lawsuit lawyer",
@@ -18873,7 +20160,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 2,
      "cost": 40.38,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -18911,7 +20199,8 @@ window.TERMS = {
      "impr": 40,
      "clicks": 3,
      "cost": 23.22,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_options"
     }
    ],
    "scope": "active",
@@ -18945,7 +20234,8 @@ window.TERMS = {
      "impr": 30,
      "clicks": 2,
      "cost": 31.87,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "collection defense lawyer",
@@ -18953,7 +20243,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 5.54,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -18987,7 +20278,8 @@ window.TERMS = {
      "impr": 40,
      "clicks": 4,
      "cost": 17.62,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "top30": 0.636,
@@ -19026,7 +20318,8 @@ window.TERMS = {
      "impr": 40,
      "clicks": 2,
      "cost": 5.05,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "top30": 0.696,
@@ -19066,7 +20359,8 @@ window.TERMS = {
      "impr": 22,
      "clicks": 3,
      "cost": 11.51,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "stop garnishment",
@@ -19074,7 +20368,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 3,
      "cost": 22.22,
-     "conv": 2.0
+     "conv": 2.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -19113,7 +20408,8 @@ window.TERMS = {
      "impr": 33,
      "clicks": 4,
      "cost": 15.68,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     },
     {
      "text": "credit card suing me",
@@ -19121,7 +20417,8 @@ window.TERMS = {
      "impr": 7,
      "clicks": 1,
      "cost": 5.13,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -19159,7 +20456,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 5,
      "cost": 43.62,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "im being sued for a debt what do i do",
@@ -19167,7 +20465,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 2,
      "cost": 6.09,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "a debt collector is suing me",
@@ -19175,7 +20474,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -19213,7 +20513,8 @@ window.TERMS = {
      "impr": 30,
      "clicks": 5,
      "cost": 24.11,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_stop"
     },
     {
      "text": "help with wage garnishment",
@@ -19221,7 +20522,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 1,
@@ -19256,7 +20558,8 @@ window.TERMS = {
      "impr": 39,
      "clicks": 6,
      "cost": 27.96,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -19295,7 +20598,8 @@ window.TERMS = {
      "impr": 39,
      "clicks": 1,
      "cost": 5.13,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -19333,7 +20637,8 @@ window.TERMS = {
      "impr": 39,
      "clicks": 2,
      "cost": 14.11,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -19371,7 +20676,8 @@ window.TERMS = {
      "impr": 39,
      "clicks": 7,
      "cost": 92.81,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -19409,7 +20715,8 @@ window.TERMS = {
      "impr": 38,
      "clicks": 2,
      "cost": 28.42,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -19447,7 +20754,8 @@ window.TERMS = {
      "impr": 38,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_buyer"
     }
    ],
    "scope": "active",
@@ -19486,7 +20794,8 @@ window.TERMS = {
      "impr": 30,
      "clicks": 1,
      "cost": 27.26,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "lawyer for debt lawsuit",
@@ -19494,7 +20803,8 @@ window.TERMS = {
      "impr": 8,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -19533,7 +20843,8 @@ window.TERMS = {
      "impr": 21,
      "clicks": 2,
      "cost": 21.44,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "im being sued for a debt what do i do",
@@ -19541,7 +20852,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -19579,7 +20891,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt lawsuit attorney",
@@ -19587,7 +20900,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 3,
      "cost": 50.41,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt defense lawyer",
@@ -19595,7 +20909,8 @@ window.TERMS = {
      "impr": 7,
      "clicks": 1,
      "cost": 8.05,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -19633,7 +20948,8 @@ window.TERMS = {
      "impr": 38,
      "clicks": 3,
      "cost": 46.29,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -19667,7 +20983,8 @@ window.TERMS = {
      "impr": 38,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -19701,7 +21018,8 @@ window.TERMS = {
      "impr": 26,
      "clicks": 2,
      "cost": 5.04,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "help with wage garnishment",
@@ -19709,7 +21027,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 1,
      "cost": 4.21,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.9,
@@ -19744,7 +21063,8 @@ window.TERMS = {
      "impr": 23,
      "clicks": 1,
      "cost": 4.9,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "help with wage garnishment",
@@ -19752,7 +21072,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 1,
      "cost": 1.19,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 1,
@@ -19787,7 +21108,8 @@ window.TERMS = {
      "impr": 23,
      "clicks": 3,
      "cost": 11.39,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_prevent"
     },
     {
      "text": "help with wage garnishment",
@@ -19795,7 +21117,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 1,
      "cost": 2.71,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.818,
@@ -19830,7 +21153,8 @@ window.TERMS = {
      "impr": 21,
      "clicks": 1,
      "cost": 9.46,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "stop wage garnishment immediately",
@@ -19838,7 +21162,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 2,
      "cost": 5.34,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 1,
@@ -19873,7 +21198,8 @@ window.TERMS = {
      "impr": 38,
      "clicks": 1,
      "cost": 5.22,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "top30": 0.895,
@@ -19912,7 +21238,8 @@ window.TERMS = {
      "impr": 25,
      "clicks": 3,
      "cost": 15.32,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     },
     {
      "text": "can a garnishment be stopped",
@@ -19920,7 +21247,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -19959,7 +21287,8 @@ window.TERMS = {
      "impr": 38,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -19997,7 +21326,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 1,
      "cost": 12.39,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_general"
     },
     {
      "text": "lawyer for credit card debt",
@@ -20005,7 +21335,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_general"
     },
     {
      "text": "credit card debt lawyers",
@@ -20013,7 +21344,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_general"
     }
    ],
    "scope": "active",
@@ -20051,7 +21383,8 @@ window.TERMS = {
      "impr": 37,
      "clicks": 7,
      "cost": 141.93,
-     "conv": 2.5
+     "conv": 2.5,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -20089,7 +21422,8 @@ window.TERMS = {
      "impr": 29,
      "clicks": 3,
      "cost": 22.35,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "i have been sued by a debt collector",
@@ -20097,7 +21431,8 @@ window.TERMS = {
      "impr": 8,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -20136,7 +21471,8 @@ window.TERMS = {
      "impr": 26,
      "clicks": 4,
      "cost": 43.06,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     },
     {
      "text": "answer to debt collection lawsuit",
@@ -20144,7 +21480,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 1,
      "cost": 3.77,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -20182,7 +21519,8 @@ window.TERMS = {
      "impr": 37,
      "clicks": 3,
      "cost": 14.29,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "top30": 0.75,
@@ -20217,7 +21555,8 @@ window.TERMS = {
      "impr": 37,
      "clicks": 2,
      "cost": 9.31,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -20251,7 +21590,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt lawyer",
@@ -20259,7 +21599,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 1,
      "cost": 39.86,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -20293,7 +21634,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     },
     {
      "text": "court ordered garnishment",
@@ -20301,7 +21643,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     },
     {
      "text": "garnishment",
@@ -20309,7 +21652,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "scope": "active",
@@ -20344,7 +21688,8 @@ window.TERMS = {
      "impr": 28,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     },
     {
      "text": "midland credit management fdcpa",
@@ -20352,7 +21697,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_action"
     }
    ],
    "scope": "active",
@@ -20390,7 +21736,8 @@ window.TERMS = {
      "impr": 21,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "settlement"
     },
     {
      "text": "negotiate credit debt",
@@ -20398,7 +21745,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "settlement"
     }
    ],
    "scope": "active",
@@ -20431,7 +21779,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 5,
      "cost": 62.06,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_general"
     },
     {
      "text": "credit card debt lawyers",
@@ -20439,7 +21788,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_general"
     }
    ],
    "scope": "active",
@@ -20477,7 +21827,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 2,
      "cost": 17.76,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     },
     {
      "text": "portfolio recovery debt collectors",
@@ -20485,7 +21836,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 1,
      "cost": 3.08,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -20523,7 +21875,8 @@ window.TERMS = {
      "impr": 36,
      "clicks": 3,
      "cost": 29.81,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -20561,7 +21914,8 @@ window.TERMS = {
      "impr": 36,
      "clicks": 4,
      "cost": 13.39,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -20599,7 +21953,8 @@ window.TERMS = {
      "impr": 36,
      "clicks": 4,
      "cost": 11.57,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -20638,7 +21993,8 @@ window.TERMS = {
      "impr": 28,
      "clicks": 2,
      "cost": 8.33,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "i ve been sued by a debt collector",
@@ -20646,7 +22002,8 @@ window.TERMS = {
      "impr": 8,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -20684,7 +22041,8 @@ window.TERMS = {
      "impr": 36,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -20718,7 +22076,8 @@ window.TERMS = {
      "impr": 27,
      "clicks": 1,
      "cost": 10.05,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_lawyer"
     },
     {
      "text": "wage garnishment lawyer",
@@ -20726,7 +22085,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_lawyer"
     }
    ],
    "top30": 0.8,
@@ -20761,7 +22121,8 @@ window.TERMS = {
      "impr": 36,
      "clicks": 11,
      "cost": 39.78,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -20800,7 +22161,8 @@ window.TERMS = {
      "impr": 36,
      "clicks": 6,
      "cost": 25.51,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -20839,7 +22201,8 @@ window.TERMS = {
      "impr": 22,
      "clicks": 3,
      "cost": 22.49,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     },
     {
      "text": "portfolio recovery debt collectors",
@@ -20847,7 +22210,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 1,
      "cost": 16.04,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -20885,7 +22249,8 @@ window.TERMS = {
      "impr": 36,
      "clicks": 6,
      "cost": 57.83,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_action"
     }
    ],
    "scope": "active",
@@ -20923,7 +22288,8 @@ window.TERMS = {
      "impr": 28,
      "clicks": 2,
      "cost": 46.62,
-     "conv": 0.4
+     "conv": 0.4,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt lawsuit lawyer",
@@ -20931,7 +22297,8 @@ window.TERMS = {
      "impr": 7,
      "clicks": 2,
      "cost": 47.4,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -20969,7 +22336,8 @@ window.TERMS = {
      "impr": 24,
      "clicks": 5,
      "cost": 65.53,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt lawsuit attorney",
@@ -20977,7 +22345,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -21015,7 +22384,8 @@ window.TERMS = {
      "impr": 35,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "top30": 0.583,
@@ -21051,7 +22421,8 @@ window.TERMS = {
      "impr": 35,
      "clicks": 1,
      "cost": 4.28,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -21085,7 +22456,8 @@ window.TERMS = {
      "impr": 35,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -21119,7 +22491,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt collection practices",
@@ -21127,7 +22500,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -21161,7 +22535,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 2,
      "cost": 24.49,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt collection attorney near me",
@@ -21169,7 +22544,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 4.53,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt collection defense lawyer near me",
@@ -21177,7 +22553,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -21211,7 +22588,8 @@ window.TERMS = {
      "impr": 35,
      "clicks": 6,
      "cost": 38.6,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -21250,7 +22628,8 @@ window.TERMS = {
      "impr": 26,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     },
     {
      "text": "can a garnishment be stopped",
@@ -21258,7 +22637,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 4,
      "cost": 11.47,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.867,
@@ -21297,7 +22677,8 @@ window.TERMS = {
      "impr": 23,
      "clicks": 4,
      "cost": 22.91,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     },
     {
      "text": "how to get out of wage garnishment",
@@ -21305,7 +22686,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 2,
      "cost": 17.61,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -21343,7 +22725,8 @@ window.TERMS = {
      "impr": 24,
      "clicks": 1,
      "cost": 6.99,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "paypal class action lawsuit",
@@ -21351,7 +22734,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 2,
      "cost": 11.81,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "neg_legal"
     }
    ],
    "scope": "active",
@@ -21389,7 +22773,8 @@ window.TERMS = {
      "impr": 21,
      "clicks": 3,
      "cost": 14.48,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "neg_legal"
     },
     {
      "text": "capital one lawsuit",
@@ -21397,7 +22782,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 4,
      "cost": 19.63,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -21435,7 +22821,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 3,
      "cost": 9.7,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     },
     {
      "text": "resurgent capital debt collectors",
@@ -21443,7 +22830,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 1,
      "cost": 5.11,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -21481,7 +22869,8 @@ window.TERMS = {
      "impr": 34,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -21519,7 +22908,8 @@ window.TERMS = {
      "impr": 34,
      "clicks": 2,
      "cost": 22.56,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -21557,13 +22947,14 @@ window.TERMS = {
      "impr": 34,
      "clicks": 1,
      "cost": 3.17,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
-   "intent": "garn_general",
+   "intent": "garn_active",
    "debtType": "Garnishment",
-   "best": "NSTOP",
+   "best": "GA",
    "current": [
     {
      "page": "SWG",
@@ -21572,10 +22963,9 @@ window.TERMS = {
    ],
    "bestShare": 0,
    "dup": false,
-   "interim": "GA",
-   "action": "new_page",
-   "actionText": "Now: move to S_Garnishment_NW › Garnishment, whose ad lands on /wage-garnishment-attorney (only a minority of that ad group's impressions today, so give the term its own ad group with only that ad). When the new page is built: S_Garnishment_NW › Garn_How_To_Stop (new).",
-   "home": "S_Garnishment_NW|Garn_How_To_Stop (new)"
+   "action": "move",
+   "actionText": "Move the term to S_Garnishment_NW › Garnishment, whose ad lands on the best page (39% of that ad group today, so give the term its own ad group with only that ad).",
+   "home": "S_Garnishment_NW|Garnishment"
   },
   {
    "campaign": "S_All-States",
@@ -21592,7 +22982,8 @@ window.TERMS = {
      "impr": 34,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -21626,7 +23017,8 @@ window.TERMS = {
      "impr": 34,
      "clicks": 6,
      "cost": 55.82,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -21665,7 +23057,8 @@ window.TERMS = {
      "impr": 34,
      "clicks": 7,
      "cost": 53.78,
-     "conv": 1.029
+     "conv": 1.029,
+     "intent": "garn_stop"
     }
    ],
    "top30": 1,
@@ -21705,7 +23098,8 @@ window.TERMS = {
      "impr": 25,
      "clicks": 4,
      "cost": 29.72,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "how to stop my check from being garnished",
@@ -21713,7 +23107,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 2,
      "cost": 11.76,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -21752,7 +23147,8 @@ window.TERMS = {
      "impr": 34,
      "clicks": 6,
      "cost": 41.75,
-     "conv": 0.999
+     "conv": 0.999,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -21790,7 +23186,8 @@ window.TERMS = {
      "impr": 33,
      "clicks": 2,
      "cost": 6.03,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -21828,7 +23225,8 @@ window.TERMS = {
      "impr": 24,
      "clicks": 4,
      "cost": 67.15,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt defense lawyer near me",
@@ -21836,7 +23234,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 1,
      "cost": 11.84,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -21874,7 +23273,8 @@ window.TERMS = {
      "impr": 21,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt lawsuit lawyer",
@@ -21882,7 +23282,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 1,
      "cost": 2.38,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -21920,7 +23321,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 1,
      "cost": 4.94,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_options"
     },
     {
      "text": "judgement lawyers",
@@ -21928,7 +23330,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 1,
      "cost": 10.65,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_options"
     }
    ],
    "scope": "active",
@@ -21962,7 +23365,8 @@ window.TERMS = {
      "impr": 33,
      "clicks": 2,
      "cost": 33.51,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -22001,7 +23405,8 @@ window.TERMS = {
      "impr": 33,
      "clicks": 3,
      "cost": 12.32,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -22040,7 +23445,8 @@ window.TERMS = {
      "impr": 33,
      "clicks": 2,
      "cost": 10.75,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -22078,7 +23484,8 @@ window.TERMS = {
      "impr": 33,
      "clicks": 4,
      "cost": 30.99,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -22116,7 +23523,8 @@ window.TERMS = {
      "impr": 33,
      "clicks": 2,
      "cost": 15.73,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -22154,7 +23562,8 @@ window.TERMS = {
      "impr": 22,
      "clicks": 2,
      "cost": 12.17,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     },
     {
      "text": "portfolio recovery debt collectors",
@@ -22162,7 +23571,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -22200,7 +23610,8 @@ window.TERMS = {
      "impr": 32,
      "clicks": 2,
      "cost": 11.48,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -22238,7 +23649,8 @@ window.TERMS = {
      "impr": 32,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -22276,7 +23688,8 @@ window.TERMS = {
      "impr": 32,
      "clicks": 1,
      "cost": 8.43,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -22314,7 +23727,8 @@ window.TERMS = {
      "impr": 32,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -22353,7 +23767,8 @@ window.TERMS = {
      "impr": 32,
      "clicks": 2,
      "cost": 10.22,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -22391,7 +23806,8 @@ window.TERMS = {
      "impr": 25,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt lawsuit lawyer",
@@ -22399,7 +23815,8 @@ window.TERMS = {
      "impr": 7,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -22437,7 +23854,8 @@ window.TERMS = {
      "impr": 24,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt litigation attorney",
@@ -22445,7 +23863,8 @@ window.TERMS = {
      "impr": 8,
      "clicks": 1,
      "cost": 28.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -22483,7 +23902,8 @@ window.TERMS = {
      "impr": 23,
      "clicks": 1,
      "cost": 1.63,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "being sued by debt collector",
@@ -22491,7 +23911,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -22529,7 +23950,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 1,
      "cost": 28.56,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "attorney for debt collection lawsuit",
@@ -22537,7 +23959,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 3,
      "cost": 14.89,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -22575,7 +23998,8 @@ window.TERMS = {
      "impr": 32,
      "clicks": 4,
      "cost": 20.64,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -22609,7 +24033,8 @@ window.TERMS = {
      "impr": 32,
      "clicks": 2,
      "cost": 13.04,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -22643,7 +24068,8 @@ window.TERMS = {
      "impr": 32,
      "clicks": 1,
      "cost": 2.73,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -22677,7 +24103,8 @@ window.TERMS = {
      "impr": 32,
      "clicks": 4,
      "cost": 23.2,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -22711,7 +24138,8 @@ window.TERMS = {
      "impr": 32,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -22745,7 +24173,8 @@ window.TERMS = {
      "impr": 32,
      "clicks": 2,
      "cost": 9.56,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -22779,7 +24208,8 @@ window.TERMS = {
      "impr": 22,
      "clicks": 1,
      "cost": 9.6,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_options"
     },
     {
      "text": "judgement attorney near me",
@@ -22787,7 +24217,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_options"
     }
    ],
    "scope": "active",
@@ -22821,7 +24252,8 @@ window.TERMS = {
      "impr": 21,
      "clicks": 1,
      "cost": 6.79,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "claim of exemption",
@@ -22829,7 +24261,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 2,
      "cost": 15.44,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_exempt"
     }
    ],
    "scope": "active",
@@ -22863,7 +24296,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 1,
      "cost": 5.97,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "how to fight a garnishment",
@@ -22871,7 +24305,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "top30": 1,
@@ -22910,7 +24345,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 2,
      "cost": 16.04,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     },
     {
      "text": "help with garnishment",
@@ -22918,7 +24354,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 2,
      "cost": 9.08,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -22957,7 +24394,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 4,
      "cost": 60.73,
-     "conv": 0.499
+     "conv": 0.499,
+     "intent": "garn_lawyer"
     },
     {
      "text": "garnish wages attorney",
@@ -22965,7 +24403,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 1,
      "cost": 6.84,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_lawyer"
     }
    ],
    "scope": "active",
@@ -23003,7 +24442,8 @@ window.TERMS = {
      "impr": 32,
      "clicks": 3,
      "cost": 16.38,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -23041,7 +24481,8 @@ window.TERMS = {
      "impr": 32,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -23079,7 +24520,8 @@ window.TERMS = {
      "impr": 32,
      "clicks": 13,
      "cost": 34.15,
-     "conv": 1.999
+     "conv": 1.999,
+     "intent": "brand"
     }
    ],
    "scope": "active",
@@ -23113,7 +24555,8 @@ window.TERMS = {
      "impr": 31,
      "clicks": 1,
      "cost": 1.12,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -23151,7 +24594,8 @@ window.TERMS = {
      "impr": 31,
      "clicks": 2,
      "cost": 6.68,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -23189,7 +24633,8 @@ window.TERMS = {
      "impr": 31,
      "clicks": 4,
      "cost": 35.1,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -23227,7 +24672,8 @@ window.TERMS = {
      "impr": 31,
      "clicks": 2,
      "cost": 17.19,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -23265,7 +24711,8 @@ window.TERMS = {
      "impr": 23,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "collection defense attorney",
@@ -23273,7 +24720,8 @@ window.TERMS = {
      "impr": 8,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -23311,7 +24759,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 1,
      "cost": 14.68,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt lawsuit attorney",
@@ -23319,7 +24768,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -23357,7 +24807,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 1,
      "cost": 9.39,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt defense lawyer near me",
@@ -23365,7 +24816,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 1,
      "cost": 5.39,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -23403,7 +24855,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 1,
      "cost": 3.45,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_summons"
     },
     {
      "text": "got served papers for debt",
@@ -23411,7 +24864,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -23449,7 +24903,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt collection agency rights",
@@ -23457,7 +24912,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -23495,7 +24951,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "lawyer for debt collection lawsuit near me",
@@ -23503,7 +24960,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt lawsuit attorney near me",
@@ -23511,7 +24969,8 @@ window.TERMS = {
      "impr": 7,
      "clicks": 1,
      "cost": 24.43,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -23549,7 +25008,8 @@ window.TERMS = {
      "impr": 31,
      "clicks": 5,
      "cost": 31.63,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_lawyer"
     }
    ],
    "scope": "active",
@@ -23583,7 +25043,8 @@ window.TERMS = {
      "impr": 31,
      "clicks": 5,
      "cost": 44.5,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -23617,7 +25078,8 @@ window.TERMS = {
      "impr": 21,
      "clicks": 2,
      "cost": 9.48,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt attorney",
@@ -23625,7 +25087,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -23658,7 +25121,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt collection lawyers near me",
@@ -23666,7 +25130,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -23700,7 +25165,8 @@ window.TERMS = {
      "impr": 31,
      "clicks": 1,
      "cost": 8.43,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -23739,7 +25205,8 @@ window.TERMS = {
      "impr": 31,
      "clicks": 3,
      "cost": 43.21,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_lawyer"
     }
    ],
    "scope": "active",
@@ -23777,7 +25244,8 @@ window.TERMS = {
      "impr": 31,
      "clicks": 2,
      "cost": 7.47,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -23815,7 +25283,8 @@ window.TERMS = {
      "impr": 31,
      "clicks": 2,
      "cost": 7.12,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -23854,7 +25323,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "stop garnishment",
@@ -23862,7 +25332,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 1,
      "cost": 2.22,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -23900,7 +25371,8 @@ window.TERMS = {
      "impr": 31,
      "clicks": 5,
      "cost": 20.24,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -23938,7 +25410,8 @@ window.TERMS = {
      "impr": 22,
      "clicks": 2,
      "cost": 37.94,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "cc_lawsuit"
     },
     {
      "text": "attorney for credit card debt lawsuit",
@@ -23946,7 +25419,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -23984,7 +25458,8 @@ window.TERMS = {
      "impr": 22,
      "clicks": 1,
      "cost": 18.55,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "settlement"
     },
     {
      "text": "negotiate credit debt",
@@ -23992,7 +25467,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "settlement"
     }
    ],
    "scope": "active",
@@ -24025,7 +25501,8 @@ window.TERMS = {
      "impr": 30,
      "clicks": 2,
      "cost": 10.03,
-     "conv": 4.0
+     "conv": 4.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -24063,7 +25540,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 3,
      "cost": 22.34,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt lawsuit attorney near me",
@@ -24071,7 +25549,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 2,
      "cost": 28.3,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -24109,7 +25588,8 @@ window.TERMS = {
      "impr": 30,
      "clicks": 1,
      "cost": 2.38,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "top30": 0.727,
@@ -24145,7 +25625,8 @@ window.TERMS = {
      "impr": 30,
      "clicks": 1,
      "cost": 10.82,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "scope": "active",
@@ -24180,7 +25661,8 @@ window.TERMS = {
      "impr": 30,
      "clicks": 4,
      "cost": 32.84,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -24214,7 +25696,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 6,
      "cost": 51.18,
-     "conv": 2.0
+     "conv": 2.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt lawyers",
@@ -24222,7 +25705,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 1,
      "cost": 17.4,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -24256,7 +25740,8 @@ window.TERMS = {
      "impr": 30,
      "clicks": 6,
      "cost": 31.41,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -24294,7 +25779,8 @@ window.TERMS = {
      "impr": 30,
      "clicks": 3,
      "cost": 23.75,
-     "conv": 3.333
+     "conv": 3.333,
+     "intent": "garn_lawyer"
     }
    ],
    "top30": 1,
@@ -24333,7 +25819,8 @@ window.TERMS = {
      "impr": 30,
      "clicks": 2,
      "cost": 8.62,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -24372,7 +25859,8 @@ window.TERMS = {
      "impr": 30,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -24410,7 +25898,8 @@ window.TERMS = {
      "impr": 29,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -24448,7 +25937,8 @@ window.TERMS = {
      "impr": 29,
      "clicks": 3,
      "cost": 24.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -24486,13 +25976,14 @@ window.TERMS = {
      "impr": 29,
      "clicks": 2,
      "cost": 10.81,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_buyer"
     }
    ],
    "scope": "active",
-   "intent": "collector_name",
-   "debtType": "Harassment",
-   "best": "HS",
+   "intent": "debt_buyer",
+   "debtType": "Lawsuit",
+   "best": "NBUY",
    "current": [
     {
      "page": "FB",
@@ -24505,9 +25996,10 @@ window.TERMS = {
    ],
    "bestShare": 0,
    "dup": false,
-   "action": "move",
-   "actionText": "Move the term to S_Harassment_NW › Creditor_Harassment, whose ad lands on the best page.",
-   "home": "S_Harassment_NW|Creditor_Harassment"
+   "interim": "PR",
+   "action": "new_page",
+   "actionText": "Now: move to S_Lawsuit_NW › Collection_Lawsuit, whose ad lands on /debt-lawsuit-proof (only a minority of that ad group's impressions today, so give the term its own ad group with only that ad). When the new page is built: S_Lawsuit_NW › Debt_Buyer_Lawsuit (new).",
+   "home": "S_Lawsuit_NW|Debt_Buyer_Lawsuit (new)"
   },
   {
    "campaign": "S_Lawsuit_NW",
@@ -24524,7 +26016,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt lawsuit attorney near me",
@@ -24532,7 +26025,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 1,
      "cost": 22.27,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -24570,7 +26064,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 1,
      "cost": 8.73,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt defense attorney",
@@ -24578,7 +26073,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt lawsuit attorney",
@@ -24586,7 +26082,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -24624,7 +26121,8 @@ window.TERMS = {
      "impr": 29,
      "clicks": 1,
      "cost": 19.61,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_exempt"
     }
    ],
    "top30": 0.4,
@@ -24659,7 +26157,8 @@ window.TERMS = {
      "impr": 29,
      "clicks": 2,
      "cost": 7.82,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -24693,7 +26192,8 @@ window.TERMS = {
      "impr": 29,
      "clicks": 1,
      "cost": 1.47,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -24727,7 +26227,8 @@ window.TERMS = {
      "impr": 29,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -24761,7 +26262,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "paycheck garnishment",
@@ -24769,7 +26271,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "top30": 0.9,
@@ -24804,7 +26307,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 2,
      "cost": 20.44,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt collector lawyer",
@@ -24812,7 +26316,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "collection defense attorney",
@@ -24820,7 +26325,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 1,
      "cost": 6.11,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -24854,7 +26360,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 4,
      "cost": 32.77,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_active"
     },
     {
      "text": "can a garnishment be stopped",
@@ -24862,7 +26369,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 2,
      "cost": 16.9,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -24900,7 +26408,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     },
     {
      "text": "how to get a garnishment removed",
@@ -24908,7 +26417,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 1,
@@ -24947,7 +26457,8 @@ window.TERMS = {
      "impr": 29,
      "clicks": 2,
      "cost": 13.18,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -24985,7 +26496,8 @@ window.TERMS = {
      "impr": 29,
      "clicks": 5,
      "cost": 54.29,
-     "conv": 2.0
+     "conv": 2.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -25023,7 +26535,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 3,
      "cost": 17.63,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "fdcpa_action"
     },
     {
      "text": "how to sue a collection agency",
@@ -25031,13 +26544,14 @@ window.TERMS = {
      "impr": 9,
      "clicks": 2,
      "cost": 5.18,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_action"
     }
    ],
    "scope": "active",
-   "intent": "lawsuit_sued",
-   "debtType": "Lawsuit",
-   "best": "RT",
+   "intent": "fdcpa_action",
+   "debtType": "Harassment",
+   "best": "FA",
    "current": [
     {
      "page": "FA",
@@ -25048,11 +26562,11 @@ window.TERMS = {
      "share": 26
     }
    ],
-   "bestShare": 0,
+   "bestShare": 74,
    "dup": false,
-   "action": "move",
-   "actionText": "Move the term to S_Lawsuit_NW › Collection_Lawsuit, whose ad lands on the best page.",
-   "home": "S_Lawsuit_NW|Collection_Lawsuit"
+   "action": "keep",
+   "actionText": "Keep: already on the best page.",
+   "home": "S_Harassment_NW|FDCPA_Harassment"
   },
   {
    "campaign": "S_Lawsuit_NW",
@@ -25069,7 +26583,8 @@ window.TERMS = {
      "impr": 28,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -25107,7 +26622,8 @@ window.TERMS = {
      "impr": 28,
      "clicks": 3,
      "cost": 12.84,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -25145,7 +26661,8 @@ window.TERMS = {
      "impr": 28,
      "clicks": 3,
      "cost": 29.94,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -25183,7 +26700,8 @@ window.TERMS = {
      "impr": 28,
      "clicks": 2,
      "cost": 17.86,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -25220,7 +26738,8 @@ window.TERMS = {
      "impr": 28,
      "clicks": 4,
      "cost": 77.98,
-     "conv": 2.0
+     "conv": 2.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -25258,7 +26777,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 3,
      "cost": 20.57,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt defense lawyer",
@@ -25266,7 +26786,8 @@ window.TERMS = {
      "impr": 8,
      "clicks": 1,
      "cost": 10.74,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -25304,7 +26825,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     },
     {
      "text": "summons for debt collection",
@@ -25312,7 +26834,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 2,
      "cost": 4.23,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -25350,7 +26873,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "lawyer for debt lawsuit",
@@ -25358,7 +26882,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 4,
      "cost": 26.48,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -25396,7 +26921,8 @@ window.TERMS = {
      "impr": 28,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -25430,7 +26956,8 @@ window.TERMS = {
      "impr": 28,
      "clicks": 4,
      "cost": 12.73,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -25464,7 +26991,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt collection practices",
@@ -25472,7 +27000,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -25506,7 +27035,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 2,
      "cost": 8.02,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "help with wage garnishment",
@@ -25514,7 +27044,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 1,
      "cost": 6.53,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -25548,7 +27079,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 1,
      "cost": 1.57,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     },
     {
      "text": "writ of garnishment",
@@ -25556,7 +27088,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 1,
      "cost": 6.76,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_definition"
     }
    ],
    "scope": "active",
@@ -25590,7 +27123,8 @@ window.TERMS = {
      "impr": 28,
      "clicks": 2,
      "cost": 10.7,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -25629,7 +27163,8 @@ window.TERMS = {
      "impr": 28,
      "clicks": 2,
      "cost": 10.29,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -25667,7 +27202,8 @@ window.TERMS = {
      "impr": 28,
      "clicks": 3,
      "cost": 8.65,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -25706,7 +27242,8 @@ window.TERMS = {
      "impr": 28,
      "clicks": 5,
      "cost": 27.72,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -25745,7 +27282,8 @@ window.TERMS = {
      "impr": 28,
      "clicks": 1,
      "cost": 0.01,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -25783,7 +27321,8 @@ window.TERMS = {
      "impr": 28,
      "clicks": 3,
      "cost": 15.9,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -25822,7 +27361,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 2,
      "cost": 16.09,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_stop"
     },
     {
      "text": "how to stop wage garnishment",
@@ -25830,7 +27370,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 2,
      "cost": 18.55,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -25869,7 +27410,8 @@ window.TERMS = {
      "impr": 28,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -25907,7 +27449,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     },
     {
      "text": "portfolio recovery debt collector",
@@ -25915,7 +27458,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -25953,7 +27497,8 @@ window.TERMS = {
      "impr": 28,
      "clicks": 4,
      "cost": 33.57,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -25991,7 +27536,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     },
     {
      "text": "bill collector harassment",
@@ -25999,7 +27545,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 3,
      "cost": 16.4,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -26037,7 +27584,8 @@ window.TERMS = {
      "impr": 27,
      "clicks": 3,
      "cost": 9.37,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -26075,7 +27623,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 1,
      "cost": 3.32,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "being sued by debt collector",
@@ -26083,7 +27632,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 1,
      "cost": 2.39,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -26121,7 +27671,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt lawsuit lawyer",
@@ -26129,7 +27680,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -26167,7 +27719,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 1,
      "cost": 4.54,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     },
     {
      "text": "how to answer a court summons debt collection",
@@ -26175,7 +27728,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -26213,7 +27767,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt lawsuit defense",
@@ -26221,7 +27776,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -26258,7 +27814,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "im being sued for a debt what do i do",
@@ -26266,7 +27823,8 @@ window.TERMS = {
      "impr": 8,
      "clicks": 2,
      "cost": 11.21,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "i have been sued by a debt collector",
@@ -26274,7 +27832,8 @@ window.TERMS = {
      "impr": 7,
      "clicks": 1,
      "cost": 6.89,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -26312,7 +27871,8 @@ window.TERMS = {
      "impr": 27,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "scope": "active",
@@ -26347,7 +27907,8 @@ window.TERMS = {
      "impr": 27,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.526,
@@ -26382,7 +27943,8 @@ window.TERMS = {
      "impr": 27,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -26416,7 +27978,8 @@ window.TERMS = {
      "impr": 27,
      "clicks": 5,
      "cost": 34.08,
-     "conv": 1.996
+     "conv": 1.996,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -26450,7 +28013,8 @@ window.TERMS = {
      "impr": 27,
      "clicks": 1,
      "cost": 0.11,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -26484,7 +28048,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt collection practices",
@@ -26492,7 +28057,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -26526,7 +28092,8 @@ window.TERMS = {
      "impr": 27,
      "clicks": 1,
      "cost": 1.34,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -26565,7 +28132,8 @@ window.TERMS = {
      "impr": 27,
      "clicks": 4,
      "cost": 26.34,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -26603,7 +28171,8 @@ window.TERMS = {
      "impr": 27,
      "clicks": 4,
      "cost": 42.13,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -26642,7 +28211,8 @@ window.TERMS = {
      "impr": 27,
      "clicks": 2,
      "cost": 7.11,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -26680,7 +28250,8 @@ window.TERMS = {
      "impr": 27,
      "clicks": 1,
      "cost": 4.32,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -26718,7 +28289,8 @@ window.TERMS = {
      "impr": 27,
      "clicks": 2,
      "cost": 6.25,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -26757,7 +28329,8 @@ window.TERMS = {
      "impr": 27,
      "clicks": 7,
      "cost": 27.56,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -26795,7 +28368,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 1,
      "cost": 9.08,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "stop wage garnishment",
@@ -26803,7 +28377,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.833,
@@ -26842,7 +28417,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 1,
      "cost": 4.25,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "stop garnishment",
@@ -26850,7 +28426,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 3.28,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -26889,7 +28466,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "how to fight a garnishment",
@@ -26897,7 +28475,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 1,
      "cost": 3.59,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -26935,7 +28514,8 @@ window.TERMS = {
      "impr": 27,
      "clicks": 1,
      "cost": 5.98,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -26973,7 +28553,8 @@ window.TERMS = {
      "impr": 27,
      "clicks": 1,
      "cost": 3.43,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -27011,7 +28592,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 1,
      "cost": 5.71,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     },
     {
      "text": "resurgent capital debt collector",
@@ -27019,7 +28601,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -27057,7 +28640,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 1,
      "cost": 4.44,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     },
     {
      "text": "capital one debt collectors",
@@ -27065,7 +28649,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -27103,7 +28688,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 1,
      "cost": 5.94,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     },
     {
      "text": "portfolio recovery debt collector",
@@ -27111,7 +28697,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 2,
      "cost": 14.24,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -27149,7 +28736,8 @@ window.TERMS = {
      "impr": 27,
      "clicks": 4,
      "cost": 43.26,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -27187,13 +28775,14 @@ window.TERMS = {
      "impr": 27,
      "clicks": 1,
      "cost": 6.39,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_action"
     }
    ],
    "scope": "active",
-   "intent": "lawsuit_sued",
-   "debtType": "Lawsuit",
-   "best": "RT",
+   "intent": "fdcpa_action",
+   "debtType": "Harassment",
+   "best": "FA",
    "current": [
     {
      "page": "FA",
@@ -27204,11 +28793,11 @@ window.TERMS = {
      "share": 26
     }
    ],
-   "bestShare": 0,
+   "bestShare": 74,
    "dup": false,
-   "action": "move",
-   "actionText": "Move the term to S_Lawsuit_NW › Collection_Lawsuit, whose ad lands on the best page.",
-   "home": "S_Lawsuit_NW|Collection_Lawsuit"
+   "action": "keep",
+   "actionText": "Keep: already on the best page.",
+   "home": "S_Harassment_NW|FDCPA_Harassment"
   },
   {
    "campaign": "S_Harassment_NW",
@@ -27225,7 +28814,8 @@ window.TERMS = {
      "impr": 27,
      "clicks": 1,
      "cost": 8.37,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -27263,7 +28853,8 @@ window.TERMS = {
      "impr": 27,
      "clicks": 2,
      "cost": 6.48,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -27301,7 +28892,8 @@ window.TERMS = {
      "impr": 26,
      "clicks": 1,
      "cost": 4.54,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -27338,7 +28930,8 @@ window.TERMS = {
      "impr": 26,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -27376,7 +28969,8 @@ window.TERMS = {
      "impr": 26,
      "clicks": 3,
      "cost": 36.91,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -27414,7 +29008,8 @@ window.TERMS = {
      "impr": 26,
      "clicks": 1,
      "cost": 6.13,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -27452,7 +29047,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 2,
      "cost": 29.05,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "credit debt lawyers",
@@ -27460,7 +29056,8 @@ window.TERMS = {
      "impr": 7,
      "clicks": 1,
      "cost": 6.17,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -27498,7 +29095,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 1,
      "cost": 8.57,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "being sued by debt collector",
@@ -27506,7 +29104,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -27544,7 +29143,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "im being sued for a debt what do i do",
@@ -27552,7 +29152,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 2,
      "cost": 8.19,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -27590,7 +29191,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 1,
      "cost": 20.67,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt litigation attorney",
@@ -27598,7 +29200,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -27637,7 +29240,8 @@ window.TERMS = {
      "impr": 26,
      "clicks": 5,
      "cost": 34.76,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_lawyer"
     }
    ],
    "top30": 1,
@@ -27672,7 +29276,8 @@ window.TERMS = {
      "impr": 26,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -27706,7 +29311,8 @@ window.TERMS = {
      "impr": 26,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -27740,7 +29346,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 2,
      "cost": 15.3,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt collection defense lawyer near me",
@@ -27748,7 +29355,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 5,
      "cost": 37.88,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -27782,7 +29390,8 @@ window.TERMS = {
      "impr": 26,
      "clicks": 4,
      "cost": 28.09,
-     "conv": 1.5
+     "conv": 1.5,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -27821,7 +29430,8 @@ window.TERMS = {
      "impr": 26,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_lawyer"
     }
    ],
    "scope": "active",
@@ -27859,7 +29469,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "how to stop wage garnishments",
@@ -27867,7 +29478,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.9,
@@ -27906,7 +29518,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 2,
      "cost": 14.46,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "how to fight a garnishment",
@@ -27914,7 +29527,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -27953,7 +29567,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 1,
      "cost": 2.38,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "debt_buyer"
     },
     {
      "text": "midland credit management lawsuit",
@@ -27961,7 +29576,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_buyer"
     }
    ],
    "scope": "active",
@@ -28000,7 +29616,8 @@ window.TERMS = {
      "impr": 25,
      "clicks": 1,
      "cost": 3.91,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -28038,7 +29655,8 @@ window.TERMS = {
      "impr": 25,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -28076,7 +29694,8 @@ window.TERMS = {
      "impr": 25,
      "clicks": 2,
      "cost": 19.46,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -28114,7 +29733,8 @@ window.TERMS = {
      "impr": 25,
      "clicks": 3,
      "cost": 43.97,
-     "conv": 0.999
+     "conv": 0.999,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -28152,7 +29772,8 @@ window.TERMS = {
      "impr": 25,
      "clicks": 3,
      "cost": 24.55,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -28190,7 +29811,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 1,
      "cost": 5.95,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "i ve been sued by a debt collector",
@@ -28198,7 +29820,8 @@ window.TERMS = {
      "impr": 7,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -28236,7 +29859,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "a debt collector is suing me",
@@ -28244,7 +29868,8 @@ window.TERMS = {
      "impr": 8,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -28282,7 +29907,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 1,
      "cost": 22.19,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt lawsuit attorney near me",
@@ -28290,7 +29916,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 2,
      "cost": 18.35,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -28328,7 +29955,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 1,
      "cost": 6.63,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt lawsuit lawyer",
@@ -28336,7 +29964,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -28374,7 +30003,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "lawsuit dismissed",
@@ -28382,7 +30012,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_dismiss"
     },
     {
      "text": "being sued by debt collector",
@@ -28390,7 +30021,8 @@ window.TERMS = {
      "impr": 7,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -28428,7 +30060,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "attorney for debt lawsuit",
@@ -28436,7 +30069,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "lawyer for debt lawsuit",
@@ -28444,7 +30078,8 @@ window.TERMS = {
      "impr": 7,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -28483,7 +30118,8 @@ window.TERMS = {
      "impr": 25,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -28519,7 +30155,8 @@ window.TERMS = {
      "impr": 25,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -28554,7 +30191,8 @@ window.TERMS = {
      "impr": 25,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -28588,7 +30226,8 @@ window.TERMS = {
      "impr": 25,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -28622,7 +30261,8 @@ window.TERMS = {
      "impr": 25,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -28656,7 +30296,8 @@ window.TERMS = {
      "impr": 25,
      "clicks": 2,
      "cost": 4.47,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -28690,7 +30331,8 @@ window.TERMS = {
      "impr": 25,
      "clicks": 3,
      "cost": 7.9,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -28724,7 +30366,8 @@ window.TERMS = {
      "impr": 25,
      "clicks": 2,
      "cost": 6.22,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -28758,7 +30401,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "collection defense lawyer",
@@ -28766,7 +30410,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -28800,7 +30445,8 @@ window.TERMS = {
      "impr": 25,
      "clicks": 3,
      "cost": 16.77,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -28839,7 +30485,8 @@ window.TERMS = {
      "impr": 25,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -28878,7 +30525,8 @@ window.TERMS = {
      "impr": 25,
      "clicks": 8,
      "cost": 134.44,
-     "conv": 2.0
+     "conv": 2.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -28916,7 +30564,8 @@ window.TERMS = {
      "impr": 25,
      "clicks": 2,
      "cost": 12.7,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -28954,7 +30603,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 5,
      "cost": 24.88,
-     "conv": 0.333
+     "conv": 0.333,
+     "intent": "garn_stop"
     },
     {
      "text": "how to stop wage garnishments",
@@ -28962,7 +30612,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 1,
      "cost": 5.78,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.933,
@@ -29002,7 +30653,8 @@ window.TERMS = {
      "impr": 25,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -29040,7 +30692,8 @@ window.TERMS = {
      "impr": 25,
      "clicks": 2,
      "cost": 7.97,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -29078,7 +30731,8 @@ window.TERMS = {
      "impr": 25,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -29116,7 +30770,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 2,
      "cost": 4.15,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_general"
     },
     {
      "text": "credit card attorney near me",
@@ -29124,7 +30779,8 @@ window.TERMS = {
      "impr": 8,
      "clicks": 2,
      "cost": 11.56,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_general"
     }
    ],
    "scope": "active",
@@ -29162,7 +30818,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     },
     {
      "text": "resurgent capital debt collector",
@@ -29170,7 +30827,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -29208,7 +30866,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 1,
      "cost": 5.03,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     },
     {
      "text": "resurgent capital debt collectors",
@@ -29216,7 +30875,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -29254,7 +30914,8 @@ window.TERMS = {
      "impr": 25,
      "clicks": 1,
      "cost": 4.52,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -29292,7 +30953,8 @@ window.TERMS = {
      "impr": 24,
      "clicks": 2,
      "cost": 33.92,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -29330,7 +30992,8 @@ window.TERMS = {
      "impr": 24,
      "clicks": 1,
      "cost": 24.99,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -29368,7 +31031,8 @@ window.TERMS = {
      "impr": 24,
      "clicks": 1,
      "cost": 2.63,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -29406,7 +31070,8 @@ window.TERMS = {
      "impr": 24,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_buyer"
     }
    ],
    "scope": "active",
@@ -29445,7 +31110,8 @@ window.TERMS = {
      "impr": 24,
      "clicks": 3,
      "cost": 17.39,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -29483,7 +31149,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "consumer debt defense attorney",
@@ -29491,7 +31158,8 @@ window.TERMS = {
      "impr": 7,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -29528,7 +31196,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 2,
      "cost": 12.92,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "credit debt lawyers",
@@ -29536,7 +31205,8 @@ window.TERMS = {
      "impr": 7,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -29574,7 +31244,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "i have been sued by a debt collector",
@@ -29582,7 +31253,8 @@ window.TERMS = {
      "impr": 8,
      "clicks": 1,
      "cost": 6.11,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -29621,7 +31293,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 1,
      "cost": 51.73,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt lawsuit defense",
@@ -29629,7 +31302,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 1,
      "cost": 4.74,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -29667,7 +31341,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 1,
      "cost": 8.02,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "how to respond to a debt collector lawsuit",
@@ -29675,7 +31350,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 3,
      "cost": 38.22,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -29713,7 +31389,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "a debt collector is suing me",
@@ -29721,7 +31398,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -29759,7 +31437,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt lawsuit attorney",
@@ -29767,7 +31446,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -29805,7 +31485,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "how to respond to a debt collector lawsuit",
@@ -29813,7 +31494,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 2,
      "cost": 5.78,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -29851,7 +31533,8 @@ window.TERMS = {
      "impr": 24,
      "clicks": 1,
      "cost": 6.7,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -29885,7 +31568,8 @@ window.TERMS = {
      "impr": 24,
      "clicks": 1,
      "cost": 4.06,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -29919,7 +31603,8 @@ window.TERMS = {
      "impr": 24,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -29953,7 +31638,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 2,
      "cost": 52.74,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "collection attorney",
@@ -29961,7 +31647,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 2,
      "cost": 12.7,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -29995,7 +31682,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 1,
      "cost": 4.48,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "pay garnishment",
@@ -30003,7 +31691,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "top30": 0.6,
@@ -30038,7 +31727,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 3,
      "cost": 22.65,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "garnishment",
@@ -30046,7 +31736,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "scope": "active",
@@ -30080,7 +31771,8 @@ window.TERMS = {
      "impr": 24,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -30119,7 +31811,8 @@ window.TERMS = {
      "impr": 24,
      "clicks": 3,
      "cost": 38.48,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -30157,7 +31850,8 @@ window.TERMS = {
      "impr": 24,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -30196,7 +31890,8 @@ window.TERMS = {
      "impr": 24,
      "clicks": 1,
      "cost": 6.65,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -30235,7 +31930,8 @@ window.TERMS = {
      "impr": 24,
      "clicks": 1,
      "cost": 3.46,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -30273,7 +31969,8 @@ window.TERMS = {
      "impr": 24,
      "clicks": 2,
      "cost": 9.59,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -30311,7 +32008,8 @@ window.TERMS = {
      "impr": 24,
      "clicks": 1,
      "cost": 4.57,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_general"
     }
    ],
    "scope": "active",
@@ -30349,7 +32047,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     },
     {
      "text": "resurgent capital debt collector",
@@ -30357,7 +32056,8 @@ window.TERMS = {
      "impr": 8,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -30395,7 +32095,8 @@ window.TERMS = {
      "impr": 24,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_action"
     }
    ],
    "scope": "active",
@@ -30433,7 +32134,8 @@ window.TERMS = {
      "impr": 24,
      "clicks": 2,
      "cost": 20.01,
-     "conv": 1.004
+     "conv": 1.004,
+     "intent": "fdcpa_action"
     }
    ],
    "scope": "active",
@@ -30471,7 +32173,8 @@ window.TERMS = {
      "impr": 23,
      "clicks": 2,
      "cost": 7.38,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -30509,7 +32212,8 @@ window.TERMS = {
      "impr": 23,
      "clicks": 2,
      "cost": 82.79,
-     "conv": 0.5
+     "conv": 0.5,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -30547,7 +32251,8 @@ window.TERMS = {
      "impr": 23,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -30585,7 +32290,8 @@ window.TERMS = {
      "impr": 23,
      "clicks": 2,
      "cost": 21.51,
-     "conv": 5.0
+     "conv": 5.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -30623,7 +32329,8 @@ window.TERMS = {
      "impr": 23,
      "clicks": 1,
      "cost": 8.86,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -30661,7 +32368,8 @@ window.TERMS = {
      "impr": 23,
      "clicks": 1,
      "cost": 2.63,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -30699,7 +32407,8 @@ window.TERMS = {
      "impr": 23,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -30738,7 +32447,8 @@ window.TERMS = {
      "impr": 23,
      "clicks": 1,
      "cost": 4.51,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -30776,7 +32486,8 @@ window.TERMS = {
      "impr": 23,
      "clicks": 6,
      "cost": 48.7,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -30814,13 +32525,14 @@ window.TERMS = {
      "impr": 23,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_buyer"
     }
    ],
    "scope": "active",
-   "intent": "collector_name",
-   "debtType": "Harassment",
-   "best": "HS",
+   "intent": "debt_buyer",
+   "debtType": "Lawsuit",
+   "best": "NBUY",
    "current": [
     {
      "page": "FB",
@@ -30833,9 +32545,10 @@ window.TERMS = {
    ],
    "bestShare": 0,
    "dup": true,
-   "action": "move",
-   "actionText": "Move the term to S_Harassment_NW › Creditor_Harassment, whose ad lands on the best page.",
-   "home": "S_Harassment_NW|Creditor_Harassment"
+   "interim": "PR",
+   "action": "new_page",
+   "actionText": "Now: move to S_Lawsuit_NW › Collection_Lawsuit, whose ad lands on /debt-lawsuit-proof (only a minority of that ad group's impressions today, so give the term its own ad group with only that ad). When the new page is built: S_Lawsuit_NW › Debt_Buyer_Lawsuit (new).",
+   "home": "S_Lawsuit_NW|Debt_Buyer_Lawsuit (new)"
   },
   {
    "campaign": "S_Lawsuit_NW",
@@ -30852,7 +32565,8 @@ window.TERMS = {
      "impr": 23,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -30890,7 +32604,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 1,
      "cost": 6.67,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "consumer debt defense attorney",
@@ -30898,7 +32613,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 1,
      "cost": 7.44,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -30936,7 +32652,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 2,
      "cost": 5.21,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt collection agency rights",
@@ -30944,7 +32661,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -30982,7 +32700,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "attorney for debt collection lawsuit",
@@ -30990,7 +32709,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 8.55,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -31028,7 +32748,8 @@ window.TERMS = {
      "impr": 23,
      "clicks": 2,
      "cost": 14.55,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_general"
     }
    ],
    "scope": "active",
@@ -31063,7 +32784,8 @@ window.TERMS = {
      "impr": 23,
      "clicks": 1,
      "cost": 6.67,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -31097,7 +32819,8 @@ window.TERMS = {
      "impr": 23,
      "clicks": 1,
      "cost": 0.4,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -31131,7 +32854,8 @@ window.TERMS = {
      "impr": 23,
      "clicks": 1,
      "cost": 11.46,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -31165,7 +32889,8 @@ window.TERMS = {
      "impr": 23,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -31199,7 +32924,8 @@ window.TERMS = {
      "impr": 23,
      "clicks": 4,
      "cost": 14.93,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -31238,7 +32964,8 @@ window.TERMS = {
      "impr": 23,
      "clicks": 4,
      "cost": 45.18,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -31277,7 +33004,8 @@ window.TERMS = {
      "impr": 23,
      "clicks": 2,
      "cost": 12.89,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -31316,7 +33044,8 @@ window.TERMS = {
      "impr": 23,
      "clicks": 2,
      "cost": 15.28,
-     "conv": 0.5
+     "conv": 0.5,
+     "intent": "garn_lawyer"
     }
    ],
    "scope": "active",
@@ -31354,7 +33083,8 @@ window.TERMS = {
      "impr": 23,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -31391,7 +33121,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 3,
      "cost": 22.86,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     },
     {
      "text": "how to stop a garnishment",
@@ -31399,7 +33130,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 1,
      "cost": 11.01,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -31437,7 +33169,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_lawyer"
     },
     {
      "text": "help with garnishment",
@@ -31445,7 +33178,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -31483,7 +33217,8 @@ window.TERMS = {
      "impr": 23,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_general"
     }
    ],
    "scope": "active",
@@ -31521,7 +33256,8 @@ window.TERMS = {
      "impr": 23,
      "clicks": 1,
      "cost": 10.3,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_general"
     }
    ],
    "scope": "active",
@@ -31559,7 +33295,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 4,
      "cost": 29.71,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     },
     {
      "text": "lawsuit by credit card company",
@@ -31567,7 +33304,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 1,
      "cost": 7.57,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -31605,7 +33343,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 2,
      "cost": 9.78,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     },
     {
      "text": "lawsuit by credit card company",
@@ -31613,7 +33352,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 1,
      "cost": 3.43,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -31651,7 +33391,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     },
     {
      "text": "credit card debt lawyers near me",
@@ -31659,7 +33400,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 1,
      "cost": 5.71,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_general"
     }
    ],
    "scope": "active",
@@ -31697,7 +33439,8 @@ window.TERMS = {
      "impr": 23,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -31735,7 +33478,8 @@ window.TERMS = {
      "impr": 23,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -31773,7 +33517,8 @@ window.TERMS = {
      "impr": 22,
      "clicks": 3,
      "cost": 43.45,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -31811,7 +33556,8 @@ window.TERMS = {
      "impr": 22,
      "clicks": 2,
      "cost": 10.26,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -31849,7 +33595,8 @@ window.TERMS = {
      "impr": 22,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -31887,7 +33634,8 @@ window.TERMS = {
      "impr": 22,
      "clicks": 1,
      "cost": 13.14,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -31925,7 +33673,8 @@ window.TERMS = {
      "impr": 22,
      "clicks": 2,
      "cost": 35.01,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -31963,7 +33712,8 @@ window.TERMS = {
      "impr": 22,
      "clicks": 4,
      "cost": 35.07,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -32001,7 +33751,8 @@ window.TERMS = {
      "impr": 22,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -32039,7 +33790,8 @@ window.TERMS = {
      "impr": 22,
      "clicks": 1,
      "cost": 5.27,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_buyer"
     }
    ],
    "scope": "active",
@@ -32078,7 +33830,8 @@ window.TERMS = {
      "impr": 22,
      "clicks": 4,
      "cost": 14.25,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -32116,7 +33869,8 @@ window.TERMS = {
      "impr": 22,
      "clicks": 3,
      "cost": 9.71,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -32154,7 +33908,8 @@ window.TERMS = {
      "impr": 22,
      "clicks": 2,
      "cost": 14.61,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -32192,7 +33947,8 @@ window.TERMS = {
      "impr": 22,
      "clicks": 2,
      "cost": 20.96,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -32230,7 +33986,8 @@ window.TERMS = {
      "impr": 22,
      "clicks": 3,
      "cost": 31.3,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -32268,7 +34025,8 @@ window.TERMS = {
      "impr": 22,
      "clicks": 2,
      "cost": 23.63,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -32306,7 +34064,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 1,
      "cost": 32.82,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "lawyer for debt lawsuit",
@@ -32314,7 +34073,8 @@ window.TERMS = {
      "impr": 7,
      "clicks": 1,
      "cost": 11.59,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -32352,7 +34112,8 @@ window.TERMS = {
      "impr": 22,
      "clicks": 2,
      "cost": 6.37,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -32386,7 +34147,8 @@ window.TERMS = {
      "impr": 22,
      "clicks": 2,
      "cost": 16.37,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -32420,7 +34182,8 @@ window.TERMS = {
      "impr": 22,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -32455,7 +34218,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "paycheck garnishment",
@@ -32463,7 +34227,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "scope": "active",
@@ -32497,7 +34262,8 @@ window.TERMS = {
      "impr": 22,
      "clicks": 3,
      "cost": 27.76,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -32536,7 +34302,8 @@ window.TERMS = {
      "impr": 22,
      "clicks": 3,
      "cost": 13.33,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -32575,7 +34342,8 @@ window.TERMS = {
      "impr": 22,
      "clicks": 3,
      "cost": 33.89,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_lawyer"
     }
    ],
    "scope": "active",
@@ -32613,7 +34381,8 @@ window.TERMS = {
      "impr": 22,
      "clicks": 3,
      "cost": 24.72,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_lawyer"
     }
    ],
    "scope": "active",
@@ -32651,7 +34420,8 @@ window.TERMS = {
      "impr": 22,
      "clicks": 4,
      "cost": 48.18,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_lawyer"
     }
    ],
    "scope": "active",
@@ -32689,7 +34459,8 @@ window.TERMS = {
      "impr": 22,
      "clicks": 3,
      "cost": 30.52,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_lawyer"
     }
    ],
    "scope": "active",
@@ -32727,7 +34498,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     },
     {
      "text": "how to get out of wage garnishment",
@@ -32735,7 +34507,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "top30": 0.8,
@@ -32774,7 +34547,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 2,
      "cost": 8.7,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "can you stop a garnishment before it starts",
@@ -32782,7 +34556,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.952,
@@ -32821,7 +34596,8 @@ window.TERMS = {
      "impr": 22,
      "clicks": 1,
      "cost": 5.13,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -32859,7 +34635,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     },
     {
      "text": "portfolio recovery debt collectors",
@@ -32867,7 +34644,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -32905,7 +34683,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     },
     {
      "text": "portfolio recovery debt collectors",
@@ -32913,7 +34692,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -32951,7 +34731,8 @@ window.TERMS = {
      "impr": 21,
      "clicks": 1,
      "cost": 30.88,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -32989,7 +34770,8 @@ window.TERMS = {
      "impr": 21,
      "clicks": 2,
      "cost": 8.76,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -33027,7 +34809,8 @@ window.TERMS = {
      "impr": 21,
      "clicks": 1,
      "cost": 3.87,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -33065,7 +34848,8 @@ window.TERMS = {
      "impr": 21,
      "clicks": 2,
      "cost": 8.81,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -33103,7 +34887,8 @@ window.TERMS = {
      "impr": 21,
      "clicks": 4,
      "cost": 23.12,
-     "conv": 0.5
+     "conv": 0.5,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -33141,7 +34926,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt defense lawyer near me",
@@ -33149,7 +34935,8 @@ window.TERMS = {
      "impr": 7,
      "clicks": 1,
      "cost": 3.5,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -33187,7 +34974,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt litigation attorney",
@@ -33195,7 +34983,8 @@ window.TERMS = {
      "impr": 7,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -33232,7 +35021,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 1,
      "cost": 5.37,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_dismiss"
     },
     {
      "text": "debt collection lawsuit defense",
@@ -33240,7 +35030,8 @@ window.TERMS = {
      "impr": 7,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -33278,7 +35069,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 4,
      "cost": 31.68,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "attorney for debt collection lawsuit",
@@ -33286,7 +35078,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 18.33,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -33324,7 +35117,8 @@ window.TERMS = {
      "impr": 21,
      "clicks": 1,
      "cost": 5.2,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_lawyer"
     }
    ],
    "scope": "active",
@@ -33358,7 +35152,8 @@ window.TERMS = {
      "impr": 21,
      "clicks": 1,
      "cost": 9.82,
-     "conv": 1.667
+     "conv": 1.667,
+     "intent": "garn_lawyer"
     }
    ],
    "top30": 0.778,
@@ -33393,7 +35188,8 @@ window.TERMS = {
      "impr": 21,
      "clicks": 4,
      "cost": 71.05,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -33429,7 +35225,8 @@ window.TERMS = {
      "impr": 21,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -33462,7 +35259,8 @@ window.TERMS = {
      "impr": 21,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -33496,7 +35294,8 @@ window.TERMS = {
      "impr": 21,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -33530,7 +35329,8 @@ window.TERMS = {
      "impr": 21,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -33564,7 +35364,8 @@ window.TERMS = {
      "impr": 21,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -33598,7 +35399,8 @@ window.TERMS = {
      "impr": 21,
      "clicks": 5,
      "cost": 46.71,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -33637,7 +35439,8 @@ window.TERMS = {
      "impr": 21,
      "clicks": 3,
      "cost": 13.85,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -33675,7 +35478,8 @@ window.TERMS = {
      "impr": 21,
      "clicks": 4,
      "cost": 17.31,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -33714,7 +35518,8 @@ window.TERMS = {
      "impr": 21,
      "clicks": 1,
      "cost": 3.02,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -33752,7 +35557,8 @@ window.TERMS = {
      "impr": 21,
      "clicks": 2,
      "cost": 10.25,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -33791,7 +35597,8 @@ window.TERMS = {
      "impr": 21,
      "clicks": 1,
      "cost": 7.6,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -33829,7 +35636,8 @@ window.TERMS = {
      "impr": 21,
      "clicks": 1,
      "cost": 5.14,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -33867,7 +35675,8 @@ window.TERMS = {
      "impr": 21,
      "clicks": 1,
      "cost": 2.23,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_action"
     }
    ],
    "scope": "active",
@@ -33905,7 +35714,8 @@ window.TERMS = {
      "impr": 21,
      "clicks": 4,
      "cost": 32.95,
-     "conv": 0.56
+     "conv": 0.56,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -33943,7 +35753,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -33981,7 +35792,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -34019,7 +35831,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 1,
      "cost": 8.36,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -34057,7 +35870,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 1,
      "cost": 11.3,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -34095,7 +35909,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -34134,7 +35949,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 3,
      "cost": 18.17,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -34172,7 +35988,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 3,
      "cost": 9.71,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -34210,7 +36027,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 1,
      "cost": 5.79,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt collection lawsuit defense",
@@ -34218,7 +36036,8 @@ window.TERMS = {
      "impr": 7,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -34256,7 +36075,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 1,
      "cost": 15.6,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt lawsuit attorney",
@@ -34264,7 +36084,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 1,
      "cost": 12.37,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -34302,7 +36123,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 2,
      "cost": 32.14,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "lawyer for debt lawsuit",
@@ -34310,7 +36132,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -34348,7 +36171,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "attorney for debt collection lawsuit",
@@ -34356,7 +36180,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 3,
      "cost": 9.45,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -34394,7 +36219,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 2,
      "cost": 19.99,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_lawyer"
     }
    ],
    "scope": "active",
@@ -34428,7 +36254,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 5,
      "cost": 32.95,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -34462,7 +36289,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "top30": 0.375,
@@ -34498,7 +36326,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 2,
      "cost": 26.58,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -34533,7 +36362,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 3,
      "cost": 30.7,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -34567,7 +36397,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 1,
      "cost": 6.13,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -34601,7 +36432,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -34635,7 +36467,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -34669,7 +36502,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 7,
      "cost": 68.64,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -34707,7 +36541,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 3,
      "cost": 19.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -34745,7 +36580,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 3,
      "cost": 12.41,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -34784,7 +36620,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 1,
      "cost": 6.8,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -34823,7 +36660,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -34862,7 +36700,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -34901,7 +36740,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 4,
      "cost": 18.62,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -34940,7 +36780,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 1,
      "cost": 7.04,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -34979,7 +36820,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 5,
      "cost": 35.26,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "how to fight a garnishment",
@@ -34987,7 +36829,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -35025,7 +36868,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 1,
      "cost": 3.71,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "stop garnishment",
@@ -35033,7 +36877,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 1,
      "cost": 12.87,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -35071,7 +36916,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "stop garnishment",
@@ -35079,7 +36925,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 3,
      "cost": 8.5,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -35118,7 +36965,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 2,
      "cost": 10.13,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -35156,7 +37004,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 2,
      "cost": 11.55,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -35194,7 +37043,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -35232,7 +37082,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "settlement"
     }
    ],
    "scope": "active",
@@ -35265,7 +37116,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "settlement"
     }
    ],
    "scope": "active",
@@ -35298,7 +37150,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_general"
     },
     {
      "text": "credit card attorney",
@@ -35306,7 +37159,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_general"
     }
    ],
    "scope": "active",
@@ -35344,7 +37198,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -35382,7 +37237,8 @@ window.TERMS = {
      "impr": 20,
      "clicks": 1,
      "cost": 15.82,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_action"
     }
    ],
    "scope": "active",
@@ -35420,7 +37276,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 1,
      "cost": 7.68,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -35458,7 +37315,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 1,
      "cost": 5.16,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -35496,7 +37354,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 3,
      "cost": 15.51,
-     "conv": 1.001
+     "conv": 1.001,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -35534,7 +37393,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 1,
      "cost": 5.62,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -35572,7 +37432,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 1,
      "cost": 2.1,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -35609,7 +37470,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -35647,7 +37509,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 1,
      "cost": 16.87,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -35685,7 +37548,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -35722,7 +37586,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -35760,7 +37625,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 2,
      "cost": 22.65,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -35798,7 +37664,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -35836,7 +37703,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 3,
      "cost": 31.9,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -35874,7 +37742,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 2,
      "cost": 31.43,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "credit debt lawyers",
@@ -35882,7 +37751,8 @@ window.TERMS = {
      "impr": 7,
      "clicks": 2,
      "cost": 29.12,
-     "conv": 1.343
+     "conv": 1.343,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -35920,7 +37790,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt lawsuit attorney near me",
@@ -35928,7 +37799,8 @@ window.TERMS = {
      "impr": 7,
      "clicks": 1,
      "cost": 6.68,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -35966,7 +37838,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 1,
      "cost": 15.4,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt lawsuit lawyer",
@@ -35974,7 +37847,8 @@ window.TERMS = {
      "impr": 8,
      "clicks": 1,
      "cost": 6.5,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -36012,7 +37886,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "attorney for debt collection lawsuit",
@@ -36020,7 +37895,8 @@ window.TERMS = {
      "impr": 8,
      "clicks": 1,
      "cost": 22.65,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -36058,7 +37934,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -36092,7 +37969,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 1,
      "cost": 5.57,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -36126,7 +38004,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -36160,7 +38039,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 1,
      "cost": 1.62,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -36194,7 +38074,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -36228,7 +38109,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 1,
      "cost": 6.69,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -36262,7 +38144,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 2,
      "cost": 4.79,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -36296,7 +38179,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -36330,7 +38214,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -36364,7 +38249,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 1,
      "cost": 19.27,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -36398,7 +38284,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 2,
      "cost": 11.8,
-     "conv": 2.0
+     "conv": 2.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -36432,7 +38319,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 2,
      "cost": 3.62,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -36466,7 +38354,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 2,
      "cost": 6.55,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -36505,7 +38394,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 6,
      "cost": 47.19,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -36543,7 +38433,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 2,
      "cost": 9.74,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -36582,7 +38473,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 2,
      "cost": 18.96,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -36621,7 +38513,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 2,
      "cost": 5.92,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -36660,7 +38553,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 1,
      "cost": 8.51,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -36699,7 +38593,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 5,
      "cost": 30.83,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -36737,7 +38632,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "how to fight a garnishment",
@@ -36745,7 +38641,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 1,
      "cost": 9.05,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -36783,7 +38680,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 8.78,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "how to fight wage garnishment",
@@ -36791,7 +38689,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -36829,7 +38728,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 1,
      "cost": 23.33,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_general"
     }
    ],
    "scope": "active",
@@ -36867,7 +38767,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 4,
      "cost": 15.2,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -36905,7 +38806,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 1,
      "cost": 21.77,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "settlement"
     }
    ],
    "scope": "active",
@@ -36940,7 +38842,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 3,
      "cost": 17.98,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     },
     {
      "text": "portfolio recovery debt collector",
@@ -36948,7 +38851,8 @@ window.TERMS = {
      "impr": 8,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -36986,7 +38890,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_action"
     }
    ],
    "scope": "active",
@@ -37024,7 +38929,8 @@ window.TERMS = {
      "impr": 19,
      "clicks": 2,
      "cost": 7.05,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_action"
     }
    ],
    "scope": "active",
@@ -37062,7 +38968,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -37100,7 +39007,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 3,
      "cost": 22.53,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -37138,7 +39046,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -37176,7 +39085,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -37214,7 +39124,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 3,
      "cost": 9.76,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -37252,7 +39163,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 4,
      "cost": 20.24,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -37290,7 +39202,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 3,
      "cost": 20.7,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -37328,7 +39241,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 1,
      "cost": 9.46,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -37366,7 +39280,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 1,
      "cost": 24.67,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -37404,7 +39319,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 2,
      "cost": 8.3,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -37442,7 +39358,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 3,
      "cost": 17.09,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -37480,7 +39397,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 2,
      "cost": 14.04,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -37518,7 +39436,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -37556,7 +39475,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 3,
      "cost": 38.19,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -37594,7 +39514,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -37632,7 +39553,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 1,
      "cost": 2.69,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -37670,7 +39592,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 1,
      "cost": 4.87,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -37708,7 +39631,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "attorney for debt collection lawsuit",
@@ -37716,7 +39640,8 @@ window.TERMS = {
      "impr": 8,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -37754,7 +39679,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 4.71,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "im being sued for a debt what do i do",
@@ -37762,7 +39688,8 @@ window.TERMS = {
      "impr": 8,
      "clicks": 1,
      "cost": 4.75,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -37800,7 +39727,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt lawsuit lawyer",
@@ -37808,7 +39736,8 @@ window.TERMS = {
      "impr": 8,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -37847,7 +39776,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 3,
      "cost": 20.48,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "attorney for debt collection lawsuit",
@@ -37855,7 +39785,8 @@ window.TERMS = {
      "impr": 8,
      "clicks": 1,
      "cost": 11.92,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -37893,7 +39824,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 5.45,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     },
     {
      "text": "debt collection lawsuit defense",
@@ -37901,7 +39833,8 @@ window.TERMS = {
      "impr": 8,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -37939,7 +39872,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "scope": "active",
@@ -37974,7 +39908,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "scope": "active",
@@ -38009,7 +39944,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 3,
      "cost": 90.59,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -38042,7 +39978,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -38076,7 +40013,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -38109,7 +40047,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 3,
      "cost": 7.7,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -38143,7 +40082,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -38177,7 +40117,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 1,
      "cost": 3.14,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     },
     {
      "text": "i just received a writ of garnishment",
@@ -38185,7 +40126,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -38219,7 +40161,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     },
     {
      "text": "debt attorneys",
@@ -38227,7 +40170,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -38261,7 +40205,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 3,
      "cost": 17.07,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -38300,7 +40245,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -38339,7 +40285,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 8,
      "cost": 46.47,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -38377,7 +40324,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -38416,7 +40364,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     },
     {
      "text": "how to stop my check from being garnished",
@@ -38424,7 +40373,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -38463,7 +40413,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 3,
      "cost": 14.85,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -38501,7 +40452,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 2,
      "cost": 5.82,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -38539,7 +40491,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 1,
      "cost": 21.6,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "cc_general"
     }
    ],
    "scope": "active",
@@ -38577,7 +40530,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 4,
      "cost": 23.96,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -38615,7 +40569,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -38653,7 +40608,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 1,
      "cost": 4.62,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -38691,7 +40647,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -38729,7 +40686,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 1,
      "cost": 5.75,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_general"
     },
     {
      "text": "credit card lawyer",
@@ -38737,7 +40695,8 @@ window.TERMS = {
      "impr": 7,
      "clicks": 1,
      "cost": 10.33,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_general"
     }
    ],
    "scope": "active",
@@ -38775,7 +40734,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -38813,7 +40773,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -38851,7 +40812,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 1,
      "cost": 15.79,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_action"
     }
    ],
    "scope": "active",
@@ -38889,7 +40851,8 @@ window.TERMS = {
      "impr": 18,
      "clicks": 2,
      "cost": 17.87,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -38927,7 +40890,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 2,
      "cost": 7.91,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -38965,7 +40929,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 2,
      "cost": 6.95,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -39003,7 +40968,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -39041,7 +41007,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 1,
      "cost": 4.4,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -39079,7 +41046,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 1,
      "cost": 22.62,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -39117,7 +41085,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 3,
      "cost": 11.28,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -39155,7 +41124,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 2,
      "cost": 32.38,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -39193,7 +41163,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -39231,7 +41202,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 1,
      "cost": 19.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -39269,7 +41241,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 3,
      "cost": 33.92,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -39307,7 +41280,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 1,
      "cost": 4.2,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -39345,7 +41319,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -39383,7 +41358,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -39421,7 +41397,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -39460,7 +41437,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 1,
      "cost": 5.32,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -39497,7 +41475,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 1,
      "cost": 6.78,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_buyer"
     }
    ],
    "scope": "active",
@@ -39536,13 +41515,14 @@ window.TERMS = {
      "impr": 17,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_buyer"
     }
    ],
    "scope": "active",
-   "intent": "collector_name",
-   "debtType": "Harassment",
-   "best": "HS",
+   "intent": "debt_buyer",
+   "debtType": "Lawsuit",
+   "best": "NBUY",
    "current": [
     {
      "page": "FB",
@@ -39555,9 +41535,10 @@ window.TERMS = {
    ],
    "bestShare": 0,
    "dup": false,
-   "action": "move",
-   "actionText": "Move the term to S_Harassment_NW › Creditor_Harassment, whose ad lands on the best page.",
-   "home": "S_Harassment_NW|Creditor_Harassment"
+   "interim": "PR",
+   "action": "new_page",
+   "actionText": "Now: move to S_Lawsuit_NW › Collection_Lawsuit, whose ad lands on /debt-lawsuit-proof (only a minority of that ad group's impressions today, so give the term its own ad group with only that ad). When the new page is built: S_Lawsuit_NW › Debt_Buyer_Lawsuit (new).",
+   "home": "S_Lawsuit_NW|Debt_Buyer_Lawsuit (new)"
   },
   {
    "campaign": "S_Lawsuit_NW",
@@ -39574,7 +41555,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 1,
      "cost": 8.29,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -39612,7 +41594,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 4,
      "cost": 10.62,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -39650,7 +41633,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 1,
      "cost": 1.91,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -39688,7 +41672,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 1,
      "cost": 7.11,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -39726,7 +41711,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 2,
      "cost": 36.67,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -39764,7 +41750,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -39802,7 +41789,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 1,
      "cost": 26.5,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -39840,7 +41828,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     },
     {
      "text": "how to fight debt collectors",
@@ -39848,7 +41837,8 @@ window.TERMS = {
      "impr": 7,
      "clicks": 1,
      "cost": 7.05,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -39886,7 +41876,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "a debt collector is suing me",
@@ -39894,7 +41885,8 @@ window.TERMS = {
      "impr": 8,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -39932,7 +41924,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     },
     {
      "text": "how to fight debt collectors",
@@ -39940,7 +41933,8 @@ window.TERMS = {
      "impr": 8,
      "clicks": 3,
      "cost": 19.61,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -39978,7 +41972,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "credit debt lawyers",
@@ -39986,7 +41981,8 @@ window.TERMS = {
      "impr": 8,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -40025,7 +42021,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "im being sued for a debt what do i do",
@@ -40033,7 +42030,8 @@ window.TERMS = {
      "impr": 8,
      "clicks": 1,
      "cost": 7.47,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -40071,7 +42069,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 1,
      "cost": 9.51,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "scope": "active",
@@ -40106,7 +42105,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 3,
      "cost": 10.59,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -40140,7 +42140,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 1,
      "cost": 6.06,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -40174,7 +42175,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 1,
      "cost": 2.62,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -40208,7 +42210,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -40242,7 +42245,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_definition"
     }
    ],
    "scope": "active",
@@ -40277,7 +42281,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 1,
      "cost": 5.86,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_lawyer"
     }
    ],
    "scope": "active",
@@ -40311,7 +42316,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 1,
      "cost": 13.87,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -40345,7 +42351,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -40379,7 +42386,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 1,
      "cost": 0.3,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -40413,7 +42421,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 1,
      "cost": 6.72,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -40447,7 +42456,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 2,
      "cost": 8.18,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -40485,7 +42495,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 1,
      "cost": 18.4,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -40524,7 +42535,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 2,
      "cost": 19.98,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_lawyer"
     }
    ],
    "scope": "active",
@@ -40562,7 +42574,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -40600,7 +42613,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 1,
      "cost": 4.07,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -40639,7 +42653,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -40677,7 +42692,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 3,
      "cost": 13.62,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -40716,7 +42732,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 4,
      "cost": 19.63,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -40754,7 +42771,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 3,
      "cost": 16.24,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -40792,13 +42810,14 @@ window.TERMS = {
      "impr": 17,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_buyer"
     }
    ],
    "scope": "active",
-   "intent": "collector_name",
-   "debtType": "Harassment",
-   "best": "HS",
+   "intent": "debt_buyer",
+   "debtType": "Lawsuit",
+   "best": "NBUY",
    "current": [
     {
      "page": "CCV",
@@ -40811,9 +42830,10 @@ window.TERMS = {
    ],
    "bestShare": 0,
    "dup": false,
-   "action": "move",
-   "actionText": "Move the term to S_Harassment_NW › Creditor_Harassment, whose ad lands on the best page.",
-   "home": "S_Harassment_NW|Creditor_Harassment"
+   "interim": "PR",
+   "action": "new_page",
+   "actionText": "Now: move to S_Lawsuit_NW › Collection_Lawsuit, whose ad lands on /debt-lawsuit-proof (only a minority of that ad group's impressions today, so give the term its own ad group with only that ad). When the new page is built: S_Lawsuit_NW › Debt_Buyer_Lawsuit (new).",
+   "home": "S_Lawsuit_NW|Debt_Buyer_Lawsuit (new)"
   },
   {
    "campaign": "S_CreditCard_NW",
@@ -40830,7 +42850,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 3,
      "cost": 49.75,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "settlement"
     }
    ],
    "scope": "active",
@@ -40864,7 +42885,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_general"
     },
     {
      "text": "credit card debt lawyers near me",
@@ -40872,7 +42894,8 @@ window.TERMS = {
      "impr": 8,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_general"
     }
    ],
    "scope": "active",
@@ -40910,7 +42933,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -40948,7 +42972,8 @@ window.TERMS = {
      "impr": 17,
      "clicks": 3,
      "cost": 13.19,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -40986,7 +43011,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -41023,7 +43049,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -41061,7 +43088,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 1,
      "cost": 20.26,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -41099,7 +43127,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 2,
      "cost": 24.29,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -41137,7 +43166,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 2,
      "cost": 13.18,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -41175,7 +43205,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 2,
      "cost": 8.84,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -41213,7 +43244,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 1,
      "cost": 3.03,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -41251,7 +43283,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 3,
      "cost": 35.17,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -41289,7 +43322,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 2,
      "cost": 8.6,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -41327,7 +43361,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -41365,7 +43400,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 3,
      "cost": 52.12,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -41403,7 +43439,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 1,
      "cost": 4.34,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -41441,7 +43478,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 1,
      "cost": 6.32,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -41479,7 +43517,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 1,
      "cost": 10.23,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -41518,7 +43557,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 2,
      "cost": 57.66,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -41556,7 +43596,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_buyer"
     }
    ],
    "scope": "active",
@@ -41595,7 +43636,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 3,
      "cost": 9.69,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -41633,7 +43675,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 2,
      "cost": 23.45,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "being sued by debt collector",
@@ -41641,7 +43684,8 @@ window.TERMS = {
      "impr": 7,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -41679,7 +43723,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "scope": "active",
@@ -41714,7 +43759,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 2,
      "cost": 23.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -41748,7 +43794,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "scope": "active",
@@ -41783,7 +43830,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "scope": "active",
@@ -41818,7 +43866,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 1,
      "cost": 10.12,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -41852,7 +43901,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 1,
      "cost": 7.81,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -41886,7 +43936,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 1,
      "cost": 18.38,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -41921,7 +43972,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 1,
      "cost": 6.19,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -41955,7 +44007,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -41989,7 +44042,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -42022,7 +44076,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 1,
      "cost": 5.99,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -42056,7 +44111,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -42090,7 +44146,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 1,
      "cost": 2.92,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -42124,7 +44181,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -42159,7 +44217,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -42193,7 +44252,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 4,
      "cost": 26.48,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_options"
     }
    ],
    "scope": "active",
@@ -42227,7 +44287,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 1,
      "cost": 2.04,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -42261,7 +44322,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 4,
      "cost": 17.99,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -42295,7 +44357,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -42329,7 +44392,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -42367,7 +44431,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 1,
      "cost": 3.03,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -42405,7 +44470,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 1,
      "cost": 3.04,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -42443,7 +44509,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 3,
      "cost": 32.15,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -42482,7 +44549,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 4,
      "cost": 47.12,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -42521,7 +44589,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 6,
      "cost": 28.4,
-     "conv": 2.0
+     "conv": 2.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -42560,7 +44629,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 1,
      "cost": 11.02,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -42598,7 +44668,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 1,
      "cost": 11.42,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -42637,7 +44708,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 2,
      "cost": 37.3,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_lawyer"
     }
    ],
    "scope": "active",
@@ -42675,7 +44747,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_lawyer"
     }
    ],
    "scope": "active",
@@ -42713,7 +44786,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -42752,7 +44826,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 1,
      "cost": 2.4,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -42790,7 +44865,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -42828,7 +44904,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 5,
      "cost": 39.15,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -42867,7 +44944,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 4,
      "cost": 30.71,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "cc_general"
     }
    ],
    "scope": "active",
@@ -42905,7 +44983,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 1,
      "cost": 7.46,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -42943,7 +45022,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 1,
      "cost": 3.14,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -42981,7 +45061,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -43019,7 +45100,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 1,
      "cost": 3.66,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -43057,7 +45139,8 @@ window.TERMS = {
      "impr": 9,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     },
     {
      "text": "i got served for credit card debt",
@@ -43065,7 +45148,8 @@ window.TERMS = {
      "impr": 7,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -43103,7 +45187,8 @@ window.TERMS = {
      "impr": 8,
      "clicks": 1,
      "cost": 11.92,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_buyer"
     },
     {
      "text": "cavalry spv debt collector",
@@ -43111,7 +45196,8 @@ window.TERMS = {
      "impr": 8,
      "clicks": 2,
      "cost": 5.66,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -43149,7 +45235,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -43187,7 +45274,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 1,
      "cost": 12.5,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -43225,7 +45313,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_action"
     }
    ],
    "scope": "active",
@@ -43263,7 +45352,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -43301,7 +45391,8 @@ window.TERMS = {
      "impr": 16,
      "clicks": 2,
      "cost": 5.38,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "brand"
     }
    ],
    "scope": "active",
@@ -43335,7 +45426,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 1,
      "cost": 2.81,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_buyer"
     }
    ],
    "scope": "active",
@@ -43374,7 +45466,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -43411,7 +45504,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 1,
      "cost": 16.55,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -43450,7 +45544,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 2,
      "cost": 4.99,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -43488,7 +45583,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 1,
      "cost": 4.91,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -43526,7 +45622,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -43564,7 +45661,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 1,
      "cost": 2.18,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -43602,7 +45700,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -43640,7 +45739,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -43678,7 +45778,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -43716,7 +45817,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 1,
      "cost": 3.8,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -43755,7 +45857,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 1,
      "cost": 3.34,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -43794,7 +45897,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -43833,7 +45937,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 2,
      "cost": 8.2,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -43871,7 +45976,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -43909,7 +46015,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 2,
      "cost": 8.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_buyer"
     }
    ],
    "scope": "active",
@@ -43948,7 +46055,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_buyer"
     }
    ],
    "scope": "active",
@@ -43987,7 +46095,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -44025,7 +46134,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 4,
      "cost": 20.4,
-     "conv": 0.995
+     "conv": 0.995,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -44063,7 +46173,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 2,
      "cost": 7.87,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -44101,7 +46212,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -44139,7 +46251,8 @@ window.TERMS = {
      "impr": 8,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     },
     {
      "text": "debt lawsuit lawyer",
@@ -44147,7 +46260,8 @@ window.TERMS = {
      "impr": 7,
      "clicks": 1,
      "cost": 31.62,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -44185,7 +46299,8 @@ window.TERMS = {
      "impr": 8,
      "clicks": 1,
      "cost": 3.17,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     },
     {
      "text": "being sued by debt collector",
@@ -44193,7 +46308,8 @@ window.TERMS = {
      "impr": 7,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -44231,7 +46347,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 1,
      "cost": 14.76,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "scope": "active",
@@ -44266,7 +46383,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 2,
      "cost": 28.19,
-     "conv": 2.0
+     "conv": 2.0,
+     "intent": "garn_general"
     }
    ],
    "scope": "active",
@@ -44300,7 +46418,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -44334,7 +46453,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 1,
      "cost": 4.7,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 1,
@@ -44369,7 +46489,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 2,
      "cost": 13.44,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -44403,7 +46524,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "scope": "active",
@@ -44438,7 +46560,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 1,
      "cost": 36.46,
-     "conv": 0.5
+     "conv": 0.5,
+     "intent": "garn_lawyer"
     }
    ],
    "scope": "active",
@@ -44472,7 +46595,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -44506,7 +46630,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 4,
      "cost": 57.87,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -44540,7 +46665,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 1,
      "cost": 18.98,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -44573,7 +46699,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -44607,7 +46734,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 1,
      "cost": 8.83,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -44641,7 +46769,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -44675,7 +46804,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -44709,7 +46839,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 1,
      "cost": 4.37,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -44743,7 +46874,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -44777,7 +46909,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 2,
      "cost": 23.48,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -44816,7 +46949,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 2,
      "cost": 45.48,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -44855,7 +46989,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 2,
      "cost": 26.64,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -44894,7 +47029,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 3,
      "cost": 14.26,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -44932,7 +47068,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 1,
      "cost": 3.21,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -44970,7 +47107,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 1,
      "cost": 4.63,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -45009,7 +47147,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 1,
      "cost": 4.29,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_lawyer"
     }
    ],
    "scope": "active",
@@ -45048,7 +47187,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -45087,7 +47227,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_lawyer"
     }
    ],
    "scope": "active",
@@ -45126,11 +47267,12 @@ window.TERMS = {
      "impr": 15,
      "clicks": 3,
      "cost": 65.64,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
-   "intent": "garn_general",
+   "intent": "garn_stop",
    "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
@@ -45165,13 +47307,14 @@ window.TERMS = {
      "impr": 15,
      "clicks": 3,
      "cost": 17.34,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
-   "intent": "cc_general",
+   "intent": "cc_lawsuit",
    "debtType": "Credit Card",
-   "best": "CCC",
+   "best": "CCR",
    "current": [
     {
      "page": "CCR",
@@ -45182,11 +47325,11 @@ window.TERMS = {
      "share": 15
     }
    ],
-   "bestShare": 0,
+   "bestShare": 85,
    "dup": false,
-   "action": "move",
-   "actionText": "Move the term to S_CreditCard_NW › CC_Negotiation, whose ad lands on the best page.",
-   "home": "S_CreditCard_NW|CC_Negotiation"
+   "action": "keep",
+   "actionText": "Keep: already on the best page.",
+   "home": "S_CreditCard_NW|CC_Lawsuit"
   },
   {
    "campaign": "S_CreditCard_NW",
@@ -45203,7 +47346,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 3,
      "cost": 35.72,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -45241,7 +47385,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 1,
      "cost": 5.87,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -45279,7 +47424,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -45317,7 +47463,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 1,
      "cost": 22.21,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -45355,7 +47502,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 2,
      "cost": 8.29,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -45393,7 +47541,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 3,
      "cost": 10.25,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -45431,7 +47580,8 @@ window.TERMS = {
      "impr": 8,
      "clicks": 2,
      "cost": 9.23,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     },
     {
      "text": "how to fight a credit card lawsuit",
@@ -45439,7 +47589,8 @@ window.TERMS = {
      "impr": 7,
      "clicks": 1,
      "cost": 5.06,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -45477,7 +47628,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -45515,7 +47667,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 1,
      "cost": 2.29,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -45553,7 +47706,8 @@ window.TERMS = {
      "impr": 15,
      "clicks": 2,
      "cost": 18.97,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "fdcpa_action"
     }
    ],
    "scope": "active",
@@ -45591,7 +47745,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 1,
      "cost": 15.42,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -45630,7 +47785,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 1,
      "cost": 12.23,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -45668,7 +47824,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -45706,7 +47863,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -45744,7 +47902,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -45782,7 +47941,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 1,
      "cost": 2.85,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -45821,7 +47981,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -45860,7 +48021,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -45898,7 +48060,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -45936,7 +48099,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 1,
      "cost": 10.37,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -45974,7 +48138,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 2,
      "cost": 23.89,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -46012,7 +48177,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -46050,7 +48216,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 1,
      "cost": 19.46,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -46088,7 +48255,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 3,
      "cost": 58.55,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -46126,7 +48294,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 3,
      "cost": 23.95,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -46164,7 +48333,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 2,
      "cost": 24.77,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -46201,7 +48371,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 4,
      "cost": 67.45,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -46238,7 +48409,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -46276,7 +48448,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 1,
      "cost": 8.11,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "debt_buyer"
     }
    ],
    "scope": "active",
@@ -46315,7 +48488,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 2,
      "cost": 7.52,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -46353,7 +48527,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 1,
      "cost": 7.39,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -46391,7 +48566,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 1,
      "cost": 18.05,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -46429,7 +48605,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 3,
      "cost": 15.2,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -46467,7 +48644,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 1,
      "cost": 17.98,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_general"
     }
    ],
    "scope": "active",
@@ -46501,7 +48679,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 1,
      "cost": 3.12,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -46535,7 +48714,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -46569,7 +48749,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 2,
      "cost": 11.61,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -46603,7 +48784,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -46637,7 +48819,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "scope": "active",
@@ -46671,7 +48854,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 1,
      "cost": 3.77,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_lawyer"
     }
    ],
    "scope": "active",
@@ -46705,7 +48889,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -46740,7 +48925,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 1,
      "cost": 9.61,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -46774,7 +48960,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -46809,7 +48996,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -46843,13 +49031,14 @@ window.TERMS = {
      "impr": 14,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
-   "intent": "collector_name",
-   "debtType": "Harassment",
-   "best": "HS",
+   "intent": "debt_buyer",
+   "debtType": "Lawsuit",
+   "best": "NBUY",
    "current": [
     {
      "page": "CD",
@@ -46859,8 +49048,8 @@ window.TERMS = {
    "bestShare": 0,
    "dup": true,
    "action": "neg_here",
-   "actionText": "Negative here; this term belongs in S_Harassment_NW › Creditor_Harassment.",
-   "home": "S_Harassment_NW|Creditor_Harassment"
+   "actionText": "Negative here; this term belongs in S_Lawsuit_NW › Creditor_Suing.",
+   "home": "S_Lawsuit_NW|Debt_Buyer_Lawsuit (new)"
   },
   {
    "campaign": "S_All-States",
@@ -46877,7 +49066,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -46911,7 +49101,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_options"
     }
    ],
    "scope": "active",
@@ -46945,7 +49136,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -46979,7 +49171,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -47013,7 +49206,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -47047,7 +49241,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 2,
      "cost": 10.0,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -47081,7 +49276,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -47115,7 +49311,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 3,
      "cost": 10.62,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -47154,7 +49351,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 1,
      "cost": 2.36,
-     "conv": 2.0
+     "conv": 2.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -47193,7 +49391,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 2,
      "cost": 14.65,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_lawyer"
     }
    ],
    "scope": "active",
@@ -47231,7 +49430,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 3,
      "cost": 26.57,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_lawyer"
     }
    ],
    "scope": "active",
@@ -47269,7 +49469,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 1,
      "cost": 4.3,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -47308,7 +49509,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -47347,7 +49549,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 5,
      "cost": 36.11,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -47386,7 +49589,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 1,
      "cost": 11.32,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -47425,7 +49629,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 3,
      "cost": 13.58,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -47463,7 +49668,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -47501,7 +49707,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -47539,7 +49746,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 1,
      "cost": 14.53,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -47577,7 +49785,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 1,
      "cost": 2.42,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -47615,7 +49824,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 1,
      "cost": 10.61,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -47653,7 +49863,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "neg_legal"
     }
    ],
    "scope": "active",
@@ -47691,7 +49902,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -47729,7 +49941,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 1,
      "cost": 1.57,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -47767,7 +49980,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -47805,7 +50019,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 1,
      "cost": 1.75,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -47843,7 +50058,8 @@ window.TERMS = {
      "impr": 14,
      "clicks": 3,
      "cost": 7.71,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "brand"
     }
    ],
    "scope": "active",
@@ -47877,7 +50093,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -47915,7 +50132,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 2,
      "cost": 7.27,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -47953,7 +50171,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 2,
      "cost": 7.41,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -47992,7 +50211,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -48030,7 +50250,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -48068,7 +50289,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 1,
      "cost": 18.24,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -48106,7 +50328,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 2,
      "cost": 31.9,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -48144,7 +50367,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 2,
      "cost": 48.46,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -48182,7 +50406,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -48221,7 +50446,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 2,
      "cost": 43.47,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -48260,7 +50486,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -48298,7 +50525,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 2,
      "cost": 16.32,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -48336,7 +50564,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 2,
      "cost": 12.4,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -48374,7 +50603,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 1,
      "cost": 4.93,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -48411,7 +50641,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -48449,7 +50680,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 1,
      "cost": 4.8,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -48487,7 +50719,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 3,
      "cost": 43.26,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -48525,7 +50758,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 3,
      "cost": 26.29,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -48563,7 +50797,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -48601,7 +50836,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -48640,7 +50876,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 1,
      "cost": 8.28,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -48678,7 +50915,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -48717,7 +50955,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 1,
      "cost": 3.98,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -48755,7 +50994,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 1,
      "cost": 1.54,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -48793,7 +51033,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -48831,7 +51072,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_buyer"
     }
    ],
    "scope": "active",
@@ -48869,13 +51111,14 @@ window.TERMS = {
      "impr": 13,
      "clicks": 2,
      "cost": 16.09,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_buyer"
     }
    ],
    "scope": "active",
-   "intent": "collector_name",
-   "debtType": "Harassment",
-   "best": "HS",
+   "intent": "debt_buyer",
+   "debtType": "Lawsuit",
+   "best": "NBUY",
    "current": [
     {
      "page": "FB",
@@ -48888,9 +51131,10 @@ window.TERMS = {
    ],
    "bestShare": 0,
    "dup": false,
-   "action": "move",
-   "actionText": "Move the term to S_Harassment_NW › Creditor_Harassment, whose ad lands on the best page.",
-   "home": "S_Harassment_NW|Creditor_Harassment"
+   "interim": "PR",
+   "action": "new_page",
+   "actionText": "Now: move to S_Lawsuit_NW › Collection_Lawsuit, whose ad lands on /debt-lawsuit-proof (only a minority of that ad group's impressions today, so give the term its own ad group with only that ad). When the new page is built: S_Lawsuit_NW › Debt_Buyer_Lawsuit (new).",
+   "home": "S_Lawsuit_NW|Debt_Buyer_Lawsuit (new)"
   },
   {
    "campaign": "S_Lawsuit_NW",
@@ -48907,7 +51151,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 1,
      "cost": 2.48,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -48945,7 +51190,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 2,
      "cost": 20.5,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -48983,7 +51229,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 2,
      "cost": 8.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -49021,7 +51268,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 3,
      "cost": 8.87,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -49059,7 +51307,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -49097,7 +51346,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "scope": "active",
@@ -49131,7 +51381,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "scope": "active",
@@ -49166,7 +51417,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -49201,7 +51453,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 2,
      "cost": 12.66,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -49235,7 +51488,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -49269,7 +51523,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 1,
      "cost": 12.52,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -49303,7 +51558,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 2,
      "cost": 3.45,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -49337,7 +51593,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 4,
      "cost": 38.57,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_lawyer"
     }
    ],
    "scope": "active",
@@ -49371,7 +51628,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 1,
      "cost": 4.32,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -49406,7 +51664,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -49439,7 +51698,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -49474,7 +51734,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_options"
     }
    ],
    "scope": "active",
@@ -49508,7 +51769,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -49542,7 +51804,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 1,
      "cost": 6.92,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -49576,7 +51839,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -49610,7 +51874,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 1,
      "cost": 10.76,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -49644,7 +51909,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -49678,7 +51944,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -49712,7 +51979,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -49746,7 +52014,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -49780,7 +52049,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -49814,7 +52084,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -49848,7 +52119,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 2,
      "cost": 6.68,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -49882,7 +52154,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 1,
      "cost": 2.19,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -49917,7 +52190,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -49952,7 +52226,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 2,
      "cost": 5.31,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -49986,7 +52261,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -50020,7 +52296,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 2,
      "cost": 13.23,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -50059,7 +52336,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 3,
      "cost": 29.64,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -50097,7 +52375,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 4,
      "cost": 64.51,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -50136,7 +52415,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 2,
      "cost": 9.63,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -50175,7 +52455,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -50214,7 +52495,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 2,
      "cost": 7.72,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -50253,7 +52535,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 2,
      "cost": 17.89,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -50292,7 +52575,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 1,
      "cost": 11.18,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -50331,7 +52615,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -50369,7 +52654,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -50408,7 +52694,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -50446,7 +52733,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 2,
      "cost": 11.38,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -50484,7 +52772,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 4,
      "cost": 19.37,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -50522,7 +52811,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 1,
      "cost": 9.14,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -50560,7 +52850,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -50598,7 +52889,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 1,
      "cost": 3.49,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -50636,7 +52928,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -50674,7 +52967,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 2,
      "cost": 8.86,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -50712,7 +53006,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 1,
      "cost": 14.86,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -50750,7 +53045,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 1,
      "cost": 6.59,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -50788,7 +53084,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -50826,7 +53123,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 2,
      "cost": 12.1,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "fdcpa_action"
     }
    ],
    "scope": "active",
@@ -50864,7 +53162,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 1,
      "cost": 2.91,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_action"
     }
    ],
    "scope": "active",
@@ -50902,7 +53201,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -50940,7 +53240,8 @@ window.TERMS = {
      "impr": 13,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -50978,7 +53279,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 1,
      "cost": 6.99,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -51016,7 +53318,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 1,
      "cost": 8.19,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -51054,7 +53357,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 1,
      "cost": 24.92,
-     "conv": 0.5
+     "conv": 0.5,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -51092,7 +53396,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -51130,7 +53435,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -51168,7 +53474,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 2,
      "cost": 11.46,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -51206,7 +53513,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -51244,7 +53552,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -51282,7 +53591,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -51319,7 +53629,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 1,
      "cost": 9.25,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -51357,7 +53668,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 2,
      "cost": 28.62,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -51395,7 +53707,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -51433,7 +53746,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -51471,7 +53785,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 2,
      "cost": 31.28,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -51509,7 +53824,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -51547,7 +53863,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 1,
      "cost": 7.06,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -51585,7 +53902,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 2,
      "cost": 27.42,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -51624,7 +53942,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_buyer"
     }
    ],
    "scope": "active",
@@ -51663,7 +53982,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 1,
      "cost": 8.58,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_buyer"
     }
    ],
    "scope": "active",
@@ -51701,7 +54021,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -51739,7 +54060,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 1,
      "cost": 6.01,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -51777,7 +54099,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 1,
      "cost": 2.23,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -51815,7 +54138,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 1,
      "cost": 6.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -51853,7 +54177,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -51891,7 +54216,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 1,
      "cost": 4.41,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -51929,7 +54255,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 1,
      "cost": 5.5,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -51967,7 +54294,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -52005,7 +54333,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 1,
      "cost": 4.61,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "scope": "active",
@@ -52040,7 +54369,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "scope": "active",
@@ -52075,7 +54405,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 1,
      "cost": 12.14,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -52109,7 +54440,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -52143,7 +54475,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "scope": "active",
@@ -52178,7 +54511,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 1,
      "cost": 6.35,
-     "conv": 0.5
+     "conv": 0.5,
+     "intent": "garn_exempt"
     }
    ],
    "scope": "active",
@@ -52213,7 +54547,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 1,
      "cost": 1.72,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "scope": "active",
@@ -52248,7 +54583,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 1,
      "cost": 15.44,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_lawyer"
     }
    ],
    "top30": 1,
@@ -52283,7 +54619,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 1,
      "cost": 8.14,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -52317,7 +54654,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -52351,7 +54689,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 1,
      "cost": 33.98,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -52385,7 +54724,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -52420,7 +54760,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -52454,7 +54795,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -52488,7 +54830,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -52522,7 +54865,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -52556,7 +54900,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -52590,7 +54935,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -52624,7 +54970,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -52658,7 +55005,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -52692,7 +55040,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -52725,7 +55074,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -52759,7 +55109,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -52793,7 +55144,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -52827,7 +55179,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -52861,7 +55214,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 1,
      "cost": 3.38,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -52895,7 +55249,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 1,
      "cost": 16.37,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -52929,7 +55284,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -52963,7 +55319,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 1,
      "cost": 8.28,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -52997,7 +55354,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -53036,7 +55394,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.786,
@@ -53076,7 +55435,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -53114,7 +55474,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 2,
      "cost": 13.08,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -53153,7 +55514,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 1,
      "cost": 6.39,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -53192,13 +55554,14 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_lawyer"
     }
    ],
    "scope": "active",
-   "intent": "neg_legal",
-   "debtType": "Not Credo",
-   "best": "NEG",
+   "intent": "garn_lawyer",
+   "debtType": "Garnishment",
+   "best": "GA",
    "current": [
     {
      "page": "GP",
@@ -53209,10 +55572,11 @@ window.TERMS = {
      "share": 39
     }
    ],
-   "bestShare": 0,
+   "bestShare": 39,
    "dup": false,
-   "action": "negative",
-   "actionText": "Add as a negative keyword."
+   "action": "route",
+   "actionText": "Route: the best page gets 39% here today. Give the term its own ad group with only that ad.",
+   "home": "S_Garnishment_NW|Garnishment"
   },
   {
    "campaign": "S_Garnishment_NW",
@@ -53229,7 +55593,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 2,
      "cost": 16.22,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -53268,7 +55633,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -53307,7 +55673,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 2,
      "cost": 20.36,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_lawyer"
     }
    ],
    "scope": "active",
@@ -53345,7 +55712,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 1,
      "cost": 21.58,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_lawyer"
     }
    ],
    "scope": "active",
@@ -53383,7 +55751,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 1,
      "cost": 5.56,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_lawyer"
     }
    ],
    "scope": "active",
@@ -53421,7 +55790,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -53459,7 +55829,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 2,
      "cost": 9.65,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -53498,7 +55869,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 1,
      "cost": 3.6,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -53537,7 +55909,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 1,
      "cost": 3.21,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -53575,7 +55948,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -53613,7 +55987,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -53652,7 +56027,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 2,
      "cost": 3.77,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -53691,7 +56067,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 2,
      "cost": 14.31,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -53729,7 +56106,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 1,
      "cost": 14.55,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -53767,7 +56145,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 1,
      "cost": 6.71,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -53805,7 +56184,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -53843,7 +56223,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -53881,7 +56262,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_buyer"
     }
    ],
    "scope": "active",
@@ -53920,7 +56302,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 2,
      "cost": 25.18,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -53958,7 +56341,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -53996,7 +56380,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -54034,7 +56419,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -54072,7 +56458,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 1,
      "cost": 7.9,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -54110,7 +56497,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -54148,7 +56536,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -54186,7 +56575,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 3,
      "cost": 35.02,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -54224,7 +56614,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -54262,7 +56653,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_action"
     }
    ],
    "scope": "active",
@@ -54300,7 +56692,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_action"
     }
    ],
    "scope": "active",
@@ -54338,7 +56731,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_action"
     }
    ],
    "scope": "active",
@@ -54376,7 +56770,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 2,
      "cost": 6.9,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -54414,7 +56809,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -54452,7 +56848,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 1,
      "cost": 7.84,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_action"
     }
    ],
    "scope": "active",
@@ -54490,7 +56887,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -54528,7 +56926,8 @@ window.TERMS = {
      "impr": 12,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -54566,7 +56965,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -54604,7 +57004,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -54642,7 +57043,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 1,
      "cost": 2.56,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -54680,7 +57082,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 1,
      "cost": 6.86,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -54718,7 +57121,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 2,
      "cost": 9.03,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -54756,7 +57160,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 1,
      "cost": 3.28,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -54794,7 +57199,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -54831,7 +57237,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -54869,7 +57276,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -54907,7 +57315,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 2,
      "cost": 12.08,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -54945,7 +57354,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 1,
      "cost": 5.7,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -54983,7 +57393,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -55021,7 +57432,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -55059,7 +57471,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 1,
      "cost": 6.87,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -55098,7 +57511,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -55136,7 +57550,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 1,
      "cost": 17.11,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -55174,7 +57589,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -55212,7 +57628,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -55250,7 +57667,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 1,
      "cost": 12.27,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -55288,7 +57706,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -55327,7 +57746,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -55365,7 +57785,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -55403,7 +57824,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 1,
      "cost": 3.22,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -55441,7 +57863,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -55479,7 +57902,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 1,
      "cost": 4.78,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -55517,7 +57941,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 1,
      "cost": 2.47,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -55555,7 +57980,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -55593,7 +58019,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -55631,7 +58058,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -55670,7 +58098,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 4,
      "cost": 53.37,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -55708,7 +58137,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -55746,7 +58176,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_buyer"
     }
    ],
    "scope": "active",
@@ -55785,7 +58216,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_buyer"
     }
    ],
    "scope": "active",
@@ -55823,7 +58255,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_buyer"
     }
    ],
    "scope": "active",
@@ -55861,7 +58294,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 3,
      "cost": 16.73,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -55899,7 +58333,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -55937,7 +58372,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 3,
      "cost": 8.99,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -55975,7 +58411,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 4,
      "cost": 31.84,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -56013,7 +58450,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 2,
      "cost": 18.4,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -56051,7 +58489,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "scope": "active",
@@ -56085,7 +58524,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 2,
      "cost": 7.98,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_lawyer"
     }
    ],
    "scope": "active",
@@ -56119,7 +58559,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "scope": "active",
@@ -56154,7 +58595,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "scope": "active",
@@ -56189,7 +58631,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 1,
      "cost": 33.4,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_lawyer"
     }
    ],
    "scope": "active",
@@ -56223,7 +58666,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -56257,7 +58701,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -56290,7 +58735,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -56324,7 +58770,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 1,
      "cost": 4.29,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -56358,7 +58805,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 1,
      "cost": 6.7,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -56392,7 +58840,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -56426,7 +58875,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 1,
      "cost": 8.43,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "scope": "active",
@@ -56461,7 +58911,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "scope": "active",
@@ -56495,7 +58946,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "scope": "active",
@@ -56529,7 +58981,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 1,
      "cost": 7.21,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_general"
     }
    ],
    "scope": "active",
@@ -56563,7 +59016,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 2,
      "cost": 3.72,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "scope": "active",
@@ -56597,7 +59051,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "scope": "active",
@@ -56631,7 +59086,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_exempt"
     }
    ],
    "scope": "active",
@@ -56666,7 +59122,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 2,
      "cost": 9.35,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_definition"
     }
    ],
    "scope": "active",
@@ -56700,7 +59157,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -56735,7 +59193,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -56769,7 +59228,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -56802,7 +59262,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 2,
      "cost": 14.35,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -56837,7 +59298,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 2,
      "cost": 25.57,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -56871,7 +59333,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -56906,7 +59369,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -56939,7 +59403,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -56973,7 +59438,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 1,
      "cost": 3.52,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -57007,7 +59473,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -57041,7 +59508,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 2,
      "cost": 24.72,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -57075,7 +59543,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -57110,7 +59579,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_options"
     }
    ],
    "scope": "active",
@@ -57144,7 +59614,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 1,
      "cost": 10.02,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -57178,7 +59649,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -57212,7 +59684,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -57246,7 +59719,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -57280,7 +59754,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -57314,7 +59789,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -57348,7 +59824,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -57382,7 +59859,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -57416,7 +59894,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -57450,7 +59929,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -57484,7 +59964,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 3,
      "cost": 30.76,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_options"
     }
    ],
    "scope": "active",
@@ -57518,7 +59999,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 1,
      "cost": 8.58,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -57552,7 +60034,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 1,
      "cost": 1.61,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -57586,7 +60069,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -57620,7 +60104,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -57654,7 +60139,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -57688,7 +60174,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -57722,7 +60209,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -57761,7 +60249,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 7,
      "cost": 38.61,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -57800,7 +60289,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 1,
      "cost": 8.99,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -57838,7 +60328,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -57877,7 +60368,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 1,
      "cost": 9.09,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -57916,7 +60408,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -57954,7 +60447,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_lawyer"
     }
    ],
    "scope": "active",
@@ -57991,7 +60485,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 2,
      "cost": 12.35,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -58030,7 +60525,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 1,
      "cost": 25.33,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -58069,7 +60565,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 3,
      "cost": 20.45,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "top30": 0.923,
@@ -58109,7 +60606,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 1,
      "cost": 7.33,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_lawyer"
     }
    ],
    "scope": "active",
@@ -58147,7 +60645,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_lawyer"
     }
    ],
    "scope": "active",
@@ -58185,7 +60684,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -58224,7 +60724,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 1,
      "cost": 4.84,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -58263,7 +60764,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 1,
      "cost": 6.96,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -58301,7 +60803,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -58339,7 +60842,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -58378,7 +60882,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 3,
      "cost": 21.13,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -58417,7 +60922,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_general"
     }
    ],
    "scope": "active",
@@ -58455,7 +60961,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -58493,7 +61000,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 2,
      "cost": 7.97,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -58531,7 +61039,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -58569,7 +61078,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 1,
      "cost": 9.12,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -58607,7 +61117,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -58645,7 +61156,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 2,
      "cost": 24.46,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -58683,7 +61195,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -58721,7 +61234,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -58759,7 +61273,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 3,
      "cost": 16.83,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -58797,7 +61312,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -58835,7 +61351,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 1,
      "cost": 5.93,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -58873,7 +61390,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_action"
     }
    ],
    "scope": "active",
@@ -58911,7 +61429,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -58949,7 +61468,8 @@ window.TERMS = {
      "impr": 11,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -58987,7 +61507,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -59025,7 +61546,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 3,
      "cost": 22.85,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -59064,7 +61586,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 4.65,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -59102,7 +61625,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -59140,7 +61664,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -59178,7 +61703,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 17.41,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -59216,7 +61742,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 29.98,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -59254,7 +61781,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -59291,7 +61819,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -59330,7 +61859,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 2.93,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -59369,7 +61899,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 11.44,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -59408,7 +61939,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -59446,7 +61978,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 3.77,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -59484,7 +62017,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 3.99,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -59522,7 +62056,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -59560,7 +62095,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -59598,7 +62134,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -59636,7 +62173,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -59674,7 +62212,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 0.94,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -59712,7 +62251,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -59750,7 +62290,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -59788,7 +62329,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -59826,7 +62368,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 2,
      "cost": 25.56,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -59864,7 +62407,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 2,
      "cost": 16.14,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -59902,7 +62446,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 12.86,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -59939,7 +62484,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -59977,7 +62523,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 2,
      "cost": 12.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -60015,7 +62562,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -60054,7 +62602,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -60093,7 +62642,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 4.21,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -60131,7 +62681,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 2.91,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -60169,7 +62720,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -60207,7 +62759,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 4.1,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -60245,7 +62798,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -60283,7 +62837,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 4.56,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -60321,7 +62876,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_sued"
     }
    ],
    "scope": "active",
@@ -60359,7 +62915,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 2,
      "cost": 22.71,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -60397,7 +62954,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 2,
      "cost": 10.72,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -60436,7 +62994,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -60474,7 +63033,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -60512,7 +63072,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 2,
      "cost": 16.18,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -60550,7 +63111,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 5.71,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -60588,7 +63150,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -60626,7 +63189,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 9.65,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -60664,7 +63228,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 15.99,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_buyer"
     }
    ],
    "scope": "active",
@@ -60703,7 +63268,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_buyer"
     }
    ],
    "scope": "active",
@@ -60741,7 +63307,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -60779,7 +63346,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 5.83,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -60817,7 +63385,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 2.75,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -60855,7 +63424,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 11.7,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -60893,7 +63463,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -60930,7 +63501,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -60968,7 +63540,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 2,
      "cost": 79.72,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -61006,7 +63579,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -61044,7 +63618,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 6.57,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -61082,7 +63657,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -61120,7 +63696,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -61158,7 +63735,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 2.2,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_summons"
     }
    ],
    "scope": "active",
@@ -61196,7 +63774,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 2,
      "cost": 8.36,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "top30": 1,
@@ -61231,7 +63810,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "scope": "active",
@@ -61266,7 +63846,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 4.52,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "scope": "active",
@@ -61300,7 +63881,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "scope": "active",
@@ -61334,7 +63916,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 21.44,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_lawyer"
     }
    ],
    "scope": "active",
@@ -61368,7 +63951,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -61403,7 +63987,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -61437,7 +64022,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 11.26,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -61472,13 +64058,14 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
-   "intent": "garn_general",
+   "intent": "garn_active",
    "debtType": "Garnishment",
-   "best": "NSTOP",
+   "best": "GA",
    "current": [
     {
      "page": "SWG",
@@ -61487,10 +64074,9 @@ window.TERMS = {
    ],
    "bestShare": 0,
    "dup": false,
-   "interim": "GA",
-   "action": "new_page",
-   "actionText": "Now: move to S_Garnishment_NW › Garnishment, whose ad lands on /wage-garnishment-attorney (only a minority of that ad group's impressions today, so give the term its own ad group with only that ad). When the new page is built: S_Garnishment_NW › Garn_How_To_Stop (new).",
-   "home": "S_Garnishment_NW|Garn_How_To_Stop (new)"
+   "action": "move",
+   "actionText": "Move the term to S_Garnishment_NW › Garnishment, whose ad lands on the best page (39% of that ad group today, so give the term its own ad group with only that ad).",
+   "home": "S_Garnishment_NW|Garnishment"
   },
   {
    "campaign": "S_All-States",
@@ -61507,7 +64093,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 3.41,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "scope": "active",
@@ -61541,7 +64128,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_general"
     }
    ],
    "scope": "active",
@@ -61576,7 +64164,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 2,
      "cost": 6.82,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -61611,7 +64200,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -61646,7 +64236,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -61679,7 +64270,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 17.82,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -61712,7 +64304,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -61746,24 +64339,25 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
-   "intent": "collector_name",
-   "debtType": "Harassment",
-   "best": "HS",
+   "intent": "debt_lawyer",
+   "debtType": "General",
+   "best": "CD",
    "current": [
     {
      "page": "CD",
      "share": 100
     }
    ],
-   "bestShare": 0,
+   "bestShare": 100,
    "dup": false,
-   "action": "move",
-   "actionText": "Move the term to S_Harassment_NW › Creditor_Harassment, whose ad lands on the best page.",
-   "home": "S_Harassment_NW|Creditor_Harassment"
+   "action": "keep",
+   "actionText": "Keep: already on the best page.",
+   "home": "S_All-States|Debt Collector"
   },
   {
    "campaign": "S_All-States",
@@ -61780,7 +64374,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -61814,7 +64409,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -61848,7 +64444,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -61883,7 +64480,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -61917,7 +64515,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_lawyer"
     }
    ],
    "scope": "active",
@@ -61951,7 +64550,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -61985,7 +64585,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 2,
      "cost": 16.53,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -62019,7 +64620,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -62053,7 +64655,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -62086,7 +64689,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -62120,7 +64724,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 2,
      "cost": 13.38,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -62154,7 +64759,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 0.55,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -62189,7 +64795,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 8.2,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -62223,7 +64830,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 3.51,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -62257,7 +64865,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 3,
      "cost": 19.36,
-     "conv": 0.75
+     "conv": 0.75,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -62291,7 +64900,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 2,
      "cost": 14.24,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -62325,7 +64935,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 8.55,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "lawsuit_options"
     }
    ],
    "scope": "active",
@@ -62359,7 +64970,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 11.14,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "lawsuit_options"
     }
    ],
    "scope": "active",
@@ -62393,7 +65005,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "debt_lawyer"
     }
    ],
    "scope": "active",
@@ -62427,7 +65040,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 5.98,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -62461,7 +65075,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 2,
      "cost": 8.03,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -62495,7 +65110,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -62529,7 +65145,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -62563,7 +65180,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -62597,7 +65215,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 3,
      "cost": 33.1,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -62631,7 +65250,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -62665,7 +65285,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 0.57,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_research"
     }
    ],
    "scope": "active",
@@ -62699,7 +65320,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 2,
      "cost": 3.74,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -62738,7 +65360,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -62776,7 +65399,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 5,
      "cost": 32.23,
-     "conv": 0.667
+     "conv": 0.667,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -62813,7 +65437,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 3.8,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -62851,7 +65476,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -62890,7 +65516,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -62929,7 +65556,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -62967,7 +65595,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -63006,7 +65635,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -63045,7 +65675,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 3.91,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -63083,7 +65714,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -63121,7 +65753,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -63160,7 +65793,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 2,
      "cost": 65.82,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_lawyer"
     }
    ],
    "scope": "active",
@@ -63199,7 +65833,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -63237,7 +65872,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_lawyer"
     }
    ],
    "scope": "active",
@@ -63274,7 +65910,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 2,
      "cost": 13.32,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -63313,7 +65950,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 6.87,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -63352,7 +65990,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 6.84,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -63391,7 +66030,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 9.16,
-     "conv": 1.0
+     "conv": 1.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -63430,7 +66070,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_stop"
     }
    ],
    "scope": "active",
@@ -63469,7 +66110,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 2,
      "cost": 11.56,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_lawyer"
     }
    ],
    "scope": "active",
@@ -63507,7 +66149,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 10.15,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_lawyer"
     }
    ],
    "scope": "active",
@@ -63545,7 +66188,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 3,
      "cost": 30.13,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_lawyer"
     }
    ],
    "scope": "active",
@@ -63583,7 +66227,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -63621,7 +66266,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -63660,7 +66306,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -63699,7 +66346,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -63738,7 +66386,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 5.67,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -63777,7 +66426,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 14.4,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -63816,7 +66466,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -63855,7 +66506,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -63894,7 +66546,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 2,
      "cost": 11.52,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "garn_active"
     }
    ],
    "scope": "active",
@@ -63933,7 +66586,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -63971,7 +66625,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -64009,7 +66664,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 2,
      "cost": 34.13,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -64047,7 +66703,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -64085,7 +66742,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "cc_lawsuit"
     }
    ],
    "scope": "active",
@@ -64123,7 +66781,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -64161,7 +66820,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -64199,7 +66859,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 7.79,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "collector_name"
     }
    ],
    "scope": "active",
@@ -64237,7 +66898,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 3.55,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -64275,7 +66937,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_action"
     }
    ],
    "scope": "active",
@@ -64313,7 +66976,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 1,
      "cost": 5.27,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -64351,7 +67015,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -64389,7 +67054,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -64427,7 +67093,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 0,
      "cost": 0.0,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "harassment"
     }
    ],
    "scope": "active",
@@ -64465,7 +67132,8 @@ window.TERMS = {
      "impr": 10,
      "clicks": 2,
      "cost": 20.97,
-     "conv": 0.0
+     "conv": 0.0,
+     "intent": "fdcpa_action"
     }
    ],
    "scope": "active",
