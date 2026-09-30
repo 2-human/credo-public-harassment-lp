@@ -8,7 +8,7 @@
  * `blocked` names the decision (D#) or manual step (M#) a PBI waits on. */
 window.BACKLOG = {
   updated: '30 Sep 2026',
-  state: '30 Sep: PBI-09, PBI-10, PBI-13, PBI-14, PBI-15, PBI-16, PBI-17 and PBI-18 done (D23 approved and applied; D24 new: per-call $1,000 claims in page copy). 29 Sep (evening): board clean-up. PBI-12 done (all Part B copy fixes live, D20 wording applied). G29 (WEEK 1 tags, 22 pages) done under PBI-19; PBI-01c and PBI-11 closed (PBI-11 follow-up moved to PBI-16); PBI-08 built and reviewed, closes with the operator\'s CRM check (M3). PBI-09 done 30 Sep: the count and security dropdowns keep their options in Webflow (the G17 rewrite script is gone). Shared code (PBI-01d) done and closed: page code and the phone-swap script live once in Site settings (one phone table); every landing-page section is a component with per-page copy in props (8 LP components); new pages start from the draft Landing page template, with copy synced from the prototype by lp-sync.mjs. D20 and D21 decided; D22 opened (8 hero props where the prototype and Webflow wording differ). Waiting on the operator: M2 (delete the 21 old drafts, then the legacy form components go), M3 (CRM check), D1\u2013D3, D5\u2013D9, D22, D24 (D10 optional); PBI-01b and PBI-21 deferred.',
+  state: '30 Sep: PBI-09, PBI-10, PBI-13, PBI-14, PBI-15, PBI-16, PBI-17, PBI-18 and PBI-19 done (D23 approved and applied; D24 new: per-call $1,000 claims in page copy). 29 Sep (evening): board clean-up. PBI-12 done (all Part B copy fixes live, D20 wording applied). G29 (WEEK 1 tags, 22 pages) done under PBI-19; PBI-01c and PBI-11 closed (PBI-11 follow-up moved to PBI-16); PBI-08 built and reviewed, closes with the operator\'s CRM check (M3). PBI-09 done 30 Sep: the count and security dropdowns keep their options in Webflow (the G17 rewrite script is gone). Shared code (PBI-01d) done and closed: page code and the phone-swap script live once in Site settings (one phone table); every landing-page section is a component with per-page copy in props (8 LP components); new pages start from the draft Landing page template, with copy synced from the prototype by lp-sync.mjs. D20 and D21 decided; D22 opened (8 hero props where the prototype and Webflow wording differ). Waiting on the operator: M2 (delete the 21 old drafts, then the legacy form components go), M3 (CRM check), D1\u2013D3, D5\u2013D9, D22, D24 (D10 optional); PBI-01b and PBI-21 deferred.',
   site: { name: 'Credo: Microsite Staging', id: '6ab90fb0761d44332faf21c8', domain: 'staging.credolegal.com' },
 
   pbis: [
@@ -480,15 +480,19 @@ window.BACKLOG = {
         ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots (2 rounds); findings settled', 'done']
       ] },
 
-    { id: 'PBI-19', title: 'Small polish', refs: ['L5', 'G29'], by: 'claude',
+    { id: 'PBI-19', title: 'Small polish', refs: ['L5', 'G29'], by: 'claude', note: 'Done 30 Sep. No visible interactive element under 24px on the 52 form pages (all elements scanned, not only call links). Gemini reviews pending: its API credits are depleted (HTTP 402); re-run when topped up.',
+      review: { items: [
+        { kind: 'Code', by: 'GPT-5.5', verdict: 'approve with fixes', file: 'review/PBI-19.review-gpt.md', settled: true, note: 'All interactive elements scanned: nav, footer menu and slider fixed too; page end on 3 devices.' },
+        { kind: 'UX', by: 'GPT-5.5', verdict: 'approve with fixes', file: 'review/PBI-19.review-gpt-ux.md', settled: true, note: 'BBB link box measured 80px.' }
+      ], links: [['Packet', 'review/PBI-19.md'], ['Resolution', 'review/PBI-19.triage.md']] },
       why: 'Call links under 24px tall; "Week 1" in mixed case on 21 pages.',
       done: 'No tap target under 24px; step tags in the same case.',
       tasks: [
-        ['Bottom padding while the sticky call bar or chat bubble is visible, so the end of the page is never hidden (UX reviews PBI-05 and design preview)', 'todo'],
-                ['Padding on the call links and the BBB link', 'todo'],
+        ['Bottom padding while the sticky call bar or chat bubble is visible, so the end of the page is never hidden (UX reviews PBI-05 and design preview): nothing was hidden (the bar\'s script adds 90px); its white band under the dark footer moved into the footer (body:has(.sticky-call-button)); chat bubble not rendered on staging (D8, recheck in PBI-23)', 'done'],
+        ['Padding on the call links and the BBB link: hero and bottom CTA call 15 \u2192 25px, footer phone links 20 \u2192 24px, BBB badge links 18 \u2192 80px; also header nav links, footer menu links and the debt slider (review follow-up)', 'done'],
         ['"Week 1" to the step-tag case on 21 pages (G29): done 29 Sep with PBI-12 (found again by its UX review): 21 pages + the 3 Week tags on home retyped in capitals; served HTML of 56 pages changed only there; 0 mixed-case left', 'done'],
-        ['Publish to staging only and verify', 'todo'],
-        ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots when anything visible changes; findings settled', 'todo']
+        ['Publish to staging only and verify: 104/104 no interactive element under 24px; page end on 52 pages \u00d7 3 devices; functional compare 52/52', 'done'],
+        ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots; findings settled (Gemini pending: API credits)', 'done']
       ] },
 
     { id: 'PBI-25', title: 'Heading levels on home and the thank-you pages', refs: ['G5'], by: 'claude',
