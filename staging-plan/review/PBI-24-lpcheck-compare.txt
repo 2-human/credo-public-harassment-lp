@@ -1,0 +1,51 @@
+pages: baseline 30, after 30, compared 30
+
+Issue counts (all pages):
+  critical     0 ->    0
+  major      245 ->  106
+  minor      211 ->   88
+  note        60 ->   60
+
+Gone (in baseline, not after):
+   30 pages  major    Accessibility: Accessibility: Form elements must have labels
+   30 pages  major    Form fields: Phone fields open the letter keyboard on phones
+   30 pages  major    JavaScript errors: Script error: Cannot read properties of null (reading 'querySelectorAll')
+   30 pages  major    JavaScript errors: Script error: can't access property "querySelectorAll", multistepForm is null
+   30 pages  major    JavaScript errors: Script error: null is not an object (evaluating 'multistepForm[_#x#e#(#x#df)]')
+   30 pages  major    Staging / insecure requests: Page contacts a staging or test server: videsigns-staging.co.uk
+   27 pages  minor    SEO & sharing: Meta description longer than # characters
+   30 pages  minor    Sideways scrolling: Content runs past the screen edge (cut off by overflow-x: hidden; iPhones can still pan sideways)
+   30 pages  minor    Small text: Text smaller than #px on phones
+   30 pages  minor    Tap targets: Buttons or links too small to tap (under #×#px)
+
+New (after, not in baseline):
+   30 pages  major    Accessibility: Accessibility: All touch targets must be #px large, or leave sufficient space
+    1 pages  minor    Performance: Page is busy running scripts: #ms blocking time (target under #ms)
+
+Still present (pages before -> after):
+   30 ->  30  major    Accessibility: Accessibility: Elements must meet minimum color contrast ratio thresholds
+   30 ->  30  major    Performance: Main content appears late: LCP #s (target under #s)
+    5 ->  16  major    Performance: Slow on phones: Lighthouse performance #/#
+   30 ->  30  minor    Failed requests: Third-party file failed to load: https://code.tidio.co/gioqpkhhyyqkylolfnxtq#vwnyhr#xm.js
+    1 ->   2  minor    Failed requests: Third-party file failed to load: https://code.tidio.co/widget-v#//notification-sound.mp#
+    5 ->   8  minor    Failed requests: Third-party file failed to load: https://code.tidio.co/widget-v#//tururu.mp#
+   30 ->  30  minor    Form fields: Duplicate element ids (breaks labels and scripts)
+   25 ->  14  minor    Performance: Lighthouse performance #/# on phones
+    3 ->   3  minor    SEO & sharing: Title longer than # characters (Google cuts it off)
+   30 ->  30  note     Links: Malformed href, but the page script handles the click
+   30 ->  30  note     SEO & sharing: Page is set to noindex (hidden from Google)
+
+Phone rows ok: 344/344 -> 344/344
+  pass "Form walk": 30 -> 30 pages
+  pass "Phone numbers": 30 -> 30 pages
+  pass "Links": 30 -> 30 pages
+  pass "Page loads": 30 -> 30 pages
+  pass "Cut-off text": 30 -> 30 pages
+  pass "Buttons covered": 30 -> 30 pages
+  pass "Screen covered": 30 -> 30 pages
+  pass "Broken images": 30 -> 30 pages
+Lighthouse score median       53 ->       49  (range 45-56 -> 45-58; n=30/30)
+Lighthouse fcp   median     4203ms ->     5217ms  (range 4146-6393 -> 3994-6617; n=30/30)
+Lighthouse lcp   median    12990ms ->    12639ms  (range 9344-14840 -> 11897-15723; n=30/30)
+Lighthouse tbt   median      427ms ->      460ms  (range 328-571 -> 338-616; n=30/30)
+Lighthouse cls   median        0 ->        0  (range 0-0 -> 0-0; n=30/30)
