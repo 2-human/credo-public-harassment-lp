@@ -8,7 +8,7 @@
  * `blocked` names the decision (D#) or manual step (M#) a PBI waits on. */
 window.BACKLOG = {
   updated: '30 Sep 2026',
-  state: '30 Sep: PBI-09, PBI-10, PBI-13, PBI-14 and PBI-15 done (D23 approved and applied; D24 new: per-call $1,000 claims in page copy). 29 Sep (evening): board clean-up. PBI-12 done (all Part B copy fixes live, D20 wording applied). G29 (WEEK 1 tags, 22 pages) done under PBI-19; PBI-01c and PBI-11 closed (PBI-11 follow-up moved to PBI-16); PBI-08 built and reviewed, closes with the operator\'s CRM check (M3). PBI-09 done 30 Sep: the count and security dropdowns keep their options in Webflow (the G17 rewrite script is gone). Shared code (PBI-01d) done and closed: page code and the phone-swap script live once in Site settings (one phone table); every landing-page section is a component with per-page copy in props (8 LP components); new pages start from the draft Landing page template, with copy synced from the prototype by lp-sync.mjs. D20 and D21 decided; D22 opened (8 hero props where the prototype and Webflow wording differ). Waiting on the operator: M2 (delete the 21 old drafts, then the legacy form components go), M3 (CRM check), D1\u2013D3, D5\u2013D9, D22, D24 (D10 optional); PBI-01b and PBI-21 deferred.',
+  state: '30 Sep: PBI-09, PBI-10, PBI-13, PBI-14, PBI-15 and PBI-16 done (D23 approved and applied; D24 new: per-call $1,000 claims in page copy). 29 Sep (evening): board clean-up. PBI-12 done (all Part B copy fixes live, D20 wording applied). G29 (WEEK 1 tags, 22 pages) done under PBI-19; PBI-01c and PBI-11 closed (PBI-11 follow-up moved to PBI-16); PBI-08 built and reviewed, closes with the operator\'s CRM check (M3). PBI-09 done 30 Sep: the count and security dropdowns keep their options in Webflow (the G17 rewrite script is gone). Shared code (PBI-01d) done and closed: page code and the phone-swap script live once in Site settings (one phone table); every landing-page section is a component with per-page copy in props (8 LP components); new pages start from the draft Landing page template, with copy synced from the prototype by lp-sync.mjs. D20 and D21 decided; D22 opened (8 hero props where the prototype and Webflow wording differ). Waiting on the operator: M2 (delete the 21 old drafts, then the legacy form components go), M3 (CRM check), D1\u2013D3, D5\u2013D9, D22, D24 (D10 optional); PBI-01b and PBI-21 deferred.',
   site: { name: 'Credo: Microsite Staging', id: '6ab90fb0761d44332faf21c8', domain: 'staging.credolegal.com' },
 
   pbis: [
@@ -419,19 +419,25 @@ window.BACKLOG = {
         ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots; findings settled', 'done']
       ] },
 
-    { id: 'PBI-16', title: 'Mobile type scale and text case', refs: ['G24', 'G22', 'L4'], by: 'claude',
-      why: 'Mobile H1 52px vs the prototype\'s 32px; intro paragraph in Title Case; 10–11px labels.',
+    { id: 'PBI-16', title: 'Mobile type scale and text case', refs: ['G24', 'G22', 'L4'], by: 'claude', note: 'Done 30 Sep. Class styles at mobile portrait (\u2264479px) plus rules in the site-head <style> token block (the duplicated class names and the per-page heading fix, both go with M2 / DS-4). Step labels hidden \u2264420px as in the prototype (numbers only).',
+      review: { items: [
+        { kind: 'Code', by: 'GPT-5.5', verdict: 'approve with fixes', file: 'review/PBI-16.review-gpt.md', settled: true, note: 'Breakpoints 320\u2013768px swept: overflow 0, text under 12px 0.' },
+        { kind: 'Code', by: 'Gemini 3.1 Pro', verdict: 'approve with fixes', file: 'review/PBI-16.review-gemini.md', settled: true, note: 'Site-head overrides interim until M2 / DS-4; class task moved to DS-8.' },
+        { kind: 'UX', by: 'GPT-5.5', verdict: 'approve with fixes', file: 'review/PBI-16.review-gpt-ux.md', settled: true, note: 'Desktop question/helper gap fixed (4px); phone link under Continue: PBI-17 / PBI-19.' },
+        { kind: 'UX', by: 'Gemini 3.1 Pro', verdict: 'approve with fixes', file: 'review/PBI-16.review-gemini-ux.md', settled: true, note: 'Two-line step labels: hidden \u2264420px as in the prototype.' }
+      ], links: [['Packet', 'review/PBI-16.md'], ['Resolution', 'review/PBI-16.triage.md']] },
+      why: 'Mobile H1 52px vs the prototype\'s 32px; intro paragraph in Title Case; 10\u201311px labels.',
       done: 'Mobile sizes match the prototype; no text under 12px on phones.',
       tasks: [
-        ['Mobile-portrait sizes for the H1 and section headlines', 'todo'],
-        ['Form-question line height 1.3', 'todo'],
+        ['Mobile-portrait sizes for the H1 and section headlines: H1 32px / 1.05, section headlines 26px / 1.2 at \u2264479px', 'done'],
+        ['Form-question line height 1.3 (was 44px); question-to-helper gap 4px', 'done'],
         ['Intro paragraph Capitalize: None (G22, class Text Block 16): done 29 Sep in PBI-11; 0 of 54 pages render capitalized body text', 'done'],
-        ['One citation class and one label class (labels uppercase via style, words typed normally), replacing the capitals typed in PBI-11 (from the PBI-11 review, Gemini)', 'todo'],
-        ['Step labels and rights tags to 12px', 'todo'],
-        ['Rights rows on phone: the label column is narrow, so labels wrap word by word; widen or stack it (existing design, from the PBI-01d P4 UX review; one edit in LP \u00b7 Rights and FAQ)', 'todo'],
-        ['Publish to staging only and verify', 'todo']
+        ['One citation class and one label class (labels uppercase via style, words typed normally), replacing the capitals typed in PBI-11 (from the PBI-11 review, Gemini): moved 30 Sep to DS-8 (class consolidation, design-system plan); no visible change, about 500 props on 51 pages', 'done'],
+        ['Step labels and rights tags to 12px; step labels hidden \u2264420px (numbers only), as in the prototype', 'done'],
+        ['Rights rows on phone: the label column is narrow, so labels wrap word by word; widen or stack it (existing design, from the PBI-01d P4 UX review; one edit in LP \u00b7 Rights and FAQ): stacked at \u2264479px', 'done'],
+        ['Publish to staging only and verify: all 52 form pages at 390px, text under 12px 0, overflow 0; 4 pages at 320\u2013768px; functional spot check on 4 pages \u00d7 2 widths identical', 'done']
 ,
-        ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots when anything visible changes; findings settled', 'todo']
+        ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots; findings settled', 'done']
       ] },
 
     { id: 'PBI-17', title: 'Form card, bottom CTA and page width', refs: ['G27', 'G28', 'L6'], by: 'claude',
