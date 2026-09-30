@@ -30,11 +30,14 @@
   document.title = 'Credo Legal | ' + (isLetter ? 'Letter' : st) + ' · new design preview';
 
   // Meta description (D23, approved 30 Sep; ≤160 characters): the state pages name the state, /letter is generic.
-  var metaDesc = document.querySelector('meta[name="description"]') ||
-    document.head.appendChild(Object.assign(document.createElement('meta'), { name: 'description' }));
-  metaDesc.content = isLetter
-    ? "Facing unsecured debt or creditor harassment? Our attorneys challenge invalid debts, defend lawsuits and enforce your FDCPA rights. Free case evaluation."
-    : st + " residents facing debt collectors or a debt lawsuit: our attorneys challenge invalid debts and enforce your federal rights. Free case evaluation.";
+  // Skipped outside a browser (lp-sync.mjs loads this file with a stub document).
+  if (typeof document.querySelector === 'function') {
+    var metaDesc = document.querySelector('meta[name="description"]') ||
+      document.head.appendChild(Object.assign(document.createElement('meta'), { name: 'description' }));
+    metaDesc.content = isLetter
+      ? "Facing unsecured debt or creditor harassment? Our attorneys challenge invalid debts, defend lawsuits and enforce your FDCPA rights. Free case evaluation."
+      : st + " residents facing debt collectors or a debt lawsuit: our attorneys challenge invalid debts and enforce your federal rights. Free case evaluation.";
+  }
 
   window.CREDO = {
     // Live number on all 13 state pages and /letter.
