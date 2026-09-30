@@ -8,7 +8,7 @@
  * `blocked` names the decision (D#) or manual step (M#) a PBI waits on. */
 window.BACKLOG = {
   updated: '30 Sep 2026',
-  state: '30 Sep (evening): PBI-26\u2013PBI-29 added from the PageSpeed/Pingdom analysis (self-hosted fonts, no Turnstile on the Formspree form, Tidio after first interaction, right-sized logos); PBI-26 needs the operator\'s download OK and the Google-fonts removal, PBI-28 a per-script plan approval. 30 Sep: PBI-09, PBI-10, PBI-13, PBI-14, PBI-15, PBI-16, PBI-17, PBI-18, PBI-19 and PBI-25 done, PBI-24 close-out done (lpcheck vs baseline: major 245 \u2192 106, minor 211 \u2192 88; change log in review/CHANGELOG.md; Clarity masking proven on 52/52; D26, D27 raised; the domain-switch task waits on D16/D21), and Claude\'s part of PBI-23 (script clean-up approved per script; Lighthouse unchanged within noise; fonts, minify and the GTM Nextdoor timing are the operator\'s manual steps) (D23 approved and applied; D24 new: per-call $1,000 claims in page copy). 29 Sep (evening): board clean-up. PBI-12 done (all Part B copy fixes live, D20 wording applied). G29 (WEEK 1 tags, 22 pages) done under PBI-19; PBI-01c and PBI-11 closed (PBI-11 follow-up moved to PBI-16); PBI-08 built and reviewed, closes with the operator\'s CRM check (M3). PBI-09 done 30 Sep: the count and security dropdowns keep their options in Webflow (the G17 rewrite script is gone). Shared code (PBI-01d) done and closed: page code and the phone-swap script live once in Site settings (one phone table); every landing-page section is a component with per-page copy in props (8 LP components); new pages start from the draft Landing page template, with copy synced from the prototype by lp-sync.mjs. D20 and D21 decided; D22 opened (8 hero props where the prototype and Webflow wording differ). DS-7 done 30 Sep (the 21 old drafts stay unpublished: D18; M2 not needed). Waiting on the operator: M3 (CRM check), D1\u2013D3, D5\u2013D9, D22, D24\u2013D27 (D10 optional); PBI-01b and PBI-21 deferred.',
+  state: '30 Sep (evening): PBI-29 done (one 8.6 KB logo file instead of 117 KB; BBB seal no longer squashed on phones). PBI-27 waits on M4 (the operator turns off Webflow\'s form bot protection). PBI-26\u2013PBI-29 added from the PageSpeed/Pingdom analysis (self-hosted fonts, no Turnstile on the Formspree form, Tidio after first interaction, right-sized logos); PBI-26 needs the operator\'s download OK and the Google-fonts removal, PBI-28 a per-script plan approval. 30 Sep: PBI-09, PBI-10, PBI-13, PBI-14, PBI-15, PBI-16, PBI-17, PBI-18, PBI-19 and PBI-25 done, PBI-24 close-out done (lpcheck vs baseline: major 245 \u2192 106, minor 211 \u2192 88; change log in review/CHANGELOG.md; Clarity masking proven on 52/52; D26, D27 raised; the domain-switch task waits on D16/D21), and Claude\'s part of PBI-23 (script clean-up approved per script; Lighthouse unchanged within noise; fonts, minify and the GTM Nextdoor timing are the operator\'s manual steps) (D23 approved and applied; D24 new: per-call $1,000 claims in page copy). 29 Sep (evening): board clean-up. PBI-12 done (all Part B copy fixes live, D20 wording applied). G29 (WEEK 1 tags, 22 pages) done under PBI-19; PBI-01c and PBI-11 closed (PBI-11 follow-up moved to PBI-16); PBI-08 built and reviewed, closes with the operator\'s CRM check (M3). PBI-09 done 30 Sep: the count and security dropdowns keep their options in Webflow (the G17 rewrite script is gone). Shared code (PBI-01d) done and closed: page code and the phone-swap script live once in Site settings (one phone table); every landing-page section is a component with per-page copy in props (8 LP components); new pages start from the draft Landing page template, with copy synced from the prototype by lp-sync.mjs. D20 and D21 decided; D22 opened (8 hero props where the prototype and Webflow wording differ). DS-7 done 30 Sep (the 21 old drafts stay unpublished: D18; M2 not needed). Waiting on the operator: M3 (CRM check), D1\u2013D3, D5\u2013D9, D22, D24\u2013D27 (D10 optional); PBI-01b and PBI-21 deferred.',
   site: { name: 'Credo: Microsite Staging', id: '6ab90fb0761d44332faf21c8', domain: 'staging.credolegal.com' },
 
   pbis: [
@@ -582,12 +582,12 @@ window.BACKLOG = {
         ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots/video (the font switch); findings settled', 'todo']
       ] },
 
-    { id: 'PBI-27', visible: false, title: 'No Webflow spam check (Turnstile) on the Formspree form', refs: ['L2', 'PSI 30 Sep'], by: 'claude', note: 'Chosen by the operator 30 Sep (P3). The form posts to Formspree, so Webflow\'s Cloudflare Turnstile check protects nothing; Formspree keeps its own spam filtering.',
+    { id: 'PBI-27', visible: false, title: 'No Webflow spam check (Turnstile) on the Formspree form', refs: ['L2', 'PSI 30 Sep'], by: 'claude', blocked: 'M4 (operator)', note: 'Chosen by the operator 30 Sep (P3). The form posts to Formspree, so Webflow\'s Cloudflare Turnstile check protects nothing; Formspree keeps its own spam filtering.',
       why: 'Every page loads Cloudflare Turnstile for the form (~30 KB, 3 requests incl. a redirect, main-thread time) and it logs the recurring atob console errors, yet the token only matters to Webflow\'s own form handler, which this form does not use.',
       done: 'No challenges.cloudflare.com request and no atob console errors on any page; the form walk, validation and payload unchanged.',
       tasks: [
-        ['Find where Turnstile is switched on (Webflow form / site setting) and whether the API can turn it off; otherwise a manual step for the operator', 'todo'],
-        ['Turn it off on staging; publish to staging only', 'todo'],
+        ['Find where Turnstile is switched on: webflow.js loads challenges.cloudflare.com/turnstile/v0/api.js whenever the page has a form with data-turnstile-sitekey, which Webflow publishes while the site\'s form bot protection is on (Site settings \u2192 Forms). The API cannot change it; the per-form opt-out (data-wf-no-turnstile) does not stop the script loading. So: a manual toggle (M4)', 'done'],
+        ['Operator (M4): turn off the form bot/spam protection (Cloudflare Turnstile) in Site settings \u2192 Forms of the staging project; then Claude publishes to staging only', 'todo'],
         ['Verify on all 52 form pages: no Turnstile request, no atob errors; isolated compare of form walk, payload, trackers and styles', 'todo'],
         ['Independent review: code by GPT + Gemini; UX only if anything visible changes; findings settled', 'todo']
       ] },
@@ -602,14 +602,18 @@ window.BACKLOG = {
         ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots (launcher timing); findings settled', 'todo']
       ] },
 
-    { id: 'PBI-29', visible: false, title: 'Logo images: right size, not lazy at the top', refs: ['L2', 'PSI 30 Sep'], by: 'claude', note: 'Chosen by the operator 30 Sep (P5).',
+    { id: 'PBI-29', visible: false, title: 'Logo images: right size, not lazy at the top', refs: ['L2', 'PSI 30 Sep'], by: 'claude', note: 'Done 30 Sep. Every logo (header, footer, pop-up, thank-you) now uses one 8.6 KB file (credo-logo-420.png, 256-colour PNG from the site\'s own logo): 117 KB \u2192 8.6 KB of logo per landing page. Header and thank-you logos load eagerly. Found and fixed: the BBB seal was squashed on phones (object-fit contain + width/height). Header width/height stay Webflow\'s (the API rejects a width attribute; optional Designer step). Gemini review pending (API credits).',
+      review: { items: [
+        { kind: 'Code', by: 'GPT-5.5', verdict: 'approve with fixes', file: 'review/PBI-29.review-gpt.md', settled: true, note: 'Header moved to the 420 file (zoom/dense screens); unused footer props labelled; served HTML 56/56, functional compare identical 8/8.' },
+        { kind: 'UX', by: 'GPT-5.5', verdict: 'approve with fixes', file: 'review/PBI-29.review-gpt-ux.md', settled: true, note: 'Seal fix kept (same box); before/after shots of every logo added.' }
+      ], links: [['Packet', 'review/PBI-29.md'], ['Resolution', 'review/PBI-29.triage.md']] },
       why: 'The header logo is above the fold but marked lazy, loads a 500 px file shown at 159 px and has no height/width (PageSpeed: image delivery, aspect ratio, missing dimensions); the footer logo is a 39 KB PNG shown at 122 px.',
       done: 'Header logo loads eagerly at the right size with width and height set; footer logo ~5 KB; both look identical (pixel compare) at 1440/810/390; ~45 KB less.',
       tasks: [
-        ['Make right-sized logo files (header, footer; 2x for sharp screens) and upload them to the staging assets', 'todo'],
-        ['Header logo: eager loading, width and height, new file; footer logo: new file (navbar and footer components); publish to staging only', 'todo'],
-        ['Verify: identical look (pixel compare 1440/810/390, retina), fewer bytes, PageSpeed image audits clear', 'todo'],
-        ['Independent review: code by GPT + Gemini; UX only if anything visible changes; findings settled', 'todo']
+        ['Make right-sized logo files (header, footer; 2x for sharp screens) and upload them to the staging assets: credo-logo-420.png (8.6 KB) and credo-logo-280.png (5.3 KB, not used after review)', 'done'],
+        ['Header logo: eager loading, new file; footer, pop-up (LP \u00b7 Lead form, home) and thank-you logos: new file (thank-you eager); published to staging only', 'done'],
+        ['Verify: identical look (pixel compare 1440/810/390 at 1\u00d7/2\u00d7/3\u00d7), 117 KB \u2192 8.6 KB per landing page, image aspect-ratio audit passes (BBB seal fixed); unsized: header (Webflow width Auto) and footer (on purpose) remain', 'done'],
+        ['Independent review: code by GPT + Gemini; UX by GPT on screenshots (seal); findings settled (Gemini pending: API credits)', 'done']
       ] }
   ],
 
@@ -653,6 +657,7 @@ window.BACKLOG = {
     ['G15 · G21b', 'GTM: form_submit only on success; call clicks as one key event (shared container)', 'Open'],
     ['G2', 'Old-domain duplicates and redirects on start.credolegal.com (old site)', 'Open'],
     ['M2', 'Delete the 21 old drafts in Webflow (Pages panel: the 21 top-level draft pages whose names end in "(old design)", slugs {slug}-old: ohio, kentucky, utah, south-dakota, missouri, kansas, california, minnesota, maryland, colorado, new-york, new-jersey, florida, letter, medical-debt-attorney, debt-harassment-act-fast, multiple-collectors-more-money, payday-loan-fight-back, payday-loan-debt-rights, payday-loan-lawsuit-proof, payday-loan-lawsuit-respond). The API cannot delete pages. D18', 'Not needed: operator 30 Sep, the drafts stay unpublished (D18)'],
+    ['M4', 'PBI-27: Site settings \u2192 Forms (staging project): turn off the form bot/spam protection (Cloudflare Turnstile). The form posts to Formspree, so Webflow\'s check protects nothing; it loads ~30 KB and causes the atob console errors. Tell Claude when done: Claude publishes and verifies', 'Open'],
     ['M3', 'CRM check (PBI-08): a staging lead now carries fbclid (new field) and keeps utm_source/medium/campaign and gclid on a return visit; confirm the CRM maps or ignores fbclid and stores the return-visit values', 'Open'],
   ]
 };

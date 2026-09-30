@@ -597,6 +597,27 @@ Not a board row: tracked as decision D13. Listed here because it changed the sit
 **Evidence / review**
 - Published stylesheet differs by that one rule only; iPad axe target-size clean. [PBI-24.md](PBI-24.md), [PBI-24.triage.md](PBI-24.triage.md).
 
+## PBI-29 · Logo images: right size, not lazy at the top (30 Sep)
+
+**What changed**
+- Every logo (header, footer, pop-up, thank-you) now uses one 8.6 KB file instead of 13–38 KB files: 117 KB → 8.6 KB
+  of logo per landing page. The header and thank-you logos load immediately (they are at the top). Same look.
+- The BBB seal is no longer squashed on phones (it is drawn in proportion in the same box).
+
+**Where in Webflow**
+- Assets: `credo-logo-420.png` (6abd55573915529793acb45e; also `credo-logo-280.png` 6abd555711b7d04e77f3fb8d, unused).
+- Navbar component (Image): new file, custom attribute `loading=eager`.
+- Footer-MJ and "footer" (inside Thank-you page) components: image set directly (their "Image" prop is now unused;
+  tooltip says so). LP · Lead form and home: pop-up logo (Image 30). Thank-you page component: Image 29, `loading=eager`.
+- BBB seal code embeds (LP · Rights and FAQ, LP · Trust strip, home): `width="384" height="80"` and
+  `object-fit:contain;object-position:left center` on the image.
+
+**Revert**
+- `2026-09-30-pbi29/` with REVERT.md (before-state.md, bbb-embed-before.html).
+
+**Evidence / review**
+- Code GPT approve with fixes; UX GPT approve with fixes; Gemini pending. [PBI-29.md](PBI-29.md), [PBI-29.triage.md](PBI-29.triage.md).
+
 ## At a glance
 
 | ID | Title | Main Webflow location(s) | Status |
@@ -629,6 +650,7 @@ Not a board row: tracked as decision D13. Listed here because it changed the sit
 | PBI-25 | Heading levels | Home tags + head code; Thank-you page component | done (Gemini review pending) |
 | PBI-23 | Performance on phones | Site head/footer code; slider embed in LP · Hero and home's hero; LP · Rights and FAQ embed | partly done: Tidio (D8), recorder (D5), operator manual steps open |
 | PBI-24 | Close-out | Class Link 3 Copy (footer links) | close-out done; its domain-switch task waits on D16, D21 |
+| PBI-29 | Logo images | Navbar, Footer-MJ, footer, Thank-you page, LP · Lead form, home; BBB embeds | done |
 
 ## Open / not changed
 
