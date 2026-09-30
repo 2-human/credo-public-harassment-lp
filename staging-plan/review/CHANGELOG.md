@@ -729,6 +729,25 @@ Not a board row: tracked as decision D13. Listed here because it changed the sit
 - Served HTML 56/56 identical after normalising whitespace and file hashes (`2026-09-30-l2-minify/`); element
   compare 6 pages × 1440/390: 0 differences (animated call-button dot aside).
 
+## PBI-26 follow-up · Font preload removes the hero layout shift (30 Sep late evening / 1 Oct)
+
+**What changed**
+- Two `<link rel="preload" … as="font" crossorigin>` lines for the two self-hosted font files at the top of the site
+  head code (added by the operator; the site-code API tool was unavailable in that session), published to staging only.
+- PageSpeed's layout shift on phones (0.28, the hero form card moving when the fonts arrive; already 0.283 before
+  PBI-26) is gone: CLS 0 in 15/15 throttled phone runs on 5 pages; each font still downloads once.
+
+**Where in Webflow**
+- Site settings → Custom code → Head code, first two lines. If a font file is replaced in Site settings → Fonts, its
+  URL changes: update the matching line.
+
+**Revert**
+- `2026-10-01-preload/REVERT.md`: delete the two lines, publish to the staging domain only.
+
+**Evidence / review**
+- Served HTML 56/56, functional compare 8/8, WebKit and Firefox spot checks. Code GPT approve with fixes; Gemini
+  pending. [PBI-26c.md](PBI-26c.md), [PBI-26c.triage.md](PBI-26c.triage.md).
+
 ## At a glance
 
 | ID | Title | Main Webflow location(s) | Status |
