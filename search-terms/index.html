@@ -105,6 +105,13 @@ td.blk{padding:0}
 td.c-int{font-size:12px}
 td.c-int .why{color:#2c323a;margin-top:3px}
 td.c-int .anl{margin-top:6px;padding:7px 9px;background:var(--soft);border-radius:8px}
+.bt tr.ad,.bt tr.rc{cursor:pointer}
+.bt tr.ad:hover td,.bt tr.rc:hover td{background:#eaf1fb}
+.recopen{border:0;background:none;padding:0;margin-top:4px;color:var(--blue);font:600 12px system-ui,sans-serif;cursor:pointer;text-decoration:underline}
+.src{display:inline-block;font:700 10px/1.6 system-ui,sans-serif;text-transform:uppercase;letter-spacing:.04em;padding:0 6px;border-radius:4px;white-space:nowrap}
+.src.new{background:#e6f4ea;color:#1e6b35}.src.use{background:#e8eefb;color:#2f5f9e}.src.cta{background:#fff4e0;color:#8a5a00}.src.pg{background:#f1e8fb;color:#6b3fa0}
+.atab td.cc{color:var(--mute);font-size:11px;text-align:right;width:34px}
+.pgbox{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:12.5px}
 .adscope{font-size:11px;color:var(--mute);margin:0 0 5px}
 .kwm{display:inline-block;font:600 10px/1.6 ui-monospace,Menlo,monospace;border:1px solid var(--line);border-radius:4px;padding:0 4px;color:var(--mute);margin-left:3px}
 .paused{background:#8a6d3b}
@@ -461,7 +468,7 @@ details.ana .box b:first-child{margin-top:0}
       if (!sp.length) h += `<tr class="ad"><td colspan="7"><span class="small">No ad served on ${selOf(r).size ? 'the selected keywords' : 'this term'} in the last 90 days.</span></td></tr>`;
       h += sp.map(({ i, t }) => {
         const a = DB.ads[i], u = pagePath(a.url), c = t.conv >= 0.05 ? t.cost / t.conv : null, ctr = t.impr ? t.clicks / t.impr : 0, kt = kwTags(t.kws);
-        return `<tr class="ad"><td class="num">≈${Math.round(t.impr).toLocaleString('en-US')}</td><td class="num">≈${Math.round(t.clicks)}</td>` +
+        return `<tr class="ad" data-ad="${i}" data-row="${k}" title="Open this ad's analysis"><td class="num">≈${Math.round(t.impr).toLocaleString('en-US')}</td><td class="num">≈${Math.round(t.clicks)}</td>` +
           `<td><b class="num">${pct(ctr)}</b>${r.brand ? '' : ` <span class="small">${(ctr / BM.ctr).toFixed(1)}×</span>`}</td>` +
           `<td class="num">≈${t.conv.toFixed(1)}<br><span class="small">${c ? usd(c) : '–'}</span></td><td class="num"><span class="est">EST.</span></td>` +
           `<td><span class="pill st-${a.status}">${stLabel(a.status)}</span> <b>${i}</b>${a.headlines.length ? `<span class="hl" style="display:block;color:#1a0dab;font-weight:600;font-size:11.5px;margin-top:2px">${a.headlines.slice(0, 2).map(x => esc(x.t)).join(' | ')}</span>` : ''}` +
@@ -491,7 +498,7 @@ details.ana .box b:first-child{margin-top:0}
         lp = (nw ? `<span class="pill new">New</span> <b>${esc(nw.name)}</b><div class="small">${esc(nw.slug)}</div><div class="txt"><a href="${esc(nw.hub)}" target="_blank" rel="noopener">LP hub</a> · <a href="${esc(nw.file)}" target="_blank" rel="noopener">Preview</a></div>` : '') +
           (il ? `<div class="small" style="margin-top:4px">Until it is built: ${link(il.url, short(il.url))}</div>` : '');
       } else lp = `<span class="pill live">${pg.kind === 'brand' ? 'Brand' : 'Live'}</span> ${link(pg.url, short(pg.url))}<div class="small">${esc(pg.label)}</div>`;
-      return `<tr class="rc"><td>${adHtml}</td><td>${lp}</td></tr>`;
+      return `<tr class="rc" data-intent="${intent}" data-row="${esc(r.key)}" title="Open the full recommended ad"><td>${adHtml}${ad ? '<button class="recopen">Full recommended ad ›</button>' : ''}</td><td>${lp}</td></tr>`;
     }).join('');
     return `<table class="bt">${cg}${h}</table>`;
   };
@@ -644,6 +651,58 @@ details.ana .box b:first-child{margin-top:0}
       }).join('');
     return `<div class="sec">Most-served combinations (last 90 days)</div><div class="small" style="margin:0 0 6px">What searchers actually saw, most frequent first. Google reports impressions only for combinations, so which one was clicked is not available.</div>` + body;
   }
+  // Full recommended RSA: the new copy for this intent (and the term's own ad, if it has one), then proven
+  // in-use lines ranked for this intent and its page (scripts/google-ads/rsa_builder.py), to 15 + 4.
+  function recAd(r, intent) {
+    const it = I[intent], own = r.f && r.f.ad && intent === r.intent, R = DB.rsa[intent] || { h: [], d: [] };
+    const nh = [...(own ? r.f.ad.h : []), ...(it.ad ? it.ad.h : [])], nd = [...(own ? [r.f.ad.d] : []), ...(it.ad ? it.ad.d : [])];
+    const uniq = (l, n) => { const seen = new Set(), out = []; l.forEach(x => { const k = x.t.toLowerCase(); if (!seen.has(k) && out.length < n) { seen.add(k); out.push(x); } }); return out; };
+    return {
+      own,
+      h: uniq([...nh.map(t => ({ t, src: own && r.f.ad.h.includes(t) ? 'term' : 'new' })), ...R.h.map(x => ({ ...x, src: 'use' }))], 15),
+      d: uniq([...nd.map(t => ({ t, src: own && t === r.f.ad.d ? 'term' : 'new' })), ...R.d.map(x => ({ ...x, src: 'use' }))], 4),
+      hero: R.hero
+    };
+  }
+  // Google counts a {KEYWORD:x} / {LOCATION(State):x} insertion by its default text.
+  const gLen = t => t.replace(/\{[^}:]*:([^}]*)\}/g, '$1').length;
+  function openRecDrawer(rowKey, intent) {
+    const r = byKey.get(rowKey), it = I[intent], pg = P[it.page];
+    if (!drCtx) lastFocus = document.activeElement;
+    drCtx = { rowKey, rec: intent };
+    const A = recAd(r, intent), kws = activeKws(r).filter(k => k.intent === intent);
+    $('dr-title').textContent = 'Recommended ad';
+    $('dr-sub').innerHTML = `<b>${esc(it.label)}</b> · ${esc(it.debtType || '')}<br>For "${esc(r.term)}"${kws.length ? ' and ' + kws.length + ' keyword' + (kws.length === 1 ? '' : 's') : ''}`;
+    let page;
+    if (pg.kind === 'new') {
+      const nw = window.NEW_PAGES[pg.newKey], il = P[pg.interim];
+      page = `<span class="pill new">New page</span> <b>${esc(nw.name)}</b> <span class="small">${esc(nw.slug)}</span>` +
+        (A.hero ? `<div style="margin-top:6px"><span class="small">On the page:</span> ${esc(A.hero)}</div>` : '') +
+        `<div class="txt"><a href="${esc(nw.hub)}" target="_blank" rel="noopener">Open in LP hub</a> · <a href="${esc(nw.file)}" target="_blank" rel="noopener">Preview</a></div>` +
+        (il ? `<div class="small" style="margin-top:4px">Until it is built, point the ad at ${link(il.url, short(il.url))}.</div>` : '');
+    } else page = `<span class="pill live">${pg.kind === 'brand' ? 'Brand' : 'Live page'}</span> ${link(pg.url, short(pg.url))}<div class="small">${esc(pg.label)}</div>`;
+    const srcTag = x => x.src === 'new' ? '<span class="src new">New · intent</span>' : x.src === 'term' ? '<span class="src new">New · this term</span>' :
+      `<span class="src use">In use</span>${x.cta ? ' <span class="src cta">CTA</span>' : ''}${x.onPage ? ' <span class="src pg">On this page</span>' : ''}` +
+      `<div class="small">${x.impr.toLocaleString('en-US')} impr · ${pct(x.ctr)} CTR · ${x.conv} conv${x.cpa ? ' · ' + usd(x.cpa) : ''} · ${x.ads} ad${x.ads === 1 ? '' : 's'}</div>`;
+    const tbl = (L, lim, name) => `<table class="atab"><thead><tr><th>#</th><th>${name}</th><th class="n">Chars</th><th>Source</th></tr></thead><tbody>` +
+      L.map((x, i) => { const n = gLen(x.t); return `<tr><td class="cc">${i + 1}</td><td>${esc(x.t)}</td><td class="n${n > lim ? '" style="color:var(--red)' : ''}">${n}</td><td>${srcTag(x)}</td></tr>`; }).join('') + '</tbody></table>';
+    const nNew = A.h.filter(x => x.src !== 'use').length;
+    const cta = A.h.find(x => x.src === 'use' && x.cta) || A.h[2];
+    const prevH = [A.h[0], A.h[1], cta].filter(Boolean).map(x => esc(x.t)).join(' | ');
+    const host = pg.kind === 'new' ? 'start.credolegal.com' : short(pg.url).split('/')[0];
+    const slugTxt = pg.kind === 'new' ? window.NEW_PAGES[pg.newKey].slug.replace(/^\//, '') : pagePath(pg.url).replace(/^\//, '');
+    $('dr-body').innerHTML =
+      `<div class="sec">Why this ad and page</div><p class="ana-p">${esc(it.why)} ${pg.kind === 'new' && pg.interimWhy ? esc(pg.interimWhy) : ''} ` +
+      `The headline set mixes ${nNew} new lines written for this intent${A.own ? ' and this search term' : ''} with ${A.h.length - nNew} lines already running in Credo's ads, chosen for how well they match this intent and page, whether they already run on this page, and their CTR and conversion rate. Up to two proven calls to action come first (one when the new copy already carries a similar one).</p>` +
+      `<div class="sec">Landing page</div><div class="pgbox">${page}</div>` +
+      `<div class="sec">Preview</div><div class="gad"><div class="sp">Sponsored</div><div class="url">${esc(host)} › ${esc(slugTxt)}</div><div class="h">${prevH}</div><div class="d">${A.d.slice(0, 2).map(x => esc(x.t)).join(' ')}</div><div class="meta">One possible combination; Google rotates the 15 headlines and 4 descriptions.</div></div>` +
+      `<div class="sec">Headlines (${A.h.length} of 15)</div>${tbl(A.h, 30, 'Headline')}` +
+      `<div class="sec">Descriptions (${A.d.length} of 4)</div>${tbl(A.d, 90, 'Description')}` +
+      `<div class="dnote">Draft for attorney review. "In use" numbers are all time across every Credo ad that runs the line. Excluded from the in-use pool: lines with "!", "real attorneys", the 8 AM–9 PM call rule stated backwards, per-violation damages claims, unverifiable volume claims ("thousands", "hundreds"), state-specific and brand-only lines, and lines under half the median CTR. No pins suggested: let Google rotate, then read the combinations report.</div>`;
+    $('scrim').classList.add('on');
+    const d = $('drawer'); d.classList.add('on'); d.setAttribute('aria-hidden', 'false');
+    $('dr-body').scrollTop = 0; $('dr-close').focus();
+  }
   let drCtx = null, lastFocus = null;
   function openDrawer(rowKey, adId, tab) {
     const r = byKey.get(rowKey), a = DB.ads[adId];
@@ -744,8 +803,11 @@ details.ana .box b:first-child{margin-top:0}
       const f = tr && (tr.querySelector(`.kwsel[data-i="${k.dataset.i}"]`) || tr.querySelector('.kwsel')); if (f) f.focus();
       return;
     }
-    const b = e.target.closest('.adopen'); if (!b) return;
-    openDrawer(b.dataset.row, b.dataset.ad, 'c');
+    if (e.target.closest('a')) return;
+    const b = e.target.closest('.adopen, tr.ad[data-ad]');
+    if (b) { openDrawer(b.dataset.row, b.dataset.ad, 'c'); return; }
+    const rc = e.target.closest('tr.rc[data-intent]');
+    if (rc && (I[rc.dataset.intent].ad || (byKey.get(rc.dataset.row).f || {}).ad)) openRecDrawer(rc.dataset.row, rc.dataset.intent);
   });
   $('dr-body').addEventListener('click', e => {
     const t = e.target.closest('.kwtab'); if (!t || !drCtx) return;
