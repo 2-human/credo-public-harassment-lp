@@ -50,7 +50,10 @@ tr.cl td{background:var(--soft);font:700 13px Georgia,serif;padding:8px 10px}
 .rec .hl{color:#1a0dab;font-weight:600;font-size:12.5px}
 .rec .ds{font-size:12px;color:#2c323a;margin-top:3px}
 .lpnote{font-size:12px;color:#2c323a;margin-top:3px}
-.new{background:#b45309}.live{background:var(--ok)}.none{background:#6b7280}
+.new{background:#b45309}
+.a-keep{background:var(--ok)}.a-keep_test{background:#4d7c5f}.a-route{background:#2f5f9e}.a-move{background:#b45309}.a-new_page{background:#b45309}.a-neg_here{background:#6b7280}.a-negative{background:#111418}.a-bid_down{background:#8a6d3b}
+.today{font-size:11.5px;color:var(--mute)}.today b{color:var(--ink)}
+td.mapc{min-width:220px;max-width:320px;font-size:12px}.live{background:var(--ok)}.none{background:#6b7280}
 td.an{min-width:260px;max-width:340px;font-size:12.5px}
 td.adc{min-width:230px;max-width:280px}
 td.recc{min-width:230px;max-width:280px}
@@ -106,18 +109,31 @@ td.lpc{min-width:210px;max-width:260px}
     </table>
   </div>
 
+  <h2 id="mapping">Best-page mapping: every search term</h2>
+  <p class="lede" id="map-lede"></p>
+  <ol class="method" id="map-rules"></ol>
+  <div class="tw" style="margin:12px 0 8px">
+    <table id="intents">
+      <thead><tr><th>Search intent</th><th>Best page</th><th>Terms</th><th>Impr.</th><th>Conv.</th><th>On the best page today</th><th>Actions</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
   <h2>All analysed search terms</h2>
   <div class="all-tools">
     <input id="q" type="search" placeholder="Filter terms…" aria-label="Filter terms">
     <select id="camp" aria-label="Campaign"><option value="">All campaigns</option></select>
     <select id="ver" aria-label="Verdict"><option value="">All verdicts</option><option>Strong</option><option>Above</option><option>Below</option></select>
+    <select id="act" aria-label="Action"><option value="">All actions</option></select>
+    <select id="int" aria-label="Intent"><option value="">All intents</option></select>
     <span id="count" style="align-self:center;color:var(--mute);font-size:12.5px"></span>
   </div>
   <div class="tw">
     <table id="all">
       <thead><tr>
         <th data-k="term">Search term</th><th data-k="campaign">Campaign › ad group</th><th data-k="impr">Impr.</th><th data-k="clicks">Clicks</th>
-        <th data-k="ctr">CTR</th><th data-k="verdict">Verdict</th><th data-k="conv">Conv.</th><th data-k="cpa">CPA</th><th data-k="top">Top %</th>
+        <th data-k="ctr">CTR</th><th data-k="verdict">Verdict</th><th data-k="conv">Conv.</th><th data-k="cpa">CPA</th>
+        <th data-k="intentLabel">Intent</th><th data-k="bestShare">Lands on today</th><th data-k="bestLabel">Best page</th><th data-k="action">Action</th>
       </tr></thead>
       <tbody></tbody>
     </table>
@@ -143,7 +159,10 @@ td.lpc{min-width:210px;max-width:260px}
     r.cpa = r.conv > 0 ? r.cost / r.conv : null;
     r.verdict = r.ctr >= 2 * BM.ctr ? 'Strong' : r.ctr >= BM.ctr ? 'Above' : 'Below';
   });
-  const idx = new Map(rows.map(r => [r.campaign + '|' + r.term, r]));
+  const idx = new Map(rows.map(r => [r.campaign + '|' + r.adgroup + '|' + r.term, r]));
+  const P = D.pages, I = D.intents;
+  const ACT = { keep: 'Keep', keep_test: 'Keep + A/B test', route: 'Route', move: 'Move', new_page: 'New page', neg_here: 'Negative here', negative: 'Add negative', bid_down: 'Bid down' };
+  rows.forEach(r => { r.intentLabel = I[r.intent].label; r.bestLabel = P[r.best].label; });
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   const pct = x => (x * 100).toFixed(1) + '%';
   const bmp = x => (x * 100).toFixed(2) + '%';
@@ -173,7 +192,8 @@ td.lpc{min-width:210px;max-width:260px}
     ['Cost per conversion', usd2(acctCpa), `benchmark CPL ${usd2(BM.cpl)}`],
     ['Conversion rate', bmp(ACCT.conv / ACCT.clicks), `benchmark ${bmp(BM.cvr)}`],
     ['Terms analysed', rows.length.toString(), `${pct(covered / ACCT.impr)} of impressions`],
-    ['At or above CTR benchmark', `${above} of ${rows.length}`, `${rows.length - above} below`]
+    ['At or above CTR benchmark', `${above} of ${rows.length}`, `${rows.length - above} below`],
+    ['On the best page today', pct(rows.filter(r => !['NEG', 'BRAND'].includes(r.best)).reduce((a, r) => a + r.impr * r.bestShare / 100, 0) / rows.filter(r => !['NEG', 'BRAND'].includes(r.best)).reduce((a, r) => a + r.impr, 0)), '<a href="#mapping">non-brand impressions</a>']
   ];
   document.getElementById('kpis').innerHTML = kp.map(([a, b, c]) => `<div class="card"><small>${a}</small><b>${b}</b><span>${c}</span></div>`).join('');
 
@@ -193,20 +213,26 @@ td.lpc{min-width:210px;max-width:260px}
     (a.note ? `<div class="warn">${esc(a.note)}</div>` : '') +
     `<div>→ ${link(a.lp)}</div></div>`).join('') || '<span class="meta">No ad data</span>';
   const recAd = a => a ? `<div class="rec"><div class="hl">${a.h.map(esc).join(' | ')}</div><div class="ds">${esc(a.d)}</div></div>` : '<span style="color:var(--mute)">Keep the current ad.</span>';
-  const recLp = l => {
-    let top;
-    if (l.newPage) {
-      const n = window.NEW_PAGES[l.newPage];
-      top = `<span class="pill new">New page</span> <b>${esc(n.name)}</b>` +
+  const pageCell = (id, withLinks) => {
+    const pg = P[id];
+    if (pg.kind === 'new') {
+      const n = window.NEW_PAGES[pg.newKey];
+      return `<span class="pill new">New page</span> <b>${esc(n.name)}</b>` +
         `<div class="where">Proposed ${esc(n.slug)} · LP hub › ${esc(n.section)}</div>` +
-        `<div><a href="${esc(n.hub)}" target="_blank" rel="noopener">Open in LP hub</a> · <a href="${esc(n.file)}" target="_blank" rel="noopener">Preview page</a></div>`;
-    } else if (l.url) {
-      top = `<span class="pill live">Live</span> ${link(l.url)}`;
-    } else {
-      top = '<span class="pill none">No landing page</span>';
+        (withLinks ? `<div><a href="${esc(n.hub)}" target="_blank" rel="noopener">Open in LP hub</a> · <a href="${esc(n.file)}" target="_blank" rel="noopener">Preview page</a></div>` : '');
     }
-    return top + `<div class="lpnote">${esc(l.note)}</div>`;
+    if (pg.kind === 'none') return '<span class="pill none">No landing page</span>';
+    return `<span class="pill live">${pg.kind === 'brand' ? 'Brand' : 'Live'}</span> ${link(pg.url)}<div class="where">${esc(pg.label)}</div>`;
   };
+  const todayCell = r => {
+    const on = r.bestShare;
+    return `<div class="today">${r.current.map(c => `${esc(short(P[c.page].url) || P[c.page].label)} <b>${c.share}%</b>`).join('<br>')}</div>` +
+      (P[r.best].kind === 'none' ? '' : `<div class="today">${on}% on the best page</div>`);
+  };
+  const recLp = (r, f) => pageCell(r.best, true) +
+    (r.interim ? `<div class="lpnote"><b>Until then:</b> ${link(P[r.interim].url)}</div>` : '') +
+    `<div class="lpnote"><span class="pill a-${r.action}">${ACT[r.action]}</span> ${esc(r.actionText)}</div>` +
+    (f.lp.note ? `<div class="lpnote">${esc(f.lp.note)}</div>` : '');
 
   const tb = document.querySelector('#feat tbody');
   let cluster = '';
@@ -228,7 +254,7 @@ td.lpc{min-width:210px;max-width:260px}
       <td class="adc" data-l="Ad(s) it triggered → landing page">${adsCell(r.campaign + '|' + r.adgroup)}</td>
       <td class="an" data-l="Intent match">${esc(f.analysis)}</td>
       <td class="recc" data-l="Recommended ad">${recAd(f.ad)}</td>
-      <td class="lpc" data-l="Recommended landing page">${recLp(f.lp)}</td></tr>`);
+      <td class="lpc" data-l="Recommended landing page">${recLp(r, f)}</td></tr>`);
   });
   tb.innerHTML = html.join('');
 
@@ -244,6 +270,40 @@ td.lpc{min-width:210px;max-width:260px}
     tb.querySelectorAll('tr.cl').forEach(tr => { tr.hidden = !vis.has(tr.dataset.c); });
   });
 
+  // ── Mapping summary ───────────────────────────────────────────────────────
+  const nb = rows.filter(r => !['NEG', 'BRAND'].includes(r.best));
+  const nbImpr = nb.reduce((a, r) => a + r.impr, 0), nbOn = nb.reduce((a, r) => a + r.impr * r.bestShare / 100, 0);
+  const uniq = new Set(rows.map(r => r.term)).size, dupTerms = new Set(rows.filter(r => r.dup).map(r => r.term)).size;
+  document.getElementById('map-lede').innerHTML =
+    `All ${rows.length} rows (${uniq} distinct search terms) are mapped to a search intent and one best landing page. ` +
+    `Today only <b>${pct(nbOn / nbImpr)}</b> of non-brand impressions land on the page that best matches the search. ` +
+    `${dupTerms} terms run in more than one ad group or campaign; each ends up with exactly one placement.`;
+  document.getElementById('map-rules').innerHTML = [
+    'Best page = the live start.credolegal.com page, already used by the campaigns, that answers the search. Where none does, one of the four new pages built in the prototype LP template, with a live page to use until it is built ("Until then").',
+    'One term, one page, one placement. When a term runs in several ad groups, it stays in the ad group whose ad lands on the best page; every other copy becomes a negative there.',
+    `Do not move a proven converter: a copy with at least 3 conversions below the industry cost per lead (${usd2(BM.cpl)}) keeps its place, and the best page is A/B tested against it.`,
+    'Stage words decide the garnishment page: "after it starts", "on my paycheck", "fight", "lowered" go to the already-garnished page; "avoid", "can they" to prevention; exemptions and bank funds to exemptions; "how to stop" with no stage to the new How to Stop page (already-garnished page until it is built, because that is where these searches convert).',
+    'Competitors, lenders and products Credo does not sell become negatives. Definition searches are bid down.'
+  ].map(x => `<li>${esc(x)}</li>`).join('');
+  const agg = {};
+  rows.forEach(r => {
+    const a = agg[r.intent] = agg[r.intent] || { terms: new Set(), impr: 0, conv: 0, on: 0, acts: {} };
+    a.terms.add(r.term); a.impr += r.impr; a.conv += r.conv; a.on += r.impr * r.bestShare / 100; a.acts[r.action] = (a.acts[r.action] || 0) + 1;
+  });
+  document.querySelector('#intents tbody').innerHTML = Object.entries(agg).sort((a, b) => b[1].impr - a[1].impr).map(([k, a]) => {
+    const share = P[I[k].page].kind === 'none' ? '–' : pct(a.on / a.impr);
+    const bar = P[I[k].page].kind === 'none' ? '' : `<div class="ctrbar" style="width:90px"><i style="width:${a.on / a.impr * 100}%;background:${a.on / a.impr >= .5 ? 'var(--ok)' : 'var(--red)'}"></i></div>`;
+    return `<tr><td><b>${esc(I[k].label)}</b><div class="where">${esc(I[k].why)}</div></td>
+      <td class="mapc">${pageCell(I[k].page, false)}${P[I[k].page].interim ? `<div class="today">Until then: ${esc(short(P[P[I[k].page].interim].url))}</div>` : ''}</td>
+      <td class="num"><a href="#all" data-int="${k}">${a.terms.size}</a></td><td class="num">${a.impr.toLocaleString('en-US')}</td><td class="num">${a.conv.toFixed(1)}</td>
+      <td class="num">${share}${bar}</td>
+      <td>${Object.entries(a.acts).map(([x, n]) => `<span class="pill a-${x}" title="${ACT[x]}">${n} ${ACT[x]}</span>`).join(' ')}</td></tr>`;
+  }).join('');
+  document.querySelector('#intents').addEventListener('click', e => {
+    const a = e.target.closest('a[data-int]'); if (!a) return;
+    document.getElementById('int').value = a.dataset.int; renderAll();
+  });
+
   // ── All terms ─────────────────────────────────────────────────────────────
   const camps = [...new Set(rows.map(r => r.campaign))].sort();
   const sel = document.getElementById('camp');
@@ -252,7 +312,8 @@ td.lpc{min-width:210px;max-width:260px}
   const allTb = document.querySelector('#all tbody');
   function renderAll() {
     const q = document.getElementById('q').value.trim().toLowerCase(), c = sel.value, v = document.getElementById('ver').value;
-    const list = rows.filter(r => (!q || r.term.includes(q)) && (!c || r.campaign === c) && (!v || r.verdict === v))
+    const ac = document.getElementById('act').value, it = document.getElementById('int').value;
+    const list = rows.filter(r => (!q || r.term.includes(q)) && (!c || r.campaign === c) && (!v || r.verdict === v) && (!ac || r.action === ac) && (!it || r.intent === it))
       .sort((a, b) => {
         const x = a[sortK] ?? -1, y = b[sortK] ?? -1;
         return (typeof x === 'string' ? x.localeCompare(y) : x - y) * dir;
@@ -262,7 +323,10 @@ td.lpc{min-width:210px;max-width:260px}
       <td class="num">${r.impr}</td><td class="num">${r.clicks}</td><td class="num">${pct(r.ctr)}</td>
       <td><span class="pill v-${r.verdict.toLowerCase()}">${r.verdict}</span></td>
       <td class="num">${r.conv.toFixed(1)}</td><td class="num">${r.cpa ? usd(r.cpa) : '–'}</td>
-      <td class="num">${r.top != null ? pct(r.top) : '–'}</td></tr>`).join('');
+      <td class="where">${esc(r.intentLabel)}</td>
+      <td>${todayCell(r)}</td>
+      <td class="mapc">${pageCell(r.best, false)}${r.interim ? `<div class="today">Until then: ${esc(short(P[r.interim].url))}</div>` : ''}</td>
+      <td class="mapc"><span class="pill a-${r.action}">${ACT[r.action]}</span><div class="today">${esc(r.actionText)}</div>${r.note ? `<div class="flag">${esc(r.note)}</div>` : ''}</td></tr>`).join('');
     document.getElementById('count').textContent = `${list.length} of ${rows.length} terms`;
     document.querySelectorAll('#all th').forEach(th => th.dataset.dir = th.dataset.k === sortK ? (dir < 0 ? 'desc' : 'asc') : '');
   }
@@ -271,7 +335,9 @@ td.lpc{min-width:210px;max-width:260px}
     if (sortK === th.dataset.k) dir = -dir; else { sortK = th.dataset.k; dir = typeof rows[0][sortK] === 'string' ? 1 : -1; }
     renderAll();
   });
-  ['q', 'camp', 'ver'].forEach(id => document.getElementById(id).addEventListener('input', renderAll));
+  Object.entries(ACT).forEach(([k, v]) => document.getElementById('act').insertAdjacentHTML('beforeend', `<option value="${k}">${v} (${rows.filter(r => r.action === k).length})</option>`));
+  Object.entries(I).forEach(([k, v]) => document.getElementById('int').insertAdjacentHTML('beforeend', `<option value="${k}">${esc(v.label)}</option>`));
+  ['q', 'camp', 'ver', 'act', 'int'].forEach(id => document.getElementById(id).addEventListener('input', renderAll));
   renderAll();
 
   // ── Method ────────────────────────────────────────────────────────────────
@@ -282,7 +348,7 @@ td.lpc{min-width:210px;max-width:260px}
     `Recommended landing pages: a <b>Live</b> page is one of the start.credolegal.com pages the campaigns already use. Where no live page matches the search intent, a <b>New page</b> was built in the prototype landing-page template and added to the <a href="../review.html" target="_blank" rel="noopener">landing-page hub</a> under its debt-type section (marked "New · search-term gap"). New pages are drafts, not live, and need attorney review and a Webflow build before an ad can point to them.`,
     `Conversion flags use the account's own cost per conversion (${usd(acctCpa)}): "CPA > 2× account" and "no conversions" (at least 5 clicks, 0 conversions). Conversions are Google Ads conversions as configured (fractional values mean data-driven attribution). They are not verified leads.`,
     `Recommended ad copy follows brand/voice.md and RSA limits (headlines ≤ 30 characters, descriptions ≤ 90; {LOCATION(State):Your State} is Google's location insertion). It is draft copy for attorney review. Any landing page that carries an ad needs the NY attorney-advertising snippet.`,
-    `Data: content/campaigns/google-ads/search-terms/2026-09-30-terms.json → scripts/google-ads/build-search-terms.py → terms-data.js. Analysis: featured.js (hand-authored).`
+    `Data: content/campaigns/google-ads/search-terms/2026-09-30-terms.json → scripts/google-ads/build-search-terms.py (mapping rules in search_term_intents.py) → terms-data.js. "Lands on today" uses each ad's share of its ad group's impressions. Featured analysis: featured.js (hand-authored).`
   ].map(x => `<li>${x}</li>`).join('');
 })();
 </script>
