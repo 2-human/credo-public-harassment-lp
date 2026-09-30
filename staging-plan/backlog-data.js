@@ -7,8 +7,8 @@
  * Task status: 'todo' | 'doing' | 'done'. PBI `by`: 'claude' | 'likely' | 'decision' | 'manual'.
  * `blocked` names the decision (D#) or manual step (M#) a PBI waits on. */
 window.BACKLOG = {
-  updated: '29 Sep 2026',
-  state: '29 Sep (evening): board clean-up. PBI-12 done (all Part B copy fixes live, D20 wording applied). G29 (WEEK 1 tags, 22 pages) done under PBI-19; PBI-01c and PBI-11 closed (PBI-11 follow-up moved to PBI-16); PBI-08 built and reviewed, closes with the operator\'s CRM check (M3). Shared code (PBI-01d) done and closed: page code and the phone-swap script live once in Site settings (one phone table); every landing-page section is a component with per-page copy in props (8 LP components); new pages start from the draft Landing page template, with copy synced from the prototype by lp-sync.mjs. D20 and D21 decided; D22 opened (8 hero props where the prototype and Webflow wording differ). Waiting on the operator: M2 (delete the 21 old drafts, then the legacy form components go), M3 (CRM check), D1\u2013D3, D5\u2013D9, D22 (D10 optional); PBI-01b and PBI-21 deferred.',
+  updated: '30 Sep 2026',
+  state: '30 Sep: PBI-09 done. 29 Sep (evening): board clean-up. PBI-12 done (all Part B copy fixes live, D20 wording applied). G29 (WEEK 1 tags, 22 pages) done under PBI-19; PBI-01c and PBI-11 closed (PBI-11 follow-up moved to PBI-16); PBI-08 built and reviewed, closes with the operator\'s CRM check (M3). PBI-09 done 30 Sep: the count and security dropdowns keep their options in Webflow (the G17 rewrite script is gone). Shared code (PBI-01d) done and closed: page code and the phone-swap script live once in Site settings (one phone table); every landing-page section is a component with per-page copy in props (8 LP components); new pages start from the draft Landing page template, with copy synced from the prototype by lp-sync.mjs. D20 and D21 decided; D22 opened (8 hero props where the prototype and Webflow wording differ). Waiting on the operator: M2 (delete the 21 old drafts, then the legacy form components go), M3 (CRM check), D1\u2013D3, D5\u2013D9, D22 (D10 optional); PBI-01b and PBI-21 deferred.',
   site: { name: 'Credo: Microsite Staging', id: '6ab90fb0761d44332faf21c8', domain: 'staging.credolegal.com' },
 
   pbis: [
@@ -286,17 +286,22 @@ window.BACKLOG = {
         ['Operator tests the new fbclid field and the return-visit values on the CRM end (manual item M3); the item closes on that check, nothing left to build', 'todo']
       ] },
 
-    { id: 'PBI-09', title: 'Dropdown options stored in Webflow', refs: ['F2'], by: 'likely',
+    { id: 'PBI-09', title: 'Dropdown options stored in Webflow', refs: ['F2'], by: 'likely', note: 'Done 30 Sep. Webflow\'s API cannot set the options of a native Form Select, so "How many debts?" and "Secured or unsecured?" are DOM <select> elements (same id, name, required, classes) with stored <option> children, in LP \u00b7 Lead form and on the home page form. Edit the options in the Designer Navigator (option text + value attribute). The debt-stage dropdown stays native (its options were already stored; its values feed the CRM).',
+      review: { items: [
+        { kind: 'Code', by: 'GPT-5.5', verdict: 'approve with fixes', file: 'review/PBI-09.review-gpt.md', settled: true, note: 'Round 2. Every option and the placeholder validation tested 52/52; real submission waits on D1.' },
+        { kind: 'Code', by: 'Gemini 3.1 Pro', verdict: 'approve', file: 'review/PBI-09.review-gemini.md', settled: true, note: 'Round 1 "do not approve" (duplicate ids from the hidden native selects): they were never served, and are now removed.' },
+        { kind: 'UX', by: 'GPT + Gemini', na: true, note: 'Nothing visible changed: same options, order and styles as the visitor already saw (computed styles identical, 52 pages \u00d7 2 widths).' }
+      ], links: [['Packet', 'review/PBI-09.md'], ['Resolution', 'review/PBI-09.triage.md']] },
       why: 'The prototype options appear only because a script rebuilds the dropdowns on load.',
       done: 'Count, security and stage options stored in Webflow; the G17 rewrite script removed; form walk passes.',
       tasks: [
-        ['Confirm on one page that select options can be set through the API', 'todo'],
-        ['Set the three dropdowns on all pages', 'todo'],
-        ['Remove the G17 rewrite block', 'todo'],
-        ['Publish to staging only', 'todo'],
-        ['Verify the options on every page', 'todo']
+        ['Confirm on one page that select options can be set through the API: not for native Form Selects (Webflow docs); a DOM <select> with <option> children works (30 Sep)', 'done'],
+        ['Set the three dropdowns on all pages: count and security as stored-option DOM selects in LP \u00b7 Lead form (51 pages) and on the home page form; stage already stored', 'done'],
+        ['Remove the G17 rewrite block: cut from the site head code (write-back read back byte-identical, 37,003 characters)', 'done'],
+        ['Publish to staging only', 'done'],
+        ['Verify the options on every page: served HTML 56/56 as intended; live vs pre-change 104/104 identical (form payload 412 b, trackers, dataLayer, cookies, phones, styles); every option and the placeholder validation identical 52/52', 'done']
 ,
-        ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots when anything visible changes; findings settled', 'todo']
+        ['Independent review: code by GPT + Gemini (2 rounds); no UX (nothing visible); findings settled', 'done']
       ] },
 
     { id: 'PBI-10', title: 'Slider label and unique element ids', refs: ['F3', 'F4'], by: 'claude',
