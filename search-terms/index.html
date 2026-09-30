@@ -9,14 +9,13 @@
 :root{--bg:#f6f5f1;--card:#fff;--ink:#111418;--mute:#5b6470;--line:#e2e0da;--red:#c92028;--ok:#1f7a45;--amber:#b45309;--blue:#2f5f9e;--soft:#f4f3ef}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-main{max-width:1500px;margin:0 auto;padding:28px 24px 80px}
+main{max-width:1760px;margin:0 auto;padding:28px 24px 80px}
 h1{font:700 26px/1.2 Georgia,"Times New Roman",serif;margin:0 0 6px}
-h2{font:700 19px/1.3 Georgia,serif;margin:34px 0 10px}
-.lede{color:var(--mute);max-width:860px;margin:0 0 18px}
+h2{font:700 19px/1.3 Georgia,serif;margin:30px 0 10px}
+.lede{color:var(--mute);max-width:900px;margin:0 0 18px}
 a{color:var(--blue)}
-code{font:12.5px ui-monospace,Menlo,monospace;background:#efede7;padding:1px 4px;border-radius:4px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
-.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin:0 0 8px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:0 0 8px}
 .kpis small{display:block;color:var(--mute);font-size:11.5px;text-transform:uppercase;letter-spacing:.04em}
 .kpis b{font-size:20px}
 .kpis span{display:block;font-size:12.5px;color:var(--mute)}
@@ -24,54 +23,64 @@ code{font:12.5px ui-monospace,Menlo,monospace;background:#efede7;padding:1px 4px
 .findings .card{border-left:4px solid var(--amber)}
 .findings b{display:block;margin-bottom:3px}
 .findings p{margin:0;font-size:13px;color:#2c323a}
-.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 12px}
+details.how{margin:0 0 14px;font-size:13px}
+details.how summary{cursor:pointer;font-weight:600;color:var(--blue)}
+details.how ol{margin:8px 0 0;padding-left:20px;color:#2c323a;max-width:1000px}
+details.how li{margin:0 0 5px}
+.tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 10px}
+.tools input,.tools select{font:13px system-ui,sans-serif;padding:6px 9px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink)}
 .chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:5px 12px;font:600 12.5px system-ui,sans-serif;cursor:pointer;color:var(--ink)}
 .chip[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
-.legend{font-size:12.5px;color:var(--mute);display:flex;flex-wrap:wrap;gap:14px;margin:0 0 12px}
+#count{color:var(--mute);font-size:12.5px}
+.legend{font-size:12px;color:var(--mute);display:flex;flex-wrap:wrap;gap:14px;margin:0 0 10px}
 .tw{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--card)}
 table{border-collapse:collapse;width:100%;font-size:13px}
 th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
-thead th{position:sticky;top:0;background:#12141d;color:#fff;font:700 11px/1.3 system-ui,sans-serif;text-transform:uppercase;letter-spacing:.05em;z-index:1}
-tr.cl td{background:var(--soft);font:700 13px Georgia,serif;padding:8px 10px}
+thead th{position:sticky;top:0;background:#12141d;color:#fff;font:700 11px/1.3 system-ui,sans-serif;text-transform:uppercase;letter-spacing:.05em;z-index:2;cursor:pointer;user-select:none;white-space:nowrap}
+thead th[data-dir=asc]::after{content:" ▲"}thead th[data-dir=desc]::after{content:" ▼"}
+thead th.grp-last{border-right:2px solid #3a3f4a}
+tr.gh td{background:var(--soft);padding:10px}
+tr.gh .gl{font:700 14px Georgia,serif}
+tr.gh .gw{font-size:12px;color:var(--mute);max-width:760px}
+tr.gh .gs{display:flex;flex-wrap:wrap;gap:14px;font-size:12px;color:var(--mute);margin-top:4px;align-items:center}
+tr.gh .gs b{color:var(--ink)}
 .term{font-weight:700;font-size:13.5px}
 .where{font-size:11.5px;color:var(--mute);margin-top:2px}
 .num{white-space:nowrap;font-variant-numeric:tabular-nums}
 .pill{display:inline-block;font:700 10.5px/1.7 system-ui,sans-serif;text-transform:uppercase;letter-spacing:.04em;padding:0 7px;border-radius:5px;color:#fff;white-space:nowrap}
 .v-strong{background:var(--ok)}.v-above{background:#4d7c5f}.v-below{background:var(--red)}.v-brand{background:#6b7280}
-.flag{display:inline-block;font-size:11px;color:var(--amber);border:1px solid #f0d2a8;background:#fff8ee;border-radius:5px;padding:0 5px;margin-top:3px}
-.ctrbar{position:relative;height:6px;background:#eceae4;border-radius:3px;margin-top:5px;width:110px}
-.ctrbar i{position:absolute;left:0;top:0;bottom:0;border-radius:3px}
-.ctrbar em{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--ink)}
-.ad{font-size:12px;margin:0 0 7px;padding:0 0 7px;border-bottom:1px dashed var(--line)}
-.ad:last-child{border:0;margin:0;padding:0}
-.ad .hl{color:#1a0dab;font-weight:600}
-.ad .meta{color:var(--mute);font-size:11px}
-.ad .warn{color:var(--red);font-size:11px}
-.rec .hl{color:#1a0dab;font-weight:600;font-size:12.5px}
-.rec .ds{font-size:12px;color:#2c323a;margin-top:3px}
-.lpnote{font-size:12px;color:#2c323a;margin-top:3px}
-.new{background:#b45309}
+.new{background:#b45309}.live{background:var(--ok)}.none{background:#6b7280}.star{background:#2f5f9e}
 .a-keep{background:var(--ok)}.a-keep_test{background:#4d7c5f}.a-route{background:#2f5f9e}.a-move{background:#b45309}.a-new_page{background:#b45309}.a-neg_here{background:#6b7280}.a-negative{background:#111418}.a-bid_down{background:#8a6d3b}
-.today{font-size:11.5px;color:var(--mute)}.today b{color:var(--ink)}
-td.mapc{min-width:220px;max-width:320px;font-size:12px}.live{background:var(--ok)}.none{background:#6b7280}
-td.an{min-width:260px;max-width:340px;font-size:12.5px}
-td.adc{min-width:230px;max-width:280px}
-td.recc{min-width:230px;max-width:280px}
-td.lpc{min-width:210px;max-width:260px}
-.all-tools{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 10px}
-.all-tools input,.all-tools select{font:13px system-ui,sans-serif;padding:6px 9px;border:1px solid var(--line);border-radius:8px;background:#fff}
-#all th{cursor:pointer;user-select:none}
-#all th[data-dir=asc]::after{content:" ▲"}#all th[data-dir=desc]::after{content:" ▼"}
-.method{font-size:12.5px;color:#2c323a;max-width:900px}
+.flag{display:inline-block;font-size:11px;color:var(--amber);border:1px solid #f0d2a8;background:#fff8ee;border-radius:5px;padding:0 5px;margin:3px 3px 0 0}
+.bar{position:relative;height:6px;background:#eceae4;border-radius:3px;margin-top:5px;width:100px}
+.bar i{position:absolute;left:0;top:0;bottom:0;border-radius:3px}
+.bar em{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--ink)}
+.ad{font-size:12px;margin:0 0 6px;padding:0 0 6px;border-bottom:1px dashed var(--line)}
+.ad:last-child{border:0;margin:0;padding:0}
+.ad .hl{color:#1a0dab;font-weight:600;font-size:11.5px}
+.small{font-size:11.5px;color:var(--mute)}
+.warn{color:var(--red);font-size:11px}
+.txt{font-size:12px;color:#2c323a;margin-top:4px}
+td.c-term{min-width:220px;max-width:300px}
+td.c-trig{min-width:230px;max-width:280px}
+td.c-best,td.c-new{min-width:190px;max-width:240px}
+td.c-act{min-width:260px;max-width:340px}
+details.ana{margin-top:6px;font-size:12px}
+details.ana summary{cursor:pointer;color:var(--blue);font-weight:600}
+details.ana .box{margin-top:6px;padding:8px 10px;background:var(--soft);border-radius:8px}
+details.ana .box b{display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--mute);margin:6px 0 2px}
+details.ana .box b:first-child{margin-top:0}
+.rec .hl{color:#1a0dab;font-weight:600}
+.method{font-size:12.5px;color:#2c323a;max-width:1000px}
 .method li{margin:0 0 5px}
 @media (max-width:900px){
   main{padding:20px 16px 60px}
-  #feat thead{display:none}
-  #feat,#feat tbody,#feat tr,#feat td{display:block;width:100%;max-width:none}
-  #feat tr{border-bottom:2px solid var(--line);padding:6px 0}
-  #feat td{border:0;padding:5px 12px}
-  #feat td[data-l]::before{content:attr(data-l);display:block;font:700 10.5px system-ui,sans-serif;text-transform:uppercase;letter-spacing:.05em;color:var(--mute);margin-bottom:2px}
-  .ctrbar{width:100%}
+  #tbl thead{display:none}
+  #tbl,#tbl tbody,#tbl tr,#tbl td{display:block;width:100%;max-width:none}
+  #tbl tr{border-bottom:2px solid var(--line);padding:6px 0}
+  #tbl td{border:0;padding:5px 12px}
+  #tbl td[data-l]::before{content:attr(data-l);display:block;font:700 10.5px system-ui,sans-serif;text-transform:uppercase;letter-spacing:.05em;color:var(--mute);margin-bottom:2px}
+  .bar{width:100%}
 }
 </style>
 </head>
@@ -79,62 +88,48 @@ td.lpc{min-width:210px;max-width:260px}
 <main>
   <h1>Search-term review: Google Ads</h1>
   <p class="lede" id="lede"></p>
-
   <div class="kpis" id="kpis"></div>
 
   <h2>Account-level findings</h2>
   <div class="findings" id="findings"></div>
 
-  <h2>Search terms: what triggers, how well it matches, what to change</h2>
-  <div class="bar" id="filters">
-    <button class="chip" data-f="all" aria-pressed="true">All featured</button>
+  <h2 id="terms">Every search term: what it triggers, where it should land, what to do</h2>
+  <details class="how"><summary>How the best page and the action are decided</summary><ol id="rules"></ol></details>
+
+  <div class="tools" id="chips">
+    <button class="chip" data-f="all" aria-pressed="true">All</button>
     <button class="chip" data-f="good" aria-pressed="false">Working well</button>
     <button class="chip" data-f="bad" aria-pressed="false">Not working</button>
     <button class="chip" data-f="leak" aria-pressed="false">High CTR, weak conversion</button>
+    <button class="chip" data-f="wrong" aria-pressed="false">Not on the best page</button>
+    <button class="chip" data-f="star" aria-pressed="false">Analysed rows</button>
+  </div>
+  <div class="tools">
+    <input id="q" type="search" placeholder="Filter terms…" aria-label="Filter terms">
+    <select id="debt" aria-label="Debt type"><option value="">All debt types</option></select>
+    <select id="camp" aria-label="Campaign"><option value="">All campaigns</option></select>
+    <select id="int" aria-label="Intent"><option value="">All intents</option></select>
+    <select id="ver" aria-label="Verdict"><option value="">All verdicts</option><option>Strong</option><option>Above</option><option>Below</option><option>Brand</option></select>
+    <select id="act" aria-label="Action"><option value="">All actions</option></select>
+    <select id="grp" aria-label="Group by"><option value="intent">Group by intent</option><option value="debtType">Group by debt type</option><option value="">No grouping</option></select>
+    <span id="count"></span>
   </div>
   <div class="legend">
     <span><span class="pill v-strong">Strong</span> CTR ≥ 2× benchmark</span>
-    <span><span class="pill v-above">Above</span> CTR ≥ benchmark</span>
-    <span><span class="pill v-below">Below</span> CTR &lt; benchmark</span>
-    <span><span class="pill v-brand">Brand</span> not comparable to benchmark</span>
-    <span>Bar: CTR on a 0–30% scale; black tick = 5.87% benchmark</span>
+    <span><span class="pill v-above">Above</span> ≥ benchmark</span>
+    <span><span class="pill v-below">Below</span> &lt; benchmark</span>
+    <span>Bar: CTR on a 0–30% scale, black tick = benchmark</span>
+    <span><span class="pill star">Analysed</span> analysis and recommended ad under the term</span>
   </div>
   <div class="tw">
-    <table id="feat">
+    <table id="tbl">
       <thead><tr>
-        <th>Search term</th><th>Impr.</th><th>Clicks</th><th>CTR vs benchmark</th><th>Conv. / CPA</th><th>Top of page</th>
-        <th>Ad(s) it triggered → landing page</th><th>Intent match</th><th>Recommended ad</th><th>Recommended landing page</th>
-      </tr></thead>
-      <tbody></tbody>
-    </table>
-  </div>
-
-  <h2 id="mapping">Best-page mapping: every search term</h2>
-  <p class="lede" id="map-lede"></p>
-  <ol class="method" id="map-rules"></ol>
-  <div class="tw" style="margin:12px 0 8px">
-    <table id="intents">
-      <thead><tr><th>Search intent</th><th>Best page</th><th>Terms</th><th>Impr.</th><th>Conv.</th><th>On the best page today</th><th>Actions</th></tr></thead>
-      <tbody></tbody>
-    </table>
-  </div>
-
-  <h2>All analysed search terms</h2>
-  <div class="all-tools">
-    <input id="q" type="search" placeholder="Filter terms…" aria-label="Filter terms">
-    <select id="camp" aria-label="Campaign"><option value="">All campaigns</option></select>
-    <select id="ver" aria-label="Verdict"><option value="">All verdicts</option><option>Strong</option><option>Above</option><option>Below</option></select>
-    <select id="debt" aria-label="Debt type"><option value="">All debt types</option></select>
-    <select id="act" aria-label="Action"><option value="">All actions</option></select>
-    <select id="int" aria-label="Intent"><option value="">All intents</option></select>
-    <span id="count" style="align-self:center;color:var(--mute);font-size:12.5px"></span>
-  </div>
-  <div class="tw">
-    <table id="all">
-      <thead><tr>
-        <th data-k="term">Search term</th><th data-k="campaign">Campaign › ad group</th><th data-k="debtType">Debt type</th><th data-k="impr">Impr.</th><th data-k="clicks">Clicks</th>
-        <th data-k="ctr">CTR</th><th data-k="verdict">Verdict</th><th data-k="conv">Conv.</th><th data-k="cpa">CPA</th>
-        <th data-k="intentLabel">Intent</th><th data-k="bestShare">Lands on today</th><th data-k="bestLabel">Best page</th><th data-k="action">Action</th>
+        <th data-k="term">Search term</th>
+        <th data-k="impr">Impr.</th><th data-k="clicks">Clicks</th><th data-k="ctr">CTR vs benchmark</th><th data-k="conv">Conv. / CPA</th><th data-k="top" class="grp-last">Top of page</th>
+        <th data-k="dom">Triggered today → landing page</th>
+        <th data-k="liveShare">Best current page</th>
+        <th data-k="newp">Recommended new page</th>
+        <th data-k="action">Recommended action</th>
       </tr></thead>
       <tbody></tbody>
     </table>
@@ -151,206 +146,197 @@ td.lpc{min-width:210px;max-width:260px}
   // Account totals: customer resource, LAST_30_DAYS, pulled 2026-09-30 (read-only GAQL).
   const ACCT = { impr: 145158, clicks: 10828, cost: 89726.61, conv: 1259.73 };
   // WordStream/LocaliQ 2026 search benchmarks, Attorneys & Legal Services.
-  const BM = { ctr: 0.0587, cvr: 0.0555, cpl: 131.63, cpc: 9.87, src: 'https://localiq.com/blog/search-advertising-benchmarks/' };
+  const BM = { ctr: 0.0587, cvr: 0.0555, cpl: 131.63, src: 'https://localiq.com/blog/search-advertising-benchmarks/' };
   const acctCpa = ACCT.cost / ACCT.conv;
 
-  const D = window.TERMS, rows = D.rows;
-  rows.forEach(r => {
-    r.ctr = r.clicks / r.impr;
-    r.cpa = r.conv > 0 ? r.cost / r.conv : null;
-    r.verdict = r.ctr >= 2 * BM.ctr ? 'Strong' : r.ctr >= BM.ctr ? 'Above' : 'Below';
-  });
-  const idx = new Map(rows.map(r => [r.campaign + '|' + r.adgroup + '|' + r.term, r]));
-  const P = D.pages, I = D.intents;
+  const D = window.TERMS, rows = D.rows, P = D.pages, I = D.intents;
   const ACT = { keep: 'Keep', keep_test: 'Keep + A/B test', route: 'Route', move: 'Move', new_page: 'New page', neg_here: 'Negative here', negative: 'Add negative', bid_down: 'Bid down' };
-  rows.forEach(r => { r.intentLabel = I[r.intent].label; r.bestLabel = P[r.best].label; });
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   const pct = x => (x * 100).toFixed(1) + '%';
   const bmp = x => (x * 100).toFixed(2) + '%';
-  const usd2 = x => '$' + x.toFixed(2);
   const usd = x => '$' + Math.round(x).toLocaleString('en-US');
+  const usd2 = x => '$' + x.toFixed(2);
   const short = u => u ? u.replace(/^https:\/\//, '').replace(/\/$/, '') : '';
-  const link = u => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(short(u))}</a>`;
+  const path = u => { const s = short(u); const i = s.indexOf('/'); return i < 0 ? s : s.slice(i); };
+  const link = (u, t) => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(t || short(u))}</a>`;
 
-  const leak = r => r.ctr >= BM.ctr && r.clicks >= 10 && (r.conv === 0 || r.cpa > 2 * acctCpa);
-  const flags = r => {
-    const f = [];
-    if (r.impr < 50) f.push('low volume: directional');
-    if (r.clicks >= 5 && r.conv === 0) f.push('no conversions');
-    else if (r.cpa && r.cpa > 2 * acctCpa) f.push('CPA > 2× account');
-    return f;
-  };
+  const feat = new Map(window.FEATURED.map(f => [f.key, f]));
+  rows.forEach(r => {
+    r.key = r.campaign + '|' + r.adgroup + '|' + r.term;
+    r.f = feat.get(r.key) || null;
+    r.brand = r.best === 'BRAND';
+    r.ctr = r.clicks / r.impr;
+    r.cpa = r.conv > 0 ? r.cost / r.conv : null;
+    r.verdict = r.brand ? 'Brand' : r.ctr >= 2 * BM.ctr ? 'Strong' : r.ctr >= BM.ctr ? 'Above' : 'Below';
+    r.dom = r.current[0].page;
+    r.liveBest = P[r.best].kind === 'new' ? (r.interim || P[r.best].interim) : (P[r.best].kind === 'none' ? null : r.best);
+    r.liveShare = r.liveBest ? (r.current.find(c => c.page === r.liveBest) || { share: 0 }).share : -1;
+    r.newp = P[r.best].kind === 'new' ? P[r.best].label : '';
+    r.intentLabel = I[r.intent].label;
+    r.leak = !r.brand && r.ctr >= BM.ctr && r.clicks >= 10 && (r.conv === 0 || r.cpa > 2 * acctCpa);
+    r.wrong = !['NEG', 'BRAND'].includes(r.best) && r.action !== 'neg_here' && r.liveShare < 50;
+  });
+  const unmatched = window.FEATURED.filter(f => !rows.some(r => r.key === f.key));
+  if (unmatched.length) console.warn('featured rows not matched', unmatched.map(f => f.key));
 
-  // ── Header + KPIs ─────────────────────────────────────────────────────────
+  // ── header, KPIs, findings ───────────────────────────────────────────────
+  const nb = rows.filter(r => !['NEG', 'BRAND'].includes(r.best));
+  const onBest = nb.reduce((a, r) => a + r.impr * r.bestShare / 100, 0) / nb.reduce((a, r) => a + r.impr, 0);
   const covered = rows.reduce((a, r) => a + r.impr, 0);
+  const uniq = new Set(rows.map(r => r.term)).size, dupTerms = new Set(rows.filter(r => r.dup).map(r => r.term)).size;
   document.getElementById('lede').innerHTML =
     `${esc(D.account)} · ${esc(D.period)}. CTR is compared with the 2026 WordStream/LocaliQ benchmark for <b>Attorneys &amp; Legal Services</b> ` +
     `(<a href="${BM.src}" target="_blank" rel="noopener">source</a>): CTR ${bmp(BM.ctr)}, conversion rate ${bmp(BM.cvr)}, cost per lead ${usd2(BM.cpl)}. ` +
-    `Featured rows are the terms with enough volume to judge and a clear lesson. The full list is below.`;
-  const above = rows.filter(r => r.verdict !== 'Below').length;
-  const kp = [
+    `One table, ${rows.length} rows (${uniq} distinct search terms): what each term triggers today, the best live page, the recommended new page where no live page fits, and the action.`;
+  const nonBrand = rows.filter(r => !r.brand);
+  const above = nonBrand.filter(r => r.verdict !== 'Below').length;
+  document.getElementById('kpis').innerHTML = [
     ['Account CTR', bmp(ACCT.clicks / ACCT.impr), `benchmark ${bmp(BM.ctr)}`],
     ['Cost per conversion', usd2(acctCpa), `benchmark CPL ${usd2(BM.cpl)}`],
     ['Conversion rate', bmp(ACCT.conv / ACCT.clicks), `benchmark ${bmp(BM.cvr)}`],
-    ['Terms analysed', rows.length.toString(), `${pct(covered / ACCT.impr)} of impressions`],
-    ['At or above CTR benchmark', `${above} of ${rows.length}`, `${rows.length - above} below`],
-    ['On the best page today', pct(rows.filter(r => !['NEG', 'BRAND'].includes(r.best)).reduce((a, r) => a + r.impr * r.bestShare / 100, 0) / rows.filter(r => !['NEG', 'BRAND'].includes(r.best)).reduce((a, r) => a + r.impr, 0)), '<a href="#mapping">non-brand impressions</a>']
-  ];
-  document.getElementById('kpis').innerHTML = kp.map(([a, b, c]) => `<div class="card"><small>${a}</small><b>${b}</b><span>${c}</span></div>`).join('');
-
+    ['Terms analysed', String(rows.length), `${pct(covered / ACCT.impr)} of impressions`],
+    ['At or above CTR benchmark', `${above} of ${nonBrand.length}`, 'non-brand rows'],
+    ['On the best page today', pct(onBest), `of non-brand impressions · ${dupTerms} terms in several places`]
+  ].map(([a, b, c]) => `<div class="card"><small>${a}</small><b>${b}</b><span>${c}</span></div>`).join('');
   document.getElementById('findings').innerHTML = window.FINDINGS.map(f => `<div class="card"><b>${esc(f.t)}</b><p>${esc(f.b)}</p></div>`).join('');
-
-  // ── Featured table ────────────────────────────────────────────────────────
-  const ctrCell = (r, brand) => {
-    const v = brand ? 'Brand' : r.verdict, cls = brand ? 'v-brand' : 'v-' + r.verdict.toLowerCase();
-    const w = Math.min(r.ctr / 0.30, 1) * 100, col = brand ? '#6b7280' : r.verdict === 'Below' ? 'var(--red)' : 'var(--ok)';
-    const x = brand ? '' : ` <span style="color:var(--mute);font-size:11.5px">${(r.ctr / BM.ctr).toFixed(1)}×</span>`;
-    return `<b class="num">${pct(r.ctr)}</b>${x}<br><span class="pill ${cls}">${v}</span>` +
-      `<div class="ctrbar" title="0–30% scale"><i style="width:${w}%;background:${col}"></i><em style="left:${BM.ctr / 0.30 * 100}%"></em></div>`;
-  };
-  const adsCell = key => (window.ADS[key] || []).map(a =>
-    `<div class="ad"><div class="meta">Ad ${a.id} · ${a.share}% of ad group impressions</div>` +
-    (a.h ? `<div class="hl">${a.h.map(esc).join(' | ')}</div>` : '') +
-    (a.note ? `<div class="warn">${esc(a.note)}</div>` : '') +
-    `<div>→ ${link(a.lp)}</div></div>`).join('') || '<span class="meta">No ad data</span>';
-  const recAd = a => a ? `<div class="rec"><div class="hl">${a.h.map(esc).join(' | ')}</div><div class="ds">${esc(a.d)}</div></div>` : '<span style="color:var(--mute)">Keep the current ad.</span>';
-  const pageCell = (id, withLinks) => {
-    const pg = P[id];
-    if (pg.kind === 'new') {
-      const n = window.NEW_PAGES[pg.newKey];
-      return `<span class="pill new">New page</span> <b>${esc(n.name)}</b>` +
-        `<div class="where">Proposed ${esc(n.slug)} · LP hub › ${esc(n.section)}</div>` +
-        (withLinks ? `<div><a href="${esc(n.hub)}" target="_blank" rel="noopener">Open in LP hub</a> · <a href="${esc(n.file)}" target="_blank" rel="noopener">Preview page</a></div>` : '');
-    }
-    if (pg.kind === 'none') return '<span class="pill none">No landing page</span>';
-    return `<span class="pill live">${pg.kind === 'brand' ? 'Brand' : 'Live'}</span> ${link(pg.url)}<div class="where">${esc(pg.label)}</div>`;
-  };
-  const todayCell = r => {
-    const on = r.bestShare;
-    return `<div class="today">${r.current.map(c => `${esc(short(P[c.page].url) || P[c.page].label)} <b>${c.share}%</b>`).join('<br>')}</div>` +
-      (P[r.best].kind === 'none' ? '' : `<div class="today">${on}% on the best page</div>`);
-  };
-  const recLp = (r, f) => pageCell(r.best, true) +
-    (r.interim ? `<div class="lpnote"><b>Until then:</b> ${link(P[r.interim].url)}</div>` : '') +
-    `<div class="lpnote"><span class="pill a-${r.action}">${ACT[r.action]}</span> ${esc(r.actionText)}</div>` +
-    (f.lp.note ? `<div class="lpnote">${esc(f.lp.note)}</div>` : '');
-
-  const tb = document.querySelector('#feat tbody');
-  let cluster = '';
-  const html = [];
-  window.FEATURED.forEach(f => {
-    const r = idx.get(f.key);
-    if (!r) return;
-    const kind = f.brand ? 'good' : r.ctr >= BM.ctr ? 'good' : 'bad';
-    const tags = [kind, leak(r) ? 'leak' : ''].join(' ');
-    if (f.cluster !== cluster) { cluster = f.cluster; html.push(`<tr class="cl" data-c="${esc(cluster)}"><td colspan="10">${esc(cluster)}</td></tr>`); }
-    const fl = flags(r).map(x => `<div class="flag">${esc(x)}</div>`).join('');
-    html.push(`<tr data-k="${tags}" data-c="${esc(cluster)}">
-      <td data-l="Search term"><div class="term">${esc(r.term)}</div><div class="where">${esc(r.campaign)} › ${esc(r.adgroup)}</div>${fl}</td>
-      <td class="num" data-l="Impressions">${r.impr.toLocaleString('en-US')}</td>
-      <td class="num" data-l="Clicks">${r.clicks}</td>
-      <td data-l="CTR vs benchmark">${ctrCell(r, f.brand)}</td>
-      <td class="num" data-l="Conversions / CPA">${r.conv.toFixed(1)}<br><span style="color:var(--mute)">${r.cpa ? usd(r.cpa) : '–'}</span></td>
-      <td class="num" data-l="Top of page">${r.top != null ? pct(r.top) : '–'}</td>
-      <td class="adc" data-l="Ad(s) it triggered → landing page">${adsCell(r.campaign + '|' + r.adgroup)}</td>
-      <td class="an" data-l="Intent match">${esc(f.analysis)}</td>
-      <td class="recc" data-l="Recommended ad">${recAd(f.ad)}</td>
-      <td class="lpc" data-l="Recommended landing page">${recLp(r, f)}</td></tr>`);
-  });
-  tb.innerHTML = html.join('');
-
-  document.getElementById('filters').addEventListener('click', e => {
-    const b = e.target.closest('.chip'); if (!b) return;
-    document.querySelectorAll('#filters .chip').forEach(c => c.setAttribute('aria-pressed', c === b));
-    const f = b.dataset.f;
-    const vis = new Set();
-    tb.querySelectorAll('tr[data-k]').forEach(tr => {
-      const on = f === 'all' || tr.dataset.k.split(' ').includes(f);
-      tr.hidden = !on; if (on) vis.add(tr.dataset.c);
-    });
-    tb.querySelectorAll('tr.cl').forEach(tr => { tr.hidden = !vis.has(tr.dataset.c); });
-  });
-
-  // ── Mapping summary ───────────────────────────────────────────────────────
-  const nb = rows.filter(r => !['NEG', 'BRAND'].includes(r.best));
-  const nbImpr = nb.reduce((a, r) => a + r.impr, 0), nbOn = nb.reduce((a, r) => a + r.impr * r.bestShare / 100, 0);
-  const uniq = new Set(rows.map(r => r.term)).size, dupTerms = new Set(rows.filter(r => r.dup).map(r => r.term)).size;
-  document.getElementById('map-lede').innerHTML =
-    `All ${rows.length} rows (${uniq} distinct search terms) are mapped to a search intent and one best landing page. ` +
-    `Today only <b>${pct(nbOn / nbImpr)}</b> of non-brand impressions land on the page that best matches the search. ` +
-    `${dupTerms} terms run in more than one ad group or campaign; each ends up with exactly one placement.`;
-  document.getElementById('map-rules').innerHTML = [
-    'Best page = the live start.credolegal.com page, already used by the campaigns, that answers the search. Where none does, one of the four new pages built in the prototype LP template, with a live page to use until it is built ("Until then").',
-    'One term, one page, one placement. When a term runs in several ad groups, it stays in the ad group whose ad lands on the best page; every other copy becomes a negative there.',
-    `Do not move a proven converter: a copy with at least 3 conversions below the industry cost per lead (${usd2(BM.cpl)}) keeps its place, and the best page is A/B tested against it.`,
-    'Stage words decide the garnishment page: "after it starts", "on my paycheck", "fight", "lowered" go to the already-garnished page; "avoid", "can they" to prevention; exemptions and bank funds to exemptions; "how to stop" with no stage to the new How to Stop page (already-garnished page until it is built, because that is where these searches convert).',
+  document.getElementById('rules').innerHTML = [
+    '<b>Triggered today</b>: the ads in the term\'s ad group, each with its share of the ad group\'s impressions and its landing page. The Google Ads API reports search terms per ad group, not per ad.',
+    '<b>Best current page</b>: the live start.credolegal.com page, already used by the campaigns, that best answers the search, and how much of this term\'s traffic lands there today. Where a new page is recommended, this is the live page to use until it is built.',
+    '<b>Recommended new page</b>: one of the four pages built in the prototype LP template for searches no live page answers. They are in the landing-page hub under their debt type.',
+    '<b>One term, one placement</b>: when a term runs in several ad groups, it stays in the ad group whose ad lands on the best page, and every other copy becomes a negative ("Negative here").',
+    `<b>Do not move a proven converter</b>: a copy with at least 3 conversions below the industry cost per lead (${usd2(BM.cpl)}) keeps its place, and the best page is A/B tested against it.`,
+    '<b>Garnishment stage words decide the page</b>: "after it starts", "on my paycheck", "fight", "lowered" → already-garnished page; "avoid", "can they" → prevention; exemptions or bank funds → exemptions; "how to stop" with no stage → the new How to Stop page (already-garnished page until then, because that is where these searches convert).',
     'Competitors, lenders and products Credo does not sell become negatives. Definition searches are bid down.'
-  ].map(x => `<li>${esc(x)}</li>`).join('');
-  const agg = {};
-  rows.forEach(r => {
-    const a = agg[r.intent] = agg[r.intent] || { terms: new Set(), impr: 0, conv: 0, on: 0, acts: {} };
-    a.terms.add(r.term); a.impr += r.impr; a.conv += r.conv; a.on += r.impr * r.bestShare / 100; a.acts[r.action] = (a.acts[r.action] || 0) + 1;
-  });
-  document.querySelector('#intents tbody').innerHTML = Object.entries(agg).sort((a, b) => b[1].impr - a[1].impr).map(([k, a]) => {
-    const share = P[I[k].page].kind === 'none' ? '–' : pct(a.on / a.impr);
-    const bar = P[I[k].page].kind === 'none' ? '' : `<div class="ctrbar" style="width:90px"><i style="width:${a.on / a.impr * 100}%;background:${a.on / a.impr >= .5 ? 'var(--ok)' : 'var(--red)'}"></i></div>`;
-    return `<tr><td><b>${esc(I[k].label)}</b><div class="where">${esc(I[k].why)}</div></td>
-      <td class="mapc">${pageCell(I[k].page, false)}${P[I[k].page].interim ? `<div class="today">Until then: ${esc(short(P[P[I[k].page].interim].url))}</div>` : ''}</td>
-      <td class="num"><a href="#all" data-int="${k}">${a.terms.size}</a></td><td class="num">${a.impr.toLocaleString('en-US')}</td><td class="num">${a.conv.toFixed(1)}</td>
-      <td class="num">${share}${bar}</td>
-      <td>${Object.entries(a.acts).map(([x, n]) => `<span class="pill a-${x}" title="${ACT[x]}">${n} ${ACT[x]}</span>`).join(' ')}</td></tr>`;
-  }).join('');
-  document.querySelector('#intents').addEventListener('click', e => {
-    const a = e.target.closest('a[data-int]'); if (!a) return;
-    document.getElementById('int').value = a.dataset.int; renderAll();
-  });
+  ].map(x => `<li>${x}</li>`).join('');
 
-  // ── All terms ─────────────────────────────────────────────────────────────
-  const camps = [...new Set(rows.map(r => r.campaign))].sort();
-  const sel = document.getElementById('camp');
-  camps.forEach(c => sel.insertAdjacentHTML('beforeend', `<option>${esc(c)}</option>`));
-  let sortK = 'impr', dir = -1;
-  const allTb = document.querySelector('#all tbody');
-  function renderAll() {
-    const q = document.getElementById('q').value.trim().toLowerCase(), c = sel.value, v = document.getElementById('ver').value;
-    const ac = document.getElementById('act').value, it = document.getElementById('int').value, dt = document.getElementById('debt').value;
-    const list = rows.filter(r => (!q || r.term.includes(q)) && (!c || r.campaign === c) && (!v || r.verdict === v) && (!ac || r.action === ac) && (!it || r.intent === it) && (!dt || r.debtType === dt))
-      .sort((a, b) => {
-        const x = a[sortK] ?? -1, y = b[sortK] ?? -1;
-        return (typeof x === 'string' ? x.localeCompare(y) : x - y) * dir;
-      });
-    allTb.innerHTML = list.map(r => `<tr>
-      <td>${esc(r.term)}</td><td class="where">${esc(r.campaign)} › ${esc(r.adgroup)}</td><td class="where">${esc(r.debtType)}</td>
-      <td class="num">${r.impr}</td><td class="num">${r.clicks}</td><td class="num">${pct(r.ctr)}</td>
-      <td><span class="pill v-${r.verdict.toLowerCase()}">${r.verdict}</span></td>
-      <td class="num">${r.conv.toFixed(1)}</td><td class="num">${r.cpa ? usd(r.cpa) : '–'}</td>
-      <td class="where">${esc(r.intentLabel)}</td>
-      <td>${todayCell(r)}</td>
-      <td class="mapc">${pageCell(r.best, false)}${r.interim ? `<div class="today">Until then: ${esc(short(P[r.interim].url))}</div>` : ''}</td>
-      <td class="mapc"><span class="pill a-${r.action}">${ACT[r.action]}</span><div class="today">${esc(r.actionText)}</div>${r.note ? `<div class="flag">${esc(r.note)}</div>` : ''}</td></tr>`).join('');
-    document.getElementById('count').textContent = `${list.length} of ${rows.length} terms`;
-    document.querySelectorAll('#all th').forEach(th => th.dataset.dir = th.dataset.k === sortK ? (dir < 0 ? 'desc' : 'asc') : '');
+  // ── cells ────────────────────────────────────────────────────────────────
+  const termCell = r => {
+    const fl = [];
+    if (r.impr < 50) fl.push('low volume: directional');
+    if (r.clicks >= 5 && r.conv === 0) fl.push('no conversions');
+    else if (r.cpa && r.cpa > 2 * acctCpa) fl.push('CPA > 2× account');
+    if (r.dup) fl.push('also in another ad group');
+    let ana = '';
+    if (r.f) {
+      const ad = r.f.ad ? `<b>Recommended ad</b><div class="rec"><div class="hl">${r.f.ad.h.map(esc).join(' | ')}</div><div>${esc(r.f.ad.d)}</div></div>` : '<b>Recommended ad</b><div>Keep the current ad.</div>';
+      ana = `<details class="ana"><summary>Analysis and recommended ad</summary><div class="box"><b>Intent match</b><div>${esc(r.f.analysis)}</div>${ad}</div></details>`;
+    }
+    return `<div class="term">${esc(r.term)} ${r.f ? '<span class="pill star">Analysed</span>' : ''}</div>` +
+      `<div class="where">${esc(r.campaign)} › ${esc(r.adgroup)}</div>` +
+      `<div class="where">${esc(r.debtType)} · ${esc(r.intentLabel)}</div>` +
+      fl.map(x => `<span class="flag">${esc(x)}</span>`).join('') + ana;
+  };
+  const ctrCell = r => {
+    const cls = 'v-' + r.verdict.toLowerCase();
+    const w = Math.min(r.ctr / 0.30, 1) * 100, col = r.brand ? '#6b7280' : r.verdict === 'Below' ? 'var(--red)' : 'var(--ok)';
+    return `<b class="num">${pct(r.ctr)}</b>${r.brand ? '' : ` <span class="small">${(r.ctr / BM.ctr).toFixed(1)}×</span>`}<br><span class="pill ${cls}">${r.verdict}</span>` +
+      `<div class="bar"><i style="width:${w}%;background:${col}"></i><em style="left:${BM.ctr / 0.30 * 100}%"></em></div>`;
+  };
+  const trigCell = r => {
+    const ads = window.ADS[r.campaign + '|' + r.adgroup] || [];
+    if (!ads.length) return r.current.map(c => `<div class="ad">${c.share}% → ${link(P[c.page].url, path(P[c.page].url))}</div>`).join('');
+    return ads.map(a => `<div class="ad"><div class="small">Ad ${a.id} · <b>${a.share}%</b></div>` +
+      (a.h ? `<div class="hl">${a.h.map(esc).join(' | ')}</div>` : '') +
+      (a.note ? `<div class="warn">${esc(a.note)}</div>` : '') +
+      `<div>→ ${link(a.lp, path(a.lp))}</div></div>`).join('');
+  };
+  const bestCell = r => {
+    if (!r.liveBest) return '<span class="pill none">None</span><div class="txt">Not a Credo search.</div>';
+    const pg = P[r.liveBest], interim = P[r.best].kind === 'new', on = r.liveShare;
+    return `<span class="pill live">${pg.kind === 'brand' ? 'Brand' : 'Live'}</span> ${link(pg.url, path(pg.url))}` +
+      `<div class="small">${esc(pg.label)}${interim ? ' · until the new page is built' : ''}</div>` +
+      `<div class="txt">${on === 100 ? 'All of this term\'s traffic lands here today.' : on ? `${on}% of this term's traffic lands here today.` : 'None of this term\'s traffic lands here today.'}</div>` +
+      (interim && P[r.best].interimWhy ? `<div class="small">${esc(P[r.best].interimWhy)}</div>` : '');
+  };
+  const newCell = r => {
+    if (P[r.best].kind !== 'new') return '<span class="small">–</span>';
+    const n = window.NEW_PAGES[P[r.best].newKey];
+    return `<span class="pill new">New</span> <b>${esc(n.name)}</b><div class="small">Proposed ${esc(n.slug)} · LP hub › ${esc(n.section)}</div>` +
+      `<div class="txt"><a href="${esc(n.hub)}" target="_blank" rel="noopener">Open in LP hub</a> · <a href="${esc(n.file)}" target="_blank" rel="noopener">Preview</a></div>`;
+  };
+  const actCell = r => `<span class="pill a-${r.action}">${ACT[r.action]}</span><div class="txt">${esc(r.actionText)}</div>` +
+    (r.f && r.f.lp && r.f.lp.note ? `<div class="txt">${esc(r.f.lp.note)}</div>` : '') +
+    (r.note ? `<span class="flag">${esc(r.note)}</span>` : '');
+
+  const rowHtml = r => `<tr>
+    <td class="c-term" data-l="Search term">${termCell(r)}</td>
+    <td class="num" data-l="Impressions">${r.impr.toLocaleString('en-US')}</td>
+    <td class="num" data-l="Clicks">${r.clicks}</td>
+    <td data-l="CTR vs benchmark">${ctrCell(r)}</td>
+    <td class="num" data-l="Conversions / CPA">${r.conv.toFixed(1)}<br><span class="small">${r.cpa ? usd(r.cpa) : '–'}</span></td>
+    <td class="num" data-l="Top of page">${r.top != null ? pct(r.top) : '–'}</td>
+    <td class="c-trig" data-l="Triggered today → landing page">${trigCell(r)}</td>
+    <td class="c-best" data-l="Best current page">${bestCell(r)}</td>
+    <td class="c-new" data-l="Recommended new page">${newCell(r)}</td>
+    <td class="c-act" data-l="Recommended action">${actCell(r)}</td></tr>`;
+
+  let chip = 'all', sortK = 'impr', dir = -1, grp = 'intent';
+  const groupHtml = (key, list) => {
+    const impr = list.reduce((a, r) => a + r.impr, 0), conv = list.reduce((a, r) => a + r.conv, 0);
+    const scored = list.filter(r => !['NEG', 'BRAND'].includes(r.best));
+    const si = scored.reduce((a, r) => a + r.impr, 0), on = si ? scored.reduce((a, r) => a + r.impr * r.bestShare / 100, 0) / si : null;
+    const terms = new Set(list.map(r => r.term)).size;
+    let label = key, why = '', page = '';
+    if (grp === 'intent') {
+      label = I[key].label; why = I[key].why;
+      const pg = P[I[key].page];
+      page = pg.kind === 'new' ? `Best page: <b>${esc(pg.label)}</b> (until built: ${esc(path(P[pg.interim].url))})` :
+             pg.kind === 'none' ? 'Best page: <b>none (negatives)</b>' : `Best page: <b>${esc(path(pg.url))}</b>`;
+    }
+    const bar = on == null ? '' : `<span class="bar" style="display:inline-block;margin:0;vertical-align:middle"><i style="width:${on * 100}%;background:${on >= .5 ? 'var(--ok)' : 'var(--red)'}"></i></span>`;
+    return `<tr class="gh"><td colspan="10"><div class="gl">${esc(label)}</div>${why ? `<div class="gw">${esc(why)}</div>` : ''}
+      <div class="gs">${page ? `<span>${page}</span>` : ''}<span><b>${terms}</b> terms</span><span><b>${impr.toLocaleString('en-US')}</b> impr.</span><span><b>${conv.toFixed(1)}</b> conv.</span>
+      ${on == null ? '' : `<span>On the best page today: <b>${pct(on)}</b> ${bar}</span>`}</div></td></tr>`;
+  };
+
+  // ── filters, sorting, grouping ───────────────────────────────────────────
+  const $ = id => document.getElementById(id);
+  D.debtTypes.forEach(t => $('debt').insertAdjacentHTML('beforeend', `<option>${esc(t)}</option>`));
+  [...new Set(rows.map(r => r.campaign))].sort().forEach(c => $('camp').insertAdjacentHTML('beforeend', `<option>${esc(c)}</option>`));
+  Object.entries(I).forEach(([k, v]) => $('int').insertAdjacentHTML('beforeend', `<option value="${k}">${esc(v.label)}</option>`));
+  Object.entries(ACT).forEach(([k, v]) => $('act').insertAdjacentHTML('beforeend', `<option value="${k}">${v} (${rows.filter(r => r.action === k).length})</option>`));
+
+  const chipOk = r => chip === 'all' || (chip === 'good' && (r.brand || r.verdict !== 'Below')) || (chip === 'bad' && !r.brand && r.verdict === 'Below') ||
+    (chip === 'leak' && r.leak) || (chip === 'wrong' && r.wrong) || (chip === 'star' && r.f);
+  const val = (r, k) => k === 'top' ? (r.top ?? -1) : k === 'dom' ? path(P[r.dom].url) : k === 'newp' ? r.newp : r[k];
+  function render() {
+    const q = $('q').value.trim().toLowerCase();
+    const f = { debtType: $('debt').value, campaign: $('camp').value, intent: $('int').value, verdict: $('ver').value, action: $('act').value };
+    grp = $('grp').value;
+    const list = rows.filter(r => chipOk(r) && (!q || r.term.includes(q)) && Object.entries(f).every(([k, v]) => !v || r[k] === v))
+      .sort((a, b) => { const x = val(a, sortK), y = val(b, sortK); return (typeof x === 'string' ? String(x).localeCompare(String(y)) : (x ?? -1) - (y ?? -1)) * dir; });
+    let html = '';
+    if (grp) {
+      const groups = new Map();
+      list.forEach(r => { const k = r[grp]; if (!groups.has(k)) groups.set(k, []); groups.get(k).push(r); });
+      [...groups.entries()].sort((a, b) => b[1].reduce((s, r) => s + r.impr, 0) - a[1].reduce((s, r) => s + r.impr, 0))
+        .forEach(([k, l]) => { html += groupHtml(k, l) + l.map(rowHtml).join(''); });
+    } else html = list.map(rowHtml).join('');
+    document.querySelector('#tbl tbody').innerHTML = html;
+    $('count').textContent = `${list.length} of ${rows.length} rows`;
+    document.querySelectorAll('#tbl th').forEach(th => th.dataset.dir = th.dataset.k === sortK ? (dir < 0 ? 'desc' : 'asc') : '');
   }
-  document.querySelector('#all thead').addEventListener('click', e => {
+  document.querySelector('#tbl thead').addEventListener('click', e => {
     const th = e.target.closest('th'); if (!th) return;
-    if (sortK === th.dataset.k) dir = -dir; else { sortK = th.dataset.k; dir = typeof rows[0][sortK] === 'string' ? 1 : -1; }
-    renderAll();
+    const k = th.dataset.k;
+    if (sortK === k) dir = -dir; else { sortK = k; dir = typeof val(rows[0], k) === 'string' ? 1 : -1; }
+    render();
   });
-  D.debtTypes.forEach(t => document.getElementById('debt').insertAdjacentHTML('beforeend', `<option>${esc(t)}</option>`));
-  Object.entries(ACT).forEach(([k, v]) => document.getElementById('act').insertAdjacentHTML('beforeend', `<option value="${k}">${v} (${rows.filter(r => r.action === k).length})</option>`));
-  Object.entries(I).forEach(([k, v]) => document.getElementById('int').insertAdjacentHTML('beforeend', `<option value="${k}">${esc(v.label)}</option>`));
-  ['q', 'camp', 'debt', 'ver', 'act', 'int'].forEach(id => document.getElementById(id).addEventListener('input', renderAll));
-  renderAll();
+  $('chips').addEventListener('click', e => {
+    const b = e.target.closest('.chip'); if (!b) return;
+    document.querySelectorAll('#chips .chip').forEach(c => c.setAttribute('aria-pressed', c === b));
+    chip = b.dataset.f; render();
+  });
+  ['q', 'debt', 'camp', 'int', 'ver', 'act', 'grp'].forEach(id => $(id).addEventListener('input', render));
+  render();
 
-  // ── Method ────────────────────────────────────────────────────────────────
-  document.getElementById('method').innerHTML = [
-    `Source: ${esc(D.source)}. Cut-off: ${esc(D.threshold)}. The long tail below the cut-off is not shown, so these terms cover ${pct(covered / ACCT.impr)} of the account's impressions.`,
-    `Which ad and landing page: the Google Ads API reports search terms per ad group, not per ad. Each row lists the ad group's ads with their share of its impressions; the dominant ad is the one the term most likely triggered. All non-brand final URLs are on start.credolegal.com.`,
-    `Verdicts compare each term's CTR with the benchmark (${bmp(BM.ctr)}). Strong = at least twice the benchmark. Terms under 50 impressions are flagged as directional. "Top of page" is the share of impressions shown above the organic results; below-benchmark terms were at the top less often (median 79%) than above-benchmark terms (89%), so part of a low CTR is position, not copy.`,
-    `Recommended landing pages: a <b>Live</b> page is one of the start.credolegal.com pages the campaigns already use. Where no live page matches the search intent, a <b>New page</b> was built in the prototype landing-page template and added to the <a href="../review.html" target="_blank" rel="noopener">landing-page hub</a> under its debt-type section (marked "New · search-term gap"). New pages are drafts, not live, and need attorney review and a Webflow build before an ad can point to them.`,
-    `Conversion flags use the account's own cost per conversion (${usd(acctCpa)}): "CPA > 2× account" and "no conversions" (at least 5 clicks, 0 conversions). Conversions are Google Ads conversions as configured (fractional values mean data-driven attribution). They are not verified leads.`,
-    `Recommended ad copy follows brand/voice.md and RSA limits (headlines ≤ 30 characters, descriptions ≤ 90; {LOCATION(State):Your State} is Google's location insertion). It is draft copy for attorney review. Any landing page that carries an ad needs the NY attorney-advertising snippet.`,
-    `Data: content/campaigns/google-ads/search-terms/2026-09-30-terms.json → scripts/google-ads/build-search-terms.py (mapping rules in search_term_intents.py) → terms-data.js. "Lands on today" uses each ad's share of its ad group's impressions. Featured analysis: featured.js (hand-authored).`
+  // ── method ───────────────────────────────────────────────────────────────
+  $('method').innerHTML = [
+    `Source: ${esc(D.source)}. Cut-off: ${esc(D.threshold)}. The long tail below the cut-off is not shown; these rows cover ${pct(covered / ACCT.impr)} of the account's impressions.`,
+    `Verdicts compare each term's CTR with the benchmark (${bmp(BM.ctr)}); brand terms are not compared. Terms under 50 impressions are flagged as directional. "Top of page" is the share of impressions shown above the organic results; below-benchmark terms were at the top less often (median 79%) than above-benchmark terms (89%), so part of a low CTR is position, not copy.`,
+    `Conversion flags use the account's own cost per conversion (${usd(acctCpa)}). Conversions are Google Ads conversions as configured (fractional values mean data-driven attribution), not verified leads.`,
+    'Recommended ad copy (under "Analysis and recommended ad") follows brand/voice.md and RSA limits (headlines ≤ 30 characters, descriptions ≤ 90; {LOCATION(State):Your State} is Google\'s location insertion). It is draft copy for attorney review. New pages are drafts too: attorney review and a Webflow build come before any ad points to them. Any landing page that carries an ad needs the NY attorney-advertising snippet.',
+    'Data: content/campaigns/google-ads/search-terms/2026-09-30-terms.json → scripts/google-ads/build-search-terms.py (mapping rules in search_term_intents.py) → terms-data.js. Analysis: featured.js (hand-authored).'
   ].map(x => `<li>${x}</li>`).join('');
 })();
 </script>
