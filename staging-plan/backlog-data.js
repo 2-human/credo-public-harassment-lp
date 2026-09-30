@@ -541,7 +541,8 @@ window.BACKLOG = {
       why: 'Lighthouse 37–56 and main content after 9–15 s on a mid-range phone.',
       done: 'Lighthouse re-run on staging, compared with the baseline.',
       tasks: [
-        ['Confirm the removals from PBI-01 are live', 'todo'],
+        ['Confirm the removals from PBI-01 are live: 30 Sep, all 56 pages: no videsigns call, multi-step.js or Font Awesome; GTM loads once', 'done'],
+        ['Baseline and per-script plan (review/PBI-23-plan.md): Lighthouse 52\u201354, LCP 11.8\u201312.7 s (the H1 text, gated by the web font); plan sent to the operator for per-script approval 30 Sep', 'done'],
         ['Lazy-load or remove Tidio (D8)', 'todo'],
         ['Keep one session recorder (D5)', 'todo'],
         ['Remove the two redundant recolour scripts (PBI-18): the footer script that wraps "decision" in the bottom CTA, and the home embed script that wraps "Legally" in the H1; both accents are now in the markup and CSS (per-script approval)', 'todo'],
