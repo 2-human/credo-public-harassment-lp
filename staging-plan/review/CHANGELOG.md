@@ -712,6 +712,23 @@ Not a board row: tracked as decision D13. Listed here because it changed the sit
 **Evidence / review**
 - Reviewed within PBI-26 ([PBI-26b.triage.md](PBI-26b.triage.md), rows 5, 9, 10).
 
+## L2 · Minify HTML, CSS and JS (30 Sep, operator)
+
+**What changed**
+- The operator switched on Webflow's minify options; published to the staging domain only. Stylesheet 116.7 → 95.9 KB
+  (20.1 → 18.3 KB transferred with brotli); webflow.js was already minified; the pages' HTML is unchanged apart from
+  whitespace.
+
+**Where in Webflow**
+- Site settings → Publishing → Advanced publishing options.
+
+**Revert**
+- Switch the options off and publish to the staging domain only.
+
+**Evidence**
+- Served HTML 56/56 identical after normalising whitespace and file hashes (`2026-09-30-l2-minify/`); element
+  compare 6 pages × 1440/390: 0 differences (animated call-button dot aside).
+
 ## At a glance
 
 | ID | Title | Main Webflow location(s) | Status |
@@ -760,5 +777,5 @@ Not a board row: tracked as decision D13. Listed here because it changed the sit
 - **PBI-21** The four payday-content pages: deferred by the operator (own copy or redirect, D4 open part).
 - **PBI-22** Call-click tracker: waits on D6.
 - **PBI-24, domain-switch task** (the close-out itself is done): robots, canonical and og:url for the final domain wait on D16 and D21 (today noindex, nofollow + canonical to start.credolegal.com/{slug}).
-- Parts still open inside done items: PBI-08 CRM check (M3); PBI-23 Tidio (D8), second recorder (D5), minify (L2) / GTM Nextdoor timing (operator, manual; fonts done in PBI-26); site-head CSS for the duplicate-named classes (the drafts are gone, but Webflow keeps every copy of a used name through Clean up; resolve them the PBI-26 way with DS-4 / DS-8); Gemini reviews for PBI-19, PBI-23, PBI-25, PBI-26, PBI-28, PBI-29, PBI-30.
+- Parts still open inside done items: PBI-08 CRM check (M3); PBI-23 Tidio (D8), second recorder (D5), GTM Nextdoor timing (operator, manual; fonts done in PBI-26, minify done in L2); site-head CSS for the duplicate-named classes (the drafts are gone, but Webflow keeps every copy of a used name through Clean up; resolve them the PBI-26 way with DS-4 / DS-8); Gemini reviews for PBI-19, PBI-23, PBI-25, PBI-26, PBI-28, PBI-29, PBI-30.
 - Found and not changed (copy or account decisions): D22 hero wording, D24 per-call $1,000 claims, D25 home headings, D26 Optibase in Safari.
