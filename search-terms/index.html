@@ -50,7 +50,7 @@ tr.cl td{background:var(--soft);font:700 13px Georgia,serif;padding:8px 10px}
 .rec .hl{color:#1a0dab;font-weight:600;font-size:12.5px}
 .rec .ds{font-size:12px;color:#2c323a;margin-top:3px}
 .lpnote{font-size:12px;color:#2c323a;margin-top:3px}
-.new{background:#2f5f9e}
+.new{background:#b45309}.live{background:var(--ok)}.none{background:#6b7280}
 td.an{min-width:260px;max-width:340px;font-size:12.5px}
 td.adc{min-width:230px;max-width:280px}
 td.recc{min-width:230px;max-width:280px}
@@ -193,7 +193,20 @@ td.lpc{min-width:210px;max-width:260px}
     (a.note ? `<div class="warn">${esc(a.note)}</div>` : '') +
     `<div>→ ${link(a.lp)}</div></div>`).join('') || '<span class="meta">No ad data</span>';
   const recAd = a => a ? `<div class="rec"><div class="hl">${a.h.map(esc).join(' | ')}</div><div class="ds">${esc(a.d)}</div></div>` : '<span style="color:var(--mute)">Keep the current ad.</span>';
-  const recLp = l => (l.url ? `<div>${link(l.url)}</div>` : '<span class="pill new">New page / no LP</span>') + `<div class="lpnote">${esc(l.note)}</div>`;
+  const recLp = l => {
+    let top;
+    if (l.newPage) {
+      const n = window.NEW_PAGES[l.newPage];
+      top = `<span class="pill new">New page</span> <b>${esc(n.name)}</b>` +
+        `<div class="where">Proposed ${esc(n.slug)} · LP hub › ${esc(n.section)}</div>` +
+        `<div><a href="${esc(n.hub)}" target="_blank" rel="noopener">Open in LP hub</a> · <a href="${esc(n.file)}" target="_blank" rel="noopener">Preview page</a></div>`;
+    } else if (l.url) {
+      top = `<span class="pill live">Live</span> ${link(l.url)}`;
+    } else {
+      top = '<span class="pill none">No landing page</span>';
+    }
+    return top + `<div class="lpnote">${esc(l.note)}</div>`;
+  };
 
   const tb = document.querySelector('#feat tbody');
   let cluster = '';
@@ -264,8 +277,9 @@ td.lpc{min-width:210px;max-width:260px}
   // ── Method ────────────────────────────────────────────────────────────────
   document.getElementById('method').innerHTML = [
     `Source: ${esc(D.source)}. Cut-off: ${esc(D.threshold)}. The long tail below the cut-off is not shown, so these terms cover ${pct(covered / ACCT.impr)} of the account's impressions.`,
-    `Which ad and landing page: the Google Ads API reports search terms per ad group, not per ad. Each row lists the ad group's ads with their share of its impressions; the dominant ad is the one the term most likely triggered. All non-brand final URLs are on start.credolegal.com. Recommended pages are the staging.credolegal.com versions of the same slugs.`,
+    `Which ad and landing page: the Google Ads API reports search terms per ad group, not per ad. Each row lists the ad group's ads with their share of its impressions; the dominant ad is the one the term most likely triggered. All non-brand final URLs are on start.credolegal.com.`,
     `Verdicts compare each term's CTR with the benchmark (${bmp(BM.ctr)}). Strong = at least twice the benchmark. Terms under 50 impressions are flagged as directional. "Top of page" is the share of impressions shown above the organic results; below-benchmark terms were at the top less often (median 79%) than above-benchmark terms (89%), so part of a low CTR is position, not copy.`,
+    `Recommended landing pages: a <b>Live</b> page is one of the start.credolegal.com pages the campaigns already use. Where no live page matches the search intent, a <b>New page</b> was built in the prototype landing-page template and added to the <a href="../review.html" target="_blank" rel="noopener">landing-page hub</a> under its debt-type section (marked "New · search-term gap"). New pages are drafts, not live, and need attorney review and a Webflow build before an ad can point to them.`,
     `Conversion flags use the account's own cost per conversion (${usd(acctCpa)}): "CPA > 2× account" and "no conversions" (at least 5 clicks, 0 conversions). Conversions are Google Ads conversions as configured (fractional values mean data-driven attribution). They are not verified leads.`,
     `Recommended ad copy follows brand/voice.md and RSA limits (headlines ≤ 30 characters, descriptions ≤ 90; {LOCATION(State):Your State} is Google's location insertion). It is draft copy for attorney review. Any landing page that carries an ad needs the NY attorney-advertising snippet.`,
     `Data: content/campaigns/google-ads/search-terms/2026-09-30-terms.json → scripts/google-ads/build-search-terms.py → terms-data.js. Analysis: featured.js (hand-authored).`

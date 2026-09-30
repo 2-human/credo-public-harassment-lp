@@ -165,6 +165,7 @@
   .lp-link .b.champion { background: #c92028; color: #fff; }
   .lp-link .b.fixed { background: #fff7ed; color: #9a3412; }
   .lp-link .b.new-section { background: #ecfeff; color: #155e75; }
+  .lp-link .b.proposed { background: #fff4e5; color: #b45309; }
   .lp-link .b.ad { background: #fdeced; color: #c92028; }
 
   /* ───── Frame ───── */
@@ -323,6 +324,15 @@ const LPS = [
   { c:"System", n:"Already submitted (uses the thank-you design)", slug:"/page/already-submitted", live:"https://staging.credolegal.com/page/already-submitted", phone:"(443) 483-4080", file:"thank-you.html", angle:"CMS page · same copy as thank-you" },
   { c:"System", n:"404 · Page not found",          slug:"/404", live:"https://staging.credolegal.com/404", phone:"(718) 865-8350", file:"404.html", angle:"System page · new design", redesign:true },
   { c:"System", n:"401 · Protected page",          slug:"/401", live:"https://staging.credolegal.com/401", phone:"—", file:"401.html", angle:"System page · new design", redesign:true },
+
+  /* ──── Proposed from the search-term review (30 Sep 2026, search-terms/index.html) ────
+     New pages for search intents no live page answers. Appended here (not inside their
+     cluster block) so existing #index deep links stay stable; the sidebar still lists each
+     under its debt-type section. Not live yet: no ad, no "View live". */
+  { c:"Garnishment", n:"How to Stop a Garnishment (new)",   slug:"/how-to-stop-wage-garnishment",  phone:"(720) 414-5055", file:"garn-how-to-stop-locked-paired-portrait-noborders.html",         angle:"Search intent: how to stop · both stages", proposed:true },
+  { c:"Lawsuit", n:"Sued by a Debt Buyer (new)",            slug:"/sued-by-debt-buyer",            phone:"(718) 521-4060", file:"lawsuit-debt-buyer-locked-paired-portrait-noborders.html",       angle:"Search intent: named debt buyer · proof of ownership", proposed:true },
+  { c:"Lawsuit", n:"Sued and Can't Pay (new)",              slug:"/debt-lawsuit-cant-pay",         phone:"(718) 521-4060", file:"lawsuit-cant-pay-locked-paired-portrait-noborders.html",         angle:"Search intent: sued with no money", proposed:true },
+  { c:"All-States", n:"Settlement or Validation? (new)",    slug:"/debt-settlement-vs-validation", phone:"(612) 256-8820", file:"settlement-vs-validation-locked-paired-portrait-noborders.html", angle:"Search intent: debt settlement shopper · cross-debt", proposed:true },
 ];
 
 /* ───── Reverse link: which Google/Bing ad drives each LP ─────
@@ -386,6 +396,7 @@ function renderList(filter) {
       if (DRIVEN_BY[lp.slug]) badges.push('<span class="b ad">AD · ' + DRIVEN_BY[lp.slug].campaign + '</span>');
       if (lp.newSection) badges.push('<span class="b new-section">New section</span>');
       if (lp.redesign) badges.push('<span class="b new-section">New design</span>');
+      if (lp.proposed) badges.push('<span class="b proposed">New · search-term gap</span>');
       a.innerHTML = `
         <div><span class="num">${String(idx+1).padStart(2,'0')}</span><span class="label">${lp.n}</span></div>
         <div class="slug">${lp.slug}</div>
@@ -396,7 +407,7 @@ function renderList(filter) {
       count++;
     });
   });
-  $prog.textContent = filter ? `${count} of ${LPS.length} match` : `${LPS.filter(l=>!NON_AD.includes(l.c)).length} variants · ${CLUSTERS.filter(c=>!NON_AD.includes(c)).length} clusters`;
+  $prog.textContent = filter ? `${count} of ${LPS.length} match` : `${LPS.filter(l=>!NON_AD.includes(l.c) && !l.proposed).length} variants · ${CLUSTERS.filter(c=>!NON_AD.includes(c)).length} clusters`;
 }
 
 function matches(lp, f) {
@@ -603,7 +614,7 @@ function select(idx) {
   const open = document.getElementById('t-open');
   open.href = withParams(lp.file); open.style.display = 'inline-flex';
   const live = document.getElementById('t-live');
-  live.href = lp.live || ('https://start.credolegal.com' + lp.slug); live.style.display = 'inline-flex';
+  live.href = lp.live || ('https://start.credolegal.com' + lp.slug); live.style.display = lp.proposed ? 'none' : 'inline-flex';  // proposed pages have no live URL yet
   // sidebar highlight
   document.querySelectorAll('.lp-link').forEach(el => {
     el.classList.toggle('active', Number(el.dataset.idx) === idx);

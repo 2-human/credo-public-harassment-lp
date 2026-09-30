@@ -1,5 +1,6 @@
 /* Search-term review — hand-authored analysis (2026-09-30).
- * Metrics are NOT typed here: the page joins each row to terms-data.js by campaign + term.
+ * Recommended landing pages: the live start.credolegal.com pages the campaigns already use; where none fits the intent,
+ * a NEW page built in the prototype LP template (NEW_PAGES, listed in the landing-page hub). Metrics are NOT typed here: the page joins each row to terms-data.js by campaign + term.
  * ADS: what each ad group served in the period (ad_group_ad pull, same day). share = the ad's
  * share of the ad group's impressions. The API reports search terms per AD GROUP, not per ad,
  * so "the ad this term triggered" is the ad group's rotation; the dominant ad is the likely one.
@@ -9,7 +10,6 @@
  * snippet (brand/ny-attorney-advertising-disclaimer.md, phone (212) 461-4026). */
 
 const S = 'https://start.credolegal.com/';
-const G = 'https://staging.credolegal.com/';
 
 window.ADS = {
   'S_All-States|Garnishment': [
@@ -54,125 +54,134 @@ window.ADS = {
     { id: '822969171047', share: 43, lp: 'https://credolegal.com/', h: ['Credo Legal Services, P.A.', 'Credo Legal – Contact Us', 'Speak With Our Team'] }]
 };
 
+/* New pages built in the prototype LP template for intents no live page answers (30 Sep 2026).
+   Listed in the landing-page hub (review.html) under their debt-type section; not live yet. */
+window.NEW_PAGES = {
+  stop:    { name: 'How to Stop a Garnishment',  slug: '/how-to-stop-wage-garnishment',  file: '../garn-how-to-stop-locked-paired-portrait-noborders.html',         hub: '../review.html#51', section: 'Garnishment' },
+  buyer:   { name: 'Sued by a Debt Buyer',       slug: '/sued-by-debt-buyer',            file: '../lawsuit-debt-buyer-locked-paired-portrait-noborders.html',       hub: '../review.html#52', section: 'Lawsuit' },
+  cantpay: { name: "Sued and Can't Pay",         slug: '/debt-lawsuit-cant-pay',         file: '../lawsuit-cant-pay-locked-paired-portrait-noborders.html',         hub: '../review.html#53', section: 'Lawsuit' },
+  settle:  { name: 'Settlement or Validation?',  slug: '/debt-settlement-vs-validation', file: '../settlement-vs-validation-locked-paired-portrait-noborders.html', hub: '../review.html#54', section: 'All-States' }
+};
+
 /* One row per search term. cluster groups the table; key = campaign|term (joins terms-data.js). */
 window.FEATURED = [
   // ── Garnishment: "how to stop" ────────────────────────────────────────────
   { cluster: 'Garnishment: how to stop one', key: 'S_Garnishment_NW|how to stop garnishment',
     analysis: 'Best non-brand CTR in the account. A short action query, answered by the ad group\'s "Fight Wage Garnishment Now" / "Garnishment Is Preventable" lines. The weak spot is the page: the prevention ad gets 61% of the ad group\'s impressions and sends people to the prevention page ("Garnishment Looming?"), which is written for someone not yet garnished. "Stop" usually means it has already started.',
     ad: { h: ['How to Stop a Garnishment', 'Exemptions and Objections', 'Free Garnishment Case Review'], d: 'Before it starts or after: our attorneys use exemptions and objections to stop or cut it.' },
-    lp: { url: G + 'stop-wage-garnishment', note: 'Use this page as the garnishment router. Set the hero First question prop to "Is money already being taken from your pay?" Yes carries the exemption and objection copy; No carries the prevention copy. No new build needed: it is a props change on the Landing page template (lp-sync.mjs).' } },
+    lp: { url: null, newPage: 'stop', note: 'New page built for this query family: the H1 mirrors the search, the form starts with the stage (already taken or not yet), and every section splits both stages. Until it is live, the closest live page is start.credolegal.com/wage-garnishment-attorney.' } },
   { cluster: 'Garnishment: how to stop one', key: 'S_Garnishment_NW|how to stop a garnishment',
     analysis: 'Same intent as above and the same strong CTR, but only 1 conversion per 15 clicks. The click is earned by the ad and then lost on a page that answers the wrong stage (prevention).',
     ad: { h: ['How to Stop a Garnishment', 'Already Garnished? Act Today', 'Free Garnishment Case Review'], d: 'A garnishment can often be reduced or stopped with an exemption claim. We file it for you.' },
-    lp: { url: G + 'stop-wage-garnishment', note: 'Router page, as above.' } },
+    lp: { url: null, newPage: 'stop', note: 'New page, as above.' } },
   { cluster: 'Garnishment: how to stop one', key: 'S_Garnishment_NW|how to stop wage garnishment',
     analysis: 'Strong CTR at a sound CPA. The ad mirrors the query. Keep it, and use this term as the control when the router page is tested.',
     ad: { h: ['Stop a Wage Garnishment', 'Exemptions Can Cut or End It', 'Free Garnishment Case Review'], d: 'Our attorneys check which exemptions apply to your pay and file the claim. Free review.' },
-    lp: { url: G + 'stop-wage-garnishment', note: 'Router page, as above.' } },
+    lp: { url: null, newPage: 'stop', note: 'New page, as above. Keep this term as the control when testing it against the prevention page.' } },
   { cluster: 'Garnishment: how to stop one', key: 'S_Garnishment_NW|how to stop wage garnishment immediately online',
     analysis: 'The highest-volume term and it works: CTR at twice the benchmark, 10 conversions, CPA $45. "Online" is not answered anywhere, though. The ad and page never say the review happens online or by phone, in minutes.',
     ad: { h: ['Stop a Garnishment Online', 'Start Your Case Review Online', 'Exemptions Can Cut or End It'], d: 'Tell us about the garnishment online. Our attorneys check exemptions and deadlines today.' },
-    lp: { url: G + 'stop-wage-garnishment', note: 'Router page. Add one line under the hero form: "Takes about 2 minutes online, or call."' } },
+    lp: { url: null, newPage: 'stop', note: 'New page, as above. It states that the review happens online or by phone.' } },
   { cluster: 'Garnishment: how to stop one', key: 'S_Garnishment_NW|how can i stop a wage garnishment immediately',
     analysis: 'A CTR winner and a conversion loser: 62 clicks, 2 conversions, CPA $194. The same query costs $28 per conversion in S_All-States, where it lands on /stop-wage-garnishment. The prevention page is the likely leak.',
     ad: { h: ['Stop Your Garnishment Now', 'Exemptions Can Cut or End It', 'Talk to an Attorney Today'], d: 'Already garnished? Exemption claims and objections can reduce or stop it. Free review.' },
-    lp: { url: G + 'wage-garnishment-exemptions', note: 'Re-enable the paused exemptions ad (805218622442) in this ad group, so "already garnished" searches have a matching page.' } },
+    lp: { url: S + 'wage-garnishment-exemptions', note: 'Live page used by the paused exemptions ad (805218622442). Re-enable that ad in this ad group, so "already garnished" searches get a matching page.' } },
   { cluster: 'Garnishment: how to stop one', key: 'S_Garnishment_NW|stop garnishment',
     analysis: 'High CTR, weak conversion (1.5 conversions from 25 clicks, CPA $183). This two-word head term costs about $11 a click. The page leaks here for the same reason as the rows above.',
     ad: { h: ['Stop a Garnishment', 'Before or After It Starts', 'Free Garnishment Case Review'], d: 'Our attorneys stop garnishments before they start and cut them after. Free review.' },
-    lp: { url: G + 'stop-wage-garnishment', note: 'Router page.' } },
+    lp: { url: null, newPage: 'stop', note: 'New page (the "how to stop" page covers this head term too).' } },
   { cluster: 'Garnishment: how to stop one', key: 'S_All-States|stop wage garnishment',
     analysis: 'The same query gets 18.4% CTR in S_Garnishment_NW and 3.7% here. The All-States garnishment ads mix in off-topic lines ("Need Debt Collector Attorney?", "We Can Help Fight Harassment"). They also say "We CRUSH Wage Garnishments.", which goes against voice.md. Both campaigns showed this term at the top of the page (All-States 100% of the time), so the gap is the ad copy, not the position. The two campaigns bid on the same terms (62 terms appear in more than one campaign).',
     ad: { h: ['Stop a Wage Garnishment', 'Exemptions Can Cut or End It', 'Free Garnishment Case Review'], d: 'Structural fix first: let S_Garnishment_NW serve this term (see note). Copy as NW row.' },
-    lp: { url: G + 'stop-wage-garnishment', note: 'Add the S_Garnishment_NW terms as exact-match negatives in S_All-States › Garnishment, or pause that ad group, so the specific ads win the auction.' } },
+    lp: { url: null, newPage: 'stop', note: 'Structural fix first: add the S_Garnishment_NW terms as exact-match negatives in S_All-States › Garnishment, or pause that ad group, so the specific ads win the auction. Then serve the new page from S_Garnishment_NW.' } },
   { cluster: 'Garnishment: how to stop one', key: 'S_All-States|can you stop a garnishment after it starts',
     analysis: '2.1% here against 16.1% for the same query in S_Garnishment_NW: the overlap problem again. The searcher states the stage ("after it starts"), and neither All-States ad answers it.',
     ad: { h: ['Garnishment Already Started?', 'It Can Still Be Reduced', 'Free Garnishment Case Review'], d: 'Once a garnishment starts, an exemption claim or objection can still cut or end it.' },
-    lp: { url: G + 'wage-garnishment-exemptions', note: 'Stage-specific page. Serve it from the NW ad group, not All-States.' } },
+    lp: { url: S + 'wage-garnishment-exemptions', note: 'Live stage-specific page. Serve it from the S_Garnishment_NW ad group, not All-States.' } },
 
   // ── Garnishment: research / DIY ───────────────────────────────────────────
   { cluster: 'Garnishment: research and DIY', key: 'S_All-States|wage garnishment',
     analysis: 'A two-word head term, mostly research ("what is it", "how much can they take"). The ad jumps straight to "Stop Wage Garnishment Now". Low CTR is normal for a definition-seeking query. Volume is high (339 impressions), so the ad should give the fact the searcher is looking for.',
     ad: { h: ['Wage Garnishment Limits', 'Federal Cap: 25% of Disposable', 'Exemptions May Protect You'], d: 'Federal law caps most wage garnishments, and many states protect more. See what applies.' },
-    lp: { url: G + 'wage-garnishment-exemptions', note: 'Or bid lower on this head term. Its natural home is the "Garnishment & protected funds" guide in the Resources prototype (website-main/resources/templates).' } },
+    lp: { url: S + 'wage-garnishment-exemptions', note: 'Live page that states the 25% cap and the exemptions, which is what this research query is after. Or bid lower on this head term.' } },
   { cluster: 'Garnishment: research and DIY', key: 'S_All-States|creditor garnishment',
     analysis: 'An ambiguous term: it can mean a wage garnishment or a bank-account levy. The ad speaks only to paychecks.',
     ad: { h: ['Creditor Garnishing Your Pay?', 'Bank Levy or Wage Garnishment', 'Exemptions May Protect Funds'], d: 'Wages and bank accounts have different protections. Our attorneys check which apply.' },
-    lp: { url: G + 'wage-garnishment-exemptions', note: 'Add a bank-levy section (protected funds: Social Security, SSI, VA) to the exemptions page.' } },
+    lp: { url: S + 'wage-garnishment-exemptions', note: 'Live page. It already lists "Bank account levy" among its situations; a short protected-funds (bank levy) section would complete it.' } },
   { cluster: 'Garnishment: research and DIY', key: 'S_Garnishment_NW|what to do if your wages are garnished',
     analysis: '0 clicks. The searcher wants steps (and the related "how to file an exemption" and "claim of exemption" queries also get 0 clicks). The prevention ad ("Threatened With Garnishment?") answers a stage the searcher has already passed.',
     ad: { h: ['Wages Garnished? Next Steps', 'File a Claim of Exemption', 'We Prepare the Exemption Claim'], d: 'A claim of exemption can cut or stop a garnishment. Our attorneys prepare and file it.' },
-    lp: { url: G + 'wage-garnishment-exemptions', note: 'Re-enable exemptions ad 805218622442.' } },
+    lp: { url: S + 'wage-garnishment-exemptions', note: 'Live page used by the paused exemptions ad 805218622442. Re-enable the ad.' } },
   { cluster: 'Garnishment: research and DIY', key: 'S_All-States|who can garnish wages without notice',
     analysis: 'A legal-definition question with low conversion potential. Related terms behave the same: "writ of garnishment" 2.2%, "garnish wages" 0 to 3%.',
     ad: null,
-    lp: { url: null, note: 'Not a paid-search fit. Add phrase negatives ("who can garnish", "garnish wages", "garnishing wages", "writ of garnishment" as exact) and cover these in Resources articles for organic and AI search.' } },
+    lp: { url: null, note: 'Not a paid-search fit. Add phrase negatives ("who can garnish", "garnish wages", "garnishing wages", and "writ of garnishment" as exact) and cover these in Resources articles for organic and AI search.' } },
 
   // ── Garnishment: attorney intent ──────────────────────────────────────────
   { cluster: 'Garnishment: attorney intent', key: 'S_All-States|garnishment lawyer',
     analysis: 'High-intent attorney query with a strong CTR, but 34 clicks produced 1 conversion ($391). It lands on the legacy /stop-wage-garnishment. The sibling term "garnishment attorney" in the same ad group converts at $21, so the loss is probably noise plus friction on the page. Send attorney-intent traffic to the attorney page.',
     ad: { h: ['Wage Garnishment Attorney', 'State-Licensed Attorneys', 'Free Garnishment Case Review'], d: 'Our attorneys file exemption claims and objections to cut or stop your garnishment.' },
-    lp: { url: G + 'wage-garnishment-attorney', note: 'Attorney-intent page. It answers "who will handle it" before "how".' } },
+    lp: { url: S + 'wage-garnishment-attorney', note: 'Live attorney-intent page (S_Garnishment_NW). It answers "who will handle it" before "how".' } },
   { cluster: 'Garnishment: attorney intent', key: 'S_Garnishment_NW|garnishment lawyers near me',
     analysis: 'Strong on both CTR and CPA ($26). "Near me" is answered implicitly. Add location insertion to make it explicit.',
     ad: { h: ['Garnishment Lawyer Near You', 'Licensed in {LOCATION(State):Your State}', 'Free Garnishment Case Review'], d: 'State-licensed attorneys review your garnishment by phone or online. Free case review.' },
-    lp: { url: G + 'wage-garnishment-attorney', note: 'Keep as is. Check that the tracked phone number shows in the mobile header (PBI-06, done).' } },
+    lp: { url: S + 'wage-garnishment-attorney', note: 'Keep as is.' } },
 
   // ── Collection lawsuit / debt attorney ────────────────────────────────────
   { cluster: 'Debt lawyer and collection defense', key: 'S_All-States|debt collection lawyer',
     analysis: 'An ambiguous term: creditors look for "collection lawyers" too. CTR and CPA show that consumers dominate. "Sued by a Collection Lawyer?" qualifies the reader well.',
     ad: { h: ['Debt Collection Defense', "We Defend. We Don't Collect.", 'Sued by a Collection Firm?'], d: 'We represent consumers, not collectors. Our attorneys answer the suit and demand proof.' },
-    lp: { url: G + 'collection-defense', note: 'Keep.' } },
+    lp: { url: S + 'collection-defense', note: 'Keep.' } },
   { cluster: 'Debt lawyer and collection defense', key: 'S_All-States|debt collection attorney',
     analysis: 'The same ambiguity, with worse conversion: 30 clicks, 1.5 conversions, CPA $258. A share of these clicks are likely businesses looking for a collections attorney.',
     ad: { h: ['For Consumers Sued Over Debt', "We Defend. We Don't Collect.", 'Debt Collection Defense'], d: 'We defend people sued by collectors. We do not collect debts for businesses.' },
-    lp: { url: G + 'collection-defense', note: 'Pin "For Consumers Sued Over Debt" in position 1. Add negatives: "for business", "collection agency for", "hire a collection".' } },
+    lp: { url: S + 'collection-defense', note: 'Pin "For Consumers Sued Over Debt" in position 1. Add negatives: "for business", "collection agency for", "hire a collection".' } },
   { cluster: 'Debt lawyer and collection defense', key: 'S_All-States|debt lawyer near me',
     analysis: '5.8% here against 14.7% for the same query in S_Lawsuit_NW: the campaign overlap again. The All-States ads never speak to "near me".',
     ad: { h: ['Debt Defense Lawyer Near You', 'Licensed in {LOCATION(State):Your State}', 'Sued or Called by a Collector?'], d: 'State-licensed debt defense attorneys. Free case review by phone or online.' },
-    lp: { url: G + 'collection-defense', note: 'Keep one campaign per term: add the S_Lawsuit_NW winners as negatives in S_All-States.' } },
+    lp: { url: S + 'debt-lawsuit-respond-on-time', note: 'Keep one campaign per term: add the S_Lawsuit_NW winners as negatives in S_All-States, so this query lands on the page it converts on in S_Lawsuit_NW.' } },
   { cluster: 'Debt lawyer and collection defense', key: 'S_All-States|debt attorney',
     analysis: 'A broad two-word term below benchmark. It carries no lawsuit or harassment signal, and the ad assumes one.',
     ad: { h: ['Consumer Debt Attorney', 'Sued, Garnished or Harassed?', 'Free Debt Case Review'], d: 'Lawsuits, garnishment and collector calls: our attorneys handle each. Free case review.' },
-    lp: { url: G + 'collection-defense', note: 'Add sitelinks for the three situations (lawsuit, garnishment, calls) so the searcher picks their stage.' } },
+    lp: { url: S + 'collection-defense', note: 'Add sitelinks for the three situations (lawsuit → /debt-lawsuit-respond-on-time, garnishment → /wage-garnishment-attorney, calls → /debt-harassment-stop-calls) so the searcher picks their stage.' } },
   { cluster: 'Debt lawyer and collection defense', key: 'S_Lawsuit_NW|debt lawyer near me',
     analysis: 'Working well: CTR 2.5× benchmark at CPA $73. The respond-on-time ad ("Sued by a Collector? Act Now") qualifies to people who have been sued.',
     ad: { h: ['Debt Lawyer Near You', 'Sued by a Collector?', 'Your Answer Deadline Matters'], d: 'Most courts allow 20 to 30 days to answer. Our attorneys review your deadline today.' },
-    lp: { url: G + 'debt-lawsuit-respond-on-time', note: 'Keep.' } },
+    lp: { url: S + 'debt-lawsuit-respond-on-time', note: 'Keep.' } },
   { cluster: 'Debt lawyer and collection defense', key: 'S_Lawsuit_NW|debt collector lawyer near me',
     analysis: 'Excellent CTR (4× benchmark). Keep, and let S_All-States stop competing for it.',
-    ad: null, lp: { url: G + 'debt-lawsuit-respond-on-time', note: 'Keep.' } },
+    ad: null, lp: { url: S + 'debt-lawsuit-respond-on-time', note: 'Keep.' } },
   { cluster: 'Debt lawyer and collection defense', key: 'S_Lawsuit_NW|debt settlement attorney near me',
     analysis: 'A surprise winner: 17.3% CTR at CPA $51. Searchers who want an attorney, not a settlement company, respond to the lawsuit ad.',
-    ad: null, lp: { url: G + 'debt-lawsuit-respond-on-time', note: 'Keep. See the settlement rows below for the non-local variant.' } },
+    ad: null, lp: { url: S + 'debt-lawsuit-respond-on-time', note: 'Keep. See the settlement rows below for the non-local variant.' } },
 
   // ── Lawsuit: dismissal, fear, named plaintiffs ────────────────────────────
   { cluster: 'Debt lawsuit', key: 'S_Lawsuit_NW|how to get a debt lawsuit dismissed',
     analysis: '"Dismissed" signals a proof and defense question. The proof ad ("No Proof? Case Dismissed." → /debt-lawsuit-proof) fits best but gets only 4% of impressions; the deadline ad serves 96%. Even so, CTR is above benchmark at CPA $53.',
     ad: { h: ['Grounds to Dismiss a Debt Suit', 'They Must Prove You Owe It', 'Free Lawsuit Defense Review'], d: 'Many debt suits lack the records to prove the debt. Our attorneys ask the court for them.' },
-    lp: { url: G + 'debt-lawsuit-proof', note: 'Move dismissal and proof queries into their own ad group so the proof ad and page serve them every time.' } },
+    lp: { url: S + 'debt-lawsuit-proof', note: 'Live page (the proof ad\'s destination). Move dismissal and proof queries into their own ad group so this page serves them every time.' } },
   { cluster: 'Debt lawsuit', key: 'S_CreditCard_NW|how to get a credit card lawsuit dismissed',
     analysis: '9 clicks, 0 conversions. 85% of clicks land on the deadline page (/credit-card-debt-lawsuit-respond), which argues "respond on time", not "how to win".',
     ad: { h: ['Card Lawsuit? Ask for Proof', 'Card Debts Are Often Resold', 'Free Lawsuit Defense Review'], d: 'Card debts change hands and records get lost. Our attorneys demand the proof in court.' },
-    lp: { url: G + 'credit-card-debt-lawsuit-records', note: 'The records page answers this query. Route to it with a dismissal and proof ad group.' } },
+    lp: { url: S + 'credit-card-debt-lawsuit-records', note: 'Live page that answers this query. Route to it with a dismissal and proof ad group.' } },
   { cluster: 'Debt lawsuit', key: 'S_Lawsuit_NW|what happens if a debt collector sues you and you have no money',
     analysis: 'A fear question with 0 conversions. The searcher wants to know the consequences with no money (judgment, garnishment, what is protected). The ad pushes deadline urgency instead.',
     ad: { h: ['Sued and Cannot Pay?', 'You Still Need to Answer', 'Free Review. Flexible Plans.'], d: 'Being sued with no money still needs an answer. We check defenses and what is protected.' },
-    lp: { url: G + 'debt-lawsuit-options', note: 'Set the hero H1 prop to "Sued and can\'t pay? You still have options." Link the Resources article "Sued Over a Debt? What to Do in the Next 28 Days".' } },
+    lp: { url: null, newPage: 'cantpay', note: 'New page built for this fear question: what can and can\'t be taken, no jail for debt, why an answer still matters. Until it is live, the closest live page is start.credolegal.com/debt-lawsuit-options.' } },
   { cluster: 'Debt lawsuit', key: 'S_Lawsuit_NW|midland credit management lawsuit',
     analysis: 'The searcher is looking up who is suing them, and names a debt buyer. The generic "Creditor Suing You?" ad (ad strength Poor) does not show that we know this plaintiff, and it reached the top of the page only 39% of the time. Debt buyers must prove they own the account, which is Credo\'s core validation angle. "lvnv funding llc lawsuit" (1.5%) and "credit corp solutions inc suing me" (4.0%) behave the same.',
     ad: { h: ['Sued by a Debt Buyer?', 'Debt Buyers Must Prove It', 'Free Lawsuit Defense Review'], d: 'Debt buyers must show they own your account and the amount is right. We demand that proof.' },
-    lp: { url: G + 'debt-lawsuit-proof', note: 'NEW variant of the proof page: "Sued by a debt buyer?", with an FAQ naming Midland, LVNV, Cavalry, PRA and Credit Corp (factual page copy is fine; keep names out of ad text for trademark reasons). New ad group "Debt_Buyer_Lawsuit" in S_Lawsuit_NW.' } },
+    lp: { url: null, newPage: 'buyer', note: 'New page that names the common debt buyers (Midland, LVNV, Cavalry, PRA, Credit Corp) and explains why ownership is the weak point of their case. Names are page copy only, not ad text. Run it from a new ad group, "Debt_Buyer_Lawsuit", in S_Lawsuit_NW.' } },
   { cluster: 'Debt lawsuit', key: 'S_Lawsuit_NW|gurstel law firm p c',
     analysis: '0 clicks. This is the plaintiff\'s law firm, and most searchers want its phone number to pay or call. "klima peters & daly p a" (0 to 3%) and "mandarich law group llp" (4.4%) are the same pattern.',
     ad: { h: ['Sued by a Collection Firm?', 'Talk to a Defense Attorney', 'Free Lawsuit Defense Review'], d: 'Before you call the firm suing you, talk to a defense attorney. Free case review.' },
-    lp: { url: G + 'debt-lawsuit-proof', note: 'Same debt-buyer ad group. If CTR stays under 3% after the change, make the firm names negatives.' } },
+    lp: { url: null, newPage: 'buyer', note: 'Same new page and ad group. If CTR stays under 3% after the change, make the firm names negatives.' } },
 
   // ── Settlement intent ─────────────────────────────────────────────────────
   { cluster: 'Debt settlement intent', key: 'S_Lawsuit_NW|debt settlement attorney',
     analysis: 'Below benchmark with CPA $188, while "debt settlement attorney near me" wins (17.3%, $51). Credo\'s position is validation first, with settlement as the fallback. The lawsuit ad does not tell a settlement-minded searcher why validation comes first.',
     ad: { h: ['Debt Settlement Attorney', 'Check the Debt Before Settling', 'Free Debt Case Review'], d: 'Before you settle, our attorneys check if the debt is valid and provable. Free review.' },
-    lp: { url: null, note: 'NEW page from the Landing page template: "Debt settlement or debt validation?", a side-by-side of fees and incentives. Keep settlement promises out of the ads: Google\'s Debt Services policy has already fully limited the CC_Negotiation ad.' } },
+    lp: { url: null, newPage: 'settle', note: 'New page: validation first, court defense if sued, settlement as the fallback, on a flat fee rather than a percentage. Keep settlement promises out of the ads (Google\'s Debt Services policy).' } },
   { cluster: 'Debt settlement intent', key: 'S_CreditCard_NW|debt settlement companies',
     analysis: '0 clicks. These are shoppers comparing settlement companies, a category Credo positions against. "credit acceptance settlement offer" (an auto lender, 0%) and "debt settlement lawyer" (0%) are the same kind of mismatch.',
     ad: null,
@@ -185,21 +194,21 @@ window.FEATURED = [
   { cluster: 'Credit card', key: 'S_CreditCard_NW|credit card lawyer',
     analysis: 'Ambiguous: fraud, chargebacks, merchant disputes. The ad assumes a lawsuit ("Sued for Credit Card Debt?"), which is right for Credo, but most people typing this have not been sued.',
     ad: { h: ['Credit Card Debt Lawyer', 'Sued or Called by a Collector?', 'Free Card Debt Case Review'], d: 'Card debt lawsuits, collector calls and credit report errors. Free attorney case review.' },
-    lp: { url: G + 'credit-cards', note: 'Use the general credit-card page, which lets the visitor pick their situation. Add negatives: "fraud", "chargeback", "merchant", "class action".' } },
+    lp: { url: S + 'credit-card-debt-challenge', note: 'Live page (CC_Negotiation) that works for someone not yet sued ("Do you really owe all that?"). Add negatives: "fraud", "chargeback", "merchant", "class action".' } },
   { cluster: 'Credit card', key: 'S_CreditCard_NW|being sued by credit card company',
     analysis: 'Low volume (43 impressions), so read it as directional. The ad was at the top 92% of the time, so position is not the cause. The likely cause is the headline mix: several deadline-ad headlines are warnings ("No Response = You Lose.", "Most People Don\'t Respond") rather than an answer to "what now?".',
     ad: { h: ['Sued by a Card Company?', 'Card Debts Are Often Resold', 'Your Answer Deadline Matters'], d: 'Most courts allow 20 to 30 days to answer. Our attorneys review your papers today.' },
-    lp: { url: G + 'credit-card-debt-lawsuit-respond', note: 'Keep the page. Pin "Sued by a Card Company?" in position 1.' } },
+    lp: { url: S + 'credit-card-debt-lawsuit-respond', note: 'Keep the page. Pin "Sued by a Card Company?" in position 1.' } },
 
   // ── FDCPA / statute ───────────────────────────────────────────────────────
   { cluster: 'FDCPA and statute research', key: 'S_Lawsuit_NW|fdcpa violations',
     analysis: '0 clicks from the lawsuit ad group ("Sued by a Collector? Act Now"). The same term earned 13.2% in the All-States FDCPA ad group before it was paused.',
     ad: { h: ['FDCPA Violation Review', 'Know What Collectors Cannot Do', 'Free FDCPA Case Review'], d: 'Calls before 8 a.m., threats or calls to your boss may break the FDCPA. We review it.' },
-    lp: { url: G + 'debt-harassment-fdcpa-rights', note: 'Add the FDCPA terms as negatives in Collection_Lawsuit, so S_Harassment_NW › FDCPA_Harassment serves them.' } },
+    lp: { url: S + 'debt-harassment-fdcpa-rights', note: 'Add the FDCPA terms as negatives in Collection_Lawsuit, so S_Harassment_NW › FDCPA_Harassment serves them with this page.' } },
   { cluster: 'FDCPA and statute research', key: 'S_All-States|15 usc 1692',
     analysis: 'People reading the statute text: consumers, but also students and lawyers. The same term gets 7.9% CTR and 0 conversions in S_Lawsuit_NW.',
     ad: null,
-    lp: { url: G + 'fcba-and-fdcpa', note: 'Keep citation terms (15 usc 1692, fair debt collection practices act) at a low bid in one statute ad group, or leave them to organic search. The Resources "Laws" section in the main-site prototype is the natural home.' } },
+    lp: { url: S + 'fcba-and-fdcpa', note: 'Live statute page used by the All-States FDCPA ads (ad group currently paused). Keep citation terms at a low bid in one statute ad group, or leave them to organic search.' } },
 
   // ── Brand ─────────────────────────────────────────────────────────────────
   { cluster: 'Brand', key: 'S_Brand|credo legal', brand: true,
@@ -217,6 +226,5 @@ window.FINDINGS = [
   { t: 'An FDCPA headline states the law backwards', b: 'Ad 805139449564 says "No Calls 8AM to 9PM!". The FDCPA bars calls BEFORE 8 a.m. and AFTER 9 p.m. (15 U.S.C. §1692c(a)(1)). The same ad has a disapproved headline ("They Can\'t Threaten Arrest!", flagged as clickbait).' },
   { t: '"$1,000 per violation" overstates the FDCPA', b: 'Harassment ads say "Each Violation Can Get $1,000". Statutory damages under §1692k(a)(2)(A) are up to $1,000 per action, not per violation. This is a claims-accuracy risk for a law-firm advertiser.' },
   { t: 'One ad serves nothing', b: 'CC_Negotiation ad 805139449426 is fully limited under Google\'s Debt Services policy (certificate missing, US). Certify, or rewrite it without settlement language.' },
-  { t: 'Copy off the house voice', b: 'Live ads use "Real Lawyers From Day One", "We CRUSH Wage Garnishments.", "They Win If You Ignore It!" and "Real Lawyers. No Snakeoil.". brand/voice.md rules out "real attorneys", exclamation marks and combative rhetoric.' },
-  { t: 'Ads still point to start.credolegal.com', b: 'Every non-brand ad sends traffic to start.credolegal.com. The recommended pages are the staging.credolegal.com versions of the same slugs (rebuilt on the Landing page template). Swap the final URLs when staging becomes the ad destination.' }
+  { t: 'Copy off the house voice', b: 'Live ads use "Real Lawyers From Day One", "We CRUSH Wage Garnishments.", "They Win If You Ignore It!" and "Real Lawyers. No Snakeoil.". brand/voice.md rules out "real attorneys", exclamation marks and combative rhetoric.' }
 ];
