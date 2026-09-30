@@ -8,7 +8,7 @@
  * `blocked` names the decision (D#) or manual step (M#) a PBI waits on. */
 window.BACKLOG = {
   updated: '30 Sep 2026',
-  state: '30 Sep: PBI-09, PBI-10, PBI-13, PBI-14, PBI-15 and PBI-16 done (D23 approved and applied; D24 new: per-call $1,000 claims in page copy). 29 Sep (evening): board clean-up. PBI-12 done (all Part B copy fixes live, D20 wording applied). G29 (WEEK 1 tags, 22 pages) done under PBI-19; PBI-01c and PBI-11 closed (PBI-11 follow-up moved to PBI-16); PBI-08 built and reviewed, closes with the operator\'s CRM check (M3). PBI-09 done 30 Sep: the count and security dropdowns keep their options in Webflow (the G17 rewrite script is gone). Shared code (PBI-01d) done and closed: page code and the phone-swap script live once in Site settings (one phone table); every landing-page section is a component with per-page copy in props (8 LP components); new pages start from the draft Landing page template, with copy synced from the prototype by lp-sync.mjs. D20 and D21 decided; D22 opened (8 hero props where the prototype and Webflow wording differ). Waiting on the operator: M2 (delete the 21 old drafts, then the legacy form components go), M3 (CRM check), D1\u2013D3, D5\u2013D9, D22, D24 (D10 optional); PBI-01b and PBI-21 deferred.',
+  state: '30 Sep: PBI-09, PBI-10, PBI-13, PBI-14, PBI-15, PBI-16 and PBI-17 done (D23 approved and applied; D24 new: per-call $1,000 claims in page copy). 29 Sep (evening): board clean-up. PBI-12 done (all Part B copy fixes live, D20 wording applied). G29 (WEEK 1 tags, 22 pages) done under PBI-19; PBI-01c and PBI-11 closed (PBI-11 follow-up moved to PBI-16); PBI-08 built and reviewed, closes with the operator\'s CRM check (M3). PBI-09 done 30 Sep: the count and security dropdowns keep their options in Webflow (the G17 rewrite script is gone). Shared code (PBI-01d) done and closed: page code and the phone-swap script live once in Site settings (one phone table); every landing-page section is a component with per-page copy in props (8 LP components); new pages start from the draft Landing page template, with copy synced from the prototype by lp-sync.mjs. D20 and D21 decided; D22 opened (8 hero props where the prototype and Webflow wording differ). Waiting on the operator: M2 (delete the 21 old drafts, then the legacy form components go), M3 (CRM check), D1\u2013D3, D5\u2013D9, D22, D24 (D10 optional); PBI-01b and PBI-21 deferred.',
   site: { name: 'Credo: Microsite Staging', id: '6ab90fb0761d44332faf21c8', domain: 'staging.credolegal.com' },
 
   pbis: [
@@ -440,18 +440,24 @@ window.BACKLOG = {
         ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots; findings settled', 'done']
       ] },
 
-    { id: 'PBI-17', title: 'Form card, bottom CTA and page width', refs: ['G27', 'G28', 'L6'], by: 'claude',
+    { id: 'PBI-17', title: 'Form card, bottom CTA and page width', refs: ['G27', 'G28', 'L6'], by: 'claude', note: 'Done 30 Sep. New classes hero-call / hero-call-number and the combo hero-card (the old "or call" class name exists three times). The site head\'s PBI-15 rule for the old "OR CALL" no longer matches anything: remove it with the next head edit (DS-8).',
+      review: { items: [
+        { kind: 'Code', by: 'GPT-5.5', verdict: 'approve with fixes', file: 'review/PBI-17.review-gpt.md', settled: true, note: 'Functional compare re-run on all 52 form pages.' },
+        { kind: 'Code', by: 'Gemini 3.1 Pro', verdict: 'approve with fixes', file: 'review/PBI-17.review-gemini.md', settled: true, note: 'Dropdown opened in the pop-up card at 1440/390/320: nothing clipped.' },
+        { kind: 'UX', by: 'GPT-5.5', verdict: 'approve with fixes', file: 'review/PBI-17.review-gpt-ux.md', settled: true, note: 'Call link tap target: PBI-19.' },
+        { kind: 'UX', by: 'Gemini 3.1 Pro', verdict: 'approve', file: 'review/PBI-17.review-gemini-ux.md', settled: true }
+      ], links: [['Packet', 'review/PBI-17.md'], ['Resolution', 'review/PBI-17.triage.md']] },
       why: 'Card border instead of shadow; "or call" inside the card; bottom CTA centred; page wider than the screen.',
       done: 'Card and bottom CTA match the prototype; no sideways overflow on any device.',
       tasks: [
-        ['Card: remove the border, add the soft shadow', 'todo'],
-        ['Move the "or call" block below the card', 'todo'],
-        ['Bottom CTA: left-align, headline max width', 'todo'],
-        ['FAQ answers: cap the line length on desktop (~70 characters; from the PBI-01d P4 UX review; one edit in LP \u00b7 Rights and FAQ)', 'todo'],
-        ['Fix the poition typo and the missing }', 'todo'],
-        ['Publish to staging only and verify', 'todo']
+        ['Card: remove the border, add the soft shadow (Div Block 36: hero and pop-up cards; 4px radius)', 'done'],
+        ['Move the "or call" block below the card: LP \u00b7 Hero and home; "Or call" in mono 13px muted, number ink with a red underline; link id herocta kept', 'done'],
+        ['Bottom CTA: left-align, headline max width (680px, paragraph 560px, button left; headline 26px on phones, missed in PBI-16; "Or call")', 'done'],
+        ['FAQ answers: cap the line length on desktop (~70 characters; from the PBI-01d P4 UX review; one edit in LP \u00b7 Rights and FAQ): 55ch, longest line 72\u201374 characters', 'done'],
+        ['Fix the poition typo and the missing }: page width = screen width at 1440/810/390/320 on 52/52 (was 1555px at 1440)', 'done'],
+        ['Publish to staging only and verify: 52 form pages \u00d7 4 widths 208/208; functional compare before/after on all 52 form pages', 'done']
 ,
-        ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots when anything visible changes; findings settled', 'todo']
+        ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots; findings settled', 'done']
       ] },
 
     { id: 'PBI-18', title: 'Red accent word in the H1', refs: ['G23'], by: 'likely',

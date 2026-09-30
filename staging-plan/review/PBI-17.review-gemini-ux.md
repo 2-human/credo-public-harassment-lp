@@ -1,0 +1,11 @@
+<!-- reviewer: gemini-3.1-pro-preview · 2026-09-30T12:34:38.306Z · 63s · images sent: 12 · usage {"promptTokenCount":14925,"candidatesTokenCount":466,"totalTokenCount":21591,"promptTokensDetails":[{"modality":"TEXT","tokenCount":1896},{"modality":"IMAGE","tokenCount":13029}],"thoughtsTokenCount":6200,"serviceTier":"standard"} -->
+
+| # | Severity (blocker / should-fix / note) | Finding | Screenshot | Suggested change |
+|---|---|---|---|---|
+| 1 | note | **Conclusion 1 (Card): Supported.** The heavy black border is removed and replaced with a subtle shadow and 4px radius, elevating the professional/legal tone. The primary action (red button) remains clear, and no content is clipped by the overflow rule. | P17-hero-desktop-after, P17-hero-phone-after, P17-popup-desktop-after | None. |
+| 2 | note | **Conclusion 2 ("Or call" moved): Supported.** Moving the text outside the card prevents it from competing with the form's primary CTA. It is left-aligned, capitalized to "Or call", and the number features the intended red underline. | P17-hero-desktop-after, P17-hero-phone-after | None. |
+| 3 | note | **Conclusion 3 (Bottom CTA): Supported.** Text and button are left-aligned and width-constrained. The mobile headline is visibly smaller, greatly improving phone usability. However, left-aligning the constrained block on desktop leaves a large, unbalanced visual void on the right. | P17-cta-desktop-after, P17-cta-phone-after | Center the constrained text container block horizontally within the dark section to restore visual balance. |
+| 4 | note | **Conclusion 4 (FAQ width): Supported.** Answers are successfully constrained to roughly 70 characters per line, which vastly improves reading comfort. However, keeping the questions full-width creates a slightly ragged, mismatched right edge. | P17-faq-desktop-after | Apply a similar max-width constraint to the questions (or the parent FAQ container) so they align cleanly with the answers. |
+| 5 | note | **Conclusion 5 (CTA "Or call"): Supported.** The text below the button is correctly capitalized to "Or call", maintaining consistency with the hero changes. | P17-cta-desktop-after, P17-cta-phone-after | None. |
+
+**Overall verdict:** approve
