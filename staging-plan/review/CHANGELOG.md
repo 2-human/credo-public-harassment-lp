@@ -12,8 +12,8 @@ older pages rebuilt in DS-7 (13 state pages: ohio, kentucky, utah, south-dakota,
 minnesota, maryland, colorado, new-york, new-jersey, florida; 8 others: letter, medical-debt-attorney,
 debt-harassment-act-fast, multiple-collectors-more-money, payday-loan-fight-back, payday-loan-debt-rights,
 payday-loan-lawsuit-proof, payday-loan-lawsuit-respond) and home. **4 system pages**: 404, /thank-you,
-/page/thank-you, /page/already-submitted (plus Webflow's password page /401). The 21 old versions are unpublished
-drafts (`{slug}-old`, all 404). The staging site publishes no sitemap and an empty robots.txt.
+/page/thank-you, /page/already-submitted (plus Webflow's password page /401). The 21 old versions were
+deleted by the operator on 30 Sep (evening). The staging site publishes no sitemap and an empty robots.txt.
 
 | Page group | robots | canonical | og:url |
 |---|---|---|---|
@@ -170,7 +170,7 @@ Done in five phases (P1–P5). Visitors see no change, except six small standard
 - Pages panel: draft page "Landing page template". New page steps: see the board note for PBI-01d.
 
 **Revert**
-- No backup folder: see packet. Deleting the draft page removes it.
+- No backup folder: see packet. Deleting the draft page removes it. Deleted 30 Sep with the old drafts (operator); a new landing page now starts as a duplicate of an existing one.
 
 **Evidence / review (P1–P5)**
 - Code: GPT approve with fixes on P1–P5; Gemini approve with fixes (P1, P2, P5) and approve (P3, P4). UX: not needed for P1–P3; P4 UX GPT and Gemini approve with fixes. Packets [PBI-01d-P1.md](PBI-01d-P1.md) … [PBI-01d-P5.md](PBI-01d-P5.md), triage [PBI-01d-P1.triage.md](PBI-01d-P1.triage.md) … [PBI-01d-P5.triage.md](PBI-01d-P5.triage.md).
@@ -288,7 +288,7 @@ Done in five phases (P1–P5). Visitors see no change, except six small standard
 - Pages panel: new pages under the original slugs (page ids in REVERT.md); old pages renamed `{slug}-old`, titled "(old design)", set to draft.
 - Each new page: page settings (SEO title, description, Open Graph copied from the old page); Custom code head = old page's head + one heading style block (since D16: robots, canonical, og:url changed); footer = the template footer; page script RemoveStateOptions 1.0.0 (moved site-wide in PBI-01d P1).
 - Phone numbers: first set in each page's phone-swap embed; since PBI-01d P2 in the `window.CREDO_PHONES` table (site footer code).
-- Still in the project, by decision (D18, 30 Sep): the 21 drafts and the components Hero-Form and Hero-Form-For-New-Pages, used only by them.
+- 30 Sep (evening): the operator deleted the 21 drafts in the Designer (M2), and with them the draft "Landing page template" (PBI-01d P5). They cannot be restored in Webflow; only their page head/footer code is backed up (`2026-09-27/code/`), not their layouts. The components Hero-Form and Hero-Form-For-New-Pages are on no published page; unregistering them and Style Manager Clean up are the operator's (M5).
 
 **Revert**
 - `2026-09-28-ds7/` with REVERT.md (old heads in `oldhead/`, SEO/OG in `meta.json`, new page ids in `new-ids.json`). REVERT.md parts 1–4 cover the rebuild, D16 and D18.
