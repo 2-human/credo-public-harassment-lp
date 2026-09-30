@@ -508,7 +508,7 @@ window.BACKLOG = {
         ['Independent review: code by GPT + Gemini; UX only if anything visible changes; findings settled (no UX: nothing visible; Gemini pending: API credits)', 'done']
       ] },
 
-    { id: 'PBI-20', title: 'CTA labels', refs: ['G16'], by: 'decision', blocked: 'D3',
+    { id: 'PBI-20', title: 'CTA labels', refs: ['G16'], by: 'decision', note: 'Deferred by the operator 30 Sep (D3): the labels stay as they are for now.',
       why: 'Four CTA labels in use; two were asked for.',
       done: 'Only the two agreed labels on all pages.',
       tasks: [
@@ -651,7 +651,7 @@ window.BACKLOG = {
   decisions: [
     ['D1', 'G9', 'Where the form posts', 'Webflow native forms, a first-party endpoint, or formspree with a DPA; and whether staging posts to a test destination meanwhile (recommended).', 'PBI-02'],
     ['D2', 'G10', 'Consent text', 'Counsel-approved wording, and whether express consent needs a checkbox. Note 29 Sep: the operator accepted all existing copy as legal-approved, but no consent text has been written yet, so this stays open: it needs the text itself (or a request to draft it for counsel).', 'PBI-03'],
-    ['D3', 'G16', 'CTA labels', 'Which two labels to keep.', 'PBI-20'],
+    ['D3', 'G16', 'CTA labels', 'Decided 30 Sep (operator): leave the button labels as they are for now (See if you qualify, free / Speak to an attorney now / Get a free case evaluation / Continue). PBI-20 deferred.', 'PBI-20'],
     ['D4', 'Part B', 'The four payday-content pages', 'Decided 28 Sep: rebuild them on the landing-page template, like the other older pages. Applied in DS-7 to the 4 payday-loan pages (own copy each). Separate and still open: the 4 pages that show the payday page\'s content (collection-defense, credit-cards, fcba-and-fdcpa, stop-wage-garnishment), deferred by the operator 29 Sep: own copy or redirect? (PBI-21)', 'PBI-21'],
     ['D5', 'G32', 'Session recorders', 'Keep Mouseflow, or remove it and rely on Clarity.', 'PBI-23'],
     ['D6', 'G21a', 'Call-click posting', 'May staging.credolegal.com post call clicks to the live call-click backend (credo.debtfixer.co) while testing?', 'PBI-22'],
