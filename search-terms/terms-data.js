@@ -15,6 +15,7 @@ window.TERMS = {
    "conv": 10.33,
    "top": 0.886,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -42,6 +43,7 @@ window.TERMS = {
    "conv": 3.67,
    "top": 0.566,
    "intent": "garn_general",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -65,6 +67,7 @@ window.TERMS = {
    "conv": 2.0,
    "top": 0.875,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -94,6 +97,7 @@ window.TERMS = {
    "top": 0.8789808917197452,
    "absTop": 0.34076433121019106,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -118,6 +122,7 @@ window.TERMS = {
    "top": 0.8932806324110671,
    "absTop": 0.308300395256917,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -142,6 +147,7 @@ window.TERMS = {
    "top": 0.879245283018868,
    "absTop": 0.3660377358490566,
    "intent": "lawsuit_lawyer",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -170,6 +176,7 @@ window.TERMS = {
    "top": 0.8991596638655462,
    "absTop": 0.2815126050420168,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -193,6 +200,7 @@ window.TERMS = {
    "conv": 1.0,
    "top": 0.627,
    "intent": "garn_general",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -218,6 +226,7 @@ window.TERMS = {
    "top": 0.875,
    "absTop": 0.28879310344827586,
    "intent": "lawsuit_dismiss",
+   "debtType": "Lawsuit",
    "best": "PR",
    "current": [
     {
@@ -246,6 +255,7 @@ window.TERMS = {
    "top": 0.7934272300469484,
    "absTop": 0.6431924882629108,
    "intent": "brand",
+   "debtType": "Brand",
    "best": "BRAND",
    "current": [
     {
@@ -269,6 +279,7 @@ window.TERMS = {
    "conv": 1.0,
    "top": 0.865,
    "intent": "garn_lawyer",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -292,6 +303,7 @@ window.TERMS = {
    "conv": 4.0,
    "top": 0.95,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -319,6 +331,7 @@ window.TERMS = {
    "conv": 5.01,
    "top": 0.888,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -347,6 +360,7 @@ window.TERMS = {
    "top": 0.8674698795180723,
    "absTop": 0.3253012048192771,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -371,6 +385,7 @@ window.TERMS = {
    "top": 0.8947368421052632,
    "absTop": 0.4152046783625731,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -399,6 +414,7 @@ window.TERMS = {
    "top": 0.8431372549019608,
    "absTop": 0.20915032679738563,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -422,6 +438,7 @@ window.TERMS = {
    "conv": 5.0,
    "top": 0.858,
    "intent": "garn_lawyer",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -445,6 +462,7 @@ window.TERMS = {
    "conv": 2.0,
    "top": 0.734,
    "intent": "garn_general",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -470,6 +488,7 @@ window.TERMS = {
    "top": 0.8770491803278688,
    "absTop": 0.4098360655737705,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -493,6 +512,7 @@ window.TERMS = {
    "conv": 5.0,
    "top": 0.957,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -521,6 +541,7 @@ window.TERMS = {
    "top": 0.808,
    "absTop": 0.312,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -545,6 +566,7 @@ window.TERMS = {
    "top": 0.9166666666666666,
    "absTop": 0.30303030303030304,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -568,6 +590,7 @@ window.TERMS = {
    "conv": 1.0,
    "top": 0.867,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -592,6 +615,7 @@ window.TERMS = {
    "top": 0.8611111111111112,
    "absTop": 0.2777777777777778,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -616,6 +640,7 @@ window.TERMS = {
    "top": 0.7846153846153846,
    "absTop": 0.3769230769230769,
    "intent": "lawsuit_lawyer",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -644,6 +669,7 @@ window.TERMS = {
    "top": 0.8661417322834646,
    "absTop": 0.2047244094488189,
    "intent": "cant_pay",
+   "debtType": "Lawsuit",
    "best": "NCANT",
    "current": [
     {
@@ -672,6 +698,7 @@ window.TERMS = {
    "top": 0.8376068376068376,
    "absTop": 0.6068376068376068,
    "intent": "lawsuit_lawyer",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -700,6 +727,7 @@ window.TERMS = {
    "top": 0.38848920863309355,
    "absTop": 0.06474820143884892,
    "intent": "debt_buyer",
+   "debtType": "Lawsuit",
    "best": "NBUY",
    "current": [
     {
@@ -728,6 +756,7 @@ window.TERMS = {
    "conv": 3.0,
    "top": 0.804,
    "intent": "garn_lawyer",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -752,6 +781,7 @@ window.TERMS = {
    "top": 0.9047619047619048,
    "absTop": 0.3142857142857143,
    "intent": "settlement",
+   "debtType": "General",
    "best": "NSET",
    "current": [
     {
@@ -781,6 +811,7 @@ window.TERMS = {
    "top": 0.9186991869918699,
    "absTop": 0.5365853658536586,
    "intent": "brand",
+   "debtType": "Brand",
    "best": "BRAND",
    "current": [
     {
@@ -805,6 +836,7 @@ window.TERMS = {
    "top": 0.8522727272727273,
    "absTop": 0.3977272727272727,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -828,6 +860,7 @@ window.TERMS = {
    "conv": 2.0,
    "top": 0.892,
    "intent": "garn_lawyer",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -852,6 +885,7 @@ window.TERMS = {
    "top": 0.4752475247524752,
    "absTop": 0.26732673267326734,
    "intent": "fdcpa_research",
+   "debtType": "Harassment",
    "best": "FR",
    "current": [
     {
@@ -876,6 +910,7 @@ window.TERMS = {
    "top": 0.8571428571428571,
    "absTop": 0.17142857142857143,
    "intent": "cc_dismiss",
+   "debtType": "Credit Card",
    "best": "CCREC",
    "current": [
     {
@@ -903,6 +938,7 @@ window.TERMS = {
    "conv": 10.0,
    "top": 0.869,
    "intent": "garn_lawyer",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -926,6 +962,7 @@ window.TERMS = {
    "conv": 2.0,
    "top": 0.892,
    "intent": "garn_lawyer",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -950,6 +987,7 @@ window.TERMS = {
    "top": 0.8229166666666666,
    "absTop": 0.3020833333333333,
    "intent": "fdcpa_research",
+   "debtType": "Harassment",
    "best": "FR",
    "current": [
     {
@@ -977,6 +1015,7 @@ window.TERMS = {
    "conv": 1.5,
    "top": 0.987,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -1005,6 +1044,7 @@ window.TERMS = {
    "conv": 5.0,
    "top": 0.881,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -1033,6 +1073,7 @@ window.TERMS = {
    "top": 0.7857142857142857,
    "absTop": 0.4714285714285714,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -1057,6 +1098,7 @@ window.TERMS = {
    "top": 0.8450704225352113,
    "absTop": 0.28169014084507044,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -1081,6 +1123,7 @@ window.TERMS = {
    "top": 0.88,
    "absTop": 0.25333333333333335,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -1105,6 +1148,7 @@ window.TERMS = {
    "top": 0.8208955223880597,
    "absTop": 0.31343283582089554,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -1128,6 +1172,7 @@ window.TERMS = {
    "conv": 0.5,
    "top": 0.939,
    "intent": "garn_active",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -1155,6 +1200,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.94,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -1179,6 +1225,7 @@ window.TERMS = {
    "top": 0.78125,
    "absTop": 0.21875,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -1203,6 +1250,7 @@ window.TERMS = {
    "top": 0.9166666666666666,
    "absTop": 0.3,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -1226,6 +1274,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.925,
    "intent": "garn_lawyer",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -1249,6 +1298,7 @@ window.TERMS = {
    "conv": 2.0,
    "top": 0.946,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -1272,6 +1322,7 @@ window.TERMS = {
    "conv": 1.0,
    "top": 0.9,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -1295,6 +1346,7 @@ window.TERMS = {
    "conv": 4.92,
    "top": 0.906,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -1323,6 +1375,7 @@ window.TERMS = {
    "top": 0.8909090909090909,
    "absTop": 0.4,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -1347,6 +1400,7 @@ window.TERMS = {
    "top": 0.8478260869565217,
    "absTop": 0.391304347826087,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -1371,6 +1425,7 @@ window.TERMS = {
    "top": 0.813953488372093,
    "absTop": 0.2558139534883721,
    "intent": "lawsuit_dismiss",
+   "debtType": "Lawsuit",
    "best": "PR",
    "current": [
     {
@@ -1398,6 +1453,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.918,
    "intent": "garn_lawyer",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -1422,6 +1478,7 @@ window.TERMS = {
    "top": 0.7966101694915254,
    "absTop": 0.288135593220339,
    "intent": "cc_general",
+   "debtType": "Credit Card",
    "best": "CCC",
    "current": [
     {
@@ -1450,6 +1507,7 @@ window.TERMS = {
    "top": 0.8771929824561403,
    "absTop": 0.3157894736842105,
    "intent": "lawsuit_lawyer",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -1478,6 +1536,7 @@ window.TERMS = {
    "top": 0.8524590163934426,
    "absTop": 0.32786885245901637,
    "intent": "settlement",
+   "debtType": "General",
    "best": "NSET",
    "current": [
     {
@@ -1505,6 +1564,7 @@ window.TERMS = {
    "conv": 8.0,
    "top": 0.82,
    "intent": "garn_lawyer",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -1532,6 +1592,7 @@ window.TERMS = {
    "conv": 1.5,
    "top": 0.981,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -1561,6 +1622,7 @@ window.TERMS = {
    "top": 0.8653846153846154,
    "absTop": 0.40384615384615385,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -1589,6 +1651,7 @@ window.TERMS = {
    "top": 0.851063829787234,
    "absTop": 0.2553191489361702,
    "intent": "lawsuit_lawyer",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -1613,6 +1676,7 @@ window.TERMS = {
    "top": 0.9574468085106383,
    "absTop": 0.5106382978723404,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -1641,6 +1705,7 @@ window.TERMS = {
    "top": 0.5483870967741935,
    "absTop": 0.24193548387096775,
    "intent": "negative",
+   "debtType": "Not Credo",
    "best": "NEG",
    "current": [
     {
@@ -1664,6 +1729,7 @@ window.TERMS = {
    "top": 0.8913043478260869,
    "absTop": 0.45652173913043476,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -1692,6 +1758,7 @@ window.TERMS = {
    "top": 0.9215686274509803,
    "absTop": 0.2549019607843137,
    "intent": "lawsuit_sued",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -1720,6 +1787,7 @@ window.TERMS = {
    "top": 0.6976744186046512,
    "absTop": 0.18604651162790697,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -1744,6 +1812,7 @@ window.TERMS = {
    "top": 0.7954545454545454,
    "absTop": 0.2727272727272727,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -1768,6 +1837,7 @@ window.TERMS = {
    "top": 0.5319148936170213,
    "absTop": 0.3617021276595745,
    "intent": "fdcpa_research",
+   "debtType": "Harassment",
    "best": "FR",
    "current": [
     {
@@ -1791,6 +1861,7 @@ window.TERMS = {
    "conv": 1.0,
    "top": 0.805,
    "intent": "garn_active",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -1818,6 +1889,7 @@ window.TERMS = {
    "conv": 1.0,
    "top": 0.86,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -1847,6 +1919,7 @@ window.TERMS = {
    "top": 0.9473684210526315,
    "absTop": 0.47368421052631576,
    "intent": "lawsuit_lawyer",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -1875,6 +1948,7 @@ window.TERMS = {
    "top": 0.6037735849056604,
    "absTop": 0.2830188679245283,
    "intent": "debt_buyer",
+   "debtType": "Lawsuit",
    "best": "NBUY",
    "current": [
     {
@@ -1903,6 +1977,7 @@ window.TERMS = {
    "conv": 1.0,
    "top": 0.667,
    "intent": "garn_lawyer",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -1927,6 +2002,7 @@ window.TERMS = {
    "top": 0.875,
    "absTop": 0.375,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -1955,6 +2031,7 @@ window.TERMS = {
    "top": 0.9534883720930233,
    "absTop": 0.2558139534883721,
    "intent": "lawsuit_sued",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -1983,6 +2060,7 @@ window.TERMS = {
    "top": 1,
    "absTop": 0.625,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -2007,6 +2085,7 @@ window.TERMS = {
    "top": 0.85,
    "absTop": 0.3,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -2030,6 +2109,7 @@ window.TERMS = {
    "conv": 0.5,
    "top": 0.75,
    "intent": "garn_definition",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -2059,6 +2139,7 @@ window.TERMS = {
    "top": 0.8695652173913043,
    "absTop": 0.1956521739130435,
    "intent": "cc_general",
+   "debtType": "Credit Card",
    "best": "CCC",
    "current": [
     {
@@ -2087,6 +2168,7 @@ window.TERMS = {
    "top": 0.9069767441860465,
    "absTop": 0.20930232558139536,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -2110,6 +2192,7 @@ window.TERMS = {
    "conv": 1.83,
    "top": 0.841,
    "intent": "garn_active",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -2138,6 +2221,7 @@ window.TERMS = {
    "top": 0.7727272727272727,
    "absTop": 0.4318181818181818,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -2165,6 +2249,7 @@ window.TERMS = {
    "conv": 1.0,
    "top": 0.711,
    "intent": "garn_general",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -2190,6 +2275,7 @@ window.TERMS = {
    "top": 0.6829268292682927,
    "absTop": 0.34146341463414637,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -2214,6 +2300,7 @@ window.TERMS = {
    "top": 0.627906976744186,
    "absTop": 0.2558139534883721,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -2238,6 +2325,7 @@ window.TERMS = {
    "top": 0.62,
    "absTop": 0.4,
    "intent": "collector_name",
+   "debtType": "Harassment",
    "best": "HS",
    "current": [
     {
@@ -2266,6 +2354,7 @@ window.TERMS = {
    "top": 0.7142857142857143,
    "absTop": 0.30952380952380953,
    "intent": "fdcpa_research",
+   "debtType": "Harassment",
    "best": "FR",
    "current": [
     {
@@ -2289,6 +2378,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.975,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -2318,6 +2408,7 @@ window.TERMS = {
    "top": 0.95,
    "absTop": 0.2,
    "intent": "cc_lawsuit",
+   "debtType": "Credit Card",
    "best": "CCR",
    "current": [
     {
@@ -2345,6 +2436,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.609,
    "intent": "garn_general",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -2368,6 +2460,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.969,
    "intent": "garn_lawyer",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -2395,6 +2488,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.718,
    "intent": "garn_general",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -2424,6 +2518,7 @@ window.TERMS = {
    "top": 0.7419354838709677,
    "absTop": 0.3225806451612903,
    "intent": "cc_general",
+   "debtType": "Credit Card",
    "best": "CCC",
    "current": [
     {
@@ -2451,6 +2546,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 1,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -2475,6 +2571,7 @@ window.TERMS = {
    "top": 0.7027027027027027,
    "absTop": 0.32432432432432434,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -2499,6 +2596,7 @@ window.TERMS = {
    "top": 0.5526315789473685,
    "absTop": 0.39473684210526316,
    "intent": "fdcpa_action",
+   "debtType": "Harassment",
    "best": "FA",
    "current": [
     {
@@ -2522,6 +2620,7 @@ window.TERMS = {
    "conv": 1.0,
    "top": 0.727,
    "intent": "garn_general",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -2551,6 +2650,7 @@ window.TERMS = {
    "top": 0.8918918918918919,
    "absTop": 0.16216216216216217,
    "intent": "cc_general",
+   "debtType": "Credit Card",
    "best": "CCC",
    "current": [
     {
@@ -2579,6 +2679,7 @@ window.TERMS = {
    "top": 0.9117647058823529,
    "absTop": 0.17647058823529413,
    "intent": "lawsuit_sued",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -2607,6 +2708,7 @@ window.TERMS = {
    "top": 0.84375,
    "absTop": 0.53125,
    "intent": "lawsuit_lawyer",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -2635,6 +2737,7 @@ window.TERMS = {
    "top": 0.8125,
    "absTop": 0.3125,
    "intent": "debt_buyer",
+   "debtType": "Lawsuit",
    "best": "NBUY",
    "current": [
     {
@@ -2664,6 +2767,7 @@ window.TERMS = {
    "top": 0.8857142857142857,
    "absTop": 0.42857142857142855,
    "intent": "lawsuit_dismiss",
+   "debtType": "Lawsuit",
    "best": "PR",
    "current": [
     {
@@ -2691,6 +2795,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.917,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -2714,6 +2819,7 @@ window.TERMS = {
    "conv": 2.0,
    "top": 0.969,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -2737,6 +2843,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.61,
    "intent": "garn_prevent",
+   "debtType": "Garnishment",
    "best": "GP",
    "current": [
     {
@@ -2761,6 +2868,7 @@ window.TERMS = {
    "top": 0.9714285714285714,
    "absTop": 0.4,
    "intent": "lawsuit_lawyer",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -2789,6 +2897,7 @@ window.TERMS = {
    "top": 0.8387096774193549,
    "absTop": 0.22580645161290322,
    "intent": "lawsuit_dismiss",
+   "debtType": "Lawsuit",
    "best": "PR",
    "current": [
     {
@@ -2816,6 +2925,7 @@ window.TERMS = {
    "conv": 1.0,
    "top": 0.9,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -2845,6 +2955,7 @@ window.TERMS = {
    "top": 0.9354838709677419,
    "absTop": 0.5483870967741935,
    "intent": "negative",
+   "debtType": "Not Credo",
    "best": "NEG",
    "current": [
     {
@@ -2871,6 +2982,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.625,
    "intent": "garn_active",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -2895,6 +3007,7 @@ window.TERMS = {
    "top": 0.7407407407407407,
    "absTop": 0.37037037037037035,
    "intent": "cc_general",
+   "debtType": "Credit Card",
    "best": "CCC",
    "current": [
     {
@@ -2923,6 +3036,7 @@ window.TERMS = {
    "top": 0.7428571428571429,
    "absTop": 0.3142857142857143,
    "intent": "cc_general",
+   "debtType": "Credit Card",
    "best": "CCC",
    "current": [
     {
@@ -2951,6 +3065,7 @@ window.TERMS = {
    "top": 0.6857142857142857,
    "absTop": 0.08571428571428572,
    "intent": "lawsuit_lawyer",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -2979,6 +3094,7 @@ window.TERMS = {
    "top": 0.9,
    "absTop": 0.26666666666666666,
    "intent": "lawsuit_summons",
+   "debtType": "Lawsuit",
    "best": "SR",
    "current": [
     {
@@ -3006,6 +3122,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.786,
    "intent": "garn_definition",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -3031,6 +3148,7 @@ window.TERMS = {
    "conv": 1.0,
    "top": 1,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -3060,6 +3178,7 @@ window.TERMS = {
    "top": 0.9210526315789473,
    "absTop": 0.5789473684210527,
    "intent": "brand",
+   "debtType": "Brand",
    "best": "BRAND",
    "current": [
     {
@@ -3084,6 +3203,7 @@ window.TERMS = {
    "top": 0.7586206896551724,
    "absTop": 0.41379310344827586,
    "intent": "lawsuit_lawyer",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -3112,6 +3232,7 @@ window.TERMS = {
    "top": 0.6571428571428571,
    "absTop": 0.2,
    "intent": "fdcpa_action",
+   "debtType": "Harassment",
    "best": "FA",
    "current": [
     {
@@ -3140,6 +3261,7 @@ window.TERMS = {
    "top": 0.46153846153846156,
    "absTop": 0.23076923076923078,
    "intent": "debt_buyer",
+   "debtType": "Lawsuit",
    "best": "NBUY",
    "current": [
     {
@@ -3168,6 +3290,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.828,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -3192,6 +3315,7 @@ window.TERMS = {
    "top": 0.6666666666666666,
    "absTop": 0.1794871794871795,
    "intent": "negative",
+   "debtType": "Not Credo",
    "best": "NEG",
    "current": [
     {
@@ -3215,6 +3339,7 @@ window.TERMS = {
    "top": 0.6153846153846154,
    "absTop": 0.23076923076923078,
    "intent": "lawsuit_sued",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -3242,6 +3367,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.955,
    "intent": "garn_lawyer",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -3265,6 +3391,7 @@ window.TERMS = {
    "conv": 1.0,
    "top": 0.969,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -3293,6 +3420,7 @@ window.TERMS = {
    "conv": 0.5,
    "top": 0.931,
    "intent": "garn_active",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -3321,6 +3449,7 @@ window.TERMS = {
    "top": 0.9166666666666666,
    "absTop": 0.1388888888888889,
    "intent": "cc_lawsuit",
+   "debtType": "Credit Card",
    "best": "CCR",
    "current": [
     {
@@ -3347,6 +3476,7 @@ window.TERMS = {
    "cost": 9.18,
    "conv": 0.0,
    "intent": "lawsuit_sued",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -3374,6 +3504,7 @@ window.TERMS = {
    "conv": 0.5,
    "top": 0.955,
    "intent": "garn_active",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -3396,6 +3527,7 @@ window.TERMS = {
    "cost": 60.86,
    "conv": 0.0,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -3418,6 +3550,7 @@ window.TERMS = {
    "cost": 39.9,
    "conv": 1.0,
    "intent": "lawsuit_lawyer",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -3444,6 +3577,7 @@ window.TERMS = {
    "cost": 0.0,
    "conv": 0.0,
    "intent": "settlement",
+   "debtType": "General",
    "best": "NSET",
    "current": [
     {
@@ -3471,6 +3605,7 @@ window.TERMS = {
    "cost": 90.63,
    "conv": 0.0,
    "intent": "lawsuit_lawyer",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -3497,6 +3632,7 @@ window.TERMS = {
    "cost": 5.54,
    "conv": 0.0,
    "intent": "lawsuit_sued",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -3523,6 +3659,7 @@ window.TERMS = {
    "cost": 44.3,
    "conv": 0.0,
    "intent": "lawsuit_sued",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -3549,6 +3686,7 @@ window.TERMS = {
    "cost": 0.0,
    "conv": 0.0,
    "intent": "debt_buyer",
+   "debtType": "Lawsuit",
    "best": "NBUY",
    "current": [
     {
@@ -3571,6 +3709,7 @@ window.TERMS = {
    "cost": 36.06,
    "conv": 0.0,
    "intent": "cc_lawsuit",
+   "debtType": "Credit Card",
    "best": "CCR",
    "current": [
     {
@@ -3597,6 +3736,7 @@ window.TERMS = {
    "cost": 2.55,
    "conv": 0.0,
    "intent": "collector_name",
+   "debtType": "Harassment",
    "best": "HS",
    "current": [
     {
@@ -3623,6 +3763,7 @@ window.TERMS = {
    "cost": 18.09,
    "conv": 0.0,
    "intent": "lawsuit_summons",
+   "debtType": "Lawsuit",
    "best": "SR",
    "current": [
     {
@@ -3650,6 +3791,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.167,
    "intent": "garn_definition",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -3672,6 +3814,7 @@ window.TERMS = {
    "cost": 32.94,
    "conv": 0.0,
    "intent": "cc_general",
+   "debtType": "Credit Card",
    "best": "CCC",
    "current": [
     {
@@ -3698,6 +3841,7 @@ window.TERMS = {
    "cost": 0.0,
    "conv": 0.0,
    "intent": "collector_name",
+   "debtType": "Harassment",
    "best": "HS",
    "current": [
     {
@@ -3724,6 +3868,7 @@ window.TERMS = {
    "cost": 34.95,
    "conv": 1.33,
    "intent": "lawsuit_lawyer",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -3751,6 +3896,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.909,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -3773,6 +3919,7 @@ window.TERMS = {
    "cost": 28.13,
    "conv": 1.0,
    "intent": "lawsuit_lawyer",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -3795,6 +3942,7 @@ window.TERMS = {
    "cost": 20.71,
    "conv": 1.0,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -3818,6 +3966,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.923,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -3846,6 +3995,7 @@ window.TERMS = {
    "conv": 4.0,
    "top": 0.905,
    "intent": "garn_active",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -3873,6 +4023,7 @@ window.TERMS = {
    "conv": 1.0,
    "top": 0.958,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -3901,6 +4052,7 @@ window.TERMS = {
    "conv": 1.0,
    "top": 0.88,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -3928,6 +4080,7 @@ window.TERMS = {
    "cost": 35.17,
    "conv": 0.0,
    "intent": "lawsuit_lawyer",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -3954,6 +4107,7 @@ window.TERMS = {
    "cost": 103.62,
    "conv": 0.0,
    "intent": "lawsuit_lawyer",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -3980,6 +4134,7 @@ window.TERMS = {
    "cost": 19.92,
    "conv": 0.0,
    "intent": "lawsuit_summons",
+   "debtType": "Lawsuit",
    "best": "SR",
    "current": [
     {
@@ -4007,6 +4162,7 @@ window.TERMS = {
    "conv": 1.0,
    "top": 0.905,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -4031,6 +4187,7 @@ window.TERMS = {
    "conv": 1.0,
    "top": 0.762,
    "intent": "garn_active",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -4054,6 +4211,7 @@ window.TERMS = {
    "conv": 1.0,
    "top": 0.833,
    "intent": "garn_active",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -4081,6 +4239,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.484,
    "intent": "garn_definition",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -4109,6 +4268,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.84,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -4137,6 +4297,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.826,
    "intent": "garn_lawyer",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -4163,6 +4324,7 @@ window.TERMS = {
    "cost": 16.52,
    "conv": 0.0,
    "intent": "lawsuit_sued",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -4189,6 +4351,7 @@ window.TERMS = {
    "cost": 41.32,
    "conv": 1.0,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -4215,6 +4378,7 @@ window.TERMS = {
    "cost": 33.82,
    "conv": 0.0,
    "intent": "lawsuit_sued",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -4241,6 +4405,7 @@ window.TERMS = {
    "cost": 14.18,
    "conv": 0.0,
    "intent": "fdcpa_research",
+   "debtType": "Harassment",
    "best": "FR",
    "current": [
     {
@@ -4267,6 +4432,7 @@ window.TERMS = {
    "cost": 7.06,
    "conv": 0.0,
    "intent": "lawsuit_lawyer",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -4289,6 +4455,7 @@ window.TERMS = {
    "cost": 0.0,
    "conv": 0.0,
    "intent": "negative",
+   "debtType": "Not Credo",
    "best": "NEG",
    "current": [
     {
@@ -4311,6 +4478,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.783,
    "intent": "garn_active",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -4338,6 +4506,7 @@ window.TERMS = {
    "conv": 1.5,
    "top": 1,
    "intent": "garn_active",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -4365,6 +4534,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 1,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -4392,6 +4562,7 @@ window.TERMS = {
    "cost": 23.95,
    "conv": 0.0,
    "intent": "cc_lawsuit",
+   "debtType": "Credit Card",
    "best": "CCR",
    "current": [
     {
@@ -4418,6 +4589,7 @@ window.TERMS = {
    "cost": 0.0,
    "conv": 0.0,
    "intent": "negative",
+   "debtType": "Not Credo",
    "best": "NEG",
    "current": [
     {
@@ -4439,6 +4611,7 @@ window.TERMS = {
    "cost": 12.17,
    "conv": 0.0,
    "intent": "debt_buyer",
+   "debtType": "Lawsuit",
    "best": "NBUY",
    "current": [
     {
@@ -4466,6 +4639,7 @@ window.TERMS = {
    "cost": 51.18,
    "conv": 2.0,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -4489,6 +4663,7 @@ window.TERMS = {
    "conv": 3.0,
    "top": 1,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -4516,6 +4691,7 @@ window.TERMS = {
    "conv": 1.0,
    "top": 1,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -4544,6 +4720,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.696,
    "intent": "garn_general",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -4571,6 +4748,7 @@ window.TERMS = {
    "cost": 6.42,
    "conv": 0.0,
    "intent": "dispute",
+   "debtType": "Harassment",
    "best": "FR",
    "current": [
     {
@@ -4597,6 +4775,7 @@ window.TERMS = {
    "cost": 96.62,
    "conv": 0.0,
    "intent": "lawsuit_lawyer",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -4623,6 +4802,7 @@ window.TERMS = {
    "cost": 14.6,
    "conv": 0.0,
    "intent": "lawsuit_lawyer",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -4649,6 +4829,7 @@ window.TERMS = {
    "cost": 6.63,
    "conv": 0.0,
    "intent": "lawsuit_summons",
+   "debtType": "Lawsuit",
    "best": "SR",
    "current": [
     {
@@ -4675,6 +4856,7 @@ window.TERMS = {
    "cost": 10.92,
    "conv": 0.0,
    "intent": "cc_lawsuit",
+   "debtType": "Credit Card",
    "best": "CCR",
    "current": [
     {
@@ -4701,6 +4883,7 @@ window.TERMS = {
    "cost": 34.15,
    "conv": 2.0,
    "intent": "brand",
+   "debtType": "Brand",
    "best": "BRAND",
    "current": [
     {
@@ -4723,6 +4906,7 @@ window.TERMS = {
    "cost": 28.59,
    "conv": 0.0,
    "intent": "settlement",
+   "debtType": "General",
    "best": "NSET",
    "current": [
     {
@@ -4751,6 +4935,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.8,
    "intent": "garn_general",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -4774,6 +4959,7 @@ window.TERMS = {
    "cost": 0.0,
    "conv": 0.0,
    "intent": "settlement",
+   "debtType": "General",
    "best": "NSET",
    "current": [
     {
@@ -4796,6 +4982,7 @@ window.TERMS = {
    "cost": 0.0,
    "conv": 0.0,
    "intent": "lawsuit_lawyer",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -4822,6 +5009,7 @@ window.TERMS = {
    "cost": 0.0,
    "conv": 0.0,
    "intent": "debt_buyer",
+   "debtType": "Lawsuit",
    "best": "NBUY",
    "current": [
     {
@@ -4849,6 +5037,7 @@ window.TERMS = {
    "cost": 1.41,
    "conv": 0.0,
    "intent": "lawsuit_dismiss",
+   "debtType": "Lawsuit",
    "best": "PR",
    "current": [
     {
@@ -4876,6 +5065,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 1,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -4898,6 +5088,7 @@ window.TERMS = {
    "cost": 0.0,
    "conv": 0.0,
    "intent": "debt_buyer",
+   "debtType": "Lawsuit",
    "best": "NBUY",
    "current": [
     {
@@ -4921,6 +5112,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.762,
    "intent": "garn_active",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -4948,6 +5140,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.636,
    "intent": "garn_active",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -4975,6 +5168,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.952,
    "intent": "garn_active",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -5002,6 +5196,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.87,
    "intent": "garn_exempt",
+   "debtType": "Garnishment",
    "best": "GE",
    "current": [
     {
@@ -5028,6 +5223,7 @@ window.TERMS = {
    "cost": 11.31,
    "conv": 0.0,
    "intent": "lawsuit_sued",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -5054,6 +5250,7 @@ window.TERMS = {
    "cost": 9.33,
    "conv": 0.0,
    "intent": "lawsuit_dismiss",
+   "debtType": "Lawsuit",
    "best": "PR",
    "current": [
     {
@@ -5080,6 +5277,7 @@ window.TERMS = {
    "cost": 14.76,
    "conv": 0.0,
    "intent": "debt_buyer",
+   "debtType": "Lawsuit",
    "best": "NBUY",
    "current": [
     {
@@ -5107,6 +5305,7 @@ window.TERMS = {
    "cost": 0.0,
    "conv": 0.0,
    "intent": "debt_buyer",
+   "debtType": "Lawsuit",
    "best": "NBUY",
    "current": [
     {
@@ -5135,6 +5334,7 @@ window.TERMS = {
    "cost": 6.97,
    "conv": 0.0,
    "intent": "lawsuit_dismiss",
+   "debtType": "Lawsuit",
    "best": "PR",
    "current": [
     {
@@ -5161,6 +5361,7 @@ window.TERMS = {
    "cost": 22.01,
    "conv": 0.0,
    "intent": "fdcpa_research",
+   "debtType": "Harassment",
    "best": "FR",
    "current": [
     {
@@ -5183,6 +5384,7 @@ window.TERMS = {
    "cost": 40.56,
    "conv": 1.0,
    "intent": "fdcpa_action",
+   "debtType": "Harassment",
    "best": "FA",
    "current": [
     {
@@ -5209,6 +5411,7 @@ window.TERMS = {
    "cost": 0.0,
    "conv": 0.0,
    "intent": "negative",
+   "debtType": "Not Credo",
    "best": "NEG",
    "current": [
     {
@@ -5235,6 +5438,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.526,
    "intent": "garn_active",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -5257,6 +5461,7 @@ window.TERMS = {
    "cost": 12.6,
    "conv": 0.0,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -5280,6 +5485,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.895,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -5308,6 +5514,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.895,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -5335,6 +5542,7 @@ window.TERMS = {
    "cost": 5.88,
    "conv": 0.0,
    "intent": "cc_lawsuit",
+   "debtType": "Credit Card",
    "best": "CCR",
    "current": [
     {
@@ -5361,6 +5569,7 @@ window.TERMS = {
    "cost": 33.88,
    "conv": 0.0,
    "intent": "cc_lawsuit",
+   "debtType": "Credit Card",
    "best": "CCR",
    "current": [
     {
@@ -5387,6 +5596,7 @@ window.TERMS = {
    "cost": 27.52,
    "conv": 1.0,
    "intent": "lawsuit_lawyer",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -5413,6 +5623,7 @@ window.TERMS = {
    "cost": 3.75,
    "conv": 0.0,
    "intent": "debt_buyer",
+   "debtType": "Lawsuit",
    "best": "NBUY",
    "current": [
     {
@@ -5440,6 +5651,7 @@ window.TERMS = {
    "cost": 0.0,
    "conv": 0.0,
    "intent": "settlement",
+   "debtType": "General",
    "best": "NSET",
    "current": [
     {
@@ -5468,6 +5680,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 1,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -5490,6 +5703,7 @@ window.TERMS = {
    "cost": 11.19,
    "conv": 0.0,
    "intent": "lawsuit_lawyer",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -5512,6 +5726,7 @@ window.TERMS = {
    "cost": 29.62,
    "conv": 0.0,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -5534,6 +5749,7 @@ window.TERMS = {
    "cost": 0.0,
    "conv": 0.0,
    "intent": "debt_buyer",
+   "debtType": "Lawsuit",
    "best": "NBUY",
    "current": [
     {
@@ -5558,6 +5774,7 @@ window.TERMS = {
    "conv": 1.0,
    "top": 0.955,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -5586,6 +5803,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.895,
    "intent": "garn_active",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -5612,6 +5830,7 @@ window.TERMS = {
    "cost": 15.42,
    "conv": 0.0,
    "intent": "cc_general",
+   "debtType": "Credit Card",
    "best": "CCC",
    "current": [
     {
@@ -5638,6 +5857,7 @@ window.TERMS = {
    "cost": 61.99,
    "conv": 1.0,
    "intent": "cc_lawsuit",
+   "debtType": "Credit Card",
    "best": "CCR",
    "current": [
     {
@@ -5664,6 +5884,7 @@ window.TERMS = {
    "cost": 19.17,
    "conv": 0.0,
    "intent": "lawsuit_lawyer",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -5690,6 +5911,7 @@ window.TERMS = {
    "cost": 0.0,
    "conv": 0.0,
    "intent": "debt_buyer",
+   "debtType": "Lawsuit",
    "best": "NBUY",
    "current": [
     {
@@ -5718,6 +5940,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.647,
    "intent": "garn_exempt",
+   "debtType": "Garnishment",
    "best": "GE",
    "current": [
     {
@@ -5741,6 +5964,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 1,
    "intent": "garn_active",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -5763,6 +5987,7 @@ window.TERMS = {
    "cost": 12.13,
    "conv": 0.0,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -5785,6 +6010,7 @@ window.TERMS = {
    "cost": 5.84,
    "conv": 0.0,
    "intent": "fdcpa_research",
+   "debtType": "Harassment",
    "best": "FR",
    "current": [
     {
@@ -5808,6 +6034,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.941,
    "intent": "garn_active",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -5835,6 +6062,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.895,
    "intent": "garn_active",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -5862,6 +6090,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 1,
    "intent": "garn_exempt",
+   "debtType": "Garnishment",
    "best": "GE",
    "current": [
     {
@@ -5889,6 +6118,7 @@ window.TERMS = {
    "conv": 1.67,
    "top": 0.938,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -5916,6 +6146,7 @@ window.TERMS = {
    "cost": 0.0,
    "conv": 0.0,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -5942,6 +6173,7 @@ window.TERMS = {
    "cost": 8.09,
    "conv": 0.0,
    "intent": "lawsuit_lawyer",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -5968,6 +6200,7 @@ window.TERMS = {
    "cost": 46.62,
    "conv": 0.4,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -5994,6 +6227,7 @@ window.TERMS = {
    "cost": 10.18,
    "conv": 0.0,
    "intent": "debt_buyer",
+   "debtType": "Lawsuit",
    "best": "NBUY",
    "current": [
     {
@@ -6021,6 +6255,7 @@ window.TERMS = {
    "cost": 8.77,
    "conv": 0.0,
    "intent": "lawsuit_sued",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -6047,6 +6282,7 @@ window.TERMS = {
    "cost": 10.74,
    "conv": 0.0,
    "intent": "lawsuit_summons",
+   "debtType": "Lawsuit",
    "best": "SR",
    "current": [
     {
@@ -6074,6 +6310,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 1,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -6102,6 +6339,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.9,
    "intent": "garn_prevent",
+   "debtType": "Garnishment",
    "best": "GP",
    "current": [
     {
@@ -6129,6 +6367,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.857,
    "intent": "garn_lawyer",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -6155,6 +6394,7 @@ window.TERMS = {
    "cost": 7.15,
    "conv": 1.0,
    "intent": "lawsuit_sued",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -6181,6 +6421,7 @@ window.TERMS = {
    "cost": 0.0,
    "conv": 0.0,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -6207,6 +6448,7 @@ window.TERMS = {
    "cost": 63.7,
    "conv": 0.0,
    "intent": "lawsuit_lawyer",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -6233,6 +6475,7 @@ window.TERMS = {
    "cost": 0.0,
    "conv": 0.0,
    "intent": "cant_pay",
+   "debtType": "Lawsuit",
    "best": "NCANT",
    "current": [
     {
@@ -6261,6 +6504,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.533,
    "intent": "garn_definition",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -6284,6 +6528,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.8,
    "intent": "garn_lawyer",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -6307,6 +6552,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 1,
    "intent": "garn_lawyer",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -6329,6 +6575,7 @@ window.TERMS = {
    "cost": 34.08,
    "conv": 2.0,
    "intent": "harassment",
+   "debtType": "Harassment",
    "best": "HS",
    "current": [
     {
@@ -6352,6 +6599,7 @@ window.TERMS = {
    "conv": 0.39,
    "top": 0.75,
    "intent": "garn_prevent",
+   "debtType": "Garnishment",
    "best": "GP",
    "current": [
     {
@@ -6379,6 +6627,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.938,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -6407,6 +6656,7 @@ window.TERMS = {
    "conv": 1.03,
    "top": 1,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -6434,6 +6684,7 @@ window.TERMS = {
    "cost": 14.7,
    "conv": 1.0,
    "intent": "debt_buyer",
+   "debtType": "Lawsuit",
    "best": "NBUY",
    "current": [
     {
@@ -6462,6 +6713,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.727,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -6484,6 +6736,7 @@ window.TERMS = {
    "cost": 37.25,
    "conv": 0.0,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -6507,6 +6760,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.8,
    "intent": "garn_exempt",
+   "debtType": "Garnishment",
    "best": "GE",
    "current": [
     {
@@ -6534,6 +6788,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.929,
    "intent": "garn_active",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -6561,6 +6816,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.867,
    "intent": "garn_active",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -6587,6 +6843,7 @@ window.TERMS = {
    "cost": 39.56,
    "conv": 1.0,
    "intent": "fdcpa_action",
+   "debtType": "Harassment",
    "best": "FA",
    "current": [
     {
@@ -6613,6 +6870,7 @@ window.TERMS = {
    "cost": 25.88,
    "conv": 0.0,
    "intent": "fdcpa_action",
+   "debtType": "Harassment",
    "best": "FA",
    "current": [
     {
@@ -6639,6 +6897,7 @@ window.TERMS = {
    "cost": 16.49,
    "conv": 0.0,
    "intent": "cc_general",
+   "debtType": "Credit Card",
    "best": "CCC",
    "current": [
     {
@@ -6665,6 +6924,7 @@ window.TERMS = {
    "cost": 0.0,
    "conv": 0.0,
    "intent": "collector_name",
+   "debtType": "Harassment",
    "best": "HS",
    "current": [
     {
@@ -6691,6 +6951,7 @@ window.TERMS = {
    "cost": 30.62,
    "conv": 0.0,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -6717,6 +6978,7 @@ window.TERMS = {
    "cost": 10.83,
    "conv": 0.0,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -6743,6 +7005,7 @@ window.TERMS = {
    "cost": 5.82,
    "conv": 0.0,
    "intent": "lawsuit_summons",
+   "debtType": "Lawsuit",
    "best": "SR",
    "current": [
     {
@@ -6770,6 +7033,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.857,
    "intent": "garn_active",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -6792,6 +7056,7 @@ window.TERMS = {
    "cost": 28.79,
    "conv": 0.0,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -6814,6 +7079,7 @@ window.TERMS = {
    "cost": 2.55,
    "conv": 0.0,
    "intent": "lawsuit_sued",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -6837,6 +7103,7 @@ window.TERMS = {
    "conv": 0.33,
    "top": 0.933,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -6865,6 +7132,7 @@ window.TERMS = {
    "conv": 0.67,
    "top": 0.643,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -6892,6 +7160,7 @@ window.TERMS = {
    "cost": 42.13,
    "conv": 0.0,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -6918,6 +7187,7 @@ window.TERMS = {
    "cost": 25.16,
    "conv": 1.0,
    "intent": "settlement",
+   "debtType": "General",
    "best": "NSET",
    "current": [
     {
@@ -6945,6 +7215,7 @@ window.TERMS = {
    "cost": 0.0,
    "conv": 0.0,
    "intent": "harassment",
+   "debtType": "Harassment",
    "best": "HS",
    "current": [
     {
@@ -6971,6 +7242,7 @@ window.TERMS = {
    "cost": 0.0,
    "conv": 0.0,
    "intent": "dispute",
+   "debtType": "Harassment",
    "best": "FR",
    "current": [
     {
@@ -6997,6 +7269,7 @@ window.TERMS = {
    "cost": 14.22,
    "conv": 0.0,
    "intent": "lawsuit_options",
+   "debtType": "Lawsuit",
    "best": "OP",
    "current": [
     {
@@ -7024,6 +7297,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.5,
    "intent": "garn_active",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -7047,6 +7321,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 1,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -7070,6 +7345,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.778,
    "intent": "garn_lawyer",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -7093,6 +7369,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.8,
    "intent": "garn_general",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -7117,6 +7394,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.375,
    "intent": "garn_definition",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -7140,6 +7418,7 @@ window.TERMS = {
    "cost": 36.29,
    "conv": 0.0,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -7163,6 +7442,7 @@ window.TERMS = {
    "conv": 1.0,
    "top": 1,
    "intent": "garn_lawyer",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -7190,6 +7470,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.923,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -7218,6 +7499,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.875,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -7246,6 +7528,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 1,
    "intent": "garn_active",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -7272,6 +7555,7 @@ window.TERMS = {
    "cost": 9.4,
    "conv": 0.0,
    "intent": "harassment",
+   "debtType": "Harassment",
    "best": "HS",
    "current": [
     {
@@ -7298,6 +7582,7 @@ window.TERMS = {
    "cost": 11.48,
    "conv": 0.0,
    "intent": "fdcpa_research",
+   "debtType": "Harassment",
    "best": "FR",
    "current": [
     {
@@ -7324,6 +7609,7 @@ window.TERMS = {
    "cost": 65.3,
    "conv": 0.0,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -7350,6 +7636,7 @@ window.TERMS = {
    "cost": 12.65,
    "conv": 0.0,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -7376,6 +7663,7 @@ window.TERMS = {
    "cost": 27.51,
    "conv": 0.0,
    "intent": "lawsuit_sued",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -7402,6 +7690,7 @@ window.TERMS = {
    "cost": 0.0,
    "conv": 0.0,
    "intent": "lawsuit_sued",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -7428,6 +7717,7 @@ window.TERMS = {
    "cost": 59.9,
    "conv": 0.0,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -7455,6 +7745,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.909,
    "intent": "garn_lawyer",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -7477,6 +7768,7 @@ window.TERMS = {
    "cost": 5.14,
    "conv": 0.0,
    "intent": "negative",
+   "debtType": "Not Credo",
    "best": "NEG",
    "current": [
     {
@@ -7498,6 +7790,7 @@ window.TERMS = {
    "cost": 18.38,
    "conv": 0.0,
    "intent": "debt_buyer",
+   "debtType": "Lawsuit",
    "best": "NBUY",
    "current": [
     {
@@ -7522,6 +7815,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.923,
    "intent": "garn_active",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -7549,6 +7843,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 1,
    "intent": "garn_active",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -7576,6 +7871,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 1,
    "intent": "garn_lawyer",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -7603,6 +7899,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.786,
    "intent": "garn_general",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -7630,6 +7927,7 @@ window.TERMS = {
    "cost": 37.94,
    "conv": 1.0,
    "intent": "cc_lawsuit",
+   "debtType": "Credit Card",
    "best": "CCR",
    "current": [
     {
@@ -7656,6 +7954,7 @@ window.TERMS = {
    "cost": 19.19,
    "conv": 1.0,
    "intent": "cc_lawsuit",
+   "debtType": "Credit Card",
    "best": "CCR",
    "current": [
     {
@@ -7682,6 +7981,7 @@ window.TERMS = {
    "cost": 10.01,
    "conv": 0.0,
    "intent": "cc_dismiss",
+   "debtType": "Credit Card",
    "best": "CCREC",
    "current": [
     {
@@ -7708,6 +8008,7 @@ window.TERMS = {
    "cost": 16.95,
    "conv": 0.0,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -7734,6 +8035,7 @@ window.TERMS = {
    "cost": 40.54,
    "conv": 0.0,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -7760,6 +8062,7 @@ window.TERMS = {
    "cost": 6.59,
    "conv": 0.0,
    "intent": "lawsuit_sued",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -7786,6 +8089,7 @@ window.TERMS = {
    "cost": 0.0,
    "conv": 0.0,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -7812,6 +8116,7 @@ window.TERMS = {
    "cost": 0.0,
    "conv": 0.0,
    "intent": "fdcpa_research",
+   "debtType": "Harassment",
    "best": "FR",
    "current": [
     {
@@ -7838,6 +8143,7 @@ window.TERMS = {
    "cost": 13.87,
    "conv": 0.0,
    "intent": "lawsuit_sued",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -7864,6 +8170,7 @@ window.TERMS = {
    "cost": 16.16,
    "conv": 0.0,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -7890,6 +8197,7 @@ window.TERMS = {
    "cost": 9.25,
    "conv": 0.0,
    "intent": "lawsuit_sued",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -7916,6 +8224,7 @@ window.TERMS = {
    "cost": 0.0,
    "conv": 0.0,
    "intent": "lawsuit_summons",
+   "debtType": "Lawsuit",
    "best": "SR",
    "current": [
     {
@@ -7943,6 +8252,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 1,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -7965,6 +8275,7 @@ window.TERMS = {
    "cost": 30.25,
    "conv": 0.0,
    "intent": "lawsuit_options",
+   "debtType": "Lawsuit",
    "best": "OP",
    "current": [
     {
@@ -7987,6 +8298,7 @@ window.TERMS = {
    "cost": 12.53,
    "conv": 0.0,
    "intent": "negative",
+   "debtType": "Not Credo",
    "best": "NEG",
    "current": [
     {
@@ -8012,6 +8324,7 @@ window.TERMS = {
    "cost": 13.25,
    "conv": 0.0,
    "intent": "settlement",
+   "debtType": "General",
    "best": "NSET",
    "current": [
     {
@@ -8039,6 +8352,7 @@ window.TERMS = {
    "cost": 0.0,
    "conv": 0.0,
    "intent": "lawsuit_summons",
+   "debtType": "Lawsuit",
    "best": "SR",
    "current": [
     {
@@ -8065,6 +8379,7 @@ window.TERMS = {
    "cost": 0.0,
    "conv": 0.0,
    "intent": "lawsuit_lawyer",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -8091,6 +8406,7 @@ window.TERMS = {
    "cost": 0.0,
    "conv": 0.0,
    "intent": "debt_buyer",
+   "debtType": "Lawsuit",
    "best": "NBUY",
    "current": [
     {
@@ -8118,6 +8434,7 @@ window.TERMS = {
    "cost": 8.45,
    "conv": 0.0,
    "intent": "lawsuit_summons",
+   "debtType": "Lawsuit",
    "best": "SR",
    "current": [
     {
@@ -8144,6 +8461,7 @@ window.TERMS = {
    "cost": 12.64,
    "conv": 0.0,
    "intent": "lawsuit_summons",
+   "debtType": "Lawsuit",
    "best": "SR",
    "current": [
     {
@@ -8171,6 +8489,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.75,
    "intent": "garn_active",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -8194,6 +8513,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.583,
    "intent": "garn_definition",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -8217,6 +8537,7 @@ window.TERMS = {
    "cost": 0.0,
    "conv": 0.0,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -8239,6 +8560,7 @@ window.TERMS = {
    "cost": 66.27,
    "conv": 1.0,
    "intent": "debt_buyer",
+   "debtType": "Lawsuit",
    "best": "NBUY",
    "current": [
     {
@@ -8263,6 +8585,7 @@ window.TERMS = {
    "cost": 0.0,
    "conv": 0.0,
    "intent": "negative",
+   "debtType": "Not Credo",
    "best": "NEG",
    "current": [
     {
@@ -8284,6 +8607,7 @@ window.TERMS = {
    "cost": 0.0,
    "conv": 0.0,
    "intent": "lawsuit_lawyer",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -8310,6 +8634,7 @@ window.TERMS = {
    "cost": 0.0,
    "conv": 0.0,
    "intent": "negative",
+   "debtType": "Not Credo",
    "best": "NEG",
    "current": [
     {
@@ -8335,6 +8660,7 @@ window.TERMS = {
    "cost": 8.93,
    "conv": 0.0,
    "intent": "dispute",
+   "debtType": "Harassment",
    "best": "FR",
    "current": [
     {
@@ -8361,6 +8687,7 @@ window.TERMS = {
    "cost": 1.02,
    "conv": 0.0,
    "intent": "lawsuit_dismiss",
+   "debtType": "Lawsuit",
    "best": "PR",
    "current": [
     {
@@ -8387,6 +8714,7 @@ window.TERMS = {
    "cost": 49.98,
    "conv": 0.0,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -8413,6 +8741,7 @@ window.TERMS = {
    "cost": 14.68,
    "conv": 0.0,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -8439,6 +8768,7 @@ window.TERMS = {
    "cost": 0.0,
    "conv": 0.0,
    "intent": "lawsuit_dismiss",
+   "debtType": "Lawsuit",
    "best": "PR",
    "current": [
     {
@@ -8465,6 +8795,7 @@ window.TERMS = {
    "cost": 0.0,
    "conv": 0.0,
    "intent": "debt_buyer",
+   "debtType": "Lawsuit",
    "best": "NBUY",
    "current": [
     {
@@ -8492,6 +8823,7 @@ window.TERMS = {
    "cost": 0.0,
    "conv": 0.0,
    "intent": "debt_buyer",
+   "debtType": "Lawsuit",
    "best": "NBUY",
    "current": [
     {
@@ -8519,6 +8851,7 @@ window.TERMS = {
    "cost": 3.87,
    "conv": 0.0,
    "intent": "lawsuit_summons",
+   "debtType": "Lawsuit",
    "best": "SR",
    "current": [
     {
@@ -8546,6 +8879,7 @@ window.TERMS = {
    "conv": 1.0,
    "top": 0.818,
    "intent": "garn_prevent",
+   "debtType": "Garnishment",
    "best": "GP",
    "current": [
     {
@@ -8569,6 +8903,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.833,
    "intent": "garn_definition",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -8593,6 +8928,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.9,
    "intent": "garn_active",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -8616,6 +8952,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.9,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -8639,6 +8976,7 @@ window.TERMS = {
    "conv": 2.0,
    "top": 0.889,
    "intent": "garn_lawyer",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -8661,6 +8999,7 @@ window.TERMS = {
    "cost": 11.35,
    "conv": 0.0,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -8683,6 +9022,7 @@ window.TERMS = {
    "cost": 12.69,
    "conv": 0.0,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -8705,6 +9045,7 @@ window.TERMS = {
    "cost": 0.0,
    "conv": 0.0,
    "intent": "dispute",
+   "debtType": "Harassment",
    "best": "FR",
    "current": [
     {
@@ -8727,6 +9068,7 @@ window.TERMS = {
    "cost": 0.0,
    "conv": 0.0,
    "intent": "debt_lawyer",
+   "debtType": "General",
    "best": "CD",
    "current": [
     {
@@ -8753,6 +9095,7 @@ window.TERMS = {
    "cost": 1.63,
    "conv": 0.0,
    "intent": "cc_lawsuit",
+   "debtType": "Credit Card",
    "best": "CCR",
    "current": [
     {
@@ -8779,6 +9122,7 @@ window.TERMS = {
    "cost": 0.0,
    "conv": 0.0,
    "intent": "lawsuit_sued",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -8805,6 +9149,7 @@ window.TERMS = {
    "cost": 8.12,
    "conv": 0.0,
    "intent": "lawsuit_lawyer",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -8831,6 +9176,7 @@ window.TERMS = {
    "cost": 0.0,
    "conv": 0.0,
    "intent": "lawsuit_summons",
+   "debtType": "Lawsuit",
    "best": "SR",
    "current": [
     {
@@ -8857,6 +9203,7 @@ window.TERMS = {
    "cost": 28.7,
    "conv": 1.0,
    "intent": "lawsuit_sued",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -8883,6 +9230,7 @@ window.TERMS = {
    "cost": 21.13,
    "conv": 1.0,
    "intent": "lawsuit_dismiss",
+   "debtType": "Lawsuit",
    "best": "PR",
    "current": [
     {
@@ -8909,6 +9257,7 @@ window.TERMS = {
    "cost": 23.45,
    "conv": 0.0,
    "intent": "lawsuit_sued",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -8935,6 +9284,7 @@ window.TERMS = {
    "cost": 7.52,
    "conv": 0.0,
    "intent": "debt_buyer",
+   "debtType": "Lawsuit",
    "best": "NBUY",
    "current": [
     {
@@ -8962,6 +9312,7 @@ window.TERMS = {
    "cost": 0.0,
    "conv": 0.0,
    "intent": "lawsuit_lawyer",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -8988,6 +9339,7 @@ window.TERMS = {
    "cost": 0.0,
    "conv": 0.0,
    "intent": "negative",
+   "debtType": "Not Credo",
    "best": "NEG",
    "current": [
     {
@@ -9014,6 +9366,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 1,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -9038,6 +9391,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.727,
    "intent": "garn_general",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -9062,6 +9416,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 1,
    "intent": "garn_active",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -9084,6 +9439,7 @@ window.TERMS = {
    "cost": 5.1,
    "conv": 0.0,
    "intent": "lawsuit_lawyer",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -9106,6 +9462,7 @@ window.TERMS = {
    "cost": 0.0,
    "conv": 0.0,
    "intent": "cant_pay",
+   "debtType": "Lawsuit",
    "best": "NCANT",
    "current": [
     {
@@ -9129,6 +9486,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 1,
    "intent": "garn_lawyer",
+   "debtType": "Garnishment",
    "best": "GA",
    "current": [
     {
@@ -9152,6 +9510,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.4,
    "intent": "garn_exempt",
+   "debtType": "Garnishment",
    "best": "GE",
    "current": [
     {
@@ -9175,6 +9534,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.6,
    "intent": "garn_exempt",
+   "debtType": "Garnishment",
    "best": "GE",
    "current": [
     {
@@ -9198,6 +9558,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 1,
    "intent": "garn_stop",
+   "debtType": "Garnishment",
    "best": "NSTOP",
    "current": [
     {
@@ -9221,6 +9582,7 @@ window.TERMS = {
    "conv": 0.0,
    "top": 0.7,
    "intent": "garn_exempt",
+   "debtType": "Garnishment",
    "best": "GE",
    "current": [
     {
@@ -9243,6 +9605,7 @@ window.TERMS = {
    "cost": 0.0,
    "conv": 0.0,
    "intent": "lawsuit_lawyer",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -9265,6 +9628,7 @@ window.TERMS = {
    "cost": 16.53,
    "conv": 1.0,
    "intent": "lawsuit_lawyer",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -9287,6 +9651,7 @@ window.TERMS = {
    "cost": 14.66,
    "conv": 0.0,
    "intent": "lawsuit_lawyer",
+   "debtType": "Lawsuit",
    "best": "RT",
    "current": [
     {
@@ -9309,6 +9674,7 @@ window.TERMS = {
    "cost": 37.15,
    "conv": 0.0,
    "intent": "harassment",
+   "debtType": "Harassment",
    "best": "HS",
    "current": [
     {
@@ -9331,6 +9697,7 @@ window.TERMS = {
    "cost": 0.0,
    "conv": 0.0,
    "intent": "debt_buyer",
+   "debtType": "Lawsuit",
    "best": "NBUY",
    "current": [
     {
@@ -9355,6 +9722,7 @@ window.TERMS = {
    "cost": 2.66,
    "conv": 0.0,
    "intent": "lawsuit_summons",
+   "debtType": "Lawsuit",
    "best": "SR",
    "current": [
     {
@@ -9377,6 +9745,7 @@ window.TERMS = {
    "cost": 0.0,
    "conv": 0.0,
    "intent": "fdcpa_research",
+   "debtType": "Harassment",
    "best": "FR",
    "current": [
     {
@@ -9399,6 +9768,7 @@ window.TERMS = {
    "cost": 1.76,
    "conv": 0.0,
    "intent": "fdcpa_research",
+   "debtType": "Harassment",
    "best": "FR",
    "current": [
     {
@@ -9412,6 +9782,15 @@ window.TERMS = {
    "actionText": "Move the term to S_Harassment_NW › FDCPA_Harassment, whose ad lands on the best page (26% of that ad group today, so give the term its own ad group with only that ad).",
    "home": "S_Harassment_NW|FDCPA_Harassment"
   }
+ ],
+ "debtTypes": [
+  "Garnishment",
+  "Lawsuit",
+  "Credit Card",
+  "Harassment",
+  "General",
+  "Brand",
+  "Not Credo"
  ],
  "accountCpa": 71.23,
  "benchCpl": 131.63,

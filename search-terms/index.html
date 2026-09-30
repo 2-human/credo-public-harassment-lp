@@ -124,6 +124,7 @@ td.lpc{min-width:210px;max-width:260px}
     <input id="q" type="search" placeholder="Filter terms…" aria-label="Filter terms">
     <select id="camp" aria-label="Campaign"><option value="">All campaigns</option></select>
     <select id="ver" aria-label="Verdict"><option value="">All verdicts</option><option>Strong</option><option>Above</option><option>Below</option></select>
+    <select id="debt" aria-label="Debt type"><option value="">All debt types</option></select>
     <select id="act" aria-label="Action"><option value="">All actions</option></select>
     <select id="int" aria-label="Intent"><option value="">All intents</option></select>
     <span id="count" style="align-self:center;color:var(--mute);font-size:12.5px"></span>
@@ -131,7 +132,7 @@ td.lpc{min-width:210px;max-width:260px}
   <div class="tw">
     <table id="all">
       <thead><tr>
-        <th data-k="term">Search term</th><th data-k="campaign">Campaign › ad group</th><th data-k="impr">Impr.</th><th data-k="clicks">Clicks</th>
+        <th data-k="term">Search term</th><th data-k="campaign">Campaign › ad group</th><th data-k="debtType">Debt type</th><th data-k="impr">Impr.</th><th data-k="clicks">Clicks</th>
         <th data-k="ctr">CTR</th><th data-k="verdict">Verdict</th><th data-k="conv">Conv.</th><th data-k="cpa">CPA</th>
         <th data-k="intentLabel">Intent</th><th data-k="bestShare">Lands on today</th><th data-k="bestLabel">Best page</th><th data-k="action">Action</th>
       </tr></thead>
@@ -312,14 +313,14 @@ td.lpc{min-width:210px;max-width:260px}
   const allTb = document.querySelector('#all tbody');
   function renderAll() {
     const q = document.getElementById('q').value.trim().toLowerCase(), c = sel.value, v = document.getElementById('ver').value;
-    const ac = document.getElementById('act').value, it = document.getElementById('int').value;
-    const list = rows.filter(r => (!q || r.term.includes(q)) && (!c || r.campaign === c) && (!v || r.verdict === v) && (!ac || r.action === ac) && (!it || r.intent === it))
+    const ac = document.getElementById('act').value, it = document.getElementById('int').value, dt = document.getElementById('debt').value;
+    const list = rows.filter(r => (!q || r.term.includes(q)) && (!c || r.campaign === c) && (!v || r.verdict === v) && (!ac || r.action === ac) && (!it || r.intent === it) && (!dt || r.debtType === dt))
       .sort((a, b) => {
         const x = a[sortK] ?? -1, y = b[sortK] ?? -1;
         return (typeof x === 'string' ? x.localeCompare(y) : x - y) * dir;
       });
     allTb.innerHTML = list.map(r => `<tr>
-      <td>${esc(r.term)}</td><td class="where">${esc(r.campaign)} › ${esc(r.adgroup)}</td>
+      <td>${esc(r.term)}</td><td class="where">${esc(r.campaign)} › ${esc(r.adgroup)}</td><td class="where">${esc(r.debtType)}</td>
       <td class="num">${r.impr}</td><td class="num">${r.clicks}</td><td class="num">${pct(r.ctr)}</td>
       <td><span class="pill v-${r.verdict.toLowerCase()}">${r.verdict}</span></td>
       <td class="num">${r.conv.toFixed(1)}</td><td class="num">${r.cpa ? usd(r.cpa) : '–'}</td>
@@ -335,9 +336,10 @@ td.lpc{min-width:210px;max-width:260px}
     if (sortK === th.dataset.k) dir = -dir; else { sortK = th.dataset.k; dir = typeof rows[0][sortK] === 'string' ? 1 : -1; }
     renderAll();
   });
+  D.debtTypes.forEach(t => document.getElementById('debt').insertAdjacentHTML('beforeend', `<option>${esc(t)}</option>`));
   Object.entries(ACT).forEach(([k, v]) => document.getElementById('act').insertAdjacentHTML('beforeend', `<option value="${k}">${v} (${rows.filter(r => r.action === k).length})</option>`));
   Object.entries(I).forEach(([k, v]) => document.getElementById('int').insertAdjacentHTML('beforeend', `<option value="${k}">${esc(v.label)}</option>`));
-  ['q', 'camp', 'ver', 'act', 'int'].forEach(id => document.getElementById(id).addEventListener('input', renderAll));
+  ['q', 'camp', 'debt', 'ver', 'act', 'int'].forEach(id => document.getElementById(id).addEventListener('input', renderAll));
   renderAll();
 
   // ── Method ────────────────────────────────────────────────────────────────
