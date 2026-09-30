@@ -50,7 +50,7 @@ tr.gh .gs b{color:var(--ink)}
 .pill{display:inline-block;font:700 10.5px/1.7 system-ui,sans-serif;text-transform:uppercase;letter-spacing:.04em;padding:0 7px;border-radius:5px;color:#fff;white-space:nowrap}
 .v-strong{background:var(--ok)}.v-above{background:#4d7c5f}.v-below{background:var(--red)}.v-brand{background:#6b7280}
 .new{background:#b45309}.live{background:var(--ok)}.none{background:#6b7280}.star{background:#2f5f9e}
-.a-keep{background:var(--ok)}.a-keep_test{background:#4d7c5f}.a-route{background:#2f5f9e}.a-move{background:#b45309}.a-new_page{background:#b45309}.a-neg_here{background:#6b7280}.a-negative{background:#111418}.a-bid_down{background:#8a6d3b}
+.a-keep{background:var(--ok)}.a-keep_test{background:#4d7c5f}.a-route{background:#2f5f9e}.a-move{background:#b45309}.a-new_page{background:#b45309}.a-neg_here{background:#6b7280}.a-negative{background:#111418}.a-bid_down{background:#8a6d3b}.a-add_kw{background:var(--ok)}.a-consider{background:#4d7c5f}.a-covered{background:#9aa0a8}.a-skip{background:var(--red)}.a-none{background:#c4c7cc;color:#111418}.a-review{background:#b45309}
 .flag{display:inline-block;font-size:11px;color:var(--amber);border:1px solid #f0d2a8;background:#fff8ee;border-radius:5px;padding:0 5px;margin:3px 3px 0 0}
 .bar{position:relative;height:6px;background:#eceae4;border-radius:3px;margin-top:5px;width:100px}
 .bar i{position:absolute;left:0;top:0;bottom:0;border-radius:3px}
@@ -63,6 +63,9 @@ tr.gh .gs b{color:var(--ink)}
 .txt{font-size:12px;color:#2c323a;margin-top:4px}
 td.c-term{min-width:220px;max-width:300px}
 td.c-trig{min-width:230px;max-width:280px}
+td.c-kw{min-width:170px;max-width:220px;font-size:12px}
+.kwm{display:inline-block;font:600 10px/1.6 ui-monospace,Menlo,monospace;border:1px solid var(--line);border-radius:4px;padding:0 4px;color:var(--mute);margin-left:3px}
+.paused{background:#8a6d3b}
 td.c-best,td.c-new{min-width:190px;max-width:240px}
 td.c-act{min-width:260px;max-width:340px}
 details.ana{margin-top:6px;font-size:12px}
@@ -96,6 +99,13 @@ details.ana .box b:first-child{margin-top:0}
   <h2 id="terms">Every search term: what it triggers, where it should land, what to do</h2>
   <details class="how"><summary>How the best page and the action are decided</summary><ol id="rules"></ol></details>
 
+  <div class="tools">
+    <select id="scope" aria-label="Scope" style="font-weight:600">
+      <option value="active">Active campaigns · last 90 days</option>
+      <option value="history">History · paused and removed campaigns, all time</option>
+      <option value="both">Both</option>
+    </select>
+  </div>
   <div class="tools" id="chips">
     <button class="chip" data-f="all" aria-pressed="true">All</button>
     <button class="chip" data-f="good" aria-pressed="false">Working well</button>
@@ -103,6 +113,7 @@ details.ana .box b:first-child{margin-top:0}
     <button class="chip" data-f="leak" aria-pressed="false">High CTR, weak conversion</button>
     <button class="chip" data-f="wrong" aria-pressed="false">Not on the best page</button>
     <button class="chip" data-f="star" aria-pressed="false">Analysed rows</button>
+    <button class="chip" data-f="ideas" aria-pressed="false">Keyword ideas from history</button>
   </div>
   <div class="tools">
     <input id="q" type="search" placeholder="Filter terms…" aria-label="Filter terms">
@@ -125,8 +136,9 @@ details.ana .box b:first-child{margin-top:0}
     <table id="tbl">
       <thead><tr>
         <th data-k="term">Search term</th>
-        <th data-k="impr">Impr.</th><th data-k="clicks">Clicks</th><th data-k="ctr">CTR vs benchmark</th><th data-k="conv">Conv. / CPA</th><th data-k="top" class="grp-last">Top of page</th>
+        <th data-k="impr">Impr.</th><th data-k="clicks">Clicks</th><th data-k="ctr">CTR vs benchmark</th><th data-k="conv">Conv. / CPA</th><th data-k="top" class="grp-last">Top of page (30 d)</th>
         <th data-k="dom">Triggered today → landing page</th>
+        <th data-k="kw">Triggered by keyword</th>
         <th data-k="liveShare">Best current page</th>
         <th data-k="newp">Recommended new page</th>
         <th data-k="action">Recommended action</th>
@@ -144,13 +156,13 @@ details.ana .box b:first-child{margin-top:0}
 <script>
 (function () {
   // Account totals: customer resource, LAST_30_DAYS, pulled 2026-09-30 (read-only GAQL).
-  const ACCT = { impr: 145158, clicks: 10828, cost: 89726.61, conv: 1259.73 };
+  const ACCT = window.TERMS.account90d;  // customer resource, 2026-07-02..2026-09-29 (read-only GAQL)
   // WordStream/LocaliQ 2026 search benchmarks, Attorneys & Legal Services.
   const BM = { ctr: 0.0587, cvr: 0.0555, cpl: 131.63, src: 'https://localiq.com/blog/search-advertising-benchmarks/' };
   const acctCpa = ACCT.cost / ACCT.conv;
 
   const D = window.TERMS, rows = D.rows, P = D.pages, I = D.intents;
-  const ACT = { keep: 'Keep', keep_test: 'Keep + A/B test', route: 'Route', move: 'Move', new_page: 'New page', neg_here: 'Negative here', negative: 'Add negative', bid_down: 'Bid down' };
+  const ACT = { keep: 'Keep', keep_test: 'Keep + A/B test', route: 'Route', move: 'Move', new_page: 'New page', neg_here: 'Negative here', negative: 'Add negative', bid_down: 'Bid down', add_kw: 'Add as keyword', consider: 'Consider as keyword', covered: 'Covered', skip: 'Do not re-add', none: 'No action', review: 'Review' };
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   const pct = x => (x * 100).toFixed(1) + '%';
   const bmp = x => (x * 100).toFixed(2) + '%';
@@ -168,35 +180,42 @@ details.ana .box b:first-child{margin-top:0}
     r.ctr = r.clicks / r.impr;
     r.cpa = r.conv > 0 ? r.cost / r.conv : null;
     r.verdict = r.brand ? 'Brand' : r.ctr >= 2 * BM.ctr ? 'Strong' : r.ctr >= BM.ctr ? 'Above' : 'Below';
-    r.dom = r.current[0].page;
+    r.dom = r.current.length ? r.current[0].page : null;
+    r.top = r.top30;
+    r.kw = r.keywords && r.keywords.length ? r.keywords[0].text : '';
     r.liveBest = P[r.best].kind === 'new' ? (r.interim || P[r.best].interim) : (P[r.best].kind === 'none' ? null : r.best);
-    r.liveShare = r.liveBest ? (r.current.find(c => c.page === r.liveBest) || { share: 0 }).share : -1;
+    r.liveShare = r.scope === 'history' ? null : r.liveBest ? (r.current.find(c => c.page === r.liveBest) || { share: 0 }).share : -1;
     r.newp = P[r.best].kind === 'new' ? P[r.best].label : '';
     r.intentLabel = I[r.intent].label;
     r.leak = !r.brand && r.ctr >= BM.ctr && r.clicks >= 10 && (r.conv === 0 || r.cpa > 2 * acctCpa);
-    r.wrong = !['NEG', 'BRAND'].includes(r.best) && r.action !== 'neg_here' && r.liveShare < 50;
+    r.wrong = r.scope === 'active' && !['NEG', 'BRAND'].includes(r.best) && r.action !== 'neg_here' && r.liveShare < 50;
+    r.idea = ['add_kw', 'consider'].includes(r.action);
   });
   const unmatched = window.FEATURED.filter(f => !rows.some(r => r.key === f.key));
   if (unmatched.length) console.warn('featured rows not matched', unmatched.map(f => f.key));
 
   // ── header, KPIs, findings ───────────────────────────────────────────────
-  const nb = rows.filter(r => !['NEG', 'BRAND'].includes(r.best));
+  const act = rows.filter(r => r.scope === 'active'), hist = rows.filter(r => r.scope === 'history');
+  const nb = act.filter(r => !['NEG', 'BRAND'].includes(r.best));
   const onBest = nb.reduce((a, r) => a + r.impr * r.bestShare / 100, 0) / nb.reduce((a, r) => a + r.impr, 0);
-  const covered = rows.reduce((a, r) => a + r.impr, 0);
-  const uniq = new Set(rows.map(r => r.term)).size, dupTerms = new Set(rows.filter(r => r.dup).map(r => r.term)).size;
+  const covered = act.reduce((a, r) => a + r.impr, 0), hCovered = hist.reduce((a, r) => a + r.impr, 0);
+  const hLife = D.historyLifetime.search + D.historyLifetime.pmax;
+  const uniq = new Set(act.map(r => r.term)).size, dupTerms = new Set(act.filter(r => r.dup).map(r => r.term)).size;
   document.getElementById('lede').innerHTML =
-    `${esc(D.account)} · ${esc(D.period)}. CTR is compared with the 2026 WordStream/LocaliQ benchmark for <b>Attorneys &amp; Legal Services</b> ` +
+    `${esc(D.account)}. <b>Active campaigns</b>: ${esc(D.periods.active)}. <b>History</b>: paused and removed campaigns, ${esc(D.periods.history)}. CTR is compared with the 2026 WordStream/LocaliQ benchmark for <b>Attorneys &amp; Legal Services</b> ` +
     `(<a href="${BM.src}" target="_blank" rel="noopener">source</a>): CTR ${bmp(BM.ctr)}, conversion rate ${bmp(BM.cvr)}, cost per lead ${usd2(BM.cpl)}. ` +
-    `One table, ${rows.length} rows (${uniq} distinct search terms): what each term triggers today, the best live page, the recommended new page where no live page fits, and the action.`;
-  const nonBrand = rows.filter(r => !r.brand);
+    `One table: ${act.length} active rows (${uniq} distinct terms) and ${hist.length} history rows. For each: what it triggers, the best live page, the recommended new page where no live page fits, and the action.`;
+  const nonBrand = act.filter(r => !r.brand);
   const above = nonBrand.filter(r => r.verdict !== 'Below').length;
   document.getElementById('kpis').innerHTML = [
     ['Account CTR', bmp(ACCT.clicks / ACCT.impr), `benchmark ${bmp(BM.ctr)}`],
     ['Cost per conversion', usd2(acctCpa), `benchmark CPL ${usd2(BM.cpl)}`],
     ['Conversion rate', bmp(ACCT.conv / ACCT.clicks), `benchmark ${bmp(BM.cvr)}`],
-    ['Terms analysed', String(rows.length), `${pct(covered / ACCT.impr)} of impressions`],
-    ['At or above CTR benchmark', `${above} of ${nonBrand.length}`, 'non-brand rows'],
-    ['On the best page today', pct(onBest), `of non-brand impressions · ${dupTerms} terms in several places`]
+    ['Active rows (90 d)', String(act.length), `${pct(covered / ACCT.impr)} of the account's 90-day impressions`],
+    ['History rows', String(hist.length), `${pct(hCovered / hLife)} of paused campaigns' lifetime impressions`],
+    ['Keyword ideas from history', String(hist.filter(r => r.action === 'add_kw').length) + ' + ' + hist.filter(r => r.action === 'consider').length, 'proven converters + worth considering'],
+    ['At or above CTR benchmark', `${above} of ${nonBrand.length}`, 'non-brand active rows'],
+    ['On the best page today', pct(onBest), `of non-brand active impressions · ${dupTerms} terms in several places`]
   ].map(([a, b, c]) => `<div class="card"><small>${a}</small><b>${b}</b><span>${c}</span></div>`).join('');
   document.getElementById('findings').innerHTML = window.FINDINGS.map(f => `<div class="card"><b>${esc(f.t)}</b><p>${esc(f.b)}</p></div>`).join('');
   document.getElementById('rules').innerHTML = [
@@ -215,13 +234,14 @@ details.ana .box b:first-child{margin-top:0}
     if (r.impr < 50) fl.push('low volume: directional');
     if (r.clicks >= 5 && r.conv === 0) fl.push('no conversions');
     else if (r.cpa && r.cpa > 2 * acctCpa) fl.push('CPA > 2× account');
-    if (r.dup) fl.push('also in another ad group');
+    if (r.dup && r.scope === 'active') fl.push('also in another ad group');
     let ana = '';
     if (r.f) {
       const ad = r.f.ad ? `<b>Recommended ad</b><div class="rec"><div class="hl">${r.f.ad.h.map(esc).join(' | ')}</div><div>${esc(r.f.ad.d)}</div></div>` : '<b>Recommended ad</b><div>Keep the current ad.</div>';
-      ana = `<details class="ana"><summary>Analysis and recommended ad</summary><div class="box"><b>Intent match</b><div>${esc(r.f.analysis)}</div>${ad}</div></details>`;
+      ana = `<details class="ana"><summary>Analysis and recommended ad</summary><div class="box"><b>Intent match</b><div>${esc(r.f.analysis)}</div>${ad}<div class="small" style="margin-top:6px">Analysis written on the 30-day window (31 Aug – 29 Sep); the row's numbers are 90 days.</div></div></details>`;
     }
-    return `<div class="term">${esc(r.term)} ${r.f ? '<span class="pill star">Analysed</span>' : ''}</div>` +
+    if (r.scope === 'history' && r.dup) fl.push('in several paused campaigns');
+    return `<div class="term">${esc(r.term)} ${r.f ? '<span class="pill star">Analysed</span>' : ''}${r.scope === 'history' ? ' <span class="pill paused">History</span>' : ''}</div>` +
       `<div class="where">${esc(r.campaign)} › ${esc(r.adgroup)}</div>` +
       `<div class="where">${esc(r.debtType)} · ${esc(r.intentLabel)}</div>` +
       fl.map(x => `<span class="flag">${esc(x)}</span>`).join('') + ana;
@@ -233,6 +253,7 @@ details.ana .box b:first-child{margin-top:0}
       `<div class="bar"><i style="width:${w}%;background:${col}"></i><em style="left:${BM.ctr / 0.30 * 100}%"></em></div>`;
   };
   const trigCell = r => {
+    if (r.scope === 'history') return `<span class="pill paused">Paused campaign</span><div class="txt">${esc(r.campaign)}${r.adgroup ? ' › ' + esc(r.adgroup) : ''}</div><div class="small">Not running; shown for keyword ideas and negatives.</div>`;
     const ads = window.ADS[r.campaign + '|' + r.adgroup] || [];
     if (!ads.length) return r.current.map(c => `<div class="ad">${c.share}% → ${link(P[c.page].url, path(P[c.page].url))}</div>`).join('');
     return ads.map(a => `<div class="ad"><div class="small">Ad ${a.id} · <b>${a.share}%</b></div>` +
@@ -240,12 +261,20 @@ details.ana .box b:first-child{margin-top:0}
       (a.note ? `<div class="warn">${esc(a.note)}</div>` : '') +
       `<div>→ ${link(a.lp, path(a.lp))}</div></div>`).join('');
   };
+  const kwCell = r => {
+    if (!r.keywords || !r.keywords.length) return '<span class="small">–</span>';
+    const tot = r.keywords.reduce((a, k) => a + k.impr, 0);
+    const M = { EXACT: 'exact', PHRASE: 'phrase', BROAD: 'broad' };
+    return r.keywords.slice(0, 3).map(k => `<div>${esc(k.text)}<span class="kwm">${M[k.match] || esc(k.match.toLowerCase())}</span> <span class="small">${Math.round(k.impr / tot * 100)}%</span></div>`).join('') +
+      (r.keywords.length > 3 ? `<div class="small">+${r.keywords.length - 3} more</div>` : '');
+  };
   const bestCell = r => {
     if (!r.liveBest) return '<span class="pill none">None</span><div class="txt">Not a Credo search.</div>';
     const pg = P[r.liveBest], interim = P[r.best].kind === 'new', on = r.liveShare;
     return `<span class="pill live">${pg.kind === 'brand' ? 'Brand' : 'Live'}</span> ${link(pg.url, path(pg.url))}` +
       `<div class="small">${esc(pg.label)}${interim ? ' · until the new page is built' : ''}</div>` +
-      `<div class="txt">${on === 100 ? 'All of this term\'s traffic lands here today.' : on ? `${on}% of this term's traffic lands here today.` : 'None of this term\'s traffic lands here today.'}</div>` +
+      (r.scope === 'history' ? '<div class="txt">Where this term would go if it runs again.</div>' :
+      `<div class="txt">${on === 100 ? 'All of this term\'s traffic lands here today.' : on ? `${on}% of this term's traffic lands here today.` : 'None of this term\'s traffic lands here today.'}</div>`) +
       (interim && P[r.best].interimWhy ? `<div class="small">${esc(P[r.best].interimWhy)}</div>` : '');
   };
   const newCell = r => {
@@ -266,6 +295,7 @@ details.ana .box b:first-child{margin-top:0}
     <td class="num" data-l="Conversions / CPA">${r.conv.toFixed(1)}<br><span class="small">${r.cpa ? usd(r.cpa) : '–'}</span></td>
     <td class="num" data-l="Top of page">${r.top != null ? pct(r.top) : '–'}</td>
     <td class="c-trig" data-l="Triggered today → landing page">${trigCell(r)}</td>
+    <td class="c-kw" data-l="Triggered by keyword">${kwCell(r)}</td>
     <td class="c-best" data-l="Best current page">${bestCell(r)}</td>
     <td class="c-new" data-l="Recommended new page">${newCell(r)}</td>
     <td class="c-act" data-l="Recommended action">${actCell(r)}</td></tr>`;
@@ -273,7 +303,7 @@ details.ana .box b:first-child{margin-top:0}
   let chip = 'all', sortK = 'impr', dir = -1, grp = 'intent';
   const groupHtml = (key, list) => {
     const impr = list.reduce((a, r) => a + r.impr, 0), conv = list.reduce((a, r) => a + r.conv, 0);
-    const scored = list.filter(r => !['NEG', 'BRAND'].includes(r.best));
+    const scored = list.filter(r => r.scope === 'active' && !['NEG', 'BRAND'].includes(r.best));
     const si = scored.reduce((a, r) => a + r.impr, 0), on = si ? scored.reduce((a, r) => a + r.impr * r.bestShare / 100, 0) / si : null;
     const terms = new Set(list.map(r => r.term)).size;
     let label = key, why = '', page = '';
@@ -284,7 +314,7 @@ details.ana .box b:first-child{margin-top:0}
              pg.kind === 'none' ? 'Best page: <b>none (negatives)</b>' : `Best page: <b>${esc(path(pg.url))}</b>`;
     }
     const bar = on == null ? '' : `<span class="bar" style="display:inline-block;margin:0;vertical-align:middle"><i style="width:${on * 100}%;background:${on >= .5 ? 'var(--ok)' : 'var(--red)'}"></i></span>`;
-    return `<tr class="gh"><td colspan="10"><div class="gl">${esc(label)}</div>${why ? `<div class="gw">${esc(why)}</div>` : ''}
+    return `<tr class="gh"><td colspan="11"><div class="gl">${esc(label)}</div>${why ? `<div class="gw">${esc(why)}</div>` : ''}
       <div class="gs">${page ? `<span>${page}</span>` : ''}<span><b>${terms}</b> terms</span><span><b>${impr.toLocaleString('en-US')}</b> impr.</span><span><b>${conv.toFixed(1)}</b> conv.</span>
       ${on == null ? '' : `<span>On the best page today: <b>${pct(on)}</b> ${bar}</span>`}</div></td></tr>`;
   };
@@ -295,15 +325,18 @@ details.ana .box b:first-child{margin-top:0}
   [...new Set(rows.map(r => r.campaign))].sort().forEach(c => $('camp').insertAdjacentHTML('beforeend', `<option>${esc(c)}</option>`));
   Object.entries(I).forEach(([k, v]) => $('int').insertAdjacentHTML('beforeend', `<option value="${k}">${esc(v.label)}</option>`));
   Object.entries(ACT).forEach(([k, v]) => $('act').insertAdjacentHTML('beforeend', `<option value="${k}">${v} (${rows.filter(r => r.action === k).length})</option>`));
+  // Verdicts only mean something for active rows with volume; history keeps them too.
 
   const chipOk = r => chip === 'all' || (chip === 'good' && (r.brand || r.verdict !== 'Below')) || (chip === 'bad' && !r.brand && r.verdict === 'Below') ||
-    (chip === 'leak' && r.leak) || (chip === 'wrong' && r.wrong) || (chip === 'star' && r.f);
-  const val = (r, k) => k === 'top' ? (r.top ?? -1) : k === 'dom' ? path(P[r.dom].url) : k === 'newp' ? r.newp : r[k];
+    (chip === 'leak' && r.leak) || (chip === 'wrong' && r.wrong) || (chip === 'star' && r.f) || (chip === 'ideas' && r.idea);
+  const val = (r, k) => k === 'top' ? (r.top ?? -1) : k === 'dom' ? (r.dom ? path(P[r.dom].url) : 'zz ' + r.campaign) : k === 'newp' ? r.newp : k === 'liveShare' ? (r.liveShare ?? -1) : r[k];
   function render() {
     const q = $('q').value.trim().toLowerCase();
     const f = { debtType: $('debt').value, campaign: $('camp').value, intent: $('int').value, verdict: $('ver').value, action: $('act').value };
     grp = $('grp').value;
-    const list = rows.filter(r => chipOk(r) && (!q || r.term.includes(q)) && Object.entries(f).every(([k, v]) => !v || r[k] === v))
+    const sc = $('scope').value;
+    if (chip === 'ideas' && sc === 'active') { $('scope').value = 'history'; return render(); }
+    const list = rows.filter(r => (sc === 'both' || r.scope === sc) && chipOk(r) && (!q || r.term.includes(q)) && Object.entries(f).every(([k, v]) => !v || r[k] === v))
       .sort((a, b) => { const x = val(a, sortK), y = val(b, sortK); return (typeof x === 'string' ? String(x).localeCompare(String(y)) : (x ?? -1) - (y ?? -1)) * dir; });
     let html = '';
     if (grp) {
@@ -313,7 +346,7 @@ details.ana .box b:first-child{margin-top:0}
         .forEach(([k, l]) => { html += groupHtml(k, l) + l.map(rowHtml).join(''); });
     } else html = list.map(rowHtml).join('');
     document.querySelector('#tbl tbody').innerHTML = html;
-    $('count').textContent = `${list.length} of ${rows.length} rows`;
+    $('count').textContent = `${list.length} of ${rows.filter(r => sc === 'both' || r.scope === sc).length} rows`;
     document.querySelectorAll('#tbl th').forEach(th => th.dataset.dir = th.dataset.k === sortK ? (dir < 0 ? 'desc' : 'asc') : '');
   }
   document.querySelector('#tbl thead').addEventListener('click', e => {
@@ -327,16 +360,18 @@ details.ana .box b:first-child{margin-top:0}
     document.querySelectorAll('#chips .chip').forEach(c => c.setAttribute('aria-pressed', c === b));
     chip = b.dataset.f; render();
   });
-  ['q', 'debt', 'camp', 'int', 'ver', 'act', 'grp'].forEach(id => $(id).addEventListener('input', render));
+  ['scope', 'q', 'debt', 'camp', 'int', 'ver', 'act', 'grp'].forEach(id => $(id).addEventListener('input', render));
   render();
 
   // ── method ───────────────────────────────────────────────────────────────
   $('method').innerHTML = [
-    `Source: ${esc(D.source)}. Cut-off: ${esc(D.threshold)}. The long tail below the cut-off is not shown; these rows cover ${pct(covered / ACCT.impr)} of the account's impressions.`,
-    `Verdicts compare each term's CTR with the benchmark (${bmp(BM.ctr)}); brand terms are not compared. Terms under 50 impressions are flagged as directional. "Top of page" is the share of impressions shown above the organic results; below-benchmark terms were at the top less often (median 79%) than above-benchmark terms (89%), so part of a low CTR is position, not copy.`,
+    `Active: ${esc(D.sources.active)}; ${esc(D.thresholds.active)}. These rows cover ${pct(covered / ACCT.impr)} of the account's 90-day impressions; the rest is the long tail below the cut-off and searches Google does not report.`,
+    `History: ${esc(D.sources.history)}; ${esc(D.thresholds.history)}. These rows cover ${pct(hCovered / hLife)} of the paused campaigns' lifetime impressions (Performance Max impressions include non-search placements, so the true search share is higher). History actions: Add as keyword = at least 3 conversions below the industry cost per lead; Consider = converted at least once; Do not re-add = 10+ clicks and no conversions; Covered = already running in an active campaign (or the same term in another paused campaign).`,
+    'Only Ryze (Google Ads account 9399506772) was used. "Triggered by keyword" is the keyword and match type Google reports for the term, with each keyword\'s share of the term\'s impressions.',
+    `Verdicts compare each term's CTR with the benchmark (${bmp(BM.ctr)}); brand terms are not compared. Terms under 50 impressions are flagged as directional. "Top of page (30 d)" is the share of impressions shown above the organic results, pulled for the 30-day window only; below-benchmark terms were at the top less often (median 79%) than above-benchmark terms (89%), so part of a low CTR is position, not copy.`,
     `Conversion flags use the account's own cost per conversion (${usd(acctCpa)}). Conversions are Google Ads conversions as configured (fractional values mean data-driven attribution), not verified leads.`,
     'Recommended ad copy (under "Analysis and recommended ad") follows brand/voice.md and RSA limits (headlines ≤ 30 characters, descriptions ≤ 90; {LOCATION(State):Your State} is Google\'s location insertion). It is draft copy for attorney review. New pages are drafts too: attorney review and a Webflow build come before any ad points to them. Any landing page that carries an ad needs the NY attorney-advertising snippet.',
-    'Data: content/campaigns/google-ads/search-terms/2026-09-30-terms.json → scripts/google-ads/build-search-terms.py (mapping rules in search_term_intents.py) → terms-data.js. Analysis: featured.js (hand-authored).'
+    'Data: content/campaigns/google-ads/search-terms/2026-09-30-active-90d.json + 2026-09-30-history.json → scripts/google-ads/build-search-terms.py (mapping rules in search_term_intents.py) → terms-data.js. Analysis: featured.js (hand-authored, 30-day window).'
   ].map(x => `<li>${x}</li>`).join('');
 })();
 </script>
