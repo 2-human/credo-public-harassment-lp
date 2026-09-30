@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Search-term review · Crēdo Legal</title>
+<style>
+:root{--bg:#f6f5f1;--card:#fff;--ink:#111418;--mute:#5b6470;--line:#e2e0da;--red:#c92028;--ok:#1f7a45;--amber:#b45309;--blue:#2f5f9e;--soft:#f4f3ef}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:1500px;margin:0 auto;padding:28px 24px 80px}
+h1{font:700 26px/1.2 Georgia,"Times New Roman",serif;margin:0 0 6px}
+h2{font:700 19px/1.3 Georgia,serif;margin:34px 0 10px}
+.lede{color:var(--mute);max-width:860px;margin:0 0 18px}
+a{color:var(--blue)}
+code{font:12.5px ui-monospace,Menlo,monospace;background:#efede7;padding:1px 4px;border-radius:4px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin:0 0 8px}
+.kpis small{display:block;color:var(--mute);font-size:11.5px;text-transform:uppercase;letter-spacing:.04em}
+.kpis b{font-size:20px}
+.kpis span{display:block;font-size:12.5px;color:var(--mute)}
+.findings{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:10px}
+.findings .card{border-left:4px solid var(--amber)}
+.findings b{display:block;margin-bottom:3px}
+.findings p{margin:0;font-size:13px;color:#2c323a}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 12px}
+.chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:5px 12px;font:600 12.5px system-ui,sans-serif;cursor:pointer;color:var(--ink)}
+.chip[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.legend{font-size:12.5px;color:var(--mute);display:flex;flex-wrap:wrap;gap:14px;margin:0 0 12px}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+thead th{position:sticky;top:0;background:#12141d;color:#fff;font:700 11px/1.3 system-ui,sans-serif;text-transform:uppercase;letter-spacing:.05em;z-index:1}
+tr.cl td{background:var(--soft);font:700 13px Georgia,serif;padding:8px 10px}
+.term{font-weight:700;font-size:13.5px}
+.where{font-size:11.5px;color:var(--mute);margin-top:2px}
+.num{white-space:nowrap;font-variant-numeric:tabular-nums}
+.pill{display:inline-block;font:700 10.5px/1.7 system-ui,sans-serif;text-transform:uppercase;letter-spacing:.04em;padding:0 7px;border-radius:5px;color:#fff;white-space:nowrap}
+.v-strong{background:var(--ok)}.v-above{background:#4d7c5f}.v-below{background:var(--red)}.v-brand{background:#6b7280}
+.flag{display:inline-block;font-size:11px;color:var(--amber);border:1px solid #f0d2a8;background:#fff8ee;border-radius:5px;padding:0 5px;margin-top:3px}
+.ctrbar{position:relative;height:6px;background:#eceae4;border-radius:3px;margin-top:5px;width:110px}
+.ctrbar i{position:absolute;left:0;top:0;bottom:0;border-radius:3px}
+.ctrbar em{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--ink)}
+.ad{font-size:12px;margin:0 0 7px;padding:0 0 7px;border-bottom:1px dashed var(--line)}
+.ad:last-child{border:0;margin:0;padding:0}
+.ad .hl{color:#1a0dab;font-weight:600}
+.ad .meta{color:var(--mute);font-size:11px}
+.ad .warn{color:var(--red);font-size:11px}
+.rec .hl{color:#1a0dab;font-weight:600;font-size:12.5px}
+.rec .ds{font-size:12px;color:#2c323a;margin-top:3px}
+.lpnote{font-size:12px;color:#2c323a;margin-top:3px}
+.new{background:#2f5f9e}
+td.an{min-width:260px;max-width:340px;font-size:12.5px}
+td.adc{min-width:230px;max-width:280px}
+td.recc{min-width:230px;max-width:280px}
+td.lpc{min-width:210px;max-width:260px}
+.all-tools{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 10px}
+.all-tools input,.all-tools select{font:13px system-ui,sans-serif;padding:6px 9px;border:1px solid var(--line);border-radius:8px;background:#fff}
+#all th{cursor:pointer;user-select:none}
+#all th[data-dir=asc]::after{content:" ▲"}#all th[data-dir=desc]::after{content:" ▼"}
+.method{font-size:12.5px;color:#2c323a;max-width:900px}
+.method li{margin:0 0 5px}
+@media (max-width:900px){
+  main{padding:20px 16px 60px}
+  #feat thead{display:none}
+  #feat,#feat tbody,#feat tr,#feat td{display:block;width:100%;max-width:none}
+  #feat tr{border-bottom:2px solid var(--line);padding:6px 0}
+  #feat td{border:0;padding:5px 12px}
+  #feat td[data-l]::before{content:attr(data-l);display:block;font:700 10.5px system-ui,sans-serif;text-transform:uppercase;letter-spacing:.05em;color:var(--mute);margin-bottom:2px}
+  .ctrbar{width:100%}
+}
+</style>
+</head>
+<body>
+<main>
+  <h1>Search-term review: Google Ads</h1>
+  <p class="lede" id="lede"></p>
+
+  <div class="kpis" id="kpis"></div>
+
+  <h2>Account-level findings</h2>
+  <div class="findings" id="findings"></div>
+
+  <h2>Search terms: what triggers, how well it matches, what to change</h2>
+  <div class="bar" id="filters">
+    <button class="chip" data-f="all" aria-pressed="true">All featured</button>
+    <button class="chip" data-f="good" aria-pressed="false">Working well</button>
+    <button class="chip" data-f="bad" aria-pressed="false">Not working</button>
+    <button class="chip" data-f="leak" aria-pressed="false">High CTR, weak conversion</button>
+  </div>
+  <div class="legend">
+    <span><span class="pill v-strong">Strong</span> CTR ≥ 2× benchmark</span>
+    <span><span class="pill v-above">Above</span> CTR ≥ benchmark</span>
+    <span><span class="pill v-below">Below</span> CTR &lt; benchmark</span>
+    <span><span class="pill v-brand">Brand</span> not comparable to benchmark</span>
+    <span>Bar: CTR on a 0–30% scale; black tick = 5.87% benchmark</span>
+  </div>
+  <div class="tw">
+    <table id="feat">
+      <thead><tr>
+        <th>Search term</th><th>Impr.</th><th>Clicks</th><th>CTR vs benchmark</th><th>Conv. / CPA</th><th>Top of page</th>
+        <th>Ad(s) it triggered → landing page</th><th>Intent match</th><th>Recommended ad</th><th>Recommended landing page</th>
+      </tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <h2>All analysed search terms</h2>
+  <div class="all-tools">
+    <input id="q" type="search" placeholder="Filter terms…" aria-label="Filter terms">
+    <select id="camp" aria-label="Campaign"><option value="">All campaigns</option></select>
+    <select id="ver" aria-label="Verdict"><option value="">All verdicts</option><option>Strong</option><option>Above</option><option>Below</option></select>
+    <span id="count" style="align-self:center;color:var(--mute);font-size:12.5px"></span>
+  </div>
+  <div class="tw">
+    <table id="all">
+      <thead><tr>
+        <th data-k="term">Search term</th><th data-k="campaign">Campaign › ad group</th><th data-k="impr">Impr.</th><th data-k="clicks">Clicks</th>
+        <th data-k="ctr">CTR</th><th data-k="verdict">Verdict</th><th data-k="conv">Conv.</th><th data-k="cpa">CPA</th><th data-k="top">Top %</th>
+      </tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <h2>Method</h2>
+  <ul class="method" id="method"></ul>
+</main>
+
+<script src="terms-data.js"></script>
+<script src="featured.js"></script>
+<script>
+(function () {
+  // Account totals: customer resource, LAST_30_DAYS, pulled 2026-09-30 (read-only GAQL).
+  const ACCT = { impr: 145158, clicks: 10828, cost: 89726.61, conv: 1259.73 };
+  // WordStream/LocaliQ 2026 search benchmarks, Attorneys & Legal Services.
+  const BM = { ctr: 0.0587, cvr: 0.0555, cpl: 131.63, cpc: 9.87, src: 'https://localiq.com/blog/search-advertising-benchmarks/' };
+  const acctCpa = ACCT.cost / ACCT.conv;
+
+  const D = window.TERMS, rows = D.rows;
+  rows.forEach(r => {
+    r.ctr = r.clicks / r.impr;
+    r.cpa = r.conv > 0 ? r.cost / r.conv : null;
+    r.verdict = r.ctr >= 2 * BM.ctr ? 'Strong' : r.ctr >= BM.ctr ? 'Above' : 'Below';
+  });
+  const idx = new Map(rows.map(r => [r.campaign + '|' + r.term, r]));
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const pct = x => (x * 100).toFixed(1) + '%';
+  const bmp = x => (x * 100).toFixed(2) + '%';
+  const usd2 = x => '$' + x.toFixed(2);
+  const usd = x => '$' + Math.round(x).toLocaleString('en-US');
+  const short = u => u ? u.replace(/^https:\/\//, '').replace(/\/$/, '') : '';
+  const link = u => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(short(u))}</a>`;
+
+  const leak = r => r.ctr >= BM.ctr && r.clicks >= 10 && (r.conv === 0 || r.cpa > 2 * acctCpa);
+  const flags = r => {
+    const f = [];
+    if (r.impr < 50) f.push('low volume: directional');
+    if (r.clicks >= 5 && r.conv === 0) f.push('no conversions');
+    else if (r.cpa && r.cpa > 2 * acctCpa) f.push('CPA > 2× account');
+    return f;
+  };
+
+  // ── Header + KPIs ─────────────────────────────────────────────────────────
+  const covered = rows.reduce((a, r) => a + r.impr, 0);
+  document.getElementById('lede').innerHTML =
+    `${esc(D.account)} · ${esc(D.period)}. CTR is compared with the 2026 WordStream/LocaliQ benchmark for <b>Attorneys &amp; Legal Services</b> ` +
+    `(<a href="${BM.src}" target="_blank" rel="noopener">source</a>): CTR ${bmp(BM.ctr)}, conversion rate ${bmp(BM.cvr)}, cost per lead ${usd2(BM.cpl)}. ` +
+    `Featured rows are the terms with enough volume to judge and a clear lesson. The full list is below.`;
+  const above = rows.filter(r => r.verdict !== 'Below').length;
+  const kp = [
+    ['Account CTR', bmp(ACCT.clicks / ACCT.impr), `benchmark ${bmp(BM.ctr)}`],
+    ['Cost per conversion', usd2(acctCpa), `benchmark CPL ${usd2(BM.cpl)}`],
+    ['Conversion rate', bmp(ACCT.conv / ACCT.clicks), `benchmark ${bmp(BM.cvr)}`],
+    ['Terms analysed', rows.length.toString(), `${pct(covered / ACCT.impr)} of impressions`],
+    ['At or above CTR benchmark', `${above} of ${rows.length}`, `${rows.length - above} below`]
+  ];
+  document.getElementById('kpis').innerHTML = kp.map(([a, b, c]) => `<div class="card"><small>${a}</small><b>${b}</b><span>${c}</span></div>`).join('');
+
+  document.getElementById('findings').innerHTML = window.FINDINGS.map(f => `<div class="card"><b>${esc(f.t)}</b><p>${esc(f.b)}</p></div>`).join('');
+
+  // ── Featured table ────────────────────────────────────────────────────────
+  const ctrCell = (r, brand) => {
+    const v = brand ? 'Brand' : r.verdict, cls = brand ? 'v-brand' : 'v-' + r.verdict.toLowerCase();
+    const w = Math.min(r.ctr / 0.30, 1) * 100, col = brand ? '#6b7280' : r.verdict === 'Below' ? 'var(--red)' : 'var(--ok)';
+    const x = brand ? '' : ` <span style="color:var(--mute);font-size:11.5px">${(r.ctr / BM.ctr).toFixed(1)}×</span>`;
+    return `<b class="num">${pct(r.ctr)}</b>${x}<br><span class="pill ${cls}">${v}</span>` +
+      `<div class="ctrbar" title="0–30% scale"><i style="width:${w}%;background:${col}"></i><em style="left:${BM.ctr / 0.30 * 100}%"></em></div>`;
+  };
+  const adsCell = key => (window.ADS[key] || []).map(a =>
+    `<div class="ad"><div class="meta">Ad ${a.id} · ${a.share}% of ad group impressions</div>` +
+    (a.h ? `<div class="hl">${a.h.map(esc).join(' | ')}</div>` : '') +
+    (a.note ? `<div class="warn">${esc(a.note)}</div>` : '') +
+    `<div>→ ${link(a.lp)}</div></div>`).join('') || '<span class="meta">No ad data</span>';
+  const recAd = a => a ? `<div class="rec"><div class="hl">${a.h.map(esc).join(' | ')}</div><div class="ds">${esc(a.d)}</div></div>` : '<span style="color:var(--mute)">Keep the current ad.</span>';
+  const recLp = l => (l.url ? `<div>${link(l.url)}</div>` : '<span class="pill new">New page / no LP</span>') + `<div class="lpnote">${esc(l.note)}</div>`;
+
+  const tb = document.querySelector('#feat tbody');
+  let cluster = '';
+  const html = [];
+  window.FEATURED.forEach(f => {
+    const r = idx.get(f.key);
+    if (!r) return;
+    const kind = f.brand ? 'good' : r.ctr >= BM.ctr ? 'good' : 'bad';
+    const tags = [kind, leak(r) ? 'leak' : ''].join(' ');
+    if (f.cluster !== cluster) { cluster = f.cluster; html.push(`<tr class="cl" data-c="${esc(cluster)}"><td colspan="10">${esc(cluster)}</td></tr>`); }
+    const fl = flags(r).map(x => `<div class="flag">${esc(x)}</div>`).join('');
+    html.push(`<tr data-k="${tags}" data-c="${esc(cluster)}">
+      <td data-l="Search term"><div class="term">${esc(r.term)}</div><div class="where">${esc(r.campaign)} › ${esc(r.adgroup)}</div>${fl}</td>
+      <td class="num" data-l="Impressions">${r.impr.toLocaleString('en-US')}</td>
+      <td class="num" data-l="Clicks">${r.clicks}</td>
+      <td data-l="CTR vs benchmark">${ctrCell(r, f.brand)}</td>
+      <td class="num" data-l="Conversions / CPA">${r.conv.toFixed(1)}<br><span style="color:var(--mute)">${r.cpa ? usd(r.cpa) : '–'}</span></td>
+      <td class="num" data-l="Top of page">${r.top != null ? pct(r.top) : '–'}</td>
+      <td class="adc" data-l="Ad(s) it triggered → landing page">${adsCell(r.campaign + '|' + r.adgroup)}</td>
+      <td class="an" data-l="Intent match">${esc(f.analysis)}</td>
+      <td class="recc" data-l="Recommended ad">${recAd(f.ad)}</td>
+      <td class="lpc" data-l="Recommended landing page">${recLp(f.lp)}</td></tr>`);
+  });
+  tb.innerHTML = html.join('');
+
+  document.getElementById('filters').addEventListener('click', e => {
+    const b = e.target.closest('.chip'); if (!b) return;
+    document.querySelectorAll('#filters .chip').forEach(c => c.setAttribute('aria-pressed', c === b));
+    const f = b.dataset.f;
+    const vis = new Set();
+    tb.querySelectorAll('tr[data-k]').forEach(tr => {
+      const on = f === 'all' || tr.dataset.k.split(' ').includes(f);
+      tr.hidden = !on; if (on) vis.add(tr.dataset.c);
+    });
+    tb.querySelectorAll('tr.cl').forEach(tr => { tr.hidden = !vis.has(tr.dataset.c); });
+  });
+
+  // ── All terms ─────────────────────────────────────────────────────────────
+  const camps = [...new Set(rows.map(r => r.campaign))].sort();
+  const sel = document.getElementById('camp');
+  camps.forEach(c => sel.insertAdjacentHTML('beforeend', `<option>${esc(c)}</option>`));
+  let sortK = 'impr', dir = -1;
+  const allTb = document.querySelector('#all tbody');
+  function renderAll() {
+    const q = document.getElementById('q').value.trim().toLowerCase(), c = sel.value, v = document.getElementById('ver').value;
+    const list = rows.filter(r => (!q || r.term.includes(q)) && (!c || r.campaign === c) && (!v || r.verdict === v))
+      .sort((a, b) => {
+        const x = a[sortK] ?? -1, y = b[sortK] ?? -1;
+        return (typeof x === 'string' ? x.localeCompare(y) : x - y) * dir;
+      });
+    allTb.innerHTML = list.map(r => `<tr>
+      <td>${esc(r.term)}</td><td class="where">${esc(r.campaign)} › ${esc(r.adgroup)}</td>
+      <td class="num">${r.impr}</td><td class="num">${r.clicks}</td><td class="num">${pct(r.ctr)}</td>
+      <td><span class="pill v-${r.verdict.toLowerCase()}">${r.verdict}</span></td>
+      <td class="num">${r.conv.toFixed(1)}</td><td class="num">${r.cpa ? usd(r.cpa) : '–'}</td>
+      <td class="num">${r.top != null ? pct(r.top) : '–'}</td></tr>`).join('');
+    document.getElementById('count').textContent = `${list.length} of ${rows.length} terms`;
+    document.querySelectorAll('#all th').forEach(th => th.dataset.dir = th.dataset.k === sortK ? (dir < 0 ? 'desc' : 'asc') : '');
+  }
+  document.querySelector('#all thead').addEventListener('click', e => {
+    const th = e.target.closest('th'); if (!th) return;
+    if (sortK === th.dataset.k) dir = -dir; else { sortK = th.dataset.k; dir = typeof rows[0][sortK] === 'string' ? 1 : -1; }
+    renderAll();
+  });
+  ['q', 'camp', 'ver'].forEach(id => document.getElementById(id).addEventListener('input', renderAll));
+  renderAll();
+
+  // ── Method ────────────────────────────────────────────────────────────────
+  document.getElementById('method').innerHTML = [
+    `Source: ${esc(D.source)}. Cut-off: ${esc(D.threshold)}. The long tail below the cut-off is not shown, so these terms cover ${pct(covered / ACCT.impr)} of the account's impressions.`,
+    `Which ad and landing page: the Google Ads API reports search terms per ad group, not per ad. Each row lists the ad group's ads with their share of its impressions; the dominant ad is the one the term most likely triggered. All non-brand final URLs are on start.credolegal.com. Recommended pages are the staging.credolegal.com versions of the same slugs.`,
+    `Verdicts compare each term's CTR with the benchmark (${bmp(BM.ctr)}). Strong = at least twice the benchmark. Terms under 50 impressions are flagged as directional. "Top of page" is the share of impressions shown above the organic results; below-benchmark terms were at the top less often (median 79%) than above-benchmark terms (89%), so part of a low CTR is position, not copy.`,
+    `Conversion flags use the account's own cost per conversion (${usd(acctCpa)}): "CPA > 2× account" and "no conversions" (at least 5 clicks, 0 conversions). Conversions are Google Ads conversions as configured (fractional values mean data-driven attribution). They are not verified leads.`,
+    `Recommended ad copy follows brand/voice.md and RSA limits (headlines ≤ 30 characters, descriptions ≤ 90; {LOCATION(State):Your State} is Google's location insertion). It is draft copy for attorney review. Any landing page that carries an ad needs the NY attorney-advertising snippet.`,
+    `Data: content/campaigns/google-ads/search-terms/2026-09-30-terms.json → scripts/google-ads/build-search-terms.py → terms-data.js. Analysis: featured.js (hand-authored).`
+  ].map(x => `<li>${x}</li>`).join('');
+})();
+</script>
+</body>
+</html>
