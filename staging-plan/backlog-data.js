@@ -8,7 +8,7 @@
  * `blocked` names the decision (D#) or manual step (M#) a PBI waits on. */
 window.BACKLOG = {
   updated: '30 Sep 2026',
-  state: '30 Sep: PBI-09, PBI-10, PBI-13, PBI-14, PBI-15, PBI-16, PBI-17, PBI-18, PBI-19 and PBI-25 done, PBI-24 close-out done (lpcheck vs baseline: major 245 \u2192 106, minor 211 \u2192 88; change log in review/CHANGELOG.md; Clarity masking proven on 52/52; D26, D27 raised; the domain-switch task waits on D16/D21), and Claude\'s part of PBI-23 (script clean-up approved per script; Lighthouse unchanged within noise; fonts, minify and the GTM Nextdoor timing are the operator\'s manual steps) (D23 approved and applied; D24 new: per-call $1,000 claims in page copy). 29 Sep (evening): board clean-up. PBI-12 done (all Part B copy fixes live, D20 wording applied). G29 (WEEK 1 tags, 22 pages) done under PBI-19; PBI-01c and PBI-11 closed (PBI-11 follow-up moved to PBI-16); PBI-08 built and reviewed, closes with the operator\'s CRM check (M3). PBI-09 done 30 Sep: the count and security dropdowns keep their options in Webflow (the G17 rewrite script is gone). Shared code (PBI-01d) done and closed: page code and the phone-swap script live once in Site settings (one phone table); every landing-page section is a component with per-page copy in props (8 LP components); new pages start from the draft Landing page template, with copy synced from the prototype by lp-sync.mjs. D20 and D21 decided; D22 opened (8 hero props where the prototype and Webflow wording differ). DS-7 done 30 Sep (the 21 old drafts stay unpublished: D18; M2 not needed). Waiting on the operator: M3 (CRM check), D1\u2013D3, D5\u2013D9, D22, D24\u2013D27 (D10 optional); PBI-01b and PBI-21 deferred.',
+  state: '30 Sep (evening): PBI-26\u2013PBI-29 added from the PageSpeed/Pingdom analysis (self-hosted fonts, no Turnstile on the Formspree form, Tidio after first interaction, right-sized logos); PBI-26 needs the operator\'s download OK and the Google-fonts removal, PBI-28 a per-script plan approval. 30 Sep: PBI-09, PBI-10, PBI-13, PBI-14, PBI-15, PBI-16, PBI-17, PBI-18, PBI-19 and PBI-25 done, PBI-24 close-out done (lpcheck vs baseline: major 245 \u2192 106, minor 211 \u2192 88; change log in review/CHANGELOG.md; Clarity masking proven on 52/52; D26, D27 raised; the domain-switch task waits on D16/D21), and Claude\'s part of PBI-23 (script clean-up approved per script; Lighthouse unchanged within noise; fonts, minify and the GTM Nextdoor timing are the operator\'s manual steps) (D23 approved and applied; D24 new: per-call $1,000 claims in page copy). 29 Sep (evening): board clean-up. PBI-12 done (all Part B copy fixes live, D20 wording applied). G29 (WEEK 1 tags, 22 pages) done under PBI-19; PBI-01c and PBI-11 closed (PBI-11 follow-up moved to PBI-16); PBI-08 built and reviewed, closes with the operator\'s CRM check (M3). PBI-09 done 30 Sep: the count and security dropdowns keep their options in Webflow (the G17 rewrite script is gone). Shared code (PBI-01d) done and closed: page code and the phone-swap script live once in Site settings (one phone table); every landing-page section is a component with per-page copy in props (8 LP components); new pages start from the draft Landing page template, with copy synced from the prototype by lp-sync.mjs. D20 and D21 decided; D22 opened (8 hero props where the prototype and Webflow wording differ). DS-7 done 30 Sep (the 21 old drafts stay unpublished: D18; M2 not needed). Waiting on the operator: M3 (CRM check), D1\u2013D3, D5\u2013D9, D22, D24\u2013D27 (D10 optional); PBI-01b and PBI-21 deferred.',
   site: { name: 'Credo: Microsite Staging', id: '6ab90fb0761d44332faf21c8', domain: 'staging.credolegal.com' },
 
   pbis: [
@@ -570,6 +570,46 @@ window.BACKLOG = {
 ,
         ['Clarity payload capture on the published form (the landing-page form on all 52 form pages; Hero-Form and Hero-Form-For-New-Pages are only on the 21 unpublished old drafts, kept by D18) (review PBI-04): 52/52 form pages, no typed value and no masked form text in Clarity\'s uploads (uploads answered locally)', 'done'],
         ['Independent review: code by GPT + Gemini (close-out packet and the change log); UX only if anything visible changes; findings settled (no UX: footer links 2px taller; Gemini pending: API credits)', 'done']
+      ] },
+    { id: 'PBI-26', title: 'Self-hosted fonts that show text at once', refs: ['L2', 'PSI 30 Sep'], by: 'claude', note: 'Chosen by the operator 30 Sep (P1 of the PageSpeed/Pingdom analysis). Needs: the operator\'s OK to download the font files (Google Fonts, free licence) and the operator removing the four Google fonts in Site settings → Fonts at the moment the new fonts go live (the API cannot remove them).',
+      why: 'Webflow loads the fonts through a script (webfont.js, render-blocking ~0.9 s on phones) that fetches Google\'s font list and then 11 files, one step after another, and the text stays invisible (up to 3 s) until they arrive. DM Mono and PT Mono (4 files, ~64 KB) are loaded but used nowhere. The main content on phones is text, so this delays it.',
+      done: 'Hanken Grotesk (300–700) and Inconsolata (400, 700) served from Webflow as custom fonts with font-display swap, the first-screen weights preloaded, a size-matched fallback so lines do not jump; no webfont.js, no Google Fonts requests, no DM Mono or PT Mono; text visible at first paint; before/after Lighthouse (median of 3) and a before/after video of the switch on a throttled phone.',
+      tasks: [
+        ['Operator OK to download the woff2 files (Hanken Grotesk, Inconsolata; latin subset) from Google Fonts', 'todo'],
+        ['Upload them as custom fonts (same family names, font-display swap) on staging; preload the first-screen weights; size-matched fallback @font-face in the site head', 'todo'],
+        ['Operator: remove the four Google fonts (Inconsolata, DM Mono, Hanken Grotesk, PT Mono) in Site settings → Fonts at the agreed moment; then publish to staging only', 'todo'],
+        ['Verify: every text style renders in the same font and weight as before (computed styles, all 56 pages × 1440/390); no Google Fonts or webfont.js request; switch time measured on a throttled phone; Lighthouse before/after', 'todo'],
+        ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots/video (the font switch); findings settled', 'todo']
+      ] },
+
+    { id: 'PBI-27', visible: false, title: 'No Webflow spam check (Turnstile) on the Formspree form', refs: ['L2', 'PSI 30 Sep'], by: 'claude', note: 'Chosen by the operator 30 Sep (P3). The form posts to Formspree, so Webflow\'s Cloudflare Turnstile check protects nothing; Formspree keeps its own spam filtering.',
+      why: 'Every page loads Cloudflare Turnstile for the form (~30 KB, 3 requests incl. a redirect, main-thread time) and it logs the recurring atob console errors, yet the token only matters to Webflow\'s own form handler, which this form does not use.',
+      done: 'No challenges.cloudflare.com request and no atob console errors on any page; the form walk, validation and payload unchanged.',
+      tasks: [
+        ['Find where Turnstile is switched on (Webflow form / site setting) and whether the API can turn it off; otherwise a manual step for the operator', 'todo'],
+        ['Turn it off on staging; publish to staging only', 'todo'],
+        ['Verify on all 52 form pages: no Turnstile request, no atob errors; isolated compare of form walk, payload, trackers and styles', 'todo'],
+        ['Independent review: code by GPT + Gemini; UX only if anything visible changes; findings settled', 'todo']
+      ] },
+
+    { id: 'PBI-28', title: 'Tidio chat loads after the first interaction', refs: ['L2', 'D8', 'PSI 30 Sep'], by: 'claude', note: 'Chosen by the operator 30 Sep (P4): keep Tidio, lazy-load it. D8\'s other questions (is chat staffed; launcher colour) stay open. Script change: per-script plan approved by the operator first (standing rule).',
+      why: 'Tidio is ~513 KB with ~110 ms of main-thread time and its own connections, all during the first load, before a visitor could want to chat.',
+      done: 'Tidio loads on the first scroll, tap or key press (or after a short idle delay), not in the first load; the chat opens and works as before; Lighthouse before/after.',
+      tasks: [
+        ['Per-script plan (trigger, delay, where the loader lives) approved by the operator', 'todo'],
+        ['Replace the Tidio include in the site head with a loader that inserts it on first interaction or idle; publish to staging only', 'todo'],
+        ['Verify: no Tidio request before interaction; launcher appears and chat opens after it (Chromium and WebKit, phone and desktop); nothing else changes (isolated compare); Lighthouse before/after', 'todo'],
+        ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots (launcher timing); findings settled', 'todo']
+      ] },
+
+    { id: 'PBI-29', visible: false, title: 'Logo images: right size, not lazy at the top', refs: ['L2', 'PSI 30 Sep'], by: 'claude', note: 'Chosen by the operator 30 Sep (P5).',
+      why: 'The header logo is above the fold but marked lazy, loads a 500 px file shown at 159 px and has no height/width (PageSpeed: image delivery, aspect ratio, missing dimensions); the footer logo is a 39 KB PNG shown at 122 px.',
+      done: 'Header logo loads eagerly at the right size with width and height set; footer logo ~5 KB; both look identical (pixel compare) at 1440/810/390; ~45 KB less.',
+      tasks: [
+        ['Make right-sized logo files (header, footer; 2x for sharp screens) and upload them to the staging assets', 'todo'],
+        ['Header logo: eager loading, width and height, new file; footer logo: new file (navbar and footer components); publish to staging only', 'todo'],
+        ['Verify: identical look (pixel compare 1440/810/390, retina), fewer bytes, PageSpeed image audits clear', 'todo'],
+        ['Independent review: code by GPT + Gemini; UX only if anything visible changes; findings settled', 'todo']
       ] }
   ],
 
@@ -581,7 +621,7 @@ window.BACKLOG = {
     ['D5', 'G32', 'Session recorders', 'Keep Mouseflow, or remove it and rely on Clarity.', 'PBI-23'],
     ['D6', 'G21a', 'Call-click posting', 'May staging.credolegal.com post call clicks to the live call-click backend (credo.debtfixer.co) while testing?', 'PBI-22'],
     ['D7', 'F2', 'State list', 'Confirm North Carolina should stay removed from the state dropdown.', '—'],
-    ['D8', 'L2', 'Tidio chat', 'Is chat staffed? Lazy-load it, or remove it. If chat stays: a neutral dark launcher colour, so red stays reserved for the call and form buttons (UX reviews, 28 Sep).', 'PBI-23'],
+    ['D8', 'L2', 'Tidio chat', 'Is chat staffed? Lazy-load it, or remove it. If chat stays: a neutral dark launcher colour, so red stays reserved for the call and form buttons (UX reviews, 28 Sep). 30 Sep: the operator chose to keep it and lazy-load it (PBI-28); still open: is chat staffed, and the launcher colour.', 'PBI-23, PBI-28'],
     ['D9', 'G6', 'Twitter/X handle', 'The @handle placeholder is gone (dropped in PBI-01d P1, 29 Sep). Still open: is https://twitter.com/Credolegal (in the site JSON-LD sameAs) Credo\'s real X profile, or should it be removed?', 'PBI-14']
     ,['D10', 'W1', 'GTM on thank-you pages', 'No longer blocks PBI-01d (29 Sep): the shared code moved to Site settings behind a system-page check, so GTM and Mouseflow stay off the thank-you, 401 and 404 pages exactly as before. Still open, optional: should GTM run on the thank-you pages, and does it count their page views as conversions? Needs someone with GTM access; the answer only changes the page-id list in the site head.', 'PBI-01d'],
     ['D11', 'L1', 'Old-form pages', 'Decided 28 Sep: rebuild all 21 older pages (13 state, 8 others incl. the 4 payday pages) on the landing-page template: new design and the new form only; every legacy form removed. Method B: each page is a duplicate of a landing page with its own copy, number, SEO and tracking; the old page is kept as a draft until the new one passes.', 'PBI-01c'],
@@ -606,7 +646,7 @@ window.BACKLOG = {
   manual: [
     ['M1', 'Give the Webflow connector access to the staging project', 'Done 27 Sep'],
     ['L2', 'Site settings → Publishing → minify HTML, CSS and JS (not in the API)', 'Open'],
-    ['L2 · PBI-23', 'Site settings → Fonts: remove DM Mono and PT Mono (loaded on every page, used on none; the H1 font, which sets LCP, then arrives sooner)', 'Open'],
+    ['L2 · PBI-26', 'Site settings → Fonts: remove the four Google fonts (Inconsolata, DM Mono, Hanken Grotesk, PT Mono) at the moment PBI-26\'s self-hosted fonts go live (Claude says when); DM Mono and PT Mono are used nowhere', 'Open'],
     ['L2 · PBI-23', 'GTM: fire the Nextdoor pixel (and other non-essential tags) on Window Loaded or first interaction; it took up to 2.4 s of main thread in one run (shared container)', 'Open'],
     ['G32', 'Mouseflow input masking; Tidio and Optibase privacy review (shared accounts)', 'Open'],
     ['G9', 'Data-processing agreement / CRM routing for the lead data', 'Open'],
