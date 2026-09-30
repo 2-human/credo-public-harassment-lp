@@ -76,6 +76,39 @@ details.ana .box b:first-child{margin-top:0}
 .rec .hl{color:#1a0dab;font-weight:600}
 .method{font-size:12.5px;color:#2c323a;max-width:1000px}
 .method li{margin:0 0 5px}
+/* ads column */
+.adbtn{display:block;width:100%;text-align:left;background:#fff;border:1px solid var(--line);border-radius:8px;padding:6px 8px;margin:0 0 6px;cursor:pointer;font:inherit;color:inherit}
+.adbtn:hover,.adbtn:focus-visible{border-color:var(--blue);box-shadow:0 0 0 2px rgba(47,95,158,.15);outline:none}
+.adbtn .hl{color:#1a0dab;font-weight:600;font-size:11.5px;display:block}
+.adbtn .top{display:flex;gap:6px;align-items:center;flex-wrap:wrap;font-size:11px;color:var(--mute)}
+.st-ENABLED{background:var(--ok)}.st-PAUSED{background:#8a6d3b}.st-REMOVED{background:#6b7280}
+.adbtn .kwline{display:block;font-size:11px;color:var(--ink);margin-top:2px}
+/* drawer */
+#scrim{position:fixed;inset:0;background:rgba(17,20,24,.35);opacity:0;pointer-events:none;transition:opacity .15s;z-index:50}
+#scrim.on{opacity:1;pointer-events:auto}
+#drawer{position:fixed;top:0;right:0;bottom:0;width:min(620px,100vw);background:var(--bg);box-shadow:-8px 0 30px rgba(0,0,0,.18);transform:translateX(100%);transition:transform .2s ease;z-index:51;display:flex;flex-direction:column;visibility:hidden}
+#drawer.on{transform:none;visibility:visible}
+#drawer header{display:flex;gap:10px;align-items:flex-start;justify-content:space-between;padding:16px 18px;border-bottom:1px solid var(--line);background:#fff}
+#drawer header h3{margin:0;font:700 17px/1.3 Georgia,serif}
+#drawer .x{border:1px solid var(--line);background:#fff;border-radius:8px;font-size:18px;line-height:1;padding:4px 9px;cursor:pointer}
+#drawer .body{overflow-y:auto;padding:14px 18px 40px}
+#drawer .sec{margin:16px 0 6px;font:700 11px/1.3 system-ui,sans-serif;text-transform:uppercase;letter-spacing:.05em;color:var(--mute)}
+#drawer .ana-p{font-size:13.5px;line-height:1.6;background:#fff;border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:10px;padding:12px 14px;margin:0}
+.kwtabs{display:flex;flex-wrap:wrap;gap:6px}
+.kwtab{border:1px solid var(--line);background:#fff;border-radius:999px;padding:4px 10px;font:600 12px system-ui,sans-serif;cursor:pointer;color:var(--ink)}
+.kwtab[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.mgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.mtile{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.mtile small{display:block;font:700 10.5px system-ui,sans-serif;text-transform:uppercase;letter-spacing:.05em;color:var(--mute)}
+.mtile b{font-size:19px;font-variant-numeric:tabular-nums}
+.mtile .cmp{font-size:11.5px;color:var(--mute)}
+.mtile svg{display:block;width:100%;height:64px;margin-top:6px;overflow:visible}
+.mtile .ax{display:flex;justify-content:space-between;font-size:10px;color:var(--mute)}
+.copyl{font-size:12.5px;margin:0;padding-left:18px}
+.copyl li{margin:0 0 3px}
+.copyl .pin{font-size:10px;color:var(--mute);border:1px solid var(--line);border-radius:4px;padding:0 4px;margin-left:4px}
+.dnote{font-size:11.5px;color:var(--mute);margin-top:14px}
+@media (max-width:640px){.mgrid{grid-template-columns:1fr}}
 @media (max-width:900px){
   main{padding:20px 16px 60px}
   #tbl thead{display:none}
@@ -137,7 +170,7 @@ details.ana .box b:first-child{margin-top:0}
       <thead><tr>
         <th data-k="term">Search term</th>
         <th data-k="impr">Impr.</th><th data-k="clicks">Clicks</th><th data-k="ctr">CTR vs benchmark</th><th data-k="conv">Conv. / CPA</th><th data-k="top" class="grp-last">Top of page (30 d)</th>
-        <th data-k="dom">Triggered today → landing page</th>
+        <th data-k="dom">Ads triggered (ad group, lifetime) → landing page</th>
         <th data-k="kw">Triggered by keyword</th>
         <th data-k="liveShare">Best current page</th>
         <th data-k="newp">Recommended new page</th>
@@ -147,12 +180,19 @@ details.ana .box b:first-child{margin-top:0}
     </table>
   </div>
 
+  <div id="scrim"></div>
+  <aside id="drawer" role="dialog" aria-modal="true" aria-labelledby="dr-title" aria-hidden="true">
+    <header><div><h3 id="dr-title">Ad</h3><div class="small" id="dr-sub"></div></div><button class="x" id="dr-close" aria-label="Close">×</button></header>
+    <div class="body" id="dr-body"></div>
+  </aside>
+
   <h2>Method</h2>
   <ul class="method" id="method"></ul>
 </main>
 
 <script src="terms-data.js"></script>
 <script src="featured.js"></script>
+<script src="ads-data.js"></script>
 <script>
 (function () {
   // Account totals: customer resource, LAST_30_DAYS, pulled 2026-09-30 (read-only GAQL).
@@ -174,8 +214,9 @@ details.ana .box b:first-child{margin-top:0}
 
   const feat = new Map(window.FEATURED.map(f => [f.key, f]));
   rows.forEach(r => {
-    r.key = r.campaign + '|' + r.adgroup + '|' + r.term;
-    r.f = feat.get(r.key) || null;
+    r.key = r.scope + '|' + r.campaign + '|' + r.adgroup + '|' + r.term;
+    r.fkey = r.campaign + '|' + r.adgroup + '|' + r.term;
+    r.f = r.scope === 'active' ? (feat.get(r.fkey) || null) : null;
     r.brand = r.best === 'BRAND';
     r.ctr = r.clicks / r.impr;
     r.cpa = r.conv > 0 ? r.cost / r.conv : null;
@@ -191,7 +232,7 @@ details.ana .box b:first-child{margin-top:0}
     r.wrong = r.scope === 'active' && !['NEG', 'BRAND'].includes(r.best) && r.action !== 'neg_here' && r.liveShare < 50;
     r.idea = ['add_kw', 'consider'].includes(r.action);
   });
-  const unmatched = window.FEATURED.filter(f => !rows.some(r => r.key === f.key));
+  const unmatched = window.FEATURED.filter(f => !rows.some(r => r.fkey === f.key && r.scope === 'active'));
   if (unmatched.length) console.warn('featured rows not matched', unmatched.map(f => f.key));
 
   // ── header, KPIs, findings ───────────────────────────────────────────────
@@ -252,14 +293,26 @@ details.ana .box b:first-child{margin-top:0}
     return `<b class="num">${pct(r.ctr)}</b>${r.brand ? '' : ` <span class="small">${(r.ctr / BM.ctr).toFixed(1)}×</span>`}<br><span class="pill ${cls}">${r.verdict}</span>` +
       `<div class="bar"><i style="width:${w}%;background:${col}"></i><em style="left:${BM.ctr / 0.30 * 100}%"></em></div>`;
   };
+  const DB = window.ADS_DB;
+  const agAdsOf = r => DB.agAds[r.campaign + '|' + r.adgroup] || [];
+  const pairOf = (ad, kw) => kw ? DB.adkw[ad + '|' + kw.text + '|' + kw.match] : null;
+  const stLabel = st => st === 'ENABLED' ? 'Live' : st.toLowerCase();
   const trigCell = r => {
-    if (r.scope === 'history') return `<span class="pill paused">Paused campaign</span><div class="txt">${esc(r.campaign)}${r.adgroup ? ' › ' + esc(r.adgroup) : ''}</div><div class="small">Not running; shown for keyword ideas and negatives.</div>`;
-    const ads = window.ADS[r.campaign + '|' + r.adgroup] || [];
-    if (!ads.length) return r.current.map(c => `<div class="ad">${c.share}% → ${link(P[c.page].url, path(P[c.page].url))}</div>`).join('');
-    return ads.map(a => `<div class="ad"><div class="small">Ad ${a.id} · <b>${a.share}%</b></div>` +
-      (a.h ? `<div class="hl">${a.h.map(esc).join(' | ')}</div>` : '') +
-      (a.note ? `<div class="warn">${esc(a.note)}</div>` : '') +
-      `<div>→ ${link(a.lp, path(a.lp))}</div></div>`).join('');
+    const ids = agAdsOf(r);
+    if (!ids.length) {
+      if (r.campaign.startsWith('PMax')) return '<span class="pill paused">Performance Max</span><div class="small">Asset groups, not ads: no ad-level data.</div>';
+      return r.current.map(c => `<div class="ad">${c.share}% → ${link(P[c.page].url, path(P[c.page].url))}</div>`).join('') || '<span class="small">–</span>';
+    }
+    const agTot = ids.reduce((t, i) => t + DB.ads[i].total.impr, 0);
+    const kw = r.keywords && r.keywords[0];
+    return ids.map(i => {
+      const a = DB.ads[i], pr = pairOf(i, kw);
+      return `<button class="adbtn" data-ad="${i}" data-row="${esc(r.key)}" title="Open this ad's analysis">` +
+        `<span class="top"><span class="pill st-${a.status}">${stLabel(a.status)}</span> Ad ${i} · <b>${Math.round(a.total.impr / Math.max(agTot, 1) * 100)}%</b> of ad group</span>` +
+        (a.headlines.length ? `<span class="hl">${a.headlines.slice(0, 2).map(h => esc(h.t)).join(' | ')}</span>` : '') +
+        (pr ? `<span class="kwline">This keyword: ${pr.total.impr.toLocaleString('en-US')} impr · ${pct(pr.total.clicks / Math.max(pr.total.impr, 1))} CTR</span>` : '') +
+        `<span class="small">→ ${esc(path(a.url) || a.type.toLowerCase())}</span></button>`;
+    }).join('');
   };
   const kwCell = r => {
     if (!r.keywords || !r.keywords.length) return '<span class="small">–</span>';
@@ -319,6 +372,133 @@ details.ana .box b:first-child{margin-top:0}
       ${on == null ? '' : `<span>On the best page today: <b>${pct(on)}</b> ${bar}</span>`}</div></td></tr>`;
   };
 
+  // ── drawer: one ad, for the row's keyword ──────────────────────────────────
+  const byKey = new Map(rows.map(r => [r.key, r]));
+  const MET = [
+    ['impr', 'Impressions', t => t.impr, v => Math.round(v).toLocaleString('en-US')],
+    ['clicks', 'Clicks', t => t.clicks, v => Math.round(v).toLocaleString('en-US')],
+    ['ctr', 'CTR', t => t.impr ? t.clicks / t.impr : null, v => pct(v), BM.ctr],
+    ['conv', 'Conversions', t => t.conv, v => v.toFixed(1)],
+    ['cvr', 'Conversion rate', t => t.clicks ? t.conv / t.clicks : null, v => pct(v)],
+    ['cost', 'Cost', t => t.cost, v => usd(v)],
+    ['cpc', 'Cost per click', t => t.clicks ? t.cost / t.clicks : null, v => usd2(v)],
+    ['cpa', 'Cost per conversion', t => t.conv ? t.cost / t.conv : null, v => usd(v), BM.cpl]
+  ];
+  const monthsBetween = (a, b) => {
+    const out = []; let [y, m] = a.split('-').map(Number); const [Y, M] = b.split('-').map(Number);
+    while (y < Y || (y === Y && m <= M)) { out.push(`${y}-${String(m).padStart(2, '0')}`); m++; if (m > 12) { m = 1; y++; } }
+    return out;
+  };
+  const mLabel = m => new Date(m + '-01T00:00:00').toLocaleString('en-US', { month: 'short', year: 'numeric' });
+  function series(monthly, fillZero) {
+    if (!monthly.length) return { xs: [], rows: [] };
+    const xs = monthsBetween(monthly[0].m, monthly[monthly.length - 1].m), by = Object.fromEntries(monthly.map(m => [m.m, m]));
+    return { xs, rows: xs.map(x => by[x] || (fillZero ? { impr: 0, clicks: 0, cost: 0, conv: 0 } : null)) };
+  }
+  function chart(sr, fn, ref, fmt) {
+    const vals = sr.rows.map(t => t ? fn(t) : null);
+    const pts = vals.map((v, i) => v == null ? null : [i, v]).filter(Boolean);
+    if (pts.length < 2) return '<div class="small" style="margin-top:6px">Not enough months for a trend.</div>';
+    const W = 300, H = 60, n = Math.max(sr.xs.length - 1, 1);
+    let lo = Math.min(...pts.map(p => p[1]), ref ?? Infinity), hi = Math.max(...pts.map(p => p[1]), ref ?? -Infinity);
+    if (hi === lo) { hi += 1; lo = Math.max(0, lo - 1); }
+    const X = i => i / n * W, Y = v => H - 4 - (v - lo) / (hi - lo) * (H - 8);
+    let d = '', prev = null;
+    vals.forEach((v, i) => { if (v == null) { prev = null; return; } d += (prev == null ? 'M' : 'L') + X(i).toFixed(1) + ' ' + Y(v).toFixed(1) + ' '; prev = i; });
+    const dots = vals.map((v, i) => v == null ? '' : `<circle cx="${X(i).toFixed(1)}" cy="${Y(v).toFixed(1)}" r="2.6" fill="var(--blue)"><title>${mLabel(sr.xs[i])}: ${fmt(v)}</title></circle>`).join('');
+    const refl = ref != null ? `<line x1="0" x2="${W}" y1="${Y(ref).toFixed(1)}" y2="${Y(ref).toFixed(1)}" stroke="var(--amber)" stroke-dasharray="4 3" stroke-width="1" vector-effect="non-scaling-stroke"><title>Benchmark ${fmt(ref)}</title></line>` : '';
+    return `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" role="img" aria-label="Monthly trend">${refl}<path d="${d}" fill="none" stroke="var(--blue)" stroke-width="2" vector-effect="non-scaling-stroke"/>${dots}</svg>` +
+      `<div class="ax"><span>${mLabel(sr.xs[0])}</span><span>max ${fmt(hi)}</span><span>${mLabel(sr.xs[sr.xs.length - 1])}</span></div>`;
+  }
+  const rate = (a, b) => b ? a / b : null;
+  function analysis(r, adId, kw) {
+    const a = DB.ads[adId], at = a.total, pr = pairOf(adId, kw), s = [];
+    const pgPath = path(a.url);
+    const bestPg = P[r.best], bestLive = r.liveBest ? path(P[r.liveBest].url) : null;
+    if (pr) {
+      const t = pr.total;
+      const sib = agAdsOf(r).filter(i => i !== adId).map(i => ({ i, p: pairOf(i, kw) })).filter(x => x.p && x.p.total.impr >= 50);
+      const kwTot = t.impr + sib.reduce((q, x) => q + x.p.total.impr, 0);
+      s.push(`For the keyword "${kw.text}" (${kw.match.toLowerCase()} match), this ad has taken ${t.impr.toLocaleString('en-US')} impressions over its life, ${Math.round(t.impr / Math.max(kwTot, 1) * 100)}% of what the ad group showed on that keyword.`);
+      const ctr = rate(t.clicks, t.impr), actr = rate(at.clicks, at.impr);
+      if (t.impr >= 50 && ctr != null) s.push(`Its CTR on this keyword is ${pct(ctr)}, ${(ctr / BM.ctr).toFixed(1)}× the ${bmp(BM.ctr)} legal benchmark and ${ctr >= actr ? 'above' : 'below'} the ad's own average of ${pct(actr)}.`);
+      else s.push(`Volume on this keyword is too small (${t.impr} impressions) to judge its CTR.`);
+      if (t.conv >= 1) {
+        const cpa = t.cost / t.conv;
+        s.push(`It produced ${t.conv.toFixed(1)} conversions at ${usd(cpa)} each, ${cpa <= BM.cpl ? 'better' : 'worse'} than the ${usd2(BM.cpl)} industry cost per lead${at.conv ? ` (the ad overall: ${usd(at.cost / at.conv)})` : ''}.`);
+      } else if (t.clicks >= 5) s.push(`It has ${t.clicks} clicks and ${usd(t.cost)} spent on this keyword with no conversions.`);
+      const best = sib.sort((x, y) => y.p.total.impr - x.p.total.impr)[0];
+      if (best && t.impr >= 50) {
+        const bc = rate(best.p.total.clicks, best.p.total.impr), bcpa = best.p.total.conv ? best.p.total.cost / best.p.total.conv : null, mcpa = t.conv ? t.cost / t.conv : null;
+        s.push(`Against ad ${best.i} on the same keyword it has ${ctr >= bc ? 'the higher' : 'the lower'} CTR (${pct(ctr)} vs ${pct(bc)})` +
+          (mcpa && bcpa ? ` and ${mcpa <= bcpa ? 'the cheaper' : 'the more expensive'} conversion (${usd(mcpa)} vs ${usd(bcpa)}).` : '.'));
+      }
+      const sr = series(pr.monthly, false).rows.filter(Boolean);
+      if (sr.length >= 4) {
+        const f = x => x.reduce((q, m) => ({ c: q.c + m.clicks, i: q.i + m.impr }), { c: 0, i: 0 }), l3 = f(sr.slice(-3)), p3 = f(sr.slice(-6, -3));
+        if (p3.i >= 100) {
+          const a1 = l3.c / l3.i, a0 = p3.c / p3.i;
+          s.push(`CTR over its last three charted months is ${pct(a1)}, ${Math.abs(a1 - a0) < 0.005 ? 'about level with' : a1 > a0 ? 'up from' : 'down from'} ${pct(a0)} in the three before.`);
+        }
+      }
+    } else {
+      const span = a.monthly.length ? ` from ${mLabel(a.monthly[0].m)} to ${mLabel(a.monthly[a.monthly.length - 1].m)}` : '';
+      s.push(`This ad ran${span} with ${at.impr.toLocaleString('en-US')} impressions, ${pct(rate(at.clicks, at.impr) || 0)} CTR and ${at.conv.toFixed(0)} conversions${at.conv ? ' at ' + usd(at.cost / at.conv) + ' each' : ''}.`);
+      s.push(r.scope === 'history' ? `History rows have no keyword split, so these are the ad's own numbers.` : `There is no keyword-level data for this row.`);
+    }
+    if (pgPath) {
+      const fit = bestLive && pgPath === bestLive ? `which is the best current page for "${r.term}"` :
+        bestPg.kind === 'none' ? `but "${r.term}" is not a Credo search` :
+        `while the best current page for "${r.term}" is ${bestLive || '–'}${bestPg.kind === 'new' ? ' (then the new ' + bestPg.label.replace(/^NEW /, '') + ' page)' : ''}`;
+      s.push(`It sends people to ${pgPath}, ${fit}.`);
+    }
+    if (a.status !== 'ENABLED') s.push(`The ad is ${a.status.toLowerCase()} today.`);
+    return s.join(' ');
+  }
+  let drCtx = null, lastFocus = null;
+  function openDrawer(rowKey, adId, kwIdx) {
+    const r = byKey.get(rowKey), a = DB.ads[adId];
+    if (!r || !a) return;
+    if (!drCtx) lastFocus = document.activeElement;
+    const kws = (r.keywords || []).filter(k => pairOf(adId, k));
+    const kw = kws.length ? kws[Math.min(kwIdx || 0, kws.length - 1)] : null;
+    drCtx = { rowKey, adId };
+    const pr = pairOf(adId, kw);
+    $('dr-title').textContent = `Ad ${adId}`;
+    $('dr-sub').innerHTML = `<span class="pill st-${a.status}">${stLabel(a.status)}</span> ${esc(a.campaign)} › ${esc(a.adgroup)}` +
+      (a.strength ? ` · ad strength ${esc(a.strength.toLowerCase())}` : '') +
+      (a.approval && a.approval !== 'APPROVED' ? ` · ${esc(a.approval.toLowerCase().replace(/_/g, ' '))}` : '') +
+      (a.url ? `<br>→ ${link(a.url, short(a.url))}` : '');
+    const useKw = pr && pr.monthly.length >= 2;
+    const src = useKw ? series(pr.monthly, false) : series(a.monthly, true);
+    const tot = pr ? pr.total : a.total;
+    const tiles = MET.map(([k, label, fn, fmt, ref]) => {
+      const v = fn(tot), av = fn(a.total);
+      return `<div class="mtile"><small>${label}</small><b>${v == null ? '–' : fmt(v)}</b>` +
+        (pr ? `<div class="cmp">Ad overall: ${av == null ? '–' : fmt(av)}</div>` : '') + chart(src, fn, ref, fmt) + '</div>';
+    }).join('');
+    const tabs = kws.length > 1 ? `<div class="sec">Keyword</div><div class="kwtabs">${kws.map((k, i) =>
+      `<button class="kwtab" data-kw="${i}" aria-pressed="${k === kw}">${esc(k.text)} <span class="kwm">${esc(k.match.toLowerCase())}</span></button>`).join('')}</div>` : '';
+    const scopeLine = pr ? `Metrics for <b>this ad on "${esc(kw.text)}"</b> (${esc(kw.match.toLowerCase())} match), all time.` : `Metrics for <b>the ad overall</b>, all time.`;
+    const chartLine = useKw ? `Charts: this ad on this keyword, by month; months under ${DB.monthlyFloor} impressions are gaps.` :
+      pr ? `Charts: the ad overall by month, because this keyword has too little monthly volume for its own trend.` : `Charts: the ad by month.`;
+    $('dr-body').innerHTML =
+      `<div class="sec">Search term</div><div><b>${esc(r.term)}</b> <span class="small">${r.scope === 'history' ? 'history' : 'active, 90 days'} · ${esc(r.intentLabel)}</span></div>` + tabs +
+      `<div class="sec">Analysis</div><p class="ana-p">${esc(analysis(r, adId, kw))}</p>` +
+      `<div class="sec">Performance</div><div class="small" style="margin:0 0 8px">${scopeLine} ${chartLine} Dashed line: benchmark (CTR ${bmp(BM.ctr)}, cost per lead ${usd2(BM.cpl)}).</div><div class="mgrid">${tiles}</div>` +
+      `<div class="sec">Headlines</div><ol class="copyl">${a.headlines.map(h => `<li>${esc(h.t)}${h.pin ? `<span class="pin">${esc(h.pin.replace('HEADLINE_', 'pinned '))}</span>` : ''}</li>`).join('') || '<li>–</li>'}</ol>` +
+      `<div class="sec">Descriptions</div><ol class="copyl">${a.descriptions.map(h => `<li>${esc(h.t)}</li>`).join('') || '<li>–</li>'}</ol>` +
+      `<div class="dnote">${esc(DB.source)} ${esc(DB.kwSource)} The analysis paragraph is generated from these numbers.</div>`;
+    $('scrim').classList.add('on');
+    const d = $('drawer'); d.classList.add('on'); d.setAttribute('aria-hidden', 'false');
+    $('dr-body').scrollTop = 0; $('dr-close').focus();
+  }
+  function closeDrawer() {
+    $('scrim').classList.remove('on');
+    const d = $('drawer'); d.classList.remove('on'); d.setAttribute('aria-hidden', 'true');
+    drCtx = null; if (lastFocus) lastFocus.focus();
+  }
+
   // ── filters, sorting, grouping ───────────────────────────────────────────
   const $ = id => document.getElementById(id);
   D.debtTypes.forEach(t => $('debt').insertAdjacentHTML('beforeend', `<option>${esc(t)}</option>`));
@@ -361,6 +541,17 @@ details.ana .box b:first-child{margin-top:0}
     chip = b.dataset.f; render();
   });
   ['scope', 'q', 'debt', 'camp', 'int', 'ver', 'act', 'grp'].forEach(id => $(id).addEventListener('input', render));
+  document.querySelector('#tbl tbody').addEventListener('click', e => {
+    const b = e.target.closest('.adbtn'); if (!b) return;
+    openDrawer(b.dataset.row, b.dataset.ad, 0);
+  });
+  $('dr-body').addEventListener('click', e => {
+    const t = e.target.closest('.kwtab'); if (!t || !drCtx) return;
+    openDrawer(drCtx.rowKey, drCtx.adId, Number(t.dataset.kw));
+  });
+  $('dr-close').addEventListener('click', closeDrawer);
+  $('scrim').addEventListener('click', closeDrawer);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && drCtx) closeDrawer(); });
   render();
 
   // ── method ───────────────────────────────────────────────────────────────
