@@ -1,0 +1,14 @@
+<!-- reviewer: gemini-3.1-pro-preview · 2026-09-30T08:49:23.387Z · 46s · images sent: 0 · usage {"promptTokenCount":1347,"candidatesTokenCount":623,"totalTokenCount":5839,"promptTokensDetails":[{"modality":"TEXT","tokenCount":1347}],"thoughtsTokenCount":3869,"serviceTier":"standard"} -->
+
+| # | Severity | Finding | Evidence or reasoning | Suggested check |
+|---|---|---|---|---|
+| 1 | note | Evidence supports Conclusion 1 (Slider label). | axe-core `label` rule passed and accessible name was confirmed. | N/A |
+| 2 | note | Evidence supports Conclusion 2 (Step IDs removed safely). | HTML diffs show no unexpected changes; codebase searches found no JS/CSS dependencies; interactions are identical. | N/A |
+| 3 | note | Evidence supports Conclusion 3 (Checkbox IDs updated safely). | axe-core `duplicate-id` rule passed; form payload is identical because the `name` attribute was retained. | N/A |
+| 4 | note | Evidence supports Conclusion 4 (`formstep2` ID renamed safely). | axe-core passed; pop-up script and interactions tested identical; CSS relies on `w-node` class, not the ID. | N/A |
+| Q1 | should-fix | Slider may lack dynamic value announcements for screen readers. | Automated tests (axe-core) verify the existence of a label, but standard range sliders require dynamic `aria-valuenow` and `aria-valuetext` (e.g., "$10,000") to announce changing values properly to screen reader users. | Manually test the slider with a screen reader. If values aren't announced dynamically, script `aria-valuetext` updates. (Also, `aria-labelledby` pointing to the heading ID is slightly better practice than `aria-label` for translation, though both work). |
+| Q3 | should-fix | Checkbox `<span for="Debt-Type">` is invalid HTML and orphaned. | The `for` attribute is only valid on `<label>` and `<output>` elements. Additionally, it now points to "Debt-Type" which no longer exists as an ID (they are now `Debt-Type-1`, etc.). Webflow's implicit `<label>` wrapping saves the baseline accessibility, but invalid markup remains. | Remove the `for` attribute from the `<span>` tags. Confirm Webflow's proprietary custom checkbox visual styling still works with the mismatched/removed `for` attribute. |
+| Untested | should-fix | End-to-end backend form processing was not tested. | The packet states "POST answered locally." While this proves the browser sends an identical 412-byte payload, it does not confirm if Webflow's native form database or external CRM webhooks secretly rely on the old IDs for field mapping. | Submit a test lead through the staging site without intercepting the POST to verify it successfully reaches the CRM/database. |
+| External | note | No changes identified that affect systems outside the staging site. | All changes are strictly frontend HTML attributes on the staging environment, and tests did not fire actual webhooks. | N/A |
+
+**Overall verdict:** approve with fixes
