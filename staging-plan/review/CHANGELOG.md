@@ -24,7 +24,7 @@ drafts (`{slug}-old`, all 404). The staging site publishes no sitemap and an emp
 The thank-you pages carry no robots tag: add `noindex` there with the domain-switch task (below).
 
 **Site head code has layers.** Site settings → Custom code → Head code was changed by PBI-01d P1, PBI-08, PBI-09
-(a block cut), PBI-14, PBI-15, PBI-16 and PBI-23, mostly in commented blocks. To revert one item, remove or restore only that item's block in
+(a block cut), PBI-14, PBI-15, PBI-16, PBI-23 and PBI-28, mostly in commented blocks. To revert one item, remove or restore only that item's block in
 the current head; writing an older `site-head-before.html` back would also undo every later item.
 
 **Start and enroll untouched.** Fingerprints of their pages: `2026-09-27/fingerprints/start.sha256` and
@@ -597,6 +597,22 @@ Not a board row: tracked as decision D13. Listed here because it changed the sit
 **Evidence / review**
 - Published stylesheet differs by that one rule only; iPad axe target-size clean. [PBI-24.md](PBI-24.md), [PBI-24.triage.md](PBI-24.triage.md).
 
+## PBI-28 · Tidio chat loads after the first interaction (30 Sep)
+
+**What changed**
+- The chat widget loads on the visitor's first scroll, tap, click or key press, or 5 s after the page has loaded,
+  instead of during the first load (~510 KB, 290–430 ms of phone main-thread time).
+
+**Where in Webflow**
+- Site settings → Custom code → Head code: the `<script src="//code.tidio.co/…js" async>` line replaced by the
+  commented "PBI-28" loader block (same script URL).
+
+**Revert**
+- `2026-09-30-pbi28/` with REVERT.md (site-head-before.html / site-head-after.html).
+
+**Evidence / review**
+- Code GPT approve with fixes; Gemini pending. [PBI-28.md](PBI-28.md), [PBI-28.triage.md](PBI-28.triage.md).
+
 ## PBI-29 · Logo images: right size, not lazy at the top (30 Sep)
 
 **What changed**
@@ -650,6 +666,7 @@ Not a board row: tracked as decision D13. Listed here because it changed the sit
 | PBI-25 | Heading levels | Home tags + head code; Thank-you page component | done (Gemini review pending) |
 | PBI-23 | Performance on phones | Site head/footer code; slider embed in LP · Hero and home's hero; LP · Rights and FAQ embed | partly done: Tidio (D8), recorder (D5), operator manual steps open |
 | PBI-24 | Close-out | Class Link 3 Copy (footer links) | close-out done; its domain-switch task waits on D16, D21 |
+| PBI-28 | Tidio after first interaction | Site head code (loader) | done |
 | PBI-29 | Logo images | Navbar, Footer-MJ, footer, Thank-you page, LP · Lead form, home; BBB embeds | done |
 
 ## Open / not changed
