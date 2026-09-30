@@ -654,6 +654,64 @@ Not a board row: tracked as decision D13. Listed here because it changed the sit
 **Evidence / review**
 - Code GPT approve with fixes; Gemini pending. [PBI-30.md](PBI-30.md), [PBI-30.triage.md](PBI-30.triage.md).
 
+## PBI-31 · Optibase off (temporary measurement, 30 Sep)
+
+**What changed**
+- The Optibase script tag in the site head is commented out (the operator's request, to measure the page without
+  Optibase hiding it until its API answers). The original tag is quoted inside the comment.
+
+**Where in Webflow**
+- Site settings → Custom code → Head code: the "PBI-31" comment.
+
+**Revert**
+- `2026-09-30-pbi31/REVERT.md`: put the quoted line back (or write `site-head-before.html` back) and publish to the
+  staging domain only. Open: the operator's decision (restore, keep off, or only on pages with live tests).
+
+## PBI-26 · Fonts only from our own files (30 Sep)
+
+**What changed**
+- Step 1: Hanken Grotesk (variable 300–700) and Inconsolata uploaded as custom fonts (font-display swap); the
+  operator removed the Google fonts (DM Mono, Hanken Grotesk, PT Mono) in Site settings.
+- Step 2 (evening): Webflow still loaded Inconsolata from Google (its built-in Google font list triggers the
+  render-blocking `webfont.js` for any class naming it). The same file was uploaded once more as **"Credo Mono"**
+  (one variable face, 200–900); 60 classes and 8 form/slider embeds now name Credo Mono. Two class names that
+  existed several times (`mjfdcpaboxtext Copy Copy` ×8, `callustext Copy` ×3): the copy in use holds the merged
+  styling under its original name; the 9 unused copies are parked as `zz unused …` (next Clean up removes them).
+- Result: no `webfont.js`, no Google font request or preconnect; font files per page 4 → 2 (121.7 → 63.7 KB).
+  Option (a): the slider value renders at its class weight 300, the hero phone number at 600.
+- Published with the operator's Style Manager Clean up (922 of 1,271 classes; stylesheet 229 → 117 KB).
+
+**Where in Webflow**
+- Site settings → Fonts: custom fonts Hanken Grotesk, Credo Mono (and the two old, unused Inconsolata entries: M7).
+- Classes: the 60 listed in the backup; LP · Hero (step-1 and slider embeds), LP · Lead form (step-2/3 embeds),
+  home's four form embeds.
+
+**Revert**
+- `2026-09-30-pbi26/` (step 1) and `2026-09-30-pbi26b/REVERT.md` (step 2: class list with every earlier value, full
+  style dump, embed code in `served-before/`, merged rules in `site-css-before-8c3f49456.css`). Clean up itself
+  cannot be reverted from here.
+
+**Evidence / review**
+- Served HTML 56/56, element compare 56 pages × 1440/390, functional compare 8/8, network, Lighthouse (FCP ~1.8 s).
+  Code + UX GPT approve with fixes; Gemini pending. [PBI-26b.md](PBI-26b.md),
+  [PBI-26b.triage.md](PBI-26b.triage.md). Open: home photos' `sizes` since the Clean up (M6).
+
+## PBI-27 · No Webflow spam check (Turnstile) on the Formspree form (30 Sep)
+
+**What changed**
+- The operator switched the form bot protection off (M4); published with PBI-26. The Turnstile script (86.7 KB)
+  no longer loads, the recurring atob console errors are gone, and the form sends the same 20 fields (minus the
+  empty `cf-turnstile-response`, which Formspree never used).
+
+**Where in Webflow**
+- Site settings (operator's toggle); no element changed.
+
+**Revert**
+- Switch bot protection back on and publish to the staging domain only.
+
+**Evidence / review**
+- Reviewed within PBI-26 ([PBI-26b.triage.md](PBI-26b.triage.md), rows 5, 9, 10).
+
 ## At a glance
 
 | ID | Title | Main Webflow location(s) | Status |
@@ -662,14 +720,14 @@ Not a board row: tracked as decision D13. Listed here because it changed the sit
 | PBI-00b | Remove dead-weight pages | Pages panel (8 drafts); CMS "Know your rights" (4 items) | done |
 | PBI-01 | Clean the page code | Page custom code, 52 pages | done |
 | PBI-01c | Old-form pages | via DS-7 | done |
-| PBI-01d | Shared code | Site head/footer code; CREDO_PHONES table; 8 LP components; draft Landing page template | done |
+| PBI-01d | Shared code | Site head/footer code; CREDO_PHONES table; 8 LP components; draft Landing page template (deleted 30 Sep) | done |
 | PBI-04 | Mask form inputs | Form Block on 31 pages; Hero-Form, Hero-Form-For-New-Pages | done |
 | PBI-05 | Sticky call bar | Site footer code | done |
 | PBI-06 | Phone in mobile header | navbar component; Navbar Brand style | done |
 | PBI-06b | Same gap above closing CTA | Text Block 20 style; 29 page paragraphs | done |
 | PBI-07 | Number pad fields | #n-phone-number (31 pages); 2 old-form components | done |
 | PBI-07b | Valid phone and email | Registered site script (removed 29 Sep, D18) | done |
-| DS-7 | Rebuild the 21 older pages | Pages panel; page settings and page code of 21 pages | done (the 21 old versions stay as unpublished drafts, with the 2 legacy form components: D18, 30 Sep) |
+| DS-7 | Rebuild the 21 older pages | Pages panel; page settings and page code of 21 pages | done (the 21 old versions were deleted by the operator on 30 Sep, evening) |
 | PBI-08 | fbclid | Site head code, section 7 | built and live; closes when the operator confirms the CRM side (M3, open) |
 | PBI-09 | Dropdown options stored | LP · Lead form; home form; site head (G17 cut) | done |
 | PBI-10 | Slider label, unique ids | LP · Hero, LP · Lead form, home embeds | done |
@@ -689,6 +747,9 @@ Not a board row: tracked as decision D13. Listed here because it changed the sit
 | PBI-28 | Tidio after first interaction | Site head code (loader) | done |
 | PBI-29 | Logo images | Navbar, Footer-MJ, footer, Thank-you page, LP · Lead form, home; BBB embeds | done |
 | PBI-30 | Badges after interaction; scripts inline | Site footer code; Trust strip and BBB embeds; registered scripts un-applied | done |
+| PBI-31 | Optibase off (temporary) | Site head code (comment) | live; operator to decide |
+| PBI-26 | Fonts only from our own files | Custom fonts; 60 classes; 8 form/slider embeds (LP · Hero, LP · Lead form, home) | done (M6 home photo sizes, M7 old font entries open) |
+| PBI-27 | No Turnstile on the form | Site settings (operator's toggle) | done |
 
 ## Open / not changed
 
@@ -699,5 +760,5 @@ Not a board row: tracked as decision D13. Listed here because it changed the sit
 - **PBI-21** The four payday-content pages: deferred by the operator (own copy or redirect, D4 open part).
 - **PBI-22** Call-click tracker: waits on D6.
 - **PBI-24, domain-switch task** (the close-out itself is done): robots, canonical and og:url for the final domain wait on D16 and D21 (today noindex, nofollow + canonical to start.credolegal.com/{slug}).
-- Parts still open inside done items: PBI-08 CRM check (M3); PBI-23 Tidio (D8), second recorder (D5), fonts / minify / GTM Nextdoor timing (operator, manual); site-head CSS for the duplicate-named classes (stays while the old drafts are kept, D18; into the classes with DS-4 / DS-8); Gemini reviews for PBI-19, PBI-23, PBI-25.
+- Parts still open inside done items: PBI-08 CRM check (M3); PBI-23 Tidio (D8), second recorder (D5), minify (L2) / GTM Nextdoor timing (operator, manual; fonts done in PBI-26); site-head CSS for the duplicate-named classes (the drafts are gone, but Webflow keeps every copy of a used name through Clean up; resolve them the PBI-26 way with DS-4 / DS-8); Gemini reviews for PBI-19, PBI-23, PBI-25, PBI-26, PBI-28, PBI-29, PBI-30.
 - Found and not changed (copy or account decisions): D22 hero wording, D24 per-call $1,000 claims, D25 home headings, D26 Optibase in Safari.
