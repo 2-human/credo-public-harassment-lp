@@ -473,7 +473,10 @@ window.TERMS = {
     {
      "text": "garnishment",
      "match": "PHRASE",
-     "impr": 1631
+     "impr": 1631,
+     "clicks": 56,
+     "cost": 378.83,
+     "conv": 5.667
     }
    ],
    "top30": 0.566,
@@ -506,7 +509,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 1520
+     "impr": 1520,
+     "clicks": 83,
+     "cost": 231.51,
+     "conv": 3.5
     }
    ],
    "top30": 0.4752475247524752,
@@ -538,7 +544,10 @@ window.TERMS = {
     {
      "text": "debt collection attorney",
      "match": "PHRASE",
-     "impr": 1503
+     "impr": 1503,
+     "clicks": 109,
+     "cost": 1412.05,
+     "conv": 13.497
     }
    ],
    "top30": 0.8789808917197452,
@@ -570,7 +579,10 @@ window.TERMS = {
     {
      "text": "debt collection defense attorney near me",
      "match": "PHRASE",
-     "impr": 1439
+     "impr": 1439,
+     "clicks": 120,
+     "cost": 1445.5,
+     "conv": 21.497
     }
    ],
    "top30": 0.879245283018868,
@@ -606,27 +618,42 @@ window.TERMS = {
     {
      "text": "how to respond to a debt collector lawsuit",
      "match": "PHRASE",
-     "impr": 559
+     "impr": 559,
+     "clicks": 43,
+     "cost": 301.65,
+     "conv": 7.619
     },
     {
      "text": "how to get a debt lawsuit dismissed",
      "match": "EXACT",
-     "impr": 277
+     "impr": 277,
+     "clicks": 22,
+     "cost": 167.97,
+     "conv": 0.0
     },
     {
      "text": "lawsuit dismissed",
      "match": "PHRASE",
-     "impr": 195
+     "impr": 195,
+     "clicks": 22,
+     "cost": 128.08,
+     "conv": 2.25
     },
     {
      "text": "being sued by debt collector",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "i got sued by a debt collector",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 3,
+     "cost": 20.74,
+     "conv": 0.0
     }
    ],
    "top30": 0.875,
@@ -662,42 +689,66 @@ window.TERMS = {
     {
      "text": "debt collection lawyer",
      "match": "PHRASE",
-     "impr": 306
+     "impr": 306,
+     "clicks": 28,
+     "cost": 295.34,
+     "conv": 5.167
     },
     {
      "text": "debt collection lawyer",
      "match": "EXACT",
-     "impr": 298
+     "impr": 298,
+     "clicks": 23,
+     "cost": 520.97,
+     "conv": 3.667
     },
     {
      "text": "collection defense attorney",
      "match": "PHRASE",
-     "impr": 159
+     "impr": 159,
+     "clicks": 8,
+     "cost": 124.36,
+     "conv": 3.333
     },
     {
      "text": "collection defense lawyer",
      "match": "PHRASE",
-     "impr": 87
+     "impr": 87,
+     "clicks": 5,
+     "cost": 60.95,
+     "conv": 1.0
     },
     {
      "text": "debt collection lawsuit attorney",
      "match": "PHRASE",
-     "impr": 34
+     "impr": 34,
+     "clicks": 1,
+     "cost": 13.82,
+     "conv": 0.0
     },
     {
      "text": "collections lawyer",
      "match": "PHRASE",
-     "impr": 33
+     "impr": 33,
+     "clicks": 6,
+     "cost": 79.39,
+     "conv": 0.0
     },
     {
      "text": "debt collection attorney",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "credit collection attorney",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.8932806324110671,
@@ -729,7 +780,10 @@ window.TERMS = {
     {
      "text": "how to stop a garnishment",
      "match": "PHRASE",
-     "impr": 857
+     "impr": 857,
+     "clicks": 152,
+     "cost": 887.14,
+     "conv": 14.0
     }
    ],
    "top30": 0.95,
@@ -766,7 +820,10 @@ window.TERMS = {
     {
      "text": "garnishment lawyer",
      "match": "PHRASE",
-     "impr": 830
+     "impr": 830,
+     "clicks": 93,
+     "cost": 1026.12,
+     "conv": 19.787
     }
    ],
    "top30": 0.865,
@@ -798,27 +855,42 @@ window.TERMS = {
     {
      "text": "how to stop wage garnishment",
      "match": "PHRASE",
-     "impr": 239
+     "impr": 239,
+     "clicks": 31,
+     "cost": 212.12,
+     "conv": 8.333
     },
     {
      "text": "how can i stop a wage garnishment immediately",
      "match": "PHRASE",
-     "impr": 213
+     "impr": 213,
+     "clicks": 27,
+     "cost": 137.04,
+     "conv": 0.998
     },
     {
      "text": "stop wage garnishment immediately",
      "match": "PHRASE",
-     "impr": 155
+     "impr": 155,
+     "clicks": 17,
+     "cost": 150.95,
+     "conv": 1.5
     },
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 129
+     "impr": 129,
+     "clicks": 13,
+     "cost": 73.39,
+     "conv": 2.5
     },
     {
      "text": "how to stop wage garnishments",
      "match": "EXACT",
-     "impr": 87
+     "impr": 87,
+     "clicks": 12,
+     "cost": 69.19,
+     "conv": 0.0
     }
    ],
    "top30": 0.886,
@@ -855,27 +927,42 @@ window.TERMS = {
     {
      "text": "debt defense lawyer near me",
      "match": "PHRASE",
-     "impr": 476
+     "impr": 476,
+     "clicks": 48,
+     "cost": 617.3,
+     "conv": 4.0
     },
     {
      "text": "credit debt lawyers",
      "match": "EXACT",
-     "impr": 235
+     "impr": 235,
+     "clicks": 32,
+     "cost": 470.59,
+     "conv": 7.5
     },
     {
      "text": "debt defense attorney near me",
      "match": "PHRASE",
-     "impr": 29
+     "impr": 29,
+     "clicks": 4,
+     "cost": 47.18,
+     "conv": 1.0
     },
     {
      "text": "debt lawsuit attorney near me",
      "match": "PHRASE",
-     "impr": 28
+     "impr": 28,
+     "clicks": 2,
+     "cost": 27.37,
+     "conv": 0.0
     },
     {
      "text": "attorney for debt lawsuit",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 2,
+     "cost": 19.36,
+     "conv": 0.0
     }
    ],
    "top30": 0.8947368421052632,
@@ -911,7 +998,10 @@ window.TERMS = {
     {
      "text": "how can i stop a wage garnishment immediately",
      "match": "PHRASE",
-     "impr": 756
+     "impr": 756,
+     "clicks": 80,
+     "cost": 519.92,
+     "conv": 3.998
     }
    ],
    "top30": 0.875,
@@ -948,7 +1038,10 @@ window.TERMS = {
     {
      "text": "debt defense attorney",
      "match": "EXACT",
-     "impr": 699
+     "impr": 699,
+     "clicks": 57,
+     "cost": 782.1,
+     "conv": 16.0
     }
    ],
    "top30": 0.8376068376068376,
@@ -984,27 +1077,42 @@ window.TERMS = {
     {
      "text": "debt lawyer",
      "match": "PHRASE",
-     "impr": 266
+     "impr": 266,
+     "clicks": 16,
+     "cost": 257.45,
+     "conv": 10.667
     },
     {
      "text": "debt lawyer",
      "match": "EXACT",
-     "impr": 218
+     "impr": 218,
+     "clicks": 19,
+     "cost": 352.64,
+     "conv": 1.002
     },
     {
      "text": "collection defense lawyer",
      "match": "PHRASE",
-     "impr": 150
+     "impr": 150,
+     "clicks": 15,
+     "cost": 200.91,
+     "conv": 4.0
     },
     {
      "text": "debt collection lawyers near me",
      "match": "PHRASE",
-     "impr": 21
+     "impr": 21,
+     "clicks": 5,
+     "cost": 87.13,
+     "conv": 0.0
     },
     {
      "text": "collections lawyer",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.8991596638655462,
@@ -1036,27 +1144,42 @@ window.TERMS = {
     {
      "text": "debt attorney near me",
      "match": "EXACT",
-     "impr": 399
+     "impr": 399,
+     "clicks": 36,
+     "cost": 530.17,
+     "conv": 6.005
     },
     {
      "text": "debt collection attorney near me",
      "match": "PHRASE",
-     "impr": 191
+     "impr": 191,
+     "clicks": 21,
+     "cost": 256.68,
+     "conv": 2.5
     },
     {
      "text": "lawyers for debt collection near me",
      "match": "PHRASE",
-     "impr": 36
+     "impr": 36,
+     "clicks": 2,
+     "cost": 18.56,
+     "conv": 1.0
     },
     {
      "text": "debt collection lawyers near me",
      "match": "PHRASE",
-     "impr": 23
+     "impr": 23,
+     "clicks": 4,
+     "cost": 31.81,
+     "conv": 0.0
     },
     {
      "text": "attorney for debt collection near me",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.8674698795180723,
@@ -1088,42 +1211,66 @@ window.TERMS = {
     {
      "text": "debt collection attorney near me",
      "match": "PHRASE",
-     "impr": 220
+     "impr": 220,
+     "clicks": 24,
+     "cost": 243.33,
+     "conv": 2.0
     },
     {
      "text": "debt lawyer near me",
      "match": "EXACT",
-     "impr": 197
+     "impr": 197,
+     "clicks": 14,
+     "cost": 239.55,
+     "conv": 0.0
     },
     {
      "text": "lawyers for debt collection near me",
      "match": "PHRASE",
-     "impr": 52
+     "impr": 52,
+     "clicks": 6,
+     "cost": 56.8,
+     "conv": 1.0
     },
     {
      "text": "debt lawyers",
      "match": "PHRASE",
-     "impr": 50
+     "impr": 50,
+     "clicks": 7,
+     "cost": 65.78,
+     "conv": 1.5
     },
     {
      "text": "debt collection lawyers near me",
      "match": "PHRASE",
-     "impr": 35
+     "impr": 35,
+     "clicks": 4,
+     "cost": 40.92,
+     "conv": 0.0
     },
     {
      "text": "debt lawyer",
      "match": "PHRASE",
-     "impr": 29
+     "impr": 29,
+     "clicks": 1,
+     "cost": 13.32,
+     "conv": 0.0
     },
     {
      "text": "debt attorneys near me",
      "match": "EXACT",
-     "impr": 20
+     "impr": 20,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "attorney for debt collection near me",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 1,
+     "cost": 8.11,
+     "conv": 0.0
     }
    ],
    "top30": 0.8611111111111112,
@@ -1155,17 +1302,26 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 433
+     "impr": 433,
+     "clicks": 37,
+     "cost": 470.92,
+     "conv": 12.0
     },
     {
      "text": "debt defense lawyer",
      "match": "EXACT",
-     "impr": 154
+     "impr": 154,
+     "clicks": 12,
+     "cost": 157.85,
+     "conv": 0.0
     },
     {
      "text": "debt defense attorney",
      "match": "EXACT",
-     "impr": 21
+     "impr": 21,
+     "clicks": 2,
+     "cost": 21.85,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -1200,7 +1356,10 @@ window.TERMS = {
     {
      "text": "debt defense attorney near me",
      "match": "PHRASE",
-     "impr": 607
+     "impr": 607,
+     "clicks": 50,
+     "cost": 556.04,
+     "conv": 10.498
     }
    ],
    "top30": 0.7846153846153846,
@@ -1236,7 +1395,10 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 570
+     "impr": 570,
+     "clicks": 109,
+     "cost": 728.32,
+     "conv": 19.505
     }
    ],
    "top30": 0.957,
@@ -1273,7 +1435,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 566
+     "impr": 566,
+     "clicks": 29,
+     "cost": 134.2,
+     "conv": 0.0
     }
    ],
    "top30": 0.5319148936170213,
@@ -1305,22 +1470,34 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 489
+     "impr": 489,
+     "clicks": 46,
+     "cost": 645.92,
+     "conv": 6.0
     },
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 27
+     "impr": 27,
+     "clicks": 2,
+     "cost": 36.75,
+     "conv": 0.0
     },
     {
      "text": "collection defense lawyer",
      "match": "PHRASE",
-     "impr": 21
+     "impr": 21,
+     "clicks": 2,
+     "cost": 18.75,
+     "conv": 0.0
     },
     {
      "text": "attorney for debt lawsuit",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -1355,7 +1532,10 @@ window.TERMS = {
     {
      "text": "creditor garnishment",
      "match": "PHRASE",
-     "impr": 541
+     "impr": 541,
+     "clicks": 30,
+     "cost": 191.68,
+     "conv": 2.0
     }
    ],
    "top30": 0.734,
@@ -1388,22 +1568,34 @@ window.TERMS = {
     {
      "text": "debt collector lawyer",
      "match": "EXACT",
-     "impr": 356
+     "impr": 356,
+     "clicks": 24,
+     "cost": 271.66,
+     "conv": 4.5
     },
     {
      "text": "collection defense lawyer",
      "match": "PHRASE",
-     "impr": 101
+     "impr": 101,
+     "clicks": 3,
+     "cost": 37.4,
+     "conv": 0.0
     },
     {
      "text": "collection defense attorney",
      "match": "PHRASE",
-     "impr": 43
+     "impr": 43,
+     "clicks": 2,
+     "cost": 23.24,
+     "conv": 0.0
     },
     {
      "text": "debt collection lawsuit attorney",
      "match": "PHRASE",
-     "impr": 22
+     "impr": 22,
+     "clicks": 2,
+     "cost": 27.15,
+     "conv": 0.0
     }
    ],
    "top30": 0.8431372549019608,
@@ -1435,32 +1627,50 @@ window.TERMS = {
     {
      "text": "consumer debt attorney",
      "match": "EXACT",
-     "impr": 306
+     "impr": 306,
+     "clicks": 18,
+     "cost": 290.12,
+     "conv": 2.0
     },
     {
      "text": "debt collection defense attorney",
      "match": "PHRASE",
-     "impr": 110
+     "impr": 110,
+     "clicks": 6,
+     "cost": 56.36,
+     "conv": 2.0
     },
     {
      "text": "attorney to fight collection agency",
      "match": "PHRASE",
-     "impr": 27
+     "impr": 27,
+     "clicks": 1,
+     "cost": 6.0,
+     "conv": 0.0
     },
     {
      "text": "debt collection defense lawyer",
      "match": "PHRASE",
-     "impr": 26
+     "impr": 26,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "debt collection lawyers near me",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 3,
+     "cost": 36.46,
+     "conv": 1.0
     },
     {
      "text": "credit collection attorney",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.808,
@@ -1492,7 +1702,10 @@ window.TERMS = {
     {
      "text": "garnishment lawyer near me",
      "match": "PHRASE",
-     "impr": 488
+     "impr": 488,
+     "clicks": 49,
+     "cost": 493.76,
+     "conv": 7.0
     }
    ],
    "top30": 0.892,
@@ -1524,7 +1737,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 484
+     "impr": 484,
+     "clicks": 43,
+     "cost": 236.87,
+     "conv": 0.0
     }
    ],
    "top30": 0.5526315789473685,
@@ -1556,22 +1772,34 @@ window.TERMS = {
     {
      "text": "debt defense lawyer near me",
      "match": "PHRASE",
-     "impr": 317
+     "impr": 317,
+     "clicks": 27,
+     "cost": 311.99,
+     "conv": 7.995
     },
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 139
+     "impr": 139,
+     "clicks": 7,
+     "cost": 68.0,
+     "conv": 0.0
     },
     {
      "text": "debt defense attorney near me",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 3,
+     "cost": 49.4,
+     "conv": 1.0
     },
     {
      "text": "credit debt lawyers",
      "match": "EXACT",
-     "impr": 9
+     "impr": 9,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -1606,7 +1834,10 @@ window.TERMS = {
     {
      "text": "debt collection attorney near me",
      "match": "PHRASE",
-     "impr": 460
+     "impr": 460,
+     "clicks": 37,
+     "cost": 380.59,
+     "conv": 2.0
     }
    ],
    "top30": 0.8522727272727273,
@@ -1638,17 +1869,26 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 416
+     "impr": 416,
+     "clicks": 37,
+     "cost": 456.92,
+     "conv": 21.0
     },
     {
      "text": "collection defense lawyer",
      "match": "PHRASE",
-     "impr": 26
+     "impr": 26,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 1,
+     "cost": 19.13,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -1683,7 +1923,10 @@ window.TERMS = {
     {
      "text": "wage garnishment",
      "match": "PHRASE",
-     "impr": 453
+     "impr": 453,
+     "clicks": 15,
+     "cost": 97.82,
+     "conv": 1.0
     }
    ],
    "top30": 0.627,
@@ -1716,22 +1959,34 @@ window.TERMS = {
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 220
+     "impr": 220,
+     "clicks": 17,
+     "cost": 92.28,
+     "conv": 0.0
     },
     {
      "text": "i got sued by a debt collector",
      "match": "PHRASE",
-     "impr": 126
+     "impr": 126,
+     "clicks": 2,
+     "cost": 26.32,
+     "conv": 5.0
     },
     {
      "text": "being sued by debt collector",
      "match": "PHRASE",
-     "impr": 56
+     "impr": 56,
+     "clicks": 3,
+     "cost": 14.37,
+     "conv": 0.0
     },
     {
      "text": "i have been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 41
+     "impr": 41,
+     "clicks": 5,
+     "cost": 35.51,
+     "conv": 1.0
     }
    ],
    "top30": 0.8661417322834646,
@@ -1768,7 +2023,10 @@ window.TERMS = {
     {
      "text": "garnishment attorney near me",
      "match": "PHRASE",
-     "impr": 438
+     "impr": 438,
+     "clicks": 55,
+     "cost": 532.79,
+     "conv": 6.0
     }
    ],
    "top30": 0.804,
@@ -1800,27 +2058,42 @@ window.TERMS = {
     {
      "text": "consumer debt attorney near me",
      "match": "EXACT",
-     "impr": 277
+     "impr": 277,
+     "clicks": 19,
+     "cost": 315.68,
+     "conv": 1.0
     },
     {
      "text": "debt collection attorney near me",
      "match": "PHRASE",
-     "impr": 53
+     "impr": 53,
+     "clicks": 4,
+     "cost": 36.32,
+     "conv": 0.0
     },
     {
      "text": "lawyers for debt collection near me",
      "match": "PHRASE",
-     "impr": 37
+     "impr": 37,
+     "clicks": 1,
+     "cost": 11.99,
+     "conv": 0.0
     },
     {
      "text": "debt collection lawyers near me",
      "match": "PHRASE",
-     "impr": 32
+     "impr": 32,
+     "clicks": 5,
+     "cost": 31.3,
+     "conv": 0.0
     },
     {
      "text": "attorney for debt collection near me",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.8770491803278688,
@@ -1852,17 +2125,26 @@ window.TERMS = {
     {
      "text": "debt attorney",
      "match": "EXACT",
-     "impr": 310
+     "impr": 310,
+     "clicks": 12,
+     "cost": 168.81,
+     "conv": 1.0
     },
     {
      "text": "collection defense lawyer",
      "match": "PHRASE",
-     "impr": 80
+     "impr": 80,
+     "clicks": 12,
+     "cost": 127.46,
+     "conv": 6.0
     },
     {
      "text": "debt collection lawyers near me",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 4,
+     "cost": 47.04,
+     "conv": 1.0
     }
    ],
    "top30": 0.9166666666666666,
@@ -1894,7 +2176,10 @@ window.TERMS = {
     {
      "text": "garnishment attorney",
      "match": "PHRASE",
-     "impr": 407
+     "impr": 407,
+     "clicks": 48,
+     "cost": 481.41,
+     "conv": 18.423
     }
    ],
    "top30": 0.869,
@@ -1926,7 +2211,10 @@ window.TERMS = {
     {
      "text": "how to stop wage garnishment",
      "match": "PHRASE",
-     "impr": 388
+     "impr": 388,
+     "clicks": 62,
+     "cost": 437.97,
+     "conv": 6.507
     }
    ],
    "top30": 0.888,
@@ -1963,7 +2251,10 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 369
+     "impr": 369,
+     "clicks": 63,
+     "cost": 665.73,
+     "conv": 10.498
     }
    ],
    "top30": 0.987,
@@ -2000,7 +2291,10 @@ window.TERMS = {
     {
      "text": "debt collection lawyers near me",
      "match": "PHRASE",
-     "impr": 336
+     "impr": 336,
+     "clicks": 19,
+     "cost": 264.67,
+     "conv": 8.0
     }
    ],
    "top30": 0.8450704225352113,
@@ -2032,17 +2326,26 @@ window.TERMS = {
     {
      "text": "how to get a credit card lawsuit dismissed",
      "match": "EXACT",
-     "impr": 166
+     "impr": 166,
+     "clicks": 11,
+     "cost": 47.11,
+     "conv": 1.0
     },
     {
      "text": "how to fight a credit card lawsuit",
      "match": "PHRASE",
-     "impr": 154
+     "impr": 154,
+     "clicks": 6,
+     "cost": 36.31,
+     "conv": 1.5
     },
     {
      "text": "summons for credit card debt",
      "match": "PHRASE",
-     "impr": 8
+     "impr": 8,
+     "clicks": 1,
+     "cost": 4.32,
+     "conv": 0.0
     }
    ],
    "top30": 0.8571428571428571,
@@ -2078,17 +2381,26 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 230
+     "impr": 230,
+     "clicks": 17,
+     "cost": 180.82,
+     "conv": 1.0
     },
     {
      "text": "debt defense lawyer",
      "match": "EXACT",
-     "impr": 60
+     "impr": 60,
+     "clicks": 6,
+     "cost": 79.09,
+     "conv": 1.453
     },
     {
      "text": "debt defense attorney",
      "match": "EXACT",
-     "impr": 15
+     "impr": 15,
+     "clicks": 1,
+     "cost": 8.87,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -2123,17 +2435,26 @@ window.TERMS = {
     {
      "text": "how to stop wage garnishment",
      "match": "PHRASE",
-     "impr": 218
+     "impr": 218,
+     "clicks": 32,
+     "cost": 266.79,
+     "conv": 4.333
     },
     {
      "text": "how to stop wage garnishments",
      "match": "EXACT",
-     "impr": 76
+     "impr": 76,
+     "clicks": 16,
+     "cost": 123.15,
+     "conv": 0.0
     },
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 31.73,
+     "conv": 0.0
     }
    ],
    "top30": 0.975,
@@ -2170,7 +2491,10 @@ window.TERMS = {
     {
      "text": "wage garnishment lawyer",
      "match": "PHRASE",
-     "impr": 301
+     "impr": 301,
+     "clicks": 40,
+     "cost": 396.05,
+     "conv": 7.0
     }
    ],
    "top30": 0.858,
@@ -2202,17 +2526,26 @@ window.TERMS = {
     {
      "text": "collections lawyer",
      "match": "PHRASE",
-     "impr": 252
+     "impr": 252,
+     "clicks": 12,
+     "cost": 158.28,
+     "conv": 0.0
     },
     {
      "text": "collections attorney",
      "match": "EXACT",
-     "impr": 26
+     "impr": 26,
+     "clicks": 1,
+     "cost": 13.24,
+     "conv": 0.0
     },
     {
      "text": "debt collection lawyer",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.8478260869565217,
@@ -2244,12 +2577,18 @@ window.TERMS = {
     {
      "text": "resurgent capital debt collectors",
      "match": "PHRASE",
-     "impr": 171
+     "impr": 171,
+     "clicks": 2,
+     "cost": 16.18,
+     "conv": 0.0
     },
     {
      "text": "resurgent capital debt collector",
      "match": "PHRASE",
-     "impr": 115
+     "impr": 115,
+     "clicks": 7,
+     "cost": 39.16,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -2284,7 +2623,10 @@ window.TERMS = {
     {
      "text": "credo legal",
      "match": "EXACT",
-     "impr": 286
+     "impr": 286,
+     "clicks": 71,
+     "cost": 199.7,
+     "conv": 10.473
     }
    ],
    "top30": 0.7934272300469484,
@@ -2316,27 +2658,42 @@ window.TERMS = {
     {
      "text": "wage garnishment",
      "match": "PHRASE",
-     "impr": 223
+     "impr": 223,
+     "clicks": 4,
+     "cost": 7.88,
+     "conv": 0.0
     },
     {
      "text": "garnered wages",
      "match": "PHRASE",
-     "impr": 21
+     "impr": 21,
+     "clicks": 1,
+     "cost": 3.88,
+     "conv": 0.0
     },
     {
      "text": "wages being garnished",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 2,
+     "cost": 1.08,
+     "conv": 0.0
     },
     {
      "text": "garnishment",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "pay garnishment",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.609,
@@ -2368,7 +2725,10 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "EXACT",
-     "impr": 278
+     "impr": 278,
+     "clicks": 22,
+     "cost": 418.7,
+     "conv": 3.0
     }
    ],
    "top30": 0.8771929824561403,
@@ -2404,7 +2764,10 @@ window.TERMS = {
     {
      "text": "midland credit management lawsuit",
      "match": "PHRASE",
-     "impr": 266
+     "impr": 266,
+     "clicks": 8,
+     "cost": 47.1,
+     "conv": 2.0
     }
    ],
    "top30": 0.38848920863309355,
@@ -2441,7 +2804,10 @@ window.TERMS = {
     {
      "text": "midland funding debt collector",
      "match": "PHRASE",
-     "impr": 266
+     "impr": 266,
+     "clicks": 5,
+     "cost": 25.35,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -2476,22 +2842,34 @@ window.TERMS = {
     {
      "text": "collections attorney",
      "match": "EXACT",
-     "impr": 141
+     "impr": 141,
+     "clicks": 9,
+     "cost": 132.68,
+     "conv": 3.5
     },
     {
      "text": "collection attorney",
      "match": "PHRASE",
-     "impr": 91
+     "impr": 91,
+     "clicks": 1,
+     "cost": 31.31,
+     "conv": 0.0
     },
     {
      "text": "collections lawyer",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "collection defense lawyer",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.78125,
@@ -2523,7 +2901,10 @@ window.TERMS = {
     {
      "text": "midland credit management lawsuit",
      "match": "PHRASE",
-     "impr": 253
+     "impr": 253,
+     "clicks": 10,
+     "cost": 37.48,
+     "conv": 2.0
     }
    ],
    "scope": "active",
@@ -2558,7 +2939,10 @@ window.TERMS = {
     {
      "text": "settling debt with creditors",
      "match": "PHRASE",
-     "impr": 244
+     "impr": 244,
+     "clicks": 4,
+     "cost": 68.92,
+     "conv": 3.0
     }
    ],
    "top30": 0.5483870967741935,
@@ -2589,17 +2973,26 @@ window.TERMS = {
     {
      "text": "garnered wages",
      "match": "PHRASE",
-     "impr": 187
+     "impr": 187,
+     "clicks": 4,
+     "cost": 31.12,
+     "conv": 0.0
     },
     {
      "text": "paycheck garnishment",
      "match": "PHRASE",
-     "impr": 33
+     "impr": 33,
+     "clicks": 1,
+     "cost": 13.44,
+     "conv": 0.0
     },
     {
      "text": "pay garnishment",
      "match": "PHRASE",
-     "impr": 20
+     "impr": 20,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.167,
@@ -2631,7 +3024,10 @@ window.TERMS = {
     {
      "text": "dnf associates debt collector",
      "match": "PHRASE",
-     "impr": 240
+     "impr": 240,
+     "clicks": 17,
+     "cost": 109.0,
+     "conv": 2.0
     }
    ],
    "top30": 0.62,
@@ -2667,27 +3063,42 @@ window.TERMS = {
     {
      "text": "lawyer for debt collection",
      "match": "EXACT",
-     "impr": 137
+     "impr": 137,
+     "clicks": 18,
+     "cost": 203.78,
+     "conv": 1.5
     },
     {
      "text": "collection defense lawyer",
      "match": "PHRASE",
-     "impr": 35
+     "impr": 35,
+     "clicks": 5,
+     "cost": 58.21,
+     "conv": 0.0
     },
     {
      "text": "collections lawyer",
      "match": "PHRASE",
-     "impr": 27
+     "impr": 27,
+     "clicks": 3,
+     "cost": 30.86,
+     "conv": 0.0
     },
     {
      "text": "collection defense attorney",
      "match": "PHRASE",
-     "impr": 24
+     "impr": 24,
+     "clicks": 1,
+     "cost": 9.92,
+     "conv": 0.0
     },
     {
      "text": "debt collection lawsuit attorney",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 3,
+     "cost": 57.66,
+     "conv": 0.0
     }
    ],
    "top30": 0.9166666666666666,
@@ -2719,12 +3130,18 @@ window.TERMS = {
     {
      "text": "credit card lawyers",
      "match": "PHRASE",
-     "impr": 138
+     "impr": 138,
+     "clicks": 11,
+     "cost": 124.72,
+     "conv": 1.0
     },
     {
      "text": "credit card lawyer",
      "match": "EXACT",
-     "impr": 99
+     "impr": 99,
+     "clicks": 3,
+     "cost": 47.29,
+     "conv": 0.0
     }
    ],
    "top30": 0.7966101694915254,
@@ -2760,7 +3177,10 @@ window.TERMS = {
     {
      "text": "collection attorney near me",
      "match": "PHRASE",
-     "impr": 234
+     "impr": 234,
+     "clicks": 10,
+     "cost": 158.04,
+     "conv": 4.0
     }
    ],
    "top30": 0.6976744186046512,
@@ -2792,7 +3212,10 @@ window.TERMS = {
     {
      "text": "collection lawyers near me",
      "match": "PHRASE",
-     "impr": 221
+     "impr": 221,
+     "clicks": 15,
+     "cost": 146.7,
+     "conv": 0.0
     }
    ],
    "top30": 0.627906976744186,
@@ -2824,12 +3247,18 @@ window.TERMS = {
     {
      "text": "garnishment lawyer",
      "match": "PHRASE",
-     "impr": 114
+     "impr": 114,
+     "clicks": 20,
+     "cost": 262.22,
+     "conv": 1.0
     },
     {
      "text": "garnishment lawyer near me",
      "match": "PHRASE",
-     "impr": 107
+     "impr": 107,
+     "clicks": 10,
+     "cost": 68.72,
+     "conv": 0.0
     }
    ],
    "top30": 0.925,
@@ -2861,12 +3290,18 @@ window.TERMS = {
     {
      "text": "debt defense lawyer near me",
      "match": "PHRASE",
-     "impr": 135
+     "impr": 135,
+     "clicks": 20,
+     "cost": 243.3,
+     "conv": 1.5
     },
     {
      "text": "debt lawsuit attorney near me",
      "match": "PHRASE",
-     "impr": 84
+     "impr": 84,
+     "clicks": 15,
+     "cost": 179.78,
+     "conv": 2.5
     }
    ],
    "top30": 0.9574468085106383,
@@ -2902,17 +3337,26 @@ window.TERMS = {
     {
      "text": "debt collection lawyer near me",
      "match": "EXACT",
-     "impr": 156
+     "impr": 156,
+     "clicks": 12,
+     "cost": 117.79,
+     "conv": 1.0
     },
     {
      "text": "debt collection lawyers near me",
      "match": "PHRASE",
-     "impr": 49
+     "impr": 49,
+     "clicks": 5,
+     "cost": 48.3,
+     "conv": 0.0
     },
     {
      "text": "collection lawyers near me",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.7857142857142857,
@@ -2944,12 +3388,18 @@ window.TERMS = {
     {
      "text": "debt defense lawyer near me",
      "match": "PHRASE",
-     "impr": 141
+     "impr": 141,
+     "clicks": 13,
+     "cost": 164.81,
+     "conv": 0.0
     },
     {
      "text": "credit debt lawyers",
      "match": "EXACT",
-     "impr": 74
+     "impr": 74,
+     "clicks": 7,
+     "cost": 112.09,
+     "conv": 0.0
     }
    ],
    "top30": 0.8653846153846154,
@@ -2985,7 +3435,10 @@ window.TERMS = {
     {
      "text": "debt collection defense attorney",
      "match": "PHRASE",
-     "impr": 211
+     "impr": 211,
+     "clicks": 21,
+     "cost": 278.37,
+     "conv": 0.833
     }
    ],
    "top30": 0.9473684210526315,
@@ -3021,7 +3474,10 @@ window.TERMS = {
     {
      "text": "stop wage garnishment immediately",
      "match": "PHRASE",
-     "impr": 210
+     "impr": 210,
+     "clicks": 24,
+     "cost": 142.96,
+     "conv": 2.0
     }
    ],
    "top30": 0.867,
@@ -3053,22 +3509,34 @@ window.TERMS = {
     {
      "text": "consumer debt defense attorney",
      "match": "PHRASE",
-     "impr": 142
+     "impr": 142,
+     "clicks": 10,
+     "cost": 93.9,
+     "conv": 1.0
     },
     {
      "text": "debt defense lawyer",
      "match": "EXACT",
-     "impr": 39
+     "impr": 39,
+     "clicks": 2,
+     "cost": 38.72,
+     "conv": 0.0
     },
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 20
+     "impr": 20,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 7
+     "impr": 7,
+     "clicks": 1,
+     "cost": 8.65,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -3103,7 +3571,10 @@ window.TERMS = {
     {
      "text": "fdcpa attorney",
      "match": "PHRASE",
-     "impr": 208
+     "impr": 208,
+     "clicks": 28,
+     "cost": 299.54,
+     "conv": 3.667
     }
    ],
    "scope": "active",
@@ -3138,17 +3609,26 @@ window.TERMS = {
     {
      "text": "stop wage garnishment immediately",
      "match": "PHRASE",
-     "impr": 96
+     "impr": 96,
+     "clicks": 9,
+     "cost": 37.56,
+     "conv": 1.0
     },
     {
      "text": "garnishment",
      "match": "PHRASE",
-     "impr": 58
+     "impr": 58,
+     "clicks": 5,
+     "cost": 11.93,
+     "conv": 0.0
     },
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 53
+     "impr": 53,
+     "clicks": 8,
+     "cost": 47.58,
+     "conv": 1.0
     }
    ],
    "top30": 0.94,
@@ -3180,7 +3660,10 @@ window.TERMS = {
     {
      "text": "lvnv funding llc lawsuit",
      "match": "PHRASE",
-     "impr": 206
+     "impr": 206,
+     "clicks": 3,
+     "cost": 15.39,
+     "conv": 0.0
     }
    ],
    "top30": 0.6037735849056604,
@@ -3217,37 +3700,58 @@ window.TERMS = {
     {
      "text": "debt lawyers near me",
      "match": "EXACT",
-     "impr": 82
+     "impr": 82,
+     "clicks": 6,
+     "cost": 130.14,
+     "conv": 1.0
     },
     {
      "text": "debt collection attorney near me",
      "match": "PHRASE",
-     "impr": 63
+     "impr": 63,
+     "clicks": 7,
+     "cost": 85.45,
+     "conv": 0.0
     },
     {
      "text": "debt lawyer",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 2,
+     "cost": 28.96,
+     "conv": 0.0
     },
     {
      "text": "collection lawyers near me",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 1,
+     "cost": 3.31,
+     "conv": 0.0
     },
     {
      "text": "lawyers for debt collection near me",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 2,
+     "cost": 12.11,
+     "conv": 0.0
     },
     {
      "text": "debt lawyers",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 11.68,
+     "conv": 0.0
     },
     {
      "text": "debt collection lawyers near me",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 1.75,
+     "conv": 1.0
     }
    ],
    "top30": 0.9069767441860465,
@@ -3279,7 +3783,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 201
+     "impr": 201,
+     "clicks": 13,
+     "cost": 50.79,
+     "conv": 0.0
     }
    ],
    "top30": 0.8229166666666666,
@@ -3315,17 +3822,26 @@ window.TERMS = {
     {
      "text": "debt lawyers",
      "match": "EXACT",
-     "impr": 88
+     "impr": 88,
+     "clicks": 9,
+     "cost": 165.94,
+     "conv": 0.0
     },
     {
      "text": "debt lawyers",
      "match": "PHRASE",
-     "impr": 77
+     "impr": 77,
+     "clicks": 7,
+     "cost": 109.24,
+     "conv": 0.0
     },
     {
      "text": "collection defense lawyer",
      "match": "PHRASE",
-     "impr": 36
+     "impr": 36,
+     "clicks": 6,
+     "cost": 80.88,
+     "conv": 3.0
     }
    ],
    "top30": 0.88,
@@ -3357,17 +3873,26 @@ window.TERMS = {
     {
      "text": "garnish wages attorney",
      "match": "EXACT",
-     "impr": 162
+     "impr": 162,
+     "clicks": 20,
+     "cost": 276.7,
+     "conv": 9.0
     },
     {
      "text": "stop wage garnishment attorney",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 5,
+     "cost": 81.34,
+     "conv": 1.0
     },
     {
      "text": "lawyer to stop garnishment",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 5,
+     "cost": 41.16,
+     "conv": 0.725
     }
    ],
    "top30": 0.82,
@@ -3403,7 +3928,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 195
+     "impr": 195,
+     "clicks": 15,
+     "cost": 41.95,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -3434,7 +3962,10 @@ window.TERMS = {
     {
      "text": "fdcpa attorney near me",
      "match": "EXACT",
-     "impr": 195
+     "impr": 195,
+     "clicks": 17,
+     "cost": 156.35,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -3469,17 +4000,26 @@ window.TERMS = {
     {
      "text": "debt collector attorney",
      "match": "EXACT",
-     "impr": 156
+     "impr": 156,
+     "clicks": 12,
+     "cost": 125.42,
+     "conv": 2.5
     },
     {
      "text": "collection defense lawyer",
      "match": "PHRASE",
-     "impr": 22
+     "impr": 22,
+     "clicks": 1,
+     "cost": 12.56,
+     "conv": 0.0
     },
     {
      "text": "collection defense attorney",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.8208955223880597,
@@ -3511,22 +4051,34 @@ window.TERMS = {
     {
      "text": "i ve been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 102
+     "impr": 102,
+     "clicks": 8,
+     "cost": 41.17,
+     "conv": 1.0
     },
     {
      "text": "being sued by debt collector",
      "match": "EXACT",
-     "impr": 64
+     "impr": 64,
+     "clicks": 8,
+     "cost": 64.65,
+     "conv": 0.0
     },
     {
      "text": "sued by debt collector",
      "match": "EXACT",
-     "impr": 11
+     "impr": 11,
+     "clicks": 1,
+     "cost": 3.67,
+     "conv": 0.0
     },
     {
      "text": "i got sued by a debt collector",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 3,
+     "cost": 16.74,
+     "conv": 0.0
     }
    ],
    "top30": 0.9534883720930233,
@@ -3562,17 +4114,26 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 109
+     "impr": 109,
+     "clicks": 14,
+     "cost": 89.12,
+     "conv": 0.0
     },
     {
      "text": "how to stop my check from being garnished",
      "match": "EXACT",
-     "impr": 57
+     "impr": 57,
+     "clicks": 11,
+     "cost": 69.4,
+     "conv": 0.5
     },
     {
      "text": "can a garnishment be stopped",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 4,
+     "cost": 47.28,
+     "conv": 0.0
     }
    ],
    "top30": 0.939,
@@ -3608,17 +4169,26 @@ window.TERMS = {
     {
      "text": "credit debt lawyers",
      "match": "EXACT",
-     "impr": 142
+     "impr": 142,
+     "clicks": 7,
+     "cost": 153.01,
+     "conv": 1.0
     },
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 33
+     "impr": 33,
+     "clicks": 6,
+     "cost": 136.11,
+     "conv": 0.0
     },
     {
      "text": "attorney for debt lawsuit",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.9047619047619048,
@@ -3655,7 +4225,10 @@ window.TERMS = {
     {
      "text": "credit card debt lawyer",
      "match": "EXACT",
-     "impr": 183
+     "impr": 183,
+     "clicks": 11,
+     "cost": 136.83,
+     "conv": 2.0
     }
    ],
    "top30": 0.8695652173913043,
@@ -3691,12 +4264,18 @@ window.TERMS = {
     {
      "text": "lvnv funding debt collector",
      "match": "PHRASE",
-     "impr": 157
+     "impr": 157,
+     "clicks": 9,
+     "cost": 63.53,
+     "conv": 2.0
     },
     {
      "text": "lvnv funding debt collectors",
      "match": "PHRASE",
-     "impr": 26
+     "impr": 26,
+     "clicks": 1,
+     "cost": 4.71,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -3731,17 +4310,26 @@ window.TERMS = {
     {
      "text": "attorney for debt collection",
      "match": "EXACT",
-     "impr": 120
+     "impr": 120,
+     "clicks": 14,
+     "cost": 204.92,
+     "conv": 4.003
     },
     {
      "text": "collection attorney",
      "match": "PHRASE",
-     "impr": 52
+     "impr": 52,
+     "clicks": 5,
+     "cost": 51.84,
+     "conv": 0.0
     },
     {
      "text": "collection defense lawyer",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.8909090909090909,
@@ -3773,17 +4361,26 @@ window.TERMS = {
     {
      "text": "how to stop wage garnishments",
      "match": "EXACT",
-     "impr": 77
+     "impr": 77,
+     "clicks": 6,
+     "cost": 29.37,
+     "conv": 1.0
     },
     {
      "text": "stop wage garnishment immediately",
      "match": "PHRASE",
-     "impr": 68
+     "impr": 68,
+     "clicks": 6,
+     "cost": 60.03,
+     "conv": 1.0
     },
     {
      "text": "how to stop wage garnishment",
      "match": "PHRASE",
-     "impr": 37
+     "impr": 37,
+     "clicks": 3,
+     "cost": 22.52,
+     "conv": 4.0
     }
    ],
    "top30": 0.881,
@@ -3820,7 +4417,10 @@ window.TERMS = {
     {
      "text": "debt defense lawyer near me",
      "match": "PHRASE",
-     "impr": 181
+     "impr": 181,
+     "clicks": 30,
+     "cost": 436.28,
+     "conv": 2.0
     }
    ],
    "top30": 0.84375,
@@ -3856,7 +4456,10 @@ window.TERMS = {
     {
      "text": "consumer debt defense attorney",
      "match": "PHRASE",
-     "impr": 180
+     "impr": 180,
+     "clicks": 18,
+     "cost": 276.45,
+     "conv": 2.0
     }
    ],
    "scope": "active",
@@ -3891,7 +4494,10 @@ window.TERMS = {
     {
      "text": "debt defense lawyer",
      "match": "EXACT",
-     "impr": 176
+     "impr": 176,
+     "clicks": 13,
+     "cost": 174.0,
+     "conv": 8.0
     }
    ],
    "scope": "active",
@@ -3926,17 +4532,26 @@ window.TERMS = {
     {
      "text": "can a garnishment be stopped",
      "match": "PHRASE",
-     "impr": 113
+     "impr": 113,
+     "clicks": 17,
+     "cost": 157.36,
+     "conv": 5.0
     },
     {
      "text": "how to stop my check from being garnished",
      "match": "EXACT",
-     "impr": 34
+     "impr": 34,
+     "clicks": 5,
+     "cost": 55.08,
+     "conv": 1.0
     },
     {
      "text": "how to stop wage garnishments",
      "match": "EXACT",
-     "impr": 29
+     "impr": 29,
+     "clicks": 3,
+     "cost": 7.23,
+     "conv": 1.0
     }
    ],
    "top30": 0.9,
@@ -3973,12 +4588,18 @@ window.TERMS = {
     {
      "text": "garnish wages attorney",
      "match": "EXACT",
-     "impr": 149
+     "impr": 149,
+     "clicks": 21,
+     "cost": 246.68,
+     "conv": 1.0
     },
     {
      "text": "lawyer to stop garnishment",
      "match": "PHRASE",
-     "impr": 23
+     "impr": 23,
+     "clicks": 2,
+     "cost": 57.16,
+     "conv": 1.0
     }
    ],
    "top30": 0.969,
@@ -4014,27 +4635,42 @@ window.TERMS = {
     {
      "text": "can you stop a garnishment before it starts",
      "match": "PHRASE",
-     "impr": 82
+     "impr": 82,
+     "clicks": 11,
+     "cost": 82.81,
+     "conv": 2.378
     },
     {
      "text": "can a garnishment be stopped",
      "match": "PHRASE",
-     "impr": 39
+     "impr": 39,
+     "clicks": 5,
+     "cost": 29.39,
+     "conv": 1.5
     },
     {
      "text": "how to stop a garnishment",
      "match": "PHRASE",
-     "impr": 20
+     "impr": 20,
+     "clicks": 2,
+     "cost": 8.66,
+     "conv": 0.0
     },
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 2,
+     "cost": 7.52,
+     "conv": 0.0
     },
     {
      "text": "can you stop a garnishment once it starts",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.841,
@@ -4070,22 +4706,34 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney near me",
      "match": "PHRASE",
-     "impr": 128
+     "impr": 128,
+     "clicks": 12,
+     "cost": 123.21,
+     "conv": 2.833
     },
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 21
+     "impr": 21,
+     "clicks": 1,
+     "cost": 7.9,
+     "conv": 0.0
     },
     {
      "text": "attorney for debt collection lawsuit",
      "match": "EXACT",
-     "impr": 13
+     "impr": 13,
+     "clicks": 1,
+     "cost": 16.78,
+     "conv": 0.0
     },
     {
      "text": "lawyer for debt lawsuit",
      "match": "PHRASE",
-     "impr": 8
+     "impr": 8,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -4120,7 +4768,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 170
+     "impr": 170,
+     "clicks": 10,
+     "cost": 24.92,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -4151,7 +4802,10 @@ window.TERMS = {
     {
      "text": "debt collector harassment",
      "match": "PHRASE",
-     "impr": 170
+     "impr": 170,
+     "clicks": 18,
+     "cost": 64.68,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -4186,17 +4840,26 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 113
+     "impr": 113,
+     "clicks": 9,
+     "cost": 154.35,
+     "conv": 3.0
     },
     {
      "text": "debt defense lawyer",
      "match": "EXACT",
-     "impr": 39
+     "impr": 39,
+     "clicks": 2,
+     "cost": 45.2,
+     "conv": 1.0
     },
     {
      "text": "debt defense attorney",
      "match": "EXACT",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -4231,12 +4894,18 @@ window.TERMS = {
     {
      "text": "debt defense lawyer near me",
      "match": "PHRASE",
-     "impr": 98
+     "impr": 98,
+     "clicks": 9,
+     "cost": 115.37,
+     "conv": 0.0
     },
     {
      "text": "debt lawsuit attorney near me",
      "match": "PHRASE",
-     "impr": 67
+     "impr": 67,
+     "clicks": 5,
+     "cost": 95.15,
+     "conv": 0.5
     }
    ],
    "top30": 0.875,
@@ -4272,12 +4941,18 @@ window.TERMS = {
     {
      "text": "being sued by debt collector",
      "match": "EXACT",
-     "impr": 84
+     "impr": 84,
+     "clicks": 4,
+     "cost": 34.85,
+     "conv": 0.0
     },
     {
      "text": "sued by debt collector",
      "match": "EXACT",
-     "impr": 81
+     "impr": 81,
+     "clicks": 1,
+     "cost": 2.82,
+     "conv": 0.0
     }
    ],
    "top30": 0.9117647058823529,
@@ -4313,12 +4988,18 @@ window.TERMS = {
     {
      "text": "im being sued for a debt what do i do",
      "match": "EXACT",
-     "impr": 110
+     "impr": 110,
+     "clicks": 14,
+     "cost": 122.8,
+     "conv": 2.0
     },
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 54
+     "impr": 54,
+     "clicks": 7,
+     "cost": 40.53,
+     "conv": 0.0
     }
    ],
    "top30": 0.9215686274509803,
@@ -4354,32 +5035,50 @@ window.TERMS = {
     {
      "text": "how to stop a garnishment",
      "match": "PHRASE",
-     "impr": 67
+     "impr": 67,
+     "clicks": 3,
+     "cost": 16.46,
+     "conv": 1.0
     },
     {
      "text": "how to remove wage garnishment",
      "match": "PHRASE",
-     "impr": 29
+     "impr": 29,
+     "clicks": 1,
+     "cost": 8.1,
+     "conv": 0.0
     },
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "how to get out of wage garnishment",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 2,
+     "cost": 11.61,
+     "conv": 0.0
     },
     {
      "text": "can you stop a garnishment before it starts",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 2,
+     "cost": 28.21,
+     "conv": 1.0
     },
     {
      "text": "how to stop a garnishment that has already started",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 2,
+     "cost": 5.83,
+     "conv": 0.0
     }
    ],
    "top30": 0.805,
@@ -4415,7 +5114,10 @@ window.TERMS = {
     {
      "text": "garnishment lawyer",
      "match": "PHRASE",
-     "impr": 160
+     "impr": 160,
+     "clicks": 16,
+     "cost": 170.92,
+     "conv": 3.0
     }
    ],
    "top30": 0.955,
@@ -4447,7 +5149,10 @@ window.TERMS = {
     {
      "text": "collection attorney",
      "match": "PHRASE",
-     "impr": 159
+     "impr": 159,
+     "clicks": 3,
+     "cost": 75.07,
+     "conv": 0.0
     }
    ],
    "top30": 0.6829268292682927,
@@ -4479,7 +5184,10 @@ window.TERMS = {
     {
      "text": "wage garnishment lawyers near me",
      "match": "PHRASE",
-     "impr": 158
+     "impr": 158,
+     "clicks": 19,
+     "cost": 187.86,
+     "conv": 2.001
     }
    ],
    "top30": 0.892,
@@ -4511,17 +5219,26 @@ window.TERMS = {
     {
      "text": "collections attorney near me",
      "match": "EXACT",
-     "impr": 79
+     "impr": 79,
+     "clicks": 5,
+     "cost": 63.2,
+     "conv": 1.0
     },
     {
      "text": "collection attorney near me",
      "match": "PHRASE",
-     "impr": 54
+     "impr": 54,
+     "clicks": 5,
+     "cost": 41.62,
+     "conv": 0.0
     },
     {
      "text": "collection lawyers near me",
      "match": "PHRASE",
-     "impr": 25
+     "impr": 25,
+     "clicks": 3,
+     "cost": 84.27,
+     "conv": 1.0
     }
    ],
    "top30": 0.7027027027027027,
@@ -4553,17 +5270,26 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney near me",
      "match": "PHRASE",
-     "impr": 57
+     "impr": 57,
+     "clicks": 4,
+     "cost": 50.33,
+     "conv": 0.0
     },
     {
      "text": "consumer debt defense attorney",
      "match": "PHRASE",
-     "impr": 56
+     "impr": 56,
+     "clicks": 2,
+     "cost": 20.46,
+     "conv": 0.0
     },
     {
      "text": "debt defense lawyer near me",
      "match": "PHRASE",
-     "impr": 44
+     "impr": 44,
+     "clicks": 3,
+     "cost": 37.22,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -4598,7 +5324,10 @@ window.TERMS = {
     {
      "text": "garnishment",
      "match": "PHRASE",
-     "impr": 157
+     "impr": 157,
+     "clicks": 8,
+     "cost": 53.67,
+     "conv": 1.0
     }
    ],
    "top30": 0.711,
@@ -4631,17 +5360,26 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 94
+     "impr": 94,
+     "clicks": 4,
+     "cost": 64.06,
+     "conv": 3.0
     },
     {
      "text": "attorney for debt collection lawsuit",
      "match": "EXACT",
-     "impr": 51
+     "impr": 51,
+     "clicks": 8,
+     "cost": 101.88,
+     "conv": 1.0
     },
     {
      "text": "debt defense attorney",
      "match": "EXACT",
-     "impr": 9
+     "impr": 9,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -4676,12 +5414,18 @@ window.TERMS = {
     {
      "text": "how to answer a debt summons",
      "match": "PHRASE",
-     "impr": 80
+     "impr": 80,
+     "clicks": 11,
+     "cost": 48.27,
+     "conv": 0.0
     },
     {
      "text": "how to answer a court summons debt collection",
      "match": "EXACT",
-     "impr": 73
+     "impr": 73,
+     "clicks": 5,
+     "cost": 31.82,
+     "conv": 0.0
     }
    ],
    "top30": 0.9,
@@ -4717,12 +5461,18 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney near me",
      "match": "PHRASE",
-     "impr": 144
+     "impr": 144,
+     "clicks": 10,
+     "cost": 97.97,
+     "conv": 0.0
     },
     {
      "text": "debt litigation attorney",
      "match": "PHRASE",
-     "impr": 8
+     "impr": 8,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -4757,12 +5507,18 @@ window.TERMS = {
     {
      "text": "how to respond to a debt collector lawsuit",
      "match": "PHRASE",
-     "impr": 107
+     "impr": 107,
+     "clicks": 8,
+     "cost": 76.61,
+     "conv": 1.0
     },
     {
      "text": "lawsuit dismissed",
      "match": "PHRASE",
-     "impr": 45
+     "impr": 45,
+     "clicks": 6,
+     "cost": 24.07,
+     "conv": 1.003
     }
    ],
    "top30": 0.8857142857142857,
@@ -4798,22 +5554,34 @@ window.TERMS = {
     {
      "text": "i ve been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 96
+     "impr": 96,
+     "clicks": 3,
+     "cost": 13.08,
+     "conv": 0.0
     },
     {
      "text": "being sued by debt collector",
      "match": "PHRASE",
-     "impr": 33
+     "impr": 33,
+     "clicks": 1,
+     "cost": 3.39,
+     "conv": 0.0
     },
     {
      "text": "being sued by debt collector",
      "match": "EXACT",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.6153846153846154,
@@ -4849,7 +5617,10 @@ window.TERMS = {
     {
      "text": "credo legal services",
      "match": "EXACT",
-     "impr": 149
+     "impr": 149,
+     "clicks": 62,
+     "cost": 172.85,
+     "conv": 5.0
     }
    ],
    "top30": 0.9186991869918699,
@@ -4881,7 +5652,10 @@ window.TERMS = {
     {
      "text": "how to file an answer to a debt lawsuit",
      "match": "PHRASE",
-     "impr": 148
+     "impr": 148,
+     "clicks": 9,
+     "cost": 50.11,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -4916,17 +5690,26 @@ window.TERMS = {
     {
      "text": "how to stop a garnishment",
      "match": "PHRASE",
-     "impr": 85
+     "impr": 85,
+     "clicks": 12,
+     "cost": 72.43,
+     "conv": 5.0
     },
     {
      "text": "how to stop wage garnishments",
      "match": "EXACT",
-     "impr": 35
+     "impr": 35,
+     "clicks": 7,
+     "cost": 45.71,
+     "conv": 0.0
     },
     {
      "text": "how to stop wage garnishment",
      "match": "PHRASE",
-     "impr": 22
+     "impr": 22,
+     "clicks": 4,
+     "cost": 28.55,
+     "conv": 0.998
     }
    ],
    "top30": 0.958,
@@ -4963,7 +5746,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 140
+     "impr": 140,
+     "clicks": 11,
+     "cost": 180.14,
+     "conv": 3.0
     }
    ],
    "scope": "active",
@@ -4998,7 +5784,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 140
+     "impr": 140,
+     "clicks": 15,
+     "cost": 291.14,
+     "conv": 2.999
     }
    ],
    "scope": "active",
@@ -5033,7 +5822,10 @@ window.TERMS = {
     {
      "text": "credit card attorney",
      "match": "PHRASE",
-     "impr": 140
+     "impr": 140,
+     "clicks": 11,
+     "cost": 142.27,
+     "conv": 0.0
     }
    ],
    "top30": 0.7419354838709677,
@@ -5069,7 +5861,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 139
+     "impr": 139,
+     "clicks": 15,
+     "cost": 58.61,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -5100,7 +5895,10 @@ window.TERMS = {
     {
      "text": "stop wage garnishment",
      "match": "PHRASE",
-     "impr": 139
+     "impr": 139,
+     "clicks": 25,
+     "cost": 299.86,
+     "conv": 5.92
     }
    ],
    "top30": 0.906,
@@ -5137,12 +5935,18 @@ window.TERMS = {
     {
      "text": "lawsuit by credit card company",
      "match": "PHRASE",
-     "impr": 108
+     "impr": 108,
+     "clicks": 9,
+     "cost": 46.21,
+     "conv": 0.0
     },
     {
      "text": "credit card suing me",
      "match": "PHRASE",
-     "impr": 31
+     "impr": 31,
+     "clicks": 3,
+     "cost": 12.17,
+     "conv": 0.0
     }
    ],
    "top30": 0.95,
@@ -5178,22 +5982,34 @@ window.TERMS = {
     {
      "text": "can a garnishment be stopped",
      "match": "PHRASE",
-     "impr": 66
+     "impr": 66,
+     "clicks": 9,
+     "cost": 58.58,
+     "conv": 1.0
     },
     {
      "text": "how to get out of wage garnishment",
      "match": "PHRASE",
-     "impr": 37
+     "impr": 37,
+     "clicks": 3,
+     "cost": 22.25,
+     "conv": 4.0
     },
     {
      "text": "how can i stop my wages from being garnished",
      "match": "EXACT",
-     "impr": 21
+     "impr": 21,
+     "clicks": 6,
+     "cost": 38.93,
+     "conv": 0.0
     },
     {
      "text": "stop wage garnishment immediately",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 2,
+     "cost": 7.87,
+     "conv": 0.0
     }
    ],
    "top30": 0.84,
@@ -5230,7 +6046,10 @@ window.TERMS = {
     {
      "text": "lawyer for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 135
+     "impr": 135,
+     "clicks": 23,
+     "cost": 273.21,
+     "conv": 2.996
     }
    ],
    "top30": 0.9714285714285714,
@@ -5266,7 +6085,10 @@ window.TERMS = {
     {
      "text": "how to sue debt collectors for fdcpa violations",
      "match": "PHRASE",
-     "impr": 131
+     "impr": 131,
+     "clicks": 15,
+     "cost": 82.57,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -5301,17 +6123,26 @@ window.TERMS = {
     {
      "text": "debt lawsuit defense",
      "match": "PHRASE",
-     "impr": 81
+     "impr": 81,
+     "clicks": 2,
+     "cost": 17.22,
+     "conv": 1.0
     },
     {
      "text": "debt defense lawyer",
      "match": "EXACT",
-     "impr": 42
+     "impr": 42,
+     "clicks": 2,
+     "cost": 18.27,
+     "conv": 1.0
     },
     {
      "text": "collection defense",
      "match": "EXACT",
-     "impr": 7
+     "impr": 7,
+     "clicks": 1,
+     "cost": 3.75,
+     "conv": 0.0
     }
    ],
    "top30": 0.6857142857142857,
@@ -5347,7 +6178,10 @@ window.TERMS = {
     {
      "text": "credit card lawyers near me",
      "match": "PHRASE",
-     "impr": 130
+     "impr": 130,
+     "clicks": 9,
+     "cost": 102.23,
+     "conv": 1.0
     }
    ],
    "top30": 0.7428571428571429,
@@ -5383,7 +6217,10 @@ window.TERMS = {
     {
      "text": "debt collection defense attorney",
      "match": "PHRASE",
-     "impr": 129
+     "impr": 129,
+     "clicks": 7,
+     "cost": 54.25,
+     "conv": 2.0
     }
    ],
    "scope": "active",
@@ -5414,22 +6251,34 @@ window.TERMS = {
     {
      "text": "being sued by credit card company",
      "match": "EXACT",
-     "impr": 54
+     "impr": 54,
+     "clicks": 2,
+     "cost": 17.08,
+     "conv": 0.0
     },
     {
      "text": "can a credit card company sue you",
      "match": "EXACT",
-     "impr": 51
+     "impr": 51,
+     "clicks": 6,
+     "cost": 28.96,
+     "conv": 0.0
     },
     {
      "text": "lawsuit by credit card company",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "im being sued by a credit card company",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 1,
+     "cost": 2.68,
+     "conv": 0.0
     }
    ],
    "top30": 0.9166666666666666,
@@ -5465,12 +6314,18 @@ window.TERMS = {
     {
      "text": "debt collection lawyers",
      "match": "EXACT",
-     "impr": 87
+     "impr": 87,
+     "clicks": 7,
+     "cost": 122.13,
+     "conv": 2.0
     },
     {
      "text": "collection defense attorney",
      "match": "PHRASE",
-     "impr": 37
+     "impr": 37,
+     "clicks": 3,
+     "cost": 40.04,
+     "conv": 1.0
     }
    ],
    "top30": 0.85,
@@ -5502,7 +6357,10 @@ window.TERMS = {
     {
      "text": "being sued by debt collector",
      "match": "EXACT",
-     "impr": 122
+     "impr": 122,
+     "clicks": 12,
+     "cost": 65.75,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -5537,7 +6395,10 @@ window.TERMS = {
     {
      "text": "debt collection lawsuit attorney near me",
      "match": "PHRASE",
-     "impr": 122
+     "impr": 122,
+     "clicks": 9,
+     "cost": 67.28,
+     "conv": 4.0
     }
    ],
    "scope": "active",
@@ -5572,7 +6433,10 @@ window.TERMS = {
     {
      "text": "dnf associates debt collector",
      "match": "PHRASE",
-     "impr": 122
+     "impr": 122,
+     "clicks": 11,
+     "cost": 50.23,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -5607,7 +6471,10 @@ window.TERMS = {
     {
      "text": "how to fight a garnishment",
      "match": "PHRASE",
-     "impr": 119
+     "impr": 119,
+     "clicks": 11,
+     "cost": 80.17,
+     "conv": 5.0
     }
    ],
    "top30": 0.905,
@@ -5643,17 +6510,26 @@ window.TERMS = {
     {
      "text": "consumer debt lawyer",
      "match": "EXACT",
-     "impr": 85
+     "impr": 85,
+     "clicks": 2,
+     "cost": 17.44,
+     "conv": 0.0
     },
     {
      "text": "debt collection defense attorney",
      "match": "PHRASE",
-     "impr": 23
+     "impr": 23,
+     "clicks": 1,
+     "cost": 13.83,
+     "conv": 0.0
     },
     {
      "text": "attorney to fight collection agency",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 1,
@@ -5685,12 +6561,18 @@ window.TERMS = {
     {
      "text": "what to do if a debt collector sues you",
      "match": "PHRASE",
-     "impr": 99
+     "impr": 99,
+     "clicks": 6,
+     "cost": 29.66,
+     "conv": 0.0
     },
     {
      "text": "im being sued for a debt what do i do",
      "match": "EXACT",
-     "impr": 18
+     "impr": 18,
+     "clicks": 1,
+     "cost": 2.78,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -5725,7 +6607,10 @@ window.TERMS = {
     {
      "text": "garnishment",
      "match": "PHRASE",
-     "impr": 116
+     "impr": 116,
+     "clicks": 6,
+     "cost": 23.31,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -5757,12 +6642,18 @@ window.TERMS = {
     {
      "text": "credit collection attorney",
      "match": "PHRASE",
-     "impr": 79
+     "impr": 79,
+     "clicks": 6,
+     "cost": 99.81,
+     "conv": 4.0
     },
     {
      "text": "credit attorney",
      "match": "EXACT",
-     "impr": 37
+     "impr": 37,
+     "clicks": 1,
+     "cost": 17.47,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -5793,12 +6684,18 @@ window.TERMS = {
     {
      "text": "resurgent capital debt collectors",
      "match": "PHRASE",
-     "impr": 63
+     "impr": 63,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "resurgent capital debt collector",
      "match": "PHRASE",
-     "impr": 51
+     "impr": 51,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -5833,7 +6730,10 @@ window.TERMS = {
     {
      "text": "credit card debt lawyers near me",
      "match": "PHRASE",
-     "impr": 113
+     "impr": 113,
+     "clicks": 9,
+     "cost": 90.29,
+     "conv": 4.004
     }
    ],
    "scope": "active",
@@ -5868,7 +6768,10 @@ window.TERMS = {
     {
      "text": "cavalry spv debt collector",
      "match": "PHRASE",
-     "impr": 113
+     "impr": 113,
+     "clicks": 4,
+     "cost": 16.56,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -5903,7 +6806,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 112
+     "impr": 112,
+     "clicks": 9,
+     "cost": 122.18,
+     "conv": 8.0
     }
    ],
    "scope": "active",
@@ -5938,7 +6844,10 @@ window.TERMS = {
     {
      "text": "mandarich law group",
      "match": "PHRASE",
-     "impr": 112
+     "impr": 112,
+     "clicks": 4,
+     "cost": 74.96,
+     "conv": 1.0
     }
    ],
    "top30": 0.46153846153846156,
@@ -5975,17 +6884,26 @@ window.TERMS = {
     {
      "text": "how to fight a garnishment",
      "match": "PHRASE",
-     "impr": 58
+     "impr": 58,
+     "clicks": 8,
+     "cost": 56.04,
+     "conv": 1.0
     },
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 39
+     "impr": 39,
+     "clicks": 4,
+     "cost": 23.93,
+     "conv": 1.0
     },
     {
      "text": "can a garnishment be stopped",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 2,
+     "cost": 12.39,
+     "conv": 0.0
     }
    ],
    "top30": 1,
@@ -6022,22 +6940,34 @@ window.TERMS = {
     {
      "text": "can a garnishment be stopped",
      "match": "PHRASE",
-     "impr": 61
+     "impr": 61,
+     "clicks": 12,
+     "cost": 63.47,
+     "conv": 0.0
     },
     {
      "text": "how to stop wage garnishments",
      "match": "EXACT",
-     "impr": 18
+     "impr": 18,
+     "clicks": 4,
+     "cost": 32.86,
+     "conv": 0.0
     },
     {
      "text": "how to remove wage garnishment",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 2,
+     "cost": 8.6,
+     "conv": 0.0
     },
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 3,
+     "cost": 13.98,
+     "conv": 0.0
     }
    ],
    "top30": 1,
@@ -6073,12 +7003,18 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 56
+     "impr": 56,
+     "clicks": 11,
+     "cost": 67.72,
+     "conv": 0.0
     },
     {
      "text": "how to fight a garnishment",
      "match": "PHRASE",
-     "impr": 54
+     "impr": 54,
+     "clicks": 16,
+     "cost": 116.76,
+     "conv": 2.0
     }
    ],
    "top30": 0.955,
@@ -6115,22 +7051,34 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 46
+     "impr": 46,
+     "clicks": 4,
+     "cost": 24.27,
+     "conv": 0.0
     },
     {
      "text": "how to fight a garnishment",
      "match": "PHRASE",
-     "impr": 35
+     "impr": 35,
+     "clicks": 3,
+     "cost": 10.79,
+     "conv": 0.0
     },
     {
      "text": "how to stop wage garnishments",
      "match": "EXACT",
-     "impr": 16
+     "impr": 16,
+     "clicks": 1,
+     "cost": 2.32,
+     "conv": 0.0
     },
     {
      "text": "can a garnishment be stopped",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.923,
@@ -6167,7 +7115,10 @@ window.TERMS = {
     {
      "text": "writ of garnishment",
      "match": "PHRASE",
-     "impr": 109
+     "impr": 109,
+     "clicks": 2,
+     "cost": 19.14,
+     "conv": 0.0
     }
    ],
    "top30": 0.786,
@@ -6201,12 +7152,18 @@ window.TERMS = {
     {
      "text": "who can garnish wages without notice",
      "match": "EXACT",
-     "impr": 67
+     "impr": 67,
+     "clicks": 4,
+     "cost": 18.22,
+     "conv": 0.0
     },
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 42
+     "impr": 42,
+     "clicks": 1,
+     "cost": 1.78,
+     "conv": 0.0
     }
    ],
    "top30": 0.61,
@@ -6238,17 +7195,26 @@ window.TERMS = {
     {
      "text": "how to stop wage garnishment",
      "match": "PHRASE",
-     "impr": 49
+     "impr": 49,
+     "clicks": 7,
+     "cost": 30.55,
+     "conv": 1.5
     },
     {
      "text": "how to stop wage garnishments",
      "match": "EXACT",
-     "impr": 41
+     "impr": 41,
+     "clicks": 2,
+     "cost": 14.76,
+     "conv": 0.0
     },
     {
      "text": "how can i stop my wages from being garnished",
      "match": "EXACT",
-     "impr": 19
+     "impr": 19,
+     "clicks": 1,
+     "cost": 3.37,
+     "conv": 0.0
     }
    ],
    "top30": 0.981,
@@ -6285,17 +7251,26 @@ window.TERMS = {
     {
      "text": "i got sued by a debt collector",
      "match": "PHRASE",
-     "impr": 50
+     "impr": 50,
+     "clicks": 4,
+     "cost": 52.39,
+     "conv": 3.0
     },
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 50
+     "impr": 50,
+     "clicks": 8,
+     "cost": 99.18,
+     "conv": 1.0
     },
     {
      "text": "being sued by debt collector",
      "match": "EXACT",
-     "impr": 8
+     "impr": 8,
+     "clicks": 1,
+     "cost": 4.21,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -6330,7 +7305,10 @@ window.TERMS = {
     {
      "text": "how to respond to a debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 105
+     "impr": 105,
+     "clicks": 9,
+     "cost": 37.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.8387096774193549,
@@ -6366,7 +7344,10 @@ window.TERMS = {
     {
      "text": "wage garnishment attorney",
      "match": "PHRASE",
-     "impr": 105
+     "impr": 105,
+     "clicks": 10,
+     "cost": 109.57,
+     "conv": 0.0
     }
    ],
    "top30": 0.918,
@@ -6398,17 +7379,26 @@ window.TERMS = {
     {
      "text": "credit card debt attorney near me",
      "match": "EXACT",
-     "impr": 54
+     "impr": 54,
+     "clicks": 3,
+     "cost": 27.26,
+     "conv": 0.0
     },
     {
      "text": "credit card attorney near me",
      "match": "PHRASE",
-     "impr": 32
+     "impr": 32,
+     "clicks": 3,
+     "cost": 22.97,
+     "conv": 6.0
     },
     {
      "text": "credit card debt attorney",
      "match": "EXACT",
-     "impr": 19
+     "impr": 19,
+     "clicks": 1,
+     "cost": 2.97,
+     "conv": 0.0
     }
    ],
    "top30": 0.7407407407407407,
@@ -6444,22 +7434,34 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 51
+     "impr": 51,
+     "clicks": 4,
+     "cost": 49.33,
+     "conv": 0.0
     },
     {
      "text": "attorney for debt collection lawsuit",
      "match": "EXACT",
-     "impr": 30
+     "impr": 30,
+     "clicks": 3,
+     "cost": 60.05,
+     "conv": 1.0
     },
     {
      "text": "collection defense attorney",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 1,
+     "cost": 22.01,
+     "conv": 0.0
     },
     {
      "text": "collection defense lawyer",
      "match": "PHRASE",
-     "impr": 7
+     "impr": 7,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.7727272727272727,
@@ -6495,12 +7497,18 @@ window.TERMS = {
     {
      "text": "debt attorneys near me",
      "match": "EXACT",
-     "impr": 85
+     "impr": 85,
+     "clicks": 7,
+     "cost": 115.9,
+     "conv": 0.5
     },
     {
      "text": "debt collection attorney near me",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 4,
+     "cost": 66.03,
+     "conv": 0.0
     }
    ],
    "top30": 0.7954545454545454,
@@ -6532,12 +7540,18 @@ window.TERMS = {
     {
      "text": "credit debt lawyers",
      "match": "EXACT",
-     "impr": 63
+     "impr": 63,
+     "clicks": 13,
+     "cost": 218.51,
+     "conv": 4.633
     },
     {
      "text": "debt defense lawyer near me",
      "match": "PHRASE",
-     "impr": 40
+     "impr": 40,
+     "clicks": 1,
+     "cost": 17.34,
+     "conv": 0.0
     }
    ],
    "top30": 0.8524590163934426,
@@ -6574,7 +7588,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 101
+     "impr": 101,
+     "clicks": 7,
+     "cost": 75.37,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -6609,7 +7626,10 @@ window.TERMS = {
     {
      "text": "my wages are being garnished",
      "match": "EXACT",
-     "impr": 101
+     "impr": 101,
+     "clicks": 5,
+     "cost": 52.62,
+     "conv": 0.5
     }
    ],
    "top30": 0.75,
@@ -6646,7 +7666,10 @@ window.TERMS = {
     {
      "text": "credit card lawyers",
      "match": "PHRASE",
-     "impr": 101
+     "impr": 101,
+     "clicks": 7,
+     "cost": 52.07,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -6681,12 +7704,18 @@ window.TERMS = {
     {
      "text": "being sued by debt collector",
      "match": "EXACT",
-     "impr": 72
+     "impr": 72,
+     "clicks": 6,
+     "cost": 37.71,
+     "conv": 0.0
     },
     {
      "text": "debt collection lawsuit",
      "match": "EXACT",
-     "impr": 28
+     "impr": 28,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -6721,7 +7750,10 @@ window.TERMS = {
     {
      "text": "my wages are being garnished",
      "match": "EXACT",
-     "impr": 100
+     "impr": 100,
+     "clicks": 6,
+     "cost": 33.0,
+     "conv": 1.0
     }
    ],
    "top30": 0.727,
@@ -6758,17 +7790,26 @@ window.TERMS = {
     {
      "text": "lawyers for credit card lawsuit",
      "match": "EXACT",
-     "impr": 39
+     "impr": 39,
+     "clicks": 1,
+     "cost": 3.08,
+     "conv": 0.0
     },
     {
      "text": "credit card lawsuit attorney",
      "match": "EXACT",
-     "impr": 33
+     "impr": 33,
+     "clicks": 2,
+     "cost": 31.11,
+     "conv": 0.0
     },
     {
      "text": "credit card lawyers",
      "match": "PHRASE",
-     "impr": 28
+     "impr": 28,
+     "clicks": 3,
+     "cost": 33.34,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -6803,7 +7844,10 @@ window.TERMS = {
     {
      "text": "how to respond to a court summons for debt",
      "match": "PHRASE",
-     "impr": 99
+     "impr": 99,
+     "clicks": 10,
+     "cost": 55.75,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -6838,7 +7882,10 @@ window.TERMS = {
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 97
+     "impr": 97,
+     "clicks": 3,
+     "cost": 27.33,
+     "conv": 1.0
     }
    ],
    "top30": 0.8125,
@@ -6875,17 +7922,26 @@ window.TERMS = {
     {
      "text": "stop wage garnishment immediately",
      "match": "PHRASE",
-     "impr": 55
+     "impr": 55,
+     "clicks": 1,
+     "cost": 6.18,
+     "conv": 0.0
     },
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 23
+     "impr": 23,
+     "clicks": 2,
+     "cost": 4.34,
+     "conv": 0.0
     },
     {
      "text": "wage garnishment",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 1,
+     "cost": 3.29,
+     "conv": 0.0
     }
    ],
    "top30": 1,
@@ -6917,7 +7973,10 @@ window.TERMS = {
     {
      "text": "stop wage garnishment immediately",
      "match": "PHRASE",
-     "impr": 97
+     "impr": 97,
+     "clicks": 10,
+     "cost": 80.08,
+     "conv": 2.997
     }
    ],
    "top30": 0.86,
@@ -6954,12 +8013,18 @@ window.TERMS = {
     {
      "text": "portfolio recovery debt collectors",
      "match": "PHRASE",
-     "impr": 64
+     "impr": 64,
+     "clicks": 3,
+     "cost": 11.77,
+     "conv": 0.0
     },
     {
      "text": "portfolio recovery debt collector",
      "match": "PHRASE",
-     "impr": 33
+     "impr": 33,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -6994,12 +8059,18 @@ window.TERMS = {
     {
      "text": "i have been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 86
+     "impr": 86,
+     "clicks": 4,
+     "cost": 18.62,
+     "conv": 0.0
     },
     {
      "text": "collection agency threatening to sue",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -7035,22 +8106,34 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney near me",
      "match": "PHRASE",
-     "impr": 54
+     "impr": 54,
+     "clicks": 5,
+     "cost": 34.25,
+     "conv": 1.0
     },
     {
      "text": "debt defense lawyer near me",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 1,
+     "cost": 9.19,
+     "conv": 0.0
     },
     {
      "text": "attorney for debt collection lawsuit",
      "match": "EXACT",
-     "impr": 14
+     "impr": 14,
+     "clicks": 4,
+     "cost": 43.4,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -7085,12 +8168,18 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 55
+     "impr": 55,
+     "clicks": 4,
+     "cost": 17.05,
+     "conv": 0.0
     },
     {
      "text": "how to fight a garnishment",
      "match": "PHRASE",
-     "impr": 41
+     "impr": 41,
+     "clicks": 7,
+     "cost": 31.76,
+     "conv": 0.0
     }
    ],
    "top30": 0.875,
@@ -7127,17 +8216,26 @@ window.TERMS = {
     {
      "text": "debt defense lawyer",
      "match": "EXACT",
-     "impr": 59
+     "impr": 59,
+     "clicks": 1,
+     "cost": 24.44,
+     "conv": 0.0
     },
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 23
+     "impr": 23,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "credit debt lawyers",
      "match": "EXACT",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -7172,12 +8270,18 @@ window.TERMS = {
     {
      "text": "i just received a writ of garnishment",
      "match": "PHRASE",
-     "impr": 48
+     "impr": 48,
+     "clicks": 1,
+     "cost": 2.54,
+     "conv": 0.0
     },
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 45
+     "impr": 45,
+     "clicks": 1,
+     "cost": 3.12,
+     "conv": 0.0
     }
    ],
    "top30": 0.625,
@@ -7209,17 +8313,26 @@ window.TERMS = {
     {
      "text": "can a credit card company sue you",
      "match": "EXACT",
-     "impr": 61
+     "impr": 61,
+     "clicks": 3,
+     "cost": 14.22,
+     "conv": 0.0
     },
     {
      "text": "being sued by credit card company",
      "match": "EXACT",
-     "impr": 17
+     "impr": 17,
+     "clicks": 1,
+     "cost": 1.69,
+     "conv": 0.0
     },
     {
      "text": "im being sued by a credit card company",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 1,
+     "cost": 17.17,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -7254,12 +8367,18 @@ window.TERMS = {
     {
      "text": "resurgent capital debt collectors",
      "match": "PHRASE",
-     "impr": 51
+     "impr": 51,
+     "clicks": 1,
+     "cost": 2.4,
+     "conv": 0.0
     },
     {
      "text": "resurgent capital debt collector",
      "match": "PHRASE",
-     "impr": 42
+     "impr": 42,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -7294,12 +8413,18 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 70
+     "impr": 70,
+     "clicks": 10,
+     "cost": 89.23,
+     "conv": 1.5
     },
     {
      "text": "how to stop a garnishment",
      "match": "PHRASE",
-     "impr": 22
+     "impr": 22,
+     "clicks": 4,
+     "cost": 31.16,
+     "conv": 0.0
     }
    ],
    "top30": 0.931,
@@ -7335,12 +8460,18 @@ window.TERMS = {
     {
      "text": "debt defense lawyer near me",
      "match": "PHRASE",
-     "impr": 84
+     "impr": 84,
+     "clicks": 10,
+     "cost": 82.27,
+     "conv": 0.0
     },
     {
      "text": "debt defense attorney near me",
      "match": "PHRASE",
-     "impr": 7
+     "impr": 7,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -7375,7 +8506,10 @@ window.TERMS = {
     {
      "text": "how to stop a garnishment that has already started",
      "match": "PHRASE",
-     "impr": 91
+     "impr": 91,
+     "clicks": 11,
+     "cost": 87.58,
+     "conv": 1.0
     }
    ],
    "top30": 1,
@@ -7411,7 +8545,10 @@ window.TERMS = {
     {
      "text": "midland funding debt collector",
      "match": "PHRASE",
-     "impr": 91
+     "impr": 91,
+     "clicks": 10,
+     "cost": 41.19,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -7446,12 +8583,18 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 52
+     "impr": 52,
+     "clicks": 3,
+     "cost": 8.95,
+     "conv": 0.0
     },
     {
      "text": "how to fight debt collectors",
      "match": "EXACT",
-     "impr": 38
+     "impr": 38,
+     "clicks": 1,
+     "cost": 3.47,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -7486,7 +8629,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 89
+     "impr": 89,
+     "clicks": 2,
+     "cost": 7.68,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -7521,27 +8667,42 @@ window.TERMS = {
     {
      "text": "credit card attorney near me",
      "match": "PHRASE",
-     "impr": 46
+     "impr": 46,
+     "clicks": 3,
+     "cost": 45.49,
+     "conv": 0.0
     },
     {
      "text": "lawyer for credit card lawsuit near me",
      "match": "EXACT",
-     "impr": 17
+     "impr": 17,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "credit card attorney",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 3,
+     "cost": 28.84,
+     "conv": 0.0
     },
     {
      "text": "attorney for credit card lawsuit near me",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 2,
+     "cost": 21.82,
+     "conv": 1.0
     },
     {
      "text": "credit card debt lawyers near me",
      "match": "PHRASE",
-     "impr": 7
+     "impr": 7,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -7576,7 +8737,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 87
+     "impr": 87,
+     "clicks": 4,
+     "cost": 18.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -7611,27 +8775,42 @@ window.TERMS = {
     {
      "text": "attorney collection agency",
      "match": "PHRASE",
-     "impr": 32
+     "impr": 32,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "debt attorneys",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "collection defense lawyer",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "collection attorney",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "law office debt collection",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -7662,12 +8841,18 @@ window.TERMS = {
     {
      "text": "how to respond to a debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 52
+     "impr": 52,
+     "clicks": 4,
+     "cost": 31.26,
+     "conv": 1.5
     },
     {
      "text": "how to respond to a lawsuit from a debt collector",
      "match": "EXACT",
-     "impr": 34
+     "impr": 34,
+     "clicks": 4,
+     "cost": 30.05,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -7702,12 +8887,18 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 46
+     "impr": 46,
+     "clicks": 1,
+     "cost": 6.33,
+     "conv": 0.0
     },
     {
      "text": "how to fight debt collectors",
      "match": "EXACT",
-     "impr": 40
+     "impr": 40,
+     "clicks": 1,
+     "cost": 6.42,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -7742,7 +8933,10 @@ window.TERMS = {
     {
      "text": "stop wage garnishment immediately",
      "match": "PHRASE",
-     "impr": 86
+     "impr": 86,
+     "clicks": 11,
+     "cost": 55.56,
+     "conv": 1.996
     }
    ],
    "top30": 0.946,
@@ -7774,7 +8968,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 86
+     "impr": 86,
+     "clicks": 4,
+     "cost": 26.01,
+     "conv": 0.0
     }
    ],
    "top30": 0.718,
@@ -7811,12 +9008,18 @@ window.TERMS = {
     {
      "text": "how to answer a debt summons",
      "match": "PHRASE",
-     "impr": 67
+     "impr": 67,
+     "clicks": 6,
+     "cost": 32.92,
+     "conv": 0.0
     },
     {
      "text": "how to answer a court summons debt collection",
      "match": "EXACT",
-     "impr": 18
+     "impr": 18,
+     "clicks": 1,
+     "cost": 8.46,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -7851,7 +9054,10 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 85
+     "impr": 85,
+     "clicks": 11,
+     "cost": 86.94,
+     "conv": 2.0
     }
    ],
    "top30": 0.88,
@@ -7888,12 +9094,18 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney near me",
      "match": "PHRASE",
-     "impr": 76
+     "impr": 76,
+     "clicks": 7,
+     "cost": 104.31,
+     "conv": 1.0
     },
     {
      "text": "credit debt lawyers",
      "match": "EXACT",
-     "impr": 8
+     "impr": 8,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -7928,17 +9140,26 @@ window.TERMS = {
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 41
+     "impr": 41,
+     "clicks": 4,
+     "cost": 95.17,
+     "conv": 0.0
     },
     {
      "text": "credit debt lawyers",
      "match": "EXACT",
-     "impr": 24
+     "impr": 24,
+     "clicks": 2,
+     "cost": 22.75,
+     "conv": 1.0
     },
     {
      "text": "debt litigation attorney",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 2,
+     "cost": 20.02,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -7974,7 +9195,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 84
+     "impr": 84,
+     "clicks": 1,
+     "cost": 2.55,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -8005,7 +9229,10 @@ window.TERMS = {
     {
      "text": "can a garnishment be stopped",
      "match": "PHRASE",
-     "impr": 84
+     "impr": 84,
+     "clicks": 6,
+     "cost": 33.79,
+     "conv": 3.0
     }
    ],
    "top30": 1,
@@ -8042,7 +9269,10 @@ window.TERMS = {
     {
      "text": "how to get a credit card lawsuit dismissed",
      "match": "EXACT",
-     "impr": 84
+     "impr": 84,
+     "clicks": 4,
+     "cost": 22.5,
+     "conv": 0.0
     }
    ],
    "top30": 0.813953488372093,
@@ -8078,7 +9308,10 @@ window.TERMS = {
     {
      "text": "paypal lawsuit",
      "match": "PHRASE",
-     "impr": 84
+     "impr": 84,
+     "clicks": 10,
+     "cost": 79.86,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -8113,12 +9346,18 @@ window.TERMS = {
     {
      "text": "lawyer for credit card debt",
      "match": "EXACT",
-     "impr": 61
+     "impr": 61,
+     "clicks": 5,
+     "cost": 33.79,
+     "conv": 0.0
     },
     {
      "text": "credit card lawyers",
      "match": "PHRASE",
-     "impr": 23
+     "impr": 23,
+     "clicks": 2,
+     "cost": 16.49,
+     "conv": 0.0
     }
    ],
    "top30": 0.8918918918918919,
@@ -8154,7 +9393,10 @@ window.TERMS = {
     {
      "text": "fdcpa attorney near me",
      "match": "EXACT",
-     "impr": 84
+     "impr": 84,
+     "clicks": 6,
+     "cost": 67.08,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -8189,7 +9431,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 83
+     "impr": 83,
+     "clicks": 4,
+     "cost": 40.66,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -8224,22 +9469,34 @@ window.TERMS = {
     {
      "text": "im being sued for a debt what do i do",
      "match": "EXACT",
-     "impr": 30
+     "impr": 30,
+     "clicks": 4,
+     "cost": 44.3,
+     "conv": 0.0
     },
     {
      "text": "i ve been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 29
+     "impr": 29,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "i got sued by a debt collector",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 1,
+     "cost": 6.11,
+     "conv": 0.0
     },
     {
      "text": "being sued by debt collector",
      "match": "EXACT",
-     "impr": 8
+     "impr": 8,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -8274,7 +9531,10 @@ window.TERMS = {
     {
      "text": "attorney for credit card lawsuit near me",
      "match": "PHRASE",
-     "impr": 83
+     "impr": 83,
+     "clicks": 4,
+     "cost": 49.24,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -8309,7 +9569,10 @@ window.TERMS = {
     {
      "text": "debt collection defense lawyer",
      "match": "PHRASE",
-     "impr": 82
+     "impr": 82,
+     "clicks": 1,
+     "cost": 7.06,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -8340,17 +9603,26 @@ window.TERMS = {
     {
      "text": "collection lawyers near me",
      "match": "PHRASE",
-     "impr": 38
+     "impr": 38,
+     "clicks": 6,
+     "cost": 53.59,
+     "conv": 4.0
     },
     {
      "text": "debt collection attorneys near me",
      "match": "EXACT",
-     "impr": 35
+     "impr": 35,
+     "clicks": 1,
+     "cost": 12.6,
+     "conv": 0.0
     },
     {
      "text": "debt collection attorney near me",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 1,
+     "cost": 3.51,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -8381,7 +9653,10 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 82
+     "impr": 82,
+     "clicks": 7,
+     "cost": 46.23,
+     "conv": 0.0
     }
    ],
    "top30": 0.895,
@@ -8418,7 +9693,10 @@ window.TERMS = {
     {
      "text": "stop wage garnishment immediately",
      "match": "PHRASE",
-     "impr": 81
+     "impr": 81,
+     "clicks": 7,
+     "cost": 45.16,
+     "conv": 1.0
     }
    ],
    "top30": 0.9,
@@ -8450,7 +9728,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 81
+     "impr": 81,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -8481,12 +9762,18 @@ window.TERMS = {
     {
      "text": "stop wage garnishment immediately",
      "match": "PHRASE",
-     "impr": 71
+     "impr": 71,
+     "clicks": 3,
+     "cost": 25.8,
+     "conv": 1.0
     },
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 0.45,
+     "conv": 0.0
     }
    ],
    "top30": 1,
@@ -8518,7 +9805,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 80
+     "impr": 80,
+     "clicks": 6,
+     "cost": 76.9,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -8553,17 +9843,26 @@ window.TERMS = {
     {
      "text": "lawyers for debt collection",
      "match": "EXACT",
-     "impr": 51
+     "impr": 51,
+     "clicks": 4,
+     "cost": 72.25,
+     "conv": 1.0
     },
     {
      "text": "collection defense lawyer",
      "match": "PHRASE",
-     "impr": 20
+     "impr": 20,
+     "clicks": 3,
+     "cost": 23.29,
+     "conv": 1.0
     },
     {
      "text": "collection defense attorney",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 1,
+     "cost": 3.67,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -8594,12 +9893,18 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 60
+     "impr": 60,
+     "clicks": 2,
+     "cost": 20.42,
+     "conv": 0.0
     },
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -8635,7 +9940,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 79
+     "impr": 79,
+     "clicks": 6,
+     "cost": 8.49,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -8666,7 +9974,10 @@ window.TERMS = {
     {
      "text": "portfolio recovery associates lawsuit",
      "match": "PHRASE",
-     "impr": 78
+     "impr": 78,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -8702,17 +10013,26 @@ window.TERMS = {
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 41
+     "impr": 41,
+     "clicks": 3,
+     "cost": 11.54,
+     "conv": 0.0
     },
     {
      "text": "i have been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 30
+     "impr": 30,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "i ve been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 7
+     "impr": 7,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -8748,7 +10068,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 78
+     "impr": 78,
+     "clicks": 3,
+     "cost": 8.25,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -8779,12 +10102,18 @@ window.TERMS = {
     {
      "text": "can a credit card company sue you",
      "match": "EXACT",
-     "impr": 58
+     "impr": 58,
+     "clicks": 4,
+     "cost": 9.79,
+     "conv": 0.0
     },
     {
      "text": "being sued by credit card company",
      "match": "EXACT",
-     "impr": 20
+     "impr": 20,
+     "clicks": 1,
+     "cost": 6.61,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -8819,7 +10148,10 @@ window.TERMS = {
     {
      "text": "wage garnishment attorney near me",
      "match": "PHRASE",
-     "impr": 77
+     "impr": 77,
+     "clicks": 10,
+     "cost": 105.05,
+     "conv": 1.0
     }
    ],
    "top30": 0.667,
@@ -8851,17 +10183,26 @@ window.TERMS = {
     {
      "text": "debt collection lawyers near me",
      "match": "PHRASE",
-     "impr": 50
+     "impr": 50,
+     "clicks": 2,
+     "cost": 10.74,
+     "conv": 0.0
     },
     {
      "text": "debt collection lawyer near me",
      "match": "EXACT",
-     "impr": 17
+     "impr": 17,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "collection defense attorney",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 14.26,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -8892,12 +10233,18 @@ window.TERMS = {
     {
      "text": "being sued by debt collector",
      "match": "PHRASE",
-     "impr": 49
+     "impr": 49,
+     "clicks": 3,
+     "cost": 9.66,
+     "conv": 0.0
     },
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 26
+     "impr": 26,
+     "clicks": 2,
+     "cost": 6.02,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -8932,17 +10279,26 @@ window.TERMS = {
     {
      "text": "collections attorney near me",
      "match": "EXACT",
-     "impr": 56
+     "impr": 56,
+     "clicks": 3,
+     "cost": 31.36,
+     "conv": 0.0
     },
     {
      "text": "collection defense attorney",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 2,
+     "cost": 5.38,
+     "conv": 1.0
     },
     {
      "text": "debt collection defense attorney",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.851063829787234,
@@ -8974,7 +10330,10 @@ window.TERMS = {
     {
      "text": "can a credit card company sue you",
      "match": "EXACT",
-     "impr": 74
+     "impr": 74,
+     "clicks": 4,
+     "cost": 11.73,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -9009,7 +10368,10 @@ window.TERMS = {
     {
      "text": "midland funding debt collector",
      "match": "PHRASE",
-     "impr": 74
+     "impr": 74,
+     "clicks": 3,
+     "cost": 13.9,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -9044,7 +10406,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 73
+     "impr": 73,
+     "clicks": 5,
+     "cost": 23.01,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -9080,7 +10445,10 @@ window.TERMS = {
     {
      "text": "im being sued by a debt collector",
      "match": "PHRASE",
-     "impr": 73
+     "impr": 73,
+     "clicks": 6,
+     "cost": 30.09,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -9115,7 +10483,10 @@ window.TERMS = {
     {
      "text": "lvnv funding suing me",
      "match": "PHRASE",
-     "impr": 73
+     "impr": 73,
+     "clicks": 2,
+     "cost": 45.91,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -9151,12 +10522,18 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney near me",
      "match": "PHRASE",
-     "impr": 50
+     "impr": 50,
+     "clicks": 4,
+     "cost": 44.55,
+     "conv": 0.0
     },
     {
      "text": "consumer debt defense attorney",
      "match": "PHRASE",
-     "impr": 23
+     "impr": 23,
+     "clicks": 2,
+     "cost": 33.19,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -9191,17 +10568,26 @@ window.TERMS = {
     {
      "text": "collections lawyer",
      "match": "PHRASE",
-     "impr": 53
+     "impr": 53,
+     "clicks": 1,
+     "cost": 7.46,
+     "conv": 0.0
     },
     {
      "text": "collection attorney",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "collections attorney",
      "match": "EXACT",
-     "impr": 9
+     "impr": 9,
+     "clicks": 1,
+     "cost": 26.03,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -9232,17 +10618,26 @@ window.TERMS = {
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 35
+     "impr": 35,
+     "clicks": 1,
+     "cost": 26.15,
+     "conv": 0.0
     },
     {
      "text": "being sued by debt collector",
      "match": "EXACT",
-     "impr": 20
+     "impr": 20,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "debt collection lawsuit",
      "match": "EXACT",
-     "impr": 17
+     "impr": 17,
+     "clicks": 2,
+     "cost": 41.74,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -9277,27 +10672,42 @@ window.TERMS = {
     {
      "text": "can a garnishment be stopped",
      "match": "PHRASE",
-     "impr": 22
+     "impr": 22,
+     "clicks": 3,
+     "cost": 17.66,
+     "conv": 2.0
     },
     {
      "text": "how to stop wage garnishments",
      "match": "EXACT",
-     "impr": 20
+     "impr": 20,
+     "clicks": 3,
+     "cost": 30.58,
+     "conv": 0.0
     },
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 2,
+     "cost": 27.56,
+     "conv": 0.0
     },
     {
      "text": "how to stop a garnishment",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 3.7,
+     "conv": 0.0
     },
     {
      "text": "how can i stop my wages from being garnished",
      "match": "EXACT",
-     "impr": 9
+     "impr": 9,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.941,
@@ -9333,7 +10743,10 @@ window.TERMS = {
     {
      "text": "midland credit management suing me",
      "match": "PHRASE",
-     "impr": 71
+     "impr": 71,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -9369,12 +10782,18 @@ window.TERMS = {
     {
      "text": "i received a summons from a debt collector",
      "match": "PHRASE",
-     "impr": 57
+     "impr": 57,
+     "clicks": 2,
+     "cost": 11.22,
+     "conv": 0.0
     },
     {
      "text": "summons for debt collection",
      "match": "EXACT",
-     "impr": 14
+     "impr": 14,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -9409,17 +10828,26 @@ window.TERMS = {
     {
      "text": "i ve been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 50
+     "impr": 50,
+     "clicks": 6,
+     "cost": 65.13,
+     "conv": 1.0
     },
     {
      "text": "im being sued for a debt what do i do",
      "match": "EXACT",
-     "impr": 13
+     "impr": 13,
+     "clicks": 2,
+     "cost": 27.51,
+     "conv": 0.0
     },
     {
      "text": "being sued by debt collector",
      "match": "EXACT",
-     "impr": 8
+     "impr": 8,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -9454,7 +10882,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 71
+     "impr": 71,
+     "clicks": 5,
+     "cost": 35.78,
+     "conv": 0.0
     }
    ],
    "top30": 0.783,
@@ -9490,12 +10921,18 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 39
+     "impr": 39,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "how to fight debt collectors",
      "match": "EXACT",
-     "impr": 31
+     "impr": 31,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -9530,12 +10967,18 @@ window.TERMS = {
     {
      "text": "resurgent capital debt collectors",
      "match": "PHRASE",
-     "impr": 42
+     "impr": 42,
+     "clicks": 5,
+     "cost": 21.38,
+     "conv": 0.0
     },
     {
      "text": "resurgent capital debt collector",
      "match": "PHRASE",
-     "impr": 28
+     "impr": 28,
+     "clicks": 5,
+     "cost": 37.93,
+     "conv": 2.0
     }
    ],
    "scope": "active",
@@ -9570,12 +11013,18 @@ window.TERMS = {
     {
      "text": "portfolio recovery debt collector",
      "match": "PHRASE",
-     "impr": 36
+     "impr": 36,
+     "clicks": 2,
+     "cost": 8.0,
+     "conv": 0.0
     },
     {
      "text": "portfolio recovery debt collectors",
      "match": "PHRASE",
-     "impr": 34
+     "impr": 34,
+     "clicks": 3,
+     "cost": 17.96,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -9610,17 +11059,26 @@ window.TERMS = {
     {
      "text": "credit card lawyers",
      "match": "PHRASE",
-     "impr": 35
+     "impr": 35,
+     "clicks": 4,
+     "cost": 30.66,
+     "conv": 0.0
     },
     {
      "text": "credit card debt lawyers near me",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 3,
+     "cost": 27.16,
+     "conv": 1.0
     },
     {
      "text": "lawyer for credit card lawsuit near me",
      "match": "EXACT",
-     "impr": 17
+     "impr": 17,
+     "clicks": 4,
+     "cost": 35.49,
+     "conv": 4.0
     }
    ],
    "scope": "active",
@@ -9655,22 +11113,34 @@ window.TERMS = {
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 25
+     "impr": 25,
+     "clicks": 1,
+     "cost": 11.14,
+     "conv": 1.0
     },
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 20
+     "impr": 20,
+     "clicks": 2,
+     "cost": 8.98,
+     "conv": 0.0
     },
     {
      "text": "lawyer for debt lawsuit",
      "match": "EXACT",
-     "impr": 16
+     "impr": 16,
+     "clicks": 3,
+     "cost": 22.91,
+     "conv": 0.0
     },
     {
      "text": "attorney for debt collection lawsuit",
      "match": "EXACT",
-     "impr": 8
+     "impr": 8,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -9705,7 +11175,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 69
+     "impr": 69,
+     "clicks": 2,
+     "cost": 6.03,
+     "conv": 0.0
     }
    ],
    "top30": 0.7142857142857143,
@@ -9737,7 +11210,10 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 69
+     "impr": 69,
+     "clicks": 10,
+     "cost": 94.04,
+     "conv": 1.667
     }
    ],
    "top30": 0.938,
@@ -9774,12 +11250,18 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 52
+     "impr": 52,
+     "clicks": 3,
+     "cost": 26.06,
+     "conv": 2.275
     },
     {
      "text": "help with garnishment",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 1,
+     "cost": 3.42,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -9814,12 +11296,18 @@ window.TERMS = {
     {
      "text": "wage garnishment",
      "match": "PHRASE",
-     "impr": 49
+     "impr": 49,
+     "clicks": 2,
+     "cost": 18.45,
+     "conv": 0.0
     },
     {
      "text": "garnered wages",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.5,
@@ -9851,7 +11339,10 @@ window.TERMS = {
     {
      "text": "credit card attorney near me",
      "match": "PHRASE",
-     "impr": 67
+     "impr": 67,
+     "clicks": 7,
+     "cost": 40.52,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -9886,7 +11377,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 66
+     "impr": 66,
+     "clicks": 7,
+     "cost": 105.58,
+     "conv": 2.0
     }
    ],
    "scope": "active",
@@ -9921,12 +11415,18 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 40
+     "impr": 40,
+     "clicks": 2,
+     "cost": 9.8,
+     "conv": 0.0
     },
     {
      "text": "how to fight debt collectors",
      "match": "EXACT",
-     "impr": 26
+     "impr": 26,
+     "clicks": 2,
+     "cost": 24.24,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -9961,17 +11461,26 @@ window.TERMS = {
     {
      "text": "debt lawsuit defense",
      "match": "PHRASE",
-     "impr": 31
+     "impr": 31,
+     "clicks": 1,
+     "cost": 12.21,
+     "conv": 0.0
     },
     {
      "text": "debt defense attorney",
      "match": "EXACT",
-     "impr": 21
+     "impr": 21,
+     "clicks": 1,
+     "cost": 8.09,
+     "conv": 0.0
     },
     {
      "text": "collection defense",
      "match": "EXACT",
-     "impr": 14
+     "impr": 14,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -10006,7 +11515,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 66
+     "impr": 66,
+     "clicks": 12,
+     "cost": 37.91,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -10037,12 +11549,18 @@ window.TERMS = {
     {
      "text": "stop wage garnishment immediately",
      "match": "PHRASE",
-     "impr": 51
+     "impr": 51,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 1,
+     "cost": 5.58,
+     "conv": 0.0
     }
    ],
    "top30": 0.727,
@@ -10074,7 +11592,10 @@ window.TERMS = {
     {
      "text": "how to get a garnishment removed",
      "match": "PHRASE",
-     "impr": 66
+     "impr": 66,
+     "clicks": 13,
+     "cost": 81.11,
+     "conv": 4.0
     }
    ],
    "scope": "active",
@@ -10110,7 +11631,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 66
+     "impr": 66,
+     "clicks": 7,
+     "cost": 32.58,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -10146,12 +11670,18 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 49
+     "impr": 49,
+     "clicks": 8,
+     "cost": 50.89,
+     "conv": 0.0
     },
     {
      "text": "how to fight a garnishment",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 2,
+     "cost": 9.66,
+     "conv": 0.0
     }
    ],
    "top30": 1,
@@ -10188,12 +11718,18 @@ window.TERMS = {
     {
      "text": "how to fight wage garnishment",
      "match": "PHRASE",
-     "impr": 36
+     "impr": 36,
+     "clicks": 4,
+     "cost": 23.7,
+     "conv": 1.0
     },
     {
      "text": "how to fight a garnishment",
      "match": "PHRASE",
-     "impr": 30
+     "impr": 30,
+     "clicks": 6,
+     "cost": 35.57,
+     "conv": 0.0
     }
    ],
    "top30": 0.929,
@@ -10229,7 +11765,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney near me",
      "match": "PHRASE",
-     "impr": 65
+     "impr": 65,
+     "clicks": 4,
+     "cost": 91.98,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -10264,12 +11803,18 @@ window.TERMS = {
     {
      "text": "being sued by debt collector",
      "match": "EXACT",
-     "impr": 55
+     "impr": 55,
+     "clicks": 1,
+     "cost": 6.59,
+     "conv": 0.0
     },
     {
      "text": "debt collection lawsuit",
      "match": "EXACT",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -10304,12 +11849,18 @@ window.TERMS = {
     {
      "text": "i ve been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 55
+     "impr": 55,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "being sued by debt collector",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 2.61,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -10344,12 +11895,18 @@ window.TERMS = {
     {
      "text": "consumer debt defense attorney",
      "match": "PHRASE",
-     "impr": 47
+     "impr": 47,
+     "clicks": 4,
+     "cost": 40.74,
+     "conv": 0.0
     },
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 18
+     "impr": 18,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -10384,17 +11941,26 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 40
+     "impr": 40,
+     "clicks": 5,
+     "cost": 63.94,
+     "conv": 0.0
     },
     {
      "text": "lawyer for debt lawsuit",
      "match": "EXACT",
-     "impr": 17
+     "impr": 17,
+     "clicks": 1,
+     "cost": 27.65,
+     "conv": 0.0
     },
     {
      "text": "credit debt lawyers",
      "match": "EXACT",
-     "impr": 8
+     "impr": 8,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.8913043478260869,
@@ -10430,12 +11996,18 @@ window.TERMS = {
     {
      "text": "defense against debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 44
+     "impr": 44,
+     "clicks": 1,
+     "cost": 0.1,
+     "conv": 0.0
     },
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 21
+     "impr": 21,
+     "clicks": 1,
+     "cost": 0.14,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -10466,7 +12038,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 64
+     "impr": 64,
+     "clicks": 5,
+     "cost": 20.86,
+     "conv": 0.393
     }
    ],
    "top30": 0.75,
@@ -10502,12 +12077,18 @@ window.TERMS = {
     {
      "text": "how to remove wage garnishment",
      "match": "PHRASE",
-     "impr": 50
+     "impr": 50,
+     "clicks": 6,
+     "cost": 31.84,
+     "conv": 0.0
     },
     {
      "text": "can a garnishment be stopped",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 3,
+     "cost": 20.1,
+     "conv": 0.0
     }
    ],
    "top30": 0.923,
@@ -10543,12 +12124,18 @@ window.TERMS = {
     {
      "text": "my wages are being garnished",
      "match": "EXACT",
-     "impr": 43
+     "impr": 43,
+     "clicks": 3,
+     "cost": 12.0,
+     "conv": 0.0
     },
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 21
+     "impr": 21,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.762,
@@ -10584,17 +12171,26 @@ window.TERMS = {
     {
      "text": "how to fight a garnishment",
      "match": "PHRASE",
-     "impr": 29
+     "impr": 29,
+     "clicks": 3,
+     "cost": 25.81,
+     "conv": 0.0
     },
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 3,
+     "cost": 24.67,
+     "conv": 0.0
     },
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 6,
+     "cost": 73.69,
+     "conv": 1.0
     }
    ],
    "top30": 1,
@@ -10631,12 +12227,18 @@ window.TERMS = {
     {
      "text": "how to write a response to a summons",
      "match": "EXACT",
-     "impr": 52
+     "impr": 52,
+     "clicks": 6,
+     "cost": 27.58,
+     "conv": 0.0
     },
     {
      "text": "how to answer a debt summons",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 13.38,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -10671,12 +12273,18 @@ window.TERMS = {
     {
      "text": "debt collection lawsuit defense",
      "match": "EXACT",
-     "impr": 38
+     "impr": 38,
+     "clicks": 1,
+     "cost": 4.01,
+     "conv": 0.0
     },
     {
      "text": "how to fight debt collectors",
      "match": "EXACT",
-     "impr": 24
+     "impr": 24,
+     "clicks": 4,
+     "cost": 16.35,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -10711,12 +12319,18 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 51
+     "impr": 51,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 22.14,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -10753,12 +12367,18 @@ window.TERMS = {
     {
      "text": "debt buyer lawsuit",
      "match": "PHRASE",
-     "impr": 34
+     "impr": 34,
+     "clicks": 3,
+     "cost": 10.58,
+     "conv": 0.0
     },
     {
      "text": "midland credit management suing me",
      "match": "PHRASE",
-     "impr": 27
+     "impr": 27,
+     "clicks": 2,
+     "cost": 9.21,
+     "conv": 2.0
     }
    ],
    "scope": "active",
@@ -10793,7 +12413,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 61
+     "impr": 61,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -10824,12 +12447,18 @@ window.TERMS = {
     {
      "text": "debt lawyer cost",
      "match": "EXACT",
-     "impr": 52
+     "impr": 52,
+     "clicks": 4,
+     "cost": 60.86,
+     "conv": 0.0
     },
     {
      "text": "collection defense lawyer",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 2,
+     "cost": 19.21,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -10860,12 +12489,18 @@ window.TERMS = {
     {
      "text": "sue a debt collector",
      "match": "PHRASE",
-     "impr": 48
+     "impr": 48,
+     "clicks": 2,
+     "cost": 5.35,
+     "conv": 0.0
     },
     {
      "text": "sue debt collector",
      "match": "EXACT",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -10900,7 +12535,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 60
+     "impr": 60,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.6571428571428571,
@@ -10936,12 +12574,18 @@ window.TERMS = {
     {
      "text": "lvnv funding suing me",
      "match": "PHRASE",
-     "impr": 53
+     "impr": 53,
+     "clicks": 3,
+     "cost": 13.11,
+     "conv": 0.0
     },
     {
      "text": "being sued by debt collector",
      "match": "PHRASE",
-     "impr": 7
+     "impr": 7,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -10977,22 +12621,34 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 20
+     "impr": 20,
+     "clicks": 2,
+     "cost": 32.99,
+     "conv": 1.0
     },
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "attorney for debt lawsuit",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "lawyer for debt lawsuit",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 1,
+     "cost": 12.73,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -11028,22 +12684,34 @@ window.TERMS = {
     {
      "text": "wage garnishment",
      "match": "PHRASE",
-     "impr": 27
+     "impr": 27,
+     "clicks": 1,
+     "cost": 2.52,
+     "conv": 0.0
     },
     {
      "text": "pay garnishment",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "garnered wages",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "paycheck garnishment",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.8,
@@ -11075,12 +12743,18 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 41
+     "impr": 41,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "how to stop a garnishment",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 1,
+     "cost": 5.48,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -11115,7 +12789,10 @@ window.TERMS = {
     {
      "text": "creditor harassment lawyer",
      "match": "PHRASE",
-     "impr": 60
+     "impr": 60,
+     "clicks": 10,
+     "cost": 67.81,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -11150,12 +12827,18 @@ window.TERMS = {
     {
      "text": "received summons for debt",
      "match": "EXACT",
-     "impr": 40
+     "impr": 40,
+     "clicks": 3,
+     "cost": 89.11,
+     "conv": 7.0
     },
     {
      "text": "summons for debt collection",
      "match": "EXACT",
-     "impr": 19
+     "impr": 19,
+     "clicks": 3,
+     "cost": 18.07,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -11190,17 +12873,26 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 27
+     "impr": 27,
+     "clicks": 4,
+     "cost": 53.35,
+     "conv": 1.0
     },
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 20
+     "impr": 20,
+     "clicks": 1,
+     "cost": 20.86,
+     "conv": 0.0
     },
     {
      "text": "attorney for debt collection lawsuit",
      "match": "EXACT",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -11235,7 +12927,10 @@ window.TERMS = {
     {
      "text": "can you stop a garnishment once it starts",
      "match": "PHRASE",
-     "impr": 59
+     "impr": 59,
+     "clicks": 4,
+     "cost": 10.64,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -11270,12 +12965,18 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 45
+     "impr": 45,
+     "clicks": 11,
+     "cost": 58.45,
+     "conv": 0.0
     },
     {
      "text": "how to stop a garnishment",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 1,
+     "cost": 4.17,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -11311,7 +13012,10 @@ window.TERMS = {
     {
      "text": "credit card company suing me",
      "match": "PHRASE",
-     "impr": 59
+     "impr": 59,
+     "clicks": 6,
+     "cost": 25.08,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -11346,12 +13050,18 @@ window.TERMS = {
     {
      "text": "portfolio recovery debt collector",
      "match": "PHRASE",
-     "impr": 43
+     "impr": 43,
+     "clicks": 9,
+     "cost": 60.46,
+     "conv": 1.0
     },
     {
      "text": "portfolio recovery debt collectors",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -11386,7 +13096,10 @@ window.TERMS = {
     {
      "text": "lawyer for debt collection lawsuit near me",
      "match": "PHRASE",
-     "impr": 58
+     "impr": 58,
+     "clicks": 8,
+     "cost": 108.81,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -11421,12 +13134,18 @@ window.TERMS = {
     {
      "text": "how to respond to a debt collector lawsuit",
      "match": "PHRASE",
-     "impr": 46
+     "impr": 46,
+     "clicks": 3,
+     "cost": 24.66,
+     "conv": 0.0
     },
     {
      "text": "im being sued for a debt what do i do",
      "match": "EXACT",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -11461,17 +13180,26 @@ window.TERMS = {
     {
      "text": "attorney for debt lawsuit",
      "match": "PHRASE",
-     "impr": 34
+     "impr": 34,
+     "clicks": 3,
+     "cost": 33.82,
+     "conv": 1.0
     },
     {
      "text": "debt defense attorney",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 3,
+     "cost": 15.52,
+     "conv": 1.0
     },
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -11506,17 +13234,26 @@ window.TERMS = {
     {
      "text": "garnishment",
      "match": "PHRASE",
-     "impr": 24
+     "impr": 24,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 5,
+     "cost": 14.59,
+     "conv": 0.0
     },
     {
      "text": "stop wage garnishment immediately",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 3,
+     "cost": 33.6,
+     "conv": 1.0
     }
    ],
    "top30": 0.909,
@@ -11548,17 +13285,26 @@ window.TERMS = {
     {
      "text": "wage garnishment",
      "match": "PHRASE",
-     "impr": 24
+     "impr": 24,
+     "clicks": 1,
+     "cost": 6.19,
+     "conv": 0.0
     },
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 1,
+     "cost": 17.56,
+     "conv": 0.0
     },
     {
      "text": "pay garnishment",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 1,
@@ -11590,7 +13336,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit defense attorney near me",
      "match": "PHRASE",
-     "impr": 57
+     "impr": 57,
+     "clicks": 3,
+     "cost": 63.7,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -11625,12 +13374,18 @@ window.TERMS = {
     {
      "text": "received summons for debt",
      "match": "EXACT",
-     "impr": 37
+     "impr": 37,
+     "clicks": 1,
+     "cost": 2.72,
+     "conv": 0.0
     },
     {
      "text": "summons for debt collection",
      "match": "EXACT",
-     "impr": 20
+     "impr": 20,
+     "clicks": 2,
+     "cost": 8.45,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -11665,12 +13420,18 @@ window.TERMS = {
     {
      "text": "being sued by debt collector",
      "match": "EXACT",
-     "impr": 31
+     "impr": 31,
+     "clicks": 2,
+     "cost": 12.67,
+     "conv": 1.0
     },
     {
      "text": "i got sued by a debt collector",
      "match": "PHRASE",
-     "impr": 26
+     "impr": 26,
+     "clicks": 3,
+     "cost": 23.67,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -11705,7 +13466,10 @@ window.TERMS = {
     {
      "text": "creditor garnishment",
      "match": "PHRASE",
-     "impr": 57
+     "impr": 57,
+     "clicks": 5,
+     "cost": 19.87,
+     "conv": 0.0
     }
    ],
    "top30": 0.8,
@@ -11738,12 +13502,18 @@ window.TERMS = {
     {
      "text": "wage garnishment",
      "match": "PHRASE",
-     "impr": 42
+     "impr": 42,
+     "clicks": 1,
+     "cost": 7.75,
+     "conv": 0.0
     },
     {
      "text": "garnered wages",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.533,
@@ -11775,12 +13545,18 @@ window.TERMS = {
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 34
+     "impr": 34,
+     "clicks": 6,
+     "cost": 45.69,
+     "conv": 0.0
     },
     {
      "text": "stop wage garnishment immediately",
      "match": "PHRASE",
-     "impr": 23
+     "impr": 23,
+     "clicks": 2,
+     "cost": 20.27,
+     "conv": 1.0
     }
    ],
    "top30": 1,
@@ -11812,22 +13588,34 @@ window.TERMS = {
     {
      "text": "debt lawyers",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "debt attorneys",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "law office debt collection",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "collection attorney",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -11858,12 +13646,18 @@ window.TERMS = {
     {
      "text": "credit card lawsuit attorney",
      "match": "EXACT",
-     "impr": 48
+     "impr": 48,
+     "clicks": 7,
+     "cost": 67.0,
+     "conv": 0.25
     },
     {
      "text": "attorney for credit card lawsuit",
      "match": "EXACT",
-     "impr": 9
+     "impr": 9,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -11898,12 +13692,18 @@ window.TERMS = {
     {
      "text": "portfolio recovery debt collectors",
      "match": "PHRASE",
-     "impr": 33
+     "impr": 33,
+     "clicks": 1,
+     "cost": 3.19,
+     "conv": 0.0
     },
     {
      "text": "portfolio recovery debt collector",
      "match": "PHRASE",
-     "impr": 24
+     "impr": 24,
+     "clicks": 4,
+     "cost": 15.38,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -11938,7 +13738,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 56
+     "impr": 56,
+     "clicks": 3,
+     "cost": 58.5,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -11973,12 +13776,18 @@ window.TERMS = {
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 46
+     "impr": 46,
+     "clicks": 7,
+     "cost": 76.74,
+     "conv": 2.0
     },
     {
      "text": "debt litigation attorney",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 4.83,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -12013,17 +13822,26 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 34
+     "impr": 34,
+     "clicks": 2,
+     "cost": 40.85,
+     "conv": 4.0
     },
     {
      "text": "attorney for debt collection lawsuit",
      "match": "EXACT",
-     "impr": 15
+     "impr": 15,
+     "clicks": 3,
+     "cost": 26.75,
+     "conv": 1.0
     },
     {
      "text": "debt defense attorney",
      "match": "EXACT",
-     "impr": 7
+     "impr": 7,
+     "clicks": 1,
+     "cost": 22.17,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -12058,12 +13876,18 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 46
+     "impr": 46,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "help with garnishment",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 2,
+     "cost": 21.38,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -12099,22 +13923,34 @@ window.TERMS = {
     {
      "text": "how to stop wage garnishments",
      "match": "EXACT",
-     "impr": 26
+     "impr": 26,
+     "clicks": 4,
+     "cost": 26.44,
+     "conv": 0.0
     },
     {
      "text": "can a garnishment be stopped",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 1,
+     "cost": 2.75,
+     "conv": 0.0
     },
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 2,
+     "cost": 14.11,
+     "conv": 0.0
     },
     {
      "text": "how to stop a garnishment",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 1,
+     "cost": 6.1,
+     "conv": 0.0
     }
    ],
    "top30": 0.895,
@@ -12150,12 +13986,18 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney near me",
      "match": "PHRASE",
-     "impr": 48
+     "impr": 48,
+     "clicks": 4,
+     "cost": 37.9,
+     "conv": 1.0
     },
     {
      "text": "debt defense lawyer near me",
      "match": "PHRASE",
-     "impr": 7
+     "impr": 7,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -12190,7 +14032,10 @@ window.TERMS = {
     {
      "text": "how to respond to a debt collector lawsuit",
      "match": "PHRASE",
-     "impr": 54
+     "impr": 54,
+     "clicks": 5,
+     "cost": 37.97,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -12225,12 +14070,18 @@ window.TERMS = {
     {
      "text": "collection defense lawyer",
      "match": "PHRASE",
-     "impr": 43
+     "impr": 43,
+     "clicks": 2,
+     "cost": 20.23,
+     "conv": 0.0
     },
     {
      "text": "collection defense",
      "match": "EXACT",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -12265,7 +14116,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 54
+     "impr": 54,
+     "clicks": 2,
+     "cost": 29.51,
+     "conv": 1.996
     }
    ],
    "scope": "active",
@@ -12296,12 +14150,18 @@ window.TERMS = {
     {
      "text": "collection lawyers near me",
      "match": "PHRASE",
-     "impr": 43
+     "impr": 43,
+     "clicks": 2,
+     "cost": 7.85,
+     "conv": 0.0
     },
     {
      "text": "collection lawyer near me",
      "match": "EXACT",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -12332,12 +14192,18 @@ window.TERMS = {
     {
      "text": "i just received a writ of garnishment",
      "match": "PHRASE",
-     "impr": 42
+     "impr": 42,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.7,
@@ -12369,12 +14235,18 @@ window.TERMS = {
     {
      "text": "stop wage garnishment immediately",
      "match": "PHRASE",
-     "impr": 39
+     "impr": 39,
+     "clicks": 4,
+     "cost": 30.41,
+     "conv": 0.0
     },
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.917,
@@ -12406,17 +14278,26 @@ window.TERMS = {
     {
      "text": "personal debt collection lawyer",
      "match": "PHRASE",
-     "impr": 23
+     "impr": 23,
+     "clicks": 1,
+     "cost": 2.91,
+     "conv": 0.0
     },
     {
      "text": "debt lawyers",
      "match": "PHRASE",
-     "impr": 20
+     "impr": 20,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "law office debt collection",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -12446,12 +14327,18 @@ window.TERMS = {
     {
      "text": "how to stop a garnishment",
      "match": "PHRASE",
-     "impr": 34
+     "impr": 34,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "how to fight a garnishment",
      "match": "PHRASE",
-     "impr": 20
+     "impr": 20,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.87,
@@ -12487,12 +14374,18 @@ window.TERMS = {
     {
      "text": "how to fight a garnishment",
      "match": "PHRASE",
-     "impr": 32
+     "impr": 32,
+     "clicks": 9,
+     "cost": 45.83,
+     "conv": 0.5
     },
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 22
+     "impr": 22,
+     "clicks": 5,
+     "cost": 15.59,
+     "conv": 0.0
     }
    ],
    "top30": 0.895,
@@ -12529,7 +14422,10 @@ window.TERMS = {
     {
      "text": "credit card debt attorney",
      "match": "EXACT",
-     "impr": 54
+     "impr": 54,
+     "clicks": 3,
+     "cost": 33.2,
+     "conv": 0.5
     }
    ],
    "scope": "active",
@@ -12564,12 +14460,18 @@ window.TERMS = {
     {
      "text": "being sued by debt collector",
      "match": "EXACT",
-     "impr": 44
+     "impr": 44,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "debt collection lawsuit",
      "match": "EXACT",
-     "impr": 9
+     "impr": 9,
+     "clicks": 1,
+     "cost": 11.67,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -12604,12 +14506,18 @@ window.TERMS = {
     {
      "text": "i have been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 38
+     "impr": 38,
+     "clicks": 2,
+     "cost": 16.63,
+     "conv": 0.0
     },
     {
      "text": "i ve been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -12645,12 +14553,18 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 32
+     "impr": 32,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "how to fight debt collectors",
      "match": "EXACT",
-     "impr": 21
+     "impr": 21,
+     "clicks": 2,
+     "cost": 5.16,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -12685,17 +14599,26 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 30
+     "impr": 30,
+     "clicks": 4,
+     "cost": 44.01,
+     "conv": 1.0
     },
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 1,
+     "cost": 8.25,
+     "conv": 0.0
     },
     {
      "text": "debt collection defense attorney",
      "match": "PHRASE",
-     "impr": 8
+     "impr": 8,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -12730,7 +14653,10 @@ window.TERMS = {
     {
      "text": "debt collection defense lawyer near me",
      "match": "PHRASE",
-     "impr": 53
+     "impr": 53,
+     "clicks": 9,
+     "cost": 91.1,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -12761,7 +14687,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 53
+     "impr": 53,
+     "clicks": 2,
+     "cost": 7.17,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -12792,12 +14721,18 @@ window.TERMS = {
     {
      "text": "stop wage garnishment immediately",
      "match": "PHRASE",
-     "impr": 38
+     "impr": 38,
+     "clicks": 2,
+     "cost": 9.85,
+     "conv": 0.5
     },
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.955,
@@ -12829,12 +14764,18 @@ window.TERMS = {
     {
      "text": "lawyers for credit card lawsuit",
      "match": "EXACT",
-     "impr": 39
+     "impr": 39,
+     "clicks": 7,
+     "cost": 79.92,
+     "conv": 1.0
     },
     {
      "text": "credit card lawyers",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 1,
+     "cost": 7.59,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -12869,12 +14810,18 @@ window.TERMS = {
     {
      "text": "portfolio recovery debt collector",
      "match": "PHRASE",
-     "impr": 30
+     "impr": 30,
+     "clicks": 3,
+     "cost": 11.74,
+     "conv": 0.0
     },
     {
      "text": "portfolio recovery debt collectors",
      "match": "PHRASE",
-     "impr": 23
+     "impr": 23,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -12909,12 +14856,18 @@ window.TERMS = {
     {
      "text": "how to respond to a debt collector lawsuit",
      "match": "PHRASE",
-     "impr": 44
+     "impr": 44,
+     "clicks": 3,
+     "cost": 15.05,
+     "conv": 1.0
     },
     {
      "text": "debt collection lawsuit defense",
      "match": "PHRASE",
-     "impr": 8
+     "impr": 8,
+     "clicks": 1,
+     "cost": 12.38,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -12949,7 +14902,10 @@ window.TERMS = {
     {
      "text": "stop wage garnishment immediately",
      "match": "PHRASE",
-     "impr": 52
+     "impr": 52,
+     "clicks": 8,
+     "cost": 58.0,
+     "conv": 2.0
     }
    ],
    "top30": 0.969,
@@ -12981,7 +14937,10 @@ window.TERMS = {
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 52
+     "impr": 52,
+     "clicks": 4,
+     "cost": 12.17,
+     "conv": 1.0
     }
    ],
    "top30": 0.762,
@@ -13013,7 +14972,10 @@ window.TERMS = {
     {
      "text": "cavalry spv debt collector",
      "match": "PHRASE",
-     "impr": 52
+     "impr": 52,
+     "clicks": 5,
+     "cost": 27.01,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -13048,7 +15010,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney near me",
      "match": "PHRASE",
-     "impr": 51
+     "impr": 51,
+     "clicks": 2,
+     "cost": 15.94,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -13083,17 +15048,26 @@ window.TERMS = {
     {
      "text": "i ve been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 23
+     "impr": 23,
+     "clicks": 2,
+     "cost": 13.34,
+     "conv": 0.0
     },
     {
      "text": "being sued by debt collector",
      "match": "EXACT",
-     "impr": 16
+     "impr": 16,
+     "clicks": 4,
+     "cost": 56.2,
+     "conv": 1.0
     },
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 1,
+     "cost": 9.86,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -13128,7 +15102,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 51
+     "impr": 51,
+     "clicks": 8,
+     "cost": 49.08,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -13159,12 +15136,18 @@ window.TERMS = {
     {
      "text": "stop wage garnishment immediately",
      "match": "PHRASE",
-     "impr": 42
+     "impr": 42,
+     "clicks": 9,
+     "cost": 46.66,
+     "conv": 0.0
     },
     {
      "text": "how can i stop my wages from being garnished",
      "match": "EXACT",
-     "impr": 9
+     "impr": 9,
+     "clicks": 2,
+     "cost": 15.91,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -13200,12 +15183,18 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 40
+     "impr": 40,
+     "clicks": 4,
+     "cost": 18.21,
+     "conv": 1.0
     },
     {
      "text": "how to stop wage garnishment",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 3,
+     "cost": 11.71,
+     "conv": 0.0
     }
    ],
    "top30": 0.969,
@@ -13242,12 +15231,18 @@ window.TERMS = {
     {
      "text": "attorney for credit card debt",
      "match": "EXACT",
-     "impr": 27
+     "impr": 27,
+     "clicks": 4,
+     "cost": 44.64,
+     "conv": 0.0
     },
     {
      "text": "credit card debt attorney",
      "match": "EXACT",
-     "impr": 24
+     "impr": 24,
+     "clicks": 2,
+     "cost": 48.51,
+     "conv": 1.003
     }
    ],
    "scope": "active",
@@ -13282,7 +15277,10 @@ window.TERMS = {
     {
      "text": "fdcpa attorney near me",
      "match": "EXACT",
-     "impr": 51
+     "impr": 51,
+     "clicks": 11,
+     "cost": 162.48,
+     "conv": 2.0
     }
    ],
    "scope": "active",
@@ -13317,7 +15315,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 50
+     "impr": 50,
+     "clicks": 4,
+     "cost": 15.12,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -13352,12 +15353,18 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 28
+     "impr": 28,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 22
+     "impr": 22,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -13393,17 +15400,26 @@ window.TERMS = {
     {
      "text": "lawyer to help with debt collection",
      "match": "EXACT",
-     "impr": 20
+     "impr": 20,
+     "clicks": 1,
+     "cost": 9.96,
+     "conv": 0.0
     },
     {
      "text": "attorney for debt collection lawsuit",
      "match": "EXACT",
-     "impr": 19
+     "impr": 19,
+     "clicks": 7,
+     "cost": 52.48,
+     "conv": 1.0
     },
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 3,
+     "cost": 77.32,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -13439,17 +15455,26 @@ window.TERMS = {
     {
      "text": "debt collection defense lawyer near me",
      "match": "PHRASE",
-     "impr": 24
+     "impr": 24,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "consumer debt attorney near me",
      "match": "EXACT",
-     "impr": 14
+     "impr": 14,
+     "clicks": 2,
+     "cost": 14.66,
+     "conv": 0.0
     },
     {
      "text": "collection defense attorney",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -13480,12 +15505,18 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 36
+     "impr": 36,
+     "clicks": 5,
+     "cost": 17.97,
+     "conv": 0.0
     },
     {
      "text": "how can i stop my wages from being garnished",
      "match": "EXACT",
-     "impr": 14
+     "impr": 14,
+     "clicks": 6,
+     "cost": 53.6,
+     "conv": 0.0
     }
    ],
    "top30": 0.938,
@@ -13522,17 +15553,26 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 29
+     "impr": 29,
+     "clicks": 4,
+     "cost": 41.44,
+     "conv": 0.667
     },
     {
      "text": "can a garnishment be stopped",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 1,
+     "cost": 11.78,
+     "conv": 1.0
     },
     {
      "text": "how to fight a garnishment",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.643,
@@ -13569,7 +15609,10 @@ window.TERMS = {
     {
      "text": "how to stop debt collector calls",
      "match": "PHRASE",
-     "impr": 50
+     "impr": 50,
+     "clicks": 1,
+     "cost": 3.86,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -13604,7 +15647,10 @@ window.TERMS = {
     {
      "text": "i got sued by a debt collector",
      "match": "PHRASE",
-     "impr": 49
+     "impr": 49,
+     "clicks": 2,
+     "cost": 11.45,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -13639,17 +15685,26 @@ window.TERMS = {
     {
      "text": "creditor garnishment",
      "match": "PHRASE",
-     "impr": 25
+     "impr": 25,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "pay garnishment",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 1,
+     "cost": 1.48,
+     "conv": 0.0
     },
     {
      "text": "paycheck garnishment",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 1,
+     "cost": 4.92,
+     "conv": 0.0
     }
    ],
    "top30": 0.833,
@@ -13682,12 +15737,18 @@ window.TERMS = {
     {
      "text": "attorney for judgement collection",
      "match": "PHRASE",
-     "impr": 25
+     "impr": 25,
+     "clicks": 2,
+     "cost": 31.0,
+     "conv": 0.0
     },
     {
      "text": "judgement lawyers",
      "match": "EXACT",
-     "impr": 24
+     "impr": 24,
+     "clicks": 4,
+     "cost": 47.15,
+     "conv": 3.0
     }
    ],
    "scope": "active",
@@ -13718,17 +15779,26 @@ window.TERMS = {
     {
      "text": "debt defense lawyer near me",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 2,
+     "cost": 28.4,
+     "conv": 0.0
     },
     {
      "text": "debt lawsuit attorney near me",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 5,
+     "cost": 65.2,
+     "conv": 0.0
     },
     {
      "text": "debt defense attorney near me",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 12.44,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -13763,7 +15833,10 @@ window.TERMS = {
     {
      "text": "stop wage garnishment immediately",
      "match": "PHRASE",
-     "impr": 48
+     "impr": 48,
+     "clicks": 4,
+     "cost": 31.71,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -13794,7 +15867,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 48
+     "impr": 48,
+     "clicks": 1,
+     "cost": 1.51,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -13825,7 +15901,10 @@ window.TERMS = {
     {
      "text": "how to fight a garnishment",
      "match": "PHRASE",
-     "impr": 48
+     "impr": 48,
+     "clicks": 6,
+     "cost": 22.36,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -13861,7 +15940,10 @@ window.TERMS = {
     {
      "text": "sue debt collector for harassment",
      "match": "PHRASE",
-     "impr": 48
+     "impr": 48,
+     "clicks": 4,
+     "cost": 39.79,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -13896,7 +15978,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 47
+     "impr": 47,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.9354838709677419,
@@ -13931,7 +16016,10 @@ window.TERMS = {
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 47
+     "impr": 47,
+     "clicks": 2,
+     "cost": 12.43,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -13966,12 +16054,18 @@ window.TERMS = {
     {
      "text": "how to respond to a debt collector lawsuit",
      "match": "PHRASE",
-     "impr": 39
+     "impr": 39,
+     "clicks": 7,
+     "cost": 29.44,
+     "conv": 1.0
     },
     {
      "text": "how to fight debt collectors",
      "match": "EXACT",
-     "impr": 8
+     "impr": 8,
+     "clicks": 1,
+     "cost": 10.07,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -14006,17 +16100,26 @@ window.TERMS = {
     {
      "text": "im being sued for a debt what do i do",
      "match": "EXACT",
-     "impr": 24
+     "impr": 24,
+     "clicks": 2,
+     "cost": 8.77,
+     "conv": 0.0
     },
     {
      "text": "i have been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 2,
+     "cost": 13.06,
+     "conv": 0.0
     },
     {
      "text": "i ve been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -14051,7 +16154,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 47
+     "impr": 47,
+     "clicks": 4,
+     "cost": 22.06,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -14082,7 +16188,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 47
+     "impr": 47,
+     "clicks": 6,
+     "cost": 14.63,
+     "conv": 0.5
     }
    ],
    "scope": "active",
@@ -14113,7 +16222,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 47
+     "impr": 47,
+     "clicks": 1,
+     "cost": 2.53,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -14148,7 +16260,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 46
+     "impr": 46,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -14183,17 +16298,26 @@ window.TERMS = {
     {
      "text": "debt litigation attorney",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 6,
+     "cost": 37.5,
+     "conv": 0.0
     },
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 3,
+     "cost": 30.51,
+     "conv": 1.0
     },
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -14228,22 +16352,34 @@ window.TERMS = {
     {
      "text": "collection defense attorney",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 13
+     "impr": 13,
+     "clicks": 2,
+     "cost": 34.11,
+     "conv": 0.0
     },
     {
      "text": "attorney for debt collection lawsuit",
      "match": "EXACT",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "collection defense lawyer",
      "match": "PHRASE",
-     "impr": 8
+     "impr": 8,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -14278,7 +16414,10 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 46
+     "impr": 46,
+     "clicks": 8,
+     "cost": 31.45,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -14314,7 +16453,10 @@ window.TERMS = {
     {
      "text": "my wages are being garnished",
      "match": "EXACT",
-     "impr": 46
+     "impr": 46,
+     "clicks": 2,
+     "cost": 17.57,
+     "conv": 1.0
     }
    ],
    "top30": 0.484,
@@ -14351,7 +16493,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 46
+     "impr": 46,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -14386,7 +16531,10 @@ window.TERMS = {
     {
      "text": "can a credit card company sue you",
      "match": "EXACT",
-     "impr": 46
+     "impr": 46,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -14421,7 +16569,10 @@ window.TERMS = {
     {
      "text": "capital one lawsuit",
      "match": "PHRASE",
-     "impr": 46
+     "impr": 46,
+     "clicks": 7,
+     "cost": 49.17,
+     "conv": 2.0
     }
    ],
    "scope": "active",
@@ -14456,12 +16607,18 @@ window.TERMS = {
     {
      "text": "how to fight a credit card lawsuit",
      "match": "PHRASE",
-     "impr": 39
+     "impr": 39,
+     "clicks": 1,
+     "cost": 3.52,
+     "conv": 0.0
     },
     {
      "text": "summons for credit card debt",
      "match": "PHRASE",
-     "impr": 7
+     "impr": 7,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -14496,12 +16653,18 @@ window.TERMS = {
     {
      "text": "portfolio recovery debt collector",
      "match": "PHRASE",
-     "impr": 34
+     "impr": 34,
+     "clicks": 1,
+     "cost": 16.68,
+     "conv": 0.0
     },
     {
      "text": "portfolio recovery debt collectors",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -14536,7 +16699,10 @@ window.TERMS = {
     {
      "text": "credolegal",
      "match": "EXACT",
-     "impr": 46
+     "impr": 46,
+     "clicks": 22,
+     "cost": 61.54,
+     "conv": 3.5
     }
    ],
    "top30": 0.9210526315789473,
@@ -14568,7 +16734,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 45
+     "impr": 45,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -14603,12 +16772,18 @@ window.TERMS = {
     {
      "text": "i ve been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 36
+     "impr": 36,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "being sued by debt collector",
      "match": "EXACT",
-     "impr": 9
+     "impr": 9,
+     "clicks": 2,
+     "cost": 7.15,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -14643,12 +16818,18 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 30
+     "impr": 30,
+     "clicks": 2,
+     "cost": 22.18,
+     "conv": 1.0
     },
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 2,
+     "cost": 26.01,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -14683,12 +16864,18 @@ window.TERMS = {
     {
      "text": "claim of exemption",
      "match": "EXACT",
-     "impr": 32
+     "impr": 32,
+     "clicks": 1,
+     "cost": 2.08,
+     "conv": 0.0
     },
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 1,
+     "cost": 9.96,
+     "conv": 0.0
     }
    ],
    "top30": 0.647,
@@ -14720,7 +16907,10 @@ window.TERMS = {
     {
      "text": "help with garnishment",
      "match": "PHRASE",
-     "impr": 45
+     "impr": 45,
+     "clicks": 10,
+     "cost": 125.58,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -14756,7 +16946,10 @@ window.TERMS = {
     {
      "text": "sue debt collector for harassment",
      "match": "PHRASE",
-     "impr": 45
+     "impr": 45,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -14791,7 +16984,10 @@ window.TERMS = {
     {
      "text": "how to answer a debt summons",
      "match": "PHRASE",
-     "impr": 44
+     "impr": 44,
+     "clicks": 5,
+     "cost": 28.65,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -14826,7 +17022,10 @@ window.TERMS = {
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 44
+     "impr": 44,
+     "clicks": 6,
+     "cost": 70.45,
+     "conv": 1.0
     }
    ],
    "top30": 0.905,
@@ -14859,22 +17058,34 @@ window.TERMS = {
     {
      "text": "collections attorney",
      "match": "EXACT",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "collection attorney",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 1,
+     "cost": 5.53,
+     "conv": 0.0
     },
     {
      "text": "collection defense attorney",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 1,
+     "cost": 9.9,
+     "conv": 0.0
     },
     {
      "text": "collection defense lawyer",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -14905,7 +17116,10 @@ window.TERMS = {
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 43
+     "impr": 43,
+     "clicks": 4,
+     "cost": 33.88,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -14940,7 +17154,10 @@ window.TERMS = {
     {
      "text": "how to respond to a debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 43
+     "impr": 43,
+     "clicks": 2,
+     "cost": 19.34,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -14975,12 +17192,18 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney near me",
      "match": "PHRASE",
-     "impr": 30
+     "impr": 30,
+     "clicks": 2,
+     "cost": 15.39,
+     "conv": 0.0
     },
     {
      "text": "debt lawsuit defense attorney near me",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.7586206896551724,
@@ -15016,7 +17239,10 @@ window.TERMS = {
     {
      "text": "wage garnishment lawyer",
      "match": "PHRASE",
-     "impr": 43
+     "impr": 43,
+     "clicks": 3,
+     "cost": 45.04,
+     "conv": 1.0
     }
    ],
    "top30": 0.889,
@@ -15048,7 +17274,10 @@ window.TERMS = {
     {
      "text": "midland credit management garnishment",
      "match": "PHRASE",
-     "impr": 43
+     "impr": 43,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.857,
@@ -15080,12 +17309,18 @@ window.TERMS = {
     {
      "text": "attorney collection agency",
      "match": "PHRASE",
-     "impr": 26
+     "impr": 26,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "debt attorneys",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -15117,7 +17352,10 @@ window.TERMS = {
     {
      "text": "lawyer to stop garnishment",
      "match": "PHRASE",
-     "impr": 43
+     "impr": 43,
+     "clicks": 5,
+     "cost": 37.86,
+     "conv": 0.0
     }
    ],
    "top30": 0.826,
@@ -15153,17 +17391,26 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 3,
+     "cost": 12.78,
+     "conv": 0.0
     },
     {
      "text": "how to stop wage garnishments",
      "match": "EXACT",
-     "impr": 13
+     "impr": 13,
+     "clicks": 3,
+     "cost": 11.08,
+     "conv": 0.0
     },
     {
      "text": "can a garnishment be stopped",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 1,
+     "cost": 1.18,
+     "conv": 0.0
     }
    ],
    "top30": 1,
@@ -15200,7 +17447,10 @@ window.TERMS = {
     {
      "text": "midland funding debt collector",
      "match": "PHRASE",
-     "impr": 43
+     "impr": 43,
+     "clicks": 1,
+     "cost": 2.4,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -15235,12 +17485,18 @@ window.TERMS = {
     {
      "text": "portfolio recovery debt collectors",
      "match": "PHRASE",
-     "impr": 28
+     "impr": 28,
+     "clicks": 1,
+     "cost": 1.96,
+     "conv": 0.0
     },
     {
      "text": "portfolio recovery debt collector",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -15275,7 +17531,10 @@ window.TERMS = {
     {
      "text": "fdcpa violation attorney",
      "match": "EXACT",
-     "impr": 43
+     "impr": 43,
+     "clicks": 4,
+     "cost": 47.36,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -15310,12 +17569,18 @@ window.TERMS = {
     {
      "text": "sue a debt collector",
      "match": "PHRASE",
-     "impr": 31
+     "impr": 31,
+     "clicks": 5,
+     "cost": 43.16,
+     "conv": 0.0
     },
     {
      "text": "sue debt collector",
      "match": "EXACT",
-     "impr": 12
+     "impr": 12,
+     "clicks": 4,
+     "cost": 23.37,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -15350,12 +17615,18 @@ window.TERMS = {
     {
      "text": "how to answer a debt summons",
      "match": "PHRASE",
-     "impr": 29
+     "impr": 29,
+     "clicks": 3,
+     "cost": 17.97,
+     "conv": 0.0
     },
     {
      "text": "how to answer a court summons debt collection",
      "match": "EXACT",
-     "impr": 13
+     "impr": 13,
+     "clicks": 2,
+     "cost": 24.2,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -15390,12 +17661,18 @@ window.TERMS = {
     {
      "text": "credit debt lawyers",
      "match": "EXACT",
-     "impr": 22
+     "impr": 22,
+     "clicks": 3,
+     "cost": 42.86,
+     "conv": 1.0
     },
     {
      "text": "debt defense lawyer near me",
      "match": "PHRASE",
-     "impr": 20
+     "impr": 20,
+     "clicks": 1,
+     "cost": 24.08,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -15430,7 +17707,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 42
+     "impr": 42,
+     "clicks": 3,
+     "cost": 33.07,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -15461,7 +17741,10 @@ window.TERMS = {
     {
      "text": "collection defense attorney near me",
      "match": "PHRASE",
-     "impr": 42
+     "impr": 42,
+     "clicks": 6,
+     "cost": 61.43,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -15492,7 +17775,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 42
+     "impr": 42,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -15523,12 +17809,18 @@ window.TERMS = {
     {
      "text": "garnishment attorney",
      "match": "PHRASE",
-     "impr": 23
+     "impr": 23,
+     "clicks": 4,
+     "cost": 40.12,
+     "conv": 0.0
     },
     {
      "text": "wage garnishment attorney",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 4,
+     "cost": 46.25,
+     "conv": 0.0
     }
    ],
    "top30": 0.909,
@@ -15560,7 +17852,10 @@ window.TERMS = {
     {
      "text": "help with garnishment",
      "match": "PHRASE",
-     "impr": 42
+     "impr": 42,
+     "clicks": 2,
+     "cost": 18.15,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -15595,7 +17890,10 @@ window.TERMS = {
     {
      "text": "garnish wages attorney",
      "match": "EXACT",
-     "impr": 42
+     "impr": 42,
+     "clicks": 5,
+     "cost": 89.04,
+     "conv": 0.0
     }
    ],
    "top30": 0.857,
@@ -15631,7 +17929,10 @@ window.TERMS = {
     {
      "text": "settling debt with creditors",
      "match": "PHRASE",
-     "impr": 42
+     "impr": 42,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.6666666666666666,
@@ -15662,12 +17963,18 @@ window.TERMS = {
     {
      "text": "portfolio recovery debt collector",
      "match": "PHRASE",
-     "impr": 21
+     "impr": 21,
+     "clicks": 1,
+     "cost": 7.87,
+     "conv": 0.0
     },
     {
      "text": "portfolio recovery debt collectors",
      "match": "PHRASE",
-     "impr": 21
+     "impr": 21,
+     "clicks": 1,
+     "cost": 2.33,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -15702,17 +18009,26 @@ window.TERMS = {
     {
      "text": "debt defense lawyer",
      "match": "EXACT",
-     "impr": 22
+     "impr": 22,
+     "clicks": 1,
+     "cost": 12.2,
+     "conv": 0.0
     },
     {
      "text": "debt defense attorney",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 1,
+     "cost": 26.59,
+     "conv": 1.0
     },
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 8
+     "impr": 8,
+     "clicks": 2,
+     "cost": 17.14,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -15747,12 +18063,18 @@ window.TERMS = {
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 22
+     "impr": 22,
+     "clicks": 3,
+     "cost": 31.03,
+     "conv": 3.44
     },
     {
      "text": "lawyer for debt lawsuit",
      "match": "EXACT",
-     "impr": 19
+     "impr": 19,
+     "clicks": 2,
+     "cost": 26.51,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -15787,7 +18109,10 @@ window.TERMS = {
     {
      "text": "check garnishment",
      "match": "PHRASE",
-     "impr": 41
+     "impr": 41,
+     "clicks": 2,
+     "cost": 21.26,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -15819,7 +18144,10 @@ window.TERMS = {
     {
      "text": "low cost debt attorney",
      "match": "EXACT",
-     "impr": 41
+     "impr": 41,
+     "clicks": 2,
+     "cost": 59.35,
+     "conv": 5.0
     }
    ],
    "scope": "active",
@@ -15850,7 +18178,10 @@ window.TERMS = {
     {
      "text": "defense against debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 41
+     "impr": 41,
+     "clicks": 1,
+     "cost": 0.24,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -15881,7 +18212,10 @@ window.TERMS = {
     {
      "text": "defense against debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 41
+     "impr": 41,
+     "clicks": 2,
+     "cost": 0.55,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -15913,7 +18247,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 41
+     "impr": 41,
+     "clicks": 1,
+     "cost": 2.33,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -15944,12 +18281,18 @@ window.TERMS = {
     {
      "text": "wage garnishment",
      "match": "PHRASE",
-     "impr": 24
+     "impr": 24,
+     "clicks": 2,
+     "cost": 10.95,
+     "conv": 0.0
     },
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 1,
+     "cost": 3.23,
+     "conv": 0.0
     }
    ],
    "top30": 0.828,
@@ -15981,12 +18324,18 @@ window.TERMS = {
     {
      "text": "garnish wages attorney",
      "match": "EXACT",
-     "impr": 31
+     "impr": 31,
+     "clicks": 6,
+     "cost": 96.27,
+     "conv": 0.0
     },
     {
      "text": "lawyer to stop garnishment",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 33.52,
+     "conv": 1.0
     }
    ],
    "top30": 1,
@@ -16022,17 +18371,26 @@ window.TERMS = {
     {
      "text": "can a garnishment be stopped",
      "match": "PHRASE",
-     "impr": 21
+     "impr": 21,
+     "clicks": 2,
+     "cost": 10.79,
+     "conv": 0.0
     },
     {
      "text": "how to stop a garnishment",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 1,
+     "cost": 4.01,
+     "conv": 0.0
     },
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 1,
+     "cost": 2.21,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -16067,7 +18425,10 @@ window.TERMS = {
     {
      "text": "court summons for credit card debt",
      "match": "PHRASE",
-     "impr": 41
+     "impr": 41,
+     "clicks": 6,
+     "cost": 39.77,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -16102,7 +18463,10 @@ window.TERMS = {
     {
      "text": "can you sue debt collectors for harassment",
      "match": "PHRASE",
-     "impr": 41
+     "impr": 41,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -16137,7 +18501,10 @@ window.TERMS = {
     {
      "text": "lvnv funding suing me",
      "match": "PHRASE",
-     "impr": 40
+     "impr": 40,
+     "clicks": 2,
+     "cost": 14.7,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -16173,7 +18540,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 40
+     "impr": 40,
+     "clicks": 4,
+     "cost": 88.72,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -16208,7 +18578,10 @@ window.TERMS = {
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 40
+     "impr": 40,
+     "clicks": 1,
+     "cost": 6.92,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -16243,7 +18616,10 @@ window.TERMS = {
     {
      "text": "how to respond to a summons for debt",
      "match": "PHRASE",
-     "impr": 40
+     "impr": 40,
+     "clicks": 5,
+     "cost": 26.56,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -16278,12 +18654,18 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 21
+     "impr": 21,
+     "clicks": 4,
+     "cost": 31.91,
+     "conv": 0.0
     },
     {
      "text": "attorney for debt collection lawsuit",
      "match": "EXACT",
-     "impr": 19
+     "impr": 19,
+     "clicks": 2,
+     "cost": 29.12,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -16319,12 +18701,18 @@ window.TERMS = {
     {
      "text": "debt litigation attorney",
      "match": "PHRASE",
-     "impr": 20
+     "impr": 20,
+     "clicks": 1,
+     "cost": 12.53,
+     "conv": 0.0
     },
     {
      "text": "credit debt lawyers",
      "match": "EXACT",
-     "impr": 20
+     "impr": 20,
+     "clicks": 1,
+     "cost": 43.79,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -16358,17 +18746,26 @@ window.TERMS = {
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "being sued by debt collector",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 1,
+     "cost": 1.5,
+     "conv": 0.0
     },
     {
      "text": "i got sued by a debt collector",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -16403,17 +18800,26 @@ window.TERMS = {
     {
      "text": "consumer debt defense attorney",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 1,
+     "cost": 10.53,
+     "conv": 1.0
     },
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 15
+     "impr": 15,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "debt lawsuit attorney near me",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 3,
+     "cost": 33.2,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -16448,17 +18854,26 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 4,
+     "cost": 69.81,
+     "conv": 0.0
     },
     {
      "text": "debt litigation attorney",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 3,
+     "cost": 34.82,
+     "conv": 0.0
     },
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 2,
+     "cost": 40.38,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -16493,7 +18908,10 @@ window.TERMS = {
     {
      "text": "judgement collection attorney near me",
      "match": "PHRASE",
-     "impr": 40
+     "impr": 40,
+     "clicks": 3,
+     "cost": 23.22,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -16524,12 +18942,18 @@ window.TERMS = {
     {
      "text": "debt attorneys",
      "match": "EXACT",
-     "impr": 30
+     "impr": 30,
+     "clicks": 2,
+     "cost": 31.87,
+     "conv": 0.0
     },
     {
      "text": "collection defense lawyer",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 5.54,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -16560,7 +18984,10 @@ window.TERMS = {
     {
      "text": "my wages are being garnished",
      "match": "EXACT",
-     "impr": 40
+     "impr": 40,
+     "clicks": 4,
+     "cost": 17.62,
+     "conv": 0.0
     }
    ],
    "top30": 0.636,
@@ -16596,7 +19023,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 40
+     "impr": 40,
+     "clicks": 2,
+     "cost": 5.05,
+     "conv": 0.0
     }
    ],
    "top30": 0.696,
@@ -16633,12 +19063,18 @@ window.TERMS = {
     {
      "text": "how can i stop my wages from being garnished",
      "match": "EXACT",
-     "impr": 22
+     "impr": 22,
+     "clicks": 3,
+     "cost": 11.51,
+     "conv": 0.0
     },
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 3,
+     "cost": 22.22,
+     "conv": 2.0
     }
    ],
    "scope": "active",
@@ -16674,12 +19110,18 @@ window.TERMS = {
     {
      "text": "how to fight a credit card lawsuit",
      "match": "PHRASE",
-     "impr": 33
+     "impr": 33,
+     "clicks": 4,
+     "cost": 15.68,
+     "conv": 0.0
     },
     {
      "text": "credit card suing me",
      "match": "PHRASE",
-     "impr": 7
+     "impr": 7,
+     "clicks": 1,
+     "cost": 5.13,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -16714,17 +19156,26 @@ window.TERMS = {
     {
      "text": "what to do if a debt collector sues you",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 5,
+     "cost": 43.62,
+     "conv": 0.0
     },
     {
      "text": "im being sued for a debt what do i do",
      "match": "EXACT",
-     "impr": 14
+     "impr": 14,
+     "clicks": 2,
+     "cost": 6.09,
+     "conv": 0.0
     },
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -16759,12 +19210,18 @@ window.TERMS = {
     {
      "text": "stop wage garnishment immediately",
      "match": "PHRASE",
-     "impr": 30
+     "impr": 30,
+     "clicks": 5,
+     "cost": 24.11,
+     "conv": 1.0
     },
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 1,
@@ -16796,7 +19253,10 @@ window.TERMS = {
     {
      "text": "how to stop debt collectors from garnishing wages",
      "match": "PHRASE",
-     "impr": 39
+     "impr": 39,
+     "clicks": 6,
+     "cost": 27.96,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -16832,7 +19292,10 @@ window.TERMS = {
     {
      "text": "do i need a lawyer for credit card lawsuit",
      "match": "PHRASE",
-     "impr": 39
+     "impr": 39,
+     "clicks": 1,
+     "cost": 5.13,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -16867,7 +19330,10 @@ window.TERMS = {
     {
      "text": "velocity investments debt collector",
      "match": "PHRASE",
-     "impr": 39
+     "impr": 39,
+     "clicks": 2,
+     "cost": 14.11,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -16902,7 +19368,10 @@ window.TERMS = {
     {
      "text": "debt harassment attorneys",
      "match": "PHRASE",
-     "impr": 39
+     "impr": 39,
+     "clicks": 7,
+     "cost": 92.81,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -16937,7 +19406,10 @@ window.TERMS = {
     {
      "text": "attorney for debt lawsuit",
      "match": "PHRASE",
-     "impr": 38
+     "impr": 38,
+     "clicks": 2,
+     "cost": 28.42,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -16972,7 +19444,10 @@ window.TERMS = {
     {
      "text": "portfolio recovery lawsuit",
      "match": "EXACT",
-     "impr": 38
+     "impr": 38,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -17008,12 +19483,18 @@ window.TERMS = {
     {
      "text": "credit debt lawyers",
      "match": "EXACT",
-     "impr": 30
+     "impr": 30,
+     "clicks": 1,
+     "cost": 27.26,
+     "conv": 1.0
     },
     {
      "text": "lawyer for debt lawsuit",
      "match": "EXACT",
-     "impr": 8
+     "impr": 8,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -17049,12 +19530,18 @@ window.TERMS = {
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 21
+     "impr": 21,
+     "clicks": 2,
+     "cost": 21.44,
+     "conv": 0.0
     },
     {
      "text": "im being sued for a debt what do i do",
      "match": "EXACT",
-     "impr": 17
+     "impr": 17,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -17089,17 +19576,26 @@ window.TERMS = {
     {
      "text": "credit debt lawyers",
      "match": "EXACT",
-     "impr": 17
+     "impr": 17,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 14
+     "impr": 14,
+     "clicks": 3,
+     "cost": 50.41,
+     "conv": 0.0
     },
     {
      "text": "debt defense lawyer",
      "match": "EXACT",
-     "impr": 7
+     "impr": 7,
+     "clicks": 1,
+     "cost": 8.05,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -17134,7 +19630,10 @@ window.TERMS = {
     {
      "text": "collections lawyer",
      "match": "PHRASE",
-     "impr": 38
+     "impr": 38,
+     "clicks": 3,
+     "cost": 46.29,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -17165,7 +19664,10 @@ window.TERMS = {
     {
      "text": "credit attorney near me",
      "match": "EXACT",
-     "impr": 38
+     "impr": 38,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -17196,12 +19698,18 @@ window.TERMS = {
     {
      "text": "stop wage garnishment immediately",
      "match": "PHRASE",
-     "impr": 26
+     "impr": 26,
+     "clicks": 2,
+     "cost": 5.04,
+     "conv": 0.0
     },
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 1,
+     "cost": 4.21,
+     "conv": 0.0
     }
    ],
    "top30": 0.9,
@@ -17233,12 +19741,18 @@ window.TERMS = {
     {
      "text": "stop wage garnishment immediately",
      "match": "PHRASE",
-     "impr": 23
+     "impr": 23,
+     "clicks": 1,
+     "cost": 4.9,
+     "conv": 0.0
     },
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 1,
+     "cost": 1.19,
+     "conv": 0.0
     }
    ],
    "top30": 1,
@@ -17270,12 +19784,18 @@ window.TERMS = {
     {
      "text": "can a creditor garnish my wages after 7 years",
      "match": "EXACT",
-     "impr": 23
+     "impr": 23,
+     "clicks": 3,
+     "cost": 11.39,
+     "conv": 1.0
     },
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 1,
+     "cost": 2.71,
+     "conv": 0.0
     }
    ],
    "top30": 0.818,
@@ -17307,12 +19827,18 @@ window.TERMS = {
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 21
+     "impr": 21,
+     "clicks": 1,
+     "cost": 9.46,
+     "conv": 0.0
     },
     {
      "text": "stop wage garnishment immediately",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 2,
+     "cost": 5.34,
+     "conv": 0.0
     }
    ],
    "top30": 1,
@@ -17344,7 +19870,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 38
+     "impr": 38,
+     "clicks": 1,
+     "cost": 5.22,
+     "conv": 0.0
     }
    ],
    "top30": 0.895,
@@ -17380,12 +19909,18 @@ window.TERMS = {
     {
      "text": "how to fight a garnishment",
      "match": "PHRASE",
-     "impr": 25
+     "impr": 25,
+     "clicks": 3,
+     "cost": 15.32,
+     "conv": 0.0
     },
     {
      "text": "can a garnishment be stopped",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -17421,7 +19956,10 @@ window.TERMS = {
     {
      "text": "midland funding debt collector",
      "match": "PHRASE",
-     "impr": 38
+     "impr": 38,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -17456,17 +19994,26 @@ window.TERMS = {
     {
      "text": "credit card lawyers",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 1,
+     "cost": 12.39,
+     "conv": 0.0
     },
     {
      "text": "lawyer for credit card debt",
      "match": "EXACT",
-     "impr": 14
+     "impr": 14,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "credit card debt lawyers",
      "match": "EXACT",
-     "impr": 9
+     "impr": 9,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -17501,7 +20048,10 @@ window.TERMS = {
     {
      "text": "debt defense lawyer near me",
      "match": "PHRASE",
-     "impr": 37
+     "impr": 37,
+     "clicks": 7,
+     "cost": 141.93,
+     "conv": 2.5
     }
    ],
    "scope": "active",
@@ -17536,12 +20086,18 @@ window.TERMS = {
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 29
+     "impr": 29,
+     "clicks": 3,
+     "cost": 22.35,
+     "conv": 0.0
     },
     {
      "text": "i have been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 8
+     "impr": 8,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -17577,12 +20133,18 @@ window.TERMS = {
     {
      "text": "how to answer debt collection lawsuit",
      "match": "EXACT",
-     "impr": 26
+     "impr": 26,
+     "clicks": 4,
+     "cost": 43.06,
+     "conv": 0.0
     },
     {
      "text": "answer to debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 1,
+     "cost": 3.77,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -17617,7 +20179,10 @@ window.TERMS = {
     {
      "text": "lvnv funding llc garnishment",
      "match": "PHRASE",
-     "impr": 37
+     "impr": 37,
+     "clicks": 3,
+     "cost": 14.29,
+     "conv": 0.0
     }
    ],
    "top30": 0.75,
@@ -17649,7 +20214,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 37
+     "impr": 37,
+     "clicks": 2,
+     "cost": 9.31,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -17680,12 +20248,18 @@ window.TERMS = {
     {
      "text": "debt attorneys",
      "match": "EXACT",
-     "impr": 19
+     "impr": 19,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "debt lawyer",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 1,
+     "cost": 39.86,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -17716,17 +20290,26 @@ window.TERMS = {
     {
      "text": "court ordered wage garnishment",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "court ordered garnishment",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "garnishment",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -17758,12 +20341,18 @@ window.TERMS = {
     {
      "text": "midland funding debt collector",
      "match": "PHRASE",
-     "impr": 28
+     "impr": 28,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "midland credit management fdcpa",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -17798,12 +20387,18 @@ window.TERMS = {
     {
      "text": "settling debt with creditors",
      "match": "PHRASE",
-     "impr": 21
+     "impr": 21,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "negotiate credit debt",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -17833,12 +20428,18 @@ window.TERMS = {
     {
      "text": "credit card lawyers",
      "match": "PHRASE",
-     "impr": 20
+     "impr": 20,
+     "clicks": 5,
+     "cost": 62.06,
+     "conv": 0.0
     },
     {
      "text": "credit card debt lawyers",
      "match": "EXACT",
-     "impr": 17
+     "impr": 17,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -17873,12 +20474,18 @@ window.TERMS = {
     {
      "text": "portfolio recovery debt collector",
      "match": "PHRASE",
-     "impr": 20
+     "impr": 20,
+     "clicks": 2,
+     "cost": 17.76,
+     "conv": 0.0
     },
     {
      "text": "portfolio recovery debt collectors",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 1,
+     "cost": 3.08,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -17913,7 +20520,10 @@ window.TERMS = {
     {
      "text": "debt defense lawyer",
      "match": "EXACT",
-     "impr": 36
+     "impr": 36,
+     "clicks": 3,
+     "cost": 29.81,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -17948,7 +20558,10 @@ window.TERMS = {
     {
      "text": "debt collection lawsuit defense",
      "match": "PHRASE",
-     "impr": 36
+     "impr": 36,
+     "clicks": 4,
+     "cost": 13.39,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -17983,7 +20596,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 36
+     "impr": 36,
+     "clicks": 4,
+     "cost": 11.57,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -18019,12 +20635,18 @@ window.TERMS = {
     {
      "text": "being sued by debt collector",
      "match": "PHRASE",
-     "impr": 28
+     "impr": 28,
+     "clicks": 2,
+     "cost": 8.33,
+     "conv": 0.0
     },
     {
      "text": "i ve been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 8
+     "impr": 8,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -18059,7 +20681,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 36
+     "impr": 36,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -18090,12 +20715,18 @@ window.TERMS = {
     {
      "text": "lawyer for garnished wages",
      "match": "EXACT",
-     "impr": 27
+     "impr": 27,
+     "clicks": 1,
+     "cost": 10.05,
+     "conv": 0.0
     },
     {
      "text": "wage garnishment lawyer",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.8,
@@ -18127,7 +20758,10 @@ window.TERMS = {
     {
      "text": "can a garnishment be stopped",
      "match": "PHRASE",
-     "impr": 36
+     "impr": 36,
+     "clicks": 11,
+     "cost": 39.78,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -18163,7 +20797,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 36
+     "impr": 36,
+     "clicks": 6,
+     "cost": 25.51,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -18199,12 +20836,18 @@ window.TERMS = {
     {
      "text": "portfolio recovery debt collector",
      "match": "PHRASE",
-     "impr": 22
+     "impr": 22,
+     "clicks": 3,
+     "cost": 22.49,
+     "conv": 0.0
     },
     {
      "text": "portfolio recovery debt collectors",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 1,
+     "cost": 16.04,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -18239,7 +20882,10 @@ window.TERMS = {
     {
      "text": "sue a debt collector",
      "match": "PHRASE",
-     "impr": 36
+     "impr": 36,
+     "clicks": 6,
+     "cost": 57.83,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -18274,12 +20920,18 @@ window.TERMS = {
     {
      "text": "attorney for debt lawsuit",
      "match": "PHRASE",
-     "impr": 28
+     "impr": 28,
+     "clicks": 2,
+     "cost": 46.62,
+     "conv": 0.4
     },
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 7
+     "impr": 7,
+     "clicks": 2,
+     "cost": 47.4,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -18314,12 +20966,18 @@ window.TERMS = {
     {
      "text": "debt defense lawyer",
      "match": "EXACT",
-     "impr": 24
+     "impr": 24,
+     "clicks": 5,
+     "cost": 65.53,
+     "conv": 0.0
     },
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -18354,7 +21012,10 @@ window.TERMS = {
     {
      "text": "garnishment",
      "match": "PHRASE",
-     "impr": 35
+     "impr": 35,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.583,
@@ -18387,7 +21048,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 35
+     "impr": 35,
+     "clicks": 1,
+     "cost": 4.28,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -18418,7 +21082,10 @@ window.TERMS = {
     {
      "text": "attorney for debt collection near me",
      "match": "PHRASE",
-     "impr": 35
+     "impr": 35,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -18449,12 +21116,18 @@ window.TERMS = {
     {
      "text": "attorney collection agency",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -18485,17 +21158,26 @@ window.TERMS = {
     {
      "text": "collections attorney near me",
      "match": "EXACT",
-     "impr": 15
+     "impr": 15,
+     "clicks": 2,
+     "cost": 24.49,
+     "conv": 0.0
     },
     {
      "text": "debt collection attorney near me",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 4.53,
+     "conv": 0.0
     },
     {
      "text": "debt collection defense lawyer near me",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -18526,7 +21208,10 @@ window.TERMS = {
     {
      "text": "how to remove wage garnishment",
      "match": "PHRASE",
-     "impr": 35
+     "impr": 35,
+     "clicks": 6,
+     "cost": 38.6,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -18562,12 +21247,18 @@ window.TERMS = {
     {
      "text": "how to fight a garnishment",
      "match": "PHRASE",
-     "impr": 26
+     "impr": 26,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "can a garnishment be stopped",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 4,
+     "cost": 11.47,
+     "conv": 0.0
     }
    ],
    "top30": 0.867,
@@ -18603,12 +21294,18 @@ window.TERMS = {
     {
      "text": "my wages are being garnished",
      "match": "EXACT",
-     "impr": 23
+     "impr": 23,
+     "clicks": 4,
+     "cost": 22.91,
+     "conv": 0.0
     },
     {
      "text": "how to get out of wage garnishment",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 2,
+     "cost": 17.61,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -18643,12 +21340,18 @@ window.TERMS = {
     {
      "text": "paypal lawsuit",
      "match": "PHRASE",
-     "impr": 24
+     "impr": 24,
+     "clicks": 1,
+     "cost": 6.99,
+     "conv": 0.0
     },
     {
      "text": "paypal class action lawsuit",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 2,
+     "cost": 11.81,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -18683,12 +21386,18 @@ window.TERMS = {
     {
      "text": "capital one class action lawsuit",
      "match": "PHRASE",
-     "impr": 21
+     "impr": 21,
+     "clicks": 3,
+     "cost": 14.48,
+     "conv": 0.0
     },
     {
      "text": "capital one lawsuit",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 4,
+     "cost": 19.63,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -18723,12 +21432,18 @@ window.TERMS = {
     {
      "text": "resurgent capital debt collector",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 3,
+     "cost": 9.7,
+     "conv": 0.0
     },
     {
      "text": "resurgent capital debt collectors",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 1,
+     "cost": 5.11,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -18763,7 +21478,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 34
+     "impr": 34,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -18798,7 +21516,10 @@ window.TERMS = {
     {
      "text": "debt defense lawyer near me",
      "match": "PHRASE",
-     "impr": 34
+     "impr": 34,
+     "clicks": 2,
+     "cost": 22.56,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -18833,7 +21554,10 @@ window.TERMS = {
     {
      "text": "i just received a writ of garnishment",
      "match": "PHRASE",
-     "impr": 34
+     "impr": 34,
+     "clicks": 1,
+     "cost": 3.17,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -18865,7 +21589,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 34
+     "impr": 34,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -18896,7 +21623,10 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 34
+     "impr": 34,
+     "clicks": 6,
+     "cost": 55.82,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -18932,7 +21662,10 @@ window.TERMS = {
     {
      "text": "how to stop wage garnishment",
      "match": "PHRASE",
-     "impr": 34
+     "impr": 34,
+     "clicks": 7,
+     "cost": 53.78,
+     "conv": 1.029
     }
    ],
    "top30": 1,
@@ -18969,12 +21702,18 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 25
+     "impr": 25,
+     "clicks": 4,
+     "cost": 29.72,
+     "conv": 0.0
     },
     {
      "text": "how to stop my check from being garnished",
      "match": "EXACT",
-     "impr": 9
+     "impr": 9,
+     "clicks": 2,
+     "cost": 11.76,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -19010,7 +21749,10 @@ window.TERMS = {
     {
      "text": "how to fight a credit card lawsuit",
      "match": "PHRASE",
-     "impr": 34
+     "impr": 34,
+     "clicks": 6,
+     "cost": 41.75,
+     "conv": 0.999
     }
    ],
    "scope": "active",
@@ -19045,7 +21787,10 @@ window.TERMS = {
     {
      "text": "received summons for debt",
      "match": "EXACT",
-     "impr": 33
+     "impr": 33,
+     "clicks": 2,
+     "cost": 6.03,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -19080,12 +21825,18 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney near me",
      "match": "PHRASE",
-     "impr": 24
+     "impr": 24,
+     "clicks": 4,
+     "cost": 67.15,
+     "conv": 0.0
     },
     {
      "text": "debt defense lawyer near me",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 1,
+     "cost": 11.84,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -19120,12 +21871,18 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 21
+     "impr": 21,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 1,
+     "cost": 2.38,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -19160,12 +21917,18 @@ window.TERMS = {
     {
      "text": "attorney for judgement collection",
      "match": "PHRASE",
-     "impr": 20
+     "impr": 20,
+     "clicks": 1,
+     "cost": 4.94,
+     "conv": 0.0
     },
     {
      "text": "judgement lawyers",
      "match": "EXACT",
-     "impr": 13
+     "impr": 13,
+     "clicks": 1,
+     "cost": 10.65,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -19196,7 +21959,10 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 33
+     "impr": 33,
+     "clicks": 2,
+     "cost": 33.51,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -19232,7 +21998,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 33
+     "impr": 33,
+     "clicks": 3,
+     "cost": 12.32,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -19268,7 +22037,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 33
+     "impr": 33,
+     "clicks": 2,
+     "cost": 10.75,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -19303,7 +22075,10 @@ window.TERMS = {
     {
      "text": "summons for credit card debt",
      "match": "PHRASE",
-     "impr": 33
+     "impr": 33,
+     "clicks": 4,
+     "cost": 30.99,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -19338,7 +22113,10 @@ window.TERMS = {
     {
      "text": "credit card suing me",
      "match": "PHRASE",
-     "impr": 33
+     "impr": 33,
+     "clicks": 2,
+     "cost": 15.73,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -19373,12 +22151,18 @@ window.TERMS = {
     {
      "text": "portfolio recovery debt collector",
      "match": "PHRASE",
-     "impr": 22
+     "impr": 22,
+     "clicks": 2,
+     "cost": 12.17,
+     "conv": 0.0
     },
     {
      "text": "portfolio recovery debt collectors",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -19413,7 +22197,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 32
+     "impr": 32,
+     "clicks": 2,
+     "cost": 11.48,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -19448,7 +22235,10 @@ window.TERMS = {
     {
      "text": "consumer debt defense attorney",
      "match": "PHRASE",
-     "impr": 32
+     "impr": 32,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -19483,7 +22273,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney near me",
      "match": "PHRASE",
-     "impr": 32
+     "impr": 32,
+     "clicks": 1,
+     "cost": 8.43,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -19518,7 +22311,10 @@ window.TERMS = {
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 32
+     "impr": 32,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -19554,7 +22350,10 @@ window.TERMS = {
     {
      "text": "how to write a response to a summons",
      "match": "EXACT",
-     "impr": 32
+     "impr": 32,
+     "clicks": 2,
+     "cost": 10.22,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -19589,12 +22388,18 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 25
+     "impr": 25,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 7
+     "impr": 7,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -19629,12 +22434,18 @@ window.TERMS = {
     {
      "text": "consumer debt defense attorney",
      "match": "PHRASE",
-     "impr": 24
+     "impr": 24,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "debt litigation attorney",
      "match": "PHRASE",
-     "impr": 8
+     "impr": 8,
+     "clicks": 1,
+     "cost": 28.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -19669,12 +22480,18 @@ window.TERMS = {
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 23
+     "impr": 23,
+     "clicks": 1,
+     "cost": 1.63,
+     "conv": 0.0
     },
     {
      "text": "being sued by debt collector",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -19709,12 +22526,18 @@ window.TERMS = {
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 20
+     "impr": 20,
+     "clicks": 1,
+     "cost": 28.56,
+     "conv": 0.0
     },
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 3,
+     "cost": 14.89,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -19749,7 +22572,10 @@ window.TERMS = {
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 32
+     "impr": 32,
+     "clicks": 4,
+     "cost": 20.64,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -19780,7 +22606,10 @@ window.TERMS = {
     {
      "text": "i just received a writ of garnishment",
      "match": "PHRASE",
-     "impr": 32
+     "impr": 32,
+     "clicks": 2,
+     "cost": 13.04,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -19811,7 +22640,10 @@ window.TERMS = {
     {
      "text": "collections lawyer",
      "match": "PHRASE",
-     "impr": 32
+     "impr": 32,
+     "clicks": 1,
+     "cost": 2.73,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -19842,7 +22674,10 @@ window.TERMS = {
     {
      "text": "collection defense attorney",
      "match": "PHRASE",
-     "impr": 32
+     "impr": 32,
+     "clicks": 4,
+     "cost": 23.2,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -19873,7 +22708,10 @@ window.TERMS = {
     {
      "text": "collection defense lawyer",
      "match": "PHRASE",
-     "impr": 32
+     "impr": 32,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -19904,7 +22742,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 32
+     "impr": 32,
+     "clicks": 2,
+     "cost": 9.56,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -19935,12 +22776,18 @@ window.TERMS = {
     {
      "text": "judgement collection attorney near me",
      "match": "PHRASE",
-     "impr": 22
+     "impr": 22,
+     "clicks": 1,
+     "cost": 9.6,
+     "conv": 0.0
     },
     {
      "text": "judgement attorney near me",
      "match": "EXACT",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -19971,12 +22818,18 @@ window.TERMS = {
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 21
+     "impr": 21,
+     "clicks": 1,
+     "cost": 6.79,
+     "conv": 0.0
     },
     {
      "text": "claim of exemption",
      "match": "EXACT",
-     "impr": 11
+     "impr": 11,
+     "clicks": 2,
+     "cost": 15.44,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -20007,12 +22860,18 @@ window.TERMS = {
     {
      "text": "how to remove wage garnishment",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 1,
+     "cost": 5.97,
+     "conv": 0.0
     },
     {
      "text": "how to fight a garnishment",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 1,
@@ -20048,12 +22907,18 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 2,
+     "cost": 16.04,
+     "conv": 0.0
     },
     {
      "text": "help with garnishment",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 2,
+     "cost": 9.08,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -20089,12 +22954,18 @@ window.TERMS = {
     {
      "text": "stop wage garnishment attorney",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 4,
+     "cost": 60.73,
+     "conv": 0.499
     },
     {
      "text": "garnish wages attorney",
      "match": "EXACT",
-     "impr": 16
+     "impr": 16,
+     "clicks": 1,
+     "cost": 6.84,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -20129,7 +23000,10 @@ window.TERMS = {
     {
      "text": "portfolio recovery debt collector",
      "match": "PHRASE",
-     "impr": 32
+     "impr": 32,
+     "clicks": 3,
+     "cost": 16.38,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -20164,7 +23038,10 @@ window.TERMS = {
     {
      "text": "how to stop debt collector calls",
      "match": "PHRASE",
-     "impr": 32
+     "impr": 32,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -20199,7 +23076,10 @@ window.TERMS = {
     {
      "text": "credo law",
      "match": "EXACT",
-     "impr": 32
+     "impr": 32,
+     "clicks": 13,
+     "cost": 34.15,
+     "conv": 1.999
     }
    ],
    "scope": "active",
@@ -20230,7 +23110,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 31
+     "impr": 31,
+     "clicks": 1,
+     "cost": 1.12,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -20265,7 +23148,10 @@ window.TERMS = {
     {
      "text": "i ve been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 31
+     "impr": 31,
+     "clicks": 2,
+     "cost": 6.68,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -20300,7 +23186,10 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 31
+     "impr": 31,
+     "clicks": 4,
+     "cost": 35.1,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -20335,7 +23224,10 @@ window.TERMS = {
     {
      "text": "received summons for debt",
      "match": "EXACT",
-     "impr": 31
+     "impr": 31,
+     "clicks": 2,
+     "cost": 17.19,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -20370,12 +23262,18 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 23
+     "impr": 23,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "collection defense attorney",
      "match": "PHRASE",
-     "impr": 8
+     "impr": 8,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -20410,12 +23308,18 @@ window.TERMS = {
     {
      "text": "debt defense lawyer",
      "match": "EXACT",
-     "impr": 20
+     "impr": 20,
+     "clicks": 1,
+     "cost": 14.68,
+     "conv": 0.0
     },
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -20450,12 +23354,18 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney near me",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 1,
+     "cost": 9.39,
+     "conv": 0.0
     },
     {
      "text": "debt defense lawyer near me",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 1,
+     "cost": 5.39,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -20490,12 +23400,18 @@ window.TERMS = {
     {
      "text": "received summons for debt",
      "match": "EXACT",
-     "impr": 17
+     "impr": 17,
+     "clicks": 1,
+     "cost": 3.45,
+     "conv": 1.0
     },
     {
      "text": "got served papers for debt",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -20530,12 +23446,18 @@ window.TERMS = {
     {
      "text": "how to fight debt collectors",
      "match": "EXACT",
-     "impr": 16
+     "impr": 16,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -20570,17 +23492,26 @@ window.TERMS = {
     {
      "text": "debt defense lawyer near me",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "lawyer for debt collection lawsuit near me",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "debt lawsuit attorney near me",
      "match": "PHRASE",
-     "impr": 7
+     "impr": 7,
+     "clicks": 1,
+     "cost": 24.43,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -20615,7 +23546,10 @@ window.TERMS = {
     {
      "text": "garnishment lawyer",
      "match": "PHRASE",
-     "impr": 31
+     "impr": 31,
+     "clicks": 5,
+     "cost": 31.63,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -20646,7 +23580,10 @@ window.TERMS = {
     {
      "text": "debt collection harassment attorney",
      "match": "PHRASE",
-     "impr": 31
+     "impr": 31,
+     "clicks": 5,
+     "cost": 44.5,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -20677,12 +23614,18 @@ window.TERMS = {
     {
      "text": "debt lawyers",
      "match": "EXACT",
-     "impr": 21
+     "impr": 21,
+     "clicks": 2,
+     "cost": 9.48,
+     "conv": 0.0
     },
     {
      "text": "debt attorney",
      "match": "EXACT",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -20712,12 +23655,18 @@ window.TERMS = {
     {
      "text": "lawyers for debt collection near me",
      "match": "PHRASE",
-     "impr": 20
+     "impr": 20,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "debt collection lawyers near me",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -20748,7 +23697,10 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 31
+     "impr": 31,
+     "clicks": 1,
+     "cost": 8.43,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -20784,7 +23736,10 @@ window.TERMS = {
     {
      "text": "garnish wages attorney",
      "match": "EXACT",
-     "impr": 31
+     "impr": 31,
+     "clicks": 3,
+     "cost": 43.21,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -20819,7 +23774,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 31
+     "impr": 31,
+     "clicks": 2,
+     "cost": 7.47,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -20854,7 +23812,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 31
+     "impr": 31,
+     "clicks": 2,
+     "cost": 7.12,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -20890,12 +23851,18 @@ window.TERMS = {
     {
      "text": "can a garnishment be stopped",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 1,
+     "cost": 2.22,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -20930,7 +23897,10 @@ window.TERMS = {
     {
      "text": "velocity investments debt collector",
      "match": "PHRASE",
-     "impr": 31
+     "impr": 31,
+     "clicks": 5,
+     "cost": 20.24,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -20965,12 +23935,18 @@ window.TERMS = {
     {
      "text": "attorney for credit card lawsuit",
      "match": "EXACT",
-     "impr": 22
+     "impr": 22,
+     "clicks": 2,
+     "cost": 37.94,
+     "conv": 1.0
     },
     {
      "text": "attorney for credit card debt lawsuit",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -21005,12 +23981,18 @@ window.TERMS = {
     {
      "text": "settling debt with creditors",
      "match": "PHRASE",
-     "impr": 22
+     "impr": 22,
+     "clicks": 1,
+     "cost": 18.55,
+     "conv": 0.0
     },
     {
      "text": "negotiate credit debt",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -21040,7 +24022,10 @@ window.TERMS = {
     {
      "text": "how to answer a lawsuit for debt collection",
      "match": "PHRASE",
-     "impr": 30
+     "impr": 30,
+     "clicks": 2,
+     "cost": 10.03,
+     "conv": 4.0
     }
    ],
    "scope": "active",
@@ -21075,12 +24060,18 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 3,
+     "cost": 22.34,
+     "conv": 1.0
     },
     {
      "text": "debt lawsuit attorney near me",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 2,
+     "cost": 28.3,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -21115,7 +24106,10 @@ window.TERMS = {
     {
      "text": "garnishment",
      "match": "PHRASE",
-     "impr": 30
+     "impr": 30,
+     "clicks": 1,
+     "cost": 2.38,
+     "conv": 0.0
     }
    ],
    "top30": 0.727,
@@ -21148,7 +24142,10 @@ window.TERMS = {
     {
      "text": "garnishment",
      "match": "PHRASE",
-     "impr": 30
+     "impr": 30,
+     "clicks": 1,
+     "cost": 10.82,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -21180,7 +24177,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 30
+     "impr": 30,
+     "clicks": 4,
+     "cost": 32.84,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -21211,12 +24211,18 @@ window.TERMS = {
     {
      "text": "debt lawyer",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 6,
+     "cost": 51.18,
+     "conv": 2.0
     },
     {
      "text": "debt lawyers",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 1,
+     "cost": 17.4,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -21247,7 +24253,10 @@ window.TERMS = {
     {
      "text": "how to fight a garnishment",
      "match": "PHRASE",
-     "impr": 30
+     "impr": 30,
+     "clicks": 6,
+     "cost": 31.41,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -21282,7 +24291,10 @@ window.TERMS = {
     {
      "text": "garnish wages attorney",
      "match": "EXACT",
-     "impr": 30
+     "impr": 30,
+     "clicks": 3,
+     "cost": 23.75,
+     "conv": 3.333
     }
    ],
    "top30": 1,
@@ -21318,7 +24330,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 30
+     "impr": 30,
+     "clicks": 2,
+     "cost": 8.62,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -21354,7 +24369,10 @@ window.TERMS = {
     {
      "text": "capital one credit card lawsuit",
      "match": "PHRASE",
-     "impr": 30
+     "impr": 30,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -21389,7 +24407,10 @@ window.TERMS = {
     {
      "text": "what happens when debt collector takes you to court",
      "match": "PHRASE",
-     "impr": 29
+     "impr": 29,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -21424,7 +24445,10 @@ window.TERMS = {
     {
      "text": "how to respond to a debt collector lawsuit",
      "match": "PHRASE",
-     "impr": 29
+     "impr": 29,
+     "clicks": 3,
+     "cost": 24.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -21459,7 +24483,10 @@ window.TERMS = {
     {
      "text": "being sued by lvnv funding llc",
      "match": "PHRASE",
-     "impr": 29
+     "impr": 29,
+     "clicks": 2,
+     "cost": 10.81,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -21494,12 +24521,18 @@ window.TERMS = {
     {
      "text": "what kind of lawyer do i need for debt collection",
      "match": "EXACT",
-     "impr": 17
+     "impr": 17,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "debt lawsuit attorney near me",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 1,
+     "cost": 22.27,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -21534,17 +24567,26 @@ window.TERMS = {
     {
      "text": "debt defense lawyer",
      "match": "EXACT",
-     "impr": 11
+     "impr": 11,
+     "clicks": 1,
+     "cost": 8.73,
+     "conv": 0.0
     },
     {
      "text": "debt defense attorney",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 9
+     "impr": 9,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -21579,7 +24621,10 @@ window.TERMS = {
     {
      "text": "bank garnishment",
      "match": "PHRASE",
-     "impr": 29
+     "impr": 29,
+     "clicks": 1,
+     "cost": 19.61,
+     "conv": 1.0
     }
    ],
    "top30": 0.4,
@@ -21611,7 +24656,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 29
+     "impr": 29,
+     "clicks": 2,
+     "cost": 7.82,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -21642,7 +24690,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 29
+     "impr": 29,
+     "clicks": 1,
+     "cost": 1.47,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -21673,7 +24724,10 @@ window.TERMS = {
     {
      "text": "defense against debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 29
+     "impr": 29,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -21704,12 +24758,18 @@ window.TERMS = {
     {
      "text": "stop wage garnishment immediately",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "paycheck garnishment",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.9,
@@ -21741,17 +24801,26 @@ window.TERMS = {
     {
      "text": "collection defense lawyer",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 2,
+     "cost": 20.44,
+     "conv": 0.0
     },
     {
      "text": "debt collector lawyer",
      "match": "EXACT",
-     "impr": 9
+     "impr": 9,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "collection defense attorney",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 1,
+     "cost": 6.11,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -21782,12 +24851,18 @@ window.TERMS = {
     {
      "text": "how to fight a garnishment",
      "match": "PHRASE",
-     "impr": 20
+     "impr": 20,
+     "clicks": 4,
+     "cost": 32.77,
+     "conv": 1.0
     },
     {
      "text": "can a garnishment be stopped",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 2,
+     "cost": 16.9,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -21822,12 +24897,18 @@ window.TERMS = {
     {
      "text": "how to get out of wage garnishment",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "how to get a garnishment removed",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 1,
@@ -21863,7 +24944,10 @@ window.TERMS = {
     {
      "text": "cavalry spv debt collector",
      "match": "PHRASE",
-     "impr": 29
+     "impr": 29,
+     "clicks": 2,
+     "cost": 13.18,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -21898,7 +24982,10 @@ window.TERMS = {
     {
      "text": "sue debt collector for harassment",
      "match": "PHRASE",
-     "impr": 29
+     "impr": 29,
+     "clicks": 5,
+     "cost": 54.29,
+     "conv": 2.0
     }
    ],
    "scope": "active",
@@ -21933,12 +25020,18 @@ window.TERMS = {
     {
      "text": "sue a debt collector",
      "match": "PHRASE",
-     "impr": 20
+     "impr": 20,
+     "clicks": 3,
+     "cost": 17.63,
+     "conv": 1.0
     },
     {
      "text": "how to sue a collection agency",
      "match": "EXACT",
-     "impr": 9
+     "impr": 9,
+     "clicks": 2,
+     "cost": 5.18,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -21973,7 +25066,10 @@ window.TERMS = {
     {
      "text": "debt collector threatening lawsuit",
      "match": "PHRASE",
-     "impr": 28
+     "impr": 28,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -22008,7 +25104,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 28
+     "impr": 28,
+     "clicks": 3,
+     "cost": 12.84,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -22043,7 +25142,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 28
+     "impr": 28,
+     "clicks": 3,
+     "cost": 29.94,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -22078,7 +25180,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 28
+     "impr": 28,
+     "clicks": 2,
+     "cost": 17.86,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -22112,7 +25217,10 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 28
+     "impr": 28,
+     "clicks": 4,
+     "cost": 77.98,
+     "conv": 2.0
     }
    ],
    "scope": "active",
@@ -22147,12 +25255,18 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 20
+     "impr": 20,
+     "clicks": 3,
+     "cost": 20.57,
+     "conv": 1.0
     },
     {
      "text": "debt defense lawyer",
      "match": "EXACT",
-     "impr": 8
+     "impr": 8,
+     "clicks": 1,
+     "cost": 10.74,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -22187,12 +25301,18 @@ window.TERMS = {
     {
      "text": "received summons for debt",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "summons for debt collection",
      "match": "EXACT",
-     "impr": 10
+     "impr": 10,
+     "clicks": 2,
+     "cost": 4.23,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -22227,12 +25347,18 @@ window.TERMS = {
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "lawyer for debt lawsuit",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 4,
+     "cost": 26.48,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -22267,7 +25393,10 @@ window.TERMS = {
     {
      "text": "defense against debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 28
+     "impr": 28,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -22298,7 +25427,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 28
+     "impr": 28,
+     "clicks": 4,
+     "cost": 12.73,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -22329,12 +25461,18 @@ window.TERMS = {
     {
      "text": "defense against debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -22365,12 +25503,18 @@ window.TERMS = {
     {
      "text": "stop wage garnishment immediately",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 2,
+     "cost": 8.02,
+     "conv": 0.0
     },
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 1,
+     "cost": 6.53,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -22401,12 +25545,18 @@ window.TERMS = {
     {
      "text": "i just received a writ of garnishment",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 1,
+     "cost": 1.57,
+     "conv": 0.0
     },
     {
      "text": "writ of garnishment",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 1,
+     "cost": 6.76,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -22437,7 +25587,10 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 28
+     "impr": 28,
+     "clicks": 2,
+     "cost": 10.7,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -22473,7 +25626,10 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 28
+     "impr": 28,
+     "clicks": 2,
+     "cost": 10.29,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -22508,7 +25664,10 @@ window.TERMS = {
     {
      "text": "help with garnishment",
      "match": "PHRASE",
-     "impr": 28
+     "impr": 28,
+     "clicks": 3,
+     "cost": 8.65,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -22544,7 +25703,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 28
+     "impr": 28,
+     "clicks": 5,
+     "cost": 27.72,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -22580,7 +25742,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 28
+     "impr": 28,
+     "clicks": 1,
+     "cost": 0.01,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -22615,7 +25780,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 28
+     "impr": 28,
+     "clicks": 3,
+     "cost": 15.9,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -22651,12 +25819,18 @@ window.TERMS = {
     {
      "text": "how to stop wage garnishments",
      "match": "EXACT",
-     "impr": 15
+     "impr": 15,
+     "clicks": 2,
+     "cost": 16.09,
+     "conv": 1.0
     },
     {
      "text": "how to stop wage garnishment",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 2,
+     "cost": 18.55,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -22692,7 +25866,10 @@ window.TERMS = {
     {
      "text": "lawsuit by credit card company",
      "match": "PHRASE",
-     "impr": 28
+     "impr": 28,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -22727,12 +25904,18 @@ window.TERMS = {
     {
      "text": "portfolio recovery debt collectors",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "portfolio recovery debt collector",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -22767,7 +25950,10 @@ window.TERMS = {
     {
      "text": "sue debt collector for harassment",
      "match": "PHRASE",
-     "impr": 28
+     "impr": 28,
+     "clicks": 4,
+     "cost": 33.57,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -22802,12 +25988,18 @@ window.TERMS = {
     {
      "text": "harassed by debt collectors",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "bill collector harassment",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 3,
+     "cost": 16.4,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -22842,7 +26034,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 27
+     "impr": 27,
+     "clicks": 3,
+     "cost": 9.37,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -22877,12 +26072,18 @@ window.TERMS = {
     {
      "text": "i ve been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 1,
+     "cost": 3.32,
+     "conv": 0.0
     },
     {
      "text": "being sued by debt collector",
      "match": "EXACT",
-     "impr": 9
+     "impr": 9,
+     "clicks": 1,
+     "cost": 2.39,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -22917,12 +26118,18 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -22957,12 +26164,18 @@ window.TERMS = {
     {
      "text": "how to answer a debt summons",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 1,
+     "cost": 4.54,
+     "conv": 0.0
     },
     {
      "text": "how to answer a court summons debt collection",
      "match": "EXACT",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -22997,12 +26210,18 @@ window.TERMS = {
     {
      "text": "collection defense",
      "match": "EXACT",
-     "impr": 14
+     "impr": 14,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "debt lawsuit defense",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -23036,17 +26255,26 @@ window.TERMS = {
     {
      "text": "i ve been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "im being sued for a debt what do i do",
      "match": "EXACT",
-     "impr": 8
+     "impr": 8,
+     "clicks": 2,
+     "cost": 11.21,
+     "conv": 1.0
     },
     {
      "text": "i have been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 7
+     "impr": 7,
+     "clicks": 1,
+     "cost": 6.89,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -23081,7 +26309,10 @@ window.TERMS = {
     {
      "text": "garnishment",
      "match": "PHRASE",
-     "impr": 27
+     "impr": 27,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -23113,7 +26344,10 @@ window.TERMS = {
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 27
+     "impr": 27,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.526,
@@ -23145,7 +26379,10 @@ window.TERMS = {
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 27
+     "impr": 27,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -23176,7 +26413,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 27
+     "impr": 27,
+     "clicks": 5,
+     "cost": 34.08,
+     "conv": 1.996
     }
    ],
    "scope": "active",
@@ -23207,7 +26447,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 27
+     "impr": 27,
+     "clicks": 1,
+     "cost": 0.11,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -23238,12 +26481,18 @@ window.TERMS = {
     {
      "text": "defense against debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -23274,7 +26523,10 @@ window.TERMS = {
     {
      "text": "help with garnishment",
      "match": "PHRASE",
-     "impr": 27
+     "impr": 27,
+     "clicks": 1,
+     "cost": 1.34,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -23310,7 +26562,10 @@ window.TERMS = {
     {
      "text": "how to get out of wage garnishment",
      "match": "PHRASE",
-     "impr": 27
+     "impr": 27,
+     "clicks": 4,
+     "cost": 26.34,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -23345,7 +26600,10 @@ window.TERMS = {
     {
      "text": "how to remove wage garnishment",
      "match": "PHRASE",
-     "impr": 27
+     "impr": 27,
+     "clicks": 4,
+     "cost": 42.13,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -23381,7 +26639,10 @@ window.TERMS = {
     {
      "text": "can a garnishment be stopped",
      "match": "PHRASE",
-     "impr": 27
+     "impr": 27,
+     "clicks": 2,
+     "cost": 7.11,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -23416,7 +26677,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 27
+     "impr": 27,
+     "clicks": 1,
+     "cost": 4.32,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -23451,7 +26715,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 27
+     "impr": 27,
+     "clicks": 2,
+     "cost": 6.25,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -23487,7 +26754,10 @@ window.TERMS = {
     {
      "text": "how to get out of garnished wages",
      "match": "PHRASE",
-     "impr": 27
+     "impr": 27,
+     "clicks": 7,
+     "cost": 27.56,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -23522,12 +26792,18 @@ window.TERMS = {
     {
      "text": "can a garnishment be stopped",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 1,
+     "cost": 9.08,
+     "conv": 0.0
     },
     {
      "text": "stop wage garnishment",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.833,
@@ -23563,12 +26839,18 @@ window.TERMS = {
     {
      "text": "how to stop a garnishment",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 1,
+     "cost": 4.25,
+     "conv": 0.0
     },
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 3.28,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -23604,12 +26886,18 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "how to fight a garnishment",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 1,
+     "cost": 3.59,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -23644,7 +26932,10 @@ window.TERMS = {
     {
      "text": "lvnv funding debt collector",
      "match": "PHRASE",
-     "impr": 27
+     "impr": 27,
+     "clicks": 1,
+     "cost": 5.98,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -23679,7 +26970,10 @@ window.TERMS = {
     {
      "text": "cavalry spv debt collector",
      "match": "PHRASE",
-     "impr": 27
+     "impr": 27,
+     "clicks": 1,
+     "cost": 3.43,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -23714,12 +27008,18 @@ window.TERMS = {
     {
      "text": "resurgent capital debt collectors",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 1,
+     "cost": 5.71,
+     "conv": 0.0
     },
     {
      "text": "resurgent capital debt collector",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -23754,12 +27054,18 @@ window.TERMS = {
     {
      "text": "capital one debt collector",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 1,
+     "cost": 4.44,
+     "conv": 0.0
     },
     {
      "text": "capital one debt collectors",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -23794,12 +27100,18 @@ window.TERMS = {
     {
      "text": "portfolio recovery debt collectors",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 1,
+     "cost": 5.94,
+     "conv": 0.0
     },
     {
      "text": "portfolio recovery debt collector",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 2,
+     "cost": 14.24,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -23834,7 +27146,10 @@ window.TERMS = {
     {
      "text": "debt collection harassment attorney",
      "match": "PHRASE",
-     "impr": 27
+     "impr": 27,
+     "clicks": 4,
+     "cost": 43.26,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -23869,7 +27184,10 @@ window.TERMS = {
     {
      "text": "sue a debt collector",
      "match": "PHRASE",
-     "impr": 27
+     "impr": 27,
+     "clicks": 1,
+     "cost": 6.39,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -23904,7 +27222,10 @@ window.TERMS = {
     {
      "text": "sue debt collector for harassment",
      "match": "PHRASE",
-     "impr": 27
+     "impr": 27,
+     "clicks": 1,
+     "cost": 8.37,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -23939,7 +27260,10 @@ window.TERMS = {
     {
      "text": "sue debt collector for harassment",
      "match": "PHRASE",
-     "impr": 27
+     "impr": 27,
+     "clicks": 2,
+     "cost": 6.48,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -23974,7 +27298,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 26
+     "impr": 26,
+     "clicks": 1,
+     "cost": 4.54,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -24008,7 +27335,10 @@ window.TERMS = {
     {
      "text": "i ve been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 26
+     "impr": 26,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -24043,7 +27373,10 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 26
+     "impr": 26,
+     "clicks": 3,
+     "cost": 36.91,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -24078,7 +27411,10 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 26
+     "impr": 26,
+     "clicks": 1,
+     "cost": 6.13,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -24113,12 +27449,18 @@ window.TERMS = {
     {
      "text": "debt litigation attorney",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 2,
+     "cost": 29.05,
+     "conv": 0.0
     },
     {
      "text": "credit debt lawyers",
      "match": "EXACT",
-     "impr": 7
+     "impr": 7,
+     "clicks": 1,
+     "cost": 6.17,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -24153,12 +27495,18 @@ window.TERMS = {
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 1,
+     "cost": 8.57,
+     "conv": 0.0
     },
     {
      "text": "being sued by debt collector",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -24193,12 +27541,18 @@ window.TERMS = {
     {
      "text": "i ve been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "im being sued for a debt what do i do",
      "match": "EXACT",
-     "impr": 10
+     "impr": 10,
+     "clicks": 2,
+     "cost": 8.19,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -24233,12 +27587,18 @@ window.TERMS = {
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 1,
+     "cost": 20.67,
+     "conv": 0.0
     },
     {
      "text": "debt litigation attorney",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -24274,7 +27634,10 @@ window.TERMS = {
     {
      "text": "wage garnishment lawyer",
      "match": "PHRASE",
-     "impr": 26
+     "impr": 26,
+     "clicks": 5,
+     "cost": 34.76,
+     "conv": 0.0
     }
    ],
    "top30": 1,
@@ -24306,7 +27669,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 26
+     "impr": 26,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -24337,7 +27703,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 26
+     "impr": 26,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -24368,12 +27737,18 @@ window.TERMS = {
     {
      "text": "debt collection attorney near me",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 2,
+     "cost": 15.3,
+     "conv": 0.0
     },
     {
      "text": "debt collection defense lawyer near me",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 5,
+     "cost": 37.88,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -24404,7 +27779,10 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 26
+     "impr": 26,
+     "clicks": 4,
+     "cost": 28.09,
+     "conv": 1.5
     }
    ],
    "scope": "active",
@@ -24440,7 +27818,10 @@ window.TERMS = {
     {
      "text": "garnish wages attorney",
      "match": "EXACT",
-     "impr": 26
+     "impr": 26,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -24475,12 +27856,18 @@ window.TERMS = {
     {
      "text": "can a garnishment be stopped",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "how to stop wage garnishments",
      "match": "EXACT",
-     "impr": 9
+     "impr": 9,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.9,
@@ -24516,12 +27903,18 @@ window.TERMS = {
     {
      "text": "how to stop a garnishment",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 2,
+     "cost": 14.46,
+     "conv": 0.0
     },
     {
      "text": "how to fight a garnishment",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -24557,12 +27950,18 @@ window.TERMS = {
     {
      "text": "midland credit management sued me",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 1,
+     "cost": 2.38,
+     "conv": 1.0
     },
     {
      "text": "midland credit management lawsuit",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -24598,7 +27997,10 @@ window.TERMS = {
     {
      "text": "sued by collection agency",
      "match": "PHRASE",
-     "impr": 25
+     "impr": 25,
+     "clicks": 1,
+     "cost": 3.91,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -24633,7 +28035,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 25
+     "impr": 25,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -24668,7 +28073,10 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "EXACT",
-     "impr": 25
+     "impr": 25,
+     "clicks": 2,
+     "cost": 19.46,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -24703,7 +28111,10 @@ window.TERMS = {
     {
      "text": "how to respond to a debt collector lawsuit",
      "match": "PHRASE",
-     "impr": 25
+     "impr": 25,
+     "clicks": 3,
+     "cost": 43.97,
+     "conv": 0.999
     }
    ],
    "scope": "active",
@@ -24738,7 +28149,10 @@ window.TERMS = {
     {
      "text": "how to respond to a debt collector lawsuit",
      "match": "PHRASE",
-     "impr": 25
+     "impr": 25,
+     "clicks": 3,
+     "cost": 24.55,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -24773,12 +28187,18 @@ window.TERMS = {
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 1,
+     "cost": 5.95,
+     "conv": 0.0
     },
     {
      "text": "i ve been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 7
+     "impr": 7,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -24813,12 +28233,18 @@ window.TERMS = {
     {
      "text": "being sued by debt collector",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 8
+     "impr": 8,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -24853,12 +28279,18 @@ window.TERMS = {
     {
      "text": "consumer debt defense attorney",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 1,
+     "cost": 22.19,
+     "conv": 0.0
     },
     {
      "text": "debt lawsuit attorney near me",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 2,
+     "cost": 18.35,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -24893,12 +28325,18 @@ window.TERMS = {
     {
      "text": "attorney for debt lawsuit",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 1,
+     "cost": 6.63,
+     "conv": 0.0
     },
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -24933,17 +28371,26 @@ window.TERMS = {
     {
      "text": "i have been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "lawsuit dismissed",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "being sued by debt collector",
      "match": "PHRASE",
-     "impr": 7
+     "impr": 7,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -24978,17 +28425,26 @@ window.TERMS = {
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "attorney for debt lawsuit",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "lawyer for debt lawsuit",
      "match": "PHRASE",
-     "impr": 7
+     "impr": 7,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -25024,7 +28480,10 @@ window.TERMS = {
     {
      "text": "attorney collection agency",
      "match": "PHRASE",
-     "impr": 25
+     "impr": 25,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -25057,7 +28516,10 @@ window.TERMS = {
     {
      "text": "collection defense lawyer",
      "match": "PHRASE",
-     "impr": 25
+     "impr": 25,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -25089,7 +28551,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 25
+     "impr": 25,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -25120,7 +28585,10 @@ window.TERMS = {
     {
      "text": "law firm for debt collection",
      "match": "PHRASE",
-     "impr": 25
+     "impr": 25,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -25151,7 +28619,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 25
+     "impr": 25,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -25182,7 +28653,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 25
+     "impr": 25,
+     "clicks": 2,
+     "cost": 4.47,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -25213,7 +28687,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 25
+     "impr": 25,
+     "clicks": 3,
+     "cost": 7.9,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -25244,7 +28721,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 25
+     "impr": 25,
+     "clicks": 2,
+     "cost": 6.22,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -25275,12 +28755,18 @@ window.TERMS = {
     {
      "text": "collection attorney",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "collection defense lawyer",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -25311,7 +28797,10 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 25
+     "impr": 25,
+     "clicks": 3,
+     "cost": 16.77,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -25347,7 +28836,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 25
+     "impr": 25,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -25383,7 +28875,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 25
+     "impr": 25,
+     "clicks": 8,
+     "cost": 134.44,
+     "conv": 2.0
     }
    ],
    "scope": "active",
@@ -25418,7 +28913,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 25
+     "impr": 25,
+     "clicks": 2,
+     "cost": 12.7,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -25453,12 +28951,18 @@ window.TERMS = {
     {
      "text": "how can i stop my wages from being garnished",
      "match": "EXACT",
-     "impr": 16
+     "impr": 16,
+     "clicks": 5,
+     "cost": 24.88,
+     "conv": 0.333
     },
     {
      "text": "how to stop wage garnishments",
      "match": "EXACT",
-     "impr": 9
+     "impr": 9,
+     "clicks": 1,
+     "cost": 5.78,
+     "conv": 0.0
     }
    ],
    "top30": 0.933,
@@ -25495,7 +28999,10 @@ window.TERMS = {
     {
      "text": "how to fight a credit card lawsuit",
      "match": "PHRASE",
-     "impr": 25
+     "impr": 25,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -25530,7 +29037,10 @@ window.TERMS = {
     {
      "text": "lvnv funding debt collector",
      "match": "PHRASE",
-     "impr": 25
+     "impr": 25,
+     "clicks": 2,
+     "cost": 7.97,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -25565,7 +29075,10 @@ window.TERMS = {
     {
      "text": "cavalry spv debt collector",
      "match": "PHRASE",
-     "impr": 25
+     "impr": 25,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -25600,12 +29113,18 @@ window.TERMS = {
     {
      "text": "credit card attorney",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 2,
+     "cost": 4.15,
+     "conv": 0.0
     },
     {
      "text": "credit card attorney near me",
      "match": "PHRASE",
-     "impr": 8
+     "impr": 8,
+     "clicks": 2,
+     "cost": 11.56,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -25640,12 +29159,18 @@ window.TERMS = {
     {
      "text": "resurgent capital debt collectors",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "resurgent capital debt collector",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -25680,12 +29205,18 @@ window.TERMS = {
     {
      "text": "resurgent capital debt collector",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 1,
+     "cost": 5.03,
+     "conv": 0.0
     },
     {
      "text": "resurgent capital debt collectors",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -25720,7 +29251,10 @@ window.TERMS = {
     {
      "text": "debt collector harassment lawsuit",
      "match": "PHRASE",
-     "impr": 25
+     "impr": 25,
+     "clicks": 1,
+     "cost": 4.52,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -25755,7 +29289,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 24
+     "impr": 24,
+     "clicks": 2,
+     "cost": 33.92,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -25790,7 +29327,10 @@ window.TERMS = {
     {
      "text": "lawyer for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 24
+     "impr": 24,
+     "clicks": 1,
+     "cost": 24.99,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -25825,7 +29365,10 @@ window.TERMS = {
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 24
+     "impr": 24,
+     "clicks": 1,
+     "cost": 2.63,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -25860,7 +29403,10 @@ window.TERMS = {
     {
      "text": "lvnv funding llc suing me",
      "match": "PHRASE",
-     "impr": 24
+     "impr": 24,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -25896,7 +29442,10 @@ window.TERMS = {
     {
      "text": "how to respond to a debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 24
+     "impr": 24,
+     "clicks": 3,
+     "cost": 17.39,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -25931,12 +29480,18 @@ window.TERMS = {
     {
      "text": "debt defense attorney",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "consumer debt defense attorney",
      "match": "PHRASE",
-     "impr": 7
+     "impr": 7,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -25970,12 +29525,18 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 17
+     "impr": 17,
+     "clicks": 2,
+     "cost": 12.92,
+     "conv": 0.0
     },
     {
      "text": "credit debt lawyers",
      "match": "EXACT",
-     "impr": 7
+     "impr": 7,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -26010,12 +29571,18 @@ window.TERMS = {
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "i have been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 8
+     "impr": 8,
+     "clicks": 1,
+     "cost": 6.11,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -26051,12 +29618,18 @@ window.TERMS = {
     {
      "text": "collection defense attorney",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 1,
+     "cost": 51.73,
+     "conv": 0.0
     },
     {
      "text": "debt lawsuit defense",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 1,
+     "cost": 4.74,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -26091,12 +29664,18 @@ window.TERMS = {
     {
      "text": "how to fight debt collectors",
      "match": "EXACT",
-     "impr": 14
+     "impr": 14,
+     "clicks": 1,
+     "cost": 8.02,
+     "conv": 0.0
     },
     {
      "text": "how to respond to a debt collector lawsuit",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 3,
+     "cost": 38.22,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -26131,12 +29710,18 @@ window.TERMS = {
     {
      "text": "i got sued by a debt collector",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -26171,12 +29756,18 @@ window.TERMS = {
     {
      "text": "consumer debt defense attorney",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -26211,12 +29802,18 @@ window.TERMS = {
     {
      "text": "debt collection lawsuit defense",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "how to respond to a debt collector lawsuit",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 2,
+     "cost": 5.78,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -26251,7 +29848,10 @@ window.TERMS = {
     {
      "text": "debt attorneys near me",
      "match": "EXACT",
-     "impr": 24
+     "impr": 24,
+     "clicks": 1,
+     "cost": 6.7,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -26282,7 +29882,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 24
+     "impr": 24,
+     "clicks": 1,
+     "cost": 4.06,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -26313,7 +29916,10 @@ window.TERMS = {
     {
      "text": "defense against debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 24
+     "impr": 24,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -26344,12 +29950,18 @@ window.TERMS = {
     {
      "text": "collections attorney",
      "match": "EXACT",
-     "impr": 14
+     "impr": 14,
+     "clicks": 2,
+     "cost": 52.74,
+     "conv": 0.0
     },
     {
      "text": "collection attorney",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 2,
+     "cost": 12.7,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -26380,12 +29992,18 @@ window.TERMS = {
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 1,
+     "cost": 4.48,
+     "conv": 0.0
     },
     {
      "text": "pay garnishment",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.6,
@@ -26417,12 +30035,18 @@ window.TERMS = {
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 3,
+     "cost": 22.65,
+     "conv": 0.0
     },
     {
      "text": "garnishment",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -26453,7 +30077,10 @@ window.TERMS = {
     {
      "text": "how to fight a garnishment",
      "match": "PHRASE",
-     "impr": 24
+     "impr": 24,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -26489,7 +30116,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 24
+     "impr": 24,
+     "clicks": 3,
+     "cost": 38.48,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -26524,7 +30154,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 24
+     "impr": 24,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -26560,7 +30193,10 @@ window.TERMS = {
     {
      "text": "can you stop a garnishment before it starts",
      "match": "PHRASE",
-     "impr": 24
+     "impr": 24,
+     "clicks": 1,
+     "cost": 6.65,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -26596,7 +30232,10 @@ window.TERMS = {
     {
      "text": "credit card suing me",
      "match": "PHRASE",
-     "impr": 24
+     "impr": 24,
+     "clicks": 1,
+     "cost": 3.46,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -26631,7 +30270,10 @@ window.TERMS = {
     {
      "text": "what to do if a credit card company sues you",
      "match": "PHRASE",
-     "impr": 24
+     "impr": 24,
+     "clicks": 2,
+     "cost": 9.59,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -26666,7 +30308,10 @@ window.TERMS = {
     {
      "text": "credit card debt defense",
      "match": "PHRASE",
-     "impr": 24
+     "impr": 24,
+     "clicks": 1,
+     "cost": 4.57,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -26701,12 +30346,18 @@ window.TERMS = {
     {
      "text": "resurgent capital debt collectors",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "resurgent capital debt collector",
      "match": "PHRASE",
-     "impr": 8
+     "impr": 8,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -26741,7 +30392,10 @@ window.TERMS = {
     {
      "text": "sue a debt collector",
      "match": "PHRASE",
-     "impr": 24
+     "impr": 24,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -26776,7 +30430,10 @@ window.TERMS = {
     {
      "text": "fair debt collection practices act attorney",
      "match": "PHRASE",
-     "impr": 24
+     "impr": 24,
+     "clicks": 2,
+     "cost": 20.01,
+     "conv": 1.004
     }
    ],
    "scope": "active",
@@ -26811,7 +30468,10 @@ window.TERMS = {
     {
      "text": "i have been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 23
+     "impr": 23,
+     "clicks": 2,
+     "cost": 7.38,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -26846,7 +30506,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 23
+     "impr": 23,
+     "clicks": 2,
+     "cost": 82.79,
+     "conv": 0.5
     }
    ],
    "scope": "active",
@@ -26881,7 +30544,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 23
+     "impr": 23,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -26916,7 +30582,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 23
+     "impr": 23,
+     "clicks": 2,
+     "cost": 21.51,
+     "conv": 5.0
     }
    ],
    "scope": "active",
@@ -26951,7 +30620,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 23
+     "impr": 23,
+     "clicks": 1,
+     "cost": 8.86,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -26986,7 +30658,10 @@ window.TERMS = {
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 23
+     "impr": 23,
+     "clicks": 1,
+     "cost": 2.63,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -27021,7 +30696,10 @@ window.TERMS = {
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 23
+     "impr": 23,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -27057,7 +30735,10 @@ window.TERMS = {
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 23
+     "impr": 23,
+     "clicks": 1,
+     "cost": 4.51,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -27092,7 +30773,10 @@ window.TERMS = {
     {
      "text": "how to respond to a debt collector lawsuit",
      "match": "PHRASE",
-     "impr": 23
+     "impr": 23,
+     "clicks": 6,
+     "cost": 48.7,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -27127,7 +30811,10 @@ window.TERMS = {
     {
      "text": "being sued by midland credit management",
      "match": "PHRASE",
-     "impr": 23
+     "impr": 23,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -27162,7 +30849,10 @@ window.TERMS = {
     {
      "text": "debt defense lawyer near me",
      "match": "PHRASE",
-     "impr": 23
+     "impr": 23,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -27197,12 +30887,18 @@ window.TERMS = {
     {
      "text": "debt litigation attorney",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 1,
+     "cost": 6.67,
+     "conv": 0.0
     },
     {
      "text": "consumer debt defense attorney",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 1,
+     "cost": 7.44,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -27237,12 +30933,18 @@ window.TERMS = {
     {
      "text": "how to fight debt collectors",
      "match": "EXACT",
-     "impr": 13
+     "impr": 13,
+     "clicks": 2,
+     "cost": 5.21,
+     "conv": 0.0
     },
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -27277,12 +30979,18 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "attorney for debt collection lawsuit",
      "match": "EXACT",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 8.55,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -27317,7 +31025,10 @@ window.TERMS = {
     {
      "text": "paycheck garnishment",
      "match": "PHRASE",
-     "impr": 23
+     "impr": 23,
+     "clicks": 2,
+     "cost": 14.55,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -27349,7 +31060,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 23
+     "impr": 23,
+     "clicks": 1,
+     "cost": 6.67,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -27380,7 +31094,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 23
+     "impr": 23,
+     "clicks": 1,
+     "cost": 0.4,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -27411,7 +31128,10 @@ window.TERMS = {
     {
      "text": "collection lawyers near me",
      "match": "PHRASE",
-     "impr": 23
+     "impr": 23,
+     "clicks": 1,
+     "cost": 11.46,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -27442,7 +31162,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 23
+     "impr": 23,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -27473,7 +31196,10 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 23
+     "impr": 23,
+     "clicks": 4,
+     "cost": 14.93,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -27509,7 +31235,10 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 23
+     "impr": 23,
+     "clicks": 4,
+     "cost": 45.18,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -27545,7 +31274,10 @@ window.TERMS = {
     {
      "text": "help with garnishment",
      "match": "PHRASE",
-     "impr": 23
+     "impr": 23,
+     "clicks": 2,
+     "cost": 12.89,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -27581,7 +31313,10 @@ window.TERMS = {
     {
      "text": "garnish wages attorney",
      "match": "EXACT",
-     "impr": 23
+     "impr": 23,
+     "clicks": 2,
+     "cost": 15.28,
+     "conv": 0.5
     }
    ],
    "scope": "active",
@@ -27616,7 +31351,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 23
+     "impr": 23,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -27650,12 +31388,18 @@ window.TERMS = {
     {
      "text": "how to fight a garnishment",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 3,
+     "cost": 22.86,
+     "conv": 0.0
     },
     {
      "text": "how to stop a garnishment",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 1,
+     "cost": 11.01,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -27690,12 +31434,18 @@ window.TERMS = {
     {
      "text": "garnishment defense",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "help with garnishment",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -27730,7 +31480,10 @@ window.TERMS = {
     {
      "text": "credit card attorney",
      "match": "PHRASE",
-     "impr": 23
+     "impr": 23,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -27765,7 +31518,10 @@ window.TERMS = {
     {
      "text": "credit card debt lawyers near me",
      "match": "PHRASE",
-     "impr": 23
+     "impr": 23,
+     "clicks": 1,
+     "cost": 10.3,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -27800,12 +31556,18 @@ window.TERMS = {
     {
      "text": "credit card suing me",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 4,
+     "cost": 29.71,
+     "conv": 0.0
     },
     {
      "text": "lawsuit by credit card company",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 1,
+     "cost": 7.57,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -27840,12 +31602,18 @@ window.TERMS = {
     {
      "text": "im being sued by a credit card company",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 2,
+     "cost": 9.78,
+     "conv": 0.0
     },
     {
      "text": "lawsuit by credit card company",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 1,
+     "cost": 3.43,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -27880,12 +31648,18 @@ window.TERMS = {
     {
      "text": "lawyer for credit card lawsuit near me",
      "match": "EXACT",
-     "impr": 14
+     "impr": 14,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "credit card debt lawyers near me",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 1,
+     "cost": 5.71,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -27920,7 +31694,10 @@ window.TERMS = {
     {
      "text": "how to stop debt collector calls",
      "match": "PHRASE",
-     "impr": 23
+     "impr": 23,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -27955,7 +31732,10 @@ window.TERMS = {
     {
      "text": "debt collector harassment lawsuit",
      "match": "PHRASE",
-     "impr": 23
+     "impr": 23,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -27990,7 +31770,10 @@ window.TERMS = {
     {
      "text": "collection defense attorney",
      "match": "PHRASE",
-     "impr": 22
+     "impr": 22,
+     "clicks": 3,
+     "cost": 43.45,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -28025,7 +31808,10 @@ window.TERMS = {
     {
      "text": "i have been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 22
+     "impr": 22,
+     "clicks": 2,
+     "cost": 10.26,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -28060,7 +31846,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 22
+     "impr": 22,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -28095,7 +31884,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 22
+     "impr": 22,
+     "clicks": 1,
+     "cost": 13.14,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -28130,7 +31922,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 22
+     "impr": 22,
+     "clicks": 2,
+     "cost": 35.01,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -28165,7 +31960,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 22
+     "impr": 22,
+     "clicks": 4,
+     "cost": 35.07,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -28200,7 +31998,10 @@ window.TERMS = {
     {
      "text": "how to respond to a debt collector lawsuit",
      "match": "PHRASE",
-     "impr": 22
+     "impr": 22,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -28235,7 +32036,10 @@ window.TERMS = {
     {
      "text": "lvnv funding suing me",
      "match": "PHRASE",
-     "impr": 22
+     "impr": 22,
+     "clicks": 1,
+     "cost": 5.27,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -28271,7 +32075,10 @@ window.TERMS = {
     {
      "text": "how to write a response to a summons",
      "match": "EXACT",
-     "impr": 22
+     "impr": 22,
+     "clicks": 4,
+     "cost": 14.25,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -28306,7 +32113,10 @@ window.TERMS = {
     {
      "text": "how to write a response to a summons",
      "match": "EXACT",
-     "impr": 22
+     "impr": 22,
+     "clicks": 3,
+     "cost": 9.71,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -28341,7 +32151,10 @@ window.TERMS = {
     {
      "text": "how do i answer a lawsuit for debt collection",
      "match": "PHRASE",
-     "impr": 22
+     "impr": 22,
+     "clicks": 2,
+     "cost": 14.61,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -28376,7 +32189,10 @@ window.TERMS = {
     {
      "text": "how to answer a debt summons",
      "match": "PHRASE",
-     "impr": 22
+     "impr": 22,
+     "clicks": 2,
+     "cost": 20.96,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -28411,7 +32227,10 @@ window.TERMS = {
     {
      "text": "debt defense lawyer near me",
      "match": "PHRASE",
-     "impr": 22
+     "impr": 22,
+     "clicks": 3,
+     "cost": 31.3,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -28446,7 +32265,10 @@ window.TERMS = {
     {
      "text": "how to respond to debt lawsuit",
      "match": "PHRASE",
-     "impr": 22
+     "impr": 22,
+     "clicks": 2,
+     "cost": 23.63,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -28481,12 +32303,18 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 15
+     "impr": 15,
+     "clicks": 1,
+     "cost": 32.82,
+     "conv": 0.0
     },
     {
      "text": "lawyer for debt lawsuit",
      "match": "EXACT",
-     "impr": 7
+     "impr": 7,
+     "clicks": 1,
+     "cost": 11.59,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -28521,7 +32349,10 @@ window.TERMS = {
     {
      "text": "stop wage garnishment immediately",
      "match": "PHRASE",
-     "impr": 22
+     "impr": 22,
+     "clicks": 2,
+     "cost": 6.37,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -28552,7 +32383,10 @@ window.TERMS = {
     {
      "text": "debt attorney cost",
      "match": "EXACT",
-     "impr": 22
+     "impr": 22,
+     "clicks": 2,
+     "cost": 16.37,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -28583,7 +32417,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 22
+     "impr": 22,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -28615,12 +32452,18 @@ window.TERMS = {
     {
      "text": "stop wage garnishment immediately",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "paycheck garnishment",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -28651,7 +32494,10 @@ window.TERMS = {
     {
      "text": "how to fight a garnishment",
      "match": "PHRASE",
-     "impr": 22
+     "impr": 22,
+     "clicks": 3,
+     "cost": 27.76,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -28687,7 +32533,10 @@ window.TERMS = {
     {
      "text": "can a garnishment be stopped",
      "match": "PHRASE",
-     "impr": 22
+     "impr": 22,
+     "clicks": 3,
+     "cost": 13.33,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -28723,7 +32572,10 @@ window.TERMS = {
     {
      "text": "stop wage garnishment attorney",
      "match": "PHRASE",
-     "impr": 22
+     "impr": 22,
+     "clicks": 3,
+     "cost": 33.89,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -28758,7 +32610,10 @@ window.TERMS = {
     {
      "text": "garnish wages attorney",
      "match": "EXACT",
-     "impr": 22
+     "impr": 22,
+     "clicks": 3,
+     "cost": 24.72,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -28793,7 +32648,10 @@ window.TERMS = {
     {
      "text": "garnish wages attorney",
      "match": "EXACT",
-     "impr": 22
+     "impr": 22,
+     "clicks": 4,
+     "cost": 48.18,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -28828,7 +32686,10 @@ window.TERMS = {
     {
      "text": "garnish wages attorney",
      "match": "EXACT",
-     "impr": 22
+     "impr": 22,
+     "clicks": 3,
+     "cost": 30.52,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -28863,12 +32724,18 @@ window.TERMS = {
     {
      "text": "how to fight a garnishment",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "how to get out of wage garnishment",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.8,
@@ -28904,12 +32771,18 @@ window.TERMS = {
     {
      "text": "stop wage garnishment",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 2,
+     "cost": 8.7,
+     "conv": 0.0
     },
     {
      "text": "can you stop a garnishment before it starts",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.952,
@@ -28945,7 +32818,10 @@ window.TERMS = {
     {
      "text": "summons for credit card debt",
      "match": "PHRASE",
-     "impr": 22
+     "impr": 22,
+     "clicks": 1,
+     "cost": 5.13,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -28980,12 +32856,18 @@ window.TERMS = {
     {
      "text": "portfolio recovery debt collector",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "portfolio recovery debt collectors",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -29020,12 +32902,18 @@ window.TERMS = {
     {
      "text": "portfolio recovery debt collector",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "portfolio recovery debt collectors",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -29060,7 +32948,10 @@ window.TERMS = {
     {
      "text": "debt collection defense attorney",
      "match": "PHRASE",
-     "impr": 21
+     "impr": 21,
+     "clicks": 1,
+     "cost": 30.88,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -29095,7 +32986,10 @@ window.TERMS = {
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 21
+     "impr": 21,
+     "clicks": 2,
+     "cost": 8.76,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -29130,7 +33024,10 @@ window.TERMS = {
     {
      "text": "how to write a response to a summons",
      "match": "EXACT",
-     "impr": 21
+     "impr": 21,
+     "clicks": 1,
+     "cost": 3.87,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -29165,7 +33062,10 @@ window.TERMS = {
     {
      "text": "how to write a response to a summons",
      "match": "EXACT",
-     "impr": 21
+     "impr": 21,
+     "clicks": 2,
+     "cost": 8.81,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -29200,7 +33100,10 @@ window.TERMS = {
     {
      "text": "received summons for debt",
      "match": "EXACT",
-     "impr": 21
+     "impr": 21,
+     "clicks": 4,
+     "cost": 23.12,
+     "conv": 0.5
     }
    ],
    "scope": "active",
@@ -29235,12 +33138,18 @@ window.TERMS = {
     {
      "text": "credit debt lawyers",
      "match": "EXACT",
-     "impr": 14
+     "impr": 14,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "debt defense lawyer near me",
      "match": "PHRASE",
-     "impr": 7
+     "impr": 7,
+     "clicks": 1,
+     "cost": 3.5,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -29275,12 +33184,18 @@ window.TERMS = {
     {
      "text": "credit debt lawyers",
      "match": "EXACT",
-     "impr": 14
+     "impr": 14,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "debt litigation attorney",
      "match": "PHRASE",
-     "impr": 7
+     "impr": 7,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -29314,12 +33229,18 @@ window.TERMS = {
     {
      "text": "lawsuit dismissed",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 1,
+     "cost": 5.37,
+     "conv": 0.0
     },
     {
      "text": "debt collection lawsuit defense",
      "match": "PHRASE",
-     "impr": 7
+     "impr": 7,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -29354,12 +33275,18 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 11
+     "impr": 11,
+     "clicks": 4,
+     "cost": 31.68,
+     "conv": 1.0
     },
     {
      "text": "attorney for debt collection lawsuit",
      "match": "EXACT",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 18.33,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -29394,7 +33321,10 @@ window.TERMS = {
     {
      "text": "garnishment lawyer",
      "match": "PHRASE",
-     "impr": 21
+     "impr": 21,
+     "clicks": 1,
+     "cost": 5.2,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -29425,7 +33355,10 @@ window.TERMS = {
     {
      "text": "wage garnishment lawyer",
      "match": "PHRASE",
-     "impr": 21
+     "impr": 21,
+     "clicks": 1,
+     "cost": 9.82,
+     "conv": 1.667
     }
    ],
    "top30": 0.778,
@@ -29457,7 +33390,10 @@ window.TERMS = {
     {
      "text": "debt attorneys",
      "match": "PHRASE",
-     "impr": 21
+     "impr": 21,
+     "clicks": 4,
+     "cost": 71.05,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -29490,7 +33426,10 @@ window.TERMS = {
     {
      "text": "collection defense lawyer",
      "match": "PHRASE",
-     "impr": 21
+     "impr": 21,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -29520,7 +33459,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 21
+     "impr": 21,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -29551,7 +33493,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 21
+     "impr": 21,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -29582,7 +33527,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 21
+     "impr": 21,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -29613,7 +33561,10 @@ window.TERMS = {
     {
      "text": "fcba",
      "match": "PHRASE",
-     "impr": 21
+     "impr": 21,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -29644,7 +33595,10 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 21
+     "impr": 21,
+     "clicks": 5,
+     "cost": 46.71,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -29680,7 +33634,10 @@ window.TERMS = {
     {
      "text": "how to fight wage garnishment",
      "match": "PHRASE",
-     "impr": 21
+     "impr": 21,
+     "clicks": 3,
+     "cost": 13.85,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -29715,7 +33672,10 @@ window.TERMS = {
     {
      "text": "can a garnishment be stopped",
      "match": "PHRASE",
-     "impr": 21
+     "impr": 21,
+     "clicks": 4,
+     "cost": 17.31,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -29751,7 +33711,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 21
+     "impr": 21,
+     "clicks": 1,
+     "cost": 3.02,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -29786,7 +33749,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 21
+     "impr": 21,
+     "clicks": 2,
+     "cost": 10.25,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -29822,7 +33788,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 21
+     "impr": 21,
+     "clicks": 1,
+     "cost": 7.6,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -29857,7 +33826,10 @@ window.TERMS = {
     {
      "text": "unifin debt collectors",
      "match": "PHRASE",
-     "impr": 21
+     "impr": 21,
+     "clicks": 1,
+     "cost": 5.14,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -29892,7 +33864,10 @@ window.TERMS = {
     {
      "text": "fdcpa attorney",
      "match": "PHRASE",
-     "impr": 21
+     "impr": 21,
+     "clicks": 1,
+     "cost": 2.23,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -29927,7 +33902,10 @@ window.TERMS = {
     {
      "text": "attorneys for debt collection harassment",
      "match": "PHRASE",
-     "impr": 21
+     "impr": 21,
+     "clicks": 4,
+     "cost": 32.95,
+     "conv": 0.56
     }
    ],
    "scope": "active",
@@ -29962,7 +33940,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 20
+     "impr": 20,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -29997,7 +33978,10 @@ window.TERMS = {
     {
      "text": "debt collection lawsuit defense",
      "match": "EXACT",
-     "impr": 20
+     "impr": 20,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -30032,7 +34016,10 @@ window.TERMS = {
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 20
+     "impr": 20,
+     "clicks": 1,
+     "cost": 8.36,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -30067,7 +34054,10 @@ window.TERMS = {
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 20
+     "impr": 20,
+     "clicks": 1,
+     "cost": 11.3,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -30102,7 +34092,10 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 20
+     "impr": 20,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -30138,7 +34131,10 @@ window.TERMS = {
     {
      "text": "how to write a response to a summons",
      "match": "EXACT",
-     "impr": 20
+     "impr": 20,
+     "clicks": 3,
+     "cost": 18.17,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -30173,7 +34169,10 @@ window.TERMS = {
     {
      "text": "how to respond to a summons for debt",
      "match": "PHRASE",
-     "impr": 20
+     "impr": 20,
+     "clicks": 3,
+     "cost": 9.71,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -30208,12 +34207,18 @@ window.TERMS = {
     {
      "text": "how to fight debt collectors",
      "match": "EXACT",
-     "impr": 13
+     "impr": 13,
+     "clicks": 1,
+     "cost": 5.79,
+     "conv": 0.0
     },
     {
      "text": "debt collection lawsuit defense",
      "match": "PHRASE",
-     "impr": 7
+     "impr": 7,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -30248,12 +34253,18 @@ window.TERMS = {
     {
      "text": "debt defense lawyer",
      "match": "EXACT",
-     "impr": 11
+     "impr": 11,
+     "clicks": 1,
+     "cost": 15.6,
+     "conv": 0.0
     },
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 9
+     "impr": 9,
+     "clicks": 1,
+     "cost": 12.37,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -30288,12 +34299,18 @@ window.TERMS = {
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 2,
+     "cost": 32.14,
+     "conv": 1.0
     },
     {
      "text": "lawyer for debt lawsuit",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -30328,12 +34345,18 @@ window.TERMS = {
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "attorney for debt collection lawsuit",
      "match": "EXACT",
-     "impr": 10
+     "impr": 10,
+     "clicks": 3,
+     "cost": 9.45,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -30368,7 +34391,10 @@ window.TERMS = {
     {
      "text": "garnishment attorney",
      "match": "PHRASE",
-     "impr": 20
+     "impr": 20,
+     "clicks": 2,
+     "cost": 19.99,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -30399,7 +34425,10 @@ window.TERMS = {
     {
      "text": "stop wage garnishment immediately",
      "match": "PHRASE",
-     "impr": 20
+     "impr": 20,
+     "clicks": 5,
+     "cost": 32.95,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -30430,7 +34459,10 @@ window.TERMS = {
     {
      "text": "creditor garnishment",
      "match": "PHRASE",
-     "impr": 20
+     "impr": 20,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.375,
@@ -30463,7 +34495,10 @@ window.TERMS = {
     {
      "text": "attorney collection agency",
      "match": "PHRASE",
-     "impr": 20
+     "impr": 20,
+     "clicks": 2,
+     "cost": 26.58,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -30495,7 +34530,10 @@ window.TERMS = {
     {
      "text": "collection defense attorney",
      "match": "PHRASE",
-     "impr": 20
+     "impr": 20,
+     "clicks": 3,
+     "cost": 30.7,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -30526,7 +34564,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 20
+     "impr": 20,
+     "clicks": 1,
+     "cost": 6.13,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -30557,7 +34598,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 20
+     "impr": 20,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -30588,7 +34632,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 20
+     "impr": 20,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -30619,7 +34666,10 @@ window.TERMS = {
     {
      "text": "how to stop wage garnishment",
      "match": "PHRASE",
-     "impr": 20
+     "impr": 20,
+     "clicks": 7,
+     "cost": 68.64,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -30654,7 +34704,10 @@ window.TERMS = {
     {
      "text": "how to stop a garnishment",
      "match": "PHRASE",
-     "impr": 20
+     "impr": 20,
+     "clicks": 3,
+     "cost": 19.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -30689,7 +34742,10 @@ window.TERMS = {
     {
      "text": "how to fight a garnishment",
      "match": "PHRASE",
-     "impr": 20
+     "impr": 20,
+     "clicks": 3,
+     "cost": 12.41,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -30725,7 +34781,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 20
+     "impr": 20,
+     "clicks": 1,
+     "cost": 6.8,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -30761,7 +34820,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 20
+     "impr": 20,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -30797,7 +34859,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 20
+     "impr": 20,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -30833,7 +34898,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 20
+     "impr": 20,
+     "clicks": 4,
+     "cost": 18.62,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -30869,7 +34937,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 20
+     "impr": 20,
+     "clicks": 1,
+     "cost": 7.04,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -30905,12 +34976,18 @@ window.TERMS = {
     {
      "text": "how to stop a garnishment",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 5,
+     "cost": 35.26,
+     "conv": 0.0
     },
     {
      "text": "how to fight a garnishment",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -30945,12 +35022,18 @@ window.TERMS = {
     {
      "text": "how to stop a garnishment",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 1,
+     "cost": 3.71,
+     "conv": 0.0
     },
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 1,
+     "cost": 12.87,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -30985,12 +35068,18 @@ window.TERMS = {
     {
      "text": "how to stop a garnishment",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 3,
+     "cost": 8.5,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -31026,7 +35115,10 @@ window.TERMS = {
     {
      "text": "how to respond to a summons for credit card debt",
      "match": "PHRASE",
-     "impr": 20
+     "impr": 20,
+     "clicks": 2,
+     "cost": 10.13,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -31061,7 +35153,10 @@ window.TERMS = {
     {
      "text": "midland funding debt collector",
      "match": "PHRASE",
-     "impr": 20
+     "impr": 20,
+     "clicks": 2,
+     "cost": 11.55,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -31096,7 +35191,10 @@ window.TERMS = {
     {
      "text": "midland funding debt collector",
      "match": "PHRASE",
-     "impr": 20
+     "impr": 20,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -31131,7 +35229,10 @@ window.TERMS = {
     {
      "text": "settling debt with creditors",
      "match": "PHRASE",
-     "impr": 20
+     "impr": 20,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -31161,7 +35262,10 @@ window.TERMS = {
     {
      "text": "how to settle a debt collection",
      "match": "PHRASE",
-     "impr": 20
+     "impr": 20,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -31191,12 +35295,18 @@ window.TERMS = {
     {
      "text": "credit card debt attorney",
      "match": "EXACT",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "credit card attorney",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -31231,7 +35341,10 @@ window.TERMS = {
     {
      "text": "rights against debt collectors",
      "match": "PHRASE",
-     "impr": 20
+     "impr": 20,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -31266,7 +35379,10 @@ window.TERMS = {
     {
      "text": "fdcpa attorney near me",
      "match": "EXACT",
-     "impr": 20
+     "impr": 20,
+     "clicks": 1,
+     "cost": 15.82,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -31301,7 +35417,10 @@ window.TERMS = {
     {
      "text": "debt defense attorney",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 1,
+     "cost": 7.68,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -31336,7 +35455,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 1,
+     "cost": 5.16,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -31371,7 +35493,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 3,
+     "cost": 15.51,
+     "conv": 1.001
     }
    ],
    "scope": "active",
@@ -31406,7 +35531,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 1,
+     "cost": 5.62,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -31441,7 +35569,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 1,
+     "cost": 2.1,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -31475,7 +35606,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 19
+     "impr": 19,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -31510,7 +35644,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 1,
+     "cost": 16.87,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -31545,7 +35682,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -31579,7 +35719,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney near me",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -31614,7 +35757,10 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 2,
+     "cost": 22.65,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -31649,7 +35795,10 @@ window.TERMS = {
     {
      "text": "how to write a response to a summons",
      "match": "EXACT",
-     "impr": 19
+     "impr": 19,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -31684,7 +35833,10 @@ window.TERMS = {
     {
      "text": "how to respond to debt lawsuit",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 3,
+     "cost": 31.9,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -31719,12 +35871,18 @@ window.TERMS = {
     {
      "text": "debt defense lawyer near me",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 2,
+     "cost": 31.43,
+     "conv": 0.0
     },
     {
      "text": "credit debt lawyers",
      "match": "EXACT",
-     "impr": 7
+     "impr": 7,
+     "clicks": 2,
+     "cost": 29.12,
+     "conv": 1.343
     }
    ],
    "scope": "active",
@@ -31759,12 +35917,18 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "debt lawsuit attorney near me",
      "match": "PHRASE",
-     "impr": 7
+     "impr": 7,
+     "clicks": 1,
+     "cost": 6.68,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -31799,12 +35963,18 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 1,
+     "cost": 15.4,
+     "conv": 0.0
     },
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 8
+     "impr": 8,
+     "clicks": 1,
+     "cost": 6.5,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -31839,12 +36009,18 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "attorney for debt collection lawsuit",
      "match": "EXACT",
-     "impr": 8
+     "impr": 8,
+     "clicks": 1,
+     "cost": 22.65,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -31879,7 +36055,10 @@ window.TERMS = {
     {
      "text": "stop wage garnishment immediately",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -31910,7 +36089,10 @@ window.TERMS = {
     {
      "text": "i just received a writ of garnishment",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 1,
+     "cost": 5.57,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -31941,7 +36123,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -31972,7 +36157,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 1,
+     "cost": 1.62,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -32003,7 +36191,10 @@ window.TERMS = {
     {
      "text": "defense against debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -32034,7 +36225,10 @@ window.TERMS = {
     {
      "text": "collection debt attorney",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 1,
+     "cost": 6.69,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -32065,7 +36259,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 2,
+     "cost": 4.79,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -32096,7 +36293,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -32127,7 +36327,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -32158,7 +36361,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 1,
+     "cost": 19.27,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -32189,7 +36395,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 2,
+     "cost": 11.8,
+     "conv": 2.0
     }
    ],
    "scope": "active",
@@ -32220,7 +36429,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 2,
+     "cost": 3.62,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -32251,7 +36463,10 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 2,
+     "cost": 6.55,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -32287,7 +36502,10 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 6,
+     "cost": 47.19,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -32322,7 +36540,10 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 2,
+     "cost": 9.74,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -32358,7 +36579,10 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 2,
+     "cost": 18.96,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -32394,7 +36618,10 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 2,
+     "cost": 5.92,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -32430,7 +36657,10 @@ window.TERMS = {
     {
      "text": "help with garnishment",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 1,
+     "cost": 8.51,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -32466,7 +36696,10 @@ window.TERMS = {
     {
      "text": "how to fight a garnishment",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 5,
+     "cost": 30.83,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -32501,12 +36734,18 @@ window.TERMS = {
     {
      "text": "how to stop a garnishment",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "how to fight a garnishment",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 1,
+     "cost": 9.05,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -32541,12 +36780,18 @@ window.TERMS = {
     {
      "text": "how to stop a garnishment",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 8.78,
+     "conv": 0.0
     },
     {
      "text": "how to fight wage garnishment",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -32581,7 +36826,10 @@ window.TERMS = {
     {
      "text": "credit card attorney",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 1,
+     "cost": 23.33,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -32616,7 +36864,10 @@ window.TERMS = {
     {
      "text": "velocity investments debt collector",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 4,
+     "cost": 15.2,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -32651,7 +36902,10 @@ window.TERMS = {
     {
      "text": "settling debt with creditors",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 1,
+     "cost": 21.77,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -32683,12 +36937,18 @@ window.TERMS = {
     {
      "text": "portfolio recovery debt collectors",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 3,
+     "cost": 17.98,
+     "conv": 0.0
     },
     {
      "text": "portfolio recovery debt collector",
      "match": "PHRASE",
-     "impr": 8
+     "impr": 8,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -32723,7 +36983,10 @@ window.TERMS = {
     {
      "text": "sue a debt collector",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -32758,7 +37021,10 @@ window.TERMS = {
     {
      "text": "sue a debt collector",
      "match": "PHRASE",
-     "impr": 19
+     "impr": 19,
+     "clicks": 2,
+     "cost": 7.05,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -32793,7 +37059,10 @@ window.TERMS = {
     {
      "text": "how to fight debt collectors",
      "match": "EXACT",
-     "impr": 18
+     "impr": 18,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -32828,7 +37097,10 @@ window.TERMS = {
     {
      "text": "being sued by debt collector",
      "match": "EXACT",
-     "impr": 18
+     "impr": 18,
+     "clicks": 3,
+     "cost": 22.53,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -32863,7 +37135,10 @@ window.TERMS = {
     {
      "text": "being sued by debt collector",
      "match": "EXACT",
-     "impr": 18
+     "impr": 18,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -32898,7 +37173,10 @@ window.TERMS = {
     {
      "text": "debt litigation attorney",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -32933,7 +37211,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 3,
+     "cost": 9.76,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -32968,7 +37249,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 4,
+     "cost": 20.24,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -33003,7 +37287,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 3,
+     "cost": 20.7,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -33038,7 +37325,10 @@ window.TERMS = {
     {
      "text": "consumer debt defense attorney",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 1,
+     "cost": 9.46,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -33073,7 +37363,10 @@ window.TERMS = {
     {
      "text": "debt defense lawyer near me",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 1,
+     "cost": 24.67,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -33108,7 +37401,10 @@ window.TERMS = {
     {
      "text": "i ve been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 2,
+     "cost": 8.3,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -33143,7 +37439,10 @@ window.TERMS = {
     {
      "text": "i ve been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 3,
+     "cost": 17.09,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -33178,7 +37477,10 @@ window.TERMS = {
     {
      "text": "i ve been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 2,
+     "cost": 14.04,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -33213,7 +37515,10 @@ window.TERMS = {
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -33248,7 +37553,10 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 3,
+     "cost": 38.19,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -33283,7 +37591,10 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -33318,7 +37629,10 @@ window.TERMS = {
     {
      "text": "how to respond to a debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 1,
+     "cost": 2.69,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -33353,7 +37667,10 @@ window.TERMS = {
     {
      "text": "how to respond to a debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 1,
+     "cost": 4.87,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -33388,12 +37705,18 @@ window.TERMS = {
     {
      "text": "debt defense attorney",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 8
+     "impr": 8,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -33428,12 +37751,18 @@ window.TERMS = {
     {
      "text": "i ve been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 4.71,
+     "conv": 0.0
     },
     {
      "text": "im being sued for a debt what do i do",
      "match": "EXACT",
-     "impr": 8
+     "impr": 8,
+     "clicks": 1,
+     "cost": 4.75,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -33468,12 +37797,18 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 8
+     "impr": 8,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -33509,12 +37844,18 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 3,
+     "cost": 20.48,
+     "conv": 0.0
     },
     {
      "text": "attorney for debt collection lawsuit",
      "match": "EXACT",
-     "impr": 8
+     "impr": 8,
+     "clicks": 1,
+     "cost": 11.92,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -33549,12 +37890,18 @@ window.TERMS = {
     {
      "text": "how to respond to a debt collector lawsuit",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 5.45,
+     "conv": 0.0
     },
     {
      "text": "debt collection lawsuit defense",
      "match": "EXACT",
-     "impr": 8
+     "impr": 8,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -33589,7 +37936,10 @@ window.TERMS = {
     {
      "text": "garnishment",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -33621,7 +37971,10 @@ window.TERMS = {
     {
      "text": "wage garnishment",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -33653,7 +38006,10 @@ window.TERMS = {
     {
      "text": "debt attorneys",
      "match": "EXACT",
-     "impr": 18
+     "impr": 18,
+     "clicks": 3,
+     "cost": 90.59,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -33683,7 +38039,10 @@ window.TERMS = {
     {
      "text": "defense against debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -33714,7 +38073,10 @@ window.TERMS = {
     {
      "text": "defense against debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -33744,7 +38106,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 3,
+     "cost": 7.7,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -33775,7 +38140,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -33806,12 +38174,18 @@ window.TERMS = {
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 1,
+     "cost": 3.14,
+     "conv": 0.0
     },
     {
      "text": "i just received a writ of garnishment",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -33842,12 +38216,18 @@ window.TERMS = {
     {
      "text": "collection attorney",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "debt attorneys",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -33878,7 +38258,10 @@ window.TERMS = {
     {
      "text": "how to stop wage garnishment",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 3,
+     "cost": 17.07,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -33914,7 +38297,10 @@ window.TERMS = {
     {
      "text": "help with garnishment",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -33950,7 +38336,10 @@ window.TERMS = {
     {
      "text": "how to fight a garnishment",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 8,
+     "cost": 46.47,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -33985,7 +38374,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -34021,12 +38413,18 @@ window.TERMS = {
     {
      "text": "how to fight a garnishment",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "how to stop my check from being garnished",
      "match": "EXACT",
-     "impr": 9
+     "impr": 9,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -34062,7 +38460,10 @@ window.TERMS = {
     {
      "text": "credit card suing me",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 3,
+     "cost": 14.85,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -34097,7 +38498,10 @@ window.TERMS = {
     {
      "text": "can you be sued for credit card debt",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 2,
+     "cost": 5.82,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -34132,7 +38536,10 @@ window.TERMS = {
     {
      "text": "credit card debt defense",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 1,
+     "cost": 21.6,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -34167,7 +38574,10 @@ window.TERMS = {
     {
      "text": "i got served for credit card debt",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 4,
+     "cost": 23.96,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -34202,7 +38612,10 @@ window.TERMS = {
     {
      "text": "how to fight a credit card lawsuit",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -34237,7 +38650,10 @@ window.TERMS = {
     {
      "text": "credit one lawsuit",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 1,
+     "cost": 4.62,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -34272,7 +38688,10 @@ window.TERMS = {
     {
      "text": "velocity investments debt collector",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -34307,12 +38726,18 @@ window.TERMS = {
     {
      "text": "credit card lawyers",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 1,
+     "cost": 5.75,
+     "conv": 0.0
     },
     {
      "text": "credit card lawyer",
      "match": "EXACT",
-     "impr": 7
+     "impr": 7,
+     "clicks": 1,
+     "cost": 10.33,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -34347,7 +38772,10 @@ window.TERMS = {
     {
      "text": "debt collector harassment",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -34382,7 +38810,10 @@ window.TERMS = {
     {
      "text": "bill collector harassment",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -34417,7 +38848,10 @@ window.TERMS = {
     {
      "text": "sue a debt collector",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 1,
+     "cost": 15.79,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -34452,7 +38886,10 @@ window.TERMS = {
     {
      "text": "attorneys for debt collection harassment",
      "match": "PHRASE",
-     "impr": 18
+     "impr": 18,
+     "clicks": 2,
+     "cost": 17.87,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -34487,7 +38924,10 @@ window.TERMS = {
     {
      "text": "being sued by debt collector",
      "match": "EXACT",
-     "impr": 17
+     "impr": 17,
+     "clicks": 2,
+     "cost": 7.91,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -34522,7 +38962,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 2,
+     "cost": 6.95,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -34557,7 +39000,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -34592,7 +39038,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 1,
+     "cost": 4.4,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -34627,7 +39076,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 1,
+     "cost": 22.62,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -34662,7 +39114,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 3,
+     "cost": 11.28,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -34697,7 +39152,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 17
+     "impr": 17,
+     "clicks": 2,
+     "cost": 32.38,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -34732,7 +39190,10 @@ window.TERMS = {
     {
      "text": "consumer debt defense attorney",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -34767,7 +39228,10 @@ window.TERMS = {
     {
      "text": "consumer debt defense attorney",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 1,
+     "cost": 19.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -34802,7 +39266,10 @@ window.TERMS = {
     {
      "text": "debt defense lawyer near me",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 3,
+     "cost": 33.92,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -34837,7 +39304,10 @@ window.TERMS = {
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 1,
+     "cost": 4.2,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -34872,7 +39342,10 @@ window.TERMS = {
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -34907,7 +39380,10 @@ window.TERMS = {
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -34942,7 +39418,10 @@ window.TERMS = {
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -34978,7 +39457,10 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 1,
+     "cost": 5.32,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -35012,7 +39494,10 @@ window.TERMS = {
     {
      "text": "lvnv funding lawsuit",
      "match": "EXACT",
-     "impr": 17
+     "impr": 17,
+     "clicks": 1,
+     "cost": 6.78,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -35048,7 +39533,10 @@ window.TERMS = {
     {
      "text": "being sued by portfolio recovery associates",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -35083,7 +39571,10 @@ window.TERMS = {
     {
      "text": "how to write a response to a summons",
      "match": "EXACT",
-     "impr": 17
+     "impr": 17,
+     "clicks": 1,
+     "cost": 8.29,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -35118,7 +39609,10 @@ window.TERMS = {
     {
      "text": "how to answer a debt summons",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 4,
+     "cost": 10.62,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -35153,7 +39647,10 @@ window.TERMS = {
     {
      "text": "how to answer a debt summons",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 1,
+     "cost": 1.91,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -35188,7 +39685,10 @@ window.TERMS = {
     {
      "text": "debt defense lawyer near me",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 1,
+     "cost": 7.11,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -35223,7 +39723,10 @@ window.TERMS = {
     {
      "text": "debt defense lawyer near me",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 2,
+     "cost": 36.67,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -35258,7 +39761,10 @@ window.TERMS = {
     {
      "text": "received summons for debt",
      "match": "EXACT",
-     "impr": 17
+     "impr": 17,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -35293,7 +39799,10 @@ window.TERMS = {
     {
      "text": "being sued by discover card how to respond",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 1,
+     "cost": 26.5,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -35328,12 +39837,18 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "how to fight debt collectors",
      "match": "EXACT",
-     "impr": 7
+     "impr": 7,
+     "clicks": 1,
+     "cost": 7.05,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -35368,12 +39883,18 @@ window.TERMS = {
     {
      "text": "being sued by debt collector",
      "match": "EXACT",
-     "impr": 9
+     "impr": 9,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 8
+     "impr": 8,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -35408,12 +39929,18 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "how to fight debt collectors",
      "match": "EXACT",
-     "impr": 8
+     "impr": 8,
+     "clicks": 3,
+     "cost": 19.61,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -35448,12 +39975,18 @@ window.TERMS = {
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "credit debt lawyers",
      "match": "EXACT",
-     "impr": 8
+     "impr": 8,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -35489,12 +40022,18 @@ window.TERMS = {
     {
      "text": "i ve been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 9
+     "impr": 9,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "im being sued for a debt what do i do",
      "match": "EXACT",
-     "impr": 8
+     "impr": 8,
+     "clicks": 1,
+     "cost": 7.47,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -35529,7 +40068,10 @@ window.TERMS = {
     {
      "text": "levy garnishment",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 1,
+     "cost": 9.51,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -35561,7 +40103,10 @@ window.TERMS = {
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 3,
+     "cost": 10.59,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -35592,7 +40137,10 @@ window.TERMS = {
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 1,
+     "cost": 6.06,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -35623,7 +40171,10 @@ window.TERMS = {
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 1,
+     "cost": 2.62,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -35654,7 +40205,10 @@ window.TERMS = {
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -35685,7 +40239,10 @@ window.TERMS = {
     {
      "text": "writ of garnishment",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -35717,7 +40274,10 @@ window.TERMS = {
     {
      "text": "garnishment attorney near me",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 1,
+     "cost": 5.86,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -35748,7 +40308,10 @@ window.TERMS = {
     {
      "text": "collection defense attorney",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 1,
+     "cost": 13.87,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -35779,7 +40342,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -35810,7 +40376,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 1,
+     "cost": 0.3,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -35841,7 +40410,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 1,
+     "cost": 6.72,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -35872,7 +40444,10 @@ window.TERMS = {
     {
      "text": "how to fight a garnishment",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 2,
+     "cost": 8.18,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -35907,7 +40482,10 @@ window.TERMS = {
     {
      "text": "how to remove wage garnishment",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 1,
+     "cost": 18.4,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -35943,7 +40521,10 @@ window.TERMS = {
     {
      "text": "garnish wages attorney",
      "match": "EXACT",
-     "impr": 17
+     "impr": 17,
+     "clicks": 2,
+     "cost": 19.98,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -35978,7 +40559,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -36013,7 +40597,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 1,
+     "cost": 4.07,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -36049,7 +40636,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -36084,7 +40674,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 3,
+     "cost": 13.62,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -36120,7 +40713,10 @@ window.TERMS = {
     {
      "text": "im being sued by a credit card company",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 4,
+     "cost": 19.63,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -36155,7 +40751,10 @@ window.TERMS = {
     {
      "text": "how to fight a credit card lawsuit",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 3,
+     "cost": 16.24,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -36190,7 +40789,10 @@ window.TERMS = {
     {
      "text": "midland credit management attorney",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -36225,7 +40827,10 @@ window.TERMS = {
     {
      "text": "how to settle on credit card debt",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 3,
+     "cost": 49.75,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -36256,12 +40861,18 @@ window.TERMS = {
     {
      "text": "lawyer for credit card debt",
      "match": "EXACT",
-     "impr": 9
+     "impr": 9,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "credit card debt lawyers near me",
      "match": "PHRASE",
-     "impr": 8
+     "impr": 8,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -36296,7 +40907,10 @@ window.TERMS = {
     {
      "text": "how to stop debt collector calls",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -36331,7 +40945,10 @@ window.TERMS = {
     {
      "text": "can i sue a collection agency for harassment",
      "match": "PHRASE",
-     "impr": 17
+     "impr": 17,
+     "clicks": 3,
+     "cost": 13.19,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -36366,7 +40983,10 @@ window.TERMS = {
     {
      "text": "debt defense attorney",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -36400,7 +41020,10 @@ window.TERMS = {
     {
      "text": "being sued by debt collector",
      "match": "EXACT",
-     "impr": 16
+     "impr": 16,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -36435,7 +41058,10 @@ window.TERMS = {
     {
      "text": "debt litigation attorney",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 1,
+     "cost": 20.26,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -36470,7 +41096,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit defense",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 2,
+     "cost": 24.29,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -36505,7 +41134,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 2,
+     "cost": 13.18,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -36540,7 +41172,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 2,
+     "cost": 8.84,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -36575,7 +41210,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 1,
+     "cost": 3.03,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -36610,7 +41248,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 3,
+     "cost": 35.17,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -36645,7 +41286,10 @@ window.TERMS = {
     {
      "text": "debt defense lawyer near me",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 2,
+     "cost": 8.6,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -36680,7 +41324,10 @@ window.TERMS = {
     {
      "text": "debt defense lawyer near me",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -36715,7 +41362,10 @@ window.TERMS = {
     {
      "text": "debt defense lawyer near me",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 3,
+     "cost": 52.12,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -36750,7 +41400,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney near me",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 1,
+     "cost": 4.34,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -36785,7 +41438,10 @@ window.TERMS = {
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 1,
+     "cost": 6.32,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -36820,7 +41476,10 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 1,
+     "cost": 10.23,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -36856,7 +41515,10 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 2,
+     "cost": 57.66,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -36891,7 +41553,10 @@ window.TERMS = {
     {
      "text": "midland credit suing me",
      "match": "EXACT",
-     "impr": 16
+     "impr": 16,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -36927,7 +41592,10 @@ window.TERMS = {
     {
      "text": "how to answer debt collection lawsuit",
      "match": "EXACT",
-     "impr": 16
+     "impr": 16,
+     "clicks": 3,
+     "cost": 9.69,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -36962,12 +41630,18 @@ window.TERMS = {
     {
      "text": "im being sued for a debt what do i do",
      "match": "EXACT",
-     "impr": 9
+     "impr": 9,
+     "clicks": 2,
+     "cost": 23.45,
+     "conv": 0.0
     },
     {
      "text": "being sued by debt collector",
      "match": "EXACT",
-     "impr": 7
+     "impr": 7,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -37002,7 +41676,10 @@ window.TERMS = {
     {
      "text": "pay garnishment",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -37034,7 +41711,10 @@ window.TERMS = {
     {
      "text": "stop wage garnishment immediately",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 2,
+     "cost": 23.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -37065,7 +41745,10 @@ window.TERMS = {
     {
      "text": "creditor garnishment",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -37097,7 +41780,10 @@ window.TERMS = {
     {
      "text": "garnered wages",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -37129,7 +41815,10 @@ window.TERMS = {
     {
      "text": "collection attorney",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 1,
+     "cost": 10.12,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -37160,7 +41849,10 @@ window.TERMS = {
     {
      "text": "collection attorney",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 1,
+     "cost": 7.81,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -37191,7 +41883,10 @@ window.TERMS = {
     {
      "text": "debt attorneys",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 1,
+     "cost": 18.38,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -37223,7 +41918,10 @@ window.TERMS = {
     {
      "text": "credit collection attorney",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 1,
+     "cost": 6.19,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -37254,7 +41952,10 @@ window.TERMS = {
     {
      "text": "attorney collection agency",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -37285,7 +41986,10 @@ window.TERMS = {
     {
      "text": "attorney collection agency",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -37315,7 +42019,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 1,
+     "cost": 5.99,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -37346,7 +42053,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -37377,7 +42087,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 1,
+     "cost": 2.92,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -37408,7 +42121,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -37440,7 +42156,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -37471,7 +42190,10 @@ window.TERMS = {
     {
      "text": "attorney for judgement collection",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 4,
+     "cost": 26.48,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -37502,7 +42224,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 1,
+     "cost": 2.04,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -37533,7 +42258,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 4,
+     "cost": 17.99,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -37564,7 +42292,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -37595,7 +42326,10 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -37630,7 +42364,10 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 1,
+     "cost": 3.03,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -37665,7 +42402,10 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 1,
+     "cost": 3.04,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -37700,7 +42440,10 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 3,
+     "cost": 32.15,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -37736,7 +42479,10 @@ window.TERMS = {
     {
      "text": "how to fight a garnishment",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 4,
+     "cost": 47.12,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -37772,7 +42518,10 @@ window.TERMS = {
     {
      "text": "how to fight a garnishment",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 6,
+     "cost": 28.4,
+     "conv": 2.0
     }
    ],
    "scope": "active",
@@ -37808,7 +42557,10 @@ window.TERMS = {
     {
      "text": "can a garnishment be stopped",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 1,
+     "cost": 11.02,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -37843,7 +42595,10 @@ window.TERMS = {
     {
      "text": "can a garnishment be stopped",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 1,
+     "cost": 11.42,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -37879,7 +42634,10 @@ window.TERMS = {
     {
      "text": "lawyer to stop garnishment",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 2,
+     "cost": 37.3,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -37914,7 +42672,10 @@ window.TERMS = {
     {
      "text": "can a lawyer stop a garnishment",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -37949,7 +42710,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -37985,7 +42749,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 1,
+     "cost": 2.4,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -38020,7 +42787,10 @@ window.TERMS = {
     {
      "text": "garnishment removal",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -38055,7 +42825,10 @@ window.TERMS = {
     {
      "text": "can you stop a garnishment before it starts",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 5,
+     "cost": 39.15,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -38091,7 +42864,10 @@ window.TERMS = {
     {
      "text": "credit card defense attorney",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 4,
+     "cost": 30.71,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -38126,7 +42902,10 @@ window.TERMS = {
     {
      "text": "what happens if a credit card company sues you",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 1,
+     "cost": 7.46,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -38161,7 +42940,10 @@ window.TERMS = {
     {
      "text": "how to respond to court summons for credit card debt",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 1,
+     "cost": 3.14,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -38196,7 +42978,10 @@ window.TERMS = {
     {
      "text": "how to fight a credit card lawsuit",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -38231,7 +43016,10 @@ window.TERMS = {
     {
      "text": "resurgent capital debt collector",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 1,
+     "cost": 3.66,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -38266,12 +43054,18 @@ window.TERMS = {
     {
      "text": "can a credit card company sue you",
      "match": "EXACT",
-     "impr": 9
+     "impr": 9,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "i got served for credit card debt",
      "match": "PHRASE",
-     "impr": 7
+     "impr": 7,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -38306,12 +43100,18 @@ window.TERMS = {
     {
      "text": "cavalry spv lawsuit",
      "match": "PHRASE",
-     "impr": 8
+     "impr": 8,
+     "clicks": 1,
+     "cost": 11.92,
+     "conv": 0.0
     },
     {
      "text": "cavalry spv debt collector",
      "match": "PHRASE",
-     "impr": 8
+     "impr": 8,
+     "clicks": 2,
+     "cost": 5.66,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -38346,7 +43146,10 @@ window.TERMS = {
     {
      "text": "stop debt collectors",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -38381,7 +43184,10 @@ window.TERMS = {
     {
      "text": "stop debt collector calls",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 1,
+     "cost": 12.5,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -38416,7 +43222,10 @@ window.TERMS = {
     {
      "text": "sue a debt collector",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -38451,7 +43260,10 @@ window.TERMS = {
     {
      "text": "debt collector harassment lawsuit",
      "match": "PHRASE",
-     "impr": 16
+     "impr": 16,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -38486,7 +43298,10 @@ window.TERMS = {
     {
      "text": "credo legal group",
      "match": "EXACT",
-     "impr": 16
+     "impr": 16,
+     "clicks": 2,
+     "cost": 5.38,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -38517,7 +43332,10 @@ window.TERMS = {
     {
      "text": "lvnv funding suing me",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 1,
+     "cost": 2.81,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -38553,7 +43371,10 @@ window.TERMS = {
     {
      "text": "debt litigation attorney",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -38587,7 +43408,10 @@ window.TERMS = {
     {
      "text": "credit debt lawyers",
      "match": "EXACT",
-     "impr": 15
+     "impr": 15,
+     "clicks": 1,
+     "cost": 16.55,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -38623,7 +43447,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 2,
+     "cost": 4.99,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -38658,7 +43485,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 1,
+     "cost": 4.91,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -38693,7 +43523,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -38728,7 +43561,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 1,
+     "cost": 2.18,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -38763,7 +43599,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -38798,7 +43637,10 @@ window.TERMS = {
     {
      "text": "what to do if a debt collector sues you",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -38833,7 +43675,10 @@ window.TERMS = {
     {
      "text": "i ve been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -38868,7 +43713,10 @@ window.TERMS = {
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 1,
+     "cost": 3.8,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -38904,7 +43752,10 @@ window.TERMS = {
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 1,
+     "cost": 3.34,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -38940,7 +43791,10 @@ window.TERMS = {
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -38976,7 +43830,10 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "EXACT",
-     "impr": 15
+     "impr": 15,
+     "clicks": 2,
+     "cost": 8.2,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -39011,7 +43868,10 @@ window.TERMS = {
     {
      "text": "how to respond to a debt collector lawsuit",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -39046,7 +43906,10 @@ window.TERMS = {
     {
      "text": "midland credit management lawsuit",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 2,
+     "cost": 8.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -39082,7 +43945,10 @@ window.TERMS = {
     {
      "text": "midland credit lawsuit",
      "match": "EXACT",
-     "impr": 15
+     "impr": 15,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -39118,7 +43984,10 @@ window.TERMS = {
     {
      "text": "debt defense lawyer near me",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -39153,7 +44022,10 @@ window.TERMS = {
     {
      "text": "how to respond to a debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 4,
+     "cost": 20.4,
+     "conv": 0.995
     }
    ],
    "scope": "active",
@@ -39188,7 +44060,10 @@ window.TERMS = {
     {
      "text": "received summons for debt",
      "match": "EXACT",
-     "impr": 15
+     "impr": 15,
+     "clicks": 2,
+     "cost": 7.87,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -39223,7 +44098,10 @@ window.TERMS = {
     {
      "text": "how to answer debt collection summons",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -39258,12 +44136,18 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "EXACT",
-     "impr": 8
+     "impr": 8,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     },
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 7
+     "impr": 7,
+     "clicks": 1,
+     "cost": 31.62,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -39298,12 +44182,18 @@ window.TERMS = {
     {
      "text": "im being sued for a debt what do i do",
      "match": "EXACT",
-     "impr": 8
+     "impr": 8,
+     "clicks": 1,
+     "cost": 3.17,
+     "conv": 0.0
     },
     {
      "text": "being sued by debt collector",
      "match": "EXACT",
-     "impr": 7
+     "impr": 7,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -39338,7 +44228,10 @@ window.TERMS = {
     {
      "text": "garnishment",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 1,
+     "cost": 14.76,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -39370,7 +44263,10 @@ window.TERMS = {
     {
      "text": "garnishment",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 2,
+     "cost": 28.19,
+     "conv": 2.0
     }
    ],
    "scope": "active",
@@ -39401,7 +44297,10 @@ window.TERMS = {
     {
      "text": "stop wage garnishment immediately",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -39432,7 +44331,10 @@ window.TERMS = {
     {
      "text": "stop wage garnishment immediately",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 1,
+     "cost": 4.7,
+     "conv": 0.0
     }
    ],
    "top30": 1,
@@ -39464,7 +44366,10 @@ window.TERMS = {
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 2,
+     "cost": 13.44,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -39495,7 +44400,10 @@ window.TERMS = {
     {
      "text": "garnishments payroll",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -39527,7 +44435,10 @@ window.TERMS = {
     {
      "text": "wage garnishment lawyer",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 1,
+     "cost": 36.46,
+     "conv": 0.5
     }
    ],
    "scope": "active",
@@ -39558,7 +44469,10 @@ window.TERMS = {
     {
      "text": "attorney collection agency",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -39589,7 +44503,10 @@ window.TERMS = {
     {
      "text": "attorney collection agency",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 4,
+     "cost": 57.87,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -39620,7 +44537,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 1,
+     "cost": 18.98,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -39650,7 +44570,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -39681,7 +44604,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 1,
+     "cost": 8.83,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -39712,7 +44638,10 @@ window.TERMS = {
     {
      "text": "defense against debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -39743,7 +44672,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -39774,7 +44706,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 1,
+     "cost": 4.37,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -39805,7 +44740,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -39836,7 +44774,10 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 2,
+     "cost": 23.48,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -39872,7 +44813,10 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 2,
+     "cost": 45.48,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -39908,7 +44852,10 @@ window.TERMS = {
     {
      "text": "help with garnishment",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 2,
+     "cost": 26.64,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -39944,7 +44891,10 @@ window.TERMS = {
     {
      "text": "how to get out of wage garnishment",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 3,
+     "cost": 14.26,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -39979,7 +44929,10 @@ window.TERMS = {
     {
      "text": "how to get out of wage garnishment",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 1,
+     "cost": 3.21,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -40014,7 +44967,10 @@ window.TERMS = {
     {
      "text": "how to stop a garnishment",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 1,
+     "cost": 4.63,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -40050,7 +45006,10 @@ window.TERMS = {
     {
      "text": "garnishment defense",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 1,
+     "cost": 4.29,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -40086,7 +45045,10 @@ window.TERMS = {
     {
      "text": "my wages are being garnished",
      "match": "EXACT",
-     "impr": 15
+     "impr": 15,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -40122,7 +45084,10 @@ window.TERMS = {
     {
      "text": "lawyer to stop garnishment",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -40158,7 +45123,10 @@ window.TERMS = {
     {
      "text": "garnishment removal",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 3,
+     "cost": 65.64,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -40194,7 +45162,10 @@ window.TERMS = {
     {
      "text": "served papers for credit card debt",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 3,
+     "cost": 17.34,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -40229,7 +45200,10 @@ window.TERMS = {
     {
      "text": "credit card lawsuit attorney",
      "match": "EXACT",
-     "impr": 15
+     "impr": 15,
+     "clicks": 3,
+     "cost": 35.72,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -40264,7 +45238,10 @@ window.TERMS = {
     {
      "text": "received a summons for credit card debt",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 1,
+     "cost": 5.87,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -40299,7 +45276,10 @@ window.TERMS = {
     {
      "text": "how to fight a credit card lawsuit",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -40334,7 +45314,10 @@ window.TERMS = {
     {
      "text": "how to respond to a summons for credit card debt",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 1,
+     "cost": 22.21,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -40369,7 +45352,10 @@ window.TERMS = {
     {
      "text": "bank of america lawsuit",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 2,
+     "cost": 8.29,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -40404,7 +45390,10 @@ window.TERMS = {
     {
      "text": "portfolio recovery debt collector",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 3,
+     "cost": 10.25,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -40439,12 +45428,18 @@ window.TERMS = {
     {
      "text": "what to do if a credit card company sues you",
      "match": "PHRASE",
-     "impr": 8
+     "impr": 8,
+     "clicks": 2,
+     "cost": 9.23,
+     "conv": 0.0
     },
     {
      "text": "how to fight a credit card lawsuit",
      "match": "PHRASE",
-     "impr": 7
+     "impr": 7,
+     "clicks": 1,
+     "cost": 5.06,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -40479,7 +45474,10 @@ window.TERMS = {
     {
      "text": "rights against debt collectors",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -40514,7 +45512,10 @@ window.TERMS = {
     {
      "text": "how to get a debt collector to stop calling family",
      "match": "PHRASE",
-     "impr": 15
+     "impr": 15,
+     "clicks": 1,
+     "cost": 2.29,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -40549,7 +45550,10 @@ window.TERMS = {
     {
      "text": "fdcpa attorney near me",
      "match": "EXACT",
-     "impr": 15
+     "impr": 15,
+     "clicks": 2,
+     "cost": 18.97,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -40584,7 +45588,10 @@ window.TERMS = {
     {
      "text": "credit debt lawyers",
      "match": "EXACT",
-     "impr": 14
+     "impr": 14,
+     "clicks": 1,
+     "cost": 15.42,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -40620,7 +45627,10 @@ window.TERMS = {
     {
      "text": "i have been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 1,
+     "cost": 12.23,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -40655,7 +45665,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -40690,7 +45703,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -40725,7 +45741,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -40760,7 +45779,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 1,
+     "cost": 2.85,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -40796,7 +45818,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -40832,7 +45857,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -40867,7 +45895,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -40902,7 +45933,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 14
+     "impr": 14,
+     "clicks": 1,
+     "cost": 10.37,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -40937,7 +45971,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 14
+     "impr": 14,
+     "clicks": 2,
+     "cost": 23.89,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -40972,7 +46009,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -41007,7 +46047,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney near me",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 1,
+     "cost": 19.46,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -41042,7 +46085,10 @@ window.TERMS = {
     {
      "text": "i ve been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 3,
+     "cost": 58.55,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -41077,7 +46123,10 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 3,
+     "cost": 23.95,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -41112,7 +46161,10 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "EXACT",
-     "impr": 14
+     "impr": 14,
+     "clicks": 2,
+     "cost": 24.77,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -41146,7 +46198,10 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "EXACT",
-     "impr": 14
+     "impr": 14,
+     "clicks": 4,
+     "cost": 67.45,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -41180,7 +46235,10 @@ window.TERMS = {
     {
      "text": "how to respond to a debt collector lawsuit",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -41215,7 +46273,10 @@ window.TERMS = {
     {
      "text": "portfolio recovery associates llc suing me",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 1,
+     "cost": 8.11,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -41251,7 +46312,10 @@ window.TERMS = {
     {
      "text": "how to answer a debt summons",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 2,
+     "cost": 7.52,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -41286,7 +46350,10 @@ window.TERMS = {
     {
      "text": "how to answer a debt summons",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 1,
+     "cost": 7.39,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -41321,7 +46388,10 @@ window.TERMS = {
     {
      "text": "how to answer a summons for debt collection",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 1,
+     "cost": 18.05,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -41356,7 +46426,10 @@ window.TERMS = {
     {
      "text": "received summons for debt",
      "match": "EXACT",
-     "impr": 14
+     "impr": 14,
+     "clicks": 3,
+     "cost": 15.2,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -41391,7 +46464,10 @@ window.TERMS = {
     {
      "text": "garnishment",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 1,
+     "cost": 17.98,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -41422,7 +46498,10 @@ window.TERMS = {
     {
      "text": "stop wage garnishment immediately",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 1,
+     "cost": 3.12,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -41453,7 +46532,10 @@ window.TERMS = {
     {
      "text": "stop wage garnishment immediately",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -41484,7 +46566,10 @@ window.TERMS = {
     {
      "text": "stop wage garnishment immediately",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 2,
+     "cost": 11.61,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -41515,7 +46600,10 @@ window.TERMS = {
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -41546,7 +46634,10 @@ window.TERMS = {
     {
      "text": "paycheck garnishment",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -41577,7 +46668,10 @@ window.TERMS = {
     {
      "text": "garnishment attorney near me",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 1,
+     "cost": 3.77,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -41608,7 +46702,10 @@ window.TERMS = {
     {
      "text": "i just received a writ of garnishment",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -41640,7 +46737,10 @@ window.TERMS = {
     {
      "text": "collection attorney",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 1,
+     "cost": 9.61,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -41671,7 +46771,10 @@ window.TERMS = {
     {
      "text": "debt lawyers",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -41703,7 +46806,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -41734,7 +46840,10 @@ window.TERMS = {
     {
      "text": "defense against debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -41765,7 +46874,10 @@ window.TERMS = {
     {
      "text": "defense against debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -41796,7 +46908,10 @@ window.TERMS = {
     {
      "text": "judgement collection attorney near me",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -41827,7 +46942,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -41858,7 +46976,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -41889,7 +47010,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -41920,7 +47044,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 2,
+     "cost": 10.0,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -41951,7 +47078,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -41982,7 +47112,10 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 3,
+     "cost": 10.62,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -42018,7 +47151,10 @@ window.TERMS = {
     {
      "text": "help with garnishment",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 1,
+     "cost": 2.36,
+     "conv": 2.0
     }
    ],
    "scope": "active",
@@ -42054,7 +47190,10 @@ window.TERMS = {
     {
      "text": "garnish wages attorney",
      "match": "EXACT",
-     "impr": 14
+     "impr": 14,
+     "clicks": 2,
+     "cost": 14.65,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -42089,7 +47228,10 @@ window.TERMS = {
     {
      "text": "garnish wages attorney",
      "match": "EXACT",
-     "impr": 14
+     "impr": 14,
+     "clicks": 3,
+     "cost": 26.57,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -42124,7 +47266,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 1,
+     "cost": 4.3,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -42160,7 +47305,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -42196,7 +47344,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 5,
+     "cost": 36.11,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -42232,7 +47383,10 @@ window.TERMS = {
     {
      "text": "how to stop a collection agency from garnishing your wages",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 1,
+     "cost": 11.32,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -42268,7 +47422,10 @@ window.TERMS = {
     {
      "text": "credit card lawsuit settlement",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 3,
+     "cost": 13.58,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -42303,7 +47460,10 @@ window.TERMS = {
     {
      "text": "summons for credit card debt",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -42338,7 +47498,10 @@ window.TERMS = {
     {
      "text": "credit card suing me",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -42373,7 +47536,10 @@ window.TERMS = {
     {
      "text": "how to respond to a summons for credit card debt",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 1,
+     "cost": 14.53,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -42408,7 +47574,10 @@ window.TERMS = {
     {
      "text": "how to respond to a summons for credit card debt",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 1,
+     "cost": 2.42,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -42443,7 +47612,10 @@ window.TERMS = {
     {
      "text": "capital one lawsuit",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 1,
+     "cost": 10.61,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -42478,7 +47650,10 @@ window.TERMS = {
     {
      "text": "capital one class action lawsuit",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -42513,7 +47688,10 @@ window.TERMS = {
     {
      "text": "midland funding debt collector",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -42548,7 +47726,10 @@ window.TERMS = {
     {
      "text": "capital one debt collectors",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 1,
+     "cost": 1.57,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -42583,7 +47764,10 @@ window.TERMS = {
     {
      "text": "debt collector harassment lawsuit",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -42618,7 +47802,10 @@ window.TERMS = {
     {
      "text": "debt collector harassment lawsuit",
      "match": "PHRASE",
-     "impr": 14
+     "impr": 14,
+     "clicks": 1,
+     "cost": 1.75,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -42653,7 +47840,10 @@ window.TERMS = {
     {
      "text": "credo law firm",
      "match": "EXACT",
-     "impr": 14
+     "impr": 14,
+     "clicks": 3,
+     "cost": 7.71,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -42684,7 +47874,10 @@ window.TERMS = {
     {
      "text": "being sued by debt collector",
      "match": "EXACT",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -42719,7 +47912,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit defense",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 2,
+     "cost": 7.27,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -42754,7 +47950,10 @@ window.TERMS = {
     {
      "text": "i have been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 2,
+     "cost": 7.41,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -42790,7 +47989,10 @@ window.TERMS = {
     {
      "text": "i have been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -42825,7 +48027,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -42860,7 +48065,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 13
+     "impr": 13,
+     "clicks": 1,
+     "cost": 18.24,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -42895,7 +48103,10 @@ window.TERMS = {
     {
      "text": "debt collection lawsuit defense",
      "match": "EXACT",
-     "impr": 13
+     "impr": 13,
+     "clicks": 2,
+     "cost": 31.9,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -42930,7 +48141,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 2,
+     "cost": 48.46,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -42965,7 +48179,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -43001,7 +48218,10 @@ window.TERMS = {
     {
      "text": "debt defense lawyer near me",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 2,
+     "cost": 43.47,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -43037,7 +48257,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney near me",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -43072,7 +48295,10 @@ window.TERMS = {
     {
      "text": "a collection agency is suing me",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 2,
+     "cost": 16.32,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -43107,7 +48333,10 @@ window.TERMS = {
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 2,
+     "cost": 12.4,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -43142,7 +48371,10 @@ window.TERMS = {
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 1,
+     "cost": 4.93,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -43176,7 +48408,10 @@ window.TERMS = {
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -43211,7 +48446,10 @@ window.TERMS = {
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 1,
+     "cost": 4.8,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -43246,7 +48484,10 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 3,
+     "cost": 43.26,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -43281,7 +48522,10 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 3,
+     "cost": 26.29,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -43316,7 +48560,10 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -43351,7 +48598,10 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -43387,7 +48637,10 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "EXACT",
-     "impr": 13
+     "impr": 13,
+     "clicks": 1,
+     "cost": 8.28,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -43422,7 +48675,10 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "EXACT",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -43458,7 +48714,10 @@ window.TERMS = {
     {
      "text": "how to respond to a debt collector lawsuit",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 1,
+     "cost": 3.98,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -43493,7 +48752,10 @@ window.TERMS = {
     {
      "text": "how to respond to a debt collector lawsuit",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 1,
+     "cost": 1.54,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -43528,7 +48790,10 @@ window.TERMS = {
     {
      "text": "how to respond to a debt collector lawsuit",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -43563,7 +48828,10 @@ window.TERMS = {
     {
      "text": "mandarich law group",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -43598,7 +48866,10 @@ window.TERMS = {
     {
      "text": "sued by lvnv funding llc",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 2,
+     "cost": 16.09,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -43633,7 +48904,10 @@ window.TERMS = {
     {
      "text": "how to write a response to a summons",
      "match": "EXACT",
-     "impr": 13
+     "impr": 13,
+     "clicks": 1,
+     "cost": 2.48,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -43668,7 +48942,10 @@ window.TERMS = {
     {
      "text": "how to write a response to a summons",
      "match": "EXACT",
-     "impr": 13
+     "impr": 13,
+     "clicks": 2,
+     "cost": 20.5,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -43703,7 +48980,10 @@ window.TERMS = {
     {
      "text": "i got a summons from a debt collector",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 2,
+     "cost": 8.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -43738,7 +49018,10 @@ window.TERMS = {
     {
      "text": "how to answer a debt summons",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 3,
+     "cost": 8.87,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -43773,7 +49056,10 @@ window.TERMS = {
     {
      "text": "debt defense lawyer near me",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -43808,7 +49094,10 @@ window.TERMS = {
     {
      "text": "garnishment",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -43839,7 +49128,10 @@ window.TERMS = {
     {
      "text": "garnishment law",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -43871,7 +49163,10 @@ window.TERMS = {
     {
      "text": "stop wage garnishment immediately",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -43903,7 +49198,10 @@ window.TERMS = {
     {
      "text": "stop wage garnishment immediately",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 2,
+     "cost": 12.66,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -43934,7 +49232,10 @@ window.TERMS = {
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -43965,7 +49266,10 @@ window.TERMS = {
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 1,
+     "cost": 12.52,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -43996,7 +49300,10 @@ window.TERMS = {
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 2,
+     "cost": 3.45,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -44027,7 +49334,10 @@ window.TERMS = {
     {
      "text": "wage garnishment lawyers near me",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 4,
+     "cost": 38.57,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -44058,7 +49368,10 @@ window.TERMS = {
     {
      "text": "collections attorney",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 1,
+     "cost": 4.32,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -44090,7 +49403,10 @@ window.TERMS = {
     {
      "text": "debt attorneys",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -44120,7 +49436,10 @@ window.TERMS = {
     {
      "text": "attorney collection agency",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -44152,7 +49471,10 @@ window.TERMS = {
     {
      "text": "judgment collection attorney",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -44183,7 +49505,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -44214,7 +49539,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 1,
+     "cost": 6.92,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -44245,7 +49573,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -44276,7 +49607,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 1,
+     "cost": 10.76,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -44307,7 +49641,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -44338,7 +49675,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -44369,7 +49709,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -44400,7 +49743,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -44431,7 +49777,10 @@ window.TERMS = {
     {
      "text": "defense against debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -44462,7 +49811,10 @@ window.TERMS = {
     {
      "text": "defense against debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -44493,7 +49845,10 @@ window.TERMS = {
     {
      "text": "debt lawyer cost",
      "match": "EXACT",
-     "impr": 13
+     "impr": 13,
+     "clicks": 2,
+     "cost": 6.68,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -44524,7 +49879,10 @@ window.TERMS = {
     {
      "text": "collection debt attorney",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 1,
+     "cost": 2.19,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -44556,7 +49914,10 @@ window.TERMS = {
     {
      "text": "collection debt attorney",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -44588,7 +49949,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 2,
+     "cost": 5.31,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -44619,7 +49983,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -44650,7 +50017,10 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 2,
+     "cost": 13.23,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -44686,7 +50056,10 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 3,
+     "cost": 29.64,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -44721,7 +50094,10 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 4,
+     "cost": 64.51,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -44757,7 +50133,10 @@ window.TERMS = {
     {
      "text": "stop wage garnishment",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 2,
+     "cost": 9.63,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -44793,7 +50172,10 @@ window.TERMS = {
     {
      "text": "how to stop a garnishment",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -44829,7 +50211,10 @@ window.TERMS = {
     {
      "text": "how to fight a garnishment",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 2,
+     "cost": 7.72,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -44865,7 +50250,10 @@ window.TERMS = {
     {
      "text": "can a garnishment be stopped",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 2,
+     "cost": 17.89,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -44901,7 +50289,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 1,
+     "cost": 11.18,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -44937,7 +50328,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -44972,7 +50366,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -45008,7 +50405,10 @@ window.TERMS = {
     {
      "text": "summons for credit card debt",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -45043,7 +50443,10 @@ window.TERMS = {
     {
      "text": "credit card suing me",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 2,
+     "cost": 11.38,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -45078,7 +50481,10 @@ window.TERMS = {
     {
      "text": "credit card suing me",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 4,
+     "cost": 19.37,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -45113,7 +50519,10 @@ window.TERMS = {
     {
      "text": "what happens when a credit card company sues you",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 1,
+     "cost": 9.14,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -45148,7 +50557,10 @@ window.TERMS = {
     {
      "text": "chances of winning a credit card lawsuit",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -45183,7 +50595,10 @@ window.TERMS = {
     {
      "text": "midland funding debt collector",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 1,
+     "cost": 3.49,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -45218,7 +50633,10 @@ window.TERMS = {
     {
      "text": "midland funding debt collector",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -45253,7 +50671,10 @@ window.TERMS = {
     {
      "text": "lvnv funding debt collector",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 2,
+     "cost": 8.86,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -45288,7 +50709,10 @@ window.TERMS = {
     {
      "text": "collection agency harassment",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 1,
+     "cost": 14.86,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -45323,7 +50747,10 @@ window.TERMS = {
     {
      "text": "debt collector harassment",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 1,
+     "cost": 6.59,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -45358,7 +50785,10 @@ window.TERMS = {
     {
      "text": "how to get debt collectors to stop calling family",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -45393,7 +50823,10 @@ window.TERMS = {
     {
      "text": "sue a debt collector",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 2,
+     "cost": 12.1,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -45428,7 +50861,10 @@ window.TERMS = {
     {
      "text": "how to sue debt collectors for fdcpa violations",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 1,
+     "cost": 2.91,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -45463,7 +50899,10 @@ window.TERMS = {
     {
      "text": "debt collector harassment lawsuit",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -45498,7 +50937,10 @@ window.TERMS = {
     {
      "text": "can i sue a bill collector for harassment",
      "match": "PHRASE",
-     "impr": 13
+     "impr": 13,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -45533,7 +50975,10 @@ window.TERMS = {
     {
      "text": "being sued by debt collector",
      "match": "EXACT",
-     "impr": 12
+     "impr": 12,
+     "clicks": 1,
+     "cost": 6.99,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -45568,7 +51013,10 @@ window.TERMS = {
     {
      "text": "being sued by debt collector",
      "match": "EXACT",
-     "impr": 12
+     "impr": 12,
+     "clicks": 1,
+     "cost": 8.19,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -45603,7 +51051,10 @@ window.TERMS = {
     {
      "text": "being sued by debt collector",
      "match": "EXACT",
-     "impr": 12
+     "impr": 12,
+     "clicks": 1,
+     "cost": 24.92,
+     "conv": 0.5
     }
    ],
    "scope": "active",
@@ -45638,7 +51089,10 @@ window.TERMS = {
     {
      "text": "sued by collection agency",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -45673,7 +51127,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -45708,7 +51165,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 2,
+     "cost": 11.46,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -45743,7 +51203,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -45778,7 +51241,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -45813,7 +51279,10 @@ window.TERMS = {
     {
      "text": "being sued by debt collector",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -45847,7 +51316,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 1,
+     "cost": 9.25,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -45882,7 +51354,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 2,
+     "cost": 28.62,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -45917,7 +51392,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney near me",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -45952,7 +51430,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney near me",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -45987,7 +51468,10 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 2,
+     "cost": 31.28,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -46022,7 +51506,10 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -46057,7 +51544,10 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 1,
+     "cost": 7.06,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -46092,7 +51582,10 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 2,
+     "cost": 27.42,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -46128,7 +51621,10 @@ window.TERMS = {
     {
      "text": "portfolio recovery suing me",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -46164,7 +51660,10 @@ window.TERMS = {
     {
      "text": "midland credit management threatening to sue",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 1,
+     "cost": 8.58,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -46199,7 +51698,10 @@ window.TERMS = {
     {
      "text": "how to write a response to a summons",
      "match": "EXACT",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -46234,7 +51736,10 @@ window.TERMS = {
     {
      "text": "how to write a response to a summons",
      "match": "EXACT",
-     "impr": 12
+     "impr": 12,
+     "clicks": 1,
+     "cost": 6.01,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -46269,7 +51774,10 @@ window.TERMS = {
     {
      "text": "how to write a response to a summons",
      "match": "EXACT",
-     "impr": 12
+     "impr": 12,
+     "clicks": 1,
+     "cost": 2.23,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -46304,7 +51812,10 @@ window.TERMS = {
     {
      "text": "how to answer a debt summons",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 1,
+     "cost": 6.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -46339,7 +51850,10 @@ window.TERMS = {
     {
      "text": "debt collection defense attorney near me",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -46374,7 +51888,10 @@ window.TERMS = {
     {
      "text": "how to respond to a debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 1,
+     "cost": 4.41,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -46409,7 +51926,10 @@ window.TERMS = {
     {
      "text": "how to respond to a debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 1,
+     "cost": 5.5,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -46444,7 +51964,10 @@ window.TERMS = {
     {
      "text": "how to answer debt collection lawsuit",
      "match": "EXACT",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -46479,7 +52002,10 @@ window.TERMS = {
     {
      "text": "garnishment",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 1,
+     "cost": 4.61,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -46511,7 +52037,10 @@ window.TERMS = {
     {
      "text": "wage garnishment",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -46543,7 +52072,10 @@ window.TERMS = {
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 1,
+     "cost": 12.14,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -46574,7 +52106,10 @@ window.TERMS = {
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -46605,7 +52140,10 @@ window.TERMS = {
     {
      "text": "paycheck garnishment",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -46637,7 +52175,10 @@ window.TERMS = {
     {
      "text": "bank garnishment",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 1,
+     "cost": 6.35,
+     "conv": 0.5
     }
    ],
    "scope": "active",
@@ -46669,7 +52210,10 @@ window.TERMS = {
     {
      "text": "wages garnished without notice",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 1,
+     "cost": 1.72,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -46701,7 +52245,10 @@ window.TERMS = {
     {
      "text": "wage garnishment attorney",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 1,
+     "cost": 15.44,
+     "conv": 0.0
     }
    ],
    "top30": 1,
@@ -46733,7 +52280,10 @@ window.TERMS = {
     {
      "text": "i just received a writ of garnishment",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 1,
+     "cost": 8.14,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -46764,7 +52314,10 @@ window.TERMS = {
     {
      "text": "collection attorney",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -46795,7 +52348,10 @@ window.TERMS = {
     {
      "text": "consumer debt lawyer",
      "match": "EXACT",
-     "impr": 12
+     "impr": 12,
+     "clicks": 1,
+     "cost": 33.98,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -46826,7 +52382,10 @@ window.TERMS = {
     {
      "text": "attorney collection agency",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -46858,7 +52417,10 @@ window.TERMS = {
     {
      "text": "collection defense lawyer",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -46889,7 +52451,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -46920,7 +52485,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -46951,7 +52519,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -46982,7 +52553,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -47013,7 +52587,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -47044,7 +52621,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -47075,7 +52655,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -47106,7 +52689,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -47136,7 +52722,10 @@ window.TERMS = {
     {
      "text": "defense against debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -47167,7 +52756,10 @@ window.TERMS = {
     {
      "text": "defense against debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -47198,7 +52790,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -47229,7 +52824,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -47260,7 +52858,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 1,
+     "cost": 3.38,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -47291,7 +52892,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 1,
+     "cost": 16.37,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -47322,7 +52926,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -47353,7 +52960,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 1,
+     "cost": 8.28,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -47384,7 +52994,10 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -47420,7 +53033,10 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "top30": 0.786,
@@ -47457,7 +53073,10 @@ window.TERMS = {
     {
      "text": "how to stop a garnishment",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -47492,7 +53111,10 @@ window.TERMS = {
     {
      "text": "how to stop a garnishment",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 2,
+     "cost": 13.08,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -47528,7 +53150,10 @@ window.TERMS = {
     {
      "text": "my wages are being garnished",
      "match": "EXACT",
-     "impr": 12
+     "impr": 12,
+     "clicks": 1,
+     "cost": 6.39,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -47564,7 +53189,10 @@ window.TERMS = {
     {
      "text": "bank levy lawyer",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -47598,7 +53226,10 @@ window.TERMS = {
     {
      "text": "how to remove wage garnishment",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 2,
+     "cost": 16.22,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -47634,7 +53265,10 @@ window.TERMS = {
     {
      "text": "can a garnishment be stopped",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -47670,7 +53304,10 @@ window.TERMS = {
     {
      "text": "garnish wages attorney",
      "match": "EXACT",
-     "impr": 12
+     "impr": 12,
+     "clicks": 2,
+     "cost": 20.36,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -47705,7 +53342,10 @@ window.TERMS = {
     {
      "text": "garnish wages attorney",
      "match": "EXACT",
-     "impr": 12
+     "impr": 12,
+     "clicks": 1,
+     "cost": 21.58,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -47740,7 +53380,10 @@ window.TERMS = {
     {
      "text": "garnish wages attorney",
      "match": "EXACT",
-     "impr": 12
+     "impr": 12,
+     "clicks": 1,
+     "cost": 5.56,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -47775,7 +53418,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -47810,7 +53456,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 2,
+     "cost": 9.65,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -47846,7 +53495,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 1,
+     "cost": 3.6,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -47882,7 +53534,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 1,
+     "cost": 3.21,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -47917,7 +53572,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -47952,7 +53610,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -47988,7 +53649,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 2,
+     "cost": 3.77,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -48024,7 +53688,10 @@ window.TERMS = {
     {
      "text": "summons for credit card debt",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 2,
+     "cost": 14.31,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -48059,7 +53726,10 @@ window.TERMS = {
     {
      "text": "can a credit card company sue you",
      "match": "EXACT",
-     "impr": 12
+     "impr": 12,
+     "clicks": 1,
+     "cost": 14.55,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -48094,7 +53764,10 @@ window.TERMS = {
     {
      "text": "lawyer for credit card lawsuit near me",
      "match": "EXACT",
-     "impr": 12
+     "impr": 12,
+     "clicks": 1,
+     "cost": 6.71,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -48129,7 +53802,10 @@ window.TERMS = {
     {
      "text": "midland funding debt collector",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -48164,7 +53840,10 @@ window.TERMS = {
     {
      "text": "midland funding debt collector",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -48199,7 +53878,10 @@ window.TERMS = {
     {
      "text": "portfolio recovery is suing me",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -48235,7 +53917,10 @@ window.TERMS = {
     {
      "text": "portfolio recovery debt collectors",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 2,
+     "cost": 25.18,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -48270,7 +53955,10 @@ window.TERMS = {
     {
      "text": "cavalry spv debt collector",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -48305,7 +53993,10 @@ window.TERMS = {
     {
      "text": "resurgent capital debt collectors",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -48340,7 +54031,10 @@ window.TERMS = {
     {
      "text": "resurgent capital debt collectors",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -48375,7 +54069,10 @@ window.TERMS = {
     {
      "text": "stop debt collectors",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 1,
+     "cost": 7.9,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -48410,7 +54107,10 @@ window.TERMS = {
     {
      "text": "debt collector calls",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -48445,7 +54145,10 @@ window.TERMS = {
     {
      "text": "how to stop debt collector calls",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -48480,7 +54183,10 @@ window.TERMS = {
     {
      "text": "debt collector harassment lawyer",
      "match": "EXACT",
-     "impr": 12
+     "impr": 12,
+     "clicks": 3,
+     "cost": 35.02,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -48515,7 +54221,10 @@ window.TERMS = {
     {
      "text": "creditor harassment",
      "match": "EXACT",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -48550,7 +54259,10 @@ window.TERMS = {
     {
      "text": "sue a debt collector",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -48585,7 +54297,10 @@ window.TERMS = {
     {
      "text": "sue a debt collector",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -48620,7 +54335,10 @@ window.TERMS = {
     {
      "text": "sue a debt collector",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -48655,7 +54373,10 @@ window.TERMS = {
     {
      "text": "debt collector harassment lawsuit",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 2,
+     "cost": 6.9,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -48690,7 +54411,10 @@ window.TERMS = {
     {
      "text": "debt collector harassment lawsuit",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -48725,7 +54449,10 @@ window.TERMS = {
     {
      "text": "fdcpa attorney near me",
      "match": "EXACT",
-     "impr": 12
+     "impr": 12,
+     "clicks": 1,
+     "cost": 7.84,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -48760,7 +54487,10 @@ window.TERMS = {
     {
      "text": "attorneys for debt collection harassment",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -48795,7 +54525,10 @@ window.TERMS = {
     {
      "text": "attorneys for debt collection harassment",
      "match": "PHRASE",
-     "impr": 12
+     "impr": 12,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -48830,7 +54563,10 @@ window.TERMS = {
     {
      "text": "how to fight debt collectors",
      "match": "EXACT",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -48865,7 +54601,10 @@ window.TERMS = {
     {
      "text": "being sued by debt collector",
      "match": "EXACT",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -48900,7 +54639,10 @@ window.TERMS = {
     {
      "text": "being sued by debt collector",
      "match": "EXACT",
-     "impr": 11
+     "impr": 11,
+     "clicks": 1,
+     "cost": 2.56,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -48935,7 +54677,10 @@ window.TERMS = {
     {
      "text": "credit debt lawyers",
      "match": "EXACT",
-     "impr": 11
+     "impr": 11,
+     "clicks": 1,
+     "cost": 6.86,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -48970,7 +54715,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit defense",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 2,
+     "cost": 9.03,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -49005,7 +54753,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 1,
+     "cost": 3.28,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -49040,7 +54791,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -49074,7 +54828,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -49109,7 +54866,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -49144,7 +54904,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 2,
+     "cost": 12.08,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -49179,7 +54942,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 1,
+     "cost": 5.7,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -49214,7 +54980,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -49249,7 +55018,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -49284,7 +55056,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 1,
+     "cost": 6.87,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -49320,7 +55095,10 @@ window.TERMS = {
     {
      "text": "being sued by debt collector",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -49355,7 +55133,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 11
+     "impr": 11,
+     "clicks": 1,
+     "cost": 17.11,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -49390,7 +55171,10 @@ window.TERMS = {
     {
      "text": "consumer debt defense attorney",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -49425,7 +55209,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -49460,7 +55247,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 1,
+     "cost": 12.27,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -49495,7 +55285,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -49531,7 +55324,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -49566,7 +55362,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney near me",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -49601,7 +55400,10 @@ window.TERMS = {
     {
      "text": "i ve been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 1,
+     "cost": 3.22,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -49636,7 +55438,10 @@ window.TERMS = {
     {
      "text": "i ve been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -49671,7 +55476,10 @@ window.TERMS = {
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 1,
+     "cost": 4.78,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -49706,7 +55514,10 @@ window.TERMS = {
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 1,
+     "cost": 2.47,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -49741,7 +55552,10 @@ window.TERMS = {
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -49776,7 +55590,10 @@ window.TERMS = {
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -49811,7 +55628,10 @@ window.TERMS = {
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -49847,7 +55667,10 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 4,
+     "cost": 53.37,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -49882,7 +55705,10 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -49917,7 +55743,10 @@ window.TERMS = {
     {
      "text": "cavalry spv i llc suing me",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -49953,7 +55782,10 @@ window.TERMS = {
     {
      "text": "portfolio recovery associates settlement",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -49988,7 +55820,10 @@ window.TERMS = {
     {
      "text": "midland credit suing me",
      "match": "EXACT",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -50023,7 +55858,10 @@ window.TERMS = {
     {
      "text": "how to write a response to a summons",
      "match": "EXACT",
-     "impr": 11
+     "impr": 11,
+     "clicks": 3,
+     "cost": 16.73,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -50058,7 +55896,10 @@ window.TERMS = {
     {
      "text": "debt defense lawyer near me",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -50093,7 +55934,10 @@ window.TERMS = {
     {
      "text": "how to respond to a debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 3,
+     "cost": 8.99,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -50128,7 +55972,10 @@ window.TERMS = {
     {
      "text": "how to answer debt collection lawsuit",
      "match": "EXACT",
-     "impr": 11
+     "impr": 11,
+     "clicks": 4,
+     "cost": 31.84,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -50163,7 +56010,10 @@ window.TERMS = {
     {
      "text": "received summons for debt",
      "match": "EXACT",
-     "impr": 11
+     "impr": 11,
+     "clicks": 2,
+     "cost": 18.4,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -50198,7 +56048,10 @@ window.TERMS = {
     {
      "text": "wage garnishment",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -50229,7 +56082,10 @@ window.TERMS = {
     {
      "text": "garnishment attorney",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 2,
+     "cost": 7.98,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -50260,7 +56116,10 @@ window.TERMS = {
     {
      "text": "pay garnishment",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -50292,7 +56151,10 @@ window.TERMS = {
     {
      "text": "legal garnishment",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -50324,7 +56186,10 @@ window.TERMS = {
     {
      "text": "garnishment lawyer",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 1,
+     "cost": 33.4,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -50355,7 +56220,10 @@ window.TERMS = {
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -50386,7 +56254,10 @@ window.TERMS = {
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -50416,7 +56287,10 @@ window.TERMS = {
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -50447,7 +56321,10 @@ window.TERMS = {
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 1,
+     "cost": 4.29,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -50478,7 +56355,10 @@ window.TERMS = {
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 1,
+     "cost": 6.7,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -50509,7 +56389,10 @@ window.TERMS = {
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -50540,7 +56423,10 @@ window.TERMS = {
     {
      "text": "garnishments payroll",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 1,
+     "cost": 8.43,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -50572,7 +56458,10 @@ window.TERMS = {
     {
      "text": "paycheck garnishment",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -50603,7 +56492,10 @@ window.TERMS = {
     {
      "text": "paycheck garnishment",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -50634,7 +56526,10 @@ window.TERMS = {
     {
      "text": "paycheck garnishment",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 1,
+     "cost": 7.21,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -50665,7 +56560,10 @@ window.TERMS = {
     {
      "text": "paycheck garnishment",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 2,
+     "cost": 3.72,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -50696,7 +56594,10 @@ window.TERMS = {
     {
      "text": "paycheck garnishment",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -50727,7 +56628,10 @@ window.TERMS = {
     {
      "text": "bank garnishment",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -50759,7 +56663,10 @@ window.TERMS = {
     {
      "text": "writ of garnishment",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 2,
+     "cost": 9.35,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -50790,7 +56697,10 @@ window.TERMS = {
     {
      "text": "i just received a writ of garnishment",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -50822,7 +56732,10 @@ window.TERMS = {
     {
      "text": "collection attorney",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -50853,7 +56766,10 @@ window.TERMS = {
     {
      "text": "collection attorney",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -50883,7 +56799,10 @@ window.TERMS = {
     {
      "text": "collection attorney",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 2,
+     "cost": 14.35,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -50915,7 +56834,10 @@ window.TERMS = {
     {
      "text": "collections lawyer",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 2,
+     "cost": 25.57,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -50946,7 +56868,10 @@ window.TERMS = {
     {
      "text": "debt attorneys",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -50978,7 +56903,10 @@ window.TERMS = {
     {
      "text": "attorney collection agency",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -51008,7 +56936,10 @@ window.TERMS = {
     {
      "text": "attorney collection agency",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -51039,7 +56970,10 @@ window.TERMS = {
     {
      "text": "collection defense attorney",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 1,
+     "cost": 3.52,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -51070,7 +57004,10 @@ window.TERMS = {
     {
      "text": "collection defense lawyer",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -51101,7 +57038,10 @@ window.TERMS = {
     {
      "text": "collection defense lawyer",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 2,
+     "cost": 24.72,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -51132,7 +57072,10 @@ window.TERMS = {
     {
      "text": "collection defense lawyer",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -51164,7 +57107,10 @@ window.TERMS = {
     {
      "text": "judgment collection attorney",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -51195,7 +57141,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 1,
+     "cost": 10.02,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -51226,7 +57175,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -51257,7 +57209,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -51288,7 +57243,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -51319,7 +57277,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -51350,7 +57311,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -51381,7 +57345,10 @@ window.TERMS = {
     {
      "text": "defense against debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -51412,7 +57379,10 @@ window.TERMS = {
     {
      "text": "defense against debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -51443,7 +57413,10 @@ window.TERMS = {
     {
      "text": "defense against debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -51474,7 +57447,10 @@ window.TERMS = {
     {
      "text": "defense against debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -51505,7 +57481,10 @@ window.TERMS = {
     {
      "text": "attorney for judgement collection",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 3,
+     "cost": 30.76,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -51536,7 +57515,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 1,
+     "cost": 8.58,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -51567,7 +57549,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 1,
+     "cost": 1.61,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -51598,7 +57583,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -51629,7 +57617,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -51660,7 +57651,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -51691,7 +57685,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -51722,7 +57719,10 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -51758,7 +57758,10 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 7,
+     "cost": 38.61,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -51794,7 +57797,10 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 1,
+     "cost": 8.99,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -51829,7 +57835,10 @@ window.TERMS = {
     {
      "text": "help with garnishment",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -51865,7 +57874,10 @@ window.TERMS = {
     {
      "text": "help with garnishment",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 1,
+     "cost": 9.09,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -51901,7 +57913,10 @@ window.TERMS = {
     {
      "text": "how to get out of wage garnishment",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -51936,7 +57951,10 @@ window.TERMS = {
     {
      "text": "garnishment defense",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -51970,7 +57988,10 @@ window.TERMS = {
     {
      "text": "how to fight a garnishment",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 2,
+     "cost": 12.35,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -52006,7 +58027,10 @@ window.TERMS = {
     {
      "text": "how to fight a garnishment",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 1,
+     "cost": 25.33,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -52042,7 +58066,10 @@ window.TERMS = {
     {
      "text": "how to stop wage garnishments",
      "match": "EXACT",
-     "impr": 11
+     "impr": 11,
+     "clicks": 3,
+     "cost": 20.45,
+     "conv": 0.0
     }
    ],
    "top30": 0.923,
@@ -52079,7 +58106,10 @@ window.TERMS = {
     {
      "text": "garnish wages attorney",
      "match": "EXACT",
-     "impr": 11
+     "impr": 11,
+     "clicks": 1,
+     "cost": 7.33,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -52114,7 +58144,10 @@ window.TERMS = {
     {
      "text": "garnish wages attorney",
      "match": "EXACT",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -52149,7 +58182,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -52185,7 +58221,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 1,
+     "cost": 4.84,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -52221,7 +58260,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 1,
+     "cost": 6.96,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -52256,7 +58298,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -52291,7 +58336,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -52327,7 +58375,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 3,
+     "cost": 21.13,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -52363,7 +58414,10 @@ window.TERMS = {
     {
      "text": "credit card lawyers",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -52398,7 +58452,10 @@ window.TERMS = {
     {
      "text": "credit card suing me",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -52433,7 +58490,10 @@ window.TERMS = {
     {
      "text": "what to do when a credit card company sues you",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 2,
+     "cost": 7.97,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -52468,7 +58528,10 @@ window.TERMS = {
     {
      "text": "how to fight a credit card lawsuit",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -52503,7 +58566,10 @@ window.TERMS = {
     {
      "text": "how to fight a credit card lawsuit",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 1,
+     "cost": 9.12,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -52538,7 +58604,10 @@ window.TERMS = {
     {
      "text": "how to fight a credit card lawsuit",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -52573,7 +58642,10 @@ window.TERMS = {
     {
      "text": "lawsuit by credit card company",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 2,
+     "cost": 24.46,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -52608,7 +58680,10 @@ window.TERMS = {
     {
      "text": "midland funding debt collector",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -52643,7 +58718,10 @@ window.TERMS = {
     {
      "text": "portfolio recovery debt collector",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -52678,7 +58756,10 @@ window.TERMS = {
     {
      "text": "lvnv funding debt collector",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 3,
+     "cost": 16.83,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -52713,7 +58794,10 @@ window.TERMS = {
     {
      "text": "resurgent capital debt collectors",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -52748,7 +58832,10 @@ window.TERMS = {
     {
      "text": "how to stop debt collector calls",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 1,
+     "cost": 5.93,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -52783,7 +58870,10 @@ window.TERMS = {
     {
      "text": "sue a debt collector",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -52818,7 +58908,10 @@ window.TERMS = {
     {
      "text": "can you sue a collection agency for harassment",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -52853,7 +58946,10 @@ window.TERMS = {
     {
      "text": "sue collection agency for harassment",
      "match": "PHRASE",
-     "impr": 11
+     "impr": 11,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -52888,7 +58984,10 @@ window.TERMS = {
     {
      "text": "debt defense attorney",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -52923,7 +59022,10 @@ window.TERMS = {
     {
      "text": "how to fight debt collectors",
      "match": "EXACT",
-     "impr": 10
+     "impr": 10,
+     "clicks": 3,
+     "cost": 22.85,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -52959,7 +59061,10 @@ window.TERMS = {
     {
      "text": "how to fight debt collectors",
      "match": "EXACT",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 4.65,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -52994,7 +59099,10 @@ window.TERMS = {
     {
      "text": "being sued by debt collector",
      "match": "EXACT",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -53029,7 +59137,10 @@ window.TERMS = {
     {
      "text": "being sued by debt collector",
      "match": "EXACT",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -53064,7 +59175,10 @@ window.TERMS = {
     {
      "text": "debt defense lawyer",
      "match": "EXACT",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 17.41,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -53099,7 +59213,10 @@ window.TERMS = {
     {
      "text": "collection defense attorney",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 29.98,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -53134,7 +59251,10 @@ window.TERMS = {
     {
      "text": "debt litigation attorney",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -53168,7 +59288,10 @@ window.TERMS = {
     {
      "text": "credit debt lawyers",
      "match": "EXACT",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -53204,7 +59327,10 @@ window.TERMS = {
     {
      "text": "credit debt lawyers",
      "match": "EXACT",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 2.93,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -53240,7 +59366,10 @@ window.TERMS = {
     {
      "text": "i have been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 11.44,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -53276,7 +59405,10 @@ window.TERMS = {
     {
      "text": "i have been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -53311,7 +59443,10 @@ window.TERMS = {
     {
      "text": "i have been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 3.77,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -53346,7 +59481,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 3.99,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -53381,7 +59519,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -53416,7 +59557,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -53451,7 +59595,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -53486,7 +59633,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -53521,7 +59671,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 0.94,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -53556,7 +59709,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -53591,7 +59747,10 @@ window.TERMS = {
     {
      "text": "debt collection agency rights",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -53626,7 +59785,10 @@ window.TERMS = {
     {
      "text": "being sued by debt collector",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -53661,7 +59823,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit attorney",
      "match": "EXACT",
-     "impr": 10
+     "impr": 10,
+     "clicks": 2,
+     "cost": 25.56,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -53696,7 +59861,10 @@ window.TERMS = {
     {
      "text": "consumer debt defense attorney",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 2,
+     "cost": 16.14,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -53731,7 +59899,10 @@ window.TERMS = {
     {
      "text": "consumer debt defense attorney",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 12.86,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -53765,7 +59936,10 @@ window.TERMS = {
     {
      "text": "debt collection lawsuit defense",
      "match": "EXACT",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -53800,7 +59974,10 @@ window.TERMS = {
     {
      "text": "debt collection lawsuit defense",
      "match": "EXACT",
-     "impr": 10
+     "impr": 10,
+     "clicks": 2,
+     "cost": 12.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -53835,7 +60012,10 @@ window.TERMS = {
     {
      "text": "debt lawsuit lawyer",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -53871,7 +60051,10 @@ window.TERMS = {
     {
      "text": "debt collection lawsuit attorney",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -53907,7 +60090,10 @@ window.TERMS = {
     {
      "text": "i ve been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 4.21,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -53942,7 +60128,10 @@ window.TERMS = {
     {
      "text": "i ve been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 2.91,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -53977,7 +60166,10 @@ window.TERMS = {
     {
      "text": "i ve been sued by a debt collector",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -54012,7 +60204,10 @@ window.TERMS = {
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 4.1,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -54047,7 +60242,10 @@ window.TERMS = {
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -54082,7 +60280,10 @@ window.TERMS = {
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 4.56,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -54117,7 +60318,10 @@ window.TERMS = {
     {
      "text": "a debt collector is suing me",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -54152,7 +60356,10 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 2,
+     "cost": 22.71,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -54187,7 +60394,10 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 2,
+     "cost": 10.72,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -54223,7 +60433,10 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -54258,7 +60471,10 @@ window.TERMS = {
     {
      "text": "attorney for debt collection lawsuit",
      "match": "EXACT",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -54293,7 +60509,10 @@ window.TERMS = {
     {
      "text": "how to respond to a debt collector lawsuit",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 2,
+     "cost": 16.18,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -54328,7 +60547,10 @@ window.TERMS = {
     {
      "text": "how to respond to a debt collector lawsuit",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 5.71,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -54363,7 +60585,10 @@ window.TERMS = {
     {
      "text": "how to respond to a debt collector lawsuit",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -54398,7 +60623,10 @@ window.TERMS = {
     {
      "text": "how to respond to a debt collector lawsuit",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 9.65,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -54433,7 +60661,10 @@ window.TERMS = {
     {
      "text": "mandarich law group",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 15.99,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -54469,7 +60700,10 @@ window.TERMS = {
     {
      "text": "sued by lvnv funding llc",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -54504,7 +60738,10 @@ window.TERMS = {
     {
      "text": "how to write a response to a summons",
      "match": "EXACT",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -54539,7 +60776,10 @@ window.TERMS = {
     {
      "text": "how to write a response to a summons",
      "match": "EXACT",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 5.83,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -54574,7 +60814,10 @@ window.TERMS = {
     {
      "text": "how to write a response to a summons",
      "match": "EXACT",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 2.75,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -54609,7 +60852,10 @@ window.TERMS = {
     {
      "text": "i got a summons from a debt collector",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 11.7,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -54644,7 +60890,10 @@ window.TERMS = {
     {
      "text": "debt defense lawyer near me",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -54678,7 +60927,10 @@ window.TERMS = {
     {
      "text": "debt defense lawyer near me",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -54713,7 +60965,10 @@ window.TERMS = {
     {
      "text": "debt defense lawyer near me",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 2,
+     "cost": 79.72,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -54748,7 +61003,10 @@ window.TERMS = {
     {
      "text": "received summons for debt",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -54783,7 +61041,10 @@ window.TERMS = {
     {
      "text": "how to respond to a debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 6.57,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -54818,7 +61079,10 @@ window.TERMS = {
     {
      "text": "how to respond to a debt collection lawsuit",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -54853,7 +61117,10 @@ window.TERMS = {
     {
      "text": "received summons for debt",
      "match": "EXACT",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -54888,7 +61155,10 @@ window.TERMS = {
     {
      "text": "received summons for debt",
      "match": "EXACT",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 2.2,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -54923,7 +61193,10 @@ window.TERMS = {
     {
      "text": "garnishment",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 2,
+     "cost": 8.36,
+     "conv": 0.0
     }
    ],
    "top30": 1,
@@ -54955,7 +61228,10 @@ window.TERMS = {
     {
      "text": "garnishment",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -54987,7 +61263,10 @@ window.TERMS = {
     {
      "text": "garnishment",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 4.52,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -55018,7 +61297,10 @@ window.TERMS = {
     {
      "text": "garnishment",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -55049,7 +61331,10 @@ window.TERMS = {
     {
      "text": "garnishment lawyer",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 21.44,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -55080,7 +61365,10 @@ window.TERMS = {
     {
      "text": "stop wage garnishment immediately",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -55112,7 +61400,10 @@ window.TERMS = {
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -55143,7 +61434,10 @@ window.TERMS = {
     {
      "text": "help with wage garnishment",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 11.26,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -55175,7 +61469,10 @@ window.TERMS = {
     {
      "text": "wages being garnished",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -55207,7 +61504,10 @@ window.TERMS = {
     {
      "text": "paycheck garnishment",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 3.41,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -55238,7 +61538,10 @@ window.TERMS = {
     {
      "text": "check garnishment",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -55270,7 +61573,10 @@ window.TERMS = {
     {
      "text": "i just received a writ of garnishment",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 2,
+     "cost": 6.82,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -55302,7 +61608,10 @@ window.TERMS = {
     {
      "text": "i just received a writ of garnishment",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -55334,7 +61643,10 @@ window.TERMS = {
     {
      "text": "collections attorney",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -55364,7 +61676,10 @@ window.TERMS = {
     {
      "text": "debt attorneys",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 17.82,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -55394,7 +61709,10 @@ window.TERMS = {
     {
      "text": "debt attorneys",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -55425,7 +61743,10 @@ window.TERMS = {
     {
      "text": "credit collection attorney",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -55456,7 +61777,10 @@ window.TERMS = {
     {
      "text": "collections attorney",
      "match": "EXACT",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -55487,7 +61811,10 @@ window.TERMS = {
     {
      "text": "attorney collection agency",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -55518,7 +61845,10 @@ window.TERMS = {
     {
      "text": "attorney collection agency",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -55550,7 +61880,10 @@ window.TERMS = {
     {
      "text": "collection defense attorney",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -55581,7 +61914,10 @@ window.TERMS = {
     {
      "text": "collection defense lawyer",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -55612,7 +61948,10 @@ window.TERMS = {
     {
      "text": "collections attorney near me",
      "match": "EXACT",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -55643,7 +61982,10 @@ window.TERMS = {
     {
      "text": "collections attorney near me",
      "match": "EXACT",
-     "impr": 10
+     "impr": 10,
+     "clicks": 2,
+     "cost": 16.53,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -55674,7 +62016,10 @@ window.TERMS = {
     {
      "text": "credit debt lawyers",
      "match": "EXACT",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -55705,7 +62050,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -55735,7 +62083,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -55766,7 +62117,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 2,
+     "cost": 13.38,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -55797,7 +62151,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 0.55,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -55829,7 +62186,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 8.2,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -55860,7 +62220,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 3.51,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -55891,7 +62254,10 @@ window.TERMS = {
     {
      "text": "debt collection practices",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 3,
+     "cost": 19.36,
+     "conv": 0.75
     }
    ],
    "scope": "active",
@@ -55922,7 +62288,10 @@ window.TERMS = {
     {
      "text": "collection lawyers near me",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 2,
+     "cost": 14.24,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -55953,7 +62322,10 @@ window.TERMS = {
     {
      "text": "judgement attorney near me",
      "match": "EXACT",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 8.55,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -55984,7 +62356,10 @@ window.TERMS = {
     {
      "text": "attorney for judgement collection",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 11.14,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -56015,7 +62390,10 @@ window.TERMS = {
     {
      "text": "collection debt attorney",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -56046,7 +62424,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 5.98,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -56077,7 +62458,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 2,
+     "cost": 8.03,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -56108,7 +62492,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -56139,7 +62526,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -56170,7 +62560,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -56201,7 +62594,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 3,
+     "cost": 33.1,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -56232,7 +62628,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -56263,7 +62662,10 @@ window.TERMS = {
     {
      "text": "fdcpa",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 0.57,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -56294,7 +62696,10 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 2,
+     "cost": 3.74,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -56330,7 +62735,10 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -56365,7 +62773,10 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 5,
+     "cost": 32.23,
+     "conv": 0.667
     }
    ],
    "scope": "active",
@@ -56399,7 +62810,10 @@ window.TERMS = {
     {
      "text": "stop garnishment",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 3.8,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -56434,7 +62848,10 @@ window.TERMS = {
     {
      "text": "how to stop wage garnishment",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -56470,7 +62887,10 @@ window.TERMS = {
     {
      "text": "help with garnishment",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -56506,7 +62926,10 @@ window.TERMS = {
     {
      "text": "help with garnishment",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -56541,7 +62964,10 @@ window.TERMS = {
     {
      "text": "help with garnishment",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -56577,7 +63003,10 @@ window.TERMS = {
     {
      "text": "help with garnishment",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -56613,7 +63042,10 @@ window.TERMS = {
     {
      "text": "how to get out of wage garnishment",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 3.91,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -56648,7 +63080,10 @@ window.TERMS = {
     {
      "text": "how to get out of wage garnishment",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -56683,7 +63118,10 @@ window.TERMS = {
     {
      "text": "how to get out of wage garnishment",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -56719,7 +63157,10 @@ window.TERMS = {
     {
      "text": "garnishment defense",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 2,
+     "cost": 65.82,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -56755,7 +63196,10 @@ window.TERMS = {
     {
      "text": "my wages are being garnished",
      "match": "EXACT",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -56790,7 +63234,10 @@ window.TERMS = {
     {
      "text": "bank levy lawyer",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -56824,7 +63271,10 @@ window.TERMS = {
     {
      "text": "how to fight a garnishment",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 2,
+     "cost": 13.32,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -56860,7 +63310,10 @@ window.TERMS = {
     {
      "text": "how to fight a garnishment",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 6.87,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -56896,7 +63349,10 @@ window.TERMS = {
     {
      "text": "how can i stop my wages from being garnished",
      "match": "EXACT",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 6.84,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -56932,7 +63388,10 @@ window.TERMS = {
     {
      "text": "how can i stop my wages from being garnished",
      "match": "EXACT",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 9.16,
+     "conv": 1.0
     }
    ],
    "scope": "active",
@@ -56968,7 +63427,10 @@ window.TERMS = {
     {
      "text": "how to stop wage garnishments",
      "match": "EXACT",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -57004,7 +63466,10 @@ window.TERMS = {
     {
      "text": "stop wage garnishment attorney",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 2,
+     "cost": 11.56,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -57039,7 +63504,10 @@ window.TERMS = {
     {
      "text": "garnish wages attorney",
      "match": "EXACT",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 10.15,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -57074,7 +63542,10 @@ window.TERMS = {
     {
      "text": "garnish wages attorney",
      "match": "EXACT",
-     "impr": 10
+     "impr": 10,
+     "clicks": 3,
+     "cost": 30.13,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -57109,7 +63580,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -57144,7 +63618,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -57180,7 +63657,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -57216,7 +63696,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -57252,7 +63735,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 5.67,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -57288,7 +63774,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 14.4,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -57324,7 +63813,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -57360,7 +63852,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -57396,7 +63891,10 @@ window.TERMS = {
     {
      "text": "help with garnished wages",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 2,
+     "cost": 11.52,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -57432,7 +63930,10 @@ window.TERMS = {
     {
      "text": "i got served for credit card debt",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -57467,7 +63968,10 @@ window.TERMS = {
     {
      "text": "how to fight a credit card lawsuit",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -57502,7 +64006,10 @@ window.TERMS = {
     {
      "text": "how to fight a credit card lawsuit",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 2,
+     "cost": 34.13,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -57537,7 +64044,10 @@ window.TERMS = {
     {
      "text": "lawsuit by credit card company",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -57572,7 +64082,10 @@ window.TERMS = {
     {
      "text": "capital one suing me",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -57607,7 +64120,10 @@ window.TERMS = {
     {
      "text": "midland funding debt collector",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -57642,7 +64158,10 @@ window.TERMS = {
     {
      "text": "midland funding debt collector",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -57677,7 +64196,10 @@ window.TERMS = {
     {
      "text": "cavalry spv debt collector",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 7.79,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -57712,7 +64234,10 @@ window.TERMS = {
     {
      "text": "harassment from debt collectors",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 3.55,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -57747,7 +64272,10 @@ window.TERMS = {
     {
      "text": "sue a debt collector",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -57782,7 +64310,10 @@ window.TERMS = {
     {
      "text": "debt collector harassment lawsuit",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 1,
+     "cost": 5.27,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -57817,7 +64348,10 @@ window.TERMS = {
     {
      "text": "debt collector harassment lawsuit",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -57852,7 +64386,10 @@ window.TERMS = {
     {
      "text": "can you sue bill collectors for harassment",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -57887,7 +64424,10 @@ window.TERMS = {
     {
      "text": "how to sue a collection agency for harassment",
      "match": "PHRASE",
-     "impr": 10
+     "impr": 10,
+     "clicks": 0,
+     "cost": 0.0,
+     "conv": 0.0
     }
    ],
    "scope": "active",
@@ -57922,7 +64462,10 @@ window.TERMS = {
     {
      "text": "fdcpa attorney near me",
      "match": "EXACT",
-     "impr": 10
+     "impr": 10,
+     "clicks": 2,
+     "cost": 20.97,
+     "conv": 0.0
     }
    ],
    "scope": "active",

@@ -70,6 +70,18 @@ td.c-kw{min-width:170px;max-width:220px;font-size:12px}
 .kwsel[aria-pressed=true] .kwm,.kwsel[aria-pressed=true] .small{color:#dfe3e8;border-color:#5b636d}
 .kwsel .small{margin-left:auto}
 .kwclr{background:none;border:0;padding:0;color:var(--blue);font-size:11.5px;cursor:pointer;text-decoration:underline}
+tr.sub td{background:#f7f8fa;font-size:12px;border-top:1px dashed var(--line)}
+tr.sub td:first-child{border-left:3px solid var(--blue)}
+.subad{padding-left:14px}
+.subad .hl{display:block;color:#1a0dab;font-weight:600;font-size:11.5px;margin-top:2px}
+.exp{border:1px solid var(--line);background:#fff;border-radius:8px;padding:5px 9px;font:600 12px system-ui,sans-serif;cursor:pointer;color:var(--ink);text-align:left}
+.exp:hover,.exp:focus-visible{border-color:var(--blue);outline:none}
+.exp .car{display:inline-block;transition:transform .15s}
+.exp[aria-expanded=true] .car{transform:rotate(90deg)}
+.pglist{margin-top:5px;font-size:11.5px}
+.adopen{border:0;background:none;padding:0;color:var(--blue);font:600 12px system-ui,sans-serif;cursor:pointer;text-decoration:underline}
+.est{font-size:10px;color:var(--mute);font-weight:600}
+.kwsum{font-size:11.5px;color:var(--mute);margin:0 0 5px}
 .adscope{font-size:11px;color:var(--mute);margin:0 0 5px}
 .kwm{display:inline-block;font:600 10px/1.6 ui-monospace,Menlo,monospace;border:1px solid var(--line);border-radius:4px;padding:0 4px;color:var(--mute);margin-left:3px}
 .paused{background:#8a6d3b}
@@ -163,6 +175,7 @@ details.ana .box b:first-child{margin-top:0}
     <select id="ver" aria-label="Verdict"><option value="">All verdicts</option><option>Strong</option><option>Above</option><option>Below</option><option>Brand</option></select>
     <select id="act" aria-label="Action"><option value="">All actions</option></select>
     <select id="grp" aria-label="Group by"><option value="intent">Group by intent</option><option value="debtType">Group by debt type</option><option value="">No grouping</option></select>
+    <button id="expall" class="chip" aria-pressed="false">Expand all ads</button>
     <span id="count"></span>
   </div>
   <div class="legend">
@@ -178,7 +191,7 @@ details.ana .box b:first-child{margin-top:0}
         <th data-k="term">Search term</th>
         <th data-k="kw">Triggered by keyword <span class="small">(click to filter ads)</span></th>
         <th data-k="impr">Impr.</th><th data-k="clicks">Clicks</th><th data-k="ctr">CTR vs benchmark</th><th data-k="conv">Conv. / CPA</th><th data-k="top" class="grp-last">Top of page (30 d)</th>
-        <th data-k="dom">Ads triggered (ad group, lifetime) → landing page</th>
+        <th data-k="dom">Ads (90 days) → landing pages</th>
         <th data-k="liveShare">Best current page</th>
         <th data-k="newp">Recommended new page</th>
         <th data-k="action">Recommended action</th>
@@ -217,6 +230,7 @@ details.ana .box b:first-child{margin-top:0}
   const usd2 = x => '$' + x.toFixed(2);
   const short = u => u ? u.replace(/^https:\/\//, '').replace(/\/$/, '') : '';
   const path = u => { const s = short(u); const i = s.indexOf('/'); return i < 0 ? s : s.slice(i); };
+  const pagePath = u => path(u).split(/[?#]/)[0];
   const link = (u, t) => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(t || short(u))}</a>`;
 
   const feat = new Map(window.FEATURED.map(f => [f.key, f]));
@@ -294,10 +308,12 @@ details.ana .box b:first-child{margin-top:0}
       `<div class="where">${esc(r.debtType)} · ${esc(r.intentLabel)}</div>` +
       fl.map(x => `<span class="flag">${esc(x)}</span>`).join('') + ana;
   };
-  const ctrCell = r => {
-    const cls = 'v-' + r.verdict.toLowerCase();
-    const w = Math.min(r.ctr / 0.30, 1) * 100, col = r.brand ? '#6b7280' : r.verdict === 'Below' ? 'var(--red)' : 'var(--ok)';
-    return `<b class="num">${pct(r.ctr)}</b>${r.brand ? '' : ` <span class="small">${(r.ctr / BM.ctr).toFixed(1)}×</span>`}<br><span class="pill ${cls}">${r.verdict}</span>` +
+  const verdictOf = (r, ctr) => r.brand ? 'Brand' : ctr >= 2 * BM.ctr ? 'Strong' : ctr >= BM.ctr ? 'Above' : 'Below';
+  const ctrCell = (r, m) => {
+    const ctr = m ? (m.impr ? m.clicks / m.impr : 0) : r.ctr, verdict = m ? verdictOf(r, ctr) : r.verdict;
+    const cls = 'v-' + verdict.toLowerCase();
+    const w = Math.min(ctr / 0.30, 1) * 100, col = r.brand ? '#6b7280' : verdict === 'Below' ? 'var(--red)' : 'var(--ok)';
+    return `<b class="num">${pct(ctr)}</b>${r.brand ? '' : ` <span class="small">${(ctr / BM.ctr).toFixed(1)}×</span>`}<br><span class="pill ${cls}">${verdict}</span>` +
       `<div class="bar"><i style="width:${w}%;background:${col}"></i><em style="left:${BM.ctr / 0.30 * 100}%"></em></div>`;
   };
   const DB = window.ADS_DB;
@@ -320,36 +336,61 @@ details.ana .box b:first-child{margin-top:0}
   };
   const kwName = kws => kws.length === 1 ? `the keyword "${kws[0].text}" (${kws[0].match.toLowerCase()} match)` : `its ${kws.length} keywords (${kws.map(k => '"' + k.text + '"').join(', ')})`;
   const stLabel = st => st === 'ENABLED' ? 'Live' : st.toLowerCase();
+  const F4 = ['impr', 'clicks', 'cost', 'conv'];
+  const zero = () => ({ impr: 0, clicks: 0, cost: 0, conv: 0 });
+  // The term's own numbers, for the selected keywords (or all of them).
+  const termMetrics = r => {
+    if (!selOf(r).size) return { impr: r.impr, clicks: r.clicks, cost: r.cost, conv: r.conv };
+    const t = zero(); activeKws(r).forEach(k => F4.forEach(f => t[f] += k[f] || 0)); return t;
+  };
+  // Estimated split of the term's numbers across its ads. Google reports ads by keyword, not by search term,
+  // so each keyword's slice of the term goes to its ads in proportion to their 90-day numbers on that keyword
+  // (clicks by click share, conversions by conversion share, ...). History rows have no keyword split and use
+  // each ad's lifetime share of the ad group.
+  const adSplit = r => {
+    const ids = agAdsOf(r); if (!ids.length) return [];
+    const est = new Map(), get = i => est.get(i) || (est.set(i, { ...zero(), kws: [] }), est.get(i));
+    if (r.keywords && r.keywords.length) {
+      activeKws(r).forEach(k => {
+        const w = ids.map(i => ({ i, v: DB.adkw90[i + '|' + k.text + '|' + k.match] })).filter(x => x.v);
+        if (!w.length) return;
+        F4.forEach((f, j) => {
+          let key = j, den = w.reduce((q, x) => q + x.v[j], 0);
+          if (!den) { key = 0; den = w.reduce((q, x) => q + x.v[0], 0); }
+          w.forEach(x => { get(x.i)[f] += den ? (k[f] || 0) * x.v[key] / den : 0; });
+        });
+        w.forEach(x => get(x.i).kws.push(k));
+      });
+    } else {
+      const tm = termMetrics(r);
+      F4.forEach(f => {
+        let ff = f, den = ids.reduce((q, i) => q + DB.ads[i].total[f], 0);
+        if (!den) { ff = 'impr'; den = ids.reduce((q, i) => q + DB.ads[i].total.impr, 0); }
+        ids.forEach(i => { get(i)[f] += den ? tm[f] * DB.ads[i].total[ff] / den : 0; });
+      });
+    }
+    return [...est.entries()].map(([i, t]) => ({ i, t })).filter(x => x.t.impr >= 0.5 || x.t.clicks >= 0.5).sort((a, b) => b.t.impr - a.t.impr);
+  };
+  // Open = expand-all flag XOR a per-row toggle, so rows revealed later by a filter follow the flag.
+  const toggled = new Set(); let expAll = false;
+  const isOpen = key => expAll !== toggled.has(key);
   const trigCell = r => {
-    let ids = agAdsOf(r);
+    const ids = agAdsOf(r);
     if (!ids.length) {
       if (r.campaign.startsWith('PMax')) return '<span class="pill paused">Performance Max</span><div class="small">Asset groups, not ads: no ad-level data.</div>';
       return r.current.map(c => `<div class="ad">${c.share}% → ${link(P[c.page].url, path(P[c.page].url))}</div>`).join('') || '<span class="small">–</span>';
     }
-    const kws = activeKws(r), sel = selOf(r).size;
-    const ag = Object.fromEntries(ids.map(i => [i, aggPair(i, kws)]));
-    if (sel) ids = ids.filter(i => ag[i]);
-    const byKw = kws.length && ids.some(i => ag[i]);
-    if (byKw) ids = [...ids].sort((x, y) => (ag[y] ? ag[y].total.impr : -1) - (ag[x] ? ag[x].total.impr : -1));
-    const tot = ids.reduce((t, i) => t + (byKw ? (ag[i] ? ag[i].total.impr : 0) : DB.ads[i].total.impr), 0);
-    const head = !kws.length ? '' : `<div class="adscope">${sel ? `Ads on the ${sel === 1 ? 'selected keyword' : sel + ' selected keywords'}` : `All ads · stats across ${kws.length === 1 ? 'its keyword' : 'its ' + kws.length + ' keywords'}`}</div>`;
-    if (!ids.length) return head + '<span class="small">No ad has data on this keyword.</span>';
-    return head + ids.map(i => {
-      const a = DB.ads[i], pr = ag[i], t = pr && pr.total;
-      const share = byKw ? (t ? t.impr : 0) : a.total.impr;
-      return `<button class="adbtn" data-ad="${i}" data-row="${esc(r.key)}" title="Open this ad's analysis">` +
-        `<span class="top"><span class="pill st-${a.status}">${stLabel(a.status)}</span> Ad ${i} · <b>${Math.round(share / Math.max(tot, 1) * 100)}%</b> of ${byKw ? 'impr.' : 'ad group'}</span>` +
-        (a.headlines.length ? `<span class="hl">${a.headlines.slice(0, 2).map(h => esc(h.t)).join(' | ')}</span>` : '') +
-        (t ? `<span class="kwline">${t.impr.toLocaleString('en-US')} impr · ${pct(t.clicks / Math.max(t.impr, 1))} CTR · ${t.conv.toFixed(1)} conv${t.conv ? ' · ' + usd(t.cost / t.conv) + ' CPA' : ''}</span>` :
-          kws.length ? '<span class="kwline small">No data on these keywords</span>' : '') +
-        `<span class="small">→ ${esc(path(a.url) || a.type.toLowerCase())}</span></button>`;
-    }).join('');
+    const sp = adSplit(r), pg = new Map();
+    sp.forEach(x => { const u = pagePath(DB.ads[x.i].url) || '–'; pg.set(u, (pg.get(u) || 0) + x.t.impr); });
+    const pgs = [...pg.entries()].sort((a, b) => b[1] - a[1]), tot = sp.reduce((q, x) => q + x.t.impr, 0) || 1;
+    return `<button class="exp" data-row="${esc(r.key)}" aria-expanded="${isOpen(r.key)}"><span class="car">▸</span> <b>${sp.length}</b> ad${sp.length === 1 ? '' : 's'} · <b>${pgs.length}</b> page${pgs.length === 1 ? '' : 's'}</button>` +
+      `<div class="pglist">${pgs.map(([u, v]) => `<div>${esc(u)} <span class="small">${Math.round(v / tot * 100)}%</span></div>`).join('')}</div>`;
   };
   const kwCell = r => {
     if (!r.keywords || !r.keywords.length) return '<span class="small">–</span>';
     const tot = r.keywords.reduce((a, k) => a + k.impr, 0), sel = selOf(r);
     const M = { EXACT: 'exact', PHRASE: 'phrase', BROAD: 'broad' };
-    return r.keywords.map((k, i) => `<button class="kwsel" data-row="${esc(r.key)}" data-i="${i}" aria-pressed="${sel.has(i)}" title="Show ads and stats for this keyword">` +
+    return `<div class="kwsum"><b>${r.keywords.length}</b> keyword${r.keywords.length === 1 ? '' : 's'}${sel.size ? ` · <b>${sel.size}</b> selected` : ''}</div>` + r.keywords.map((k, i) => `<button class="kwsel" data-row="${esc(r.key)}" data-i="${i}" aria-pressed="${sel.has(i)}" title="Show ads and stats for this keyword">` +
       `<span>${esc(k.text)}</span><span class="kwm">${M[k.match] || esc(k.match.toLowerCase())}</span><span class="small">${Math.round(k.impr / tot * 100)}%</span></button>`).join('') +
       (sel.size ? `<button class="kwclr" data-row="${esc(r.key)}">Show all keywords</button>` : (r.keywords.length > 1 ? '<div class="small">% = share of this term\'s impressions</div>' : ''));
   };
@@ -372,19 +413,48 @@ details.ana .box b:first-child{margin-top:0}
     (r.f && r.f.lp && r.f.lp.note ? `<div class="txt">${esc(r.f.lp.note)}</div>` : '') +
     (r.note ? `<span class="flag">${esc(r.note)}</span>` : '');
 
-  const rowHtml = r => `<tr data-key="${esc(r.key)}">
+  const topHtml = r => {
+    const m = termMetrics(r), cpa = m.conv > 0 ? m.cost / m.conv : null;
+    return `<tr class="top" data-key="${esc(r.key)}">
     <td class="c-term" data-l="Search term">${termCell(r)}</td>
     <td class="c-kw" data-l="Triggered by keyword">${kwCell(r)}</td>
-    <td class="num" data-l="Impressions">${r.impr.toLocaleString('en-US')}</td>
-    <td class="num" data-l="Clicks">${r.clicks}</td>
-    <td data-l="CTR vs benchmark">${ctrCell(r)}</td>
-    <td class="num" data-l="Conversions / CPA">${r.conv.toFixed(1)}<br><span class="small">${r.cpa ? usd(r.cpa) : '–'}</span></td>
+    <td class="num" data-l="Impressions">${Math.round(m.impr).toLocaleString('en-US')}</td>
+    <td class="num" data-l="Clicks">${Math.round(m.clicks)}</td>
+    <td data-l="CTR vs benchmark">${ctrCell(r, m)}</td>
+    <td class="num" data-l="Conversions / CPA">${m.conv.toFixed(1)}<br><span class="small">${cpa ? usd(cpa) : '–'}</span></td>
     <td class="num" data-l="Top of page">${r.top != null ? pct(r.top) : '–'}</td>
-    <td class="c-trig" data-l="Triggered today → landing page">${trigCell(r)}</td>
+    <td class="c-trig" data-l="Ads → landing pages">${trigCell(r)}</td>
     <td class="c-best" data-l="Best current page">${bestCell(r)}</td>
     <td class="c-new" data-l="Recommended new page">${newCell(r)}</td>
     <td class="c-act" data-l="Recommended action">${actCell(r)}</td></tr>`;
-
+  };
+  const M3 = { EXACT: 'exact', PHRASE: 'phrase', BROAD: 'broad' };
+  const subHtml = r => {
+    const sp = adSplit(r), k = esc(r.key);
+    if (!sp.length) return `<tr class="sub" data-parent="${k}"><td colspan="11"><span class="small">No ad served on ${selOf(r).size ? 'the selected keywords' : 'this term'} in the last 90 days.</span></td></tr>`;
+    const bestPath = r.liveBest ? pagePath(P[r.liveBest].url) : null;
+    return sp.map(({ i, t }) => {
+      const a = DB.ads[i], u = pagePath(a.url), cpa = t.conv >= 0.05 ? t.cost / t.conv : null;
+      const ctr = t.impr ? t.clicks / t.impr : 0;
+      return `<tr class="sub" data-parent="${k}">
+      <td data-l="Ad"><div class="subad"><span class="pill st-${a.status}">${stLabel(a.status)}</span> Ad ${i} <span class="est">EST.</span>${a.headlines.length ? `<span class="hl">${a.headlines.slice(0, 2).map(h => esc(h.t)).join(' | ')}</span>` : ''}</div></td>
+      <td data-l="Served on">${t.kws.length ? t.kws.map(q => `${esc(q.text)}<span class="kwm">${M3[q.match] || esc(q.match.toLowerCase())}</span>`).join('<br>') : '<span class="small">ad group share</span>'}</td>
+      <td class="num" data-l="Impressions (est.)">≈${Math.round(t.impr).toLocaleString('en-US')}</td>
+      <td class="num" data-l="Clicks (est.)">≈${Math.round(t.clicks)}</td>
+      <td data-l="CTR (est.)"><b class="num">${pct(ctr)}</b>${r.brand ? '' : ` <span class="small">${(ctr / BM.ctr).toFixed(1)}×</span>`}</td>
+      <td class="num" data-l="Conversions / CPA (est.)">≈${t.conv.toFixed(1)}<br><span class="small">${cpa ? usd(cpa) : '–'}</span></td>
+      <td class="num" data-l="Top of page">–</td>
+      <td data-l="Landing page">${a.url ? link(a.url, u) : '<span class="small">–</span>'}<div><button class="adopen" data-ad="${i}" data-row="${k}">Ad analysis ›</button></div></td>
+      <td data-l="Page fit">${!u || !bestPath ? '' : u === bestPath ? '<span class="pill live">Best page</span>' : `<span class="small">Not the best page (${esc(bestPath)})</span>`}</td>
+      <td></td><td></td></tr>`;
+    }).join('');
+  };
+  const rowHtml = r => topHtml(r) + (isOpen(r.key) ? subHtml(r) : '');
+  function refreshRow(key) {
+    const tr = [...document.querySelectorAll('#tbl tbody tr.top')].find(t => t.dataset.key === key); if (!tr) return;
+    while (tr.nextElementSibling && tr.nextElementSibling.classList.contains('sub')) tr.nextElementSibling.remove();
+    tr.insertAdjacentHTML('afterend', rowHtml(byKey.get(key))); tr.remove();
+  }
   let chip = 'all', sortK = 'impr', dir = -1, grp = 'intent';
   const groupHtml = (key, list) => {
     const impr = list.reduce((a, r) => a + r.impr, 0), conv = list.reduce((a, r) => a + r.conv, 0);
@@ -577,6 +647,11 @@ details.ana .box b:first-child{margin-top:0}
     document.querySelectorAll('#chips .chip').forEach(c => c.setAttribute('aria-pressed', c === b));
     chip = b.dataset.f; render();
   });
+  $('expall').addEventListener('click', () => {
+    expAll = !expAll; toggled.clear();
+    $('expall').setAttribute('aria-pressed', expAll); $('expall').textContent = expAll ? 'Collapse all ads' : 'Expand all ads';
+    render();
+  });
   ['scope', 'q', 'debt', 'camp', 'int', 'ver', 'act', 'grp'].forEach(id => $(id).addEventListener('input', render));
   document.querySelector('#tbl tbody').addEventListener('click', e => {
     const k = e.target.closest('.kwsel, .kwclr');
@@ -584,12 +659,20 @@ details.ana .box b:first-child{margin-top:0}
       const set = new Set(selKw.get(k.dataset.row) || []);
       if (k.classList.contains('kwclr')) set.clear(); else { const i = Number(k.dataset.i); set.has(i) ? set.delete(i) : set.add(i); }
       set.size ? selKw.set(k.dataset.row, set) : selKw.delete(k.dataset.row);
-      const tr = k.closest('tr'), r = byKey.get(k.dataset.row);
-      tr.querySelector('.c-kw').innerHTML = kwCell(r); tr.querySelector('.c-trig').innerHTML = trigCell(r);
-      const f = tr.querySelector(`.kwsel[data-i="${k.dataset.i}"]`) || tr.querySelector('.kwsel'); if (f) f.focus();
+      refreshRow(k.dataset.row);
+      const tr = [...document.querySelectorAll('#tbl tbody tr.top')].find(t => t.dataset.key === k.dataset.row);
+      const f = tr && (tr.querySelector(`.kwsel[data-i="${k.dataset.i}"]`) || tr.querySelector('.kwsel')); if (f) f.focus();
       return;
     }
-    const b = e.target.closest('.adbtn'); if (!b) return;
+    const x = e.target.closest('.exp');
+    if (x) {
+      toggled.has(x.dataset.row) ? toggled.delete(x.dataset.row) : toggled.add(x.dataset.row);
+      refreshRow(x.dataset.row);
+      const tr = [...document.querySelectorAll('#tbl tbody tr.top')].find(t => t.dataset.key === x.dataset.row);
+      if (tr) tr.querySelector('.exp').focus();
+      return;
+    }
+    const b = e.target.closest('.adopen'); if (!b) return;
     openDrawer(b.dataset.row, b.dataset.ad, 'c');
   });
   $('dr-body').addEventListener('click', e => {
@@ -609,6 +692,7 @@ details.ana .box b:first-child{margin-top:0}
     `Verdicts compare each term's CTR with the benchmark (${bmp(BM.ctr)}); brand terms are not compared. Terms under 50 impressions are flagged as directional. "Top of page (30 d)" is the share of impressions shown above the organic results, pulled for the 30-day window only; below-benchmark terms were at the top less often (median 79%) than above-benchmark terms (89%), so part of a low CTR is position, not copy.`,
     `Conversion flags use the account's own cost per conversion (${usd(acctCpa)}). Conversions are Google Ads conversions as configured (fractional values mean data-driven attribution), not verified leads.`,
     'Recommended ad copy (under "Analysis and recommended ad") follows brand/voice.md and RSA limits (headlines ≤ 30 characters, descriptions ≤ 90; {LOCATION(State):Your State} is Google\'s location insertion). It is draft copy for attorney review. New pages are drafts too: attorney review and a Webflow build come before any ad points to them. Any landing page that carries an ad needs the NY attorney-advertising snippet.',
+    `Ad subrows (marked EST.) are estimates. Google reports ads by keyword, not by search term, so each keyword's slice of the search term is split across the ads that served on that keyword, in proportion to each ad's own 90-day numbers there (${esc(DB.period90)}): clicks by click share, conversions by conversion share, and so on. The subrows add up to the top row. History rows have no keyword split and use each ad's lifetime share of its ad group. The ad analysis drawer shows the exact, all-time ad × keyword numbers.`,
     'Data: content/campaigns/google-ads/search-terms/2026-09-30-active-90d.json + 2026-09-30-history.json → scripts/google-ads/build-search-terms.py (mapping rules in search_term_intents.py) → terms-data.js. Analysis: featured.js (hand-authored, 30-day window).'
   ].map(x => `<li>${x}</li>`).join('');
 })();
