@@ -8,7 +8,7 @@
  * `blocked` names the decision (D#) or manual step (M#) a PBI waits on. */
 window.BACKLOG = {
   updated: '30 Sep 2026',
-  state: '30 Sep: PBI-09, PBI-10, PBI-13 and PBI-14 done (D23 approved and applied; D24 new: per-call $1,000 claims in page copy). 29 Sep (evening): board clean-up. PBI-12 done (all Part B copy fixes live, D20 wording applied). G29 (WEEK 1 tags, 22 pages) done under PBI-19; PBI-01c and PBI-11 closed (PBI-11 follow-up moved to PBI-16); PBI-08 built and reviewed, closes with the operator\'s CRM check (M3). PBI-09 done 30 Sep: the count and security dropdowns keep their options in Webflow (the G17 rewrite script is gone). Shared code (PBI-01d) done and closed: page code and the phone-swap script live once in Site settings (one phone table); every landing-page section is a component with per-page copy in props (8 LP components); new pages start from the draft Landing page template, with copy synced from the prototype by lp-sync.mjs. D20 and D21 decided; D22 opened (8 hero props where the prototype and Webflow wording differ). Waiting on the operator: M2 (delete the 21 old drafts, then the legacy form components go), M3 (CRM check), D1\u2013D3, D5\u2013D9, D22, D24 (D10 optional); PBI-01b and PBI-21 deferred.',
+  state: '30 Sep: PBI-09, PBI-10, PBI-13, PBI-14 and PBI-15 done (D23 approved and applied; D24 new: per-call $1,000 claims in page copy). 29 Sep (evening): board clean-up. PBI-12 done (all Part B copy fixes live, D20 wording applied). G29 (WEEK 1 tags, 22 pages) done under PBI-19; PBI-01c and PBI-11 closed (PBI-11 follow-up moved to PBI-16); PBI-08 built and reviewed, closes with the operator\'s CRM check (M3). PBI-09 done 30 Sep: the count and security dropdowns keep their options in Webflow (the G17 rewrite script is gone). Shared code (PBI-01d) done and closed: page code and the phone-swap script live once in Site settings (one phone table); every landing-page section is a component with per-page copy in props (8 LP components); new pages start from the draft Landing page template, with copy synced from the prototype by lp-sync.mjs. D20 and D21 decided; D22 opened (8 hero props where the prototype and Webflow wording differ). Waiting on the operator: M2 (delete the 21 old drafts, then the legacy form components go), M3 (CRM check), D1\u2013D3, D5\u2013D9, D22, D24 (D10 optional); PBI-01b and PBI-21 deferred.',
   site: { name: 'Credo: Microsite Staging', id: '6ab90fb0761d44332faf21c8', domain: 'staging.credolegal.com' },
 
   pbis: [
@@ -399,18 +399,24 @@ window.BACKLOG = {
         ['Independent review: code by GPT + Gemini; no UX (nothing visible); findings settled', 'done']
       ] },
 
-    { id: 'PBI-15', title: 'Colour and contrast', refs: ['L3', 'G26', 'G27'], by: 'claude',
+    { id: 'PBI-15', title: 'Colour and contrast', refs: ['L3', 'G26', 'G27'], by: 'claude', note: 'Done 30 Sep. Webflow colour variables ink / muted / secondary / credo-red-soft. Classes whose name exists several times (legacy copies from the old drafts) cannot be edited by name, so a commented <style> block at the top of the site head code holds their values; move them into the classes after M2 (DS-4).',
+      review: { items: [
+        { kind: 'Code', by: 'GPT-5.5', verdict: 'approve with fixes', file: 'review/PBI-15.review-gpt.md', settled: true, note: 'Pop-up states tested: one real failure (step-2 label) found and fixed.' },
+        { kind: 'Code', by: 'Gemini 3.1 Pro', verdict: 'approve with fixes', file: 'review/PBI-15.review-gemini.md', settled: true, note: 'Scoped OR CALL rule kept (the class is also used on dark).' },
+        { kind: 'UX', by: 'GPT-5.5', verdict: 'approve with fixes', file: 'review/PBI-15.review-gpt-ux.md', settled: true, note: 'Weak phone link under Continue: PBI-17 moves it.' },
+        { kind: 'UX', by: 'Gemini 3.1 Pro', verdict: 'approve with fixes', file: 'review/PBI-15.review-gemini-ux.md', settled: true, note: 'Statute refs 4.61:1 and stat labels 5.79:1 measured: pass AA.' }
+      ], links: [['Packet', 'review/PBI-15.md'], ['Resolution', 'review/PBI-15.triage.md']] },
       why: 'Pale text fails contrast (worst: "or call" at 1.6:1); body text lighter and greyer than the prototype.',
       done: 'axe finds no contrast failures; colour variables ink / muted / secondary in use.',
       tasks: [
-        ['Create the colour variables', 'todo'],
-        ['Point the failing classes at secondary #6a7688', 'todo'],
-        ['Body font and colour; weights 300 → 400, eyebrows 600', 'todo'],
-        ['Publish to staging only', 'todo'],
-        ['Verify with lpcheck (axe) and screenshots', 'todo']
+        ['Create the colour variables: ink #111418, muted #5b6470, secondary #6a7688, credo-red-soft #ff6b73', 'done'],
+        ['Point the failing classes at secondary #6a7688: form intro, card numbers, inactive steps and slider labels (embeds), OR CALL; pop-up step label muted (on its light panel)', 'done'],
+        ['Body font and colour; weights 300 \u2192 400, eyebrows 600: body ink + Hanken Grotesk, lede/paragraph/card/FAQ/bottom-CTA text 400, eyebrows 600', 'done'],
+        ['Publish to staging only', 'done'],
+        ['Verify with lpcheck (axe) and screenshots: color-contrast 20 failures per page \u2192 0 on 52/52 \u00d7 2 widths and the system pages; pop-up steps 2\u20133 and error states 0; 7 before/after screenshot pairs', 'done']
 ,
-        ['Red text on the dark form header uses credo-red-soft #ff6b73 (UX review, design preview)', 'todo'],
-        ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots when anything visible changes; findings settled', 'todo']
+        ['Red text on the dark form header uses credo-red-soft #ff6b73 (UX review, design preview): already #ff6b73 (text-block-27-copy), checked 30 Sep', 'done'],
+        ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots; findings settled', 'done']
       ] },
 
     { id: 'PBI-16', title: 'Mobile type scale and text case', refs: ['G24', 'G22', 'L4'], by: 'claude',
