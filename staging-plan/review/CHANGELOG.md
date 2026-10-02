@@ -782,6 +782,28 @@ Not a board row: tracked as decision D13. Listed here because it changed the sit
 - Served HTML 56/56 identical apart from the tags; functional compare 8/8. Code + UX GPT approve with fixes; Gemini
   pending. [PBI-32.md](PBI-32.md), [PBI-32.triage.md](PBI-32.triage.md). Open: D28 (remaining timeline wording).
 
+## PBI-34 · Main and footer landmarks (2 Oct)
+
+**What changed**
+- Every landing page, home and the thank-you pages have one `<main>` element around their content sections
+  (operator's decision D29). The footers are `<footer>` elements. Nothing else changes: all 56 pages' HTML is
+  identical apart from these tags.
+
+**Where in Webflow**
+- Each landing page and home: a Block with tag `main` between the navbar and the footer, holding the 8 sections.
+- Thank-you page component: a `main` block around its 4 sections.
+- Footer-MJ and the "footer" component: root tag `footer`.
+
+**Revert**
+- `2026-10-02-main/REVERT.md`; the new blocks' ids in `main-ids.md`.
+
+**Evidence / review**
+- Served HTML 56/56; element compare 7 pages × 1440/390 (only the added MAIN row); functional compare 8/8; pop-up
+  form walk; axe passes landmark-one-main, region, heading-order. Code GPT approve with fixes; Gemini pending.
+  [PBI-34.md](PBI-34.md), [PBI-34.triage.md](PBI-34.triage.md).
+- Same publish: the two old Inconsolata custom fonts deleted (M7), the operator's second Clean up (M5) and image
+  regeneration (M6, home photo bytes unchanged).
+
 ## At a glance
 
 | ID | Title | Main Webflow location(s) | Status |
@@ -822,6 +844,7 @@ Not a board row: tracked as decision D13. Listed here because it changed the sit
 | PBI-27 | No Turnstile on the form | Site settings (operator's toggle) | done |
 | PBI-33 | Heading order | LP · Hero; home; Thank-you page component (combo class `as-h4`) | done |
 | PBI-32 | Time tags removed | LP · How it works (elements + 4 props); home; Thank-you page component | done (D28 open) |
+| PBI-34 | Main and footer landmarks | A `main` block on 52 pages and in the Thank-you page component; footer components' tag | done (D30 open) |
 
 ## Open / not changed
 
