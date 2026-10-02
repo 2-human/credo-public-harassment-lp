@@ -857,3 +857,24 @@ Not a board row: tracked as decision D13. Listed here because it changed the sit
 - **PBI-24, domain-switch task** (the close-out itself is done): robots, canonical and og:url for the final domain wait on D16 and D21 (today noindex, nofollow + canonical to start.credolegal.com/{slug}).
 - Parts still open inside done items: PBI-08 CRM check (M3); PBI-23 Tidio (D8), second recorder (D5), GTM Nextdoor timing (operator, manual; fonts done in PBI-26, minify done in L2); site-head CSS for the duplicate-named classes (the drafts are gone, but Webflow keeps every copy of a used name through Clean up; resolve them the PBI-26 way with DS-4 / DS-8); Gemini reviews for PBI-19, PBI-23, PBI-25, PBI-26, PBI-28, PBI-29, PBI-30.
 - Found and not changed (copy or account decisions): D22 hero wording, D24 per-call $1,000 claims, D25 home headings, D26 Optibase in Safari.
+
+## PBI-21 · Own copy for the four pages that showed the payday page (2 Oct)
+
+**What changed.** /collection-defense, /credit-cards, /fcba-and-fdcpa and /stop-wage-garnishment showed the copy of
+/payday-loan-lawsuit-respond. Each now carries its own copy, taken from the same address on start.credolegal.com
+(read-only) and fitted to the landing-page components. Also updated: the FAQ structured data (JSON-LD) of the four
+pages, and the title and description of /collection-defense (it carried a credit-card title).
+
+**Where in Webflow.** The four pages: the prop values of their `LP · Hero`, `LP · What we do`, `LP · Common problems`,
+`LP · How it works`, `LP · Rights and FAQ` and `LP · Bottom CTA` instances; Page settings → Schema markup; for
+/collection-defense also Page settings → SEO. No component, class or script was changed.
+
+**Source.** `tools/webflow/legacy4/build-content.mjs` → `public/harassment-lp/content-{collection-defense,credit-cards,fcba-and-fdcpa,stop-wage-garnishment}.js`;
+`lp-sync.mjs` maps the four pages to these files.
+
+**Verified.** 607 props read back on 6 pages, 0 differ; FAQPage equals the visible questions; /payday-loan-lawsuit-respond
+unchanged; browser at 1440 and 390 with trackers blocked.
+
+**Undo.** Backup `2026-10-02-legacy4/`: `served-before/` and `current.json` hold the previous prop values (the payday copy);
+set them back with `lp-sync.mjs` payloads built from that file, and restore the previous Schema markup from the served-before pages.
+

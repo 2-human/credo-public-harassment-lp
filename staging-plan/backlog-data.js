@@ -517,13 +517,18 @@ window.BACKLOG = {
         ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots when anything visible changes; findings settled', 'todo']
       ] },
 
-    { id: 'PBI-21', title: 'The four payday-content pages', refs: ['Part B'], by: 'decision', note: 'Deferred by the operator 29 Sep. Open question: own copy for the 4 pages, or redirect them to matching pages. (D4\'s rebuild decision was applied to the 4 payday-loan pages in DS-7; it does not cover these 4.)', blocked: 'Deferred (operator)',
-      why: 'collection-defense, credit-cards, fcba-and-fdcpa and stop-wage-garnishment show the payday page.',
-      done: 'Per D4: drafted/unlisted on staging, or rebuilt with approved copy.',
+    { id: 'PBI-21', title: 'The four payday-content pages', refs: ['Part B'], by: 'claude', note: 'Done 2 Oct (operator: own copy, from the live start pages). collection-defense, credit-cards, fcba-and-fdcpa and stop-wage-garnishment now carry their own copy, taken from the same addresses on start.credolegal.com and fitted to the landing-page components; the FAQ structured data of the four pages and the title and description of collection-defense were updated to match. Left out from the live copy: a client quote, \u201c10,000+ clients\u201d, \u201cplans starting at $250/month\u201d, a phone number that is not the page\u2019s own. New text where the live page had no matching section (who this helps on all four; your rights on collection-defense and stop-wage-garnishment) needs an attorney\u2019s read. Open for the attorney, found by the review: the garnishment wording on the existing page wage-garnishment-attorney (25% cap, hearing \u201cat any time\u201d) and the federal court-rule tags (FRCP) used across the pages.',
+      review: { items: [
+        { kind: 'Code', by: 'GPT-5.5', verdict: 'approve with fixes', file: 'review/PBI-21.review-gpt.md', settled: true, note: 'Garnishment rights reworded with their limits; one statute tag and one sentence corrected on credit-cards.' },
+        { kind: 'UX', by: 'GPT-5.5', verdict: 'approve with fixes', file: 'review/PBI-21-ux.review-gpt.md', settled: true, note: 'Each page reads as one page for its topic; remaining points are site-wide design items.' }
+      ], links: [['Packet', 'review/PBI-21.md'], ['UX packet', 'review/PBI-21-ux.md'], ['Resolution', 'review/PBI-21.triage.md']] },
+      why: 'collection-defense, credit-cards, fcba-and-fdcpa and stop-wage-garnishment showed the payday page.',
+      done: 'Each of the four pages has its own copy on staging.',
       tasks: [
-        ['Apply the operator\'s answer (own copy or redirect) on staging', 'todo'],
-        ['Publish to staging only and verify', 'todo'],
-        ['Independent review: code by GPT + Gemini; UX by GPT + Gemini on screenshots when anything visible changes; findings settled', 'todo']
+        ['Read the four pages on start.credolegal.com (read-only) and fit their copy to the landing-page layout (tools/webflow/legacy4/build-content.mjs \u2192 content-*.js)', 'done'],
+        ['Apply as component props on the four staging pages; FAQ structured data and collection-defense title/description', 'done'],
+        ['Publish to staging only and verify: 607 props read back on 6 pages, 0 differ; FAQPage equals the visible questions; control pages unchanged; browser 1440/390', 'done'],
+        ['Independent review: copy and UX by GPT (settled); Gemini pending credits', 'done']
       ] },
 
     { id: 'PBI-22', visible: false, title: 'Call-click tracker listens to the real links', refs: ['G21a'], by: 'decision', blocked: 'D6',
