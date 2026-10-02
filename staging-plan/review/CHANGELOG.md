@@ -748,6 +748,40 @@ Not a board row: tracked as decision D13. Listed here because it changed the sit
 - Served HTML 56/56, functional compare 8/8, WebKit and Firefox spot checks. Code GPT approve with fixes; Gemini
   pending. [PBI-26c.md](PBI-26c.md), [PBI-26c.triage.md](PBI-26c.triage.md).
 
+## PBI-33 · Heading order (1 Oct)
+
+**What changed**
+- The form's first question is an h2 instead of an h3 (it follows the h1). The card titles on home (27) and on the
+  thank-you pages (7) are h3 instead of h4. Skipped heading levels on the 56 pages: 58 → 0. No visual change.
+
+**Where in Webflow**
+- LP · Hero (heading "How much do you currently owe…"); home's own form heading; Thank-you page component and home:
+  `Heading 41` titles now carry the combo class `as-h4` (keeps the h4 look: 18px / 24px / 600 / 10px margins).
+
+**Revert**
+- `2026-10-01-headings/REVERT.md` (element ids, earlier levels and classes).
+
+**Evidence / review**
+- Element compare at 1440, 810 and 390: only tag and class names differ. Functional compare 8/8. Code GPT approve
+  with fixes; Gemini pending. [PBI-25b.md](PBI-25b.md), [PBI-25b.triage.md](PBI-25b.triage.md).
+
+## PBI-32 · Time tags removed from the "How it works" steps (2 Oct)
+
+**What changed**
+- The small red tag under each step (DAY 0, WEEK 1+, ONGOING, BY DEADLINE, CONSULTATION …) is removed on every page
+  (operator's request): 217 tags on 55 pages. The 4 component props that held the tag text are removed too.
+
+**Where in Webflow**
+- LP · How it works (the tag block of each step; props "Step 1–4 when"); home's "How it works" section; Thank-you
+  page component. Repo tools: `lp-components.json`, `lp-sync.mjs`, `lp-extract.mjs` no longer know the props.
+
+**Revert**
+- `2026-10-02-steptags/REVERT.md`; every page's tag values in `step-tags-before.json`.
+
+**Evidence / review**
+- Served HTML 56/56 identical apart from the tags; functional compare 8/8. Code + UX GPT approve with fixes; Gemini
+  pending. [PBI-32.md](PBI-32.md), [PBI-32.triage.md](PBI-32.triage.md). Open: D28 (remaining timeline wording).
+
 ## At a glance
 
 | ID | Title | Main Webflow location(s) | Status |
@@ -786,6 +820,8 @@ Not a board row: tracked as decision D13. Listed here because it changed the sit
 | PBI-31 | Optibase off (temporary) | Site head code (comment) | live; operator to decide |
 | PBI-26 | Fonts only from our own files | Custom fonts; 60 classes; 8 form/slider embeds (LP · Hero, LP · Lead form, home) | done (M6 home photo sizes, M7 old font entries open) |
 | PBI-27 | No Turnstile on the form | Site settings (operator's toggle) | done |
+| PBI-33 | Heading order | LP · Hero; home; Thank-you page component (combo class `as-h4`) | done |
+| PBI-32 | Time tags removed | LP · How it works (elements + 4 props); home; Thank-you page component | done (D28 open) |
 
 ## Open / not changed
 
