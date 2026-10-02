@@ -180,3 +180,8 @@ window.CREDO = {
 
   disclaimer: "This is attorney advertising. Prior results do not guarantee a similar outcome.",
 };
+
+/* >>> PBI-35 cluster copy (tools/webflow/clusters/edits.json). Generated: edit the data file, not this block. */
+window.CREDO.hero.lede = "Our Attorneys Can Help You Fight Back Under the FDCPA.";
+window.CREDO.whatWeDo.headline = "Collector broke the law? We fight back.";
+/* <<< PBI-35 */

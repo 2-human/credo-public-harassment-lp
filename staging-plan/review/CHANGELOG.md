@@ -878,3 +878,27 @@ unchanged; browser at 1440 and 390 with trackers blocked.
 **Undo.** Backup `2026-10-02-legacy4/`: `served-before/` and `current.json` hold the previous prop values (the payday copy);
 set them back with `lp-sync.mjs` payloads built from that file, and restore the previous Schema markup from the served-before pages.
 
+## PBI-35 · Angle clusters: copy aligned on 26 pages, 12 pages added (2 Oct)
+
+**What changed.** (1) On 26 landing pages the hero headline, sub-line and/or the "What we do" heading were changed so
+that each page states the promise of its angle; headlines that match the page's Google ad were kept
+(`tools/webflow/clusters/edits.json` lists every change). (2) 12 new landing pages were created by duplicating
+/fcba-and-fdcpa and given their own copy: debt-harassment-validation, wage-garnishment-judgment,
+wage-garnishment-rights, debt-lawsuit-stop-calls, medical-debt-stop-calls, debt-lawsuit-violations,
+medical-debt-violations, wage-garnishment-violations, debt-harassment-settlement, debt-lawsuit-settlement,
+payday-loan-reduce, medical-debt-reduce (page ids in `tools/webflow/clusters/new-pages.json`).
+
+**Where in Webflow.** Prop values of the `LP ·` component instances on those pages. For the new pages also: Page
+settings (title, description, share image, Schema markup) and Page settings → Custom code → Head (noindex, canonical
+and og:url to `https://start.credolegal.com/{slug}`, and the heading style block the other landing pages carry; a
+duplicated page does not inherit page head code).
+
+**Verified.** 63 pages read back (9 older hero wordings differ from the prototype files and were not touched); on the
+26 edited pages only the intended props changed; FAQPage equals the visible questions on all 63; all 63 say noindex.
+
+**Not done / open.** The new pages are not in the phone table (they show the default new-clients number) and have no
+ads. Copy on the new pages is a draft for the attorney.
+
+**Undo.** Edited pages: `2026-10-02-clusters/current.json` holds the previous values of every prop. New pages: set
+them to draft or delete them in Webflow (Pages panel); nothing else depends on them.
+

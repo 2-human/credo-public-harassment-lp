@@ -173,3 +173,8 @@ window.CREDO = {
 
   disclaimer: "This is attorney advertising. Prior results do not guarantee a similar outcome.",
 };
+
+/* >>> PBI-35 cluster copy (tools/webflow/clusters/edits.json). Generated: edit the data file, not this block. */
+window.CREDO.hero.h1 = ["Know Your ","FDCPA Rights","."];
+window.CREDO.hero.lede = "Our Attorneys Can Explain Them and Act.";
+/* <<< PBI-35 */

@@ -136,3 +136,8 @@ window.CREDO = {
 
   disclaimer: "This is attorney advertising. Prior results do not guarantee a similar outcome.",
 };
+
+/* >>> PBI-35 cluster copy (tools/webflow/clusters/edits.json). Generated: edit the data file, not this block. */
+window.CREDO.hero.lede = "Our Attorneys Can Make Them Prove Every Charge.";
+window.CREDO.whatWeDo.headline = "We demand proof for every line of the bill.";
+/* <<< PBI-35 */

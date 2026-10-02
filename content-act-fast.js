@@ -159,3 +159,8 @@ window.CREDO = {
 
   disclaimer: "This is attorney advertising. Prior results do not guarantee a similar outcome.",
 };
+
+/* >>> PBI-35 cluster copy (tools/webflow/clusters/edits.json). Generated: edit the data file, not this block. */
+window.CREDO.hero.h1 = ["Debt Collector Broke the Law? ","Act Fast","."];
+window.CREDO.hero.lede = "Our Attorneys Can Help You Act Before the Deadline.";
+/* <<< PBI-35 */

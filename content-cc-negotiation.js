@@ -142,3 +142,8 @@ window.CREDO = {
 
   disclaimer: "This is attorney advertising. Prior results do not guarantee a similar outcome.",
 };
+
+/* >>> PBI-35 cluster copy (tools/webflow/clusters/edits.json). Generated: edit the data file, not this block. */
+window.CREDO.hero.lede = "Our Attorneys Can Help You Negotiate It Down.";
+window.CREDO.whatWeDo.headline = "Attorney-led negotiation to lower what you pay.";
+/* <<< PBI-35 */

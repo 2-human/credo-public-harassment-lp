@@ -176,3 +176,7 @@ window.CREDO = {
 
   disclaimer: "This is attorney advertising. Prior results do not guarantee a similar outcome.",
 };
+
+/* >>> PBI-35 cluster copy (tools/webflow/clusters/edits.json). Generated: edit the data file, not this block. */
+window.CREDO.whatWeDo.headline = "They have lawyers. We fight back with yours.";
+/* <<< PBI-35 */

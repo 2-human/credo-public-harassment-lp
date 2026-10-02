@@ -671,6 +671,21 @@ window.BACKLOG = {
         ['Independent review: code by GPT (settled); Gemini pending credits', 'done']
       ] },
 
+    { id: 'PBI-35', visible: true, title: 'Angle clusters: every page makes its promise; 12 pages added', refs: ['Clusters 2 Oct'], by: 'claude', note: 'Done 2 Oct (operator). The landing pages are grouped into seven angles with one page per debt type in each (content/research/lp-angle-clusters-2026-10-02.md). 26 existing pages: only the headline, sub-line and/or first section heading changed, keeping the headline that matches the page\u2019s Google ad. 12 new pages fill the empty cells (noindex, canonical to the future address, FAQ data, default phone number). Open: the new copy needs an attorney\u2019s read; three new pages rest on a stretch angle (wage-garnishment-violations, debt-harassment-settlement, debt-lawsuit-stop-calls); the new pages are not in the phone table and have no ads or keywords yet; medical-debt-credit-report-removal was left unchanged although its ad promises credit-report removal and the page is about debt validation; older absolute wording on debt-harassment-stop-calls and debt-harassment-violations (flagged by the review).',
+      review: { items: [
+        { kind: 'Code', by: 'GPT-5.5', verdict: 'approve with fixes', file: 'review/PBI-35.review-gpt.md', settled: true, note: 'Five statements on the new pages reworded with their limits.' },
+        { kind: 'UX', by: 'GPT-5.5', verdict: 'approve with fixes', file: 'review/PBI-35-ux.review-gpt.md', settled: true, note: 'Pages read as one page each; remaining points are site-wide design items.' }
+      ], links: [['Packet', 'review/PBI-35.md'], ['UX packet', 'review/PBI-35-ux.md'], ['Resolution', 'review/PBI-35.triage.md']] },
+      why: 'Operator: each page should fully make the promise of its angle, and every angle should have a page for every debt type, while staying matched to its ad and keywords.',
+      done: 'Seven clusters with a page for each of the six debt types; every page makes its angle\u2019s promise in headline, sub-line and first section heading.',
+      tasks: [
+        ['Read ads and keywords per page from the Google Ads account (read-only) and map each page to its angle', 'done'],
+        ['Copy changes for 26 pages (tools/webflow/clusters/edits.json) and 12 new pages (build-content.mjs \u2192 content-*.js)', 'done'],
+        ['Staging: 26 pages updated, 12 pages created from a landing page, copy, FAQ data, share image, noindex/canonical/heading styles', 'done'],
+        ['Publish to staging only and verify: 63 pages read back, only intended props changed, FAQPage ok, browser 1440/390', 'done'],
+        ['Independent review: copy and UX by GPT (settled); Gemini pending credits', 'done']
+      ] },
+
     { id: 'PBI-34', visible: false, title: 'Main and footer landmarks on every page', refs: ['PSI 1 Oct', 'D29'], by: 'claude', note: 'Done 2 Oct (D29). Every landing page, home and the thank-you pages have one <main> around their content sections; navbar, footer and the sticky call bar stay outside. The footers are <footer> elements. Served HTML of all 56 pages is identical apart from these tags; axe passes landmark-one-main, region and heading-order. The 404 page is unchanged. Open: D30 (two links named home).',
       review: { items: [
         { kind: 'Code', by: 'GPT-5.5', verdict: 'approve with fixes', file: 'review/PBI-34.review-gpt.md', settled: true, note: 'axe run after publish; footer landmark added; pop-up form walk 5/5; functional compare 8/8.' }

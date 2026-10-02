@@ -171,3 +171,8 @@ window.CREDO = {
 
   disclaimer: "This is attorney advertising. Prior results do not guarantee a similar outcome.",
 };
+
+/* >>> PBI-35 cluster copy (tools/webflow/clusters/edits.json). Generated: edit the data file, not this block. */
+window.CREDO.hero.lede = "Our Attorneys Can Help You Act Before It Starts.";
+window.CREDO.whatWeDo.headline = "The time to act is before the first paycheck cut.";
+/* <<< PBI-35 */
