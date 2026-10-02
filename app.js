@@ -12,6 +12,9 @@
   "use strict";
 
   var C = window.CREDO;
+  /* Asset base (added 2026-10-02): pages outside this folder (the website prototype) set
+   * window.CREDO_ASSET_BASE to the folder that holds assets/. Empty for the LP prototype. */
+  var AB = (window.CREDO_ASSET_BASE || "") + "assets/";
 
   /* ---- inline SVG icons (Lucide-style, stroke currentColor) -------------- */
   var Ico = {
@@ -169,20 +172,46 @@
      SECTION MARKUP (returns HTML strings; classes identical to prototype)
      ====================================================================== */
 
+  /* Site navigation (added 2026-10-02, website prototype). When the content object carries
+   * C.site = { home, links: [{ text, href } | { text, items: [{ text, href, current }] }], cta: { href } },
+   * the nav shows those links (with a dropdown and a mobile menu) instead of the landing page's
+   * in-page anchors. Landing pages have no C.site and render exactly as before. */
+  function SiteLinks(S, inMenu) {
+    return (S.links || []).map(function (l) {
+      if (l.items) {
+        /* In the mobile menu the group is always open, so its title is a plain label, not a button. */
+        var t = inMenu
+          ? '<span class="nav-dd-t">' + esc(l.text) + '</span>'
+          : '<button type="button" class="nav-dd-t" aria-haspopup="true" aria-expanded="false">' + esc(l.text) + ' <span aria-hidden="true">▾</span></button>';
+        return '<div class="nav-dd">' + t +
+          '<div class="nav-dd-m">' + l.items.map(function (it) {
+            return '<a href="' + esc(it.href) + '"' + (it.current ? ' aria-current="page"' : '') + '>' + esc(it.text) + '</a>';
+          }).join("") + '</div></div>';
+      }
+      return '<a href="' + esc(l.href) + '"' + (l.current ? ' aria-current="page"' : '') + '>' + esc(l.text) + '</a>';
+    }).join("");
+  }
   function Nav() {
+    var S = C.site;
+    var links = S ? SiteLinks(S) :
+      '<a href="#whatwedo">What we do</a>' +
+      '<a href="#why">Why us</a>' +
+      '<a href="#process">How it works</a>' +
+      '<a href="#rights">Your rights</a>' +
+      '<a href="#faq">FAQ</a>';
+    var cta = (S && S.cta && S.cta.href)
+      ? '<a href="' + esc(S.cta.href) + '" class="nav-cta">Free review →</a>'
+      : '<a href="#lead-form" data-scrollform class="nav-cta">Free review →</a>';
+    var menu = S
+      ? '<details class="nav-menu"><summary aria-label="Menu">Menu</summary><div class="nav-menu-m">' + SiteLinks(S, true) + '</div></details>'
+      : '';
     return '' +
-      '<nav class="nav"><div class="container nav-inner">' +
-        '<a href="#top" class="brand"><img src="assets/credo-logo.png" alt="Credo Legal, consumer-debt defense law firm"/></a>' +
+      '<nav class="nav' + (S ? ' nav-site' : '') + '"><div class="container nav-inner">' +
+        '<a href="' + (S ? esc(S.home) : '#top') + '" class="brand"><img src="' + AB + 'credo-logo.png" alt="Credo Legal, consumer-debt defense law firm"/></a>' +
         '<div class="nav-right">' +
-          '<div class="nav-links">' +
-            '<a href="#whatwedo">What we do</a>' +
-            '<a href="#why">Why us</a>' +
-            '<a href="#process">How it works</a>' +
-            '<a href="#rights">Your rights</a>' +
-            '<a href="#faq">FAQ</a>' +
-          '</div>' +
+          '<div class="nav-links">' + links + '</div>' +
           '<a href="' + C.phoneHref + '" class="nav-phone"><span class="nav-phone-pre">Call us: </span>' + C.phone + '</a>' +
-          '<a href="#lead-form" data-scrollform class="nav-cta">Free review →</a>' +
+          cta + menu +
         '</div>' +
       '</div></nav>';
   }
@@ -222,9 +251,9 @@
     return '' +
       '<div class="hero-figure" data-style="' + hs + '" data-subject="' + subj + '" data-variant-scope="hero">' +
         '<picture>' +
-          '<source srcset="assets/' + slug + '-960.webp" media="(min-width: 768px)" type="image/webp"/>' +
-          '<source srcset="assets/' + slug + '-480.webp" type="image/webp"/>' +
-          '<img src="assets/' + slug + '-480.jpg" loading="eager" decoding="async" alt="' + esc(alt) + '"/>' +
+          '<source srcset="' + AB + slug + '-960.webp" media="(min-width: 768px)" type="image/webp"/>' +
+          '<source srcset="' + AB + slug + '-480.webp" type="image/webp"/>' +
+          '<img src="' + AB + slug + '-480.jpg" loading="eager" decoding="async" alt="' + esc(alt) + '"/>' +
         '</picture>' +
       '</div>';
   }
@@ -262,9 +291,9 @@
     return '' +
       '<div class="body-fig has-img"' + scopeAttr + '>' +
         '<picture>' +
-          '<source srcset="assets/' + slug + '-960.webp" media="(min-width: 768px)" type="image/webp"/>' +
-          '<source srcset="assets/' + slug + '-480.webp" type="image/webp"/>' +
-          '<img src="assets/' + slug + '-480.jpg" alt="' + esc(alt) + '" loading="lazy" decoding="async"/>' +
+          '<source srcset="' + AB + slug + '-960.webp" media="(min-width: 768px)" type="image/webp"/>' +
+          '<source srcset="' + AB + slug + '-480.webp" type="image/webp"/>' +
+          '<img src="' + AB + slug + '-480.jpg" alt="' + esc(alt) + '" loading="lazy" decoding="async"/>' +
         '</picture>' +
       '</div>';
   }
@@ -389,7 +418,7 @@
     return '' +
       '<div class="form-overlay" role="dialog" aria-modal="true" aria-label="Free case evaluation">' +
         '<div class="fo-bar">' +
-          '<span class="fo-brand"><img src="assets/credo-logo.png" alt="Credo Legal"/></span>' +
+          '<span class="fo-brand"><img src="' + AB + 'credo-logo.png" alt="Credo Legal"/></span>' +
           '<span class="fo-step">FREE CASE EVALUATION · STEP ' + (state.step + 1) + ' OF 3</span>' +
           '<button class="fo-close" data-fo-close aria-label="Close">' + Ico.close + '</button>' +
         '</div>' +
@@ -451,9 +480,9 @@
     var r = C.reviews;
     var rows = '' +
       '<div class="rev-row">' +
-        '<div class="rev" data-slot="reviews.bbb">' + BBBMark() + '<div><div class="rv-title">' + r.bbb.title + '</div><div class="rv-meta">' + r.bbb.meta + '</div></div></div>' +
+        /* 2026-10-02: order and set as on Webflow (Trustpilot widget, BBB seal); the Google badge is not on the live pages. */
         '<div class="rev" data-slot="reviews.trustpilot">' + TrustpilotMark() + '<div><div class="rv-title">' + r.trustpilot.title + ' ' + Stars(4.5) + '</div><div class="rv-meta">' + r.trustpilot.meta + '</div></div></div>' +
-        '<div class="rev" data-slot="reviews.google">' + GoogleMark() + '<div><div class="rv-title">' + r.google.title + ' ' + Stars(4.7) + '</div><div class="rv-meta">' + r.google.meta + '</div></div></div>' +
+        '<div class="rev" data-slot="reviews.bbb">' + BBBMark() + '<div><div class="rv-title">' + r.bbb.title + '</div><div class="rv-meta">' + r.bbb.meta + '</div></div></div>' +
       '</div>';
     var mrow = "";
     if (metrics) {
@@ -505,7 +534,7 @@
       '<div class="eyebrow">How it works</div>' +
       '<h2 class="h2">A clear sequence, on a known timeline.</h2>' +
       '<div class="process' + (cols ? " cols" : "") + '" style="margin-top:28px">' + C.howItWorks.map(function (row, i) {
-        return '<div class="step"><div class="n">' + pad2(i + 1) + '</div><div><h3 data-slot="howItWorks[' + i + '].label">' + row[0] + '</h3><p data-slot="howItWorks[' + i + '].body">' + row[1] + '</p><div class="when" data-slot="howItWorks[' + i + '].timeMarker">' + row[2] + '</div></div></div>';
+        return '<div class="step"><div class="n">' + pad2(i + 1) + '</div><div><h3 data-slot="howItWorks[' + i + '].label">' + row[0] + '</h3><p data-slot="howItWorks[' + i + '].body">' + row[1] + '</p></div></div>';   /* time tags (row[2]) removed 2026-10-02, as on Webflow (PBI-32) */
       }).join("") + '</div>';
   }
   function Rights() {
@@ -552,7 +581,9 @@
   function Footer() {
     var F = C.footer || {};
     var links = (F.links || []).map(function (l) {
-      return '<a href="' + esc(l.href) + '" target="_blank" rel="noopener">' + esc(l.text) + '</a>';
+      return l.external === false
+        ? '<a href="' + esc(l.href) + '">' + esc(l.text) + '</a>'
+        : '<a href="' + esc(l.href) + '" target="_blank" rel="noopener">' + esc(l.text) + '</a>';
     }).join("");
     var phones = (F.phones || []).map(function (p) {
       return '<div class="fcontact-row"><span class="flabel">' + esc(p.label) + '</span>' +
@@ -563,13 +594,14 @@
         '<a href="' + esc(F.emailHref || ('mailto:' + F.email)) + '">' + esc(F.email) + '</a></div>'
       : '';
     // Site legal statements (from the live LP) + campaign compliance tail.
-    var legal = ((F.legal || []).join(" ") +
+    // F.disclaimer (optional, added 2026-10-02) replaces the composed statement with the exact footer text used on Webflow.
+    var legal = F.disclaimer ? esc(F.disclaimer) : ((F.legal || []).join(" ") +
       ' ' + esc(F.entity || 'Credo Legal') + ' is a multi-jurisdictional law firm. ' +
       'Not a debt-settlement company. Not a credit-counseling service.').trim();
     return '' +
       '<footer class="foot"><div class="container">' +
         '<div class="frow">' +
-          '<a href="#top" class="brand"><img src="assets/credo-logo.png" alt="Credo Legal"/></a>' +
+          '<a href="' + (C.site ? esc(C.site.home) : '#top') + '" class="brand"><img src="' + AB + 'credo-logo.png" alt="Credo Legal"/></a>' +
           '<div class="flinks">' + links + '</div>' +
         '</div>' +
         '<div class="fgrid">' +
@@ -643,7 +675,7 @@
           InlineCTA("Speak to an attorney now") +
         '</div></section>' +
 
-        '<div class="container">' + ReviewBar(false) + '</div>' +
+        '<div class="container">' + ReviewBar(true) + '</div>' +
 
         '<section class="section" id="rights"><div class="container">' +
           '<div>' + SectionNo("06", "Statute") + Rights() + '</div>' +
@@ -695,7 +727,7 @@
           '</div>' +
         '</div></section>' +
 
-        '<div class="container">' + ReviewBar(false) + '</div>' +
+        '<div class="container">' + ReviewBar(true) + '</div>' +
 
         '<section class="section" id="rights"><div class="container">' +
           '<div>' + SectionNo("06", "Statute") + Rights() + '</div>' +
@@ -830,7 +862,7 @@
     if (next) next.addEventListener("click", function () { state.step++; renderOverlay(); });
     var submit = root.querySelector("[data-fo-submit]");
     if (submit) submit.addEventListener("click", function () {
-      if (canSubmit()) window.location.href = "thank-you.html";
+      if (canSubmit()) window.location.href = (C.site && C.site.thankYou) || "thank-you.html";
     });
     var close = root.querySelector("[data-fo-close]");
     if (close) close.addEventListener("click", closeOverlay);
@@ -890,7 +922,7 @@
 
     var root = document.getElementById("root");
     var body = variant === "c" ? VariantC() : VariantA();
-    root.innerHTML = Nav() + body + Footer() + StickyCTA();
+    root.innerHTML = Nav() + '<main>' + body + '</main>' + Footer() + StickyCTA();   /* <main> as on Webflow (PBI-34) */
 
     wireScrollForm(root);
     wireInlineForm();
@@ -904,5 +936,18 @@
     };
   }
 
-  window.CredoLP = { render: render };
+  /* Non-landing pages of the website prototype (about, legal): same nav and footer around the
+   * given HTML, no lead form. opts.html is trusted markup written by the site templates. */
+  function renderPage(opts) {
+    opts = opts || {};
+    document.documentElement.setAttribute("data-labels", "plain");
+    var root = document.getElementById("root");
+    root.innerHTML = Nav() + '<main><div class="lp page" data-variant="page">' + (opts.html || "") + '</div></main>' + Footer() + StickyCTA();
+  }
+
+  window.CredoLP = {
+    render: render,
+    renderPage: renderPage,
+    parts: { esc: esc, pad2: pad2, SectionNo: SectionNo, ReviewBar: ReviewBar, HowItWorks: HowItWorks, FAQ: FAQ, BottomCTA: BottomCTA, InlineCTA: InlineCTA }
+  };
 })();

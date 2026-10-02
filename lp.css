@@ -263,7 +263,7 @@ a.hero-call:hover { color: var(--credo-red); }
 /* ===== Review bar (BBB / Trustpilot / Google + headline metrics) ========= */
 .reviewbar { border-top: 2px solid var(--fg); border-bottom: 2px solid var(--fg); background: #fff; }
 .reviewbar .rev-row { display: grid; grid-template-columns: 1fr; }
-@media (min-width: 720px){ .reviewbar .rev-row { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 720px){ .reviewbar .rev-row { grid-template-columns: repeat(2, 1fr); } }   /* two badges since 2026-10-02 (Trustpilot, BBB), as on Webflow */
 .reviewbar .rev { display: flex; align-items: center; gap: 14px; padding: 18px 22px; border-bottom: 1px solid var(--border); }
 @media (min-width: 720px){ .reviewbar .rev { border-bottom: 0; border-right: 1px solid var(--border); } .reviewbar .rev:last-child { border-right: 0; } }
 .reviewbar .rev .logo { flex: none; }
@@ -698,3 +698,79 @@ html[data-borders="off"] .multi-dd-panel {
   border-radius: 4px;
 }
 html[data-borders="off"] .multi-opt { border-bottom-color: var(--border-soft); }
+
+
+/* ===== Website prototype additions (2026-10-02) ============================
+   Only used when the content object carries C.site (site navigation) or a page is
+   rendered with CredoLP.renderPage (about, legal). Landing pages are unaffected. */
+.nav-site .nav-links { align-items: center; }
+.nav-links a[aria-current="page"] { color: var(--credo-red); }
+.nav-dd { position: relative; }
+.nav-dd-t {
+  font: inherit; font-size: 11px; color: var(--fg); font-weight: var(--fw-semi);
+  letter-spacing: var(--tracking-widest); text-transform: uppercase;
+  background: none; border: 0; padding: 0; cursor: pointer;
+}
+.nav-dd-t:hover, .nav-dd:focus-within .nav-dd-t { color: var(--credo-red); }
+.nav-dd-m {
+  display: none; position: absolute; top: 100%; left: -18px; min-width: 220px; padding: 10px 0;
+  background: #fff; border: 1px solid var(--border); border-top: 2px solid var(--fg); z-index: 60;
+}
+.nav-dd:hover .nav-dd-m, .nav-dd:focus-within .nav-dd-m, .nav-dd.open .nav-dd-m { display: block; }
+.nav-links .nav-dd.closed .nav-dd-m { display: none; }   /* Escape closes it even while hovered or focused */
+.nav-dd-m a { display: block; padding: 9px 18px; }
+.nav-menu { display: none; position: relative; }
+.nav-menu summary {
+  list-style: none; cursor: pointer; padding: 8px 12px; border: 1px solid var(--fg);
+  font-size: 10px; font-weight: var(--fw-bold); letter-spacing: var(--tracking-widest); text-transform: uppercase;
+}
+.nav-menu summary::-webkit-details-marker { display: none; }
+.nav-menu-m {
+  position: absolute; right: 0; top: calc(100% + 12px); width: min(78vw, 300px); padding: 8px 0;
+  background: #fff; border: 1px solid var(--border); border-top: 2px solid var(--fg); z-index: 60;
+}
+.nav-menu-m a, .nav-menu-m .nav-dd-t {
+  display: block; width: 100%; text-align: left; padding: 11px 18px;
+  font-size: 11px; font-weight: var(--fw-semi); letter-spacing: var(--tracking-widest); text-transform: uppercase; color: var(--fg);
+}
+.nav-menu-m .nav-dd-t { color: var(--fg-muted); cursor: default; }
+.nav-menu-m .nav-dd-m { display: block; position: static; border: 0; padding: 0 0 6px; min-width: 0; }
+.nav-menu-m .nav-dd-m a { padding-left: 32px; }
+@media (max-width: 860px){ .nav-site .nav-menu { display: block; } .nav-site .nav-cta { display: none; } }
+
+/* Home: the six services */
+.svc-grid { display: grid; grid-template-columns: 1fr; border-top: 2px solid var(--fg); border-left: 1px solid var(--border); margin-top: 28px; }
+@media (min-width: 600px){ .svc-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 900px){ .svc-grid { grid-template-columns: repeat(3, 1fr); } }
+.svc { display: block; padding: 22px 22px 24px; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); background: #fff; color: var(--fg); transition: background var(--t-fast); }
+.svc:hover { background: var(--bg-soft); }
+.svc .sm { display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 10px; letter-spacing: var(--tracking-wide); text-transform: uppercase; color: var(--fg-muted); }
+.svc h3 { font-size: 18px; font-weight: var(--fw-bold); margin: 14px 0 6px; line-height: 1.25; }
+.svc p { font-size: var(--fs-body-sm); color: var(--fg-muted); margin: 0; line-height: 1.5; }
+.svc .go { display: inline-block; margin-top: 14px; font-size: 10px; font-weight: var(--fw-bold); letter-spacing: var(--tracking-widest); text-transform: uppercase; color: var(--credo-red); }
+
+/* About and legal pages */
+.page .page-head { padding: 56px 0 28px; border-bottom: 2px solid var(--fg); }
+.page .page-head h1 { font-size: clamp(32px, 4.4vw, 52px); font-weight: var(--fw-medium); letter-spacing: -0.02em; line-height: 1.08; margin: 10px 0 0; }
+.page .page-head h1 em { color: var(--credo-red); font-style: normal; }
+.page .page-head .lede { margin: 16px 0 0; max-width: 720px; }
+.page .page-head .upd { font-family: var(--font-mono); font-size: 11px; letter-spacing: var(--tracking-wide); text-transform: uppercase; color: var(--fg-muted); margin-top: 18px; }
+.page .prose { max-width: 780px; padding: 36px 0 72px; }
+.page .prose h2 { font-size: 24px; font-weight: var(--fw-semi); letter-spacing: -0.01em; line-height: 1.25; margin: 44px 0 12px; padding-top: 20px; border-top: 1px solid var(--border); }
+.page .prose h2:first-child { margin-top: 0; padding-top: 0; border-top: 0; }
+.page .prose h3 { font-size: 17px; font-weight: var(--fw-bold); margin: 26px 0 8px; }
+.page .prose p, .page .prose li { font-size: var(--fs-body); line-height: 1.65; color: var(--fg); }
+.page .prose p { margin: 0 0 14px; }
+.page .prose ul { margin: 0 0 16px; padding-left: 20px; }
+.page .prose li { margin: 0 0 6px; }
+.page .prose a { color: var(--credo-red); border-bottom: 1px solid currentColor; }
+.page .prose table { width: 100%; border-collapse: collapse; margin: 8px 0 22px; font-size: var(--fs-body-sm); }
+.page .prose th, .page .prose td { text-align: left; vertical-align: top; padding: 10px 12px 10px 0; border-bottom: 1px solid var(--border); line-height: 1.5; }
+.page .prose th { font-family: var(--font-mono); font-size: 10px; letter-spacing: var(--tracking-wide); text-transform: uppercase; color: var(--fg-muted); border-bottom: 2px solid var(--fg); }
+.page .prose .table-wrap { overflow-x: auto; }
+.page .note { font-size: var(--fs-body-sm); color: var(--fg-muted); background: var(--bg-soft); border-left: 3px solid var(--credo-red); padding: 14px 18px; margin: 0 0 28px; }
+.page .page-block { padding: 36px 0 72px; }
+.page .page-block .note { max-width: 780px; }
+.page .page-block .after { margin: 28px 0 0; font-size: var(--fs-body); }
+.page .page-block .after a { color: var(--credo-red); border-bottom: 1px solid currentColor; }
+.page .page-trust { padding-bottom: 72px; }

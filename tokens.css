@@ -3,7 +3,10 @@
    Hanken Grotesk · brand red #c92028 · editorial "legal ledger" language.
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap');
+/* 2026-10-02: fonts self-hosted, as on Webflow since PBI-26 (no Google Fonts request). Same files as the live site:
+   Hanken Grotesk variable 300-700, and Inconsolata under the name "Credo Mono" (variable 200-900). */
+@font-face { font-family: 'Hanken Grotesk'; src: url('assets/fonts/HankenGrotesk-latin.woff2') format('woff2'); font-weight: 300 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Credo Mono'; src: url('assets/fonts/CredoMono-Inconsolata-latin.woff2') format('woff2'); font-weight: 200 900; font-style: normal; font-display: swap; }
 
 :root {
   /* ---- Brand color ----------------------------------------------------- */
@@ -49,13 +52,13 @@
   --t-base:           240ms cubic-bezier(.4,0,.2,1);
 
   /* ---- Layout ---------------------------------------------------------- */
-  --max-width:        1180px;
+  --max-width:        1300px;   /* as the Webflow containers (was 1180px until 2026-10-02) */
   --gutter:           24px;
 
   /* ---- Type families --------------------------------------------------- */
   --font-sans:        'Hanken Grotesk', -apple-system, BlinkMacSystemFont,
                       'Segoe UI', Roboto, sans-serif;
-  --font-mono:        ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-mono:        'Credo Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
 
   /* ---- Type scale ------------------------------------------------------
      Action 7 (post-review 2026-06-02): per-page visible sizes constrained
