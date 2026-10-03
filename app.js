@@ -948,6 +948,9 @@
   window.CredoLP = {
     render: render,
     renderPage: renderPage,
-    parts: { HeroFigure: HeroFigure, esc: esc, pad2: pad2, SectionNo: SectionNo, ReviewBar: ReviewBar, HowItWorks: HowItWorks, FAQ: FAQ, BottomCTA: BottomCTA, InlineCTA: InlineCTA }
+    /* LeadForm + wireLeadForm (added 2026-10-03): the lead form on pages that are not rendered by render(),
+     * e.g. the home pages of the Marketing Hub microsites. wireLeadForm() wires every form on the page. */
+    parts: { HeroFigure: HeroFigure, esc: esc, pad2: pad2, SectionNo: SectionNo, ReviewBar: ReviewBar, HowItWorks: HowItWorks, FAQ: FAQ, BottomCTA: BottomCTA, InlineCTA: InlineCTA,
+      LeadForm: LeadForm, wireLeadForm: function () { wireInlineForm(); window.addEventListener("keydown", onKey); } }
   };
 })();
