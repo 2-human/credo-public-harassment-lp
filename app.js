@@ -480,9 +480,18 @@
     var r = C.reviews;
     var rows = '' +
       '<div class="rev-row">' +
-        /* 2026-10-02: order and set as on Webflow (Trustpilot widget, BBB seal); the Google badge is not on the live pages. */
-        '<div class="rev" data-slot="reviews.trustpilot">' + TrustpilotMark() + '<div><div class="rv-title">' + r.trustpilot.title + ' ' + Stars(4.5) + '</div><div class="rv-meta">' + r.trustpilot.meta + '</div></div></div>' +
-        '<div class="rev" data-slot="reviews.bbb">' + BBBMark() + '<div><div class="rv-title">' + r.bbb.title + '</div><div class="rv-meta">' + r.bbb.meta + '</div></div></div>' +
+        /* 2026-10-03: the badges themselves as on staging (Webflow): the Trustpilot TrustBox widget and the BBB seal image,
+         * same embed codes. The widget script is loaded by loadTrustBadges() after render. */
+        '<div class="rev rev-tp" data-slot="reviews.trustpilot">' +
+          '<div class="trustpilot-widget" data-locale="en-US" data-template-id="53aa8807dec7e10d38f59f32" data-businessunit-id="66f1b872822deaf8e3b0c570" data-style-height="150px" data-style-width="100%" data-token="6137cfd2-eaf3-4249-b1cc-4c3f351d81b0">' +
+            '<a href="https://www.trustpilot.com/review/credolegal.com" target="_blank" rel="noopener">Trustpilot</a>' +
+          '</div>' +
+        '</div>' +
+        '<div class="rev rev-bbb" data-slot="reviews.bbb">' +
+          '<a href="https://www.bbb.org/us/fl/jacksonville/profile/legal-services/credo-legal-services-p-a-0403-236025533/#sealclick" target="_blank" rel="nofollow noopener">' +
+            '<img src="https://seal-northeastflorida.bbb.org/seals/blue-seal-293-61-bbb-236025533.png" width="384" height="80" loading="lazy" alt="Credo Legal Services, P.C. BBB Business Review"/>' +
+          '</a>' +
+        '</div>' +
       '</div>';
     var mrow = "";
     if (metrics) {
@@ -491,6 +500,27 @@
       }).join("") + '</div>';
     }
     return '<div class="reviewbar">' + rows + mrow + '</div>';
+  }
+
+  /* The Trustpilot widget script, loaded as on staging (PBI-30): on the first interaction or 5 s after load,
+   * whichever comes first. Called after every render; safe to call again (new widgets are picked up). */
+  var tbWanted = false;
+  function loadTrustBadges() {
+    if (!document.querySelector(".trustpilot-widget")) return;
+    var go = function () {
+      if (window.Trustpilot && window.Trustpilot.loadFromElement) {
+        document.querySelectorAll(".trustpilot-widget:not([data-tp-done])").forEach(function (el) { el.setAttribute("data-tp-done", "1"); window.Trustpilot.loadFromElement(el, true); });
+      } else if (!document.getElementById("tp-bootstrap")) {
+        var sc = document.createElement("script"); sc.id = "tp-bootstrap"; sc.async = true;
+        sc.src = "https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js";
+        document.head.appendChild(sc);
+      }
+    };
+    if (tbWanted) { go(); return; }
+    var once = function () { if (tbWanted) return; tbWanted = true; ev.forEach(function (e) { window.removeEventListener(e, once); }); go(); };
+    var ev = ["pointerdown", "keydown", "scroll", "touchstart", "mousemove"];
+    ev.forEach(function (e) { window.addEventListener(e, once, { passive: true }); });
+    setTimeout(once, 5000);
   }
 
   /* ---- body sections ----------------------------------------------------
@@ -933,6 +963,7 @@
     var root = document.getElementById("root");
     var body = variant === "c" ? VariantC() : VariantA();
     root.innerHTML = Nav() + '<main>' + body + '</main>' + Footer() + StickyCTA();   /* <main> as on Webflow (PBI-34) */
+    loadTrustBadges();
 
     wireScrollForm(root);
     wireInlineForm();
@@ -955,6 +986,7 @@
     root.innerHTML = Nav() + '<main><div class="lp page" data-variant="page">' + (opts.html || "") + '</div></main>' + Footer() + StickyCTA();
     /* opts.form (2026-10-03): the page shows the lead form (parts.Hero), so wire it as render() does */
     if (opts.form) { wireScrollForm(root); wireInlineForm(); window.addEventListener("keydown", onKey); }
+    loadTrustBadges();
   }
 
   window.CredoLP = {

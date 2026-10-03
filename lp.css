@@ -276,6 +276,17 @@ a.hero-call:hover { color: var(--credo-red); }
 .reviewbar .metric-row .m-n { display: block; font-size: 32px; font-weight: var(--fw-light); letter-spacing: -0.03em; color: var(--credo-red); line-height: 1; }
 .reviewbar .metric-row .m-l { display: block; font-family: var(--font-mono); font-size: 10px; letter-spacing: var(--tracking-wide); text-transform: uppercase; color: var(--fg-muted); margin-top: 9px; }
 @media (prefers-reduced-motion: no-preference){ .reviewbar .rev { transition: background var(--t-fast); } .reviewbar .rev:hover { background: var(--bg-soft); } }
+/* The badges as on staging (2026-10-03): the Trustpilot widget (150px high, at least 240px wide) and the BBB seal
+   (384 x 80 box, centred, 20px lower than the widget's top), each in a cell with 20px padding. Sizes measured on
+   staging.credolegal.com at 1440 and 390. */
+.reviewbar .rev-tp, .reviewbar .rev-bbb { display: block; padding: 20px; min-width: 0; }   /* min-width: a grid cell may be narrower than the seal */
+.reviewbar .rev-tp:hover, .reviewbar .rev-bbb:hover { background: transparent; }
+.reviewbar .rev-tp .trustpilot-widget { min-width: 240px; height: 150px; }
+.reviewbar .rev-tp .trustpilot-widget > a { font-size: var(--fs-body-sm); color: var(--fg-muted); }
+.reviewbar .rev-bbb { text-align: center; }
+.reviewbar .rev-bbb a { display: block; width: 384px; max-width: 100%; margin: 20px auto 0; overflow: hidden; }
+.reviewbar .rev-bbb img { display: block; width: 100%; height: 80px; border: 0; object-fit: contain; object-position: left center; }
+@media (max-width: 719px){ .reviewbar .rev-tp .trustpilot-widget { width: 240px; } .reviewbar .rev-bbb a { margin-left: 0; } }
 
 /* ===== Claim list (What we do) ============================================ */
 /* Lede paragraph between the one-row H2 headline and the .claim-list 2px line. */
