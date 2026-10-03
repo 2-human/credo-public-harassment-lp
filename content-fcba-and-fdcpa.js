@@ -353,5 +353,11 @@ window.CREDO = {
 };
 
 /* >>> PBI-35 cluster copy (tools/webflow/clusters/edits.json). Generated: edit the data file, not this block. */
-window.CREDO.whatWeDo.headline = "Billing errors or collector calls: understand your rights.";
+window.CREDO.hero.h1 = ["Credit Card Debt? Know Your ","Rights","."];
+window.CREDO.hero.lede = "Our Attorneys Explain Your FCBA and FDCPA Rights and Act on Them.";
+window.CREDO.whatWeDo.headline = "Credit card billing errors or collector calls: know your rights.";
+window.CREDO.whatWeDo.intro = "If you carry credit card debt, two federal laws protect you. The Fair Credit Billing Act (FCBA) lets you dispute billing errors on your card statement. The Fair Debt Collection Practices Act (FDCPA) limits what debt collectors can do once a card debt is sent to collections. When card issuers and debt collectors cross the line, you are not powerless.";
+window.CREDO.whatWeDo.bullets = ["Review your credit card debt with an experienced attorney.","Identify violations of the FDCPA and the FCBA.","Help you dispute card billing errors and card debts that cannot be verified.","Help you use these laws to your advantage, including claims for damages where your rights were violated."];
+window.CREDO.whoHelps = ["People struggling with credit card debt.","Anyone contacted by a third-party debt collector about a credit card debt.","Those who see charges on a card statement that they do not recognize.","People who disputed a card bill and are still being reported as delinquent.","Anyone who wants to understand their rights before deciding what to do."];
+window.CREDO.rights.intro = "The FDCPA and the FCBA give cardholders specific protections.";
 /* <<< PBI-35 */

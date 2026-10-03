@@ -902,3 +902,41 @@ ads. Copy on the new pages is a draft for the attorney.
 **Undo.** Edited pages: `2026-10-02-clusters/current.json` holds the previous values of every prop. New pages: set
 them to draft or delete them in Webflow (Pages panel); nothing else depends on them.
 
+
+## PBI-36 · Credit card rights page says "credit card" (3 Oct)
+
+**What changed.** On /fcba-and-fdcpa (now /debt-credit-card-know-your-rights-fcba-fdcpa) the hero headline is
+"Credit Card Debt? Know Your Rights.", the sub-line names the FCBA and the FDCPA, and the first section, the first and
+third list items, four "Who this helps" lines and the rights intro say credit card or card. Search title and
+description updated. The before/after of all 13 fields is in `review/PBI-36.md`; the values are in
+`tools/webflow/clusters/edits.json` (the override block of `content-fcba-and-fdcpa.js`).
+
+**Where in Webflow.** Prop values of the `LP · Hero`, `LP · What we do`, `LP · Common problems` and `LP · Rights and FAQ`
+instances on that page; Page settings → SEO title and description.
+
+**Verified.** Served page read back: 11 body strings, title and description present; old strings gone; one h1;
+canonical, noindex and FAQPage unchanged; screenshots at 1440 and 390.
+
+**Undo.** Set the 11 props and the two SEO fields back to the "Before" column of `review/PBI-36.md`.
+
+## PBI-37 · Landing-page addresses: debt-{type}-{angle}-{variant} (3 Oct)
+
+**What changed.** 45 of the 48 cluster landing pages got a new address in one pattern chosen by the operator
+(`tools/webflow/url-map-2026-10-03.json` lists old and new). For each renamed page the canonical and og:url lines in
+the page head now carry the new address, and its key in the shared phone table was renamed.
+
+**Where in Webflow.** Pages panel → page settings → Slug (45 pages). Page settings → Custom code → Head: the two lines
+`<link rel="canonical" …>` and `<meta property="og:url" …>` (45 pages). Site settings → Custom code → Footer: the keys
+of `window.CREDO_PHONES` (34 keys; a page that is not listed still gets `'*'`).
+
+**Verified.** 48 new addresses 200; 45 old addresses 404; visible text of all 48 pages identical to the snapshot before
+the rename; head tags, one h1, FAQPage, titles as before; the footer code equals the intended file byte for byte in all
+48 served pages; no old address left in any served page; phone number shown correctly on 5 pages (google, meta, bing,
+no source, page not in the table); `lp-sync.mjs --check` ok.
+
+**Not done / open.** 301 redirects from the old addresses (the API needs an Enterprise plan): the list is in
+`tools/webflow/redirects-2026-10-03.csv` for Site settings → Publishing → 301 redirects. Page names in the Designer keep
+the old wording. Shared accounts that match on page path (GTM, Optibase, recorders, call tracking) were not checked.
+
+**Undo.** Backup `2026-10-03-urls/`: rename back with the same bulk call from `url-map-2026-10-03.json` (new → old),
+set the head code from `heads.before.json`, and paste `site-footer.before.txt` into the footer code.
