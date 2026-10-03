@@ -940,3 +940,22 @@ the old wording. Shared accounts that match on page path (GTM, Optibase, recorde
 
 **Undo.** Backup `2026-10-03-urls/`: rename back with the same bulk call from `url-map-2026-10-03.json` (new → old),
 set the head code from `heads.before.json`, and paste `site-footer.before.txt` into the footer code.
+
+## PBI-38 · Shorter "Your rights" headlines (3 Oct)
+
+**What changed.** On 25 landing pages the headline above the list of rights was shortened to at most 91 characters
+(longest now 89; before, up to 197). Old and new text per page: `review/PBI-38.md` and
+`tools/webflow/clusters/rights-intro-2026-10-03.json`. Two overstatements were removed with it: "every violation … can
+carry up to $1,000" is now "may let you seek up to $1,000 in statutory damages", and "each violation stands on its own"
+is gone. The prototype content files carry the same text (26 files; one has no staging page).
+
+**Where in Webflow.** Prop `Rights intro` of the `LP · Rights and FAQ` instance on each of the 25 pages (list with page
+ids: `2026-10-03-rights/work.json` in the backup folder; instance ids in `apply-log.jsonl` there).
+
+**Verified.** Each value read back from Webflow equal to the new text. After publishing, all 25 served pages carry the
+new headline, no longer the old one, and every other line of text is identical to the snapshot taken before
+(`2026-10-03-rights/served-before` and `served-after`).
+
+**Undo.** Set `Rights intro` on each page back to the `was` text in `2026-10-03-rights/work.json` and publish to the
+staging domain.
+
