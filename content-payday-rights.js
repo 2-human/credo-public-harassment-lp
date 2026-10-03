@@ -110,7 +110,7 @@ window.CREDO = {
   ],
 
   rights: {
-    intro: "Payday loan borrowers have more legal protection than most realize, at both the federal and state level.",
+    intro: "Payday loan borrowers have more federal and state protection than most realize.",
     items: [
       { cite: "FDCPA",             label: "FDCPA applies",          text: "The FDCPA applies fully to third-party collectors pursuing payday loan debt, prohibiting harassment, threats, and abusive tactics.", exLabel: "Right", ex: "Same federal protections that apply to other consumer debts apply here." },
       { cite: "State payday law",  label: "Licensing + rate caps",  text: "State payday lending laws set licensing requirements and interest rate caps. A loan from an unlicensed lender or above the state cap may be unenforceable.", exLabel: "Right", ex: "Loan from a non-licensed online lender? May be void, principal possibly not owed." },

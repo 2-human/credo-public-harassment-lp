@@ -267,7 +267,7 @@ window.CREDO = {
     ]
   ],
   "rights": {
-    "intro": "A garnishment has to follow federal and state rules. Whether it has started or not, you have these protections:",
+    "intro": "A garnishment has to follow federal and state rules. You have these protections:",
     "items": [
       {
         "cite": "15 U.S.C. § 1673",

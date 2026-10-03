@@ -143,7 +143,7 @@ window.CREDO = {
 
   // ---- YOUR RIGHTS — live bullets promoted to structured items ----
   rights: {
-    intro: "The FDCPA applies to every third-party debt collector, regardless of how many are contacting you.",
+    intro: "The FDCPA applies to every third-party debt collector, no matter how many contact you.",
     items: [
       { cite: "§ 1692c(c)",       label: "Cease request applies to each collector", text: "Once a collector receives a written cease request, all contact must stop. Every call after that is a federal violation.", exLabel: "Right", ex: "Send one cease letter per collector. Contact from each must stop." },
       { cite: "§ 1692c(a)(1)",    label: "Calling hours",         text: "Collectors cannot call before 8 AM or after 9 PM in your local time zone.", exLabel: "Violation", ex: "Three collectors. A 7:14 AM call from any one of them is its own violation." },

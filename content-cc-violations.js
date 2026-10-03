@@ -103,7 +103,7 @@ window.CREDO = {
   ],
 
   rights: {
-    intro: "The FDCPA doesn't just protect you, it pays you. Every violation by a credit card debt collector can carry up to $1,000 in statutory damages. Collectors cannot:",
+    intro: "The FDCPA may let you seek up to $1,000 in statutory damages. Collectors cannot:",
     items: [
       { cite: "§ 1692c(a)(1)",   label: "Illegal-hour calls",      text: "Call you before 8 AM or after 9 PM.", exLabel: "Violation", ex: "Each call outside hours = standalone $1,000 violation." },
       { cite: "§ 1692e(4),(5)",  label: "False legal threats",     text: "Threaten arrest or legal action they don't plan to take.", exLabel: "Violation", ex: "Each threat = standalone violation, even if never carried out." },

@@ -106,7 +106,7 @@ window.CREDO = {
   ],
 
   rights: {
-    intro: "Consumer protection laws give you rights when dealing with credit card debt. Card companies and collectors cannot:",
+    intro: "The law limits how credit card debt is collected. Card companies and collectors cannot:",
     items: [
       { cite: "FDCPA § 1692d, e, f",  label: "No deceptive collection",   text: "Use deceptive or abusive tactics to collect a debt.", exLabel: "Violation", ex: "Threats, false statements, or harassment = federal violation." },
       { cite: "FDCPA § 1692e(2)",     label: "Accurate amount required",  text: "Misrepresent the amount you legally owe.", exLabel: "Violation", ex: "Inflated balance in a collection letter or lawsuit = federal claim." },

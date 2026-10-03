@@ -128,7 +128,7 @@ window.CREDO = {
 
   // ---- YOUR RIGHTS — live bullets promoted to structured items ----
   rights: {
-    intro: "Receiving court papers is not the end of the road. The law protects you in ways most people do not know.",
+    intro: "Court papers are not the end of the road. The law protects you in ways few people know.",
     items: [
       { cite: "FRCP 8, 12",        label: "Right to respond",          text: "You have the right to respond and contest any debt lawsuit. The collector must prove their case in court if you do.", exLabel: "Right", ex: "File an answer within the deadline. Force the collector to prove every element." },
       { cite: "FRE 401–402",       label: "Burden on the plaintiff",   text: "Collectors must show the debt is valid, accurate, and legally theirs to collect. If their documentation is incomplete, that is your defense.", exLabel: "Right", ex: "No complete records = no judgment for the collector." },

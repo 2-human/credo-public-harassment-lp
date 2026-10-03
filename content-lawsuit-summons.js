@@ -131,7 +131,7 @@ window.CREDO = {
   ],
 
   rights: {
-    intro: "Even after court papers are in your hands, the law protects you in ways most people do not know.",
+    intro: "Even with court papers in hand, the law protects you in ways most people do not know.",
     items: [
       { cite: "FRCP 8, 12",        label: "Right to respond",         text: "You have the right to respond and contest any debt lawsuit filed against you. The collector must prove their case in court if you do.", exLabel: "Right", ex: "Filing an answer forces the collector to prove every element of the claim." },
       { cite: "FRE 401–402",       label: "Burden of proof",          text: "Collectors must prove the debt is valid, accurate, and legally theirs to collect. Deficiencies in their documentation are your defense.", exLabel: "Right", ex: "Plaintiff carries the burden. Gaps in their records are gaps in their case." },

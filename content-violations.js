@@ -132,7 +132,7 @@ window.CREDO = {
 
   // ---- YOUR RIGHTS — live bullets promoted to structured items ----
   rights: {
-    intro: "The FDCPA doesn't just protect you, it creates financial accountability for collectors who break it.",
+    intro: "The FDCPA creates real financial accountability for collectors who break it.",
     items: [
       { cite: "§ 1692k(a)(2)(A)", label: "Statutory damages",      text: "Each lawsuit under the FDCPA can result in up to $1,000 in statutory damages.", exLabel: "Remedy", ex: "Up to $1,000 per lawsuit, paid by the collector." },
       { cite: "§ 1692k(a)",       label: "Strict liability",       text: "You do not need to prove financial harm to recover. The violation itself is enough.", exLabel: "Right", ex: "No proven harm required. The violation alone creates liability." },

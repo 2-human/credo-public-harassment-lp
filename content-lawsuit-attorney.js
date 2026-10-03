@@ -138,7 +138,7 @@ window.CREDO = {
   //      Citations mix FRCP / FRE / FDCPA / general civil rights since
   //      this is a civil-procedure defense LP, not a pure FDCPA LP. ----
   rights: {
-    intro: "Federal and state law give you specific, enforceable rights when a creditor sues you for a consumer debt.",
+    intro: "The law gives you specific, enforceable rights when a creditor sues you.",
     items: [
       { cite: "Civil right",      label: "Right to counsel",       text: "You have the right to be represented by an attorney in any civil lawsuit.", exLabel: "Right", ex: "Hire counsel at any stage, pre-answer, mid-litigation, even post-judgment in some cases." },
       { cite: "FRCP 4",            label: "Proper service",         text: "Creditors must properly serve you before the court can act against you.", exLabel: "Violation", ex: "'Sewer service', a process server claims to have served you but didn't, can void the judgment." },

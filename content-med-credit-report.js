@@ -104,7 +104,7 @@ window.CREDO = {
   ],
 
   rights: {
-    intro: "Federal law puts the burden on the collector to prove a debt, and gives you tools to make them.",
+    intro: "Federal law puts the burden of proof on the collector, and gives you tools to enforce it.",
     items: [
       { cite: "FDCPA § 1692g", label: "Right to validation",       text: "Within 30 days of first contact you can demand written proof of the debt. The collector must verify it or stop collecting.", exLabel: "Right", ex: "No validation = they must cease collection until they provide it." },
       { cite: "FDCPA § 1692g", label: "Right to dispute",          text: "You can dispute all or part of a medical debt in writing. The collector must verify before continuing.", exLabel: "Right", ex: "Dispute the amount, the ownership, or the debt itself." },

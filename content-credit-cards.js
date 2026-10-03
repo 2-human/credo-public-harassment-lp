@@ -269,7 +269,7 @@ window.CREDO = {
     ]
   ],
   "rights": {
-    "intro": "Consumer protection laws protect you from abusive debt collection practices. Debt collectors cannot:",
+    "intro": "The law protects you from abusive debt collection. Debt collectors cannot:",
     "items": [
       {
         "cite": "§ 1692d(5)",

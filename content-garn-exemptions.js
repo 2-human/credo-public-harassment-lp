@@ -140,7 +140,7 @@ window.CREDO = {
 
   // Live 5 + 1 synthesized.
   rights: {
-    intro: "Federal and state law provide specific exemptions that can protect your income from garnishment. These are not automatic, you have to claim them.",
+    intro: "Exemptions can protect your income from garnishment, but you have to claim them.",
     items: [
       { cite: "State exemption law",  label: "Head of household",        text: "Head of household status can significantly reduce or eliminate garnishment in many states.", exLabel: "Right", ex: "In some states, head of household = full protection. Documentation is the unlock." },
       { cite: "31 C.F.R. § 212",      label: "Federal benefit protection", text: "Social Security, disability, and most federal benefit income cannot be garnished by most creditors.", exLabel: "Right", ex: "Marked federal-benefit accounts cannot be levied. Protected funds must be released." },

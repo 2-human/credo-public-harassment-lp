@@ -267,7 +267,7 @@ window.CREDO = {
     ]
   ],
   "rights": {
-    "intro": "The FDCPA doesn't just protect you, it creates financial accountability for collectors who break it.",
+    "intro": "The FDCPA creates real financial accountability for collectors who break it.",
     "items": [
       {
         "cite": "§ 1692k(a)(2)(A)",

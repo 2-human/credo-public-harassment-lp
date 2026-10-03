@@ -104,7 +104,7 @@ window.CREDO = {
   ],
 
   rights: {
-    intro: "Federal law protects you when creditors take legal action. Before paying anything or accepting a default judgment, know your rights. Creditors cannot:",
+    intro: "Federal law protects you when a creditor takes you to court. Creditors cannot:",
     items: [
       { cite: "FRCP 4",            label: "Proper service first",      text: "Obtain a default judgment against you without first serving you properly.", exLabel: "Right", ex: "No valid service = no valid judgment." },
       { cite: "FRE 401–402",       label: "Burden of proof",           text: "Claim you owe a debt without being able to prove it legally.", exLabel: "Right", ex: "Plaintiff carries the burden. You don't have to prove a negative." },

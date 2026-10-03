@@ -134,7 +134,7 @@ window.CREDO = {
   ],
 
   rights: {
-    intro: "Federal and state laws protect a portion of your wages from garnishment, and require creditors to follow strict rules before touching your paycheck. Before a garnishment can begin, a creditor must:",
+    intro: "Federal and state law set strict rules. Before garnishing your pay, a creditor must:",
     items: [
       { cite: "FRCP 4 + state rules", label: "Valid judgment first",   text: "Obtain a valid court judgment against you through proper legal process.", exLabel: "Right", ex: "No judgment = no garnishment. The lawsuit must be properly served and adjudicated." },
       { cite: "Due process",          label: "Proper notice required", text: "Provide you with proper legal notice before any deductions begin.", exLabel: "Right", ex: "Notice of the underlying lawsuit + notice of intent to garnish, both required." },

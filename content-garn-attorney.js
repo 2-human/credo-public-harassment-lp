@@ -135,7 +135,7 @@ window.CREDO = {
 
   // Live 5 + 1 synthesized.
   rights: {
-    intro: "Even after a garnishment order is in place, the law continues to protect you. Creditors and employers must follow strict rules.",
+    intro: "Even with a garnishment order in place, creditors and employers must follow strict rules.",
     items: [
       { cite: "15 U.S.C. § 1673",  label: "Federal 25% cap",         text: "Federal law caps garnishment at 25% of disposable income, and often less applies in practice.", exLabel: "Right", ex: "If more than 25% of your check is being taken, the calculation is wrong." },
       { cite: "State exemption law", label: "Exemptions",            text: "Exemptions you were never told about may reduce or eliminate what can be taken.", exLabel: "Right", ex: "Head of household, low income, public benefits, narrow but real protections vary by state." },

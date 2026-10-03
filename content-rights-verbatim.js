@@ -135,7 +135,7 @@ window.CREDO = {
   //      Body text from live capture; cites + violation/right/remedy
   //      examples added from 15 U.S.C. § 1692. ----
   rights: {
-    intro: "The Fair Debt Collection Practices Act creates specific, enforceable rules that collectors must follow.",
+    intro: "The Fair Debt Collection Practices Act sets specific, enforceable rules for collectors.",
     items: [
       { cite: "§ 1692c(a)(1)", label: "Calling hours",         text: "Collectors cannot call before 8 AM or after 9 PM in your local time zone.", exLabel: "Violation", ex: "A 7:14 AM call to discuss a balance is a documented breach." },
       { cite: "§ 1692c(a)(3)", label: "Workplace contact",     text: "Collectors cannot contact you at work if they know your employer prohibits it.", exLabel: "Violation", ex: "Your employer told them to stop. They called you at work anyway." },

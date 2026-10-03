@@ -139,7 +139,7 @@ window.CREDO = {
 
   // ---- YOUR RIGHTS — live bullets promoted to structured items ----
   rights: {
-    intro: "The FDCPA gives you financial recourse against every collector that violates it, and each violation stands on its own.",
+    intro: "The FDCPA gives you financial recourse against every collector that violates it.",
     items: [
       { cite: "§ 1692k(a)(2)(A)", label: "Per-collector damages",  text: "Each FDCPA lawsuit entitles you to up to $1,000 in statutory damages. Violations from different collectors are separate claims.", exLabel: "Remedy", ex: "Three collectors. Three claims. Up to $3,000 in statutory damages." },
       { cite: "§ 1692c(a)(1)",    label: "Calling hours",          text: "Collectors cannot call before 8 AM or after 9 PM. Each illegal call from any collector is its own violation.", exLabel: "Violation", ex: "A 7:14 AM call from Collector A and another from Collector B count separately." },

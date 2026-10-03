@@ -138,7 +138,7 @@ window.CREDO = {
   ],
 
   rights: {
-    intro: "Payday loan collectors must follow strict federal rules. Most people being collected on don't know them.",
+    intro: "Payday loan collectors must follow strict federal rules that most people don't know.",
     items: [
       { cite: "FDCPA",             label: "FDCPA applies",            text: "The Fair Debt Collection Practices Act applies to third-party collectors pursuing payday loan debt and prohibits harassment, threats, and deception.", exLabel: "Right", ex: "Same federal protections that apply to other consumer debts apply here." },
       { cite: "§ 1692c(a)(1)",     label: "Calling hours",            text: "Collectors cannot call before 8 AM or after 9 PM in your local time zone.", exLabel: "Violation", ex: "A 7:14 AM call from a payday collector is its own violation." },

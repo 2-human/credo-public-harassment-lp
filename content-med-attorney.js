@@ -117,7 +117,7 @@ window.CREDO = {
   ],
 
   rights: {
-    intro: "You may not owe what they say you do. Federal law gives you rights against unfair medical debt collection.",
+    intro: "You may not owe what they say. Federal law gives you rights against unfair collection.",
     items: [
       { cite: "§ 1692g",          label: "Debt validation", text: "You can require the collector to validate the debt before paying.", exLabel: "Right", ex: "Dispute in writing within 30 days of the collector's first notice." },
       { cite: "§ 1692e(2)",       label: "False amounts",   text: "Misrepresenting the amount or status of a debt is prohibited.", exLabel: "Violation", ex: "Inflated or incorrect medical charges in collection." },
