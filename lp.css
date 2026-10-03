@@ -706,6 +706,15 @@ html[data-borders="off"] .multi-opt { border-bottom-color: var(--border-soft); }
 .nav-site .nav-links { align-items: center; }
 .nav-links a[aria-current="page"] { color: var(--credo-red); }
 .nav-dd { position: relative; }
+/* In the header row the group is a flex box, so its button is laid out like the plain links beside it and shares
+   their baseline (as a block, the group kept the 16px body line and the button sat 2px lower than Home and About). */
+.nav-links .nav-dd { display: flex; align-items: center; }
+/* With site links in the row, every text in it (links, "Call us", the number, the button label) sits on one baseline;
+   centring the boxes left the larger phone number 2px lower than the links. Desktop row only. */
+@media (min-width: 861px){ .nav-site .nav-right { align-items: baseline; } }
+/* The menu keeps its place 4px under the (now shorter) group; the strip above it keeps the pointer inside the group on the way down. */
+.nav-links .nav-dd-m { top: calc(100% + 4px); }
+.nav-links .nav-dd-m::before { content: ""; position: absolute; left: 0; right: 0; top: -8px; height: 8px; }
 .nav-dd-t {
   font: inherit; font-size: 11px; color: var(--fg); font-weight: var(--fw-semi);
   letter-spacing: var(--tracking-widest); text-transform: uppercase;
