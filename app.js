@@ -629,9 +629,10 @@
      ====================================================================== */
 
   /* Variant A — Locked · paired (default) */
-  function VariantA() {
+  /* The hero of the landing page (headline, lede, lead form, "Or call", photograph) and the trust bar under it.
+   * Separate functions since 2026-10-03 so that a site's home page can show the same two components. */
+  function Hero() {
     return '' +
-      '<div class="lp" data-variant="a">' +
         '<section class="hero" id="top"><div class="container">' +
           '<div class="hero-grid">' +
             '<div>' +
@@ -644,9 +645,18 @@
             '</div>' +
             '<div>' + HeroFigure(false) + '</div>' +
           '</div>' +
-        '</div></section>' +
+        '</div></section>';
+  }
+  function TrustBar() {
+    return '<div class="container" style="padding-top:0">' + ReviewBar(true) + '</div>';
+  }
 
-        '<div class="container" style="padding-top:0">' + ReviewBar(true) + '</div>' +
+  function VariantA() {
+    return '' +
+      '<div class="lp" data-variant="a">' +
+        Hero() +
+
+        TrustBar() +
 
         '<section class="section"><div class="container">' +
           '<div class="imgrow">' +
@@ -943,14 +953,16 @@
     document.documentElement.setAttribute("data-labels", "plain");
     var root = document.getElementById("root");
     root.innerHTML = Nav() + '<main><div class="lp page" data-variant="page">' + (opts.html || "") + '</div></main>' + Footer() + StickyCTA();
+    /* opts.form (2026-10-03): the page shows the lead form (parts.Hero), so wire it as render() does */
+    if (opts.form) { wireScrollForm(root); wireInlineForm(); window.addEventListener("keydown", onKey); }
   }
 
   window.CredoLP = {
     render: render,
     renderPage: renderPage,
-    /* LeadForm + wireLeadForm (added 2026-10-03): the lead form on pages that are not rendered by render(),
-     * e.g. the home pages of the Marketing Hub microsites. wireLeadForm() wires every form on the page. */
+    /* Hero + TrustBar (added 2026-10-03): the landing page's hero and trust bar on pages rendered by renderPage(),
+     * e.g. the home pages of the Marketing Hub microsites (renderPage({ html, form: true }) wires the form). */
     parts: { HeroFigure: HeroFigure, esc: esc, pad2: pad2, SectionNo: SectionNo, ReviewBar: ReviewBar, HowItWorks: HowItWorks, FAQ: FAQ, BottomCTA: BottomCTA, InlineCTA: InlineCTA,
-      LeadForm: LeadForm, wireLeadForm: function () { wireInlineForm(); window.addEventListener("keydown", onKey); } }
+      Hero: Hero, TrustBar: TrustBar }
   };
 })();
