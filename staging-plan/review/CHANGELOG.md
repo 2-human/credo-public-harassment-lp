@@ -996,3 +996,18 @@ pages-before.json, site-footer.before.txt).
 **Undo.** Turn `Site menu` off and `Page links` on for the 47 landing pages (values in apply-log.jsonl); set the
 eleven new pages to draft; set Footer-MJ link defaults back (pages-before.json / served-before show the old hrefs);
 write `site-footer.before.txt` back into the footer code (only the off-hours block differs); publish to the staging domain.
+
+## PBI-40 · No UTM tags on internal links (4 Oct)
+
+**What changed.** Site settings → Head code, block "7. UTM PERSISTENCE": `isInternalLink`, `addUTMToLink` and
+`addUTMToAllLinks` removed with their two calls (cookie storage, `populateSpecificFields` and the form's hidden UTM
+fields unchanged). navbar component: `data-append-utm` removed from its 16 links (logo, Home, About, in-page links,
+the seven Services entries, header button). Footer code unchanged (its localStorage helper now matches no link).
+
+**Verified.** Browser walk on staging (trackers blocked): fresh direct visit, campaign visit with UTMs, later direct
+visit; no internal link and no URL after a click carries UTMs; after the campaign visit the form on a second page still
+has utm_source/medium/campaign in its hidden fields. Head code read back byte-identical to the intended text.
+
+**Undo.** Write `2026-10-04-utm/site-head.before.txt` back into the head code; add `data-append-utm="true"` to the 16
+navbar links listed in `2026-10-04-utm/navbar-utm-links.json`;
+publish to the staging domain.
