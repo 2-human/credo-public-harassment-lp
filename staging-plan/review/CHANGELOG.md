@@ -854,6 +854,7 @@ Not a board row: tracked as decision D13. Listed here because it changed the sit
 - **PBI-20** CTA labels: waits on D3.
 - **PBI-21** The four payday-content pages: deferred by the operator (own copy or redirect, D4 open part).
 - **PBI-22** Call-click tracker: waits on D6.
+- **PBI-39** legal pages: the attorney's read; then remove the draft note and fill in the date.
 - **PBI-24, domain-switch task** (the close-out itself is done): robots, canonical and og:url for the final domain wait on D16 and D21 (today noindex, nofollow + canonical to start.credolegal.com/{slug}).
 - Parts still open inside done items: PBI-08 CRM check (M3); PBI-23 Tidio (D8), second recorder (D5), GTM Nextdoor timing (operator, manual; fonts done in PBI-26, minify done in L2); site-head CSS for the duplicate-named classes (the drafts are gone, but Webflow keeps every copy of a used name through Clean up; resolve them the PBI-26 way with DS-4 / DS-8); Gemini reviews for PBI-19, PBI-23, PBI-25, PBI-26, PBI-28, PBI-29, PBI-30.
 - Found and not changed (copy or account decisions): D22 hero wording, D24 per-call $1,000 claims, D25 home headings, D26 Optibase in Safari.
@@ -959,3 +960,39 @@ new headline, no longer the old one, and every other line of text is identical t
 **Undo.** Set `Rights intro` on each page back to the `was` text in `2026-10-03-rights/work.json` and publish to the
 staging domain.
 
+
+## PBI-39 · The seven microsites on staging (4 Oct)
+
+**What changed.**
+- Eleven new pages: seven homes (/respond, /fight-back, /demand-proof, /know-your-rights, /stop, /make-them-pay,
+  /reduce; each a duplicate of its cluster's first landing page), /about, /terms-of-use, /privacy-policy,
+  /cookie-policy (legal texts carry the visible "Draft for review by the firm's attorney" note and `[date of
+  publication]`, operator 4 Oct). noindex, canonical to start.credolegal.com/{slug}, OG tags; FAQPage JSON-LD on the homes.
+- navbar component: site menu (Home · Services ▾ · About) behind the `Site menu` prop, in-page links behind `Page
+  links`; menu entries are link props per page. On for the 11 new pages and the 47 landing pages; off elsewhere.
+- LP · Common problems (home mode, card links, `Show who this helps`), LP · Rights and FAQ (`Show rights`, `Show FAQ
+  4/5`), LP · Bottom CTA (`Button link`): new props whose defaults keep the old pages as they were.
+- Footer-MJ (every page): About → /about, legal links → the three new pages; labels "terms of use", "cookie policy".
+- Site settings → footer code: the off-hours block now scrolls to `#herosec` (it looked for `#consultation` /
+  `#nconsultation`, which no page has, so off hours the header button did nothing on any page). Pages without a form
+  keep the button's link.
+- Styles: `footerlogo` white filter (was only in the Bottom CTA embed: red logo on legal and thank-you pages);
+  `Container 40` margin auto; `page-body` padding 80px (30px on phones), max-width 820px; nav menu icon #111418 on
+  tablet/phone; open nav menu white with borders; `Menu Button 2` bordered 44px; `Text Block 14` (header phone)
+  `white-space: nowrap`.
+
+**Where in Webflow.** Components navbar (04a0978c-…), Footer-MJ (462342c8-…), the four LP components above; prop ids
+in `tools/webflow/site-menu/navbar-props.json` and `home-props.json`; page ids in `tools/webflow/site-menu/pages.json`;
+per-page prop values in `2026-10-04-microsites/apply-log.jsonl`; legal bodies in `legal-log.jsonl`.
+
+**Verified.** Checkpoint publish (component changes, before any page used them): the 67 older pages identical apart
+from webflow.js (+143 B gzip). Full publish: the older pages differ only in header and footer; footer code served on
+78/78 pages. axe: no violations (7 pages × 2 widths); lpcheck on the 11 new pages: 0 critical, 0 major; Lighthouse
+mobile: home 61, about 79, terms 83, landing pages 61–65; keyboard: Services opens with Enter, Escape closes; JSON-LD
+questions all visible; off hours (clock fixed to Sunday 03:00 ET) the header button scrolls to the form on homes and
+landing pages and keeps its link on about/legal. Prototype: check-mirror --all, 59 pages equal staging at both widths. Backups: `2026-10-04-microsites/` (served-before, served-checkpoint, served-after,
+pages-before.json, site-footer.before.txt).
+
+**Undo.** Turn `Site menu` off and `Page links` on for the 47 landing pages (values in apply-log.jsonl); set the
+eleven new pages to draft; set Footer-MJ link defaults back (pages-before.json / served-before show the old hrefs);
+write `site-footer.before.txt` back into the footer code (only the off-hours block differs); publish to the staging domain.
