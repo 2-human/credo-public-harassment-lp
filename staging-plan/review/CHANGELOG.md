@@ -1023,5 +1023,9 @@ logo (41aa75a8-…-e9fc) and thank-you Image 29 (d2b02f7b-…-cfea). The lead-fo
 agent-accessibility-tree pass, accessibility 100, the logo is no longer in image delivery. axe on all 60 pages at 1440
 and 390: no violations. Logos read back as credo-logo-244.png; screenshots at 3× sharp.
 
-**Undo.** Set those four images back to 6abd55573915529793acb45e (credo-logo-420.png); remove the logo link's aria-label;
+Later the same day (PageSpeed "layout shift culprits: unsized image"): style `footerlogo` gets `aspect-ratio: 244 / 80`;
+new combo class `Image` + `Header logo` (aspect-ratio 244 / 80) on the navbar logo image. Lighthouse unsized-images passes;
+logos render at the same size (92×30 header, 122×40 / 100×33 footer).
+
+**Undo.** Remove `aspect-ratio` from `footerlogo`; set the navbar logo's classes back to `Image` only; set those four images back to 6abd55573915529793acb45e (credo-logo-420.png); remove the logo link's aria-label;
 add `aria-label="Call Credo Legal"` back to the phone button; publish to the staging domain.
