@@ -56,10 +56,10 @@ window.ADS = {
 /* New pages built in the prototype LP template for intents no live page answers (30 Sep 2026).
    Listed in the landing-page hub (review.html) under their debt-type section; not live yet. */
 window.NEW_PAGES = {
-  stop:    { name: 'How to Stop a Garnishment',  slug: '/how-to-stop-wage-garnishment',  file: '../garn-how-to-stop-locked-paired-portrait-noborders.html',         hub: '../review.html#51', section: 'Garnishment' },
-  buyer:   { name: 'Sued by a Debt Buyer',       slug: '/sued-by-debt-buyer',            file: '../lawsuit-debt-buyer-locked-paired-portrait-noborders.html',       hub: '../review.html#52', section: 'Lawsuit' },
-  cantpay: { name: "Sued and Can't Pay",         slug: '/debt-lawsuit-cant-pay',         file: '../lawsuit-cant-pay-locked-paired-portrait-noborders.html',         hub: '../review.html#53', section: 'Lawsuit' },
-  settle:  { name: 'Settlement or Validation?',  slug: '/debt-settlement-vs-validation', file: '../settlement-vs-validation-locked-paired-portrait-noborders.html', hub: '../review.html#54', section: 'All-States' }
+  stop:    { name: 'How to Stop a Garnishment',  slug: '/how-to-stop-wage-garnishment',  file: '#retired-prototype-garn-how-to-stop',         hub: '../review.html#51', section: 'Garnishment' },
+  buyer:   { name: 'Sued by a Debt Buyer',       slug: '/sued-by-debt-buyer',            file: '#retired-prototype-lawsuit-debt-buyer',       hub: '../review.html#52', section: 'Lawsuit' },
+  cantpay: { name: "Sued and Can't Pay",         slug: '/debt-lawsuit-cant-pay',         file: '#retired-prototype-lawsuit-cant-pay',         hub: '../review.html#53', section: 'Lawsuit' },
+  settle:  { name: 'Settlement or Validation?',  slug: '/debt-settlement-vs-validation', file: '#retired-prototype-settlement-vs-validation', hub: '../review.html#54', section: 'All-States' }
 };
 
 /* One row per search term. cluster groups the table; key = campaign|ad group|term (joins terms-data.js).
