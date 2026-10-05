@@ -1011,3 +1011,17 @@ has utm_source/medium/campaign in its hidden fields. Head code read back byte-id
 **Undo.** Write `2026-10-04-utm/site-head.before.txt` back into the head code; add `data-append-utm="true"` to the 16
 navbar links listed in `2026-10-04-utm/navbar-utm-links.json`;
 publish to the staging domain.
+
+## PBI-41 · PageSpeed findings: logo link name, logo size, call-button label (5 Oct)
+
+**What changed.** navbar component: `aria-label="Credo Legal home"` on the logo link (…-4dda); `aria-label="Call Credo
+Legal"` removed from the phone button (15e363eb-3fad-162c-1667-f9918ed59251). New asset credo-logo-244.png
+(6ac34a93bd9b2b4bdc96ebdc, 4,243 B) on the navbar logo (…-4ddb), Footer-MJ logo (…-9ba5), thank-you footer component
+logo (41aa75a8-…-e9fc) and thank-you Image 29 (d2b02f7b-…-cfea). The lead-form pop-up logo keeps the 420 file (hidden).
+
+**Verified.** Lighthouse 13.5 mobile on /respond, a landing page and /about: link-name, label-content-name-mismatch and
+agent-accessibility-tree pass, accessibility 100, the logo is no longer in image delivery. axe on all 60 pages at 1440
+and 390: no violations. Logos read back as credo-logo-244.png; screenshots at 3× sharp.
+
+**Undo.** Set those four images back to 6abd55573915529793acb45e (credo-logo-420.png); remove the logo link's aria-label;
+add `aria-label="Call Credo Legal"` back to the phone button; publish to the staging domain.
