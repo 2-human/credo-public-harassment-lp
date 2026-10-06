@@ -20,4 +20,4 @@ Not in scope / existing
 - GPT 5, 6, Gemini 5: form submission, call-tracking payloads and privacy-mode tests are not part of this change (no
   form sent per the standing rule; no call-tracking account access). Found while answering GPT 5: the form's cookie
   script reads `fbclig` (typo for fbclid), so a Meta click id never reaches the lead form; pre-existing, reported to the
-  operator, not changed here.
+  operator, not changed here; kept as decision D31 (operator 6 Oct: not now).
