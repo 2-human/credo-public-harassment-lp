@@ -1029,3 +1029,19 @@ logos render at the same size (92×30 header, 122×40 / 100×33 footer).
 
 **Undo.** Remove `aspect-ratio` from `footerlogo`; set the navbar logo's classes back to `Image` only; set those four images back to 6abd55573915529793acb45e (credo-logo-420.png); remove the logo link's aria-label;
 add `aria-label="Call Credo Legal"` back to the phone button; publish to the staging domain.
+
+## PBI-42 · The ad campaign's phone number stays the same on every microsite page (6 Oct)
+
+**What changed.** Site settings → Custom code → Footer code, phone script ("DYNAMIC PHONE NUMBERS"): the page an ad
+opens (a visit with utm_source or an ad click id) saves its number in the host-only cookie `credo_call` for 90 days;
+every later page without those parameters shows that number in the header, below the form, in the footer and in the
+sticky call bar. A new ad click replaces it; visits that never came from an ad keep each page's own number. Ad clicks
+with only a click id count as their source (gclid/gbraid/wbraid → google, fbclid → meta, msclkid → bing). The phone
+table and its lookup line are unchanged.
+
+**Verified.** Before: Google ad → landing (212) 561-5902, next service page and microsite home (718) 865-8350. After
+(trackers blocked, no form sent): served footer equals the intended file on 10 pages; 22 journey checks pass (Google,
+Meta fbclid-only, gclid/gbraid/msclkid-only, organic LinkedIn, direct visit, new ad click replacing the number, phone
+width); no script errors; phone-table guard passes. Packet PBI-42.md, triage PBI-42.triage.md.
+
+**Undo.** Write `2026-10-06-phone-lock/site-footer.before.txt` back into the footer code; publish to the staging domain.
