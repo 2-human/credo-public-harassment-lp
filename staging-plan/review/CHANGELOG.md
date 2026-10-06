@@ -1045,3 +1045,26 @@ Meta fbclid-only, gclid/gbraid/msclkid-only, organic LinkedIn, direct visit, new
 width); no script errors; phone-table guard passes. Packet PBI-42.md, triage PBI-42.triage.md.
 
 **Undo.** Write `2026-10-06-phone-lock/site-footer.before.txt` back into the footer code; publish to the staging domain.
+
+## PBI-43 · The default site on the root domain (6 Oct)
+
+**What changed.** Six new pages, duplicated from the live landing page of the same debt type (8 `LP ·` components):
+`/debt-harassment-defense-services`, `/debt-credit-card-defense-services`, `/debt-lawsuit-defense-services`,
+`/debt-payday-loan-defense-services`, `/debt-medical-defense-services`, `/debt-garnishment-defense-services` (ids in
+`tools/webflow/clusters/default-pages.json`); copy from `default-cluster.json` (draft, attorney review pending), SEO
+title "… | Credo Legal", head code (noindex, canonical start.credolegal.com/<slug>), FAQPage JSON-LD, navbar = site menu
+with the six pages. Root home rebuilt: the old `<main>` saved as library component "Legacy root home (backup 6 Oct)"
+(9b878bb2-be93-7276-3358-4d47c74799ea, group Backups), its sections replaced by the 8 LP components (home mode: six
+service cards, FAQ without the rights table), new SEO/head/JSON-LD. About + privacy/terms/cookie: Services menu = the
+six pages. Site footer phone table: six rows with the home's numbers. Note: JSON-LD only stores through
+`bulk_update_pages_schema_markup` (the page-settings field reports success and stores nothing).
+
+**Verified.** `tools/webflow/clusters/verify-default-site.py` and `verify-default-site-browser.mjs` pass (titles, H1,
+meta, canonical, JSON-LD, menus, phones per source, ad-visit number kept, form step 1, no script errors, axe clean);
+served footer byte-identical; CSS: only the old root's 85 grid selectors removed; /respond and a landing page otherwise
+unchanged; start and enroll not published. Packet PBI-43.md, triage PBI-43.triage.md.
+
+**Undo.** Root: place "Legacy root home (backup 6 Oct)" in `<main>` instead of the 8 LP instances and restore
+`2026-10-06-default-site/root-head.before.html`, `root-settings.before.json`, `root-jsonld.before.json`; menus: values
+in `about-legal-navbar.before.json`; footer: `site-footer.before.txt`; delete or draft the six pages; publish to the
+staging domain.
