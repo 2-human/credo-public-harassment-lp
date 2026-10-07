@@ -1,5 +1,5 @@
 /* Credo Legal — All-States — "Debt settlement or debt validation?" (NEW, search-term gap).
-   Proposed 2026-09-30 from the search-term review (search-terms/index.html).
+   Proposed 2026-09-30 from the search-term review (now in the Marketing Hub, Ads › New pages).
    Intent: settlement shoppers. "debt settlement attorney" (157 impressions,
    CPA $188) and "debt settlement lawyer" (0 clicks) land on the lawsuit
    deadline ad; "debt settlement attorney near me" converts at $51, so

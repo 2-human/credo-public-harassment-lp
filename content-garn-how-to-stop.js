@@ -1,5 +1,5 @@
 /* Credo Legal — Garnishment — "How to stop a garnishment" (NEW, search-term gap).
-   Proposed 2026-09-30 from the search-term review (search-terms/index.html).
+   Proposed 2026-09-30 from the search-term review (now in the Marketing Hub, Ads › New pages).
    Intent: the "how to stop (a) (wage) garnishment" query family, the account's
    highest-volume garnishment searches (17–27% CTR). Live traffic lands on
    /wage-garnishment-prevention (61% of the ad group's impressions), which is

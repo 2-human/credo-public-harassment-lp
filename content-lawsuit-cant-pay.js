@@ -1,5 +1,5 @@
 /* Credo Legal — Lawsuit — "Sued and can't pay" (NEW, search-term gap).
-   Proposed 2026-09-30 from the search-term review (search-terms/index.html).
+   Proposed 2026-09-30 from the search-term review (now in the Marketing Hub, Ads › New pages).
    Intent: "what happens if a debt collector sues you and you have no money"
    (175 impressions, 0 conversions) and the related "being sued / what do I do"
    questions. The searcher is afraid of the consequences of having no money;

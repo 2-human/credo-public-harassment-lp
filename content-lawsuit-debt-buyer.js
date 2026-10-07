@@ -1,5 +1,5 @@
 /* Credo Legal — Lawsuit — "Sued by a debt buyer" (NEW, search-term gap).
-   Proposed 2026-09-30 from the search-term review (search-terms/index.html).
+   Proposed 2026-09-30 from the search-term review (now in the Marketing Hub, Ads › New pages).
    Intent: plaintiff-name searches such as "midland credit management lawsuit",
    "lvnv funding llc lawsuit", "credit corp solutions inc suing me", and the
    collection law firms that file for them. They get 0–4% CTR on the generic
