@@ -60,6 +60,16 @@
   .src.meta   { background: #eef2ff; color: #4338ca; }
   .blank { color: #c8cdd6; }
   .empty-row td { text-align: center; color: #8590a0; padding: 40px; font-size: 13px; }
+  /* multi-level sort bar (8 Oct 2026) */
+  .sortbar { display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin:6px 0 8px; font-size:13px; }
+  .sortbar .sb-l { color:#667080; }
+  .sortbar .sb-lvl { display:inline-flex; border:1px solid #e3e6ea; border-radius:4px; background:#fff; }
+  .sortbar .sb-lvl button { border:0; background:none; font:inherit; padding:2px 8px; cursor:pointer; }
+  .sortbar .sb-lvl button + button { border-left:1px solid #e3e6ea; color:#667080; padding:2px 6px; }
+  .sortbar select { font:inherit; padding:2px 4px; }
+  th[data-sort] { user-select:none; }
+  th .caret sup { font-size:9px; margin-left:1px; }
+  @media (pointer: coarse) { .sortbar .sb-hint { display:none; } }
 </style>
 </head>
 <body>
@@ -90,6 +100,7 @@
 
 <main>
   <div class="tablewrap">
+    <div id="sortbar" class="sortbar"></div>
     <table>
       <thead>
         <tr class="head">
@@ -244,19 +255,25 @@ function match(r) {
   });
 }
 
-let sortCol = 'baseUrl', sortDir = 'asc';   // default: grouped by landing page
+/* Multi-level sort (8 Oct 2026): sorts = [{ k: column, d: 'asc' | 'desc' }], first level first. */
+const DEFAULT_SORT = [{ k: 'baseUrl', d: 'asc' }];   // default: grouped by landing page
+let sorts = DEFAULT_SORT.slice();
 function render() {
   const tb = document.getElementById('tbody');
   let rows = ROWS.filter(match);
-  if (sortCol) {
+  if (sorts.length) {
     rows = rows.slice().sort((a, b) => {
-      const av = String(a[sortCol] || '').toLowerCase(), bv = String(b[sortCol] || '').toLowerCase();
-      if (!av && bv) return 1;            // empties always last
-      if (av && !bv) return -1;
-      const cmp = av < bv ? -1 : av > bv ? 1 : 0;
-      return sortDir === 'asc' ? cmp : -cmp;
+      for (const { k, d } of sorts) {
+        const av = String(a[k] || '').toLowerCase(), bv = String(b[k] || '').toLowerCase();
+        if (!av && bv) return 1;            // empties always last
+        if (av && !bv) return -1;
+        const cmp = av < bv ? -1 : av > bv ? 1 : 0;
+        if (cmp) return d === 'asc' ? cmp : -cmp;
+      }
+      return String(a.baseUrl + a.ad).localeCompare(String(b.baseUrl + b.ad));   // stable final tie-break
     });
   }
+  paintSortBar();
   tb.innerHTML = rows.length ? rows.map(r => `
     <tr data-src="${r.utmSource}">
       <td class="c-url">${r.baseUrl ? `<a href="${esc(r.baseUrl)}" target="_blank" rel="noopener">${esc(r.baseUrl.replace('https://',''))}</a>` : blank}</td>
@@ -275,24 +292,49 @@ document.querySelectorAll('thead [data-col]').forEach(el => {
 document.getElementById('clear').addEventListener('click', () => {
   COLS.forEach(c => filters[c] = "");
   document.querySelectorAll('thead [data-col]').forEach(el => { el.value = ""; });
-  sortCol = 'baseUrl'; sortDir = 'asc'; paintCarets();
+  sorts = DEFAULT_SORT.slice(); paintCarets();
   render();
 });
 
-/* Sort by column header (click cycles asc → desc → off). Empties sort last. */
+/* Sort by column header. Click: sort by that column only (repeat clicks cycle asc → desc → off). Shift-, Cmd- or
+   Ctrl-click: add the column as the next sort level (or flip it if it is already one). Empties sort last. */
 document.querySelectorAll('thead tr.head th[data-sort]').forEach(th => {
-  th.addEventListener('click', () => {
-    const col = th.dataset.sort;
-    if (sortCol === col) { if (sortDir === 'asc') sortDir = 'desc'; else sortCol = null; }
-    else { sortCol = col; sortDir = 'asc'; }
+  th.title = 'Click to sort; Shift-click to add as the next sort level';
+  th.addEventListener('click', e => {
+    const col = th.dataset.sort, i = sorts.findIndex(s => s.k === col);
+    if (e.shiftKey || e.metaKey || e.ctrlKey) {
+      if (i >= 0) sorts[i] = { k: col, d: sorts[i].d === 'asc' ? 'desc' : 'asc' }; else sorts.push({ k: col, d: 'asc' });
+    } else if (sorts.length === 1 && i === 0) {
+      sorts = sorts[0].d === 'asc' ? [{ k: col, d: 'desc' }] : [];
+    } else sorts = [{ k: col, d: 'asc' }];
     paintCarets(); render();
   });
 });
 function paintCarets() {
   document.querySelectorAll('thead tr.head th[data-sort]').forEach(th => {
-    th.querySelector('.caret').textContent = (sortCol === th.dataset.sort) ? (sortDir === 'asc' ? '▲' : '▼') : '';
+    const i = sorts.findIndex(s => s.k === th.dataset.sort);
+    th.querySelector('.caret').innerHTML = i < 0 ? '' : (sorts[i].d === 'asc' ? '▲' : '▼') + (sorts.length > 1 ? `<sup>${i + 1}</sup>` : '');
   });
 }
+/* The sort bar: the levels in order, each removable, plus "then by" for touch screens. */
+const COL_LABEL = {}; document.querySelectorAll('thead tr.head th[data-sort]').forEach(th => { COL_LABEL[th.dataset.sort] = th.firstChild.textContent.trim(); });
+function paintSortBar() {
+  const bar = document.getElementById('sortbar'); if (!bar) return;
+  const rest = Object.keys(COL_LABEL).filter(k => !sorts.some(s => s.k === k));
+  bar.innerHTML = '<span class="sb-l">Sorted by</span> ' + (sorts.length ? sorts.map((s, i) => (i ? '<span class="sb-l">then</span> ' : '') +
+    `<span class="sb-lvl"><button type="button" data-flip="${s.k}" title="Flip direction">${esc(COL_LABEL[s.k])} ${s.d === 'asc' ? '▲' : '▼'}</button><button type="button" data-drop="${s.k}" aria-label="Remove ${esc(COL_LABEL[s.k])} from the sort">×</button></span>`).join(' ') : '<span class="sb-l">nothing</span>') +
+    (rest.length ? ` <select data-add aria-label="Add a sort level"><option value="">+ then by…</option>${rest.map(k => `<option value="${k}">${esc(COL_LABEL[k])}</option>`).join('')}</select>` : '') +
+    ' <span class="sb-l sb-hint">Shift-click a header to add it.</span>';
+}
+document.getElementById('sortbar').addEventListener('click', e => {
+  const f = e.target.closest('[data-flip]'), d = e.target.closest('[data-drop]');
+  if (f) sorts = sorts.map(s => s.k === f.dataset.flip ? { k: s.k, d: s.d === 'asc' ? 'desc' : 'asc' } : s);
+  else if (d) sorts = sorts.filter(s => s.k !== d.dataset.drop); else return;
+  paintCarets(); render();
+});
+document.getElementById('sortbar').addEventListener('change', e => {
+  if (e.target.matches('[data-add]') && e.target.value) { sorts.push({ k: e.target.value, d: 'asc' }); paintCarets(); render(); }
+});
 
 paintCarets();
 render();
